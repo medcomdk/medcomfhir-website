@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MEDCOM.FHIR.DK.ACKNOWLEDGEMENT\Home - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/medcom-dk.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit the MedComs website" src="assets/images/Medcom_logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">DK MedCom acknowledgement</span>
+            <br/>
+            <span style="display:inline-block;">2.0.1 - Release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Acknowledgement (v2.0.1: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. The current version which supercedes this version is <a href="http://medcomfhir.dk/ig/acknowledgement">2.0.0</a>.  For a full list of available versions, see the <a href="http://medcomfhir.dk/ig/acknowledgement/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement|2.0.1"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2023-03-10
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MedComAcknowledgement</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
+  <li><a href="#governance" id="markdown-toc-governance">Governance</a></li>
+  <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
+</ul>
+
+</div>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>This implementation guide (IG) is provided by MedCom to describe the use of FHIR ®© Acknowledgement in message based exchange of data in Danish healthcare.</p>
+
+<p>A MedCom Acknowledgement message (Danish: Kvittering) corresponds to a receipt of a delivered message. Every time a system receives a MedCom FHIR message, e.g. a <a href="http://medcomfhir.dk/ig/hospitalnotification/">HospitalNotification</a> or a <a href="http://medcomfhir.dk/ig/carecommunication/">CareCommunication</a>, it shall be acknowledged with a MedCom Acknowledgement message, stating if the transfer was successful and the message validated correctly or not. In other word, does a MedCom Acknowledgement message hold information about how delivery of a message went. MedCom FHIR messaging complies with <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#network-layer">reliable messaging and associated governance</a>, which describes the value and needs of acknowledge all messages.</p>
+
+<h4 id="acknowlegdement-message">Acknowlegdement message</h4>
+
+<p>The following diagram depicts the structure of the Acknowledgement message.</p>
+
+<p><img alt="MedComAcknowledgementMessage is the root profile. From this is the MedComMessagingProvenance and MedComAcknowledgementMessageHeader referenced. The MedComAcknowledgementMessageHeader includes references to the MedComMessagingOrganization. Additionally, it is possible to include an OperationOutCome profile, referenced from MedComAcknowledgementMessageHeader." src="./MedComAcknowledgementMessage.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" /></p>
+
+<p>The Acknowledgement message follows the general MedCom FHIR messaging structure, except that the carbon-copy destination is not allowed. The following sections describe the overall purpose of each profile.</p>
+
+<h4 id="medcomacknowledgementmessage">MedComAcknowledgementMessage</h4>
+
+<p>A <a href="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition-medcom-messaging-acknowledgement.html">MedComAcknowledgementMessage</a> is inherited from <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a>, and constrains the profile since the MessageHeader shall be of the type MedComAcknowledgementMessageHeader.</p>
+
+<h4 id="medcomacknowledgementmessageheader">MedComAcknowledgementMessageHeader</h4>
+
+<p><a href="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition-medcom-messaging-acknowledgementHeader.html">MedComAcknowledgementMessageHeader</a> is inherited from <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a>, and constrains the profile as carbon-copy is not allowed and it requires a respones code, which states if the delivery of the message went well or not.</p>
+
+<p>An Acknowledgement message is required in MedCom FHIR Messaging and follows the recommandations from HL7 FHIR ValueSet <a href="http://hl7.org/fhir/R4/valueset-response-code.html">response-code</a>.</p>
+
+<h4 id="medcomacknowledgementoperationoutcome">MedComAcknowledgementOperationOutcome</h4>
+
+<p><a href="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition-medcom-acknowledgement-operationoutcome.html">MedComAcknowledgementOperationOutcome</a> shall be included in the bundle when the MessageHeader.response.code is different from ‘ok’. Further, an OperationOutcome resource may be included when the MessageHeader.response.code is ‘ok’, e.g. in cases where the received message is valid, but it is a dublet. OperationOutcome contains a description of the error and the severity of the error.</p>
+
+<p>The ValueSet <a href="http://medcomfhir.dk/ig/terminology/ValueSet-medcom-acknowledgement-issue-details.html">MedComAcknowledgementIssueDetailValues</a> attached to the element OperationOutcome.response.detail.coding is used to describe the issue more detailed. Currently, the ValueSet is fairly empty, as MedCom wants input from IT-vendors on which codes give values in their systems. Across sectors there must be an agreed list of codes.</p>
+
+<h4 id="timestamps">Timestamps</h4>
+
+<p>The Acknowledgement message contains three timestamps:</p>
+
+<ul>
+  <li>Bundle.timestamp</li>
+  <li>Provenance.occuredDateTime[x]</li>
+  <li>Provenance.recorded.</li>
+</ul>
+
+<p>The three timestamps are registered at different time during Acknowledgement message generation and sending. The Acknowledgement message is sent when a system receives a FHIR message e.g. when a municipality receives a HospitalNotification message from the hospital, the it-system will evaluate the message. Based on the result from the evaluation, the system will generate an acknowlegement message that represet the evaluation results. This means that if the HospitalNotification is evaluated positive the acknowlegdement is as well positive. Whereas if the HospitalNotification is evaluated negative then a negative Acknowledgement is generated and send. When the acknowledgement message is generated a Bundle.timestamp is registered. When the acknowledgement message is sent the Provenance.occuredDateTime[x] and Provenance.recorded time stamp is registered. Note that the Provenance.occuredDateTime[x] is a human redable, where Provenance.recorded is a system readable.</p>
+
+<h4 id="simplified-examples-of-the-acknowledgement-messages">Simplified examples of the Acknowledgement messages</h4>
+
+<p>The simplified examples contain the required content of an Acknowledgement message. The messages illustrate an OK response and a fatal-error response based on a received message. The illustrations shows that two provenance resouces are included when sending an Acknowledgement message, one for the messages the is being acknowledged and one for the Acknowledgement message.</p>
+
+<p>All profiles shall have a global unique id by using an UUID. <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/052.2_MessageHeader_Identifiers_Timestamps.html">Read more about the use of ids here</a>.</p>
+
+<p><a href="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition-medcom-messaging-acknowledgement-examples.html">More examples of a Acknowledgement message can be found here</a>. For examples of a profile, take a look under the tab ‘Examples’ on the site for the given profile.</p>
+
+<blockquote>
+  <p>Please notice, that in the following examples is the Provenance resources listed as an array. This is just an example of an order, resources may be listed in any order.</p>
+</blockquote>
+
+<ul>
+  <li><a href="./AcknowledgementOK.svg">Simplified example of a MedComAcknowledgementMessage responding with OK</a></li>
+  <li><a href="./AcknowledgementError.svg">Simplified example of a MedComHospitalNotificationMessage responding with fatal-error.</a></li>
+</ul>
+
+<h4 id="terminology">Terminology</h4>
+<p>On <a href="http://medcomfhir.dk/ig/terminology/">MedCom Terminology IG</a> all referenced CodeSystem and ValueSets developed by MedCom can be found.</p>
+
+<h4 id="dependencies">Dependencies</h4>
+<p>This IG has a dependency to the <a href="http://medcomfhir.dk/ig/core/">MedCom Core IG</a>, <a href="http://medcomfhir.dk/ig/messaging/">MedCom Messaging IG</a> and <a href="https://hl7.dk/fhir/core/">DK-core v. 2.0.0</a>, where the latter is defined by <a href="https://hl7.dk/">HL7 Denmark</a>. This is currently reflected in the profiles MedComAcknowledgementMessage, and MedComAcknowledgementMessageHeader which both inherits from profiles defined in MedCom Messaging IG.</p>
+
+<h3 id="documentation">Documentation</h3>
+
+<p>On the <a href="https://medcomdk.github.io/dk-medcom-acknowledgement/">introduction page for Acknowledgement</a> an introduction and use cases can be found.</p>
+
+<h3 id="governance">Governance</h3>
+
+<p>MedComs FHIR profiles and extension are managed in GitHub under MedCom: <a href="https://github.com/medcomdk/dk-medcom-acknowledgement">Source code</a></p>
+
+<p>A description of <a href="https://medcomdk.github.io/MedComLandingPage/#4-change-managment-and-versioning">governance concerning change management and versioning</a> of MedComs FHIR artefacts, can be found on the link.</p>
+
+<h4 id="quality-assurance-report">Quality Assurance Report</h4>
+
+<p>In the Quality Assurance report (QA-report) for this IG, there is an error with the following description: <em>Reference is remote which isn’t supported by the specified aggregation mode(s) for the reference (bundled)</em>. The error occurs when creating instances of the profiles and is due to some elements having a Bundled flag {b}, however the referenced profile in the element is not included in the Bundle in an instance, since the instance only represents a part of the entire message. This will not influence the implementation by IT-vendors.</p>
+
+<h3 id="contact">Contact</h3>
+
+<p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this IG.</p>
+
+<p>If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom’s stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.acknowledgement#2.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 10, 2023 15:20+0100">2023-03-10</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

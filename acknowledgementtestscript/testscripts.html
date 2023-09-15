@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MEDCOM.FHIR.DK.ACKNOWLEDGEMENTTESTSCRIPTS\Testscripts - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Acknowledgement Test scripts</span>
+            <br/>
+            <span style="display:inline-block;">2.0.0 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="testscripts.html">Test scripts</a>
+  </li>
+  <li>
+    <a href="testexamples.html">Test examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts Summary</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Testscripts</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Acknowledgement TestScripts (v2.0.0: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. .  For a full list of available versions, see the <a href="http://medcomfhir.dk/ig/acknowledgementtestscripts/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+  <h2>Testscripts</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#before-getting-started" id="markdown-toc-before-getting-started">Before getting started</a></li>
+  <li><a href="#send-acknowledgement-test-scripts" id="markdown-toc-send-acknowledgement-test-scripts">Send Acknowledgement test scripts</a></li>
+  <li><a href="#receive-acknowledgement-message" id="markdown-toc-receive-acknowledgement-message">Receive Acknowledgement message</a></li>
+</ul>
+
+</div>
+<p>The test scripts are created by MedCom for testing in <a href="https://touchstone.aegis.net/touchstone/">TouchStone</a> during MedCom test and certification, both self- and live test. However, the test scripts may be used locally by vendors in their own testsetup, e.g. during code development or test.</p>
+
+<p>Test scripts presented in this IG are all based on the <a href="https://www.hl7.org/fhir/testscript.html">FHIR TestScript resource</a>. They are created using FHIR ShortHand (FSH) and published using the FHIR publisher.</p>
+
+<h3 id="before-getting-started">Before getting started</h3>
+
+<p>Use cases described in the <a href="https://medcomdk.github.io/dk-medcom-acknowledgement/#11-use-cases">use case document</a> will be referenced throughout this IG and they are the basis for the tests.</p>
+
+<h4 id="touchstone-and-api">TouchStone and API</h4>
+<p>Before getting started with test script execution, it is necessary to have an account on TouchStone and to create a test system. Please follow <a href="https://medcomdk.github.io/MedComLandingPage/assets/documents/TouchStoneGettingStarted.html">this guide to setup an account and test system</a>.</p>
+
+<h4 id="test-script-naming">Test script naming</h4>
+<p>In TouchStone, the name of the test scripts is constituted by Acknowledgement_Testscript_[send/receive]-[type], describing the type of messages being sent, or recieved. ‘Acknowledgement_Testscript_[send/receive]-‘ is not shown in the naming below.</p>
+
+<h4 id="test-examplesfixtures">Test examples/fixtures</h4>
+<p>Test examples are, in TouchStone testing, called fixtures. These fixtures are available in TouchStone. During setup of a test, all relevant fixtures will automatically be uploaded to server and be used during test. From a client application e.g. a vendor’s system, it is possible to request relevant fixture. Fixtures will be used during sending and receiving of an Acknowledgement.</p>
+
+<p><strong>Acknowledgements:</strong> 
+The fixture are sent between the 28th of February 2023 and 7th of March 2023.</p>
+
+<p>Fixtures used during the send test scripts are based on the following test patient, whereas no test patient is used in the receiving test scripts:</p>
+<ul>
+  <li>Family name: Elmer</li>
+  <li>CPR-nr.: 250947-9989</li>
+</ul>
+
+<h4 id="placeholders">Placeholders</h4>
+<p><a href="https://touchstone.aegis.net/touchstone/userguide/html/testscript-authoring/placeholders.html?highlight=placeholder">Placeholders</a> are used in the fixtures. Placeholders are used to ensure uniqueness in a fixture, and to ensure that vendors testing at the same time won’t interfere with eachother.</p>
+
+<p><strong>UUID:</strong>
+Bundle.id will be generate during the test setup. The following line is included in the fixtures.
+  <code class="language-plaintext highlighter-rouge">&lt;id value="${UUID}"/&gt;</code>
+Which results in the following being generated during setup. For instance: 
+  <code class="language-plaintext highlighter-rouge">&lt;id value="b9b4818e-02de-4cc4-b418-d20cbc399006"/&gt;</code></p>
+
+<h4 id="operations">Operations</h4>
+<p>When sending an Acknowledgement, a POST operation is used for all messages and when receiving an Acknowledgement or another message type, a GET operation is used for all tests.</p>
+
+<h5 id="get-operation">GET operation</h5>
+<p>When searching for an Acknowledgement message or another message type from an API, the GET operation requires Bundle.id to search for a specific message.</p>
+
+<p>In the test scripts, the search parameter are: 
+  <code class="language-plaintext highlighter-rouge">"params": "/${bundleid-STIN}"</code>
+Which results in the following variable to be used in the GET operation. For instance: 
+  <code class="language-plaintext highlighter-rouge">http://touchstone.aegis.net:49917/fhir4-0-1/Bundle/88e6c08e-10b6-4c7e-aa70-c0db45933e50</code></p>
+
+<h5 id="post-operation">POST operation</h5>
+<p>When the POST operation represents sending a message. When posting a message it must be directed to the correct endpoint, which is given by TouchStone, and it must include the Bundle being send.</p>
+
+<h3 id="send-acknowledgement-test-scripts">Send Acknowledgement test scripts</h3>
+<p>When sending an Acknowledgement, a POST operation is required for all types of messages. All send test scripts requires that the system under test (SUT) has received a message beforehand. These are listed in the ‘Precondition’ columns in the tables, currently it can be a HospitalNotification, but will be extended to receiving af CareCommunication. The use case codes starts with ‘R’, as they represent the receiving system of a MedCom FHIR message, but actually is the sending system of an Acknowledgement.</p>
+
+<p><a href="https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/Acknowledgement/v200/Send/PatientFlows&amp;activeOnly=false&amp;contentEntry=TEST_SCRIPTS">Test scripts for test of sending use cases, can be found here in TouchStone.</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Type</strong></th>
+      <th><strong>Use case <br /> code</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Response code</strong></th>
+      <th><strong>Received in advance</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Acknowledging based on received HospitalNotifications</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-send-ok-hospitalnotification.html">OK</a></td>
+      <td>R.TC3</td>
+      <td>Send acknowledgement - OK</td>
+      <td>ok</td>
+      <td>HospitalNotification (STIN)</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-send-fatal-error-hospitalnotification.html">Fatal-error</a></td>
+      <td>R.TC3</td>
+      <td>Send acknowledgement - Fatal Error</td>
+      <td>fatal-error</td>
+      <td>HospitalNotification (STIN)</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-send-transient-error-hospitalnotification.html">Transient-error</a></td>
+      <td>R.TC3</td>
+      <td>Send acknowledgement - Transient Error</td>
+      <td>transient-error</td>
+      <td>HospitalNotification (STIN)</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-send-ok-duplicate-hospitalnotification.html">OK-duplicate</a></td>
+      <td>R.TC1.A3</td>
+      <td>Send duplicate acknowledgement - OK</td>
+      <td>ok</td>
+      <td>Two identical <br /> HospitalNotification (STIN)</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-send-fatal-error-duplicate-hospitalnotification.html">Fatal-error-duplicate</a></td>
+      <td>R.TC1.A3</td>
+      <td>Send duplicate acknowledgement - Fatal Error</td>
+      <td>fatal-error</td>
+      <td>Two identical <br /> HospitalNotifications (STIN)</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-send-transient-error-duplicate-hospitalnotificat.html">Transient-error-duplicate</a></td>
+      <td>R.TC1.A3</td>
+      <td>Send acknowledgements, as response to duplicate <br /> messages - Transient Error, followed by OK</td>
+      <td>transient-error <br /> ok</td>
+      <td>Two identical <br /> HospitalNotification (STIN)</td>
+    </tr>
+    <tr>
+      <td><strong>Acknowledging based on received CareCommunication</strong></td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>[TBD]</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="receive-acknowledgement-message">Receive Acknowledgement message</h3>
+<p>When receiving an Acknowledgement, a GET operation is required for all tests. The use case codes starts with ‘S’, as they represent the sending system of a MedCom FHIR message, but is the receiving system of an Acknowledgement.</p>
+
+<h4 id="use-cases">Use Cases</h4>
+
+<p><a href="https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/Acknowledgement/v300/Receive/UseCases&amp;activeOnly=false&amp;contentEntry=TEST_SCRIPTS">Test scripts for test of the recieving use cases, can be found here in TouchStone.</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Type</strong></th>
+      <th><strong>Use case <br /> code</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Response code</strong></th>
+      <th><strong>Received in advance</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-receive-ok.html">OK</a></td>
+      <td>S.TC3</td>
+      <td>Receive acknowledgement - OK</td>
+      <td>ok</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-receive-fatal-error.html">Fatal-error</a></td>
+      <td>S.TC3.A1</td>
+      <td>Receive acknowledgement - Fatal Error</td>
+      <td>fatal-error</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-receive-transient-error.html">Transient-error</a></td>
+      <td>S.TC3.A2</td>
+      <td>Receive acknowledgement - Transient Error</td>
+      <td>transient-error</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-receive-ok-duplicate.html">OK-duplicate</a></td>
+      <td>S.TC5</td>
+      <td>Receive duplicate acknowledgement - OK</td>
+      <td>ok</td>
+      <td>Acknowledgement</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-receive-fatal-error-duplicate.html">Fatal-error-duplicate</a></td>
+      <td>S.TC5</td>
+      <td>Receive duplicate acknowledgement - Fatal Error</td>
+      <td>fatal-error</td>
+      <td>Acknowledgement</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-receive-transient-error-duplicate.html">Transient-error-duplicate</a></td>
+      <td>S.TC5</td>
+      <td>Receive duplicate acknowledgement - Transient Error</td>
+      <td>transient-error</td>
+      <td>Acknowledgement</td>
+    </tr>
+    <tr>
+      <td><a href="./TestScript-acknowledgement-receive-transient-error-ok.html">Transient-error-OK</a></td>
+      <td>S.TC5</td>
+      <td>Receive acknowledgements - Transient Error, followed by OK</td>
+      <td>transient-error, ok</td>
+      <td>Acknowledgement</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:fhir@medcom.dk"></a>.  Package medcom.fhir.dk.acknowledgementtestscripts#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, May 26, 2023 11:22+0200">2023-05-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
