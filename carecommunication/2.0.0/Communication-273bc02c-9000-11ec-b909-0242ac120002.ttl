@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Communication/273bc02c-9000-11ec-b909-0242ac120002> a fhir:Communication;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "273bc02c-9000-11ec-b909-0242ac120002"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Communication</b><a name=\"273bc02c-9000-11ec-b909-0242ac120002\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Communication &quot;273bc02c-9000-11ec-b909-0242ac120002&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-careCommunication-communication.html\">MedComCareCommunication</a></p></div><p><b>status</b>: entered-in-error</p><p><b>category</b>: Care Coordination <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://medcomfhir.dk/ig/terminology/1.1.0/CodeSystem-medcom-careCommunication-categoryCodes.html\">MedComCareCommunicationCategories</a>#carecoordination)</span></p><p><b>subject</b>: <a href=\"Patient-550b46e4-690d-11ed-9022-0242ac120002.html\">Patient/550b46e4-690d-11ed-9022-0242ac120002</a> &quot; ELMER&quot;</p><h3>Payloads</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Content[x]</b></td></tr><tr><td>*</td><td>, , </td><td>Wrong paragraf. Please notice paragraf 2.3.4 in the rehabilitation plan instead...</td></tr></table></div>"
+  ];
+  fhir:Communication.status [ fhir:value "entered-in-error"];
+  fhir:Communication.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes" ];
+       fhir:Coding.code [ fhir:value "carecoordination" ]
+     ]
+  ];
+  fhir:Communication.subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Patient/550b46e4-690d-11ed-9022-0242ac120002>;
+     fhir:Reference.reference [ fhir:value "Patient/550b46e4-690d-11ed-9022-0242ac120002" ]
+  ];
+  fhir:Communication.payload [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-datetime-extension" ];
+       fhir:Extension.valueDateTime [ fhir:value "2022-10-01T12:00:05Z"^^xsd:dateTime ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension" ];
+       fhir:Extension.valueReference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunication/PractitionerRole/6ff69f1c-690d-11ed-9022-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/6ff69f1c-690d-11ed-9022-0242ac120002" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-contact-extension" ];
+       fhir:Extension.valueContactPoint [
+         fhir:ContactPoint.system [ fhir:value "phone" ];
+         fhir:ContactPoint.value [ fhir:value "44527000" ]
+       ]
+     ];
+     fhir:Communication.payload.contentString [ fhir:value "Wrong paragraf. Please notice paragraf 2.3.4 in the rehabilitation plan instead..." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Communication/273bc02c-9000-11ec-b909-0242ac120002.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

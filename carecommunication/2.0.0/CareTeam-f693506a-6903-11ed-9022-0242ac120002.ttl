@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/CareTeam/f693506a-6903-11ed-9022-0242ac120002> a fhir:CareTeam;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "f693506a-6903-11ed-9022-0242ac120002"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: CareTeam</b><a name=\"f693506a-6903-11ed-9022-0242ac120002\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource CareTeam &quot;f693506a-6903-11ed-9022-0242ac120002&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.1.0/StructureDefinition-medcom-core-careteam.html\">MedComCoreCareTeam</a></p></div><p><b>name</b>: Hjerteafdelingens team C</p><p><b>managingOrganization</b>: <a href=\"Organization-c5c393ee-5519-11ed-bdc3-0242ac120002.html\">Organization/c5c393ee-5519-11ed-bdc3-0242ac120002</a> &quot;Hjerteafdelingen på Herlev og Gentofte hospital&quot;</p></div>"
+  ];
+  fhir:CareTeam.name [ fhir:value "Hjerteafdelingens team C"];
+  fhir:CareTeam.managingOrganization [
+     fhir:index 0;
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Organization/c5c393ee-5519-11ed-bdc3-0242ac120002>;
+     fhir:Reference.reference [ fhir:value "Organization/c5c393ee-5519-11ed-bdc3-0242ac120002" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/CareTeam/f693506a-6903-11ed-9022-0242ac120002.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

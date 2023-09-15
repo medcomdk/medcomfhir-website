@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Encounter/6220b42d-c4fd-4c77-bae7-78e7d890dc8d> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "6220b42d-c4fd-4c77-bae7-78e7d890dc8d"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"6220b42d-c4fd-4c77-bae7-78e7d890dc8d\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;6220b42d-c4fd-4c77-bae7-78e7d890dc8d&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.1.0/StructureDefinition-medcom-core-encounter.html\">MedComCoreEncounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: inpatient encounter (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code IMP = 'inpatient encounter', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-833cef33-3726-433b-855d-e566aaa65fe1.html\">Patient/833cef33-3726-433b-855d-e566aaa65fe1</a> &quot; ELMER&quot;</p><p><b>episodeOfCare</b>: <span/></p></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "finished"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "IMP" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Patient/833cef33-3726-433b-855d-e566aaa65fe1>;
+     fhir:Reference.reference [ fhir:value "Patient/833cef33-3726-433b-855d-e566aaa65fe1" ]
+  ];
+  fhir:Encounter.episodeOfCare [
+     fhir:index 0;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.esundhed.dk/Registre/Landspatientregisteret" ];
+       fhir:Identifier.value [ fhir:value "urn:uuid:fc60e762-b13b-5773-865e-67f3907bdcc7" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Encounter/6220b42d-c4fd-4c77-bae7-78e7d890dc8d.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

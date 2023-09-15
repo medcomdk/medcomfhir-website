@@ -1,0 +1,138 @@
+{
+  "package": "medcom.fhir.dk.carecommunication",
+  "version": "2.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "DK",
+  "extensions": [
+    {
+      "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-attachment-identifier-extension",
+      "title": "AttachmentIdentifierExtension",
+      "types": [
+        "Identifier",
+        "Identifier"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-contact-extension",
+      "title": "PayloadAuthorContactExtension",
+      "types": [
+        "ContactPoint",
+        "ContactPoint",
+        "string",
+        "Extension",
+        "code",
+        "string",
+        "code",
+        "positiveInt",
+        "Period"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension",
+      "title": "PayloadAuthorExtension",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-datetime-extension",
+      "title": "PayloadDateTimeExtension",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-sender-extension",
+      "title": "SenderExtension",
+      "types": [
+        "Reference"
+      ]
+    }
+  ],
+  "profiles": {
+    "Communication": [
+      {
+        "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication",
+        "title": "MedComCareCommunication"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message",
+        "title": "MedComCareCommunicationMessage"
+      }
+    ],
+    "MessageHeader": [
+      {
+        "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader",
+        "title": "MedComCareCommunicationMessageHeader"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-attachment-identifier-extension": [
+      "Bundle.entry.resource.payload",
+      "Communication.payload"
+    ],
+    "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-contact-extension": [
+      "Bundle.entry.resource.payload",
+      "Communication.payload"
+    ],
+    "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension": [
+      "Bundle.entry.resource.payload",
+      "Communication.payload"
+    ],
+    "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-datetime-extension": [
+      "Bundle.entry.resource.payload",
+      "Communication.payload"
+    ],
+    "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-sender-extension": [
+      "Bundle.entry.resource",
+      "Communication"
+    ],
+    "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension": [
+      "Bundle.entry.resource.destination",
+      "MessageHeader.destination"
+    ]
+  }
+}

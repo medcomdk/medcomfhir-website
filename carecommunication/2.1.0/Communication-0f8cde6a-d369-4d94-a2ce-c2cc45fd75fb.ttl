@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Communication/0f8cde6a-d369-4d94-a2ce-c2cc45fd75fb> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "0f8cde6a-d369-4d94-a2ce-c2cc45fd75fb"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Communication</b><a name=\"0f8cde6a-d369-4d94-a2ce-c2cc45fd75fb\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Communication &quot;0f8cde6a-d369-4d94-a2ce-c2cc45fd75fb&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-careCommunication-communication.html\">MedComCareCommunication</a></p></div><p><b>status</b>: unknown</p><p><b>category</b>: Care Coordination <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://medcomfhir.dk/ig/terminology/1.3.0/CodeSystem-medcom-careCommunication-categoryCodes.html\">MedComCareCommunicationCategories</a>#carecoordination)</span></p><p><b>subject</b>: <a href=\"Patient-733cef33-3626-422b-955d-d506aaa65fe1.html\">Patient/733cef33-3626-422b-955d-d506aaa65fe1</a> &quot; ELMER&quot;</p><blockquote><p><b>payload</b></p><p><b>PayloadDateTimeExtension</b>: 2023-03-02 09:00:00+0100</p><p><b>PayloadAuthorExtension</b>: <a href=\"PractitionerRole-7cae09e0-5501-11ed-bdc3-0242ac120002.html\">PractitionerRole/7cae09e0-5501-11ed-bdc3-0242ac120002</a></p><p><b>PayloadAuthorContactExtension</b>: ph: 44527000</p><p><b>content</b>: Forwarded message from Herlev og Gentofte Hospital: Can you please help me clarifying something about the rehabilitation plan?...</p></blockquote><blockquote><p><b>payload</b></p><p><b>PayloadDateTimeExtension</b>: 2023-03-01 12:00:00+0100</p><p><b>PayloadAuthorExtension</b>: <a href=\"PractitionerRole-eda90bde-54f9-11ed-bdc3-0242ac120002.html\">PractitionerRole/eda90bde-54f9-11ed-bdc3-0242ac120002</a></p><p><b>PayloadAuthorContactExtension</b>: ph: 44527000</p><p><b>content</b>: Regarding the rehabilitation plan, please notice that...</p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "carecoordination" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Patient/733cef33-3626-422b-955d-d506aaa65fe1> ;
+     fhir:reference [ fhir:v "Patient/733cef33-3626-422b-955d-d506aaa65fe1" ]
+  ] ; # 
+  fhir:payload ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-datetime-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2023-03-02T09:00:00+01:00"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://medcomfhir.dk/ig/carecommunication/PractitionerRole/7cae09e0-5501-11ed-bdc3-0242ac120002> ;
+         fhir:reference [ fhir:v "PractitionerRole/7cae09e0-5501-11ed-bdc3-0242ac120002" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-contact-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:ContactPoint ;
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "44527000" ]
+       ]
+     ] ) ;
+     fhir:content [ fhir:v "Forwarded message from Herlev og Gentofte Hospital: Can you please help me clarifying something about the rehabilitation plan?..." ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-datetime-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2023-03-01T12:00:00+01:00"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://medcomfhir.dk/ig/carecommunication/PractitionerRole/eda90bde-54f9-11ed-bdc3-0242ac120002> ;
+         fhir:reference [ fhir:v "PractitionerRole/eda90bde-54f9-11ed-bdc3-0242ac120002" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-contact-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:ContactPoint ;
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "44527000" ]
+       ]
+     ] ) ;
+     fhir:content [ fhir:v "Regarding the rehabilitation plan, please notice that..." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
