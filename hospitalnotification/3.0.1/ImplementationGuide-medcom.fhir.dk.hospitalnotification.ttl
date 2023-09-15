@@ -1,0 +1,2237 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medcom.fhir.dk.hospitalnotification"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MedComHospitalNotification</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification</pre><div><p>The DK MedCom HospitalNotification IG</p>\n</div></div>"
+  ]; # 
+  fhir:ImplementationGuide.url [ fhir:value "http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification"]; # 
+  fhir:ImplementationGuide.version [ fhir:value "3.0.1"]; # 
+  fhir:ImplementationGuide.name [ fhir:value "MedComHospitalNotification"]; # 
+  fhir:ImplementationGuide.title [ fhir:value "DK MedCom HospitalNotification"]; # 
+  fhir:ImplementationGuide.status [ fhir:value "active"]; # 
+  fhir:ImplementationGuide.date [ fhir:value "2023-03-02T09:53:14+01:00"^^xsd:dateTime]; # 
+  fhir:ImplementationGuide.publisher [ fhir:value "MedCom"]; # 
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "MedCom" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.medcom.dk" ]
+     ]
+  ]; # 
+  fhir:ImplementationGuide.description [ fhir:value "The DK MedCom HospitalNotification IG"]; # 
+  fhir:ImplementationGuide.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "DK" ];
+       fhir:Coding.display [ fhir:value "Denmark" ]
+     ]
+  ]; # 
+  fhir:ImplementationGuide.packageId [ fhir:value "medcom.fhir.dk.hospitalnotification"]; # 
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"]; # 
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1";
+     fhir:index 0
+  ]; # 
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "hl7tx" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment" ];
+       fhir:Extension.valueMarkdown [ fhir:value "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://terminology.hl7.org/ImplementationGuide/hl7.terminology";
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "5.0.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "hl7_fhir_dk_core" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core";
+       fhir:link <http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.dk.core" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "2.0.0" ]
+  ], [
+     fhir:index 2;
+     fhir:Element.id [ fhir:value "medcom_fhir_dk_core" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core";
+       fhir:link <http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "medcom.fhir.dk.core" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "2.1.0" ]
+  ], [
+     fhir:index 3;
+     fhir:Element.id [ fhir:value "medcom_fhir_dk_messaging" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging";
+       fhir:link <http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "medcom.fhir.dk.messaging" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "2.0.0" ]
+  ], [
+     fhir:index 4;
+     fhir:Element.id [ fhir:value "medcom_fhir_dk_terminology" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology";
+       fhir:link <http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "medcom.fhir.dk.terminology" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.1.1" ]
+  ]; # 
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2021+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "Release" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-juristiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://medcomfhir.dk/ig/hospitalnotification/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2021+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "Release" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-juristiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://medcomfhir.dk/ig/hospitalnotification/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medcom-hospitalNotification-encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComHospitalNotificationEncounter" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Encounter derivation that handles hospital notification when a patient is admitted to a hospital. The hospital notification is always send from a hospital. The receiver of the message is the patients home municipalicy. The hospital notification is send for example when patient is admitted, on leave, returned from leave, finished hospital stay." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medcom-hospitalNotification-message" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComHospitalNotificationMessage" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A message for a HospitalNotification. The message is triggered as patients are admitted, onleave or has finished a hospital stay in order to notify the relevant Municipalicy home care" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medcom-hospitalNotification-messageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComHospitalNotificationMessageHeader" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "MessageHeader for a HospitalNotification message." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalnotifiation-leave-period-extension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medcom-hospitalnotifiation-leave-period-extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComHospitalNotificationLeavePeriodExtension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Includes timestamps for start and end of leave of a hospitalization." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-messaging-reportOfAdmissionExtension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medcom-messaging-reportOfAdmissionExtension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComReportOfAdmissionExtension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Indicates whether the recipient should send a report of admission" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-messaging-reportOfAdmissionRecipientExtension>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/medcom-messaging-reportOfAdmissionRecipientExtension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComReportOfAdmissionRecipientExtension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Recipient of a report of admission response" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/0465ec66-81d2-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/0465ec66-81d2-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/05266a00-81c7-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/05266a00-81c7-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/103fbebe-81d1-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/103fbebe-81d1-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/1ca19ddf-31bc-4597-8739-968c38dd88f8>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/1ca19ddf-31bc-4597-8739-968c38dd88f8" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - STIN (With two episodeOfCare-identifiers)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - admitted'. With two episodeOfCare-identifiers. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/1f5882b4-81d1-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/1f5882b4-81d1-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/2565d3de-082e-4368-9160-4c719071026b>;
+         fhir:Reference.reference [ fhir:value "Organization/2565d3de-082e-4368-9160-4c719071026b" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/384b4a58-81d2-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/384b4a58-81d2-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient who is deceased and with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/48393486-81c6-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/48393486-81c6-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/4e9f2c26-9d9b-4239-ade6-e26c130e855e>;
+         fhir:Reference.reference [ fhir:value "Provenance/4e9f2c26-9d9b-4239-ade6-e26c130e855e" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Start hospital stay - admitted'. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/519d5170-81ca-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/519d5170-81ca-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/545fd5e6-a924-11ed-afa1-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/545fd5e6-a924-11ed-afa1-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Deceased Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/55ba5884-81ca-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/55ba5884-81ca-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/55eb90b8-81d2-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/55eb90b8-81d2-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/5961ade8-81ca-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/5961ade8-81ca-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/66c12a92-81d2-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/66c12a92-81d2-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/6841b54e-81cd-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/6841b54e-81cd-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/6c16f41e-81d1-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/6c16f41e-81d1-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/753bdcba-81ce-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/753bdcba-81ce-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/7e692262-81cd-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/7e692262-81cd-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/840b4046-81ce-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/840b4046-81ce-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/8858e7e6-81c6-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/8858e7e6-81c6-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/8d813af0-81cd-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/8d813af0-81cd-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/97404d10-81c8-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/97404d10-81c8-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/a1b27813-8aa8-4fa1-846b-aeabf5afb7d4>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/a1b27813-8aa8-4fa1-846b-aeabf5afb7d4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - admitted'. Without request for a reportOfAdmission. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/a39d4a04-81c8-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/a39d4a04-81c8-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/a5e5b880-c087-4055-b9ec-99108695f81d>;
+         fhir:Reference.reference [ fhir:value "Bundle/a5e5b880-c087-4055-b9ec-99108695f81d" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Start hospital stay - admitted'" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/a790f964-88d3-4652-bbc8-81d2f3d035f8>;
+         fhir:Reference.reference [ fhir:value "Encounter/a790f964-88d3-4652-bbc8-81d2f3d035f8" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Start hospital stay - admitted'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/a7cf3888-6f42-4e4d-929c-d2475d24fba0>;
+         fhir:Reference.reference [ fhir:value "Provenance/a7cf3888-6f42-4e4d-929c-d2475d24fba0" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Start hospital stay - admitted'. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/a8ec5ae1-e324-453d-9d9f-39ffe41f308a>;
+         fhir:Reference.reference [ fhir:value "Organization/a8ec5ae1-e324-453d-9d9f-39ffe41f308a" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/abb09e14-81c6-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/abb09e14-81c6-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/b00ea1c0-81d2-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/b00ea1c0-81d2-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Deceased Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/b5f7de8c-957a-11ec-b909-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Provenance/b5f7de8c-957a-11ec-b909-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - RE_STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Update Start hospital stay -admitted'. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/b79a7914-81c8-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/b79a7914-81c8-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/b9846c24-0335-11ed-b939-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Encounter/b9846c24-0335-11ed-b939-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - RE_STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Update Start hospital stay - admitted'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/b9b4818e-02de-4cc4-b418-d20cbc7b5404>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/b9b4818e-02de-4cc4-b418-d20cbc7b5404" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - STIN (including reportOfAdmissionFlag = 'true')" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - admitted'. reportOfAdmissionFlag is 'true'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/bea5b49e-81d2-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/bea5b49e-81d2-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/bfab3e80-9584-11ec-b909-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Bundle/bfab3e80-9584-11ec-b909-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - RE_STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Update Start hospital stay - admitted'" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/c67ecb1c-957a-11ec-b909-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Provenance/c67ecb1c-957a-11ec-b909-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - AN_STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Cancellation Start hospital stay - admitted'. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/c83671a4-9584-11ec-b909-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Bundle/c83671a4-9584-11ec-b909-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - AN_STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Cancellation Start hospital stay - admitted'" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/c9782061-ce63-41b5-8be6-655812d23332>;
+         fhir:Reference.reference [ fhir:value "Encounter/c9782061-ce63-41b5-8be6-655812d23332" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - AN_STIN" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Cancellation Start hospital stay - admitted'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/cc47c1e2-78e6-4291-b071-f423a4f7fbfe>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/cc47c1e2-78e6-4291-b071-f423a4f7fbfe" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - RE_STIN." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Revise Start hospital stay - admitted'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/cd72967c-81d2-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/cd72967c-81d2-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/d3128d9b-cede-4c7f-8904-809eab322d7d>;
+         fhir:Reference.reference [ fhir:value "Bundle/d3128d9b-cede-4c7f-8904-809eab322d7d" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - STOR" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Start leave'" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/d56e9c54-23d2-43a4-816e-951d2a6e3281>;
+         fhir:Reference.reference [ fhir:value "Encounter/d56e9c54-23d2-43a4-816e-951d2a6e3281" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - STOR" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Start leave'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/d6eeaca6-81c6-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/d6eeaca6-81c6-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/d8749b54-1aeb-4089-8941-8d876bdffc51>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/d8749b54-1aeb-4089-8941-8d876bdffc51" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - AN_STIN." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Cancellation Start hospital stay - admitted'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/dc421d0a-cded-470f-9a53-2ddba7583baa>;
+         fhir:Reference.reference [ fhir:value "Provenance/dc421d0a-cded-470f-9a53-2ddba7583baa" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - STOR" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Start leave'. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/e07c4bd4-cfad-4c4d-9c4b-e4ba3424a65b>;
+         fhir:Reference.reference [ fhir:value "Encounter/e07c4bd4-cfad-4c4d-9c4b-e4ba3424a65b" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - SLOR" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'End leave'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/e4db4939-7c60-4ac6-aefc-523f809ccba6>;
+         fhir:Reference.reference [ fhir:value "Provenance/e4db4939-7c60-4ac6-aefc-523f809ccba6" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - SLOR" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'End leave'. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/e563a2b2-bf92-4b13-bbd2-0a021a95bded>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/e563a2b2-bf92-4b13-bbd2-0a021a95bded" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - STOR." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Start leave'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/e5682f5e-81d1-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/e5682f5e-81d1-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/e94de8ee-bd94-475e-b454-b8fbbef8a685>;
+         fhir:Reference.reference [ fhir:value "Bundle/e94de8ee-bd94-475e-b454-b8fbbef8a685" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - SLOR" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'End leave'" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/eefc2dfa-81c6-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Organization/eefc2dfa-81c6-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/f405ba2d-467a-4e92-9acc-9dc2a629760f>;
+         fhir:Reference.reference [ fhir:value "Encounter/f405ba2d-467a-4e92-9acc-9dc2a629760f" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - SLHJ (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'End hospital stay - patient completed to home/primary sector' (inpatient). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/f47254da-f170-46f0-b624-4778a9c92b1f>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/f47254da-f170-46f0-b624-4778a9c92b1f" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - SLOR." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'End leave'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/f4aa42a4-86db-4e68-9b38-9dda0dfd5774>;
+         fhir:Reference.reference [ fhir:value "Bundle/f4aa42a4-86db-4e68-9b38-9dda0dfd5774" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - SLHJ (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'End hospital stay - patient completed to home/primary sector' (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/f710698c-83eb-4c3e-81c8-fe8e40baf524>;
+         fhir:Reference.reference [ fhir:value "Provenance/f710698c-83eb-4c3e-81c8-fe8e40baf524" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - SLHJ (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'End hospital stay - patient completed to home/primary sector' (inpatient). Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/fdc1fc66-81d0-11ed-a1eb-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Patient/fdc1fc66-81d0-11ed-a1eb-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/g099bbf3-3fca-4722-a248-bfe1aa956410>;
+         fhir:Reference.reference [ fhir:value "Bundle/g099bbf3-3fca-4722-a248-bfe1aa956410" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - MORS (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Deceased' (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/g1affa53-c157-4080-abb0-8e681524f969>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/g1affa53-c157-4080-abb0-8e681524f969" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - SLHJ (inpatient)." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'End hospital stay - patient completed to home/primary sector' (inpatient). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/g9942adb-197a-4e30-bec8-566e3a113efe>;
+         fhir:Reference.reference [ fhir:value "Provenance/g9942adb-197a-4e30-bec8-566e3a113efe" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - MORS (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Deceased' (inpatient). Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/gcab7218-9584-11ec-b909-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Encounter/gcab7218-9584-11ec-b909-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - MORS (inpatient)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Deceased' (inpatient). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/h1c8e4a8-6b45-4669-94ad-2a99ad96bf03>;
+         fhir:Reference.reference [ fhir:value "Bundle/h1c8e4a8-6b45-4669-94ad-2a99ad96bf03" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - STAA" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Start hospital stay - acute ambulant'" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/h2cb16ce-af8c-46f3-be9e-89406ef3e7b5>;
+         fhir:Reference.reference [ fhir:value "Encounter/h2cb16ce-af8c-46f3-be9e-89406ef3e7b5" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - STAA" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Start hospital stay - acute ambulant'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 70;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/h60bd482-9c47-43c5-9b77-1134eaa2d5f0>;
+         fhir:Reference.reference [ fhir:value "Provenance/h60bd482-9c47-43c5-9b77-1134eaa2d5f0" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - STAA" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Start hospital stay - acute ambulant'. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 71;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/hefc6d95-6161-4493-99c9-f359488dedb8>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/hefc6d95-6161-4493-99c9-f359488dedb8" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - MORS (inpatient)." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Deceased' (inpatient). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 72;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - STAA." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - acute ambulant'. reportOfAdmissionFlag is 'true'. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 73;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/j3675c4a-33db-40f1-b578-ff16e3e9134c>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/j3675c4a-33db-40f1-b578-ff16e3e9134c" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - STAA." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - acute ambulant'. Without request for a reportOfAdmission. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 74;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/ka776a3e-3eca-407b-9f81-b8c16f089874>;
+         fhir:Reference.reference [ fhir:value "Provenance/ka776a3e-3eca-407b-9f81-b8c16f089874" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - SLHJ (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'End hospital stay - patient completed to home/primary sector' (acute ambulant). Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 75;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/kbbad98c-3310-404a-af0c-7e3739d7b49f>;
+         fhir:Reference.reference [ fhir:value "Encounter/kbbad98c-3310-404a-af0c-7e3739d7b49f" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - SLHJ (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'End hospital stay - patient completed to home/primary sector' (acute ambulant). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 76;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/kcab461b-f44e-4d97-a041-ef7e64800587>;
+         fhir:Reference.reference [ fhir:value "Bundle/kcab461b-f44e-4d97-a041-ef7e64800587" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - SLHJ (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'End hospital stay - patient completed to home/primary sector' (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 77;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/l001c640-6b5d-414c-b6bd-e00ec6d4ceee>;
+         fhir:Reference.reference [ fhir:value "Encounter/l001c640-6b5d-414c-b6bd-e00ec6d4ceee" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - MORS (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Deceased' (acute ambulant). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 78;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/l17de5f5-abb0-4701-93aa-6b0d7b4127bc>;
+         fhir:Reference.reference [ fhir:value "Provenance/l17de5f5-abb0-4701-93aa-6b0d7b4127bc" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - MORS (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Deceased' (acute ambulant). Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 79;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/ld31e08a-b91f-49c3-841a-ce80e6380517>;
+         fhir:Reference.reference [ fhir:value "Bundle/ld31e08a-b91f-49c3-841a-ce80e6380517" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - MORS (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Deceased' (acute ambulant)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 80;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/m790f964-98d3-4852-bac8-83d2f3d035f8>;
+         fhir:Reference.reference [ fhir:value "Encounter/m790f964-98d3-4852-bac8-83d2f3d035f8" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - STIN (distinct sender and serviceProvider)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Start hospital stay - admitted'. With different serviceProvider and sender organisation in the Bundle. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 81;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Provenance/m7cf3888-6f52-5e4d-939c-d2575d24fba0>;
+         fhir:Reference.reference [ fhir:value "Provenance/m7cf3888-6f52-5e4d-939c-d2575d24fba0" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedComMessagingProvenance - STIN." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComMessagingProvenance used in 'Start hospital stay - admitted'. With different serviceProvider and sender Organisation. Only valid if used in a Bundle (message)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 82;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/m908i967-9ie3-9023-b9ec-98108695f01d>;
+         fhir:Reference.reference [ fhir:value "Bundle/m908i967-9ie3-9023-b9ec-98108695f01d" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - STIN (different sender and serviceProvider)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Start hospital stay - admitted'. With different serviceProvider and sender Organization." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 83;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/m9bea09c-e662-4d59-b84f-9af570b57f42>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/m9bea09c-e662-4d59-b84f-9af570b57f42" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - SLHJ (acute ambulant)." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'End hospital stay - patient completed to home/primary sector' (acute ambulant). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 84;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Bundle/n73ccf30-80b9-4bd2-bf50-1ac1914498f0>;
+         fhir:Reference.reference [ fhir:value "Bundle/n73ccf30-80b9-4bd2-bf50-1ac1914498f0" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Message - STIN (with two episodeOfCare-identifiers)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessage 'Start hospital stay - admitted' (with two episodeOfCare-identifiers)" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message>
+       ]
+     ], [
+       fhir:index 85;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/nabb68aa-c97b-4905-a60c-71ff3209fd51>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/nabb68aa-c97b-4905-a60c-71ff3209fd51" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - MORS (acute ambulant)." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Deceased' (acute ambulant). Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 86;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/ne70f2b8-a924-11ed-afa1-0242ac120002>;
+         fhir:Reference.reference [ fhir:value "Encounter/ne70f2b8-a924-11ed-afa1-0242ac120002" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification Encounter - STIN (two episodeOfCare-identifiers)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationEncounter 'Start hospital stay - admitted'. With two episodeOfCare-identifiers. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+       ]
+     ], [
+       fhir:index 87;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/o4cdf292-abf3-4f5f-80ea-60a48013ff6d>;
+         fhir:Reference.reference [ fhir:value "Organization/o4cdf292-abf3-4f5f-80ea-60a48013ff6d" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Receiver organization - Plejecenter Herlev." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 88;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d>;
+         fhir:Reference.reference [ fhir:value "Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 89;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/o9b4818e-12de-5cc4-c418-d30cbc7b5404>;
+         fhir:Reference.reference [ fhir:value "MessageHeader/o9b4818e-12de-5cc4-c418-d30cbc7b5404" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HospitalNotification MessageHeader - STIN (different serviceProvider and sender organisation)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - admitted'. With different serviceProvider and sender organisation. Only Valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+       ]
+     ], [
+       fhir:index 90;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/of839e87-4e44-4977-b38e-92b5a6f187b5>;
+         fhir:Reference.reference [ fhir:value "Organization/of839e87-4e44-4977-b38e-92b5a6f187b5" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ServiceProvider organization - Hjertemedicinsk sengeafs. S103" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCoreOrganization with SOR identifier. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 91;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/t33cef33-3626-422b-955d-d506aaa65fe1>;
+         fhir:Reference.reference [ fhir:value "Patient/t33cef33-3626-422b-955d-d506aaa65fe1" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 92;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/t82fb8a3-6725-41e2-a615-2b1cfcfe9931>;
+         fhir:Reference.reference [ fhir:value "Patient/t82fb8a3-6725-41e2-a615-2b1cfcfe9931" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient - Bruno Test Elmer (deceased)" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Example of a MedComCorePatient who is deceased and with minimal information. Only valid if used in a Bundle." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+         fhir:Extension.valueUrl [ fhir:value "toc.html" ]
+       ];
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "index.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Home" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "downloads.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "extensions.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "extensions.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Extensions" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "profiles.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "profiles.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Profiles" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 11;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 13;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="medcom.fhir.dk.hospitalnotification"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>MedComHospitalNotification</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification</pre><div><p>The DK MedCom HospitalNotification IG</p>
+</div></div>
+  </text>
+  <url value="http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification"/>
+  <version value="3.0.0"/>
+  <name value="MedComHospitalNotification"/>
+  <title value="DK MedCom HospitalNotification"/>
+  <status value="active"/>
+  <date value="2023-01-05T14:02:31+01:00"/>
+  <publisher value="MedCom"/>
+  <contact>
+    <name value="MedCom"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.medcom.dk"/>
+    </telecom>
+  </contact>
+  <description value="The DK MedCom HospitalNotification IG"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DK"/>
+      <display value="Denmark"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="medcom.fhir.dk.hospitalnotification"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="5.0.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_dk_core">
+    <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
+    <packageId value="hl7.fhir.dk.core"/>
+    <version value="2.0.0"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_core">
+    <uri value="http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"/>
+    <packageId value="medcom.fhir.dk.core"/>
+    <version value="2.1.0"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_messaging">
+    <uri value="http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging"/>
+    <packageId value="medcom.fhir.dk.messaging"/>
+    <version value="2.0.0"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_terminology">
+    <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
+    <packageId value="medcom.fhir.dk.terminology"/>
+    <version value="1.1.1"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2021+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-juristiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://medcomfhir.dk/ig/hospitalnotification/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2021+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="Release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-juristiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://medcomfhir.dk/ig/hospitalnotification/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-hospitalNotification-encounter"/>
+      </reference>
+      <name value="MedComHospitalNotificationEncounter"/>
+      <description value="Encounter derivation that handles hospital notification when a patient is admitted to a hospital. The hospital notification is always send from a hospital. The receiver of the message is the patients home municipalicy. The hospital notification is send for example when patient is admitted, on leave, returned from leave, finished hospital stay."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-hospitalNotification-message"/>
+      </reference>
+      <name value="MedComHospitalNotificationMessage"/>
+      <description value="A message for a HospitalNotification. The message is triggered as patients are admitted, onleave or has finished a hospital stay in order to notify the relevant Municipalicy home care"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+      </reference>
+      <name value="MedComHospitalNotificationMessageHeader"/>
+      <description value="MessageHeader for a HospitalNotification message."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-hospitalnotifiation-leave-period-extension"/>
+      </reference>
+      <name value="MedComHospitalNotificationLeavePeriodExtension"/>
+      <description value="Includes timestamps for start and end of leave of a hospitalization."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-messaging-reportOfAdmissionExtension"/>
+      </reference>
+      <name value="MedComReportOfAdmissionExtension"/>
+      <description value="Indicates whether the recipient should send a report of admission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-messaging-reportOfAdmissionRecipientExtension"/>
+      </reference>
+      <name value="MedComReportOfAdmissionRecipientExtension"/>
+      <description value="Recipient of a report of admission response"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/0465ec66-81d2-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/05266a00-81c7-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/103fbebe-81d1-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/1f5882b4-81d1-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/384b4a58-81d2-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient who is deceased and with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/48393486-81c6-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/519d5170-81ca-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/55ba5884-81ca-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/55eb90b8-81d2-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/5961ade8-81ca-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/66c12a92-81d2-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/6841b54e-81cd-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/6c16f41e-81d1-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/753bdcba-81ce-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/7e692262-81cd-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/840b4046-81ce-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/8858e7e6-81c6-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/8d813af0-81cd-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/97404d10-81c8-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/a1b27813-8aa8-4fa1-846b-aeabf5afb7d4"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - STIN"/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - admitted'. Without request for a reportOfAdmission. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/a39d4a04-81c8-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/a5e5b880-c087-4055-b9ec-99108695f81d"/>
+      </reference>
+      <name value="HospitalNotification Message - STIN"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Start hospital stay - admitted'"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/a790f964-88d3-4652-bbc8-81d2f3d035f8"/>
+      </reference>
+      <name value="HospitalNotification Encounter - STIN"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Start hospital stay - admitted'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/a7cf3888-6f42-4e4d-929c-d2475d24fba0"/>
+      </reference>
+      <name value="MedComMessagingProvenance - STIN"/>
+      <description value="Example of MedComMessagingProvenance used in 'Start hospital stay - admitted'. Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/abb09e14-81c6-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/b00ea1c0-81d2-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Deceased Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/b5f7de8c-957a-11ec-b909-0242ac120002"/>
+      </reference>
+      <name value="MedComMessagingProvenance - RE_STIN"/>
+      <description value="Example of MedComMessagingProvenance used in 'Update Start hospital stay -admitted'. Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/b79a7914-81c8-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/b9846c24-0335-11ed-b939-0242ac120002"/>
+      </reference>
+      <name value="HospitalNotification Encounter - RE_STIN"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Update Start hospital stay - admitted'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/b9b4818e-02de-4cc4-b418-d20cbc7b5404"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - STIN."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - admitted'. reportOfAdmissionFlag is 'true'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/bea5b49e-81d2-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bfab3e80-9584-11ec-b909-0242ac120002"/>
+      </reference>
+      <name value="HospitalNotification Message - RE_STIN"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Update Start hospital stay - admitted'"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/c67ecb1c-957a-11ec-b909-0242ac120002"/>
+      </reference>
+      <name value="MedComMessagingProvenance - AN_STIN"/>
+      <description value="Example of MedComMessagingProvenance used in 'Cancellation Start hospital stay - admitted'. Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/c83671a4-9584-11ec-b909-0242ac120002"/>
+      </reference>
+      <name value="HospitalNotification Message - AN_STIN"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Cancellation Start hospital stay - admitted'"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/c9782061-ce63-41b5-8be6-655812d23332"/>
+      </reference>
+      <name value="HospitalNotification Encounter - AN_STIN"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Cancellation Start hospital stay - admitted'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/cc47c1e2-78e6-4291-b071-f423a4f7fbfe"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - RE_STIN."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Revise Start hospital stay - admitted'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/cd72967c-81d2-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/d3128d9b-cede-4c7f-8904-809eab322d7d"/>
+      </reference>
+      <name value="HospitalNotification Message - STOR"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Start leave'"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/d56e9c54-23d2-43a4-816e-951d2a6e3281"/>
+      </reference>
+      <name value="HospitalNotification Encounter - STOR"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Start leave'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/d6eeaca6-81c6-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/d8749b54-1aeb-4089-8941-8d876bdffc51"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - AN_STIN."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Cancellation Start hospital stay - admitted'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/dc421d0a-cded-470f-9a53-2ddba7583baa"/>
+      </reference>
+      <name value="MedComMessagingProvenance - STOR"/>
+      <description value="Example of MedComMessagingProvenance used in 'Start leave'. Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/e07c4bd4-cfad-4c4d-9c4b-e4ba3424a65b"/>
+      </reference>
+      <name value="HospitalNotification Encounter - SLOR"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'End leave'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/e4db4939-7c60-4ac6-aefc-523f809ccba6"/>
+      </reference>
+      <name value="MedComMessagingProvenance - SLOR"/>
+      <description value="Example of MedComMessagingProvenance used in 'End leave'. Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/e563a2b2-bf92-4b13-bbd2-0a021a95bded"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - STOR."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Start leave'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/e5682f5e-81d1-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/e94de8ee-bd94-475e-b454-b8fbbef8a685"/>
+      </reference>
+      <name value="HospitalNotification Message - SLOR"/>
+      <description value="Example of MedComHospitalNotificationMessage 'End leave'"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/eefc2dfa-81c6-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/f405ba2d-467a-4e92-9acc-9dc2a629760f"/>
+      </reference>
+      <name value="HospitalNotification Encounter - SLHJ (inpatient)"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'End hospital stay - patient completed to home/primary sector' (inpatient). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/f47254da-f170-46f0-b624-4778a9c92b1f"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - SLOR."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'End leave'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/f4aa42a4-86db-4e68-9b38-9dda0dfd5774"/>
+      </reference>
+      <name value="HospitalNotification Message - SLHJ (inpatient)"/>
+      <description value="Example of MedComHospitalNotificationMessage 'End hospital stay - patient completed to home/primary sector' (inpatient)"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/f710698c-83eb-4c3e-81c8-fe8e40baf524"/>
+      </reference>
+      <name value="MedComMessagingProvenance - SLHJ (inpatient)"/>
+      <description value="Example of MedComMessagingProvenance used in 'End hospital stay - patient completed to home/primary sector' (inpatient). Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/fdc1fc66-81d0-11ed-a1eb-0242ac120002"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/g099bbf3-3fca-4722-a248-bfe1aa956410"/>
+      </reference>
+      <name value="HospitalNotification Message - MORS (inpatient)"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Deceased' (inpatient)"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/g1affa53-c157-4080-abb0-8e681524f969"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - SLHJ (inpatient)."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'End hospital stay - patient completed to home/primary sector' (inpatient). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/g9942adb-197a-4e30-bec8-566e3a113efe"/>
+      </reference>
+      <name value="MedComMessagingProvenance - MORS (inpatient)"/>
+      <description value="Example of MedComMessagingProvenance used in 'Deceased' (inpatient). Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/gcab7218-9584-11ec-b909-0242ac120002"/>
+      </reference>
+      <name value="HospitalNotification Encounter - MORS (inpatient)"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Deceased' (inpatient). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/h1c8e4a8-6b45-4669-94ad-2a99ad96bf03"/>
+      </reference>
+      <name value="HospitalNotification Message - STAA"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Start hospital stay - acute ambulant'"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/h2cb16ce-af8c-46f3-be9e-89406ef3e7b5"/>
+      </reference>
+      <name value="HospitalNotification Encounter - STAA"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Start hospital stay - acute ambulant'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/h60bd482-9c47-43c5-9b77-1134eaa2d5f0"/>
+      </reference>
+      <name value="MedComMessagingProvenance - STAA"/>
+      <description value="Example of MedComMessagingProvenance used in 'Start hospital stay - acute ambulant'. Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/hefc6d95-6161-4493-99c9-f359488dedb8"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - MORS (inpatient)."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Deceased' (inpatient). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - STAA."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - acute ambulant'. reportOfAdmissionFlag is 'true'. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/j3675c4a-33db-40f1-b578-ff16e3e9134c"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - STAA."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - acute ambulant'. Without request for a reportOfAdmission. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/ka776a3e-3eca-407b-9f81-b8c16f089874"/>
+      </reference>
+      <name value="MedComMessagingProvenance - SLHJ (acute ambulant)"/>
+      <description value="Example of MedComMessagingProvenance used in 'End hospital stay - patient completed to home/primary sector' (acute ambulant). Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/kbbad98c-3310-404a-af0c-7e3739d7b49f"/>
+      </reference>
+      <name value="HospitalNotification Encounter - SLHJ (acute ambulant)"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'End hospital stay - patient completed to home/primary sector' (acute ambulant). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/kcab461b-f44e-4d97-a041-ef7e64800587"/>
+      </reference>
+      <name value="HospitalNotification Message - SLHJ (acute ambulant)"/>
+      <description value="Example of MedComHospitalNotificationMessage 'End hospital stay - patient completed to home/primary sector' (acute ambulant)"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/l001c640-6b5d-414c-b6bd-e00ec6d4ceee"/>
+      </reference>
+      <name value="HospitalNotification Encounter - MORS (acute ambulant)"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Deceased' (acute ambulant). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/l17de5f5-abb0-4701-93aa-6b0d7b4127bc"/>
+      </reference>
+      <name value="MedComMessagingProvenance - MORS (acute ambulant)"/>
+      <description value="Example of MedComMessagingProvenance used in 'Deceased' (acute ambulant). Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ld31e08a-b91f-49c3-841a-ce80e6380517"/>
+      </reference>
+      <name value="HospitalNotification Message - MORS (acute ambulant)"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Deceased' (acute ambulant)"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/m790f964-98d3-4852-bac8-83d2f3d035f8"/>
+      </reference>
+      <name value="HospitalNotification Encounter - STIN"/>
+      <description value="Example of MedComHospitalNotificationEncounter 'Start hospital stay - admitted'. With different serviceProvider and sender organisation in the Bundle. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/m7cf3888-6f52-5e4d-939c-d2575d24fba0"/>
+      </reference>
+      <name value="MedComMessagingProvenance - STIN."/>
+      <description value="Example of MedComMessagingProvenance used in 'Start hospital stay - admitted'. With different serviceProvider and sender Organisation. Only valid if used in a Bundle (message)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/m908i967-9ie3-9023-b9ec-98108695f01d"/>
+      </reference>
+      <name value="HospitalNotification Message - STIN"/>
+      <description value="Example of MedComHospitalNotificationMessage 'Start hospital stay - admitted'. With different serviceProvider and sender Organization."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/m9bea09c-e662-4d59-b84f-9af570b57f42"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - SLHJ (acute ambulant)."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'End hospital stay - patient completed to home/primary sector' (acute ambulant). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/nabb68aa-c97b-4905-a60c-71ff3209fd51"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - MORS (acute ambulant)."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Deceased' (acute ambulant). Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/o4cdf292-abf3-4f5f-80ea-60a48013ff6d"/>
+      </reference>
+      <name value="Receiver organization - Plejecenter Herlev."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d"/>
+      </reference>
+      <name value="Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital."/>
+      <description value="Example of a MedComMessagingOrganization with SOR and EAN identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/o9b4818e-12de-5cc4-c418-d30cbc7b5404"/>
+      </reference>
+      <name value="HospitalNotification MessageHeader - STIN."/>
+      <description value="Example of MedComHospitalNotificationMessageHeader 'Start hospital stay - admitted'. With different serviceProvider and sender organisation. Only Valid if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/of839e87-4e44-4977-b38e-92b5a6f187b5"/>
+      </reference>
+      <name value="ServiceProvider organization - Hjertemedicinsk sengeafs. S103"/>
+      <description value="Example of a MedComCoreOrganization with SOR identifier. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/t33cef33-3626-422b-955d-d506aaa65fe1"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer"/>
+      <description value="Example of a MedComCorePatient with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/t82fb8a3-6725-41e2-a615-2b1cfcfe9931"/>
+      </reference>
+      <name value="Patient - Bruno Test Elmer (deceased)"/>
+      <description value="Example of a MedComCorePatient who is deceased and with minimal information. Only valid if used in a Bundle."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="extensions.html"/>
+        </extension>
+        <nameUrl value="extensions.html"/>
+        <title value="Extensions"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="profiles.html"/>
+        </extension>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

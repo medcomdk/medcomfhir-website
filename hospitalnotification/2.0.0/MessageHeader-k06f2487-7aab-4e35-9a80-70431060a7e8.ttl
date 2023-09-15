@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/k06f2487-7aab-4e35-9a80-70431060a7e8> a fhir:MessageHeader;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "k06f2487-7aab-4e35-9a80-70431060a7e8"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MessageHeader</b><a name=\"k06f2487-7aab-4e35-9a80-70431060a7e8\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MessageHeader \"k06f2487-7aab-4e35-9a80-70431060a7e8\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-hospitalNotification-messageHeader.html\">MedComHospitalNotificationMessageHeader</a></p></div><p><b>event</b>: Hospital Notification Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code hospital-notification-message = 'Hospital Notification Message', stated as 'null')</p><h3>Destinations</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td>*</td><td></td><td><a href=\"https://sor2.sum.dsdn.dk/#id=953741000016009\">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td><td><a href=\"Organization-o4cdf292-abf3-4f5f-80ea-60a48013ff6d.html\">Organization/o4cdf292-abf3-4f5f-80ea-60a48013ff6d</a> \"Receiver Organization\"</td></tr></table><p><b>sender</b>: <a href=\"Organization-o7056980-a8b2-42aa-8a0e-c1fc85d1f40d.html\">Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d</a> \"Sender Organization\"</p><h3>Sources</h3><table class=\"grid\"><tr><td>-</td><td><b>Endpoint</b></td></tr><tr><td>*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=265161000016000\">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td></tr></table><p><b>focus</b>: <a href=\"Encounter-i458ddc8-fea4-41c3-992b-ff73cb6f657b.html\">Encounter/i458ddc8-fea4-41c3-992b-ff73cb6f657b</a></p></div>"
+  ];
+  fhir:MessageHeader.eventCoding [
+     fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes" ];
+     fhir:Coding.code [ fhir:value "hospital-notification-message" ]
+  ];
+  fhir:MessageHeader.destination [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse" ];
+         fhir:Coding.code [ fhir:value "primary" ]
+       ]
+     ];
+     fhir:MessageHeader.destination.endpoint [ fhir:value "https://sor2.sum.dsdn.dk/#id=953741000016009" ];
+     fhir:MessageHeader.destination.receiver [
+       fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/o4cdf292-abf3-4f5f-80ea-60a48013ff6d>;
+       fhir:Reference.reference [ fhir:value "Organization/o4cdf292-abf3-4f5f-80ea-60a48013ff6d" ]
+     ]
+  ];
+  fhir:MessageHeader.sender [
+     fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d>;
+     fhir:Reference.reference [ fhir:value "Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d" ]
+  ];
+  fhir:MessageHeader.source [
+     fhir:MessageHeader.source.endpoint [ fhir:value "https://sor2.sum.dsdn.dk/#id=265161000016000" ]
+  ];
+  fhir:MessageHeader.focus [
+     fhir:index 0;
+     fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Encounter/i458ddc8-fea4-41c3-992b-ff73cb6f657b>;
+     fhir:Reference.reference [ fhir:value "Encounter/i458ddc8-fea4-41c3-992b-ff73cb6f657b" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/k06f2487-7aab-4e35-9a80-70431060a7e8.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

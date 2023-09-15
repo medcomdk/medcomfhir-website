@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MessageHeader xmlns="http://hl7.org/fhir">
+  <id value="cc47c1e2-78e6-4291-b071-f423a4f7fbfe"/>
+  <meta>
+    <profile value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-messageHeader"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MessageHeader</b><a name="cc47c1e2-78e6-4291-b071-f423a4f7fbfe"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MessageHeader &quot;cc47c1e2-78e6-4291-b071-f423a4f7fbfe&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medcom-hospitalNotification-messageHeader.html">MedComHospitalNotificationMessageHeader</a></p></div><p><b>event</b>: Hospital Notification Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code hospital-notification-message = 'Hospital Notification Message', stated as 'null')</p><h3>Destinations</h3><table class="grid"><tr><td>-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td>*</td><td/><td><a href="https://sor2.sum.dsdn.dk/#id=953741000016009">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td><td><a href="Organization-8858e7e6-81c6-11ed-a1eb-0242ac120002.html">Organization/8858e7e6-81c6-11ed-a1eb-0242ac120002</a> &quot;Plejecenter Herlev&quot;</td></tr></table><p><b>sender</b>: <a href="Organization-abb09e14-81c6-11ed-a1eb-0242ac120002.html">Organization/abb09e14-81c6-11ed-a1eb-0242ac120002</a> &quot;Hjerteafdelingen på Herlev og Gentofte hospital&quot;</p><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Endpoint</b></td></tr><tr><td>*</td><td><a href="https://sor2.sum.dsdn.dk/#id=265161000016000">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td></tr></table><p><b>focus</b>: <a href="Encounter-b9846c24-0335-11ed-b939-0242ac120002.html">Encounter/b9846c24-0335-11ed-b939-0242ac120002</a></p></div>
+  </text>
+  <eventCoding>
+    <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"/>
+    <code value="hospital-notification-message"/>
+  </eventCoding>
+  <destination>
+    <extension url="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension">
+      <valueCoding>
+        <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"/>
+        <code value="primary"/>
+      </valueCoding>
+    </extension>
+    <endpoint value="https://sor2.sum.dsdn.dk/#id=953741000016009"/>
+    <receiver>
+      <reference value="Organization/8858e7e6-81c6-11ed-a1eb-0242ac120002"/>
+    </receiver>
+  </destination>
+  <sender>
+    <reference value="Organization/abb09e14-81c6-11ed-a1eb-0242ac120002"/>
+  </sender>
+  <source>
+    <endpoint value="https://sor2.sum.dsdn.dk/#id=265161000016000"/>
+  </source>
+  <focus>
+    <reference value="Encounter/b9846c24-0335-11ed-b939-0242ac120002"/>
+  </focus>
+</MessageHeader>

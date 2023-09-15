@@ -1,0 +1,152 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medcom-messaging-activityCodes"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">new-message<a name=\"medcom-messaging-activityCodes-new-message\"> </a></td><td>A new message has been sent</td></tr><tr><td style=\"white-space:nowrap\">forward-message<a name=\"medcom-messaging-activityCodes-forward-message\"> </a></td><td>A message has been forwarded and potentially changed</td></tr><tr><td style=\"white-space:nowrap\">reply-message<a name=\"medcom-messaging-activityCodes-reply-message\"> </a></td><td>A message has been replied to</td></tr><tr><td style=\"white-space:nowrap\">retract-message<a name=\"medcom-messaging-activityCodes-retract-message\"> </a></td><td>A message has been retracted/cancelled</td></tr><tr><td style=\"white-space:nowrap\">modified-message<a name=\"medcom-messaging-activityCodes-modified-message\"> </a></td><td>A message has been modified</td></tr><tr><td style=\"white-space:nowrap\">carboncopy-message<a name=\"medcom-messaging-activityCodes-carboncopy-message\"> </a></td><td>An exact copy of a message to a primary receiver has been sent to a carbon copy receiver</td></tr><tr><td style=\"white-space:nowrap\">admit-emergency<a name=\"medcom-messaging-activityCodes-admit-emergency\"> </a></td><td>Start hospital stay - acute ambulant</td></tr><tr><td style=\"white-space:nowrap\">revise-admit-emergency<a name=\"medcom-messaging-activityCodes-revise-admit-emergency\"> </a></td><td>Update Start hospital stay - acute ambulant</td></tr><tr><td style=\"white-space:nowrap\">cancel-admit-emergency<a name=\"medcom-messaging-activityCodes-cancel-admit-emergency\"> </a></td><td>Cancellation Start hospital stay - acute ambulant</td></tr><tr><td style=\"white-space:nowrap\">admit-inpatient<a name=\"medcom-messaging-activityCodes-admit-inpatient\"> </a></td><td>Start hospital stay - admitted</td></tr><tr><td style=\"white-space:nowrap\">revise-admit-inpatient<a name=\"medcom-messaging-activityCodes-revise-admit-inpatient\"> </a></td><td>Update Start hospital stay - admitted</td></tr><tr><td style=\"white-space:nowrap\">cancel-admit-inpatient<a name=\"medcom-messaging-activityCodes-cancel-admit-inpatient\"> </a></td><td>Cancellation Start hospital stay - admitted</td></tr><tr><td style=\"white-space:nowrap\">start-leave-inpatient<a name=\"medcom-messaging-activityCodes-start-leave-inpatient\"> </a></td><td>Start leave</td></tr><tr><td style=\"white-space:nowrap\">revise-start-leave-inpatient<a name=\"medcom-messaging-activityCodes-revise-start-leave-inpatient\"> </a></td><td>Update Start leave</td></tr><tr><td style=\"white-space:nowrap\">cancel-start-leave-inpatient<a name=\"medcom-messaging-activityCodes-cancel-start-leave-inpatient\"> </a></td><td>Cancellation Start leave</td></tr><tr><td style=\"white-space:nowrap\">end-leave-inpatient<a name=\"medcom-messaging-activityCodes-end-leave-inpatient\"> </a></td><td>End leave</td></tr><tr><td style=\"white-space:nowrap\">revise-end-leave-inpatient<a name=\"medcom-messaging-activityCodes-revise-end-leave-inpatient\"> </a></td><td>Update End leave</td></tr><tr><td style=\"white-space:nowrap\">cancel-end-leave-inpatient<a name=\"medcom-messaging-activityCodes-cancel-end-leave-inpatient\"> </a></td><td>Cancellation End leave</td></tr><tr><td style=\"white-space:nowrap\">discharge-emergency-home<a name=\"medcom-messaging-activityCodes-discharge-emergency-home\"> </a></td><td>End hospital stay - patient completed to home/primary sector</td></tr><tr><td style=\"white-space:nowrap\">discharge-inpatient-home<a name=\"medcom-messaging-activityCodes-discharge-inpatient-home\"> </a></td><td>End hospital stay - patient completed to home/primary sector</td></tr><tr><td style=\"white-space:nowrap\">revise-discharge-emergency-home<a name=\"medcom-messaging-activityCodes-revise-discharge-emergency-home\"> </a></td><td>Update End hospital stay – patient completed to home/primary sector</td></tr><tr><td style=\"white-space:nowrap\">revise-discharge-inpatient-home<a name=\"medcom-messaging-activityCodes-revise-discharge-inpatient-home\"> </a></td><td>Update End hospital stay – patient completed to home/primary sector</td></tr><tr><td style=\"white-space:nowrap\">cancel-discharge-emergency-home<a name=\"medcom-messaging-activityCodes-cancel-discharge-emergency-home\"> </a></td><td>Cancellation End hospital stay – patient completed to home/primary sector</td></tr><tr><td style=\"white-space:nowrap\">cancel-discharge-inpatient-home<a name=\"medcom-messaging-activityCodes-cancel-discharge-inpatient-home\"> </a></td><td>Cancellation End hospital stay – patient completed to home/primary sector</td></tr><tr><td style=\"white-space:nowrap\">acknowledgement<a name=\"medcom-messaging-activityCodes-acknowledgement\"> </a></td><td>Acknowledgement message has been sent</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"];
+  fhir:CodeSystem.version [ fhir:value "1.1.1"];
+  fhir:CodeSystem.name [ fhir:value "MedComMessagingActivityCodes"];
+  fhir:CodeSystem.title [ fhir:value "MedComMessagingActivityCodes"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2023-01-06"^^xsd:date];
+  fhir:CodeSystem.publisher [ fhir:value "MedCom"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "MedCom" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.medcom.dk" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "CodeSystem containing codes for activities occuring in MedCom messages"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "DK" ];
+       fhir:Coding.display [ fhir:value "Denmark" ]
+     ]
+  ];
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "25"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "new-message" ];
+     fhir:CodeSystem.concept.display [ fhir:value "A new message has been sent" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "forward-message" ];
+     fhir:CodeSystem.concept.display [ fhir:value "A message has been forwarded and potentially changed" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "reply-message" ];
+     fhir:CodeSystem.concept.display [ fhir:value "A message has been replied to" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "retract-message" ];
+     fhir:CodeSystem.concept.display [ fhir:value "A message has been retracted/cancelled" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "modified-message" ];
+     fhir:CodeSystem.concept.display [ fhir:value "A message has been modified" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "carboncopy-message" ];
+     fhir:CodeSystem.concept.display [ fhir:value "An exact copy of a message to a primary receiver has been sent to a carbon copy receiver" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "admit-emergency" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Start hospital stay - acute ambulant" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "revise-admit-emergency" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Update Start hospital stay - acute ambulant" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "cancel-admit-emergency" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cancellation Start hospital stay - acute ambulant" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "admit-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Start hospital stay - admitted" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "revise-admit-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Update Start hospital stay - admitted" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "cancel-admit-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cancellation Start hospital stay - admitted" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "start-leave-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Start leave" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "revise-start-leave-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Update Start leave" ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "cancel-start-leave-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cancellation Start leave" ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "end-leave-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "End leave" ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value "revise-end-leave-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Update End leave" ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value "cancel-end-leave-inpatient" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cancellation End leave" ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value "discharge-emergency-home" ];
+     fhir:CodeSystem.concept.display [ fhir:value "End hospital stay - patient completed to home/primary sector" ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value "discharge-inpatient-home" ];
+     fhir:CodeSystem.concept.display [ fhir:value "End hospital stay - patient completed to home/primary sector" ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value "revise-discharge-emergency-home" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Update End hospital stay – patient completed to home/primary sector" ]
+  ], [
+     fhir:index 21;
+     fhir:CodeSystem.concept.code [ fhir:value "revise-discharge-inpatient-home" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Update End hospital stay – patient completed to home/primary sector" ]
+  ], [
+     fhir:index 22;
+     fhir:CodeSystem.concept.code [ fhir:value "cancel-discharge-emergency-home" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cancellation End hospital stay – patient completed to home/primary sector" ]
+  ], [
+     fhir:index 23;
+     fhir:CodeSystem.concept.code [ fhir:value "cancel-discharge-inpatient-home" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cancellation End hospital stay – patient completed to home/primary sector" ]
+  ], [
+     fhir:index 24;
+     fhir:CodeSystem.concept.code [ fhir:value "acknowledgement" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Acknowledgement message has been sent" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

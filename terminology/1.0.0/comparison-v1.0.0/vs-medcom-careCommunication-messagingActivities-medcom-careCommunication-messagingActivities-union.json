@@ -1,0 +1,70 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "80064a57-73e0-47a1-9a83-d11da28f9a18-35",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/80064a57-73e0-47a1-9a83-d11da28f9a18-35",
+  "name" : "UnionMedComCareCommunicationMessageActivitiesAndMedComCareCommunicationMessageActivities",
+  "title" : "Union of MedComCareCommunicationMessageActivityCodes And MedComCareCommunicationMessageActivityCodes",
+  "status" : "active",
+  "date" : "2022-10-05T19:21:56+02:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "new-message"
+      },
+      {
+        "code" : "reply-message"
+      },
+      {
+        "code" : "forward-message"
+      },
+      {
+        "code" : "retract-message"
+      },
+      {
+        "code" : "modified-message"
+      },
+      {
+        "code" : "carboncopy-message"
+      }]
+    }]
+  },
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "code" : "new-message",
+      "display" : "A new message has been sent"
+    },
+    {
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "code" : "reply-message",
+      "display" : "A message has been replied to"
+    },
+    {
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "code" : "forward-message",
+      "display" : "A message has been forwarded and potentially changed"
+    },
+    {
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "code" : "retract-message",
+      "display" : "A message has been retracted/cancelled"
+    },
+    {
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "code" : "modified-message",
+      "display" : "A message has been modified"
+    },
+    {
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "code" : "carboncopy-message",
+      "display" : "An exact copy of a message to a primary receiver has been sent to a carbon copy receiver"
+    }]
+  }
+}

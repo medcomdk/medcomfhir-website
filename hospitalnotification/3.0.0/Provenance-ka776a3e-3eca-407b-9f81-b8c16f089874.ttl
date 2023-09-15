@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/Provenance/ka776a3e-3eca-407b-9f81-b8c16f089874> a fhir:Provenance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ka776a3e-3eca-407b-9f81-b8c16f089874"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Provenance</b><a name=\"ka776a3e-3eca-407b-9f81-b8c16f089874\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Provenance &quot;ka776a3e-3eca-407b-9f81-b8c16f089874&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p><b>target</b>: <a href=\"MessageHeader-m9bea09c-e662-4d59-b84f-9af570b57f42.html\">MessageHeader/m9bea09c-e662-4d59-b84f-9af570b57f42</a></p><p><b>occurred</b>: 2022-12-02 10:00:11+0200</p><p><b>recorded</b>: 2. dec. 2022 21.00.11</p><p><b>activity</b>: End hospital Stay - patient discharged to home/primary sector <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://medcomfhir.dk/ig/terminology/1.1.1/CodeSystem-medcom-messaging-activityCodes.html\">MedComMessagingActivityCodes</a>#discharge-emergency-home)</span></p><h3>Agents</h3><table class=\"grid\"><tr><td>-</td><td><b>Who</b></td></tr><tr><td>*</td><td><a href=\"Organization-0465ec66-81d2-11ed-a1eb-0242ac120002.html\">Organization/0465ec66-81d2-11ed-a1eb-0242ac120002</a> &quot;Hjerteafdelingen på Herlev og Gentofte hospital&quot;</td></tr></table><h3>Entities</h3><table class=\"grid\"><tr><td>-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td>*</td><td>revision</td><td><a href=\"MessageHeader-i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029.html\">MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029</a></td></tr></table></div>"
+  ];
+  fhir:Provenance.target [
+     fhir:index 0;
+     fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/m9bea09c-e662-4d59-b84f-9af570b57f42>;
+     fhir:Reference.reference [ fhir:value "MessageHeader/m9bea09c-e662-4d59-b84f-9af570b57f42" ]
+  ];
+  fhir:Provenance.occurredDateTime [ fhir:value "2022-12-02T22:00:11+02:00"^^xsd:dateTime];
+  fhir:Provenance.recorded [ fhir:value "2022-12-02T22:00:11+02:00"^^xsd:dateTime];
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes" ];
+       fhir:Coding.code [ fhir:value "discharge-emergency-home" ]
+     ]
+  ];
+  fhir:Provenance.agent [
+     fhir:index 0;
+     fhir:Provenance.agent.who [
+       fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/0465ec66-81d2-11ed-a1eb-0242ac120002>;
+       fhir:Reference.reference [ fhir:value "Organization/0465ec66-81d2-11ed-a1eb-0242ac120002" ]
+     ]
+  ];
+  fhir:Provenance.entity [
+     fhir:index 0;
+     fhir:Provenance.entity.role [ fhir:value "revision" ];
+     fhir:Provenance.entity.what [
+       fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029>;
+       fhir:Reference.reference [ fhir:value "MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/Provenance/ka776a3e-3eca-407b-9f81-b8c16f089874.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

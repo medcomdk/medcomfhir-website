@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "medcom-core-ecpr-values",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-medcom-core-ecpr-codes.html\"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-ecpr-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-medcom-core-ecpr-codes.html#medcom-core-ecpr-codes-nationalEcprregister\">nationalEcprregister</a></td><td>https://sundhedsdatastyrelsen.dk/da/registre-og-services/ecpr</td></tr></table></li></ul></div>"
+  },
+  "url": "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-ecpr-values",
+  "version": "1.0.0",
+  "name": "MedComCoreECPRValues",
+  "title": "MedComCoreECPRValues",
+  "status": "active",
+  "date": "2022-09-01",
+  "publisher": "MedCom",
+  "contact": [
+    {
+      "name": "MedCom",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.medcom.dk"
+        }
+      ]
+    }
+  ],
+  "description": "ValueSet containing systems used to represent the origin of a Danish replacement person identifier (eCPR).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "DK",
+          "display": "Denmark"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-ecpr-codes",
+        "concept": [
+          {
+            "code": "nationalEcprregister",
+            "display": "https://sundhedsdatastyrelsen.dk/da/registre-og-services/ecpr"
+          }
+        ]
+      }
+    ]
+  }
+}

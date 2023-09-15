@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-sorEdiValues> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medcom-messaging-sorEdiValues"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-medcom-messaging-sorEdiSystem.html\"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-sorEdiSystem</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-medcom-messaging-sorEdiSystem.html#medcom-messaging-sorEdiSystem-FDIS20\">FDIS20</a></td><td>Care Communication Message (Korrepondance meddelelse)</td></tr><tr><td><a href=\"CodeSystem-medcom-messaging-sorEdiSystem.html#medcom-messaging-sorEdiSystem-FDIS91\">FDIS91</a></td><td>Hospital Notification Message (Advis om Sygehusophold)</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-sorEdiValues"];
+  fhir:ValueSet.version [ fhir:value "1.1.0"];
+  fhir:ValueSet.name [ fhir:value "MedComMessagingSorEdiValues"];
+  fhir:ValueSet.title [ fhir:value "MedComMessagingSorEdiValues"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2022-09-01"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "MedCom"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "MedCom" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.medcom.dk" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Values for SOREDI message types"];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "DK" ];
+       fhir:Coding.display [ fhir:value "Denmark" ]
+     ]
+  ];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-sorEdiSystem" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FDIS20" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Care Communication Message (Korrepondance meddelelse)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FDIS91" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospital Notification Message (Advis om Sygehusophold)" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-sorEdiValues.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
