@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestScript xmlns="http://hl7.org/fhir">
+  <id value="hospitalnotification-receive-an-mors-emer"/>
+  <meta>
+    <profile value="http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: TestScript</b><a name="hospitalnotification-receive-an-mors-emer"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource TestScript &quot;hospitalnotification-receive-an-mors-emer&quot; </p><p style="margin-bottom: 0px">Profile: <a href="file://D:\GitHub\Touchstone\testing-ig\output/StructureDefinition-testscript.html">AEGIS Touchstone Testing TestScript Profile</a></p></div><p><b>url</b>: <code>http://medcomfhir.dk/ig/hospitalnotificationtestscript/hospitalnotification-receive-an-mors-emer</code></p><p><b>version</b>: 3.0.1</p><p><b>name</b>: HospitalNotificationTestScript</p><p><b>title</b>: Receive: Cancellation Deceased - deceased during acute ambulant - AN-MORS</p><p><b>status</b>: active</p><p><b>date</b>: 2023-05-25</p><p><b>publisher</b>: MedCom</p><p><b>contact</b>: MedCom: <a href="mailto:mailto:fhir@medcom.dk">mailto:fhir@medcom.dk</a></p><p><b>description</b>: Receive: Cancellation Deceased - deceased during acute ambulant</p><p><b>copyright</b>: MedCom 2021</p><h3>Origins</h3><table class="grid"><tr><td>-</td><td><b>Index</b></td><td><b>Profile</b></td></tr><tr><td>*</td><td>1</td><td>FHIR Client (Details: http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types code FHIR-Client = 'FHIR Client', stated as 'null')</td></tr></table><h3>Destinations</h3><table class="grid"><tr><td>-</td><td><b>Index</b></td><td><b>Profile</b></td></tr><tr><td>*</td><td>1</td><td>FHIR Server (Details: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types code FHIR-Server = 'FHIR Server', stated as 'null')</td></tr></table><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>create-STAA-01</blockquote><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-STAA.xml">/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-STAA.xml</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>create-MORS-02</blockquote><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-MORS-emer.xml">/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-MORS-emer.xml</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>create-AN-MORS-03</blockquote><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-AN-MORS-emer.xml">/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-AN-MORS-emer.xml</a></p></blockquote><p><b>profile</b>: <a href="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message">http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message</a> &quot;MedComHospitalNotificationMessage&quot;</p><blockquote><p><b>variable</b></p><p><b>name</b>: destinationUri-STAA</p><p><b>expression</b>: Bundle.entry.resource.ofType(MessageHeader).destination.endpoint</p><p><b>sourceId</b>: create-STAA-01</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: bundleid-STAA</p><p><b>expression</b>: Bundle.id</p><p><b>sourceId</b>: create-STAA-01</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: destinationUri-MORS</p><p><b>expression</b>: Bundle.entry.resource.ofType(MessageHeader).destination.endpoint</p><p><b>sourceId</b>: create-MORS-02</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: bundleid-MORS</p><p><b>expression</b>: Bundle.id</p><p><b>sourceId</b>: create-MORS-02</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: destinationUri-AN-MORS</p><p><b>expression</b>: Bundle.entry.resource.ofType(MessageHeader).destination.endpoint</p><p><b>sourceId</b>: create-AN-MORS-03</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: bundleid-AN-MORS</p><p><b>expression</b>: Bundle.id</p><p><b>sourceId</b>: create-AN-MORS-03</p></blockquote><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Delete (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code delete = 'Delete', stated as 'null')</td><td>Bundle</td><td>System-generated search and delete operations from conditional delete on Bundle MessageHeader.destination.endpoint</td><td>xml</td><td>true</td><td>?message.destination-uri=${destinationUri-STAA}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code create = 'Create', stated as 'null')</td><td>Bundle</td><td>Create the Bundle resource in XML format on the destination server.</td><td>xml</td><td>xml</td><td>true</td><td>create-STAA-01</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create using Update (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code updateCreate = 'Create using Update', stated as 'null')</td><td>Bundle</td><td>Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-STAA.</td><td>xml</td><td>xml</td><td>true</td><td>/${bundleid-STAA}</td><td>create-STAA-01</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code create = 'Create', stated as 'null')</td><td>Bundle</td><td>Create the Bundle resource in XML format on the destination server.</td><td>xml</td><td>xml</td><td>true</td><td>create-MORS-02</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create using Update (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code updateCreate = 'Create using Update', stated as 'null')</td><td>Bundle</td><td>Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-MORS.</td><td>xml</td><td>xml</td><td>true</td><td>/${bundleid-MORS}</td><td>create-MORS-02</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code create = 'Create', stated as 'null')</td><td>Bundle</td><td>Create the Bundle resource in XML format on the destination server.</td><td>xml</td><td>xml</td><td>true</td><td>create-AN-MORS-03</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create using Update (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code updateCreate = 'Create using Update', stated as 'null')</td><td>Bundle</td><td>Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-AN-MORS.</td><td>xml</td><td>xml</td><td>true</td><td>/${bundleid-AN-MORS}</td><td>create-AN-MORS-03</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>hospitalnotification-read-STAA-01</blockquote><p><b>name</b>: Get a HospitalNotification STAA Message 01</p><p><b>description</b>: GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>EncodeRequestUrl</b></td><td><b>Origin</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Bundle</td><td>Receive Hospital Notification</td><td>xml</td><td>xml</td><td>1</td><td>true</td><td>1</td><td>/${bundleid-STAA}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>hospitalnotification-read-MORS-02</blockquote><p><b>name</b>: Get a HospitalNotification MORS Message 02</p><p><b>description</b>: GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>EncodeRequestUrl</b></td><td><b>Origin</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Bundle</td><td>Receive Hospital Notification</td><td>xml</td><td>xml</td><td>1</td><td>true</td><td>1</td><td>/${bundleid-MORS}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>hospitalnotification-read-AN-MORS-03</blockquote><p><b>name</b>: Get a HospitalNotification AN-MORS Message 03</p><p><b>description</b>: GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>EncodeRequestUrl</b></td><td><b>Origin</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Bundle</td><td>Receive Hospital Notification</td><td>xml</td><td>xml</td><td>1</td><td>true</td><td>1</td><td>/${bundleid-AN-MORS}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote></div>
+  </text>
+  <url value="http://medcomfhir.dk/ig/hospitalnotificationtestscript/hospitalnotification-receive-an-mors-emer"/>
+  <version value="3.0.1"/>
+  <name value="HospitalNotificationTestScript"/>
+  <title value="Receive: Cancellation Deceased - deceased during acute ambulant - AN-MORS"/>
+  <status value="active"/>
+  <date value="2023-05-25"/>
+  <publisher value="MedCom"/>
+  <contact>
+    <name value="MedCom"/>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:fhir@medcom.dk"/>
+    </telecom>
+  </contact>
+  <description value="Receive: Cancellation Deceased - deceased during acute ambulant"/>
+  <copyright value="MedCom 2021"/>
+  <origin>
+    <index value="1"/>
+    <profile>
+      <system value="http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"/>
+      <code value="FHIR-Client"/>
+    </profile>
+  </origin>
+  <destination>
+    <index value="1"/>
+    <profile>
+      <system value="http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"/>
+      <code value="FHIR-Server"/>
+    </profile>
+  </destination>
+  <fixture id="create-STAA-01">
+    <autocreate value="false"/>
+    <autodelete value="false"/>
+    <resource>
+      <reference value="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-STAA.xml"/>
+    </resource>
+  </fixture>
+  <fixture id="create-MORS-02">
+    <autocreate value="false"/>
+    <autodelete value="false"/>
+    <resource>
+      <reference value="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-MORS-emer.xml"/>
+    </resource>
+  </fixture>
+  <fixture id="create-AN-MORS-03">
+    <autocreate value="false"/>
+    <autodelete value="false"/>
+    <resource>
+      <reference value="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-AN-MORS-emer.xml"/>
+    </resource>
+  </fixture>
+  <profile id="hospitalnotification">
+    <reference value="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+  </profile>
+  <variable>
+    <name value="destinationUri-STAA"/>
+    <expression value="Bundle.entry.resource.ofType(MessageHeader).destination.endpoint"/>
+    <sourceId value="create-STAA-01"/>
+  </variable>
+  <variable>
+    <name value="bundleid-STAA"/>
+    <expression value="Bundle.id"/>
+    <sourceId value="create-STAA-01"/>
+  </variable>
+  <variable>
+    <name value="destinationUri-MORS"/>
+    <expression value="Bundle.entry.resource.ofType(MessageHeader).destination.endpoint"/>
+    <sourceId value="create-MORS-02"/>
+  </variable>
+  <variable>
+    <name value="bundleid-MORS"/>
+    <expression value="Bundle.id"/>
+    <sourceId value="create-MORS-02"/>
+  </variable>
+  <variable>
+    <name value="destinationUri-AN-MORS"/>
+    <expression value="Bundle.entry.resource.ofType(MessageHeader).destination.endpoint"/>
+    <sourceId value="create-AN-MORS-03"/>
+  </variable>
+  <variable>
+    <name value="bundleid-AN-MORS"/>
+    <expression value="Bundle.id"/>
+    <sourceId value="create-AN-MORS-03"/>
+  </variable>
+  <setup>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="delete"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="System-generated search and delete operations from conditional delete on Bundle MessageHeader.destination.endpoint"/>
+        <accept value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <params value="?message.destination-uri=${destinationUri-STAA}"/>
+      </operation>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="create"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Create the Bundle resource in XML format on the destination server."/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <sourceId value="create-STAA-01"/>
+      </operation>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="updateCreate"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-STAA."/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <params value="/${bundleid-STAA}"/>
+        <sourceId value="create-STAA-01"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is okay or created."/>
+        <direction value="response"/>
+        <operator value="in"/>
+        <responseCode value="200,201"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="create"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Create the Bundle resource in XML format on the destination server."/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <sourceId value="create-MORS-02"/>
+      </operation>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="updateCreate"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-MORS."/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <params value="/${bundleid-MORS}"/>
+        <sourceId value="create-MORS-02"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is okay or created."/>
+        <direction value="response"/>
+        <operator value="in"/>
+        <responseCode value="200,201"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="create"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Create the Bundle resource in XML format on the destination server."/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <sourceId value="create-AN-MORS-03"/>
+      </operation>
+    </action>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="updateCreate"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-AN-MORS."/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <params value="/${bundleid-AN-MORS}"/>
+        <sourceId value="create-AN-MORS-03"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is okay or created."/>
+        <direction value="response"/>
+        <operator value="in"/>
+        <responseCode value="200,201"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </setup>
+  <test id="hospitalnotification-read-STAA-01">
+    <name value="Get a HospitalNotification STAA Message 01"/>
+    <description value="GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format."/>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="read"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Receive Hospital Notification"/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <destination value="1"/>
+        <encodeRequestUrl value="true"/>
+        <origin value="1"/>
+        <params value="/${bundleid-STAA}"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is okay or created."/>
+        <direction value="response"/>
+        <operator value="in"/>
+        <responseCode value="200,201"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+  <test id="hospitalnotification-read-MORS-02">
+    <name value="Get a HospitalNotification MORS Message 02"/>
+    <description value="GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format."/>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="read"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Receive Hospital Notification"/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <destination value="1"/>
+        <encodeRequestUrl value="true"/>
+        <origin value="1"/>
+        <params value="/${bundleid-MORS}"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is okay or created."/>
+        <direction value="response"/>
+        <operator value="in"/>
+        <responseCode value="200,201"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+  <test id="hospitalnotification-read-AN-MORS-03">
+    <name value="Get a HospitalNotification AN-MORS Message 03"/>
+    <description value="GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format."/>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="read"/>
+        </type>
+        <resource value="Bundle"/>
+        <description value="Receive Hospital Notification"/>
+        <accept value="xml"/>
+        <contentType value="xml"/>
+        <destination value="1"/>
+        <encodeRequestUrl value="true"/>
+        <origin value="1"/>
+        <params value="/${bundleid-AN-MORS}"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is okay or created."/>
+        <direction value="response"/>
+        <operator value="in"/>
+        <responseCode value="200,201"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+</TestScript>

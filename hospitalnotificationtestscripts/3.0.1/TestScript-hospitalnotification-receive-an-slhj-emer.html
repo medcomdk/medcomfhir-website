@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>MEDCOM.FHIR.DK.HOSPITALNOTIFICATIONTESTSCRIPTS\HospitalNotification_TestScript_receive-AN-SLHJ-emer - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/hl7-dk.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.33"}
+    h3,h4,h5,h6{--heading-prefix:"5.33"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a no-external="true" id="hl7-logo" href="https://www.medcom.dk">
+            <img src="assets/images/dark-medcom-logo.png" alt="Visit MedComs website" height="50"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HospitalNotification Testscripts</span>
+            <br/>
+            <span style="display:inline-block;">3.0.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="testscripts.html">Test scripts</a>
+  </li>
+  <li>
+    <a href="testexamples.html">Test examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts Summary</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>HospitalNotification_TestScript_receive-AN-SLHJ-emer</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">This page is part of the DK MedCom HospitalNotification TestScripts (v3.0.1: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. .  For a full list of available versions, see the <a href="http://medcomfhir.dk/ig/hospitalnotificationtestscripts/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p>  <!-- EndReleaseHeader -->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="TestScript-hospitalnotification-receive-an-slhj-emer.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="TestScript-hospitalnotification-receive-an-slhj-emer.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="TestScript-hospitalnotification-receive-an-slhj-emer.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">TestScript: HospitalNotification_TestScript_receive-AN-SLHJ-emer
+
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/hospitalnotificationtestscript/hospitalnotification-receive-an-slhj-emer<button data-clipboard-text="http://medcomfhir.dk/ig/hospitalnotificationtestscript/hospitalnotification-receive-an-slhj-emer" title="Click to copy URL" class="btn-copy"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">3.0.1<button data-clipboard-text="http://medcomfhir.dk/ig/hospitalnotificationtestscript/hospitalnotification-receive-an-slhj-emer|3.0.1" title="Click to copy versioned URL" class="btn-copy"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="3">
+        
+          Active
+          
+            as of 2023-05-25
+          
+        
+      </td>
+
+
+      <td>
+        <i>Responsible:</i> 
+
+        MedCom
+
+      </td>
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">HospitalNotificationTestScript</span></td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="5"><p><em>Copyright/Legal</em>: MedCom 2021</p>
+</td>
+    </tr>
+
+  </table>
+
+
+<p>
+<p>Receive: Cancellation End hospital stay - patient completed to home/primary sector</p>
+
+</p>
+
+
+    <!-- insert intro if present -->
+  
+
+
+
+  <!-- <p>
+  Formats: <a href="TestScript-hospitalnotification-receive-an-slhj-emer.xml.html">XML</a>, <a href="TestScript-hospitalnotification-receive-an-slhj-emer.json.html">JSON</a>, <a href="TestScript-hospitalnotification-receive-an-slhj-emer.ttl.html">Turtle</a>
+  </p> -->
+
+  
+
+
+  <div><p><b>Generated Narrative: TestScript</b><a name="hospitalnotification-receive-an-slhj-emer"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource TestScript "hospitalnotification-receive-an-slhj-emer" </p><p style="margin-bottom: 0px">Profile: <a href="file://D:\GitHub\Touchstone\testing-ig\output/StructureDefinition-testscript.html">AEGIS Touchstone Testing TestScript Profile</a></p></div><p><b>url</b>: <code>http://medcomfhir.dk/ig/hospitalnotificationtestscript/hospitalnotification-receive-an-slhj-emer</code></p><p><b>version</b>: 3.0.1</p><p><b>name</b>: HospitalNotificationTestScript</p><p><b>title</b>: Receive: Cancellation End hospital stay - patient completed to home/primary sector - AN-SLHJ</p><p><b>status</b>: active</p><p><b>date</b>: 2023-05-25</p><p><b>publisher</b>: MedCom</p><p><b>contact</b>: MedCom: <a href="mailto:mailto:fhir@medcom.dk">mailto:fhir@medcom.dk</a></p><p><b>description</b>: Receive: Cancellation End hospital stay - patient completed to home/primary sector</p><p><b>copyright</b>: MedCom 2021</p><h3>Origins</h3><table class="grid"><tr><td>-</td><td><b>Index</b></td><td><b>Profile</b></td></tr><tr><td>*</td><td>1</td><td>FHIR Client (Details: http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types code FHIR-Client = 'FHIR Client', stated as 'null')</td></tr></table><h3>Destinations</h3><table class="grid"><tr><td>-</td><td><b>Index</b></td><td><b>Profile</b></td></tr><tr><td>*</td><td>1</td><td>FHIR Server (Details: http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types code FHIR-Server = 'FHIR Server', stated as 'null')</td></tr></table><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>create-STAA-01</blockquote><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><a name="l457">​</a><b>resource</b>: <a href="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-STAA.xml">/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-STAA.xml</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>create-SLHJ-02</blockquote><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><a name="l480">​</a><b>resource</b>: <a href="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-SLHJ-emer.xml">/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-SLHJ-emer.xml</a></p></blockquote><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>create-AN-SLHJ-03</blockquote><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><a name="l503">​</a><b>resource</b>: <a href="/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-AN-SLHJ-emer.xml">/FHIRSandbox/MedCom/HospitalNotification/v300/Receive/Fixtures/HospitalNotification-fixture-AN-SLHJ-emer.xml</a></p></blockquote><p><b>profile</b>: <a href="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message">http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message</a> "MedComHospitalNotificationMessage"</p><blockquote><p><b>variable</b></p><p><b>name</b>: destinationUri-STAA</p><p><b>expression</b>: Bundle.entry.resource.ofType(MessageHeader).destination.endpoint</p><p><b>sourceId</b>: create-STAA-01</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: bundleid-STAA</p><p><b>expression</b>: Bundle.id</p><p><b>sourceId</b>: create-STAA-01</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: destinationUri-SLHJ</p><p><b>expression</b>: Bundle.entry.resource.ofType(MessageHeader).destination.endpoint</p><p><b>sourceId</b>: create-SLHJ-02</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: bundleid-SLHJ</p><p><b>expression</b>: Bundle.id</p><p><b>sourceId</b>: create-SLHJ-02</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: destinationUri-AN-SLHJ</p><p><b>expression</b>: Bundle.entry.resource.ofType(MessageHeader).destination.endpoint</p><p><b>sourceId</b>: create-AN-SLHJ-03</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: bundleid-AN-SLHJ</p><p><b>expression</b>: Bundle.id</p><p><b>sourceId</b>: create-AN-SLHJ-03</p></blockquote><blockquote><p><b>setup</b></p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Delete (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code delete = 'Delete', stated as 'null')</td><td>Bundle</td><td>System-generated search and delete operations from conditional delete on Bundle MessageHeader.destination.endpoint</td><td>xml</td><td>true</td><td>?message.destination-uri=${destinationUri-STAA}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code create = 'Create', stated as 'null')</td><td>Bundle</td><td>Create the Bundle resource in XML format on the destination server.</td><td>xml</td><td>xml</td><td>true</td><td>create-STAA-01</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create using Update (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code updateCreate = 'Create using Update', stated as 'null')</td><td>Bundle</td><td>Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-STAA.</td><td>xml</td><td>xml</td><td>true</td><td>/${bundleid-STAA}</td><td>create-STAA-01</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code create = 'Create', stated as 'null')</td><td>Bundle</td><td>Create the Bundle resource in XML format on the destination server.</td><td>xml</td><td>xml</td><td>true</td><td>create-SLHJ-02</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create using Update (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code updateCreate = 'Create using Update', stated as 'null')</td><td>Bundle</td><td>Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-SLHJ.</td><td>xml</td><td>xml</td><td>true</td><td>/${bundleid-SLHJ}</td><td>create-SLHJ-02</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code create = 'Create', stated as 'null')</td><td>Bundle</td><td>Create the Bundle resource in XML format on the destination server.</td><td>xml</td><td>xml</td><td>true</td><td>create-AN-SLHJ-03</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>SourceId</b></td></tr><tr><td>*</td><td>Create using Update (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code updateCreate = 'Create using Update', stated as 'null')</td><td>Bundle</td><td>Update the Bundle.id in XML format on the destination server, so it corresponds to $bundleid-AN-SLHJ.</td><td>xml</td><td>xml</td><td>true</td><td>/${bundleid-AN-SLHJ}</td><td>create-AN-SLHJ-03</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>hospitalnotification-read-STAA-01</blockquote><p><b>name</b>: Get a HospitalNotification STAA Message 01</p><p><b>description</b>: GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>EncodeRequestUrl</b></td><td><b>Origin</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Bundle</td><td>Receive Hospital Notification</td><td>xml</td><td>xml</td><td>1</td><td>true</td><td>1</td><td>/${bundleid-STAA}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>hospitalnotification-read-SLHJ-02</blockquote><p><b>name</b>: Get a HospitalNotification SLHJ Message 02</p><p><b>description</b>: GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>EncodeRequestUrl</b></td><td><b>Origin</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Bundle</td><td>Receive Hospital Notification</td><td>xml</td><td>xml</td><td>1</td><td>true</td><td>1</td><td>/${bundleid-SLHJ}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>hospitalnotification-read-AN-SLHJ-03</blockquote><p><b>name</b>: Get a HospitalNotification AN-SLHJ Message 03</p><p><b>description</b>: GET a Hospital notification. The expected response is a 200(OK) with a payload of the Hospital notification resource in XML format.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>ContentType</b></td><td><b>Destination</b></td><td><b>EncodeRequestUrl</b></td><td><b>Origin</b></td><td><b>Params</b></td></tr><tr><td>*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Bundle</td><td>Receive Hospital Notification</td><td>xml</td><td>xml</td><td>1</td><td>true</td><td>1</td><td>/${bundleid-AN-SLHJ}</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote></blockquote></div>
+
+    <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:fhir@medcom.dk"></a>.  Package medcom.fhir.dk.hospitalnotificationtestscripts#3.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, May 26, 2023 08:58+0200">2023-05-26</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+  <!-- v0.1, 2021-01-09 -->
+
+
+
+  <!-- / feedback form -->
+
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

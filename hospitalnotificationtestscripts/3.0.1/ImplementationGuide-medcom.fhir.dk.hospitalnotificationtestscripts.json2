@@ -1,0 +1,2250 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "medcom.fhir.dk.hospitalnotificationtestscripts",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HospitalNotificationTestscripts</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/hospitalnotificationtestscripts/ImplementationGuide/medcom.fhir.dk.hospitalnotificationtestscripts</pre><div><p>Testscripts for HospitalNotification v. 3.0.1</p>\n</div></div>"
+  },
+  "url" : "http://medcomfhir.dk/ig/hospitalnotificationtestscripts/ImplementationGuide/medcom.fhir.dk.hospitalnotificationtestscripts",
+  "version" : "3.0.1",
+  "name" : "HospitalNotificationTestscripts",
+  "title" : "HospitalNotification Testscripts",
+  "status" : "active",
+  "date" : "2023-05-26T08:58:33+02:00",
+  "contact" : [{
+    "name" : "MedCom",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "mailto:fhir@medcom.dk"
+    }]
+  }],
+  "description" : "Testscripts for HospitalNotification v. 3.0.1",
+  "packageId" : "medcom.fhir.dk.hospitalnotificationtestscripts",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "5.0.0"
+  },
+  {
+    "id" : "medcom_fhir_dk_hospitalnotification",
+    "uri" : "http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification",
+    "packageId" : "medcom.fhir.dk.hospitalnotification",
+    "version" : "3.0.1"
+  },
+  {
+    "id" : "net_aegis_touchstone_fhir_testing",
+    "uri" : "http://touchstone.aegis.net/touchstone/fhir/testing/ImplementationGuide/net.aegis.touchstone.touchstone.fhir.testing",
+    "packageId" : "net.aegis.touchstone.fhir.testing",
+    "version" : "1.6.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2020+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://medcomfhir.dk/ig/hospitalnotificationtestscripts/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools#current"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2020+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://medcomfhir.dk/ig/hospitalnotificationtestscripts/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-emer-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-emer-01",
+      "description" : "Receive: Patient is admitted, message is corrected due to incorrect hospital department",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-emer-02"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-emer-02",
+      "description" : "Receive: Patient is admitted, message is corrected due to incorrect time of admission",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-emer-imp-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-emer-imp-01",
+      "description" : "Receive: Patient is admitted as emergency, patient is admitted as inpatient, patient is discharged",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-imp-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-imp-01",
+      "description" : "Receive: Patient is admitted, patient is registered as being on leave, patient returns from leave, patient is discharged",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-imp-02"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-imp-02",
+      "description" : "Receive: Patient is admitted, patient is registered as being on leave, patient doesn't return from leave, patient is discharged",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-imp-03"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-imp-03",
+      "description" : "Receive: Patient is admitted, patient is registered as being on leave, patient returns from leave, patient is registered as dead",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-imp-04"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-imp-04",
+      "description" : "Receive: Patient is admitted, 'patient is registered as being on leave, patient returns from leave', ' to ' x 2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-imp-05"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-imp-05",
+      "description" : "Receive: Patient is admitted, message is corrected due to incorrect hospital department",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-imp-06"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-imp-06",
+      "description" : "Receive: Patient is admitted, message is corrected due to incorrect time of admission",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-tec-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-tec-01",
+      "description" : "Receive dublicate: Patient is admitted, doesn't get acknowledged, patient is admitted",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-tec-02"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-tec-02",
+      "description" : "Receive: Receive cancellation of admit patient: Patient is admitted, correction of admit patient and cancellation admit patient",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-tec-03"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-tec-03",
+      "description" : "Receive: Messages received in wrong order: Patient is admitted as emergency, patient is discharged, patient is admitted as inpatient.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-tec-04"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-tec-04",
+      "description" : "Receive: Receive a message with different timezones (+01:00 and +02:00): Patient is admitted in one timezone, patient is discharged in a different timezone.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-tec-05"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-tec-05",
+      "description" : "Receive: Receive a message on the 29th of February 2024 (leap year): Patient is admitted on the date of leap year",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-receive-tec-06"
+      },
+      "name" : "HospitalNotification_TestScript_PF-receive-tec-06",
+      "description" : "Receive: Receive a message where the serviceprovider is different from the sender: Patient is admitted",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-emer-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-emer-01",
+      "description" : "Send: Register patient as acute ambulant, correct message due to incorrect hospital department",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-emer-02"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-emer-02",
+      "description" : "Send: Register patient as acute ambulant, correct message due to incorrect time of admission.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-emer-imp-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-emer-imp-01",
+      "description" : "Send: Register patient as acute ambulant, admit patient (inpatient), discharge patient",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-imp-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-imp-01",
+      "description" : "Send: Admit patient, register patient as being on leave, register patient as returned from leave, discharge patient.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-imp-02"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-imp-02",
+      "description" : "Send: Admit patient, register patient as being on leave, patient doesn't return from leave, discharge patient.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-imp-03"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-imp-03",
+      "description" : "Send: Admit patient, register patient as being on leave, patient returns from leave, patient dies",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-imp-04"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-imp-04",
+      "description" : "Send: Admit patient, *register patient as being on leave, patient returns from leave*, * to * x2",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-imp-05"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-imp-05",
+      "description" : "Send: Admit patient, correct message due to incorrect hospital department. Evaluation is based on SOR number.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-imp-06"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-imp-06",
+      "description" : "Send: Admit patient, correct message due to incorrect time of admission.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-tec-01"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-tec-01",
+      "description" : "Send: Cancel a corrected admission: Admit patient, correct admit patient and cancel admit patient",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-tec-02"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-tec-02",
+      "description" : "Send: Send a message on the 29th of February 2024 (leap year)",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-tec-03"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-tec-03",
+      "description" : "Send: Send dublicate: Admit patient, doesn't get acknowledged, send admit patient. IDs are handled correct",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-PF-send-tec-04"
+      },
+      "name" : "HospitalNotification_TestScript_PF-send-tec-04",
+      "description" : "Send: Admit patient and End hospital stay in different timezones. Correct use of timezone of summertime (+02:00) and vintertime (+01:00).",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-mors"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-MORS",
+      "description" : "Receive: Cancellation Deceased - is dead at arrival to the hospital",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-mors-emer"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-MORS-emer",
+      "description" : "Receive: Cancellation Deceased - deceased during acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-mors-imp"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-MORS-imp",
+      "description" : "Receive: Cancellation Deceased - deceased during hospital stay",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-mors-stor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-MORS-STOR",
+      "description" : "Receive: Cancellation Deceased - deceased during a period of leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-slhj-emer"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-SLHJ-emer",
+      "description" : "Receive: Cancellation End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-slhj-imp"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-SLHJ-imp",
+      "description" : "Receive: Cancellation End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-slor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-SLOR",
+      "description" : "Receive: Cancellation End leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-staa"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-STAA",
+      "description" : "Receive: Cancellation Start hospital stay - acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-stin"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-STIN",
+      "description" : "Receive: Cancellation Start hospital stay",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-an-stor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-AN-STOR",
+      "description" : "Receive: Cancellation Start leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-mors"
+      },
+      "name" : "HospitalNotification_TestScript_receive-MORS",
+      "description" : "Receive: Deceased - is dead at arrival to the hospital",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-mors-emer"
+      },
+      "name" : "HospitalNotification_TestScript_receive-MORS-emer",
+      "description" : "Receive: Deceased - deceased during acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-mors-imp"
+      },
+      "name" : "HospitalNotification_TestScript_receive-MORS-imp",
+      "description" : "Receive: Deceased - deceased during hospital stay",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-mors-stor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-MORS-STOR",
+      "description" : "Receive: Deceased - deceased during a period of leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-mors"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-MORS",
+      "description" : "Receive: Update Deceased - is dead at arrival to the hospital",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-mors-emer"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-MORS-emer",
+      "description" : "Receive: Update Deceased - deceased during acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-mors-imp"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-MORS-imp",
+      "description" : "Receive: Update Deceased - deceased during hospital stay",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-mors-stor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-MORS-STOR",
+      "description" : "Receive: Update Deceased - deceased during a period of leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-slhj-emer"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-SLHJ-emer",
+      "description" : "Receive: Update End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-slhj-imp"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-SLHJ-imp",
+      "description" : "Receive: Update End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-slor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-SLOR",
+      "description" : "Receive: Update End leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-staa"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-STAA",
+      "description" : "Receive: Update Start hospital stay - acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-stin"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-STIN",
+      "description" : "Receive: Update Start hospital stay",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-re-stor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-RE-STOR",
+      "description" : "Receive: Update Start leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-slhj-emer"
+      },
+      "name" : "HospitalNotification_TestScript_receive-SLHJ-emer",
+      "description" : "Receive: End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-slhj-imp"
+      },
+      "name" : "HospitalNotification_TestScript_receive-SLHJ-imp",
+      "description" : "Receive: End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-slor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-SLOR",
+      "description" : "Receive: End leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-staa"
+      },
+      "name" : "HospitalNotification_TestScript_receive-STAA",
+      "description" : "Receive: Start hospital stay - acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-stin"
+      },
+      "name" : "HospitalNotification_TestScript_receive-STIN",
+      "description" : "Receive: Start hospital stay - admitted",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-stin-a1"
+      },
+      "name" : "HospitalNotification_TestScript_receive-STIN-A1",
+      "description" : "Receive: Start hospital stay - admitted, without request for reportOfAdmission",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-receive-stor"
+      },
+      "name" : "HospitalNotification_TestScript_receive-STOR",
+      "description" : "Receive: Start leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-mors"
+      },
+      "name" : "HospitalNotification_TestScript_AN_MORS",
+      "description" : "Send: Cancellation Deceased - dead at arrival to the hospital",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-mors-emer"
+      },
+      "name" : "HospitalNotification_TestScript_AN_MORS-emer",
+      "description" : "Send: Cancellation Deceased - deceased during acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-mors-imp"
+      },
+      "name" : "HospitalNotification_TestScript_AN_MORS-IMP",
+      "description" : "Send: Cancellation Deceased - deceased during admission",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-mors-stor"
+      },
+      "name" : "HospitalNotification_TestScript_AN_MORS-STOR",
+      "description" : "Send: Cancellation Deceased - deceased during a period of leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-slhj-emer"
+      },
+      "name" : "HospitalNotification_TestScript_AN_SLHJ-emer",
+      "description" : "Send: Cancellation End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-slhj-imp"
+      },
+      "name" : "HospitalNotification_TestScript_AN_SLHJ-imp",
+      "description" : "Send: Cancellation End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-slor"
+      },
+      "name" : "HospitalNotification_TestScript_AN_SLOR",
+      "description" : "Send: Cancellation End leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-staa"
+      },
+      "name" : "HospitalNotification_TestScript_AN_STAA",
+      "description" : "Send: Cancellation Start hospital stay - acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-stin"
+      },
+      "name" : "HospitalNotification_TestScript_AN_STIN",
+      "description" : "Send: Cancellation Start hospital stay - admitted",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-an-stor"
+      },
+      "name" : "HospitalNotification_TestScript_AN_STOR",
+      "description" : "Send: Cancellation Start leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-mors"
+      },
+      "name" : "HospitalNotification_TestScript_MORS",
+      "description" : "Send: Deceased - dead at arrival to the hospital.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-mors-emer"
+      },
+      "name" : "HospitalNotification_TestScript_MORS-EMER",
+      "description" : "Send: Deceased - deceased during hospital stay",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-mors-imp"
+      },
+      "name" : "HospitalNotification_TestScript_MORS-IMP",
+      "description" : "Send: Deceased - deceased during admission",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-mors-stor"
+      },
+      "name" : "HospitalNotification_TestScript_MORS-STOR",
+      "description" : "Send: Deceased - deceased during a period of leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-mors"
+      },
+      "name" : "HospitalNotification_TestScript_RE-MORS",
+      "description" : "Send: Update Deceased - dead at arrival to the hospital",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-mors-emer"
+      },
+      "name" : "HospitalNotification_TestScript_RE-MORS-emer",
+      "description" : "Send: Update Deceased - deceased during acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-mors-imp"
+      },
+      "name" : "HospitalNotification_TestScript_RE-MORS-IMP",
+      "description" : "Send: Update Deceased - deceased during hospital Stay",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-mors-stor"
+      },
+      "name" : "HospitalNotification_TestScript_RE-MORS-STOR",
+      "description" : "Send: Update Deceased - deceased during a period of leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-slhj-emer"
+      },
+      "name" : "HospitalNotification_TestScript_RE_SLHJ-emer",
+      "description" : "Send: Update End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-slhj-imp"
+      },
+      "name" : "HospitalNotification_TestScript_RE_SLHJ-imp",
+      "description" : "Send: Update End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-slor"
+      },
+      "name" : "HospitalNotification_TestScript_RE_SLOR",
+      "description" : "Send: Update End leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-staa"
+      },
+      "name" : "HospitalNotification_TestScript_RE_STAA",
+      "description" : "Send: Update Start hospital stay - acute ambulant",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-stin"
+      },
+      "name" : "HospitalNotification_TestScript_RE_STIN",
+      "description" : "Send: Update Start hospital stay - admitted",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-re-stor"
+      },
+      "name" : "HospitalNotification_TestScript_RE_STOR",
+      "description" : "Send: Update Start leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-slhj-emer"
+      },
+      "name" : "HospitalNotification_TestScript_SLHJ-EMER",
+      "description" : "Send: End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-slhj-imp"
+      },
+      "name" : "HospitalNotification_TestScript_SLHJ-imp",
+      "description" : "Send: End hospital stay - patient completed to home/primary sector",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-slor"
+      },
+      "name" : "HospitalNotification_TestScript_SLOR",
+      "description" : "Send: End leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-staa"
+      },
+      "name" : "HospitalNotification_TestScript_STAA",
+      "description" : "Send: Start hospital stay - acute ambulant.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-stin"
+      },
+      "name" : "HospitalNotification_TestScript_STIN",
+      "description" : "Send: Start hospital stay - admitted.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-stin-a1"
+      },
+      "name" : "HospitalNotification_TestScript_STIN-A1",
+      "description" : "Send: Start hospital stay - admitted, without request for a reportOfAdmission.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "TestScript"
+      }],
+      "reference" : {
+        "reference" : "TestScript/hospitalnotification-send-stor"
+      },
+      "name" : "HospitalNotification_TestScript_STOR",
+      "description" : "Send: Start leave",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/4af4ef94-c452-4e52-8176-b8bd1d059433"
+      },
+      "name" : "4af4ef94-c452-4e52-8176-b8bd1d059433",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/3b11cb1c-63df-4206-a7aa-f299c4a206ba"
+      },
+      "name" : "3b11cb1c-63df-4206-a7aa-f299c4a206ba",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/04fc7ad0-4c60-450c-9320-2c821e0a0ce0"
+      },
+      "name" : "04fc7ad0-4c60-450c-9320-2c821e0a0ce0",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/fe1c34a3-460a-431d-a0e3-a2b59fa93a9f"
+      },
+      "name" : "fe1c34a3-460a-431d-a0e3-a2b59fa93a9f",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/cac520bc-f88b-4e7a-b8fd-bb8750e38c7a"
+      },
+      "name" : "cac520bc-f88b-4e7a-b8fd-bb8750e38c7a",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/4d747862-61ab-48c1-a00e-8f527c985169"
+      },
+      "name" : "4d747862-61ab-48c1-a00e-8f527c985169",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/2094d603-a09c-462c-a1c9-23859ba035f3"
+      },
+      "name" : "2094d603-a09c-462c-a1c9-23859ba035f3",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/5be3a118-64e4-4541-a2fa-a90e3df387d6"
+      },
+      "name" : "5be3a118-64e4-4541-a2fa-a90e3df387d6",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/70dfd9bb-362a-4424-a5b8-98fe11e95f42"
+      },
+      "name" : "70dfd9bb-362a-4424-a5b8-98fe11e95f42",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/5248a961-331b-4f22-8593-75cdd8d7e36c"
+      },
+      "name" : "5248a961-331b-4f22-8593-75cdd8d7e36c",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/2cadabe8-9349-4b2e-9b5e-4441c9aeef4b"
+      },
+      "name" : "2cadabe8-9349-4b2e-9b5e-4441c9aeef4b",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/d434d732-951c-4dd3-aeb8-2e18f1c81942"
+      },
+      "name" : "d434d732-951c-4dd3-aeb8-2e18f1c81942",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/a5e5b880-c087-4055-b9ec-99108695f81d"
+      },
+      "name" : "a5e5b880-c087-4055-b9ec-99108695f81d",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/3c4c04ea-a622-4c6e-8e62-307a62d4c851"
+      },
+      "name" : "3c4c04ea-a622-4c6e-8e62-307a62d4c851",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/64e7f154-668d-4d2a-bf76-2cec049b3252"
+      },
+      "name" : "64e7f154-668d-4d2a-bf76-2cec049b3252",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/f628d121-52f5-401b-a195-3492b3fec614"
+      },
+      "name" : "f628d121-52f5-401b-a195-3492b3fec614",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/8111a01d-eed2-4244-b079-00afe30d99bd"
+      },
+      "name" : "8111a01d-eed2-4244-b079-00afe30d99bd",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ff90d6fc-fa84-4c0f-969d-84510b0ef7e3"
+      },
+      "name" : "ff90d6fc-fa84-4c0f-969d-84510b0ef7e3",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ce5cf7e2-3a37-4b95-9d2c-268c8ec3c576"
+      },
+      "name" : "ce5cf7e2-3a37-4b95-9d2c-268c8ec3c576",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/67df3ce8-0cdb-4e91-937c-d8a3025867e7"
+      },
+      "name" : "67df3ce8-0cdb-4e91-937c-d8a3025867e7",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/2361f9af-3411-4f87-93ef-61f501ce01b5"
+      },
+      "name" : "2361f9af-3411-4f87-93ef-61f501ce01b5",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/079858e5-8687-4f5c-b183-d9688206fd29"
+      },
+      "name" : "079858e5-8687-4f5c-b183-d9688206fd29",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ae2dc2a8-5094-4d20-9ce5-78878066976a"
+      },
+      "name" : "ae2dc2a8-5094-4d20-9ce5-78878066976a",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/9b86a65a-1428-46f5-9487-7e5cdfe687fe"
+      },
+      "name" : "9b86a65a-1428-46f5-9487-7e5cdfe687fe",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/82b851ce-4837-49bb-9623-7310d3c83210"
+      },
+      "name" : "82b851ce-4837-49bb-9623-7310d3c83210",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/5832154e-58d0-4590-9ba0-21661dbe2658"
+      },
+      "name" : "5832154e-58d0-4590-9ba0-21661dbe2658",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/3111b274-76e4-403c-8701-ec94edcd2bf2"
+      },
+      "name" : "3111b274-76e4-403c-8701-ec94edcd2bf2",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/cc7b9615-3d48-404d-a82a-f4d158839843"
+      },
+      "name" : "cc7b9615-3d48-404d-a82a-f4d158839843",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/91a204af-471b-4ce2-b19f-c458e3716070"
+      },
+      "name" : "91a204af-471b-4ce2-b19f-c458e3716070",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ec49747c-6005-4732-86b5-c7d2ec9f173d"
+      },
+      "name" : "ec49747c-6005-4732-86b5-c7d2ec9f173d",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/cd9b8635-aef9-4518-b52d-35fbd384a7be"
+      },
+      "name" : "cd9b8635-aef9-4518-b52d-35fbd384a7be",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/abdd86e8-e084-4fad-95ce-fb82c36c5768"
+      },
+      "name" : "abdd86e8-e084-4fad-95ce-fb82c36c5768",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/1a32e7d1-7008-4bd4-907e-1fb6a016f5b8"
+      },
+      "name" : "1a32e7d1-7008-4bd4-907e-1fb6a016f5b8",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/17a0c807-372b-452c-972e-c59036153b57"
+      },
+      "name" : "17a0c807-372b-452c-972e-c59036153b57",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/9479ce7a-6837-42a5-a4d2-08f09254cbc9"
+      },
+      "name" : "9479ce7a-6837-42a5-a4d2-08f09254cbc9",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/28e963f1-f629-44a7-a246-7412ed0e457c"
+      },
+      "name" : "28e963f1-f629-44a7-a246-7412ed0e457c",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/9fc89121-a0aa-43e0-a753-88bbe142ba91"
+      },
+      "name" : "9fc89121-a0aa-43e0-a753-88bbe142ba91",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/71ea109a-a5fb-4301-8609-34d7849190df"
+      },
+      "name" : "71ea109a-a5fb-4301-8609-34d7849190df",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/277a564b-1595-41d7-9d49-95eae2336b59"
+      },
+      "name" : "277a564b-1595-41d7-9d49-95eae2336b59",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/34fbe325-7edb-4956-a1db-15f2e053ac4d"
+      },
+      "name" : "34fbe325-7edb-4956-a1db-15f2e053ac4d",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/271a9b00-0b1c-46ac-b00e-c3193d187c62"
+      },
+      "name" : "271a9b00-0b1c-46ac-b00e-c3193d187c62",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/8d184671-a40a-4236-9579-0445ecf98ea0"
+      },
+      "name" : "8d184671-a40a-4236-9579-0445ecf98ea0",
+      "exampleBoolean" : false
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "downloads.html"
+        }],
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "testexamples.html"
+        }],
+        "nameUrl" : "testexamples.html",
+        "title" : "Testexamples",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "testscripts.html"
+        }],
+        "nameUrl" : "testscripts.html",
+        "title" : "Testscripts",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}
