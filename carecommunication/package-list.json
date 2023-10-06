@@ -13,6 +13,16 @@
       "fhirversion" : "4.0.1"
     },
     {
+      "version" : "3.0.0",
+      "path" : "http://medcomfhir.dk/ig/carecommunication/3.0.0",
+      "status" : "release",
+      "sequence" : "Release",
+      "fhirversion" : "4.0.1",
+      "date" : "2023-10-04",
+      "descmd" : "- In general: \r\n    - It is made optional to send a cancellation, modifying and forwarding CareCommunication. Therefore, relevant descriptions are updated.\r\n    - Updated figures.\r\n    \r\n- CareCommunication profile\r\n    - Added description of when replying to a CareCommunication with attached files, the reply should not include the base64-encoded files or the url, only the identifier and author information.\r\n    - Updated an identifier, as each message segment must include one. The identifier must be included in all message segments and must not be changed when replying, forwarding, modifying or cancelling a message and must always be returned.\r\n    - Moved extensions to MedCom Core IG and updated relevant references in CareCommunication profil. Updated names and descriptions, and made the MedComIdentifierExtension (previous: AttachmentIdentifierExtension) able to support identifier in message segments with text and attachments.\r\n    - Updated examples and textual description in accordance to the above mentioned changes.\r\n\r\n- CareCommunicationMessage profile\r\n    - Corrected invariant medcom-careCommunication-1 and medcom-careCommunication-3 to accommodate the QA-report. \r\n\r\n- CareCommunicationMessageHeader profile\r\n    - Changed the cardinality of MessageHeader.destination:CC to 0..0. The requirements where mentioned on the index page, but not included in the profile.\r\n",
+      "changes" : "https://github.com/medcomdk/dk-medcom-carecommunication/releases"
+    },
+    {
       "version" : "2.1.0",
       "path" : "http://medcomfhir.dk/ig/carecommunication/2.1.0",
       "status" : "release",
