@@ -1,30 +1,54 @@
 {
-  "package": "medcom.fhir.dk.carecommunication",
-  "version": "3.0.0",
+  "package": "medcom.fhir.dk.core",
+  "version": "2.1.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DK",
   "extensions": [],
   "profiles": {
-    "Communication": [
+    "CareTeam": [
       {
-        "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication",
-        "title": "MedComCareCommunication"
+        "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam",
+        "title": "MedComCoreCareTeam"
       }
     ],
-    "Bundle": [
+    "Encounter": [
       {
-        "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message",
-        "title": "MedComCareCommunicationMessage"
+        "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter",
+        "title": "MedComCoreEncounter"
       }
     ],
-    "MessageHeader": [
+    "Organization": [
       {
-        "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader",
-        "title": "MedComCareCommunicationMessageHeader"
+        "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization",
+        "title": "MedComCoreOrganization"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient",
+        "title": "MedComCorePatient"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner",
+        "title": "MedComCorePractitioner"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole",
+        "title": "MedComCorePractitionerRole"
       }
     ]
   },
   "usage": {
+    "http://hl7.dk/fhir/core/StructureDefinition/dk-core-RegionalSubDivisionCodes": [
+      "Patient.address"
+    ],
+    "http://hl7.dk/fhir/core/StructureDefinition/dk-core-municipalityCodes": [
+      "Patient.address"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
@@ -43,17 +67,20 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
       "StructureDefinition.snapshot.element"
     ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
+      "StructureDefinition"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
-      "StructureDefinition.snapshot.element"
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
     ],
-    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
-      "ImplementationGuide.definition"
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",
@@ -67,30 +94,6 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
-    ],
-    "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension": [
-      "Bundle.entry.resource.payload",
-      "Communication.payload"
-    ],
-    "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension": [
-      "Bundle.entry.resource.payload",
-      "Communication.payload"
-    ],
-    "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension": [
-      "Bundle.entry.resource.payload",
-      "Communication.payload"
-    ],
-    "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension": [
-      "Bundle.entry.resource.payload",
-      "Communication.payload"
-    ],
-    "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-sender-extension": [
-      "Bundle.entry.resource",
-      "Communication"
-    ],
-    "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension": [
-      "Bundle.entry.resource.destination",
-      "MessageHeader.destination"
     ]
   }
 }
