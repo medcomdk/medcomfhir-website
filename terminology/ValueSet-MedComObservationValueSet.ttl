@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/MedComObservationValueSet> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedComObservationValueSet"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/MedComObservationValueSet"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.5.0"] ; # 
+  fhir:name [ fhir:v "MedComObservationValueSet"] ; # 
+  fhir:title [ fhir:v "MedCom Observation ValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-31"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Valuesets for Observation defined by MedCom"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "https://terminology.medcom.dk/fhir/observation-code"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "MCS88122" ] ;
+         fhir:display [ fhir:v "Pt—Respiration; frekvens = ? X 1/min" ] ;
+         fhir:designation ( [
+           fhir:use [
+             fhir:code [ fhir:v "900000000000013009" ]
+           ] ;
+           fhir:value [ fhir:v "Respirationsfrekvens;Pt" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "MCS88125" ] ;
+         fhir:display [ fhir:v "Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?" ] ;
+         fhir:designation ( [
+           fhir:use [
+             fhir:code [ fhir:v "900000000000013009" ]
+           ] ;
+           fhir:value [ fhir:v "TOBS score;Pt" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "MCS88126" ] ;
+         fhir:display [ fhir:v "Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?" ] ;
+         fhir:designation ( [
+           fhir:use [
+             fhir:code [ fhir:v "900000000000013009" ]
+           ] ;
+           fhir:value [ fhir:v "Bevidsthed;Pt" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "MCS88147" ] ;
+         fhir:display [ fhir:v "Pt—Manniche VAS-score(total); antal(værdi 0-60) = ?" ] ;
+         fhir:designation ( [
+           fhir:use [
+             fhir:code [ fhir:v "900000000000013009" ]
+           ] ;
+           fhir:value [ fhir:v "Manniche VAS-score(total);Pt" ]
+         ] )
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

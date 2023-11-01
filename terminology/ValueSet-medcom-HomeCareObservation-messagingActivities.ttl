@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/medcom-HomeCareObservation-messagingActivities> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom-HomeCareObservation-messagingActivities"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-HomeCareObservation-messagingActivities"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.5.0"] ; # 
+  fhir:name [ fhir:v "MedComHomeCareObservationMessageActivities"] ; # 
+  fhir:title [ fhir:v "MedComHomeCareObservationMessageActivityCodes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-10-31"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ValueSet containg activity codes for HomeCareObservation messages"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "new-message" ]
+       ] [
+         fhir:code [ fhir:v "reply-message" ]
+       ] [
+         fhir:code [ fhir:v "retract-message" ]
+       ] [
+         fhir:code [ fhir:v "modified-message" ]
+       ] )
+     ] ) ;
+     fhir:exclude ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "carboncopy-message" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

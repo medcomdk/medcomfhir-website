@@ -3,14 +3,14 @@
   "id" : "medcom.fhir.dk.terminology",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MedComTerminology</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology</pre><div><p>The DK MedCom Terminology IG</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
   },
   "url" : "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology",
-  "version" : "1.4.0",
+  "version" : "1.5.0",
   "name" : "MedComTerminology",
   "title" : "DK MedCom Terminology",
   "status" : "active",
-  "date" : "2023-07-11T09:59:09+02:00",
+  "date" : "2023-10-31T13:49:52+01:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.0.0"
+    "version" : "5.3.0"
   },
   {
     "id" : "hl7ext",
@@ -69,7 +69,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "Release"
+        "valueString" : "trial-use"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -103,6 +103,17 @@
       {
         "url" : "value",
         "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.1"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -263,6 +274,17 @@
     {
       "extension" : [{
         "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
         "valueString" : "active-tables"
       },
       {
@@ -337,7 +359,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "Release"
+        "valueString" : "trial-use"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -371,6 +393,17 @@
       {
         "url" : "value",
         "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.1"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -531,6 +564,17 @@
     {
       "extension" : [{
         "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
         "valueCode" : "active-tables"
       },
       {
@@ -584,6 +628,30 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/medcom-observation-resultGroup"
+      },
+      "name" : "MedCom Observation Result Group",
+      "description" : "The observation result group are intende to be udes to sort the individual analyzes.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedComObservationValueSet"
+      },
+      "name" : "MedCom Observation ValueSet",
+      "description" : "Valuesets for Observation defined by MedCom",
+      "exampleBoolean" : false
+    },
+    {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
@@ -670,6 +738,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medcom-corediagnosticreport-status"
+      },
+      "name" : "MedComCoreDiagnosticReportStatus",
+      "description" : "ValueSet containing status codes for MedCom DiagnosticReport",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -718,13 +798,49 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/medcom-core-interpretation-codes"
+      },
+      "name" : "MedComCoreInterpretationCodes",
+      "description" : "CodeSystem with code for interpretation of an observation",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medcom-core-interpreation-valueset"
+      },
+      "name" : "MedComCoreInterpretationValueset",
+      "description" : "Valueset with code for interpretation of an observation",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medcom-core-observation-status"
+      },
+      "name" : "MedComCoreObservationStatus",
+      "description" : "ValueSet containing status codes for MedCom Core Observation",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
         "reference" : "ValueSet/medcom-core-PractitionerRoles"
       },
       "name" : "MedComCorePractitionerRoles",
-      "description" : "ValueSet containing codes for practionerroles (Danish:Stillingsbetegnelser) from medcom",
+      "description" : "ValueSet containing codes for practionerroles (Danish: Stillingsbetegnelser) from MedCom",
       "exampleBoolean" : false
     },
     {
@@ -749,6 +865,42 @@
       },
       "name" : "MedComCorePractitionerRolesSKSadministrativ",
       "description" : "CodeSystem containing codes for practionerroles (Danish:Stillingsbetegnelser) from [SKS Administrativt-Personaleklassifikation](https://medinfo.dk/sks/brows.php?s_nod=924)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/MedComDiagnosticReportCodes"
+      },
+      "name" : "MedComDiagnosticReportCodes",
+      "description" : "Codes that represents the name of the diagnostic report",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedComDiagnosticReportCodesValueset"
+      },
+      "name" : "MedComDiagnosticReportCodesValueset",
+      "description" : "ValueSet with codes that represents the name of the diagnostic report.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medcom-HomeCareObservation-messagingActivities"
+      },
+      "name" : "MedComHomeCareObservationMessageActivityCodes",
+      "description" : "ValueSet containg activity codes for HomeCareObservation messages",
       "exampleBoolean" : false
     },
     {
@@ -905,6 +1057,54 @@
       },
       "name" : "MedComMessagingStatisticalCodes",
       "description" : "Statistical Codes for MedCom VANS messages",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medcom-obs-responseGroup"
+      },
+      "name" : "MedComObservarionResultGroupValueSet",
+      "description" : "National response groups for observation results.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/MedComProducentID"
+      },
+      "name" : "MedComProducentID",
+      "description" : "ProducentD that describes who performed the observation",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medcm-producentID-valueset"
+      },
+      "name" : "MedComProducentIDValueSet",
+      "description" : "ProducentID",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/NPUObservationCodesValueSet"
+      },
+      "name" : "NPUObservationCodesValueSet",
+      "description" : "ValuseSet with NPU observations Codes",
       "exampleBoolean" : false
     }],
     "page" : {

@@ -1,0 +1,54 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "medcom-HomeCareObservation-messagingActivities",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  },
+  "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-HomeCareObservation-messagingActivities",
+  "version" : "1.5.0",
+  "name" : "MedComHomeCareObservationMessageActivities",
+  "title" : "MedComHomeCareObservationMessageActivityCodes",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2023-10-31",
+  "publisher" : "MedCom",
+  "contact" : [{
+    "name" : "MedCom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.medcom.dk"
+    }]
+  }],
+  "description" : "ValueSet containg activity codes for HomeCareObservation messages",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "concept" : [{
+        "code" : "new-message"
+      },
+      {
+        "code" : "reply-message"
+      },
+      {
+        "code" : "retract-message"
+      },
+      {
+        "code" : "modified-message"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+      "concept" : [{
+        "code" : "carboncopy-message"
+      }]
+    }]
+  }
+}
