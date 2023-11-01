@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Modified HomeCareDiagnosticReport:TOBS and ABC examination - MedCom HomeCareObservation v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.45"}
+    h3,h4,h5,h6{--heading-prefix:"5.45"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Modified HomeCareDiagnosticReport:TOBS and ABC examination</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="DiagnosticReport-cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="DiagnosticReport-cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="DiagnosticReport-cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example DiagnosticReport: Modified HomeCareDiagnosticReport:TOBS and ABC examination</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2><span title="Codes: {http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}">HomeCareDiagnosticReport</span> </h2><table class="grid"><tr><td>Subject</td><td><b>Elmer (OFFICIAL)</b> (no stated gender), DoB Unknown ( id: 2509479989)</td></tr><tr><td>Reported</td><td>2023-09-12 12:34:00+0200</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href="Observation-3fd3835d-1758-4d22-8547-000182752817.html"><span title="Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88122}">Pt—Respiration; frekvens = ? X 1/min</span></a></td><td>19 1/min</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:08+0200</td></tr><tr><td><a href="Observation-ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1.html"><span title="Codes: {urn:oid:1.2.208.176.2.1 NPU21692}">Hjerte—Systole; frekv. = ? × 1/min</span></a></td><td>92  1/min</td><td><span title="Codes: ">NI</span></td><td>Patienten har været ud og går lige inden målingen.</td><td>2023-09-13 09:24:09+0200</td></tr><tr><td><a href="Observation-8917f29d-269c-4bb3-8ce9-d255c351d52b.html"><span title="Codes: {urn:oid:1.2.208.176.2.1 DNK05472}">Arm—Blodtryk(systolisk); tryk = ? mmHg</span></a></td><td>147 mmHg</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:10+0200</td></tr><tr><td><a href="Observation-6bf03841-8397-4a2a-9f9a-8966b0cfa571.html"><span title="Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88126}">Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?</span></a></td><td>0</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:11+0200</td></tr><tr><td><a href="Observation-85fd1372-cf02-49c6-bd45-7205f5541a66.html"><span title="Codes: {urn:oid:1.2.208.176.2.1 NPU08676}">Pt—Legeme; temp. = ? °C</span></a></td><td>38.7 °C</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:12+0200</td></tr><tr><td><a href="Observation-f64a0a78-53cf-4a7f-9b89-4a2338a4935c.html"><span title="Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88125}">Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?</span></a></td><td>3</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:13+0200</td></tr></table><p>
+ABCDE
+SeFølLyt-Princippet
+A.	RF 19 – påskyndet men regelmæssig, fri respiration. SAT 93%
+B.	Puls 92 palperet på venstre håndled. Fyldig regelmæssig. Fin kapilærrespons
+C.	BT 147/83 – klamtsvedende. Kolde ekstremiteter. 
+D.	Reagerer habituelt. Pupilreaktion i.a. VAS 7. Bl.s. 6,8
+E.	Temperatur 38,7 Målt rektalt
+
+
+Patienten har nægtet at spise og drikke i løbet af dagen. 
+</p></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 15:36+0100">2023-10-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

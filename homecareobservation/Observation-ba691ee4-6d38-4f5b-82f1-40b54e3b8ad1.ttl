@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/homecareobservation/Observation/ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homeCare-observation.html\">MedComHomeCareObservation</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Hjerte—Systole; frekv. = ? × 1/min <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#NPU21692)</span></p><p><b>subject</b>: <a href=\"Patient-bbcd4817-1c4b-4089-a712-346f65ec16f9.html\">Patient/bbcd4817-1c4b-4089-a712-346f65ec16f9</a> &quot; ELMER&quot;</p><p><b>effective</b>: 2023-09-13 09:24:09+0200</p><p><b>value</b>: 92  1/min</p><p><b>interpretation</b>: NI <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#NI)</span></p><p><b>note</b>: Patienten har været ud og går lige inden målingen.</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NPU21692" ] ;
+       fhir:display [ fhir:v "Hjerte—Systole; frekv. = ? × 1/min" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Patient/bbcd4817-1c4b-4089-a712-346f65ec16f9> ;
+     fhir:reference [ fhir:v "Patient/bbcd4817-1c4b-4089-a712-346f65ec16f9" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-09-13T09:24:09+02:00"^^xsd:dateTime] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "92"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v " 1/min" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:code [ fhir:v "NI" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patienten har været ud og går lige inden målingen." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

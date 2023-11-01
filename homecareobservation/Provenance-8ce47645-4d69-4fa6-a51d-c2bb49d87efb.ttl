@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/homecareobservation/Provenance/8ce47645-4d69-4fa6-a51d-c2bb49d87efb> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "8ce47645-4d69-4fa6-a51d-c2bb49d87efb"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Provenance</b><a name=\"8ce47645-4d69-4fa6-a51d-c2bb49d87efb\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Provenance &quot;8ce47645-4d69-4fa6-a51d-c2bb49d87efb&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/2.1.0/StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p><b>target</b>: <a href=\"MessageHeader-07eb074b-be00-47e5-8bcb-484990a1a97e.html\">MessageHeader/07eb074b-be00-47e5-8bcb-484990a1a97e</a></p><p><b>occurred</b>: 2023-09-12 12:30:00+0200</p><p><b>recorded</b>: 12. sep. 2023 12.30.00</p><p><b>activity</b>: A message has been modified <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://medcomfhir.dk/ig/terminology/1.5.0/CodeSystem-medcom-messaging-activityCodes.html\">MedComMessagingActivityCodes</a>#modified-message)</span></p><h3>Agents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Who</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-a0330c62-fe29-4719-83fa-a94959084f29.html\">Organization/a0330c62-fe29-4719-83fa-a94959084f29</a> &quot;Pleje og Rehabilitering&quot;</td></tr></table><h3>Entities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td style=\"display: none\">*</td><td>revision</td><td><a href=\"MessageHeader-489de4f2-0d8d-4de2-a7ce-ccb93568799f.html\">MessageHeader/489de4f2-0d8d-4de2-a7ce-ccb93568799f</a></td></tr></table></div>"
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/MessageHeader/07eb074b-be00-47e5-8bcb-484990a1a97e> ;
+     fhir:reference [ fhir:v "MessageHeader/07eb074b-be00-47e5-8bcb-484990a1a97e" ]
+  ] ) ; # 
+  fhir:occurred [ fhir:v "2023-09-12T12:30:00+02:00"^^xsd:dateTime] ; # 
+  fhir:recorded [ fhir:v "2023-09-12T12:30:00+02:00"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "modified-message" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/Organization/a0330c62-fe29-4719-83fa-a94959084f29> ;
+       fhir:reference [ fhir:v "Organization/a0330c62-fe29-4719-83fa-a94959084f29" ]
+     ]
+  ] ) ; # 
+  fhir:entity ( [
+     fhir:role [ fhir:v "revision" ] ;
+     fhir:what [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/MessageHeader/489de4f2-0d8d-4de2-a7ce-ccb93568799f> ;
+       fhir:reference [ fhir:v "MessageHeader/489de4f2-0d8d-4de2-a7ce-ccb93568799f" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
