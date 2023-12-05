@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="fd618b85-9376-45ac-b0bd-67b0541f4fa4"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2023-05-24T06:46:04.829-04:00"/>
+    <profile value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"/>
+  </meta>
+  <type value="message"/>
+  <timestamp value="2023-05-24T10:46:03Z"/>
+  <entry>
+    <fullUrl value="MessageHeader/9b9a47da-025e-4c3e-9d5e-7ec98eca5030"/>
+    <resource>
+      <MessageHeader>
+        <id value="9b9a47da-025e-4c3e-9d5e-7ec98eca5030"/>
+        <meta>
+          <profile value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns='http://www.w3.org/1999/xhtml'>
+  <p>
+    <b>Generated Narrative: MessageHeader</b>
+    <a name='9b9a47da-025e-4c3e-9d5e-7ec98eca5030'/>
+  </p>
+  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>
+    <p style='margin-bottom: 0px'>Resource MessageHeader "9b9a47da-025e-4c3e-9d5e-7ec98eca5030"</p>
+    <p style='margin-bottom: 0px'>Profile:<a href='StructureDefinition-medcom-messaging-acknowledgementHeader.html'>MedComAcknowledgementMessageHeader</a>
+    </p>
+  </div>
+  <p>
+    <b>event</b>: Acknowledgement Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code acknowledgement-message = &apos;Acknowledgement Message&apos;, stated as &apos;null&apos;)</p>
+  <h3>Destinations</h3>
+  <table class='grid'>
+    <tr>
+      <td>-</td>
+      <td>
+        <b>Extension</b>
+      </td>
+      <td>
+        <b>Endpoint</b>
+      </td>
+      <td>
+        <b>Receiver</b>
+      </td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td/>
+      <td>
+        <a href='https://sor2.sum.dsdn.dk/#id=265161000016000'>https://sor2.sum.dsdn.dk/#id=265161000016000</a>
+      </td>
+      <td>
+        <a href='#Organization_23d90bb8-b79d-4cdf-b3ca-346ab800bc07'>See above (Organization/23d90bb8-b79d-4cdf-b3ca-346ab800bc07)</a>
+      </td>
+    </tr>
+  </table>
+  <p>
+    <b>sender</b>:<a href='#Organization_9121ffaf-2361-43be-9838-9dba80ef1f84'>See above (Organization/9121ffaf-2361-43be-9838-9dba80ef1f84)</a>
+  </p>
+  <h3>Sources</h3>
+  <table class='grid'>
+    <tr>
+      <td>-</td>
+      <td>
+        <b>Endpoint</b>
+      </td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>
+        <a href='https://sor2.sum.dsdn.dk/#id=953741000016009'>https://sor2.sum.dsdn.dk/#id=953741000016009</a>
+      </td>
+    </tr>
+  </table>
+  <h3>Responses</h3>
+  <table class='grid'>
+    <tr>
+      <td>-</td>
+      <td>
+        <b>Identifier</b>
+      </td>
+      <td>
+        <b>Code</b>
+      </td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>5b89a5d0-707a-4b42-8597-ef694e399006</td>
+      <td>ok</td>
+    </tr>
+  </table>
+</div>
+        </text>
+        <eventCoding>
+          <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"/>
+          <code value="acknowledgement-message"/>
+        </eventCoding>
+        <destination>
+          <extension url="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension">
+            <valueCoding>
+              <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"/>
+              <code value="primary"/>
+            </valueCoding>
+          </extension>
+          <endpoint value="https://sor2.sum.dsdn.dk/#id=953741000016009"/>
+          <receiver>
+            <reference value="Organization/23d90bb8-b79d-4cdf-b3ca-346ab800bc07"/>
+          </receiver>
+        </destination>
+        <sender>
+          <reference value="Organization/9121ffaf-2361-43be-9838-9dba80ef1f84"/>
+        </sender>
+        <source>
+          <endpoint value="https://sor2.sum.dsdn.dk/#id=265161000016000"/>
+        </source>
+        <response>
+          <identifier value="5b89a5d0-707a-4b42-8597-ef694e399006"/>
+          <code value="fatal-error"/>
+          <details>
+            <reference value="OperationOutcome/8f8218bc-457b-49a7-b70a-bf0f67f26952"/>
+          </details>
+        </response>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="OperationOutcome/8f8218bc-457b-49a7-b70a-bf0f67f26952"/>
+    <resource>
+      <OperationOutcome>
+        <id value="8f8218bc-457b-49a7-b70a-bf0f67f26952"/>
+        <meta>
+          <profile value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns='http://www.w3.org/1999/xhtml'>
+  <p>
+    <b>Generated Narrative: OperationOutcome</b>
+    <a name='8f8218bc-457b-49a7-b70a-bf0f67f26952'/>
+  </p>
+  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>
+    <p style='margin-bottom: 0px'>Resource OperationOutcome "8f8218bc-457b-49a7-b70a-bf0f67f26952"</p>
+    <p style='margin-bottom: 0px'>Profile:<a href='StructureDefinition-medcom-acknowledgement-operationoutcome.html'>MedComAcknowledgementOperationOutcome</a>
+    </p>
+  </div>
+  <h3>Issues</h3>
+  <table class='grid'>
+    <tr>
+      <td>-</td>
+      <td>
+        <b>Severity</b>
+      </td>
+      <td>
+        <b>Code</b>
+      </td>
+      <td>
+        <b>Details</b>
+      </td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>error</td>
+      <td>value</td>
+      <td>This code is temporary. It is used to describe an error in the development of the message.<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.0.0/CodeSystem-medcom-acknowledgement-issue-details.html'>MedComAcknowledgementIssueDetails</a>#message-development-error)</span>
+      </td>
+    </tr>
+  </table>
+</div>
+        </text>
+        <issue>
+          <severity value="error"/>
+          <code value="value"/>
+          <details>
+            <coding>
+              <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-acknowledgement-issue-details"/>
+              <code value="message-development-error"/>
+            </coding>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Provenance/2a004836-e306-4deb-9e8b-769cc2da38bc"/>
+    <resource>
+      <Provenance>
+        <id value="2a004836-e306-4deb-9e8b-769cc2da38bc"/>
+        <meta>
+          <profile value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns='http://www.w3.org/1999/xhtml'>
+  <p>
+    <b>Generated Narrative: Provenance</b>
+    <a name='2a004836-e306-4deb-9e8b-769cc2da38bc'/>
+  </p>
+  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>
+    <p style='margin-bottom: 0px'>Resource Provenance "2a004836-e306-4deb-9e8b-769cc2da38bc"</p>
+    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-provenance.html'>MedComMessagingProvenance</a>
+    </p>
+  </div>
+  <p>
+    <b>target</b>:<a href='#MessageHeader_5b89a5d0-707a-4b42-8597-ef694e399006'>See above (MessageHeader/5b89a5d0-707a-4b42-8597-ef694e399006)</a>
+  </p>
+  <p>
+    <b>occurred</b>: 2023-03-01 12:00:02+0200</p>
+  <p>
+    <b>recorded</b>: 7. dec. 2022 11.00.02</p>
+  <p>
+    <b>activity</b>: Start hospital stay-admission<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.1.1/CodeSystem-medcom-messaging-activityCodes.html'>MedComMessagingActivityCodes</a>#admit-inpatient)</span>
+  </p>
+  <h3>Agents</h3>
+  <table class='grid'>
+    <tr>
+      <td>-</td>
+      <td>
+        <b>Who</b>
+      </td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>
+        <a href='#Organization_9121ffaf-2361-43be-9838-9dba80ef1f84'>See above (Organization/9121ffaf-2361-43be-9838-9dba80ef1f84)</a>
+      </td>
+    </tr>
+  </table>
+</div>
+        </text>
+        <target>
+          <reference value="MessageHeader/5b89a5d0-707a-4b42-8597-ef694e399006"/>
+        </target>
+        <occurredDateTime value="2023-03-01T12:00:02+01:00"/>
+        <recorded value="2023-03-01T12:00:02+01:00"/>
+        <activity>
+          <coding>
+            <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"/>
+            <code value="admit-inpatient"/>
+          </coding>
+        </activity>
+        <agent>
+          <who>
+            <reference value="Organization/9121ffaf-2361-43be-9838-9dba80ef1f84"/>
+          </who>
+        </agent>
+      </Provenance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Provenance/69dab277-dd4b-4055-9fda-a10a65cb4412"/>
+    <resource>
+      <Provenance>
+        <id value="69dab277-dd4b-4055-9fda-a10a65cb4412"/>
+        <meta>
+          <profile value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns='http://www.w3.org/1999/xhtml'>
+  <p>
+    <b>Generated Narrative: Provenance</b>
+    <a name='69dab277-dd4b-4055-9fda-a10a65cb4412'/>
+  </p>
+  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>
+    <p style='margin-bottom: 0px'>Resource Provenance "69dab277-dd4b-4055-9fda-a10a65cb4412"</p>
+    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-provenance.html'>MedComMessagingProvenance</a>
+    </p>
+  </div>
+  <p>
+    <b>target</b>:<a href='#MessageHeader_9b9a47da-025e-4c3e-9d5e-7ec98eca5030'>See above (MessageHeader/9b9a47da-025e-4c3e-9d5e-7ec98eca5030)</a>
+  </p>
+  <p>
+    <b>occurred</b>: 2023-03-01 12:00:03+0100</p>
+  <p>
+    <b>recorded</b>: 1. mar. 2023 10.00.03</p>
+  <p>
+    <b>activity</b>: Acknowledgement message has been sent<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.0.0/CodeSystem-medcom-messaging-activityCodes.html'>MedComMessagingActivityCodes</a>#acknowledgement)</span>
+  </p>
+  <h3>Agents</h3>
+  <table class='grid'>
+    <tr>
+      <td>-</td>
+      <td>
+        <b>Who</b>
+      </td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>
+        <a href='#Organization_23d90bb8-b79d-4cdf-b3ca-346ab800bc07'>See above (Organization/23d90bb8-b79d-4cdf-b3ca-346ab800bc07)</a>
+      </td>
+    </tr>
+  </table>
+  <h3>Entities</h3>
+  <table class='grid'>
+    <tr>
+      <td>-</td>
+      <td>
+        <b>Role</b>
+      </td>
+      <td>
+        <b>What</b>
+      </td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>revision</td>
+      <td>
+        <a href='MessageHeader-5b89a5d0-707a-4b42-8597-ef694e399006.html'>MessageHeader/5b89a5d0-707a-4b42-8597-ef694e399006</a>
+      </td>
+    </tr>
+  </table>
+</div>
+        </text>
+        <target>
+          <reference value="MessageHeader/9b9a47da-025e-4c3e-9d5e-7ec98eca5030"/>
+        </target>
+        <occurredDateTime value="2023-03-01T12:00:03+01:00"/>
+        <recorded value="2023-03-01T12:00:03+01:00"/>
+        <activity>
+          <coding>
+            <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"/>
+            <code value="acknowledgement"/>
+          </coding>
+        </activity>
+        <agent>
+          <who>
+            <reference value="Organization/23d90bb8-b79d-4cdf-b3ca-346ab800bc07"/>
+          </who>
+        </agent>
+        <entity>
+          <role value="revision"/>
+          <what>
+            <reference value="MessageHeader/5b89a5d0-707a-4b42-8597-ef694e399006"/>
+          </what>
+        </entity>
+      </Provenance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Organization/23d90bb8-b79d-4cdf-b3ca-346ab800bc07"/>
+    <resource>
+      <Organization>
+        <id value="23d90bb8-b79d-4cdf-b3ca-346ab800bc07"/>
+        <meta>
+          <profile value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns='http://www.w3.org/1999/xhtml'>
+  <p>
+    <b>Generated Narrative: Organization</b>
+    <a name='23d90bb8-b79d-4cdf-b3ca-346ab800bc07'/>
+  </p>
+  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>
+    <p style='margin-bottom: 0px'>Resource Organization "23d90bb8-b79d-4cdf-b3ca-346ab800bc07"</p>
+    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-organization.html'>MedComMessagingOrganization</a>
+    </p>
+  </div>
+  <p>
+    <b>identifier</b>: id: 5790001348120, id: 953741000016009</p>
+  <p>
+    <b>name</b>: Plejecenter Herlev</p>
+</div>
+        </text>
+        <identifier>
+          <system value="https://www.gs1.org/gln"/>
+          <value value="5790001348120"/>
+        </identifier>
+        <identifier>
+          <system value="urn:oid:1.2.208.176.1.1"/>
+          <value value="953741000016009"/>
+        </identifier>
+        <name value="Plejecenter Herlev"/>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Organization/9121ffaf-2361-43be-9838-9dba80ef1f84"/>
+    <resource>
+      <Organization>
+        <id value="9121ffaf-2361-43be-9838-9dba80ef1f84"/>
+        <meta>
+          <profile value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns='http://www.w3.org/1999/xhtml'>
+  <p>
+    <b>Generated Narrative: Organization</b>
+    <a name='9121ffaf-2361-43be-9838-9dba80ef1f84'/>
+  </p>
+  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>
+    <p style='margin-bottom: 0px'>Resource Organization "9121ffaf-2361-43be-9838-9dba80ef1f84"</p>
+    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-organization.html'>MedComMessagingOrganization</a>
+    </p>
+  </div>
+  <p>
+    <b>identifier</b>: id: 5790000209354, id: 265161000016000</p>
+  <p>
+    <b>name</b>: Hjerteafdelingen p� Herlev og Gentofte hospital</p>
+</div>
+        </text>
+        <identifier>
+          <system value="https://www.gs1.org/gln"/>
+          <value value="5790000209354"/>
+        </identifier>
+        <identifier>
+          <system value="urn:oid:1.2.208.176.1.1"/>
+          <value value="265161000016000"/>
+        </identifier>
+        <name value="Hjerteafdelingen på Herlev og Gentofte hospital"/>
+      </Organization>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,0 +1,44 @@
+{
+  "resourceType": "MessageHeader",
+  "id": "aba2d9bf-2c6c-47e8-bce4-7928bcd51019",
+  "meta": {
+    "profile": [
+      "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MessageHeader</b><a name=\"aba2d9bf-2c6c-47e8-bce4-7928bcd51019\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MessageHeader \"aba2d9bf-2c6c-47e8-bce4-7928bcd51019\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-messaging-acknowledgementHeader.html\">MedComAcknowledgementMessageHeader</a></p></div><p><b>event</b>: Acknowledgment Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code acknowledgement-message = 'Acknowledgment Message', stated as 'null')</p><h3>Destinations</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td>*</td><td></td><td><a href=\"https://sor2.sum.dsdn.dk/#id=265161000016000\">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td><td><a href=\"Organization-74cdf292-abf3-4f5f-80ea-60a48013ff6d.html\">Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d</a> \"Receiver Organization\"</td></tr></table><p><b>sender</b>: <a href=\"Organization-d7056980-a8b2-42aa-8a0e-c1fc85d1f40d.html\">Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d</a> \"Sender Organization\"</p><h3>Sources</h3><table class=\"grid\"><tr><td>-</td><td><b>Endpoint</b></td></tr><tr><td>*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=953741000016009\">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td></tr></table><h3>Responses</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td>*</td><td>42cb9200-f421-4d08-8391-7d51a2503cb4</td><td>ok</td></tr></table></div>"
+  },
+  "eventCoding": {
+    "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
+    "code": "acknowledgement-message"
+  },
+  "destination": [
+    {
+      "extension": [
+        {
+          "url": "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+          "valueCoding": {
+            "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+            "code": "primary"
+          }
+        }
+      ],
+      "endpoint": "https://sor2.sum.dsdn.dk/#id=265161000016000",
+      "receiver": {
+        "reference": "Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"
+      }
+    }
+  ],
+  "sender": {
+    "reference": "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"
+  },
+  "source": {
+    "endpoint": "https://sor2.sum.dsdn.dk/#id=953741000016009"
+  },
+  "response": {
+    "identifier": "42cb9200-f421-4d08-8391-7d51a2503cb4",
+    "code": "ok"
+  }
+}

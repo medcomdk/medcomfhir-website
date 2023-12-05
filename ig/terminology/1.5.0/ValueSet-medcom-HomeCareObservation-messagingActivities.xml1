@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="medcom-HomeCareObservation-messagingActivities"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+  </text>
+  <url value="http://medcomfhir.dk/ig/terminology/ValueSet/medcom-HomeCareObservation-messagingActivities"/>
+  <version value="1.5.0"/>
+  <name value="MedComHomeCareObservationMessageActivities"/>
+  <title value="MedComHomeCareObservationMessageActivityCodes"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2023-10-31"/>
+  <publisher value="MedCom"/>
+  <contact>
+    <name value="MedCom"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.medcom.dk"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet containg activity codes for HomeCareObservation messages"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DK"/>
+      <display value="Denmark"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"/>
+      <concept>
+        <code value="new-message"/>
+      </concept>
+      <concept>
+        <code value="reply-message"/>
+      </concept>
+      <concept>
+        <code value="retract-message"/>
+      </concept>
+      <concept>
+        <code value="modified-message"/>
+      </concept>
+    </include>
+    <exclude>
+      <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"/>
+      <concept>
+        <code value="carboncopy-message"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>

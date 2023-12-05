@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/acknowledgement/MessageHeader/3881874e-2042-4a00-aee8-23512799f512> a fhir:MessageHeader;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "3881874e-2042-4a00-aee8-23512799f512"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-messageHeader";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-messageHeader>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MessageHeader</b><a name=\"3881874e-2042-4a00-aee8-23512799f512\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MessageHeader \"3881874e-2042-4a00-aee8-23512799f512\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-messageHeader.html\">MedComMessagingMessageHeader</a></p></div><p><b>event</b>: Message with no content (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code empty-message = 'Message with no content', stated as 'null')</p><h3>Destinations</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td>*</td><td></td><td><a href=\"https://sor2.sum.dsdn.dk/#id=953741000016009\">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td><td><a href=\"Organization-74cdf292-abf3-4f5f-80ea-60a48013ff6d.html\">Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d</a> \"Receiver Organization\"</td></tr></table><p><b>sender</b>: <a href=\"Organization-d7056980-a8b2-42aa-8a0e-c1fc85d1f40d.html\">Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d</a> \"Sender Organization\"</p><h3>Sources</h3><table class=\"grid\"><tr><td>-</td><td><b>Endpoint</b></td></tr><tr><td>*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=265161000016000\">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td></tr></table></div>"
+  ];
+  fhir:MessageHeader.eventCoding [
+     fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes" ];
+     fhir:Coding.code [ fhir:value "empty-message" ]
+  ];
+  fhir:MessageHeader.destination [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse" ];
+         fhir:Coding.code [ fhir:value "primary" ]
+       ]
+     ];
+     fhir:MessageHeader.destination.endpoint [ fhir:value "https://sor2.sum.dsdn.dk/#id=953741000016009" ];
+     fhir:MessageHeader.destination.receiver [
+       fhir:link <http://medcomfhir.dk/ig/acknowledgement/Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d>;
+       fhir:Reference.reference [ fhir:value "Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d" ]
+     ]
+  ];
+  fhir:MessageHeader.sender [
+     fhir:link <http://medcomfhir.dk/ig/acknowledgement/Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d>;
+     fhir:Reference.reference [ fhir:value "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d" ]
+  ];
+  fhir:MessageHeader.source [
+     fhir:MessageHeader.source.endpoint [ fhir:value "https://sor2.sum.dsdn.dk/#id=265161000016000" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/acknowledgement/MessageHeader/3881874e-2042-4a00-aee8-23512799f512.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

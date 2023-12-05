@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="medcom-messaging-mapFhirToSorEdi"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+  </text>
+  <url value="http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi"/>
+  <version value="1.5.0"/>
+  <name value="MedComMessagingMapFhirToSorEdi"/>
+  <status value="active"/>
+  <date value="2023-02-27"/>
+  <publisher value="MedCom"/>
+  <contact>
+    <name value="MedCom"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.medcom.dk"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DK"/>
+      <display value="Denmark"/>
+    </coding>
+  </jurisdiction>
+  <sourceUri value="http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes"/>
+  <targetUri value="http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-sorEdiValues"/>
+  <group>
+    <source value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"/>
+    <target value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-sorEdiSystem"/>
+    <element>
+      <code value="care-communication-message"/>
+      <display value="Care Communication Message"/>
+      <target>
+        <code value="FDIS91"/>
+        <display value="Care Communication Message (Korrepondance meddelelse)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="hospital-notification-message"/>
+      <display value="Hospital Notification Message"/>
+      <target>
+        <code value="FDIS20"/>
+        <display value="Hospital Notification Message (Advis om Sygehusophold)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="acknowledgement-message"/>
+      <display value="Acknowledgement Message"/>
+      <target>
+        <code value="FCTL"/>
+        <display value="Acknowledgement Message (Kvittering)"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

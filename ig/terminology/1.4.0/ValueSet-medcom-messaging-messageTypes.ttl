@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom-messaging-messageTypes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-medcom-messaging-eventCodes.html\"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b><a href=\"ValueSet-medcom-messaging-sorEdiValues.html\">MedComMessagingMapFhirToSorEdi</a></b></td></tr><tr><td><a href=\"CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-empty-message\">empty-message</a></td><td>Message with no content</td><td/></tr><tr><td><a href=\"CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message\">care-communication-message</a></td><td>Care Communication Message</td><td><span title=\"EQUIVALENT\">~</span>FDIS91</td></tr><tr><td><a href=\"CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-hospital-notification-message\">hospital-notification-message</a></td><td>Hospital Notification Message</td><td><span title=\"EQUIVALENT\">~</span>FDIS20</td></tr><tr><td><a href=\"CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-acknowledgement-message\">acknowledgement-message</a></td><td>Acknowledgement Message</td><td><span title=\"EQUIVALENT\">~</span>FCTL</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.4.0"] ; # 
+  fhir:name [ fhir:v "MedComMessagingMessageTypes"] ; # 
+  fhir:title [ fhir:v "MedComMessagingMessageTypes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2022-09-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "All message types of MedCom messages"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "empty-message" ] ;
+         fhir:display [ fhir:v "Message with no content" ]
+       ] [
+         fhir:code [ fhir:v "care-communication-message" ] ;
+         fhir:display [ fhir:v "Care Communication Message" ]
+       ] [
+         fhir:code [ fhir:v "hospital-notification-message" ] ;
+         fhir:display [ fhir:v "Hospital Notification Message" ]
+       ] [
+         fhir:code [ fhir:v "acknowledgement-message" ] ;
+         fhir:display [ fhir:v "Acknowledgement Message" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-cancellation-reason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom-messaging-cancellation-reason"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-cancellation-reason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Dansk (Danish, da)</b></td></tr><tr><td style=\"white-space:nowrap\">incorrect-cpr<a name=\"medcom-messaging-cancellation-reason-incorrect-cpr\"> </a></td><td>Cancellation due to incorrect CPR-number</td><td>Annullering grundet forkert CPR-nr.</td></tr><tr><td style=\"white-space:nowrap\">incorrect-receiver<a name=\"medcom-messaging-cancellation-reason-incorrect-receiver\"> </a></td><td>Cancellation due to incorrect receiver</td><td>Annullering grundet forkert modtager</td></tr><tr><td style=\"white-space:nowrap\">incorrect-attachment<a name=\"medcom-messaging-cancellation-reason-incorrect-attachment\"> </a></td><td>Cancellation due to attachment with content concerning a incorrect CPR-number</td><td>Annullering grundet vedhæftet fil med indhold på forkert CPR-nr.</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-cancellation-reason"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.4.0"] ; # 
+  fhir:name [ fhir:v "MedComMessagingCancellationReason"] ; # 
+  fhir:title [ fhir:v "MedComMessagingCancellationReason"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-03-30"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem including text that describes the reason for cancelling a message."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "incorrect-cpr" ] ;
+     fhir:display [ fhir:v "Cancellation due to incorrect CPR-number" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "da" ] ;
+       fhir:value [ fhir:v "Annullering grundet forkert CPR-nr." ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "incorrect-receiver" ] ;
+     fhir:display [ fhir:v "Cancellation due to incorrect receiver" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "da" ] ;
+       fhir:value [ fhir:v "Annullering grundet forkert modtager" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "incorrect-attachment" ] ;
+     fhir:display [ fhir:v "Cancellation due to attachment with content concerning a incorrect CPR-number" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "da" ] ;
+       fhir:value [ fhir:v "Annullering grundet vedhæftet fil med indhold på forkert CPR-nr." ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-acknowledgement-issue-details> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medcom-acknowledgement-issue-details"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-acknowledgement-issue-details</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">message-development-error<a name=\"medcom-acknowledgement-issue-details-message-development-error\"> </a></td><td>This code is temporary. It is used to describe an error in the development of the message.</td></tr><tr><td style=\"white-space:nowrap\">message-delivery-error<a name=\"medcom-acknowledgement-issue-details-message-delivery-error\"> </a></td><td>This code is temporary. It is used to describe an error in the delivery of the message.</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-acknowledgement-issue-details"];
+  fhir:CodeSystem.version [ fhir:value "1.0.0"];
+  fhir:CodeSystem.name [ fhir:value "MedComAcknowledgementIssueDetails"];
+  fhir:CodeSystem.title [ fhir:value "MedComAcknowledgementIssueDetails"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2022-09-01"^^xsd:date];
+  fhir:CodeSystem.publisher [ fhir:value "MedCom"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "MedCom" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.medcom.dk" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "CodeSystem including detailed issues describtions. This CodeSystem is intended to be extended in collaboration the IT-vendors."];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "DK" ];
+       fhir:Coding.display [ fhir:value "Denmark" ]
+     ]
+  ];
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "2"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "message-development-error" ];
+     fhir:CodeSystem.concept.display [ fhir:value "This code is temporary. It is used to describe an error in the development of the message." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "message-delivery-error" ];
+     fhir:CodeSystem.concept.display [ fhir:value "This code is temporary. It is used to describe an error in the delivery of the message." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-acknowledgement-issue-details.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

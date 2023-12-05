@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "80064a57-73e0-47a1-9a83-d11da28f9a18-38",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/80064a57-73e0-47a1-9a83-d11da28f9a18-38",
+  "name" : "UnionMedComCareCommunicationRequestPriorityAndMedComCareCommunicationRequestPriority",
+  "title" : "Union of MedComCareCommunicationRequestPriorityCodes And MedComCareCommunicationRequestPriorityCodes",
+  "status" : "active",
+  "date" : "2022-10-05T19:21:56+02:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "routine",
+        "display" : "Routine"
+      },
+      {
+        "code" : "asap",
+        "display" : "ASAP"
+      }]
+    }]
+  },
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/request-priority",
+      "code" : "routine",
+      "display" : "Routine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/request-priority",
+      "code" : "asap",
+      "display" : "ASAP"
+    }]
+  }
+}

@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/Encounter/h2cb16ce-af8c-46f3-be9e-89406ef3e7b5> a fhir:Encounter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "h2cb16ce-af8c-46f3-be9e-89406ef3e7b5"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-encounter>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"h2cb16ce-af8c-46f3-be9e-89406ef3e7b5\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;h2cb16ce-af8c-46f3-be9e-89406ef3e7b5&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-hospitalNotification-encounter.html\">MedComHospitalNotificationEncounter</a></p></div><p><b>status</b>: in-progress</p><p><b>class</b>: emergency (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code EMER = 'emergency', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-fdc1fc66-81d0-11ed-a1eb-0242ac120002.html\">Patient/fdc1fc66-81d0-11ed-a1eb-0242ac120002</a> &quot; ELMER&quot;</p><p><b>episodeOfCare</b>: <span/></p><p><b>period</b>: 2022-12-01 10:00:04+0200 --&gt; (ongoing)</p><p><b>serviceProvider</b>: <a href=\"Organization-1f5882b4-81d1-11ed-a1eb-0242ac120002.html\">Organization/1f5882b4-81d1-11ed-a1eb-0242ac120002</a> &quot;Hjerteafdelingen på Herlev og Gentofte hospital&quot;</p></div>"
+  ];
+  fhir:Encounter.status [ fhir:value "in-progress"];
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+     fhir:Coding.code [ fhir:value "EMER" ]
+  ];
+  fhir:Encounter.subject [
+     fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Patient/fdc1fc66-81d0-11ed-a1eb-0242ac120002>;
+     fhir:Reference.reference [ fhir:value "Patient/fdc1fc66-81d0-11ed-a1eb-0242ac120002" ]
+  ];
+  fhir:Encounter.episodeOfCare [
+     fhir:index 0;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.esundhed.dk/Registre/Landspatientregisteret" ];
+       fhir:Identifier.value [ fhir:value "urn:uuid:fc60e762-b13b-5773-865e-67f3907bdcc7" ]
+     ]
+  ];
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2022-12-01T10:00:04+02:00"^^xsd:dateTime ]
+  ];
+  fhir:Encounter.serviceProvider [
+     fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/1f5882b4-81d1-11ed-a1eb-0242ac120002>;
+     fhir:Reference.reference [ fhir:value "Organization/1f5882b4-81d1-11ed-a1eb-0242ac120002" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/Encounter/h2cb16ce-af8c-46f3-be9e-89406ef3e7b5.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

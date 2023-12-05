@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Provenance/6de0806d-7050-4db8-8003-0c72aee52948> a fhir:Provenance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "6de0806d-7050-4db8-8003-0c72aee52948"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Provenance</b><a name=\"6de0806d-7050-4db8-8003-0c72aee52948\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Provenance &quot;6de0806d-7050-4db8-8003-0c72aee52948&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p><b>target</b>: <a href=\"MessageHeader-3076d9b0-5521-11ed-bdc3-0242ac120002.html\">MessageHeader/3076d9b0-5521-11ed-bdc3-0242ac120002</a></p><p><b>occurred</b>: 2022-10-01 12:00:11+0000</p><p><b>recorded</b>: 01-10-2022 14:00:11</p><p><b>activity</b>: A message has been replied to <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://medcomfhir.dk/ig/terminology/1.1.0/CodeSystem-medcom-messaging-activityCodes.html\">MedComMessagingActivityCodes</a>#reply-message)</span></p><h3>Agents</h3><table class=\"grid\"><tr><td>-</td><td><b>Who</b></td></tr><tr><td>*</td><td><a href=\"Organization-fd0666dc-551f-11ed-bdc3-0242ac120002.html\">Organization/fd0666dc-551f-11ed-bdc3-0242ac120002</a> &quot;Hjerteafdelingen på Herlev og Gentofte hospital&quot;</td></tr></table><h3>Entities</h3><table class=\"grid\"><tr><td>-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td>*</td><td>revision</td><td><span/></td></tr></table></div>"
+  ];
+  fhir:Provenance.target [
+     fhir:index 0;
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/MessageHeader/3076d9b0-5521-11ed-bdc3-0242ac120002>;
+     fhir:Reference.reference [ fhir:value "MessageHeader/3076d9b0-5521-11ed-bdc3-0242ac120002" ]
+  ];
+  fhir:Provenance.occurredDateTime [ fhir:value "2022-10-01T12:00:11Z"^^xsd:dateTime];
+  fhir:Provenance.recorded [ fhir:value "2022-10-01T12:00:11Z"^^xsd:dateTime];
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes" ];
+       fhir:Coding.code [ fhir:value "reply-message" ]
+     ]
+  ];
+  fhir:Provenance.agent [
+     fhir:index 0;
+     fhir:Provenance.agent.who [
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/Organization/fd0666dc-551f-11ed-bdc3-0242ac120002>;
+       fhir:Reference.reference [ fhir:value "Organization/fd0666dc-551f-11ed-bdc3-0242ac120002" ]
+     ]
+  ];
+  fhir:Provenance.entity [
+     fhir:index 0;
+     fhir:Provenance.entity.role [ fhir:value "revision" ];
+     fhir:Provenance.entity.what [
+       fhir:Reference.identifier [
+         fhir:Identifier.value [ fhir:value "B300720181623#5790000121526" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Provenance/6de0806d-7050-4db8-8003-0c72aee52948.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

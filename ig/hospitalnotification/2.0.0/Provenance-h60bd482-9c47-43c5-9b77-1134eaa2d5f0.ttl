@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/Provenance/h60bd482-9c47-43c5-9b77-1134eaa2d5f0> a fhir:Provenance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "h60bd482-9c47-43c5-9b77-1134eaa2d5f0"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance";
+       fhir:index 0;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Provenance</b><a name=\"h60bd482-9c47-43c5-9b77-1134eaa2d5f0\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Provenance \"h60bd482-9c47-43c5-9b77-1134eaa2d5f0\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p><b>target</b>: <a href=\"MessageHeader-i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029.html\">MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029</a></p><p><b>occurred</b>: 2022-10-01 10:00:30+0000</p><p><b>recorded</b>: 1 Oct 2022, 12.00.30</p><p><b>activity</b>: Start hospital stay-acute ambulant <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://medcomfhir.dk/ig/terminology/1.0.0/CodeSystem-medcom-messaging-activityCodes.html\">MedComMessagingActivityCodes</a>#admit-emergency)</span></p><h3>Agents</h3><table class=\"grid\"><tr><td>-</td><td><b>Who</b></td></tr><tr><td>*</td><td><a href=\"Organization-o7056980-a8b2-42aa-8a0e-c1fc85d1f40d.html\">Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d</a> \"Sender Organization\"</td></tr></table></div>"
+  ];
+  fhir:Provenance.target [
+     fhir:index 0;
+     fhir:link <http://medcomfhir.dk/ig/hospitalnotification/MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029>;
+     fhir:Reference.reference [ fhir:value "MessageHeader/i50fc5fe-2d11-4ef3-acac-2e2e5c6c0029" ]
+  ];
+  fhir:Provenance.occurredDateTime [ fhir:value "2022-10-01T10:00:30Z"^^xsd:dateTime];
+  fhir:Provenance.recorded [ fhir:value "2022-10-01T10:00:30Z"^^xsd:dateTime];
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes" ];
+       fhir:Coding.code [ fhir:value "admit-emergency" ]
+     ]
+  ];
+  fhir:Provenance.agent [
+     fhir:index 0;
+     fhir:Provenance.agent.who [
+       fhir:link <http://medcomfhir.dk/ig/hospitalnotification/Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d>;
+       fhir:Reference.reference [ fhir:value "Organization/o7056980-a8b2-42aa-8a0e-c1fc85d1f40d" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/hospitalnotification/Provenance/h60bd482-9c47-43c5-9b77-1134eaa2d5f0.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

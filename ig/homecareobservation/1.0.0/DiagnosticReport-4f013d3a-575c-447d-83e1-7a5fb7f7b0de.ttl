@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/4f013d3a-575c-447d-83e1-7a5fb7f7b0de> a fhir:DiagnosticReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "4f013d3a-575c-447d-83e1-7a5fb7f7b0de"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}\">HomeCareDiagnosticReport</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Elmer (OFFICIAL)</b> (no stated gender), DoB Unknown ( id: 2509479989)</td></tr><tr><td>Reported</td><td>2023-09-12 13:00:00+0200</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-3fd3835d-1758-4d22-8547-000182752817.html\"><span title=\"Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88122}\">Pt—Respiration; frekvens = ? X 1/min</span></a></td><td>19 1/min</td><td><span title=\"Codes: \">NI</span></td><td/><td>2023-09-13 09:24:08+0200</td></tr><tr><td><a href=\"Observation-ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1.html\"><span title=\"Codes: {urn:oid:1.2.208.176.2.1 NPU21692}\">Hjerte—Systole; frekv. = ? × 1/min</span></a></td><td>92  1/min</td><td><span title=\"Codes: \">NI</span></td><td>Patienten har været ud og går lige inden målingen.</td><td>2023-09-13 09:24:09+0200</td></tr><tr><td><a href=\"Observation-8917f29d-269c-4bb3-8ce9-d255c351d52b.html\"><span title=\"Codes: {urn:oid:1.2.208.176.2.1 DNK05472}\">Arm—Blodtryk(systolisk); tryk = ? mmHg</span></a></td><td>147 mmHg</td><td><span title=\"Codes: \">NI</span></td><td/><td>2023-09-13 09:24:10+0200</td></tr><tr><td><a href=\"Observation-6bf03841-8397-4a2a-9f9a-8966b0cfa571.html\"><span title=\"Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88126}\">Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?</span></a></td><td>0</td><td><span title=\"Codes: \">NI</span></td><td/><td>2023-09-13 09:24:11+0200</td></tr><tr><td><a href=\"Observation-85fd1372-cf02-49c6-bd45-7205f5541a66.html\"><span title=\"Codes: {urn:oid:1.2.208.176.2.1 NPU08676}\">Pt—Legeme; temp. = ? °C</span></a></td><td>38.7 °C</td><td><span title=\"Codes: \">NI</span></td><td/><td>2023-09-13 09:24:12+0200</td></tr><tr><td><a href=\"Observation-f64a0a78-53cf-4a7f-9b89-4a2338a4935c.html\"><span title=\"Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88125}\">Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?</span></a></td><td>3</td><td><span title=\"Codes: \">NI</span></td><td/><td>2023-09-13 09:24:13+0200</td></tr></table><p>\r\nCancellation due to incorrect CPR-number!\r\n</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "cancelled"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "HomeCareReport" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Patient/bbcd4817-1c4b-4089-a712-346f65ec16f9> ;
+     fhir:reference [ fhir:v "Patient/bbcd4817-1c4b-4089-a712-346f65ec16f9" ]
+  ] ; # 
+  fhir:issued [ fhir:v "2023-09-12T13:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Organization/a0330c62-fe29-4719-83fa-a94959084f29> ;
+     fhir:reference [ fhir:v "Organization/a0330c62-fe29-4719-83fa-a94959084f29" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/PractitionerRole/4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf> ;
+     fhir:reference [ fhir:v "PractitionerRole/4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Observation/3fd3835d-1758-4d22-8547-000182752817> ;
+     fhir:reference [ fhir:v "Observation/3fd3835d-1758-4d22-8547-000182752817" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Observation/ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1> ;
+     fhir:reference [ fhir:v "Observation/ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Observation/8917f29d-269c-4bb3-8ce9-d255c351d52b> ;
+     fhir:reference [ fhir:v "Observation/8917f29d-269c-4bb3-8ce9-d255c351d52b" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Observation/6bf03841-8397-4a2a-9f9a-8966b0cfa571> ;
+     fhir:reference [ fhir:v "Observation/6bf03841-8397-4a2a-9f9a-8966b0cfa571" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Observation/85fd1372-cf02-49c6-bd45-7205f5541a66> ;
+     fhir:reference [ fhir:v "Observation/85fd1372-cf02-49c6-bd45-7205f5541a66" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Observation/f64a0a78-53cf-4a7f-9b89-4a2338a4935c> ;
+     fhir:reference [ fhir:v "Observation/f64a0a78-53cf-4a7f-9b89-4a2338a4935c" ]
+  ] ) ; # 
+  fhir:conclusion [ fhir:v "\r\nCancellation due to incorrect CPR-number!\r\n"] . # 
+
+# -------------------------------------------------------------------------------------
+
