@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MedComAcknowledgement</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement</pre><div><p>The DK MedCom acknowledgement IG</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement",
-  "version" : "2.0.1",
+  "version" : "2.0.2",
   "name" : "MedComAcknowledgement",
   "title" : "DK MedCom acknowledgement",
   "status" : "active",
-  "date" : "2023-03-10T15:20:50+01:00",
+  "date" : "2024-02-05T12:26:02+01:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
@@ -38,7 +38,17 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.0.0"
+    "version" : "5.3.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "1.0.0"
   },
   {
     "id" : "hl7_fhir_dk_core",
@@ -57,6 +67,12 @@
     "uri" : "http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging",
     "packageId" : "medcom.fhir.dk.messaging",
     "version" : "2.0.0"
+  },
+  {
+    "id" : "medcom_fhir_dk_terminology",
+    "uri" : "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology",
+    "packageId" : "medcom.fhir.dk.terminology",
+    "version" : "1.4.0"
   }],
   "definition" : {
     "extension" : [{
@@ -95,7 +111,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-juristiction"
+        "valueString" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -249,17 +265,6 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueString" : "apply-license"
       },
       {
@@ -272,6 +277,17 @@
       "extension" : [{
         "url" : "code",
         "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
       },
       {
         "url" : "value",
@@ -335,9 +351,13 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
     {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools#0.1.0"
+    },
+    {
       "extension" : [{
         "url" : "code",
-        "valueString" : "copyrightyear"
+        "valueCode" : "copyrightyear"
       },
       {
         "url" : "value",
@@ -348,7 +368,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "releaselabel"
+        "valueCode" : "releaselabel"
       },
       {
         "url" : "value",
@@ -359,7 +379,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-contact"
+        "valueCode" : "apply-contact"
       },
       {
         "url" : "value",
@@ -370,7 +390,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-juristiction"
+        "valueCode" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -381,7 +401,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-publisher"
+        "valueCode" : "apply-publisher"
       },
       {
         "url" : "value",
@@ -392,7 +412,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "autoload-resources"
+        "valueCode" : "autoload-resources"
       },
       {
         "url" : "value",
@@ -403,7 +423,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueCode" : "path-liquid"
       },
       {
         "url" : "value",
@@ -414,7 +434,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueCode" : "path-liquid"
       },
       {
         "url" : "value",
@@ -425,7 +445,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-qa"
+        "valueCode" : "path-qa"
       },
       {
         "url" : "value",
@@ -436,7 +456,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-temp"
+        "valueCode" : "path-temp"
       },
       {
         "url" : "value",
@@ -447,7 +467,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-output"
+        "valueCode" : "path-output"
       },
       {
         "url" : "value",
@@ -458,7 +478,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-suppressed-warnings"
+        "valueCode" : "path-suppressed-warnings"
       },
       {
         "url" : "value",
@@ -469,7 +489,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-history"
+        "valueCode" : "path-history"
       },
       {
         "url" : "value",
@@ -480,7 +500,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "template-html"
+        "valueCode" : "template-html"
       },
       {
         "url" : "value",
@@ -491,7 +511,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "template-md"
+        "valueCode" : "template-md"
       },
       {
         "url" : "value",
@@ -502,7 +522,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-context"
+        "valueCode" : "apply-context"
       },
       {
         "url" : "value",
@@ -513,7 +533,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-copyright"
+        "valueCode" : "apply-copyright"
       },
       {
         "url" : "value",
@@ -524,7 +544,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
+        "valueCode" : "apply-license"
       },
       {
         "url" : "value",
@@ -535,7 +555,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-license"
+        "valueCode" : "apply-version"
       },
       {
         "url" : "value",
@@ -546,7 +566,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-version"
+        "valueCode" : "apply-wg"
       },
       {
         "url" : "value",
@@ -557,7 +577,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "active-tables"
+        "valueCode" : "active-tables"
       },
       {
         "url" : "value",
@@ -568,7 +588,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "fmm-definition"
+        "valueCode" : "fmm-definition"
       },
       {
         "url" : "value",
@@ -579,7 +599,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "propagate-status"
+        "valueCode" : "propagate-status"
       },
       {
         "url" : "value",
@@ -590,7 +610,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludelogbinaryformat"
+        "valueCode" : "excludelogbinaryformat"
       },
       {
         "url" : "value",
@@ -601,7 +621,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "tabbed-snapshots"
+        "valueCode" : "tabbed-snapshots"
       },
       {
         "url" : "value",
@@ -610,6 +630,138 @@
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
     "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MessageHeader"
+      }],
+      "reference" : {
+        "reference" : "MessageHeader/aba2d9bf-2c6c-47e8-bce4-7928bcd51019"
+      },
+      "name" : "Acknowledgement MessageHeader -  ok message",
+      "description" : "Acknowledgement MessageHeader - ok message. Valid only if used in a Bundle (message).",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MessageHeader"
+      }],
+      "reference" : {
+        "reference" : "MessageHeader/b879c81e-0607-4ccb-b358-24a72208e30d"
+      },
+      "name" : "Acknowledgement MessageHeader - fatal-error message",
+      "description" : "Acknowledgement MessageHeader - fatal-error message. Valid only if used in a Bundle (message).",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MessageHeader"
+      }],
+      "reference" : {
+        "reference" : "MessageHeader/c9a0b728-0807-11ed-861d-0242ac120002"
+      },
+      "name" : "Acknowledgement MessageHeader - transient-error message",
+      "description" : "Acknowledgement MessageHeader - transient-error message. Valid only if used in a Bundle (message).",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/382fb8a3-6725-41e2-a615-2b1cfcfe9931"
+      },
+      "name" : "Bruno Test Elmer",
+      "description" : "Patient described with minimal information. Valid only if used in a Bundle.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Provenance"
+      }],
+      "reference" : {
+        "reference" : "Provenance/4c284936-5454-4116-95fc-3c8eeeed2400"
+      },
+      "name" : "CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message",
+      "description" : "CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/eb26be85-fdb7-454d-a980-95cba6d1745b"
+      },
+      "name" : "eb26be85-fdb7-454d-a980-95cba6d1745b",
+      "description" : "Example of an emty message.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bc9535ef-ed94-4060-a928-7baddec7ee71"
+      },
+      "name" : "Example Acknowledgement message - Fatal error",
+      "description" : "Example Acknowledgement message - Fatal error",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/a8c041b8-c65a-4fde-a90f-962076918834"
+      },
+      "name" : "Example Acknowledgement message - Ok",
+      "description" : "Example Acknowledgement message - Ok",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/c9c2b2f6-0807-11ed-861d-0242ac120002"
+      },
+      "name" : "Example Acknowledgement message - Transient error",
+      "description" : "Example Acknowledgement message - Transient error",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"
+      },
+      "name" : "Example of a reciever organization with a SOR and an EAN identifier.",
+      "description" : "Example of an organization with a SOR and an EAN identifier.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"
+      },
+      "name" : "Example of a sender organization with a SOR and an EAN identifier.",
+      "description" : "Example of an organization with a SOR and an EAN identifier.",
+      "exampleBoolean" : true
+    },
+    {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
@@ -648,14 +800,38 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
+        "valueString" : "OperationOutcome"
       }],
       "reference" : {
-        "reference" : "Patient/382fb8a3-6725-41e2-a615-2b1cfcfe9931"
+        "reference" : "OperationOutcome/becb2a8e-3a68-4083-910e-811296affd43"
       },
-      "name" : "Bruno Test Elmer",
-      "description" : "Patient described with minimal information. Valid only if used in a Bundle.",
-      "exampleBoolean" : true
+      "name" : "MedComAcknowledgementOperationOutcome - Severity is 'error'",
+      "description" : "Example of an error operationOutcome. Valid only if used in a Bundle (message).",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationOutcome"
+      }],
+      "reference" : {
+        "reference" : "OperationOutcome/c0055484-2a56-4da2-81b8-a9d5087d865c"
+      },
+      "name" : "MedComAcknowledgementOperationOutcome - Severity is 'error'",
+      "description" : "Example of an error operationOutcome. Valid only if used in a Bundle (message).",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "OperationOutcome"
+      }],
+      "reference" : {
+        "reference" : "OperationOutcome/a87bc9d4-f876-4b6f-8585-40b26dc1e369"
+      },
+      "name" : "MedComAcknowledgementOperationOutcome - Severity is 'information'",
+      "description" : "Example of an error operationOutcome. Valid only if used in a Bundle (message).",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"
     },
     {
       "extension" : [{
@@ -687,43 +863,7 @@
         "valueString" : "Provenance"
       }],
       "reference" : {
-        "reference" : "Provenance/4c284936-5454-4116-95fc-3c8eeeed2400"
-      },
-      "name" : "CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message",
-      "description" : "CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Provenance"
-      }],
-      "reference" : {
         "reference" : "Provenance/69dab277-dd4b-4055-9fda-a10a65cb4412"
-      },
-      "name" : "Provenance information for an Acknowledgement message - CareCommunication. Valid only if used in a bundle (message)",
-      "description" : "Provenance information for an Acknowledgementmessage - CareCommunication. Valid only if used in a bundle (message).",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"
-      },
-      "name" : "Example of a reciever organization with a SOR and an EAN identifier.",
-      "description" : "Example of an organization with a SOR and an EAN identifier.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Provenance"
-      }],
-      "reference" : {
-        "reference" : "Provenance/9b56aa88-9745-12ec-b919-0242ac122002"
       },
       "name" : "Provenance information for an Acknowledgement message - CareCommunication. Valid only if used in a bundle (message)",
       "description" : "Provenance information for an Acknowledgementmessage - CareCommunication. Valid only if used in a bundle (message).",
@@ -744,133 +884,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
+        "valueString" : "Provenance"
       }],
       "reference" : {
-        "reference" : "OperationOutcome/a87bc9d4-f876-4b6f-8585-40b26dc1e369"
+        "reference" : "Provenance/9b56aa88-9745-12ec-b919-0242ac122002"
       },
-      "name" : "MedComAcknowledgementOperationOutcome - Severity is 'information'",
-      "description" : "Example of an error operationOutcome. Valid only if used in a Bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/a8c041b8-c65a-4fde-a90f-962076918834"
-      },
-      "name" : "Example Acknowledgement message - Ok",
-      "description" : "Example Acknowledgement message - Ok",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MessageHeader"
-      }],
-      "reference" : {
-        "reference" : "MessageHeader/aba2d9bf-2c6c-47e8-bce4-7928bcd51019"
-      },
-      "name" : "Acknowledgement MessageHeader -  ok message",
-      "description" : "Acknowledgement MessageHeader - ok message. Valid only if used in a Bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MessageHeader"
-      }],
-      "reference" : {
-        "reference" : "MessageHeader/b879c81e-0607-4ccb-b358-24a72208e30d"
-      },
-      "name" : "Acknowledgement MessageHeader - fatal-error message",
-      "description" : "Acknowledgement MessageHeader - fatal-error message. Valid only if used in a Bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/bc9535ef-ed94-4060-a928-7baddec7ee71"
-      },
-      "name" : "Example Acknowledgement message - Fatal error",
-      "description" : "Example Acknowledgement message - Fatal error",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
-        "reference" : "OperationOutcome/becb2a8e-3a68-4083-910e-811296affd43"
-      },
-      "name" : "MedComAcknowledgementOperationOutcome - Severity is 'error'",
-      "description" : "Example of an error operationOutcome. Valid only if used in a Bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "OperationOutcome"
-      }],
-      "reference" : {
-        "reference" : "OperationOutcome/c0055484-2a56-4da2-81b8-a9d5087d865c"
-      },
-      "name" : "MedComAcknowledgementOperationOutcome - Severity is 'error'",
-      "description" : "Example of an error operationOutcome. Valid only if used in a Bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MessageHeader"
-      }],
-      "reference" : {
-        "reference" : "MessageHeader/c9a0b728-0807-11ed-861d-0242ac120002"
-      },
-      "name" : "Acknowledgement MessageHeader - transient-error message",
-      "description" : "Acknowledgement MessageHeader - transient-error message. Valid only if used in a Bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/c9c2b2f6-0807-11ed-861d-0242ac120002"
-      },
-      "name" : "Example Acknowledgement message - Transient error",
-      "description" : "Example Acknowledgement message - Transient error",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"
-      },
-      "name" : "Example of a sender organization with a SOR and an EAN identifier.",
-      "description" : "Example of an organization with a SOR and an EAN identifier.",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/eb26be85-fdb7-454d-a980-95cba6d1745b"
-      },
-      "name" : "eb26be85-fdb7-454d-a980-95cba6d1745b",
-      "description" : "Example of an emty message.",
+      "name" : "Provenance information for an Acknowledgement message - CareCommunication. Valid only if used in a bundle (message)",
+      "description" : "Provenance information for an Acknowledgementmessage - CareCommunication. Valid only if used in a bundle (message).",
       "exampleBoolean" : true
     }],
     "page" : {

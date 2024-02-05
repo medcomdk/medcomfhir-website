@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/acknowledgement/ImplementationGuide/medcom.fhir.dk.acknowledgement"/>
-  <version value="2.0.1"/>
+  <version value="2.0.2"/>
   <name value="MedComAcknowledgement"/>
   <title value="DK MedCom acknowledgement"/>
   <status value="active"/>
-  <date value="2023-03-10T15:20:50+01:00"/>
+  <date value="2024-02-05T12:26:02+01:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -37,7 +37,15 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.0.0"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="1.0.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_dk_core">
     <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
@@ -53,6 +61,11 @@
     <uri value="http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging"/>
     <packageId value="medcom.fhir.dk.messaging"/>
     <version value="2.0.0"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_terminology">
+    <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
+    <packageId value="medcom.fhir.dk.terminology"/>
+    <version value="1.4.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -81,7 +94,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-juristiction"/>
+        <valueString value="apply-jurisdiction"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -193,14 +206,6 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-jurisdiction"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueString value="apply-license"/>
       </extension>
       <extension url="value">
@@ -210,6 +215,14 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -255,9 +268,12 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+    </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="copyrightyear"/>
+        <valueCode value="copyrightyear"/>
       </extension>
       <extension url="value">
         <valueString value="2021+"/>
@@ -265,7 +281,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="releaselabel"/>
+        <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
         <valueString value="Release"/>
@@ -273,7 +289,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-contact"/>
+        <valueCode value="apply-contact"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -281,7 +297,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-juristiction"/>
+        <valueCode value="apply-jurisdiction"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -289,7 +305,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-publisher"/>
+        <valueCode value="apply-publisher"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -297,7 +313,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="autoload-resources"/>
+        <valueCode value="autoload-resources"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -305,7 +321,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueCode value="path-liquid"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -313,7 +329,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueCode value="path-liquid"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>
@@ -321,7 +337,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-qa"/>
+        <valueCode value="path-qa"/>
       </extension>
       <extension url="value">
         <valueString value="temp/qa"/>
@@ -329,7 +345,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-temp"/>
+        <valueCode value="path-temp"/>
       </extension>
       <extension url="value">
         <valueString value="temp/pages"/>
@@ -337,7 +353,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-output"/>
+        <valueCode value="path-output"/>
       </extension>
       <extension url="value">
         <valueString value="output"/>
@@ -345,7 +361,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-suppressed-warnings"/>
+        <valueCode value="path-suppressed-warnings"/>
       </extension>
       <extension url="value">
         <valueString value="input/ignoreWarnings.txt"/>
@@ -353,7 +369,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-history"/>
+        <valueCode value="path-history"/>
       </extension>
       <extension url="value">
         <valueString value="http://medcomfhir.dk/ig/acknowledgement/history.html"/>
@@ -361,7 +377,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="template-html"/>
+        <valueCode value="template-html"/>
       </extension>
       <extension url="value">
         <valueString value="template-page.html"/>
@@ -369,7 +385,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="template-md"/>
+        <valueCode value="template-md"/>
       </extension>
       <extension url="value">
         <valueString value="template-page-md.html"/>
@@ -377,7 +393,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-context"/>
+        <valueCode value="apply-context"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -385,7 +401,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-copyright"/>
+        <valueCode value="apply-copyright"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -393,7 +409,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-jurisdiction"/>
+        <valueCode value="apply-license"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -401,7 +417,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-license"/>
+        <valueCode value="apply-version"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -409,7 +425,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-version"/>
+        <valueCode value="apply-wg"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -417,7 +433,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="active-tables"/>
+        <valueCode value="active-tables"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -425,7 +441,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="fmm-definition"/>
+        <valueCode value="fmm-definition"/>
       </extension>
       <extension url="value">
         <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
@@ -433,7 +449,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="propagate-status"/>
+        <valueCode value="propagate-status"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -441,7 +457,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="excludelogbinaryformat"/>
+        <valueCode value="excludelogbinaryformat"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -449,12 +465,133 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="tabbed-snapshots"/>
+        <valueCode value="tabbed-snapshots"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/aba2d9bf-2c6c-47e8-bce4-7928bcd51019"/>
+      </reference>
+      <name value="Acknowledgement MessageHeader -  ok message"/>
+      <description value="Acknowledgement MessageHeader - ok message. Valid only if used in a Bundle (message)."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/b879c81e-0607-4ccb-b358-24a72208e30d"/>
+      </reference>
+      <name value="Acknowledgement MessageHeader - fatal-error message"/>
+      <description value="Acknowledgement MessageHeader - fatal-error message. Valid only if used in a Bundle (message)."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MessageHeader"/>
+      </extension>
+      <reference>
+        <reference value="MessageHeader/c9a0b728-0807-11ed-861d-0242ac120002"/>
+      </reference>
+      <name value="Acknowledgement MessageHeader - transient-error message"/>
+      <description value="Acknowledgement MessageHeader - transient-error message. Valid only if used in a Bundle (message)."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/382fb8a3-6725-41e2-a615-2b1cfcfe9931"/>
+      </reference>
+      <name value="Bruno Test Elmer"/>
+      <description value="Patient described with minimal information. Valid only if used in a Bundle."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/4c284936-5454-4116-95fc-3c8eeeed2400"/>
+      </reference>
+      <name value="CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
+      <description value="CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/eb26be85-fdb7-454d-a980-95cba6d1745b"/>
+      </reference>
+      <name value="eb26be85-fdb7-454d-a980-95cba6d1745b"/>
+      <description value="Example of an emty message."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bc9535ef-ed94-4060-a928-7baddec7ee71"/>
+      </reference>
+      <name value="Example Acknowledgement message - Fatal error"/>
+      <description value="Example Acknowledgement message - Fatal error"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/a8c041b8-c65a-4fde-a90f-962076918834"/>
+      </reference>
+      <name value="Example Acknowledgement message - Ok"/>
+      <description value="Example Acknowledgement message - Ok"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/c9c2b2f6-0807-11ed-861d-0242ac120002"/>
+      </reference>
+      <name value="Example Acknowledgement message - Transient error"/>
+      <description value="Example Acknowledgement message - Transient error"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"/>
+      </reference>
+      <name value="Example of a reciever organization with a SOR and an EAN identifier."/>
+      <description value="Example of an organization with a SOR and an EAN identifier."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"/>
+      </reference>
+      <name value="Example of a sender organization with a SOR and an EAN identifier."/>
+      <description value="Example of an organization with a SOR and an EAN identifier."/>
+      <exampleBoolean value="true"/>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
@@ -490,14 +627,36 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
+        <valueString value="OperationOutcome"/>
       </extension>
       <reference>
-        <reference value="Patient/382fb8a3-6725-41e2-a615-2b1cfcfe9931"/>
+        <reference value="OperationOutcome/becb2a8e-3a68-4083-910e-811296affd43"/>
       </reference>
-      <name value="Bruno Test Elmer"/>
-      <description value="Patient described with minimal information. Valid only if used in a Bundle."/>
-      <exampleBoolean value="true"/>
+      <name value="MedComAcknowledgementOperationOutcome - Severity is 'error'"/>
+      <description value="Example of an error operationOutcome. Valid only if used in a Bundle (message)."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationOutcome"/>
+      </extension>
+      <reference>
+        <reference value="OperationOutcome/c0055484-2a56-4da2-81b8-a9d5087d865c"/>
+      </reference>
+      <name value="MedComAcknowledgementOperationOutcome - Severity is 'error'"/>
+      <description value="Example of an error operationOutcome. Valid only if used in a Bundle (message)."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationOutcome"/>
+      </extension>
+      <reference>
+        <reference value="OperationOutcome/a87bc9d4-f876-4b6f-8585-40b26dc1e369"/>
+      </reference>
+      <name value="MedComAcknowledgementOperationOutcome - Severity is 'information'"/>
+      <description value="Example of an error operationOutcome. Valid only if used in a Bundle (message)."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -526,40 +685,7 @@
         <valueString value="Provenance"/>
       </extension>
       <reference>
-        <reference value="Provenance/4c284936-5454-4116-95fc-3c8eeeed2400"/>
-      </reference>
-      <name value="CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
-      <description value="CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Provenance"/>
-      </extension>
-      <reference>
         <reference value="Provenance/69dab277-dd4b-4055-9fda-a10a65cb4412"/>
-      </reference>
-      <name value="Provenance information for an Acknowledgement message - CareCommunication. Valid only if used in a bundle (message)"/>
-      <description value="Provenance information for an Acknowledgementmessage - CareCommunication. Valid only if used in a bundle (message)."/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"/>
-      </reference>
-      <name value="Example of a reciever organization with a SOR and an EAN identifier."/>
-      <description value="Example of an organization with a SOR and an EAN identifier."/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Provenance"/>
-      </extension>
-      <reference>
-        <reference value="Provenance/9b56aa88-9745-12ec-b919-0242ac122002"/>
       </reference>
       <name value="Provenance information for an Acknowledgement message - CareCommunication. Valid only if used in a bundle (message)"/>
       <description value="Provenance information for an Acknowledgementmessage - CareCommunication. Valid only if used in a bundle (message)."/>
@@ -578,123 +704,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="OperationOutcome"/>
+        <valueString value="Provenance"/>
       </extension>
       <reference>
-        <reference value="OperationOutcome/a87bc9d4-f876-4b6f-8585-40b26dc1e369"/>
+        <reference value="Provenance/9b56aa88-9745-12ec-b919-0242ac122002"/>
       </reference>
-      <name value="MedComAcknowledgementOperationOutcome - Severity is 'information'"/>
-      <description value="Example of an error operationOutcome. Valid only if used in a Bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/a8c041b8-c65a-4fde-a90f-962076918834"/>
-      </reference>
-      <name value="Example Acknowledgement message - Ok"/>
-      <description value="Example Acknowledgement message - Ok"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MessageHeader"/>
-      </extension>
-      <reference>
-        <reference value="MessageHeader/aba2d9bf-2c6c-47e8-bce4-7928bcd51019"/>
-      </reference>
-      <name value="Acknowledgement MessageHeader -  ok message"/>
-      <description value="Acknowledgement MessageHeader - ok message. Valid only if used in a Bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MessageHeader"/>
-      </extension>
-      <reference>
-        <reference value="MessageHeader/b879c81e-0607-4ccb-b358-24a72208e30d"/>
-      </reference>
-      <name value="Acknowledgement MessageHeader - fatal-error message"/>
-      <description value="Acknowledgement MessageHeader - fatal-error message. Valid only if used in a Bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/bc9535ef-ed94-4060-a928-7baddec7ee71"/>
-      </reference>
-      <name value="Example Acknowledgement message - Fatal error"/>
-      <description value="Example Acknowledgement message - Fatal error"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="OperationOutcome"/>
-      </extension>
-      <reference>
-        <reference value="OperationOutcome/becb2a8e-3a68-4083-910e-811296affd43"/>
-      </reference>
-      <name value="MedComAcknowledgementOperationOutcome - Severity is 'error'"/>
-      <description value="Example of an error operationOutcome. Valid only if used in a Bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="OperationOutcome"/>
-      </extension>
-      <reference>
-        <reference value="OperationOutcome/c0055484-2a56-4da2-81b8-a9d5087d865c"/>
-      </reference>
-      <name value="MedComAcknowledgementOperationOutcome - Severity is 'error'"/>
-      <description value="Example of an error operationOutcome. Valid only if used in a Bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-acknowledgement-operationoutcome"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MessageHeader"/>
-      </extension>
-      <reference>
-        <reference value="MessageHeader/c9a0b728-0807-11ed-861d-0242ac120002"/>
-      </reference>
-      <name value="Acknowledgement MessageHeader - transient-error message"/>
-      <description value="Acknowledgement MessageHeader - transient-error message. Valid only if used in a Bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgementHeader"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/c9c2b2f6-0807-11ed-861d-0242ac120002"/>
-      </reference>
-      <name value="Example Acknowledgement message - Transient error"/>
-      <description value="Example Acknowledgement message - Transient error"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/acknowledgement/StructureDefinition/medcom-messaging-acknowledgement"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"/>
-      </reference>
-      <name value="Example of a sender organization with a SOR and an EAN identifier."/>
-      <description value="Example of an organization with a SOR and an EAN identifier."/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/eb26be85-fdb7-454d-a980-95cba6d1745b"/>
-      </reference>
-      <name value="eb26be85-fdb7-454d-a980-95cba6d1745b"/>
-      <description value="Example of an emty message."/>
+      <name value="Provenance information for an Acknowledgement message - CareCommunication. Valid only if used in a bundle (message)"/>
+      <description value="Provenance information for an Acknowledgementmessage - CareCommunication. Valid only if used in a bundle (message)."/>
       <exampleBoolean value="true"/>
     </resource>
     <page>
