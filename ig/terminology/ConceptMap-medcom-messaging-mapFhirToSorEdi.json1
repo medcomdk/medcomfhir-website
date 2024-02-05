@@ -3,10 +3,10 @@
   "id" : "medcom-messaging-mapFhirToSorEdi",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from <a href=\"ValueSet-medcom-messaging-messageTypes.html\">MedComMessagingMessageTypes</a> to <a href=\"ValueSet-medcom-messaging-sorEdiValues.html\">MedComMessagingSorEdiValues</a></p><p>ACTIVE. Published on 2023-02-27 by MedCom (MedCom: <a href=\"http://www.medcom.dk\">http://www.medcom.dk</a>). </p><br/><p><b>Group 1</b>Mapping from <a href=\"CodeSystem-medcom-messaging-eventCodes.html\">MedComMessagingEventCodes</a> to <a href=\"CodeSystem-medcom-messaging-sorEdiSystem.html\">MedComMessagingSorEdiCodeSystem</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>care-communication-message</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null\"/></td><td>FDIS91 (Care Communication Message (Korrepondance meddelelse))</td></tr><tr><td>hospital-notification-message</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null\"/></td><td>FDIS20 (Hospital Notification Message (Advis om Sygehusophold))</td></tr><tr><td>acknowledgement-message</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null\"/></td><td>FCTL (Acknowledgement Message (Kvittering))</td></tr></table></div>"
   },
   "url" : "http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi",
-  "version" : "1.5.0",
+  "version" : "1.6.0",
   "name" : "MedComMessagingMapFhirToSorEdi",
   "status" : "active",
   "date" : "2023-02-27",
@@ -34,6 +34,10 @@
       "code" : "care-communication-message",
       "display" : "Care Communication Message",
       "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
         "code" : "FDIS91",
         "display" : "Care Communication Message (Korrepondance meddelelse)",
         "equivalence" : "equivalent"
@@ -43,6 +47,10 @@
       "code" : "hospital-notification-message",
       "display" : "Hospital Notification Message",
       "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
         "code" : "FDIS20",
         "display" : "Hospital Notification Message (Advis om Sygehusophold)",
         "equivalence" : "equivalent"
@@ -52,6 +60,10 @@
       "code" : "acknowledgement-message",
       "display" : "Acknowledgement Message",
       "target" : [{
+        "modifierExtension" : [{
+          "url" : "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence",
+          "valueCode" : "equivalent"
+        }],
         "code" : "FCTL",
         "display" : "Acknowledgement Message (Kvittering)",
         "equivalence" : "equivalent"
