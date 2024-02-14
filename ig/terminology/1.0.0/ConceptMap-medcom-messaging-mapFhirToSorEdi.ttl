@@ -5,68 +5,62 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi> a fhir:ConceptMap;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "medcom-messaging-mapFhirToSorEdi"];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MedComMessagingMapFhirToSorEdi (http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi)</h2><p>Mapping from <a href=\"ValueSet-medcom-messaging-messageTypes.html\">http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes</a> to <a href=\"ValueSet-medcom-messaging-sorEdiValues.html\">http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-sorEdiValues</a></p><p>ACTIVE. Published on 2022-10-05 07:21:39+0200 by MedCom (MedCom: <a href=\"http://www.medcom.dk\">http://www.medcom.dk</a>). </p><br/><p><b>Group 1</b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>care-communication-message (FHIR: Care Communication Message (Korrepondance meddelelse))</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FDIS91 (SOREDI: Care Communication Message (Korrepondance meddelelse))</td></tr><tr><td>hospital-notification-message (FHIR: Hospital Notification Message (Advis om Sygehusophold))</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>FDIS20 (SOREDI: Hospital Notification Message (Advis om Sygehusophold))</td></tr></table></div>"
-  ];
-  fhir:ConceptMap.url [ fhir:value "http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi"];
-  fhir:ConceptMap.version [ fhir:value "1.0.0"];
-  fhir:ConceptMap.name [ fhir:value "MedComMessagingMapFhirToSorEdi"];
-  fhir:ConceptMap.status [ fhir:value "active"];
-  fhir:ConceptMap.date [ fhir:value "2022-10-05T19:21:39+02:00"^^xsd:dateTime];
-  fhir:ConceptMap.publisher [ fhir:value "MedCom"];
-  fhir:ConceptMap.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "MedCom" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "http://www.medcom.dk" ]
-     ]
-  ];
-  fhir:ConceptMap.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "DK" ];
-       fhir:Coding.display [ fhir:value "Denmark" ]
-     ]
-  ];
-  fhir:ConceptMap.sourceUri [ fhir:value "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes"];
-  fhir:ConceptMap.targetUri [ fhir:value "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-sorEdiValues"];
-  fhir:ConceptMap.group [
-     fhir:index 0;
-     fhir:ConceptMap.group.element [
-       fhir:index 0;
-       fhir:ConceptMap.group.element.code [ fhir:value "care-communication-message" ];
-       fhir:ConceptMap.group.element.display [ fhir:value "FHIR: Care Communication Message (Korrepondance meddelelse)" ];
-       fhir:ConceptMap.group.element.target [
-         fhir:index 0;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "FDIS91" ];
-         fhir:ConceptMap.group.element.target.display [ fhir:value "SOREDI: Care Communication Message (Korrepondance meddelelse)" ];
-         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
-       ]
-     ], [
-       fhir:index 1;
-       fhir:ConceptMap.group.element.code [ fhir:value "hospital-notification-message" ];
-       fhir:ConceptMap.group.element.display [ fhir:value "FHIR: Hospital Notification Message (Advis om Sygehusophold)" ];
-       fhir:ConceptMap.group.element.target [
-         fhir:index 0;
-         fhir:ConceptMap.group.element.target.code [ fhir:value "FDIS20" ];
-         fhir:ConceptMap.group.element.target.display [ fhir:value "SOREDI: Hospital Notification Message (Advis om Sygehusophold)" ];
-         fhir:ConceptMap.group.element.target.equivalence [ fhir:value "equivalent" ]
-       ]
-     ]
-  ] .
-
-# - ontology header ------------------------------------------------------------
-
-<http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom-messaging-mapFhirToSorEdi"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mapping from <a href=\"ValueSet-medcom-messaging-messageTypes.html\">MedComMessagingMessageTypes</a> to <a href=\"ValueSet-medcom-messaging-sorEdiValues.html\">MedComMessagingSorEdiValues</a></p><p>ACTIVE. Published on 2024-02-14 09:11:45+0100 by MedCom (MedCom: <a href=\"http://www.medcom.dk\">http://www.medcom.dk</a>). </p><br/><p><b>Group 1</b>Mapping from <code>unspecified code system</code> to <code>unspecified code system</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>care-communication-message (FHIR: Care Communication Message (Korrepondance meddelelse))</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null\"/></td><td>FDIS91 (SOREDI: Care Communication Message (Korrepondance meddelelse))</td></tr><tr><td>hospital-notification-message (FHIR: Hospital Notification Message (Advis om Sygehusophold))</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-concept-map-equivalence.html#null\"/></td><td>FDIS20 (SOREDI: Hospital Notification Message (Advis om Sygehusophold))</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ConceptMap/medcom-messaging-mapFhirToSorEdi"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "MedComMessagingMapFhirToSorEdi"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-02-14T09:11:45+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:source [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-messageTypes"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-messaging-sorEdiValues"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:element ( [
+       fhir:code [ fhir:v "care-communication-message" ] ;
+       fhir:display [ fhir:v "FHIR: Care Communication Message (Korrepondance meddelelse)" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "FDIS91" ] ;
+         fhir:display [ fhir:v "SOREDI: Care Communication Message (Korrepondance meddelelse)" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "hospital-notification-message" ] ;
+       fhir:display [ fhir:v "FHIR: Hospital Notification Message (Advis om Sygehusophold)" ] ;
+       fhir:_target ( [
+         fhir:modifierExtension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "equivalent" ]
+         ] ) ;
+         fhir:code [ fhir:v "FDIS20" ] ;
+         fhir:display [ fhir:v "SOREDI: Hospital Notification Message (Advis om Sygehusophold)" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

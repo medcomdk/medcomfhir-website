@@ -5,52 +5,42 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-encounter-act-codes> a fhir:CodeSystem;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "medcom-core-encounter-act-codes"];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-encounter-act-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"medcom-core-encounter-act-codes-other\"> </a></td><td>Other encounter class</td></tr></table></div>"
-  ];
-  fhir:CodeSystem.url [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-encounter-act-codes"];
-  fhir:CodeSystem.version [ fhir:value "1.0.0"];
-  fhir:CodeSystem.name [ fhir:value "MedComCoreEncounterActCodes"];
-  fhir:CodeSystem.title [ fhir:value "MedComCoreEncounterActCodes"];
-  fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2022-09-01"^^xsd:date];
-  fhir:CodeSystem.publisher [ fhir:value "MedCom"];
-  fhir:CodeSystem.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "MedCom" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "http://www.medcom.dk" ]
-     ]
-  ];
-  fhir:CodeSystem.description [ fhir:value "CodeSystem with code for classification of an encounter."];
-  fhir:CodeSystem.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "DK" ];
-       fhir:Coding.display [ fhir:value "Denmark" ]
-     ]
-  ];
-  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
-  fhir:CodeSystem.content [ fhir:value "complete"];
-  fhir:CodeSystem.count [ fhir:value "1"^^xsd:nonNegativeInteger];
-  fhir:CodeSystem.concept [
-     fhir:index 0;
-     fhir:CodeSystem.concept.code [ fhir:value "other" ];
-     fhir:CodeSystem.concept.display [ fhir:value "Other encounter class" ]
-  ] .
-
-# - ontology header ------------------------------------------------------------
-
-<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-encounter-act-codes.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-encounter-act-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom-core-encounter-act-codes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This case-insensitive code system <code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-encounter-act-codes</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"medcom-core-encounter-act-codes-other\"> </a></td><td>Other encounter class</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-encounter-act-codes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "MedComCoreEncounterActCodes"] ; # 
+  fhir:title [ fhir:v "MedComCoreEncounterActCodes"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2022-09-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "CodeSystem with code for classification of an encounter."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "other" ] ;
+     fhir:display [ fhir:v "Other encounter class" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 
