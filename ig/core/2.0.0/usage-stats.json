@@ -3,8 +3,59 @@
   "version": "2.0.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "DK",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension",
+      "title": "ContactExtension",
+      "types": [
+        "ContactPoint",
+        "ContactPoint",
+        "string",
+        "Extension",
+        "code",
+        "string",
+        "code",
+        "positiveInt",
+        "Period"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
+      "title": "DateTimeExtension",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
+      "title": "IdentifierExtension",
+      "types": [
+        "Identifier",
+        "Identifier"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension",
+      "title": "PractitionerExtension",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-sender-extension",
+      "title": "SenderExtension",
+      "types": [
+        "Reference"
+      ]
+    }
+  ],
   "profiles": {
+    "CareTeam": [
+      {
+        "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam",
+        "title": "MedComCoreCareTeam"
+      }
+    ],
     "Encounter": [
       {
         "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter",
@@ -61,20 +112,14 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
       "StructureDefinition.snapshot.element"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
-      "StructureDefinition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
-      "StructureDefinition.snapshot.element"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
       "StructureDefinition.snapshot.element.type"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
-      "StructureDefinition"
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",
@@ -82,6 +127,9 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
