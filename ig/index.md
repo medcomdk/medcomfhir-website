@@ -19,3 +19,6 @@ Looking for MedCom's FHIR related Implementation Guide (IG) and repositories:
 |Core| [IG](https://medcomfhir.dk/ig/core/)| [GitHub pages](https://medcomdk.github.io/dk-medcom-core/)| [Repo](https://github.com/medcomdk/dk-medcom-core)| N/A | N/A |
 |**Terminology**|||||
 |Terminology| [IG](https://medcomfhir.dk/ig/terminology/)| [GitHub pages](https://medcomdk.github.io/dk-medcom-terminology/)| [Repo](https://github.com/medcomdk/dk-medcom-terminology)|  N/A | N/A |
+
+
+[Accessibility statement (Tilgængelighedserklæring)](https://www.was.digst.dk/medcomfhir-dk-ig-)
