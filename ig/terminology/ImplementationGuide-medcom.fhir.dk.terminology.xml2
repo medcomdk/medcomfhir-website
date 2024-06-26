@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
-  <version value="1.6.0"/>
+  <version value="1.7.0"/>
   <name value="MedComTerminology"/>
   <title value="DK MedCom Terminology"/>
   <status value="active"/>
-  <date value="2024-02-05T08:47:47+01:00"/>
+  <date value="2024-06-26T14:37:17+02:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.3.0"/>
+    <version value="5.5.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -45,7 +45,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="1.0.0"/>
+    <version value="5.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -582,28 +582,6 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/medcom-core-ecpr-codes"/>
-      </reference>
-      <name value="MedComCoreECPRCodes"/>
-      <description value="CodeSystem with systems used to represent the system of a Danish replacement person identifier (eCPR)."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/medcom-core-ecpr-values"/>
-      </reference>
-      <name value="MedComCoreECPRValues"/>
-      <description value="ValueSet containing systems used to represent the origin of a Danish replacement person identifier (eCPR)."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
         <reference value="CodeSystem/medcom-core-encounter-act-codes"/>
       </reference>
       <name value="MedComCoreEncounterActCodes"/>
@@ -755,6 +733,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/medcom-message-definition-type"/>
+      </reference>
+      <name value="MedComMessageDefinitionTypeCodeSystem"/>
+      <description value="MedComMessageDefinitionTypeCS for the messaging infrastructure"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medcom-message-definition-type-valueset"/>
+      </reference>
+      <name value="MedComMessageDefinitionTypeValueset"/>
+      <description value="MedComMessageDefinitionTypeVS for the messaging infrastructure"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -870,7 +870,7 @@
       <reference>
         <reference value="ValueSet/medcom-obs-responseGroup"/>
       </reference>
-      <name value="MedComObservarionResultGroupValueSet"/>
+      <name value="MedComObservationResultGroupValueSet"/>
       <description value="National response groups for observation results."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -898,6 +898,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/medcom-messagedefinition-identifer-system"/>
+      </reference>
+      <name value="MessageDefinitionIdentifierSystemCodeSystem"/>
+      <description value="MessageDefinitionIdentifierSystemCS for the messaging infrastructure"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medcom-messagedefinition-identifer-system-valueset"/>
+      </reference>
+      <name value="MessageDefinitionIdentifierSystemValueset"/>
+      <description value="MessageDefinitionIdentifierSystemVS for the messaging infrastructure"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -905,6 +927,17 @@
       </reference>
       <name value="NPUObservationCodesValueSet"/>
       <description value="ValuseSet with NPU observations Codes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medcom-messagedefinition-use-context-code-valueset"/>
+      </reference>
+      <name value="UseContextCodeSystemValueset"/>
+      <description value="UseContextCodeSystemVS for the messaging infrastructure"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>
