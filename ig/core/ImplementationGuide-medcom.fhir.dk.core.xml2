@@ -3,14 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="medcom.fhir.dk.core"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.core</b></p><a name="medcom.fhir.dk.core"> </a><a name="hcmedcom.fhir.dk.core"> </a><a name="hcmedcom.fhir.dk.core-da-DK"> </a><h2>MedComCore</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core</pre><div><p>Danish MedCom Core IG</p>
+</div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"/>
-  <version value="2.3.0"/>
+  <version value="2.4.0"/>
   <name value="MedComCore"/>
-  <title value="Danish MedCom Core"/>
+  <title value="DK MedCom Core"/>
   <status value="active"/>
-  <date value="2023-10-31T14:21:29+01:00"/>
+  <date value="2024-06-27T14:13:17+02:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -36,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.3.0"/>
+    <version value="5.5.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -44,17 +45,17 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="1.0.0"/>
+    <version value="5.1.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_dk_core">
-    <uri value="https://hl7.dk/fhir/core/2.2.0/"/>
+    <uri value="https://hl7.dk/fhir/core/3.2.0/"/>
     <packageId value="hl7.fhir.dk.core"/>
-    <version value="2.2.0"/>
+    <version value="3.2.0"/>
   </dependsOn>
   <dependsOn id="medcom_fhir_dk_terminology">
     <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
     <packageId value="medcom.fhir.dk.terminology"/>
-    <version value="1.5.0"/>
+    <version value="1.7.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -70,7 +71,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="Release"/>
+        <valueString value="release"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -258,7 +259,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools#current"/>
+      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -273,7 +274,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="Release"/>
+        <valueString value="release"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -487,6 +488,17 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
+        <reference value="Patient/ded1fc9a-aa93-4162-aaec-7145a8ac951f"/>
+      </reference>
+      <name value="Birgit Berggren"/>
+      <description value="Patient described with minimal information and replacement cpr-number. Valid only if used in a Bundle."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
         <reference value="Patient/5b72c625-0570-4111-b272-f0351344f8b6"/>
       </reference>
       <name value="Brita Test Berggren"/>
@@ -525,17 +537,6 @@
       <name value="Cæcar Test Østergård"/>
       <description value="Deceased patient described with maximum information. Valid only if used in a Bundle."/>
       <exampleCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:complex-type"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/medcom-core-ecpr-identifier"/>
-      </reference>
-      <name value="Danish Replacement Person Identifier (E-CPR)"/>
-      <description value="A Danish replacement person identifier. This shall only be used when a patient or citizen does not have an official CPR-number."/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

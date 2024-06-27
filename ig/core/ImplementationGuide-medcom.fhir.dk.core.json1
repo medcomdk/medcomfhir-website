@@ -2,15 +2,15 @@
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.core",
   "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.core</b></p><a name=\"medcom.fhir.dk.core\"> </a><a name=\"hcmedcom.fhir.dk.core\"> </a><a name=\"hcmedcom.fhir.dk.core-da-DK\"> </a><h2>MedComCore</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core</pre><div><p>Danish MedCom Core IG</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core",
-  "version" : "2.3.0",
+  "version" : "2.4.0",
   "name" : "MedComCore",
-  "title" : "Danish MedCom Core",
+  "title" : "DK MedCom Core",
   "status" : "active",
-  "date" : "2023-10-31T14:21:29+01:00",
+  "date" : "2024-06-27T14:13:17+02:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.3.0"
+    "version" : "5.5.0"
   },
   {
     "id" : "hl7ext",
@@ -48,19 +48,19 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "1.0.0"
+    "version" : "5.1.0"
   },
   {
     "id" : "hl7_fhir_dk_core",
-    "uri" : "https://hl7.dk/fhir/core/2.2.0/",
+    "uri" : "https://hl7.dk/fhir/core/3.2.0/",
     "packageId" : "hl7.fhir.dk.core",
-    "version" : "2.2.0"
+    "version" : "3.2.0"
   },
   {
     "id" : "medcom_fhir_dk_terminology",
     "uri" : "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology",
     "packageId" : "medcom.fhir.dk.terminology",
-    "version" : "1.5.0"
+    "version" : "1.7.0"
   }],
   "definition" : {
     "extension" : [{
@@ -81,7 +81,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "Release"
+        "valueString" : "release"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -340,7 +340,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#current"
+      "valueCode" : "hl7.fhir.uv.tools#0.1.0"
     },
     {
       "extension" : [{
@@ -360,7 +360,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "Release"
+        "valueString" : "release"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -647,6 +647,18 @@
         "valueString" : "Patient"
       }],
       "reference" : {
+        "reference" : "Patient/ded1fc9a-aa93-4162-aaec-7145a8ac951f"
+      },
+      "name" : "Birgit Berggren",
+      "description" : "Patient described with minimal information and replacement cpr-number. Valid only if used in a Bundle.",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
         "reference" : "Patient/5b72c625-0570-4111-b272-f0351344f8b6"
       },
       "name" : "Brita Test Berggren",
@@ -688,18 +700,6 @@
       "name" : "Cæcar Test Østergård",
       "description" : "Deceased patient described with maximum information. Valid only if used in a Bundle.",
       "exampleCanonical" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:complex-type"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/medcom-core-ecpr-identifier"
-      },
-      "name" : "Danish Replacement Person Identifier (E-CPR)",
-      "description" : "A Danish replacement person identifier. This shall only be used when a patient or citizen does not have an official CPR-number.",
-      "exampleBoolean" : false
     },
     {
       "extension" : [{
