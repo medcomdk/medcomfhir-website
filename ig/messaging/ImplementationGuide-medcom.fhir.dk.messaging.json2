@@ -2,15 +2,15 @@
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.messaging",
   "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.messaging</b></p><a name=\"medcom.fhir.dk.messaging\"> </a><a name=\"hcmedcom.fhir.dk.messaging\"> </a><a name=\"hcmedcom.fhir.dk.messaging-da-DK\"> </a><h2>MedComMessaging</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging</pre><div><p>The DK MedCom Messaging IG</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging",
-  "version" : "2.1.0",
+  "version" : "2.2.0",
   "name" : "MedComMessaging",
   "title" : "DK MedCom Messaging",
   "status" : "active",
-  "date" : "2023-10-31T14:55:12+01:00",
+  "date" : "2024-06-28T07:13:40+02:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.3.0"
+    "version" : "5.5.0"
   },
   {
     "id" : "hl7ext",
@@ -48,19 +48,19 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "1.0.0"
+    "version" : "5.1.0"
   },
   {
     "id" : "hl7_fhir_dk_core",
     "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
     "packageId" : "hl7.fhir.dk.core",
-    "version" : "2.0.0"
+    "version" : "3.2.0"
   },
   {
     "id" : "medcom_fhir_dk_core",
     "uri" : "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core",
     "packageId" : "medcom.fhir.dk.core",
-    "version" : "2.3.0"
+    "version" : "2.4.0"
   }],
   "definition" : {
     "extension" : [{
@@ -99,7 +99,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-juristiction"
+        "valueString" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -253,17 +253,6 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueString" : "apply-license"
       },
       {
@@ -351,7 +340,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#current"
+      "valueCode" : "hl7.fhir.uv.tools#0.1.0"
     },
     {
       "extension" : [{
@@ -389,7 +378,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-juristiction"
+        "valueCode" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -533,17 +522,6 @@
       "extension" : [{
         "url" : "code",
         "valueCode" : "apply-copyright"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -781,6 +759,30 @@
       },
       "name" : "MedComMessagingMessage",
       "description" : "Base resource for all MedCom messages.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-messaging-messagedefinition"
+      },
+      "name" : "MedComMessagingMessageDefinition",
+      "description" : "An example profile of the MessageDefinition resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-messaging-messagedefinition-fhir"
+      },
+      "name" : "MedComMessagingMessageDefinitionFhir",
+      "description" : "An example profile of the MessageDefinition-fhir resource.",
       "exampleBoolean" : false
     },
     {

@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "5cc68d79-5b21-4853-89ff-d3af69542c56-8",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/5cc68d79-5b21-4853-89ff-d3af69542c56-8",
+  "id" : "ec2b2b65-3e5b-422f-a1cd-d5a5e3362a30-8",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/ec2b2b65-3e5b-422f-a1cd-d5a5e3362a30-8",
   "name" : "UnionMedComMessagingMessageHeaderAndMedComMessagingMessageHeader",
   "title" : "Union of null And null",
   "status" : "active",
-  "date" : "2023-10-31T14:55:48+01:00",
+  "date" : "2024-06-28T07:14:12+02:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -363,7 +363,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "One of the message events defined as part of this version of FHIR.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/5cc68d79-5b21-4853-89ff-d3af69542c56-11"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/ec2b2b65-3e5b-422f-a1cd-d5a5e3362a30-11"
       },
       "mapping" : [{
         "identity" : "w5",
@@ -738,9 +738,12 @@
     },
     {
       "path" : "MessageHeader.destination.extension",
-      "short" : "Extension",
-      "definition" : "An Extension",
-      "min" : 1,
+      "short" : "left: Extension; right: Additional content defined by implementations",
+      "definition" : "left: An Extension; right: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
       "max" : "*",
       "type" : [{
         "code" : "Extension"
@@ -769,7 +772,11 @@
       }],
       "mustSupport" : false,
       "isModifier" : false,
-      "isSummary" : false
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
     },
     {
       "path" : "MessageHeader.destination.modifierExtension",
@@ -1771,7 +1778,7 @@
         "expression" : "hasValue() or (children().count() > id.count())",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : false,
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
