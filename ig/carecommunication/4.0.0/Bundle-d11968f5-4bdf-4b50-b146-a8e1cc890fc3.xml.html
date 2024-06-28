@@ -1,0 +1,1058 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>5th message - Reply CareCommunication message - XML Representation - DK MedCom Carecommunication v4.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"6.30"}
+    h3,h4,h5,h6{--heading-prefix:"6.30"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">DK MedCom Carecommunication</span>
+            <br/>
+            <span style="display:inline-block;">4.0.0 - release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>5th message - Reply CareCommunication message</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom CareCommunication (v4.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. The current version which supersedes this version is <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication">2.0.0</a>.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Bundle-d11968f5-4bdf-4b50-b146-a8e1cc890fc3.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-d11968f5-4bdf-4b50-b146-a8e1cc890fc3.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-d11968f5-4bdf-4b50-b146-a8e1cc890fc3.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: 5th message - Reply CareCommunication message - XML Representation</h2>
+
+
+<p><a href="Bundle-d11968f5-4bdf-4b50-b146-a8e1cc890fc3.xml" no-download="true">Raw xml</a> | <a href="Bundle-d11968f5-4bdf-4b50-b146-a8e1cc890fc3.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap;"><code style="white-space: pre; text-wrap: nowrap;">
+
+&lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">Bundle</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;d11968f5-4bdf-4b50-b146-a8e1cc890fc3&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;message&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">timestamp</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-05-05T11:35:00+02:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/MessageHeader/2654e182-cfee-4537-b744-e36231ebe2f3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader">MessageHeader</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;2654e182-cfee-4537-b744-e36231ebe2f3&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;MessageHeader_2654e182-cfee-4537-b744-e36231ebe2f3&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: MessageHeader 2654e182-cfee-4537-b744-e36231ebe2f3&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;2654e182-cfee-4537-b744-e36231ebe2f3&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc2654e182-cfee-4537-b744-e36231ebe2f3&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc2654e182-cfee-4537-b744-e36231ebe2f3-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;event&lt;/b&gt;: &lt;a href=&quot;http://medcomfhir.dk/ig/terminology/1.7.0/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message&quot;&gt;MedComMessagingEventCodes&lt;/a&gt; care-communication-message: Care Communication Message&lt;/p&gt;&lt;h3&gt;Destinations&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Extension&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Receiver&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;a href=&quot;https://sor2.sum.dsdn.dk/#id=953741000016009&quot;&gt;https://sor2.sum.dsdn.dk/#id=953741000016009&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html&quot;&gt;Organization Plejecenter Herlev&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;sender&lt;/b&gt;: &lt;a href=&quot;Organization-f98ed410-54fe-11ed-bdc3-0242ac120002.html&quot;&gt;Organization: identifier = https://www.gs1.org/gln#5790001348120,urn:oid:1.2.208.176.1.1#1042981000016003&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Sources&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://sor2.sum.dsdn.dk/#id=1042981000016003&quot;&gt;https://sor2.sum.dsdn.dk/#id=1042981000016003&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=&quot;Communication-d148fa55-3201-4a18-a7b0-bce67bf597a6.html&quot;&gt;Communication: identifier = urn:uuid:546b19ba-3e50-4da8-b9ec-7caeefad6928; status = unknown; category = Examination Results&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;definition&lt;/b&gt;: &lt;code&gt;http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.event[x]">eventCoding</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;care-communication-message&quot;/&gt;
+        &lt;/eventCoding&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination">destination</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCoding</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                      <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;primary&quot;/&gt;
+            &lt;/valueCoding&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.endpoint">endpoint</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;https://sor2.sum.dsdn.dk/#id=953741000016009&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.receiver">receiver</a>&gt;<a href="Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;/&gt;
+          &lt;/receiver&gt;
+        &lt;/destination&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.sender">sender</a>&gt;<a href="Organization-f98ed410-54fe-11ed-bdc3-0242ac120002.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f98ed410-54fe-11ed-bdc3-0242ac120002&quot;/&gt;
+        &lt;/sender&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source">source</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.endpoint">endpoint</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;https://sor2.sum.dsdn.dk/#id=1042981000016003&quot;/&gt;
+        &lt;/source&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.focus">focus</a>&gt;<a href="Communication-d148fa55-3201-4a18-a7b0-bce67bf597a6.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Communication/d148fa55-3201-4a18-a7b0-bce67bf597a6&quot;/&gt;
+        &lt;/focus&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.definition">definition</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0&quot;/&gt;
+      &lt;/MessageHeader&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Patient/22d65545-f98a-4b4d-ba36-51b48b3eb3de&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient">Patient</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;22d65545-f98a-4b4d-ba36-51b48b3eb3de&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Patient_22d65545-f98a-4b4d-ba36-51b48b3eb3de&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Patient 22d65545-f98a-4b4d-ba36-51b48b3eb3de&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;22d65545-f98a-4b4d-ba36-51b48b3eb3de&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc22d65545-f98a-4b4d-ba36-51b48b3eb3de&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc22d65545-f98a-4b4d-ba36-51b48b3eb3de-da-DK&quot;&gt; &lt;/a&gt;&lt;p style=&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&quot;&gt;Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)&lt;/p&gt;&lt;hr/&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.208.176.1.2&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;2509479989&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Elmer&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Bruno&quot;/&gt;
+        &lt;/name&gt;
+      &lt;/Patient&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Communication/d148fa55-3201-4a18-a7b0-bce67bf597a6&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication">Communication</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;d148fa55-3201-4a18-a7b0-bce67bf597a6&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Communication_d148fa55-3201-4a18-a7b0-bce67bf597a6&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Communication d148fa55-3201-4a18-a7b0-bce67bf597a6&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;d148fa55-3201-4a18-a7b0-bce67bf597a6&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcd148fa55-3201-4a18-a7b0-bce67bf597a6&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcd148fa55-3201-4a18-a7b0-bce67bf597a6-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: urn:uuid:546b19ba-3e50-4da8-b9ec-7caeefad6928&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Unknown&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes examination-results}&quot;&gt;Examination Results&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-22d65545-f98a-4b4d-ba36-51b48b3eb3de.html&quot;&gt;Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno. På forhånd tak. Hilsen Michael, sygeplejerske.&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: Hej Michael, Resultaterne for undersøgelsen kommer her. Blodtryk 130/95 mmHg, vægt: 83 kg og højde: 179 cm. Blodprøven påviste ikke tegn på sukkersyge eller vitaminmangel. Se mere i den vedhæftede pdf. Mvh. Emma&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: &lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: Mange tak for fremsendte. Kan I desuden hjælpe mig med at finde information vedr. kommunal udredning for sygdommen? / Michael&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: Hej - Jeg håber det er okay, at jeg videresender denne forespørgsel. Kan I hjælpe os med at finde den, af Michael Burns, efterspurgte information. På forhånd tak. /Emma&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: null @ https://medcom.dk/projekter/korrespondancemeddelelse/&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: Hej Emma, Jeg har vedhæftet linket til siden, med den ønskede information. Mvh. Ann Marie, Visitator.&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:546b19ba-3e50-4da8-b9ec-7caeefad6928&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;unknown&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.category">category</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;examination-results&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/category&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.subject">subject</a>&gt;<a href="Patient-22d65545-f98a-4b4d-ba36-51b48b3eb3de.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/22d65545-f98a-4b4d-ba36-51b48b3eb3de&quot;/&gt;
+        &lt;/subject&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-01T12:00:00+02:00&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;<a href="Organization-82210440-6826-44fc-9fc8-2a29bab6a5c2.html" style="color: Maroon">&#x1F517;</a> 
+                &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;/&gt;
+              &lt;/assigner&gt;
+            &lt;/valueIdentifier&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;<a href="PractitionerRole-b0b3f1f5-3818-4d1c-aa25-cf08b01697a1.html" style="color: Maroon">&#x1F517;</a> 
+              &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole/b0b3f1f5-3818-4d1c-aa25-cf08b01697a1&quot;/&gt;
+            &lt;/valueReference&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueContactPoint</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;38683868&quot;/&gt;
+            &lt;/valueContactPoint&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentString</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno. På forhånd tak. Hilsen Michael, sygeplejerske.&quot;/&gt;
+        &lt;/payload&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-02T11:30:00+02:00&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:a9becf76-fc4c-49aa-8a68-6a0584871fcd&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;<a href="Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html" style="color: Maroon">&#x1F517;</a> 
+                &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;/&gt;
+              &lt;/assigner&gt;
+            &lt;/valueIdentifier&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;<a href="PractitionerRole-2d734f53-c71b-443a-a2d0-41327653b57c.html" style="color: Maroon">&#x1F517;</a> 
+              &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole/2d734f53-c71b-443a-a2d0-41327653b57c&quot;/&gt;
+            &lt;/valueReference&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueContactPoint</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;44527000&quot;/&gt;
+            &lt;/valueContactPoint&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentString</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hej Michael, Resultaterne for undersøgelsen kommer her. Blodtryk 130/95 mmHg, vægt: 83 kg og højde: 179 cm. Blodprøven påviste ikke tegn på sukkersyge eller vitaminmangel. Se mere i den vedhæftede pdf. Mvh. Emma&quot;/&gt;
+        &lt;/payload&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-02T11:30:00+02:00&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;<a href="PractitionerRole-2d734f53-c71b-443a-a2d0-41327653b57c.html" style="color: Maroon">&#x1F517;</a> 
+              &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole/2d734f53-c71b-443a-a2d0-41327653b57c&quot;/&gt;
+            &lt;/valueReference&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueContactPoint</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;44527000&quot;/&gt;
+            &lt;/valueContactPoint&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:cd422e42-5bad-11ed-9b6a-0242ac120002&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;<a href="Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html" style="color: Maroon">&#x1F517;</a> 
+                &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;/&gt;
+              &lt;/assigner&gt;
+            &lt;/valueIdentifier&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentAttachment</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;application/pdf&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Blodprøveresultater&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.creation">creation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-04-30T08:00:00+02:00&quot;/&gt;
+          &lt;/contentAttachment&gt;
+        &lt;/payload&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-03T09:25:00+02:00&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:07685582-3a8f-4bf3-bfa0-2f040133e922&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;<a href="Organization-82210440-6826-44fc-9fc8-2a29bab6a5c2.html" style="color: Maroon">&#x1F517;</a> 
+                &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;/&gt;
+              &lt;/assigner&gt;
+            &lt;/valueIdentifier&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;<a href="PractitionerRole-b0b3f1f5-3818-4d1c-aa25-cf08b01697a1.html" style="color: Maroon">&#x1F517;</a> 
+              &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole/b0b3f1f5-3818-4d1c-aa25-cf08b01697a1&quot;/&gt;
+            &lt;/valueReference&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueContactPoint</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;38683868&quot;/&gt;
+            &lt;/valueContactPoint&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentString</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Mange tak for fremsendte. Kan I desuden hjælpe mig med at finde information vedr. kommunal udredning for sygdommen? / Michael&quot;/&gt;
+        &lt;/payload&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-04T10:00:00+02:00&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:bc9382ba-30f7-4020-a7c4-cbd18f9b4115&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;<a href="Organization-487ac745-fd11-4879-9b59-c08c7d47260e.html" style="color: Maroon">&#x1F517;</a> 
+                &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/487ac745-fd11-4879-9b59-c08c7d47260e&quot;/&gt;
+              &lt;/assigner&gt;
+            &lt;/valueIdentifier&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;<a href="PractitionerRole-2d734f53-c71b-443a-a2d0-41327653b57c.html" style="color: Maroon">&#x1F517;</a> 
+              &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole/2d734f53-c71b-443a-a2d0-41327653b57c&quot;/&gt;
+            &lt;/valueReference&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueContactPoint</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;44527000&quot;/&gt;
+            &lt;/valueContactPoint&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentString</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hej - Jeg håber det er okay, at jeg videresender denne forespørgsel. Kan I hjælpe os med at finde den, af Michael Burns, efterspurgte information. På forhånd tak. /Emma&quot;/&gt;
+        &lt;/payload&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-05T11:35:00+02:00&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:ffed9804-35e3-449f-a1c3-0f8ece783dc7&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;<a href="Organization-f98ed410-54fe-11ed-bdc3-0242ac120002.html" style="color: Maroon">&#x1F517;</a> 
+                &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f98ed410-54fe-11ed-bdc3-0242ac120002&quot;/&gt;
+              &lt;/assigner&gt;
+            &lt;/valueIdentifier&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentAttachment</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">url</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;https://medcom.dk/projekter/korrespondancemeddelelse/&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Link&quot;/&gt;
+          &lt;/contentAttachment&gt;
+        &lt;/payload&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-05T11:35:00+02:00&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:76b064ff-e8b0-433f-8b23-780f181dae54&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;<a href="Organization-f98ed410-54fe-11ed-bdc3-0242ac120002.html" style="color: Maroon">&#x1F517;</a> 
+                &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f98ed410-54fe-11ed-bdc3-0242ac120002&quot;/&gt;
+              &lt;/assigner&gt;
+            &lt;/valueIdentifier&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>&gt;<a href="PractitionerRole-8adda490-63ef-4d97-86f0-14553628e53a.html" style="color: Maroon">&#x1F517;</a> 
+              &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole/8adda490-63ef-4d97-86f0-14553628e53a&quot;/&gt;
+            &lt;/valueReference&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueContactPoint</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;48456523&quot;/&gt;
+            &lt;/valueContactPoint&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentString</a>
+                         <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hej Emma, Jeg har vedhæftet linket til siden, med den ønskede information. Mvh. Ann Marie, Visitator.&quot;/&gt;
+        &lt;/payload&gt;
+      &lt;/Communication&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Practitioner/ed8d4f6a-a2e4-4343-b823-37ca90c1872a&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">Practitioner</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ed8d4f6a-a2e4-4343-b823-37ca90c1872a&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Practitioner_ed8d4f6a-a2e4-4343-b823-37ca90c1872a&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner ed8d4f6a-a2e4-4343-b823-37ca90c1872a&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;ed8d4f6a-a2e4-4343-b823-37ca90c1872a&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hced8d4f6a-a2e4-4343-b823-37ca90c1872a&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hced8d4f6a-a2e4-4343-b823-37ca90c1872a-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Ann Marie Wounds &lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Wounds&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Ann&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Marie&quot;/&gt;
+        &lt;/name&gt;
+      &lt;/Practitioner&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/PractitionerRole/8adda490-63ef-4d97-86f0-14553628e53a&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;8adda490-63ef-4d97-86f0-14553628e53a&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;PractitionerRole_8adda490-63ef-4d97-86f0-14553628e53a&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole 8adda490-63ef-4d97-86f0-14553628e53a&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;8adda490-63ef-4d97-86f0-14553628e53a&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc8adda490-63ef-4d97-86f0-14553628e53a&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc8adda490-63ef-4d97-86f0-14553628e53a-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;Practitioner-ed8d4f6a-a2e4-4343-b823-37ca90c1872a.html&quot;&gt;Practitioner Ann Marie Wounds &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=&quot;Codes:&quot;&gt;Visitator&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>&gt;<a href="Practitioner-ed8d4f6a-a2e4-4343-b823-37ca90c1872a.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/ed8d4f6a-a2e4-4343-b823-37ca90c1872a&quot;/&gt;
+        &lt;/practitioner&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Visitator&quot;/&gt;
+        &lt;/code&gt;
+      &lt;/PractitionerRole&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/PractitionerRole/2d734f53-c71b-443a-a2d0-41327653b57c&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;2d734f53-c71b-443a-a2d0-41327653b57c&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;PractitionerRole_2d734f53-c71b-443a-a2d0-41327653b57c&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole 2d734f53-c71b-443a-a2d0-41327653b57c&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;2d734f53-c71b-443a-a2d0-41327653b57c&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc2d734f53-c71b-443a-a2d0-41327653b57c&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc2d734f53-c71b-443a-a2d0-41327653b57c-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;Practitioner-2a57c93e-de08-423b-b4ee-fcab85cc29bd.html&quot;&gt;Practitioner Emma Waters &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ sygeplejerske}&quot;&gt;Sygeplejerske&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>&gt;<a href="Practitioner-2a57c93e-de08-423b-b4ee-fcab85cc29bd.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/2a57c93e-de08-423b-b4ee-fcab85cc29bd&quot;/&gt;
+        &lt;/practitioner&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;sygeplejerske&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/code&gt;
+      &lt;/PractitionerRole&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Practitioner/2a57c93e-de08-423b-b4ee-fcab85cc29bd&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">Practitioner</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;2a57c93e-de08-423b-b4ee-fcab85cc29bd&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Practitioner_2a57c93e-de08-423b-b4ee-fcab85cc29bd&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner 2a57c93e-de08-423b-b4ee-fcab85cc29bd&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;2a57c93e-de08-423b-b4ee-fcab85cc29bd&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc2a57c93e-de08-423b-b4ee-fcab85cc29bd&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc2a57c93e-de08-423b-b4ee-fcab85cc29bd-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Emma Waters &lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Waters&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Emma&quot;/&gt;
+        &lt;/name&gt;
+      &lt;/Practitioner&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/PractitionerRole/b0b3f1f5-3818-4d1c-aa25-cf08b01697a1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;b0b3f1f5-3818-4d1c-aa25-cf08b01697a1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;PractitionerRole_b0b3f1f5-3818-4d1c-aa25-cf08b01697a1&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole b0b3f1f5-3818-4d1c-aa25-cf08b01697a1&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;b0b3f1f5-3818-4d1c-aa25-cf08b01697a1&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcb0b3f1f5-3818-4d1c-aa25-cf08b01697a1&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcb0b3f1f5-3818-4d1c-aa25-cf08b01697a1-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;Practitioner-9a274f97-57e9-4847-8022-4dc6152351c3.html&quot;&gt;Practitioner Michael Burns &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ sygeplejerske}&quot;&gt;Sygeplejerske&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>&gt;<a href="Practitioner-9a274f97-57e9-4847-8022-4dc6152351c3.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/9a274f97-57e9-4847-8022-4dc6152351c3&quot;/&gt;
+        &lt;/practitioner&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;sygeplejerske&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/code&gt;
+      &lt;/PractitionerRole&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Practitioner/9a274f97-57e9-4847-8022-4dc6152351c3&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">Practitioner</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;9a274f97-57e9-4847-8022-4dc6152351c3&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Practitioner_9a274f97-57e9-4847-8022-4dc6152351c3&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner 9a274f97-57e9-4847-8022-4dc6152351c3&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;9a274f97-57e9-4847-8022-4dc6152351c3&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc9a274f97-57e9-4847-8022-4dc6152351c3&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc9a274f97-57e9-4847-8022-4dc6152351c3-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Michael Burns &lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Burns&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Michael&quot;/&gt;
+        &lt;/name&gt;
+      &lt;/Practitioner&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Organization/f98ed410-54fe-11ed-bdc3-0242ac120002&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;f98ed410-54fe-11ed-bdc3-0242ac120002&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Organization_f98ed410-54fe-11ed-bdc3-0242ac120002&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Organization f98ed410-54fe-11ed-bdc3-0242ac120002&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;f98ed410-54fe-11ed-bdc3-0242ac120002&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcf98ed410-54fe-11ed-bdc3-0242ac120002&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcf98ed410-54fe-11ed-bdc3-0242ac120002-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://www.gs1.org/gln&lt;/code&gt;/5790001348120, &lt;code&gt;urn:oid:1.2.208.176.1.1&lt;/code&gt;/1042981000016003&lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://www.gs1.org/gln&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;5790001348120&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.208.176.1.1&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1042981000016003&quot;/&gt;
+        &lt;/identifier&gt;
+      &lt;/Organization&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Organization/f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Organization_f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Organization f20f31cd-5dd2-4a80-ab00-97f7109864a7&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcf20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcf20f31cd-5dd2-4a80-ab00-97f7109864a7-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://www.gs1.org/gln&lt;/code&gt;/5790001348120, &lt;code&gt;urn:oid:1.2.208.176.1.1&lt;/code&gt;/953741000016009&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Plejecenter Herlev&lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://www.gs1.org/gln&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;5790001348120&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.208.176.1.1&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;953741000016009&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Plejecenter Herlev&quot;/&gt;
+      &lt;/Organization&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Organization/82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Organization_82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Organization 82210440-6826-44fc-9fc8-2a29bab6a5c2&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc82210440-6826-44fc-9fc8-2a29bab6a5c2-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://www.gs1.org/gln&lt;/code&gt;/5790000209354, &lt;code&gt;urn:oid:1.2.208.176.1.1&lt;/code&gt;/265161000016000&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Hjerteafdelingen på Herlev og Gentofte hospital&lt;/p&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://www.gs1.org/gln&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;5790000209354&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.2.208.176.1.1&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;265161000016000&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Hjerteafdelingen på Herlev og Gentofte hospital&quot;/&gt;
+      &lt;/Organization&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Provenance/5c748aa5-64ab-47a9-a74b-033b04a19dae&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">Provenance</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;5c748aa5-64ab-47a9-a74b-033b04a19dae&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Provenance_5c748aa5-64ab-47a9-a74b-033b04a19dae&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Provenance 5c748aa5-64ab-47a9-a74b-033b04a19dae&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;5c748aa5-64ab-47a9-a74b-033b04a19dae&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc5c748aa5-64ab-47a9-a74b-033b04a19dae&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc5c748aa5-64ab-47a9-a74b-033b04a19dae-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;Provenance for &lt;a href=&quot;MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.html&quot;&gt;MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Summary&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Occurrence&lt;/td&gt;&lt;td&gt;2024-05-02 11:30:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Recorded&lt;/td&gt;&lt;td&gt;2024-05-02 11:30:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Activity&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes reply-message}&quot;&gt;A message has been replied to&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Agents&lt;/b&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html&quot;&gt;Organization Plejecenter Herlev&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">target</a>&gt;<a href="MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/d5bd2111-2576-48d3-84d4-8be0297a038d&quot;/&gt;
+        &lt;/target&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">occurredDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-02T11:30:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">recorded</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-05-02T11:30:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.activity">activity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;reply-message&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/activity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent">agent</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.who">who</a>&gt;<a href="Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;/&gt;
+          &lt;/who&gt;
+        &lt;/agent&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;source&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:a9becf76-fc4c-49aa-8a68-6a0584871fcd&quot;/&gt;
+            &lt;/identifier&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;revision&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;<a href="MessageHeader-42cb9200-f421-4d08-8391-7d51a2503cb4.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/42cb9200-f421-4d08-8391-7d51a2503cb4&quot;/&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+      &lt;/Provenance&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Provenance/af9b0255-1bdd-49c7-9d39-d652a587e4b2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">Provenance</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;af9b0255-1bdd-49c7-9d39-d652a587e4b2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Provenance_af9b0255-1bdd-49c7-9d39-d652a587e4b2&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Provenance af9b0255-1bdd-49c7-9d39-d652a587e4b2&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;af9b0255-1bdd-49c7-9d39-d652a587e4b2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcaf9b0255-1bdd-49c7-9d39-d652a587e4b2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcaf9b0255-1bdd-49c7-9d39-d652a587e4b2-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;Provenance for &lt;a href=&quot;MessageHeader-42cb9200-f421-4d08-8391-7d51a2503cb4.html&quot;&gt;MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Summary&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Occurrence&lt;/td&gt;&lt;td&gt;2024-05-01 12:00:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Recorded&lt;/td&gt;&lt;td&gt;2024-05-01 12:00:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Activity&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}&quot;&gt;A new message has been sent&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Agents&lt;/b&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Organization-82210440-6826-44fc-9fc8-2a29bab6a5c2.html&quot;&gt;Organization Hjerteafdelingen på Herlev og Gentofte hospital&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">target</a>&gt;<a href="MessageHeader-42cb9200-f421-4d08-8391-7d51a2503cb4.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/42cb9200-f421-4d08-8391-7d51a2503cb4&quot;/&gt;
+        &lt;/target&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">occurredDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-01T12:00:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">recorded</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-05-01T12:00:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.activity">activity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;new-message&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/activity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent">agent</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.who">who</a>&gt;<a href="Organization-82210440-6826-44fc-9fc8-2a29bab6a5c2.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;/&gt;
+          &lt;/who&gt;
+        &lt;/agent&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;source&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1&quot;/&gt;
+            &lt;/identifier&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+      &lt;/Provenance&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Provenance/73232102-649c-4c63-88f5-94ce189b94a7&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">Provenance</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;73232102-649c-4c63-88f5-94ce189b94a7&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Provenance_73232102-649c-4c63-88f5-94ce189b94a7&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Provenance 73232102-649c-4c63-88f5-94ce189b94a7&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;73232102-649c-4c63-88f5-94ce189b94a7&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc73232102-649c-4c63-88f5-94ce189b94a7&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc73232102-649c-4c63-88f5-94ce189b94a7-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;Provenance for &lt;a href=&quot;MessageHeader-4dff3695-218d-4878-838a-5f23cbba6f82.html&quot;&gt;MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Summary&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Occurrence&lt;/td&gt;&lt;td&gt;2024-05-03 09:25:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Recorded&lt;/td&gt;&lt;td&gt;2024-05-03 09:25:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Activity&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes reply-message}&quot;&gt;A message has been replied to&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Agents&lt;/b&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Organization-82210440-6826-44fc-9fc8-2a29bab6a5c2.html&quot;&gt;Organization Hjerteafdelingen på Herlev og Gentofte hospital&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">target</a>&gt;<a href="MessageHeader-4dff3695-218d-4878-838a-5f23cbba6f82.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/4dff3695-218d-4878-838a-5f23cbba6f82&quot;/&gt;
+        &lt;/target&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">occurredDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-03T09:25:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">recorded</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-05-03T09:25:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.activity">activity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;reply-message&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/activity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent">agent</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.who">who</a>&gt;<a href="Organization-82210440-6826-44fc-9fc8-2a29bab6a5c2.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/82210440-6826-44fc-9fc8-2a29bab6a5c2&quot;/&gt;
+          &lt;/who&gt;
+        &lt;/agent&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;source&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:07685582-3a8f-4bf3-bfa0-2f040133e922&quot;/&gt;
+            &lt;/identifier&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;revision&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;<a href="MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/d5bd2111-2576-48d3-84d4-8be0297a038d&quot;/&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+      &lt;/Provenance&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Provenance/5c689ef2-c6d7-4c74-adb8-303b772532e2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">Provenance</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;5c689ef2-c6d7-4c74-adb8-303b772532e2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Provenance_5c689ef2-c6d7-4c74-adb8-303b772532e2&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Provenance 5c689ef2-c6d7-4c74-adb8-303b772532e2&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;5c689ef2-c6d7-4c74-adb8-303b772532e2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc5c689ef2-c6d7-4c74-adb8-303b772532e2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc5c689ef2-c6d7-4c74-adb8-303b772532e2-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;Provenance for &lt;a href=&quot;MessageHeader-aac67161-d0de-4933-a78c-060beafb4814.html&quot;&gt;MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Summary&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Occurrence&lt;/td&gt;&lt;td&gt;2024-05-04 10:00:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Recorded&lt;/td&gt;&lt;td&gt;2024-05-04 10:00:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Activity&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes forward-message}&quot;&gt;A message has been forwarded and potentially changed&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Agents&lt;/b&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html&quot;&gt;Organization Plejecenter Herlev&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">target</a>&gt;<a href="MessageHeader-aac67161-d0de-4933-a78c-060beafb4814.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/aac67161-d0de-4933-a78c-060beafb4814&quot;/&gt;
+        &lt;/target&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">occurredDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-04T10:00:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">recorded</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-05-04T10:00:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.activity">activity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;forward-message&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/activity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent">agent</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.who">who</a>&gt;<a href="Organization-f20f31cd-5dd2-4a80-ab00-97f7109864a7.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f20f31cd-5dd2-4a80-ab00-97f7109864a7&quot;/&gt;
+          &lt;/who&gt;
+        &lt;/agent&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;source&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:22093247-f2f5-4b25-a5b2-f1dcbbc3998b&quot;/&gt;
+            &lt;/identifier&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;revision&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;<a href="MessageHeader-4dff3695-218d-4878-838a-5f23cbba6f82.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/4dff3695-218d-4878-838a-5f23cbba6f82&quot;/&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+      &lt;/Provenance&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://medcomfhir.dk/ig/carecommunication/Provenance/dbf9c64e-5f36-4b19-a681-58aba32926c2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">Provenance</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;dbf9c64e-5f36-4b19-a681-58aba32926c2&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;a name=&quot;Provenance_dbf9c64e-5f36-4b19-a681-58aba32926c2&quot;&gt; &lt;/a&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Provenance dbf9c64e-5f36-4b19-a681-58aba32926c2&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;dbf9c64e-5f36-4b19-a681-58aba32926c2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcdbf9c64e-5f36-4b19-a681-58aba32926c2&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcdbf9c64e-5f36-4b19-a681-58aba32926c2-da-DK&quot;&gt; &lt;/a&gt;&lt;p&gt;Provenance for &lt;a href=&quot;MessageHeader-2654e182-cfee-4537-b744-e36231ebe2f3.html&quot;&gt;MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Summary&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Occurrence&lt;/td&gt;&lt;td&gt;2024-05-05 11:35:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Recorded&lt;/td&gt;&lt;td&gt;2024-05-05 11:35:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Activity&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes forward-message}&quot;&gt;A message has been forwarded and potentially changed&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Agents&lt;/b&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Organization-f98ed410-54fe-11ed-bdc3-0242ac120002.html&quot;&gt;Organization: identifier = https://www.gs1.org/gln#5790001348120,urn:oid:1.2.208.176.1.1#1042981000016003&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">target</a>&gt;<a href="MessageHeader-2654e182-cfee-4537-b744-e36231ebe2f3.html" style="color: Maroon">&#x1F517;</a> 
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/2654e182-cfee-4537-b744-e36231ebe2f3&quot;/&gt;
+        &lt;/target&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">occurredDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2024-05-05T11:35:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">recorded</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2024-05-05T11:35:00+02:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.activity">activity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                    <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;forward-message&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/activity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent">agent</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.who">who</a>&gt;<a href="Organization-f98ed410-54fe-11ed-bdc3-0242ac120002.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/f98ed410-54fe-11ed-bdc3-0242ac120002&quot;/&gt;
+          &lt;/who&gt;
+        &lt;/agent&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;source&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:uuid:22093247-f2f5-4b25-a5b2-f1dcbbc3998b&quot;/&gt;
+            &lt;/identifier&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;revision&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>&gt;<a href="MessageHeader-4dff3695-218d-4878-838a-5f23cbba6f82.html" style="color: Maroon">&#x1F517;</a> 
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                       <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MessageHeader/4dff3695-218d-4878-838a-5f23cbba6f82&quot;/&gt;
+          &lt;/what&gt;
+        &lt;/entity&gt;
+      &lt;/Provenance&gt;
+    &lt;/resource&gt;
+  &lt;/entry&gt;
+&lt;/Bundle&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.carecommunication#4.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jun 28, 2024 11:24+0200">2024-06-28</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/PractitionerRole/2e8c8e54-388c-4547-954c-1917652986da> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2e8c8e54-388c-4547-954c-1917652986da"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 2e8c8e54-388c-4547-954c-1917652986da</b></p><a name=\"2e8c8e54-388c-4547-954c-1917652986da\"> </a><a name=\"hc2e8c8e54-388c-4547-954c-1917652986da\"> </a><a name=\"hc2e8c8e54-388c-4547-954c-1917652986da-da-DK\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-97511212-12e6-4182-a42b-cf232c0c117c.html\">Practitioner Michael Burns </a></p><p><b>code</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ sygeplejerske}\">Sygeplejerske</span></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Practitioner/97511212-12e6-4182-a42b-cf232c0c117c> ;
+     fhir:reference [ fhir:v "Practitioner/97511212-12e6-4182-a42b-cf232c0c117c" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "sygeplejerske" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

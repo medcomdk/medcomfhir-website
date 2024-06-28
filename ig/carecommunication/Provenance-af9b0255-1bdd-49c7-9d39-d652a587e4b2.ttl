@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Provenance/af9b0255-1bdd-49c7-9d39-d652a587e4b2> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "af9b0255-1bdd-49c7-9d39-d652a587e4b2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance af9b0255-1bdd-49c7-9d39-d652a587e4b2</b></p><a name=\"af9b0255-1bdd-49c7-9d39-d652a587e4b2\"> </a><a name=\"hcaf9b0255-1bdd-49c7-9d39-d652a587e4b2\"> </a><a name=\"hcaf9b0255-1bdd-49c7-9d39-d652a587e4b2-da-DK\"> </a><p>Provenance for <a href=\"MessageHeader-42cb9200-f421-4d08-8391-7d51a2503cb4.html\">MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2024-05-01 12:00:00+0200</td></tr><tr><td>Recorded</td><td>2024-05-01 12:00:00+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\">A new message has been sent</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Organization-82210440-6826-44fc-9fc8-2a29bab6a5c2.html\">Organization Hjerteafdelingen på Herlev og Gentofte hospital</a></td></tr></table></div>"
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/MessageHeader/42cb9200-f421-4d08-8391-7d51a2503cb4> ;
+     fhir:reference [ fhir:v "MessageHeader/42cb9200-f421-4d08-8391-7d51a2503cb4" ]
+  ] ) ; # 
+  fhir:occurred [ fhir:v "2024-05-01T12:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:recorded [ fhir:v "2024-05-01T12:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "new-message" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/Organization/82210440-6826-44fc-9fc8-2a29bab6a5c2> ;
+       fhir:reference [ fhir:v "Organization/82210440-6826-44fc-9fc8-2a29bab6a5c2" ]
+     ]
+  ] ) ; # 
+  fhir:entity ( [
+     fhir:role [ fhir:v "source" ] ;
+     fhir:what [
+       fhir:identifier [
+         fhir:value [ fhir:v "urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1" ]
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

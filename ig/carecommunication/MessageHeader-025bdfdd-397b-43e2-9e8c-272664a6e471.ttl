@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/MessageHeader/025bdfdd-397b-43e2-9e8c-272664a6e471> a fhir:MessageHeader ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "025bdfdd-397b-43e2-9e8c-272664a6e471"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 025bdfdd-397b-43e2-9e8c-272664a6e471</b></p><a name=\"025bdfdd-397b-43e2-9e8c-272664a6e471\"> </a><a name=\"hc025bdfdd-397b-43e2-9e8c-272664a6e471\"> </a><a name=\"hc025bdfdd-397b-43e2-9e8c-272664a6e471-da-DK\"> </a><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/1.7.0/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message\">MedComMessagingEventCodes</a> care-communication-message: Care Communication Message</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=953741000016009\">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td><td><a href=\"Organization-b2f762be-6994-44da-a214-72c765655b3e.html\">Organization Plejecenter Herlev</a></td></tr></table><p><b>sender</b>: <a href=\"Organization-0ece868c-6a72-4aa3-8a96-2d985ab630c7.html\">Organization Hjerteafdelingen på Herlev og Gentofte hospital</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=265161000016000\">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td></tr></table><p><b>focus</b>: <a href=\"Communication-d8434eb5-8286-48f8-a590-4a27175ed82f.html\">Communication: identifier = urn:uuid:b2eb3d0e-5de5-4de9-b2a3-0ff321ad1c3a; status = unknown; category = Examination Results</a></p><p><b>definition</b>: <code>http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0</code></p></div>"
+  ] ; # 
+  fhir:event [
+     a fhir:Coding ;
+     fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "care-communication-message" ]
+  ] ; # 
+  fhir:destination ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "primary" ]
+       ]
+     ] ) ;
+     fhir:endpoint [ fhir:v "https://sor2.sum.dsdn.dk/#id=953741000016009"^^xsd:anyURI ] ;
+     fhir:receiver [
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/Organization/b2f762be-6994-44da-a214-72c765655b3e> ;
+       fhir:reference [ fhir:v "Organization/b2f762be-6994-44da-a214-72c765655b3e" ]
+     ]
+  ] ) ; # 
+  fhir:sender [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Organization/0ece868c-6a72-4aa3-8a96-2d985ab630c7> ;
+     fhir:reference [ fhir:v "Organization/0ece868c-6a72-4aa3-8a96-2d985ab630c7" ]
+  ] ; # 
+  fhir:source [
+     fhir:endpoint [ fhir:v "https://sor2.sum.dsdn.dk/#id=265161000016000"^^xsd:anyURI ]
+  ] ; # 
+  fhir:focus ( [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Communication/d8434eb5-8286-48f8-a590-4a27175ed82f> ;
+     fhir:reference [ fhir:v "Communication/d8434eb5-8286-48f8-a590-4a27175ed82f" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:v "http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0"^^xsd:anyURI ;
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0>
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
