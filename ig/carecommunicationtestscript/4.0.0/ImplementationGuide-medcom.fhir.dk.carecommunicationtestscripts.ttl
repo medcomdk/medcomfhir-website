@@ -1,0 +1,1345 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunicationtestscripts/ImplementationGuide/medcom.fhir.dk.carecommunicationtestscripts> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom.fhir.dk.carecommunicationtestscripts"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.carecommunicationtestscripts</b></p><a name=\"medcom.fhir.dk.carecommunicationtestscripts\"> </a><a name=\"hcmedcom.fhir.dk.carecommunicationtestscripts\"> </a><a name=\"medcom.fhir.dk.carecommunicationtestscripts-en-US\"> </a><h2>CareCommunicationTestscripts</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/carecommunicationtestscripts/ImplementationGuide/medcom.fhir.dk.carecommunicationtestscripts</pre><div><p>Test scripts for CareCommunication v. 4.0</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunicationtestscripts/ImplementationGuide/medcom.fhir.dk.carecommunicationtestscripts"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "4.0.0"] ; # 
+  fhir:name [ fhir:v "CareCommunicationTestscripts"] ; # 
+  fhir:title [ fhir:v "CareCommunication Test scripts"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-07-18T12:48:12+02:00"^^xsd:dateTime] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "mailto:fhir@medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Test scripts for CareCommunication v. 4.0"] ; # 
+  fhir:packageId [ fhir:v "medcom.fhir.dk.carecommunicationtestscripts"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "6.0.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.1.0" ]
+  ] [
+     fhir:id [ fhir:v "medcom_fhir_dk_carecommunication" ] ;
+     fhir:uri [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication>
+     ] ;
+     fhir:packageId [ fhir:v "medcom.fhir.dk.carecommunication" ] ;
+     fhir:version [ fhir:v "4.0.1" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2022+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "release" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "show-inherited-invariants" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "false" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://medcomfhir.dk/ig/carecommunicationtestscripts/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.1.0" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2022+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "release" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "show-inherited-invariants" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "false" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://medcomfhir.dk/ig/carecommunicationtestscripts/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-01> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-tec-01" ]
+       ] ;
+       fhir:name [ fhir:v " Send CareCommunication concerning a deceased patient" ] ;
+       fhir:description [ fhir:v " Send CareCommunication concerning a deceased patient" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/0c8dddf2-c882-4b00-8870-5035279e7d01> ;
+         fhir:reference [ fhir:v "Bundle/0c8dddf2-c882-4b00-8870-5035279e7d01" ]
+       ] ;
+       fhir:name [ fhir:v "0c8dddf2-c882-4b00-8870-5035279e7d01" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/0e2864ad-a6a1-4e84-a9dc-aeacee63f981> ;
+         fhir:reference [ fhir:v "Bundle/0e2864ad-a6a1-4e84-a9dc-aeacee63f981" ]
+       ] ;
+       fhir:name [ fhir:v "0e2864ad-a6a1-4e84-a9dc-aeacee63f981" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/1932711d-49d0-4ad7-b1ee-61de711892d2> ;
+         fhir:reference [ fhir:v "Bundle/1932711d-49d0-4ad7-b1ee-61de711892d2" ]
+       ] ;
+       fhir:name [ fhir:v "1932711d-49d0-4ad7-b1ee-61de711892d2" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/1e9fdc8f-50f0-4dc3-9879-facdf331a2fe> ;
+         fhir:reference [ fhir:v "Bundle/1e9fdc8f-50f0-4dc3-9879-facdf331a2fe" ]
+       ] ;
+       fhir:name [ fhir:v "1e9fdc8f-50f0-4dc3-9879-facdf331a2fe" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/20fcbedb-ced8-4949-9edf-a145e0bb9b09> ;
+         fhir:reference [ fhir:v "Bundle/20fcbedb-ced8-4949-9edf-a145e0bb9b09" ]
+       ] ;
+       fhir:name [ fhir:v "20fcbedb-ced8-4949-9edf-a145e0bb9b09" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/260a3cc1-38eb-454a-a57b-9e32eabb54a3> ;
+         fhir:reference [ fhir:v "Bundle/260a3cc1-38eb-454a-a57b-9e32eabb54a3" ]
+       ] ;
+       fhir:name [ fhir:v "260a3cc1-38eb-454a-a57b-9e32eabb54a3" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/3e047a9d-c86a-4828-b686-6a80403df5eb> ;
+         fhir:reference [ fhir:v "Bundle/3e047a9d-c86a-4828-b686-6a80403df5eb" ]
+       ] ;
+       fhir:name [ fhir:v "3e047a9d-c86a-4828-b686-6a80403df5eb" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/4f6ee254-6953-4a57-a68e-a5907a5761dc> ;
+         fhir:reference [ fhir:v "Bundle/4f6ee254-6953-4a57-a68e-a5907a5761dc" ]
+       ] ;
+       fhir:name [ fhir:v "4f6ee254-6953-4a57-a68e-a5907a5761dc" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/5de12884-eae7-4fd3-ba4a-d8b56be4baff> ;
+         fhir:reference [ fhir:v "Bundle/5de12884-eae7-4fd3-ba4a-d8b56be4baff" ]
+       ] ;
+       fhir:name [ fhir:v "5de12884-eae7-4fd3-ba4a-d8b56be4baff" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/5f85e1bd-03ea-47b9-bfe1-dbde95e69c75> ;
+         fhir:reference [ fhir:v "Bundle/5f85e1bd-03ea-47b9-bfe1-dbde95e69c75" ]
+       ] ;
+       fhir:name [ fhir:v "5f85e1bd-03ea-47b9-bfe1-dbde95e69c75" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/683f2782-11e2-490a-9fa5-d5da09cc317a> ;
+         fhir:reference [ fhir:v "Bundle/683f2782-11e2-490a-9fa5-d5da09cc317a" ]
+       ] ;
+       fhir:name [ fhir:v "683f2782-11e2-490a-9fa5-d5da09cc317a" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/68f5c0f8-e33e-4302-89b0-cdea52801ec9> ;
+         fhir:reference [ fhir:v "Bundle/68f5c0f8-e33e-4302-89b0-cdea52801ec9" ]
+       ] ;
+       fhir:name [ fhir:v "68f5c0f8-e33e-4302-89b0-cdea52801ec9" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/720f68cf-21bf-4c40-a90c-a113e00e88a8> ;
+         fhir:reference [ fhir:v "Bundle/720f68cf-21bf-4c40-a90c-a113e00e88a8" ]
+       ] ;
+       fhir:name [ fhir:v "720f68cf-21bf-4c40-a90c-a113e00e88a8" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/7283eae8-0427-4bb0-8486-06b4febd416c> ;
+         fhir:reference [ fhir:v "Bundle/7283eae8-0427-4bb0-8486-06b4febd416c" ]
+       ] ;
+       fhir:name [ fhir:v "7283eae8-0427-4bb0-8486-06b4febd416c" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/77c771ca-05d6-4efb-9a74-2fc513787f3a> ;
+         fhir:reference [ fhir:v "Bundle/77c771ca-05d6-4efb-9a74-2fc513787f3a" ]
+       ] ;
+       fhir:name [ fhir:v "77c771ca-05d6-4efb-9a74-2fc513787f3a" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/7c5a0cc0-f0f8-4a2e-9de9-d9293598bf94> ;
+         fhir:reference [ fhir:v "Bundle/7c5a0cc0-f0f8-4a2e-9de9-d9293598bf94" ]
+       ] ;
+       fhir:name [ fhir:v "7c5a0cc0-f0f8-4a2e-9de9-d9293598bf94" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/81b715aa-e993-4e7c-9b8a-4a05c10b540e> ;
+         fhir:reference [ fhir:v "Bundle/81b715aa-e993-4e7c-9b8a-4a05c10b540e" ]
+       ] ;
+       fhir:name [ fhir:v "81b715aa-e993-4e7c-9b8a-4a05c10b540e" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/8352b67a-23b2-44c5-b43a-725270a90722> ;
+         fhir:reference [ fhir:v "Bundle/8352b67a-23b2-44c5-b43a-725270a90722" ]
+       ] ;
+       fhir:name [ fhir:v "8352b67a-23b2-44c5-b43a-725270a90722" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/91b4b79a-520f-48cb-bb9a-9c3e27301968> ;
+         fhir:reference [ fhir:v "Bundle/91b4b79a-520f-48cb-bb9a-9c3e27301968" ]
+       ] ;
+       fhir:name [ fhir:v "91b4b79a-520f-48cb-bb9a-9c3e27301968" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/98eb081e-a66f-41a2-b2f7-c455782563b0> ;
+         fhir:reference [ fhir:v "Bundle/98eb081e-a66f-41a2-b2f7-c455782563b0" ]
+       ] ;
+       fhir:name [ fhir:v "98eb081e-a66f-41a2-b2f7-c455782563b0" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/aca3d03a-febd-4b88-ad53-ac1bc36da615> ;
+         fhir:reference [ fhir:v "Bundle/aca3d03a-febd-4b88-ad53-ac1bc36da615" ]
+       ] ;
+       fhir:name [ fhir:v "aca3d03a-febd-4b88-ad53-ac1bc36da615" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/adf87886-7d96-4c9b-bd76-5abb83682819> ;
+         fhir:reference [ fhir:v "Bundle/adf87886-7d96-4c9b-bd76-5abb83682819" ]
+       ] ;
+       fhir:name [ fhir:v "adf87886-7d96-4c9b-bd76-5abb83682819" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/b10f940e-2000-4ec8-9e0b-a3fb60fc5bb5> ;
+         fhir:reference [ fhir:v "Bundle/b10f940e-2000-4ec8-9e0b-a3fb60fc5bb5" ]
+       ] ;
+       fhir:name [ fhir:v "b10f940e-2000-4ec8-9e0b-a3fb60fc5bb5" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/b43146a2-99ec-4b05-bb8f-5b44af4fe424> ;
+         fhir:reference [ fhir:v "Bundle/b43146a2-99ec-4b05-bb8f-5b44af4fe424" ]
+       ] ;
+       fhir:name [ fhir:v "b43146a2-99ec-4b05-bb8f-5b44af4fe424" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/c1edf6f3-2554-4b72-b58b-0f030ee555ba> ;
+         fhir:reference [ fhir:v "Bundle/c1edf6f3-2554-4b72-b58b-0f030ee555ba" ]
+       ] ;
+       fhir:name [ fhir:v "c1edf6f3-2554-4b72-b58b-0f030ee555ba" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/c289e585-7f30-4d58-88e3-0baedd9ffeee> ;
+         fhir:reference [ fhir:v "Bundle/c289e585-7f30-4d58-88e3-0baedd9ffeee" ]
+       ] ;
+       fhir:name [ fhir:v "c289e585-7f30-4d58-88e3-0baedd9ffeee" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/fa97e431-332f-4605-ad37-c259dc2b8637> ;
+         fhir:reference [ fhir:v "Bundle/fa97e431-332f-4605-ad37-c259dc2b8637" ]
+       ] ;
+       fhir:name [ fhir:v "fa97e431-332f-4605-ad37-c259dc2b8637" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-forward-partialthread> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-forward-partialthread" ]
+       ] ;
+       fhir:name [ fhir:v "Forward a part of the CareCommunication thread. Only the message text is expected to be forwarded" ] ;
+       fhir:description [ fhir:v "Forward a part of the CareCommunication thread. Only the message text is expected to be forwarded" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-forward-message> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-forward-message" ]
+       ] ;
+       fhir:name [ fhir:v "Forward CareCommunication" ] ;
+       fhir:description [ fhir:v "Forward CareCommunication" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-forward-add-attachment> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-forward-add-attachment" ]
+       ] ;
+       fhir:name [ fhir:v "Forward CareCommunication add a new attachments" ] ;
+       fhir:description [ fhir:v "Forward CareCommunication add a new attachments." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-forward-attachment> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-forward-attachment" ]
+       ] ;
+       fhir:name [ fhir:v "Forward CareCommunication where the new message includes several attached files." ] ;
+       fhir:description [ fhir:v "Forward CareCommunication where the new message includes several attached files." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-forward-changecategory> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-forward-changecategory" ]
+       ] ;
+       fhir:name [ fhir:v "Forward CareCommunication with changed category" ] ;
+       fhir:description [ fhir:v "Forward CareCommunication with changed category" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-forward-changetopic> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-forward-changetopic" ]
+       ] ;
+       fhir:name [ fhir:v "Forward CareCommunication with changed topic" ] ;
+       fhir:description [ fhir:v "Forward CareCommunication with changed topic" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/jklfds89r45jklsduf98w487953jkl.jkliuuh> ;
+         fhir:reference [ fhir:v "Bundle/jklfds89r45jklsduf98w487953jkl.jkliuuh" ]
+       ] ;
+       fhir:name [ fhir:v "jklfds89r45jklsduf98w487953jkl.jkliuuh" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Bundle/jklfds89r78jklsduf98w487953jkl.jkliuuh> ;
+         fhir:reference [ fhir:v "Bundle/jklfds89r78jklsduf98w487953jkl.jkliuuh" ]
+       ] ;
+       fhir:name [ fhir:v "jklfds89r78jklsduf98w487953jkl.jkliuuh" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-reply-message> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-reply-message" ]
+       ] ;
+       fhir:name [ fhir:v "Reply CareCommunication" ] ;
+       fhir:description [ fhir:v "Reply CareCommunication" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-reply-add-attachment> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-reply-add-attachment" ]
+       ] ;
+       fhir:name [ fhir:v "Reply CareCommunication add two new attachments" ] ;
+       fhir:description [ fhir:v "Reply CareCommunication add two new attachments." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-reply-new> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-reply-new" ]
+       ] ;
+       fhir:name [ fhir:v "Reply CareCommunication to a CareCommunication send by the replying system" ] ;
+       fhir:description [ fhir:v "Reply CareCommunication to a CareCommunication send by the replying system" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-reply-forward> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-reply-forward" ]
+       ] ;
+       fhir:name [ fhir:v "Reply CareCommunication to a CareCommunication that has been forwarded" ] ;
+       fhir:description [ fhir:v "Reply CareCommunication to a CareCommunication that has been forwarded" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-reply-attachment> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-reply-attachment" ]
+       ] ;
+       fhir:name [ fhir:v "Reply CareCommunication where the new message includes several attached files" ] ;
+       fhir:description [ fhir:v "Reply CareCommunication where the new message includes several attached files." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-reply-changecategory> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-reply-changecategory" ]
+       ] ;
+       fhir:name [ fhir:v "Reply CareCommunication with changed category" ] ;
+       fhir:description [ fhir:v "Reply CareCommunication with changed category" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-reply-changetopic> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-reply-changetopic" ]
+       ] ;
+       fhir:name [ fhir:v "Reply CareCommunication with changed topic" ] ;
+       fhir:description [ fhir:v "Reply CareCommunication with changed topic" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-07> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-tec-07" ]
+       ] ;
+       fhir:name [ fhir:v "Reply to CareCommunication, that includes all content." ] ;
+       fhir:description [ fhir:v "Reply to CareCommunication, that includes all content." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-06> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-tec-06" ]
+       ] ;
+       fhir:name [ fhir:v "Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication" ] ;
+       fhir:description [ fhir:v "Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-03> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-tec-03" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication where the patient has a CPR-number as identifier" ] ;
+       fhir:description [ fhir:v "Send CareCommunication where the patient has a CPR-number as identifier" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-04> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-tec-04" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication where the patient has a replacement-CPR-number as identifier" ] ;
+       fhir:description [ fhir:v "Send CareCommunication where the patient has a replacement-CPR-number as identifier" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-bmp> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-bmp" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a bmp as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a bmp as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-05> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-tec-05" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a episodeOfCare-identifier" ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a episodeOfCare-identifier" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-gif> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-gif" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a gif as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a gif as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-jpeg> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-jpeg" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a jpeg as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a jpeg as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-link> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-link" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a link as an attachment. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a link as an attachment. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-multiple> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-multiple" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a multiple attached files. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a multiple attached files. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-pdf> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-pdf" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a pdf-document as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a pdf-document as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-png> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-png" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a png as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a png as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-tiff> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-tiff" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with a tiff as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with a tiff as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-attachment-structured> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-attachment-structured" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with an attachment and structured author information. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with an attachment and structured author information. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-category-other> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-category-other" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with category 'Other'. Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004. " ] ;
+       fhir:description [ fhir:v "Send CareCommunication with category 'Other'. Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-priority> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-priority" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with category 'Regarding referral', included priority. Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with category 'Regarding referral', included priority. Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-02> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-tec-02" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with sender and recipient" ] ;
+       fhir:description [ fhir:v "Send CareCommunication with sender and recipient" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-topic> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-topic" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication with topic. Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004." ] ;
+       fhir:description [ fhir:v "Send CareCommunication with topic. Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "TestScript" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-new-message> ;
+         fhir:reference [ fhir:v "TestScript/carecommunication-send-new-message" ]
+       ] ;
+       fhir:name [ fhir:v "Send CareCommunication. Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000." ] ;
+       fhir:description [ fhir:v "Send CareCommunication. Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+       ] ) ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Downloads" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "testexamples.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "testexamples.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Testexamples" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "testscripts.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "testscripts.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Testscripts" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

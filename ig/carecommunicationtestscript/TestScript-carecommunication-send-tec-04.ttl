@@ -1,0 +1,152 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunicationtestscripts/TestScript/carecommunication-send-tec-04> a fhir:TestScript ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "carecommunication-send-tec-04"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"^^xsd:anyURI ;
+       fhir:link <http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: TestScript carecommunication-send-tec-04</b></p><a name=\"carecommunication-send-tec-04\"> </a><a name=\"hccarecommunication-send-tec-04\"> </a><a name=\"carecommunication-send-tec-04-en-US\"> </a><p><b>url</b>: <a href=\"TestScript-carecommunication-send-tec-04.html\">TestScript Send CareCommunication where the patient has a replacement-CPR-number as identifier</a></p><p><b>version</b>: 4.0.0</p><p><b>name</b>: CareCommunicationTestScript</p><p><b>title</b>: Send CareCommunication where the patient has a replacement-CPR-number as identifier</p><p><b>status</b>: Active</p><p><b>date</b>: 2024-07-15</p><p><b>contact</b>: MedCom: <a href=\"mailto:mailto:fhir@medcom.dk\">mailto:fhir@medcom.dk</a></p><p><b>description</b>: </p><div><p>Send CareCommunication where the patient has a replacement-CPR-number as identifier</p>\n</div><p><b>copyright</b>: </p><div><p>MedCom 2023</p>\n</div><h3>Origins</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Index</b></td><td><b>Profile</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-testscript-profile-origin-types.html#testscript-profile-origin-types-FHIR-Client\">Test script profile origin type</a> FHIR-Client: FHIR Client</td></tr></table><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Index</b></td><td><b>Profile</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-testscript-profile-destination-types.html#testscript-profile-destination-types-FHIR-Server\">Test script profile destination type</a> FHIR-Server: FHIR Server</td></tr></table><blockquote><p><b>fixture</b></p><blockquote><p><b>id</b></p>create-new-message-01</blockquote><p><b>autocreate</b>: false</p><p><b>autodelete</b>: false</p><p><b>resource</b>: <a href=\"/Fixtures/CareCommunication-fixture.xml\">/Fixtures/CareCommunication-fixture.xml</a></p></blockquote><p><b>profile</b>: <a href=\"http://medcomfhir.dk/ig/carecommunication/4.0.1/StructureDefinition-medcom-careCommunication-message.html\">??</a></p><blockquote><p><b>variable</b></p><p><b>name</b>: messageHeaderid-new-message-01</p><p><b>expression</b>: Bundle.entry[0].resource.id</p><p><b>sourceId</b>: create-message-new-message-01</p></blockquote><blockquote><p><b>variable</b></p><p><b>name</b>: searchParamIdentifier-new-message</p><p><b>expression</b>: Bundle.entry.resource.ofType(MessageHeader).id</p><p><b>sourceId</b>: create-message-new-message</p></blockquote><blockquote><p><b>test</b></p><blockquote><p><b>id</b></p>carecommunication-create-new-message-01</blockquote><p><b>name</b>: Create a CareCommunication new-message Message 01</p><p><b>description</b>: Post CareCommunication to the server.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Resource</b></td><td><b>Description</b></td><td><b>Destination</b></td><td><b>EncodeRequestUrl</b></td><td><b>Origin</b></td><td><b>RequestId</b></td><td><b>SourceId</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-testscript-operation-codes.html#testscript-operation-codes-create\">Test script operation code</a> create: Create</td><td>Bundle</td><td>Post a carecommunication</td><td>1</td><td>true</td><td>1</td><td>create-message-new-message-01</td><td>create-new-message-01</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>ValidateProfileId</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Validates the bundle against http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/dk.fhir.ig.dk-medcom-carecommunication</td><td>request</td><td>carecommunication</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Operator</b></td><td><b>ResponseCode</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the returned HTTP status is okay or created.</td><td>response</td><td>in</td><td>200,201</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Resource</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the client request payload contains a Bundle resource type.</td><td>request</td><td>Bundle</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the request resource contains the expected eventCoding.code.</td><td>request</td><td>Bundle.entry.resource.ofType(MessageHeader).event.as(Coding).select(code = 'care-communication-message').allTrue()</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the request resource contains the expected activity code.</td><td>request</td><td>Bundle.entry.resource.ofType(Provenance).where(activity.coding.code = 'new-message').exists()</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the target reference in Provenance equals MessageHeader.id</td><td>request</td><td>Bundle.entry.resource.ofType(Provenance).where(target.reference.contains(%resource.entry[0].resource.id)).exists()</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the Communication.identifier is a UUID v4.</td><td>request</td><td>Bundle.entry.resource.ofType(Communication).identifier.value.matches('urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Description</b></td><td><b>Direction</b></td><td><b>Expression</b></td><td><b>WarningOnly</b></td></tr><tr><td style=\"display: none\">*</td><td>Confirm that the system of the patient.identifier is urn:oid:1.2.208.176.1.2</td><td>request</td><td>Bundle.entry.resource.ofType(Patient).identifier.system != 'urn:oid:1.2.208.176.1.2'</td><td>false</td></tr></table></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-04"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "4.0.0"] ; # 
+  fhir:name [ fhir:v "CareCommunicationTestScript"] ; # 
+  fhir:title [ fhir:v "Send CareCommunication where the patient has a replacement-CPR-number as identifier"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-07-15"^^xsd:date] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "mailto:fhir@medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Send CareCommunication where the patient has a replacement-CPR-number as identifier"] ; # 
+  fhir:copyright [ fhir:v "MedCom 2023"] ; # 
+  fhir:origin ( [
+     fhir:index [ fhir:v "1"^^xsd:integer ] ;
+     fhir:profile [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FHIR-Client" ]
+     ]
+  ] ) ; # 
+  fhir:destination ( [
+     fhir:index [ fhir:v "1"^^xsd:integer ] ;
+     fhir:profile [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FHIR-Server" ]
+     ]
+  ] ) ; # 
+  fhir:fixture ( [
+     fhir:id [ fhir:v "create-new-message-01" ] ;
+     fhir:autocreate [ fhir:v "false"^^xsd:boolean ] ;
+     fhir:autodelete [ fhir:v "false"^^xsd:boolean ] ;
+     fhir:resource [
+       fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts//Fixtures/CareCommunication-fixture.xml> ;
+       fhir:reference [ fhir:v "/Fixtures/CareCommunication-fixture.xml" ]
+     ]
+  ] ) ; # 
+  fhir:profile ( [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message> ;
+     fhir:id [ fhir:v "carecommunication" ] ;
+     fhir:reference [ fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message" ]
+  ] ) ; # 
+  fhir:variable ( [
+     fhir:name [ fhir:v "messageHeaderid-new-message-01" ] ;
+     fhir:expression [ fhir:v "Bundle.entry[0].resource.id" ] ;
+     fhir:sourceId [ fhir:v "create-message-new-message-01" ]
+  ] [
+     fhir:name [ fhir:v "searchParamIdentifier-new-message" ] ;
+     fhir:expression [ fhir:v "Bundle.entry.resource.ofType(MessageHeader).id" ] ;
+     fhir:sourceId [ fhir:v "create-message-new-message" ]
+  ] ) ; # 
+  fhir:test ( [
+     fhir:id [ fhir:v "carecommunication-create-new-message-01" ] ;
+     fhir:name [ fhir:v "Create a CareCommunication new-message Message 01" ] ;
+     fhir:description [ fhir:v "Post CareCommunication to the server." ] ;
+     fhir:action ( [
+       fhir:operation [
+         fhir:type [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "create" ]
+         ] ;
+         fhir:resource [ fhir:v "Bundle" ] ;
+         fhir:description [ fhir:v "Post a carecommunication" ] ;
+         fhir:destination [ fhir:v "1"^^xsd:integer ] ;
+         fhir:encodeRequestUrl [ fhir:v "true"^^xsd:boolean ] ;
+         fhir:origin [ fhir:v "1"^^xsd:integer ] ;
+         fhir:requestId [ fhir:v "create-message-new-message-01" ] ;
+         fhir:sourceId [ fhir:v "create-new-message-01" ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Validates the bundle against http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/dk.fhir.ig.dk-medcom-carecommunication" ] ;
+         fhir:direction [ fhir:v "request" ] ;
+         fhir:validateProfileId [ fhir:v "carecommunication" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the returned HTTP status is okay or created." ] ;
+         fhir:direction [ fhir:v "response" ] ;
+         fhir:operator [ fhir:v "in" ] ;
+         fhir:responseCode [ fhir:v "200,201" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the client request payload contains a Bundle resource type." ] ;
+         fhir:direction [ fhir:v "request" ] ;
+         fhir:resource [ fhir:v "Bundle" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the request resource contains the expected eventCoding.code." ] ;
+         fhir:direction [ fhir:v "request" ] ;
+         fhir:expression [ fhir:v "Bundle.entry.resource.ofType(MessageHeader).event.as(Coding).select(code = 'care-communication-message').allTrue()" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the request resource contains the expected activity code." ] ;
+         fhir:direction [ fhir:v "request" ] ;
+         fhir:expression [ fhir:v "Bundle.entry.resource.ofType(Provenance).where(activity.coding.code = 'new-message').exists()" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the target reference in Provenance equals MessageHeader.id" ] ;
+         fhir:direction [ fhir:v "request" ] ;
+         fhir:expression [ fhir:v "Bundle.entry.resource.ofType(Provenance).where(target.reference.contains(%resource.entry[0].resource.id)).exists()" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the Communication.identifier is a UUID v4." ] ;
+         fhir:direction [ fhir:v "request" ] ;
+         fhir:expression [ fhir:v "Bundle.entry.resource.ofType(Communication).identifier.value.matches('urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] [
+       fhir:assert [
+         fhir:description [ fhir:v "Confirm that the system of the patient.identifier is urn:oid:1.2.208.176.1.2" ] ;
+         fhir:direction [ fhir:v "request" ] ;
+         fhir:expression [ fhir:v "Bundle.entry.resource.ofType(Patient).identifier.system != 'urn:oid:1.2.208.176.1.2'" ] ;
+         fhir:warningOnly [ fhir:v "false"^^xsd:boolean ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
