@@ -1,0 +1,42 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/messaging/Patient/733cef33-3626-422b-955d-d506aaa65fe1> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "733cef33-3626-422b-955d-d506aaa65fe1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 733cef33-3626-422b-955d-d506aaa65fe1</b></p><a name=\"733cef33-3626-422b-955d-d506aaa65fe1\"> </a><a name=\"hc733cef33-3626-422b-955d-d506aaa65fe1\"> </a><a name=\"733cef33-3626-422b-955d-d506aaa65fe1-da-DK\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Eric Flame (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#0102030405)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 12345678(Mobile)</li><li>Flammesvinget 1 Aarhus 8000 C </li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0102030405" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Flame" ] ;
+     fhir:given ( [ fhir:v "Eric" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "12345678" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "Flammesvinget 1" ] ) ;
+     fhir:city [ fhir:v "Aarhus" ] ;
+     fhir:postalCode [ fhir:v "8000 C" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/messaging/Provenance/9c284936-5454-4116-95fc-3c8eeeed2400> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "9c284936-5454-4116-95fc-3c8eeeed2400"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance 9c284936-5454-4116-95fc-3c8eeeed2400</b></p><a name=\"9c284936-5454-4116-95fc-3c8eeeed2400\"> </a><a name=\"hc9c284936-5454-4116-95fc-3c8eeeed2400\"> </a><a name=\"9c284936-5454-4116-95fc-3c8eeeed2400-da-DK\"> </a><p>Provenance for <a href=\"MessageHeader-42c01434-8feb-11ec-b909-0242ac120002.html\">MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message)</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2020-09-28 12:34:56+0000</td></tr><tr><td>Recorded</td><td>2020-09-28 12:34:56+0000</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\">A new message has been sent</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Organization-d7056980-a8b2-42aa-8a0e-c1fc85d1f40d.html\">Organization Sender Organization</a></td></tr></table></div>"
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://medcomfhir.dk/ig/messaging/MessageHeader/42c01434-8feb-11ec-b909-0242ac120002> ;
+     fhir:reference [ fhir:v "MessageHeader/42c01434-8feb-11ec-b909-0242ac120002" ]
+  ] ) ; # 
+  fhir:occurred [ fhir:v "2020-09-28T12:34:56Z"^^xsd:dateTime] ; # 
+  fhir:recorded [ fhir:v "2020-09-28T12:34:56Z"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "new-message" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://medcomfhir.dk/ig/messaging/Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d> ;
+       fhir:reference [ fhir:v "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
