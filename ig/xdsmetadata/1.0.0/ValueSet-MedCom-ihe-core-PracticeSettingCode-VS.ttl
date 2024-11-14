@@ -1,0 +1,201 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-PracticeSettingCode-VS> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedCom-ihe-core-PracticeSettingCode-VS"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>urn:oid:2.16.840.1.113883.6.96</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>773568002</td><td>akutmedicin</td></tr><tr><td>408443003</td><td>almen medicin</td></tr><tr><td>394577000</td><td>anæstesiologi</td></tr><tr><td>394821009</td><td>arbejdsmedicin</td></tr><tr><td>394588006</td><td>børne_ og ungdomspsykiatri</td></tr><tr><td>394582007</td><td>dermato_venerologi</td></tr><tr><td>394914008</td><td>diagnostisk radiologi</td></tr><tr><td>394583002</td><td>endokrinologi</td></tr><tr><td>394811001</td><td>geriatri</td></tr><tr><td>394585009</td><td>gynækologi og obstetrik</td></tr><tr><td>408472002</td><td>hepatologi</td></tr><tr><td>394803006</td><td>hæmatologi</td></tr><tr><td>394807007</td><td>infektionsmedicin</td></tr><tr><td>419192003</td><td>intern medicin</td></tr><tr><td>394579002</td><td>kardiologi</td></tr><tr><td>408463005</td><td>karkirurgi</td></tr><tr><td>394609007</td><td>kirurgi</td></tr><tr><td>551411000005104</td><td>kirurgisk gastroenterologi</td></tr><tr><td>394596001</td><td>klinisk biokemi</td></tr><tr><td>394600006</td><td>klinisk farmakologi</td></tr><tr><td>394601005</td><td>klinisk fysiologi og nuklearmedicin (snomed: klinisk fysiologi)</td></tr><tr><td>394580004</td><td>klinisk genetik</td></tr><tr><td>421661004</td><td>klinisk immunologi</td></tr><tr><td>408454008</td><td>klinisk mikrobiologi</td></tr><tr><td>394809005</td><td>klinisk neurofysiologi</td></tr><tr><td>394592004</td><td>klinisk onkologi</td></tr><tr><td>418112009</td><td>lungesygdomme</td></tr><tr><td>394805004</td><td>medicinsk allergologi</td></tr><tr><td>394584008</td><td>medicinsk gastroenterologi</td></tr><tr><td>394589003</td><td>nefrologi</td></tr><tr><td>394610002</td><td>neurokirurgi</td></tr><tr><td>394591006</td><td>neurologi</td></tr><tr><td>394812008</td><td>odontologi (snomed: odontologiske specialer)</td></tr><tr><td>394594003</td><td>oftalmologi</td></tr><tr><td>394608004</td><td>ortodonti</td></tr><tr><td>394801008</td><td>ortopædisk kirurgi</td></tr><tr><td>394604002</td><td>oto_rhino_laryngologi</td></tr><tr><td>394915009</td><td>patologisk anatomi og cytologi</td></tr><tr><td>394611003</td><td>plastikkirurgi</td></tr><tr><td>394587001</td><td>psykiatri</td></tr><tr><td>394537008</td><td>pædiatri</td></tr><tr><td>394810000</td><td>reumatologi</td></tr><tr><td>394581000</td><td>samfundsmedicin</td></tr><tr><td>394605001</td><td>tand_, mund_ og kæbekirurgi</td></tr><tr><td>394603008</td><td>thoraxkirurgi</td></tr><tr><td>408448007</td><td>tropemedicin</td></tr><tr><td>394612005</td><td>urologi</td></tr><tr><td>658171000005102</td><td>hjemmepleje</td></tr><tr><td>658161000005107</td><td>hjemmesygepleje</td></tr><tr><td>658151000005105</td><td>sundhedsfremme og forebyggelse</td></tr><tr><td>658191000005101</td><td>sundhedspleje</td></tr><tr><td>658201000005103</td><td>kommunal tandpleje</td></tr><tr><td>658141000005108</td><td>genoptræning efter hospitalsophold</td></tr><tr><td>658181000005104</td><td>hjælpemiddelområdet</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-PracticeSettingCode-VS"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "MedComIHE_CorePracticeSettingCode"] ; # 
+  fhir:title [ fhir:v "IHE PracticeSettingCode"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2022-03-01"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Values used for the document metadata attribute practiceSettingCode, which is an attribute specifying the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology). The value set is based on a subset of the code list from the SOR lookup table 'SOR-Kliniske specialer' (https://sor.sum.dsdn.dk/lookupdata/#clinical_speciality, accessable on Sundhedsdatanettet (SDN)), which is based on SNOMED codes. "] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.6.96"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "773568002" ] ;
+         fhir:display [ fhir:v "akutmedicin" ]
+       ] [
+         fhir:code [ fhir:v "408443003" ] ;
+         fhir:display [ fhir:v "almen medicin" ]
+       ] [
+         fhir:code [ fhir:v "394577000" ] ;
+         fhir:display [ fhir:v "anæstesiologi" ]
+       ] [
+         fhir:code [ fhir:v "394821009" ] ;
+         fhir:display [ fhir:v "arbejdsmedicin" ]
+       ] [
+         fhir:code [ fhir:v "394588006" ] ;
+         fhir:display [ fhir:v "børne_ og ungdomspsykiatri" ]
+       ] [
+         fhir:code [ fhir:v "394582007" ] ;
+         fhir:display [ fhir:v "dermato_venerologi" ]
+       ] [
+         fhir:code [ fhir:v "394914008" ] ;
+         fhir:display [ fhir:v "diagnostisk radiologi" ]
+       ] [
+         fhir:code [ fhir:v "394583002" ] ;
+         fhir:display [ fhir:v "endokrinologi" ]
+       ] [
+         fhir:code [ fhir:v "394811001" ] ;
+         fhir:display [ fhir:v "geriatri" ]
+       ] [
+         fhir:code [ fhir:v "394585009" ] ;
+         fhir:display [ fhir:v "gynækologi og obstetrik" ]
+       ] [
+         fhir:code [ fhir:v "408472002" ] ;
+         fhir:display [ fhir:v "hepatologi" ]
+       ] [
+         fhir:code [ fhir:v "394803006" ] ;
+         fhir:display [ fhir:v "hæmatologi" ]
+       ] [
+         fhir:code [ fhir:v "394807007" ] ;
+         fhir:display [ fhir:v "infektionsmedicin" ]
+       ] [
+         fhir:code [ fhir:v "419192003" ] ;
+         fhir:display [ fhir:v "intern medicin" ]
+       ] [
+         fhir:code [ fhir:v "394579002" ] ;
+         fhir:display [ fhir:v "kardiologi" ]
+       ] [
+         fhir:code [ fhir:v "408463005" ] ;
+         fhir:display [ fhir:v "karkirurgi" ]
+       ] [
+         fhir:code [ fhir:v "394609007" ] ;
+         fhir:display [ fhir:v "kirurgi" ]
+       ] [
+         fhir:code [ fhir:v "551411000005104" ] ;
+         fhir:display [ fhir:v "kirurgisk gastroenterologi" ]
+       ] [
+         fhir:code [ fhir:v "394596001" ] ;
+         fhir:display [ fhir:v "klinisk biokemi" ]
+       ] [
+         fhir:code [ fhir:v "394600006" ] ;
+         fhir:display [ fhir:v "klinisk farmakologi" ]
+       ] [
+         fhir:code [ fhir:v "394601005" ] ;
+         fhir:display [ fhir:v "klinisk fysiologi og nuklearmedicin (snomed: klinisk fysiologi)" ]
+       ] [
+         fhir:code [ fhir:v "394580004" ] ;
+         fhir:display [ fhir:v "klinisk genetik" ]
+       ] [
+         fhir:code [ fhir:v "421661004" ] ;
+         fhir:display [ fhir:v "klinisk immunologi" ]
+       ] [
+         fhir:code [ fhir:v "408454008" ] ;
+         fhir:display [ fhir:v "klinisk mikrobiologi" ]
+       ] [
+         fhir:code [ fhir:v "394809005" ] ;
+         fhir:display [ fhir:v "klinisk neurofysiologi" ]
+       ] [
+         fhir:code [ fhir:v "394592004" ] ;
+         fhir:display [ fhir:v "klinisk onkologi" ]
+       ] [
+         fhir:code [ fhir:v "418112009" ] ;
+         fhir:display [ fhir:v "lungesygdomme" ]
+       ] [
+         fhir:code [ fhir:v "394805004" ] ;
+         fhir:display [ fhir:v "medicinsk allergologi" ]
+       ] [
+         fhir:code [ fhir:v "394584008" ] ;
+         fhir:display [ fhir:v "medicinsk gastroenterologi" ]
+       ] [
+         fhir:code [ fhir:v "394589003" ] ;
+         fhir:display [ fhir:v "nefrologi" ]
+       ] [
+         fhir:code [ fhir:v "394610002" ] ;
+         fhir:display [ fhir:v "neurokirurgi" ]
+       ] [
+         fhir:code [ fhir:v "394591006" ] ;
+         fhir:display [ fhir:v "neurologi" ]
+       ] [
+         fhir:code [ fhir:v "394812008" ] ;
+         fhir:display [ fhir:v "odontologi (snomed: odontologiske specialer)" ]
+       ] [
+         fhir:code [ fhir:v "394594003" ] ;
+         fhir:display [ fhir:v "oftalmologi" ]
+       ] [
+         fhir:code [ fhir:v "394608004" ] ;
+         fhir:display [ fhir:v "ortodonti" ]
+       ] [
+         fhir:code [ fhir:v "394801008" ] ;
+         fhir:display [ fhir:v "ortopædisk kirurgi" ]
+       ] [
+         fhir:code [ fhir:v "394604002" ] ;
+         fhir:display [ fhir:v "oto_rhino_laryngologi" ]
+       ] [
+         fhir:code [ fhir:v "394915009" ] ;
+         fhir:display [ fhir:v "patologisk anatomi og cytologi" ]
+       ] [
+         fhir:code [ fhir:v "394611003" ] ;
+         fhir:display [ fhir:v "plastikkirurgi" ]
+       ] [
+         fhir:code [ fhir:v "394587001" ] ;
+         fhir:display [ fhir:v "psykiatri" ]
+       ] [
+         fhir:code [ fhir:v "394537008" ] ;
+         fhir:display [ fhir:v "pædiatri" ]
+       ] [
+         fhir:code [ fhir:v "394810000" ] ;
+         fhir:display [ fhir:v "reumatologi" ]
+       ] [
+         fhir:code [ fhir:v "394581000" ] ;
+         fhir:display [ fhir:v "samfundsmedicin" ]
+       ] [
+         fhir:code [ fhir:v "394605001" ] ;
+         fhir:display [ fhir:v "tand_, mund_ og kæbekirurgi" ]
+       ] [
+         fhir:code [ fhir:v "394603008" ] ;
+         fhir:display [ fhir:v "thoraxkirurgi" ]
+       ] [
+         fhir:code [ fhir:v "408448007" ] ;
+         fhir:display [ fhir:v "tropemedicin" ]
+       ] [
+         fhir:code [ fhir:v "394612005" ] ;
+         fhir:display [ fhir:v "urologi" ]
+       ] [
+         fhir:code [ fhir:v "658171000005102" ] ;
+         fhir:display [ fhir:v "hjemmepleje" ]
+       ] [
+         fhir:code [ fhir:v "658161000005107" ] ;
+         fhir:display [ fhir:v "hjemmesygepleje" ]
+       ] [
+         fhir:code [ fhir:v "658151000005105" ] ;
+         fhir:display [ fhir:v "sundhedsfremme og forebyggelse" ]
+       ] [
+         fhir:code [ fhir:v "658191000005101" ] ;
+         fhir:display [ fhir:v "sundhedspleje" ]
+       ] [
+         fhir:code [ fhir:v "658201000005103" ] ;
+         fhir:display [ fhir:v "kommunal tandpleje" ]
+       ] [
+         fhir:code [ fhir:v "658141000005108" ] ;
+         fhir:display [ fhir:v "genoptræning efter hospitalsophold" ]
+       ] [
+         fhir:code [ fhir:v "658181000005104" ] ;
+         fhir:display [ fhir:v "hjælpemiddelområdet" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
