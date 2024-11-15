@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/conditionlist/Condition/17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition 17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d</b></p><a name=\"17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d\"> </a><a name=\"hc17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d\"> </a><a name=\"17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d-en-US\"> </a><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span>, <span title=\"Codes:{http://snomed.info/sct 15240007}\">Current</span></p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.208.176.2.4.12 DF329}, {urn:oid:1.2.208.176.2.31 P76}\">Depression</span></p><p><b>subject</b>: <a href=\"Patient-d65cd8db-4520-4264-87be-a5fd01fb9762.html\">Niels Test Vendelboe (official) Male, DoB: 1974-01-30 ( urn:oid:1.2.208.176.1.2#3001749995)</a></p><p><b>recordedDate</b>: 2024-01-16</p></div>"
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       a sct:15240007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "15240007" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.4.12"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DF329" ]
+     ] [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.31"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "P76" ]
+     ] ) ;
+     fhir:text [ fhir:v "Depression" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Patient/d65cd8db-4520-4264-87be-a5fd01fb9762> ;
+     fhir:reference [ fhir:v "Patient/d65cd8db-4520-4264-87be-a5fd01fb9762" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2024-01-16"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

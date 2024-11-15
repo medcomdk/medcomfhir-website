@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/conditionlist/Condition/ff9f7978-3995-4280-9956-1101861df51e> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ff9f7978-3995-4280-9956-1101861df51e"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition ff9f7978-3995-4280-9956-1101861df51e</b></p><a name=\"ff9f7978-3995-4280-9956-1101861df51e\"> </a><a name=\"hcff9f7978-3995-4280-9956-1101861df51e\"> </a><a name=\"ff9f7978-3995-4280-9956-1101861df51e-en-US\"> </a><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 15240007}\">Current</span></p><p><b>subject</b>: <a href=\"Patient-da0f8262-1be9-420c-98fb-ecc7b5a2333c.html\">Else Test Lauridsen (official) Female, DoB: 1991-01-02 ( urn:oid:1.2.208.176.1.2#0201919990)</a></p><p><b>recordedDate</b>: 2021-06-15</p></div>"
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:15240007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "15240007" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Patient/da0f8262-1be9-420c-98fb-ecc7b5a2333c> ;
+     fhir:reference [ fhir:v "Patient/da0f8262-1be9-420c-98fb-ecc7b5a2333c" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2021-06-15"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

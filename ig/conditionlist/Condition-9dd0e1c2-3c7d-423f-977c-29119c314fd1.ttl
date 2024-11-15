@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/conditionlist/Condition/9dd0e1c2-3c7d-423f-977c-29119c314fd1> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "9dd0e1c2-3c7d-423f-977c-29119c314fd1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition 9dd0e1c2-3c7d-423f-977c-29119c314fd1</b></p><a name=\"9dd0e1c2-3c7d-423f-977c-29119c314fd1\"> </a><a name=\"hc9dd0e1c2-3c7d-423f-977c-29119c314fd1\"> </a><a name=\"9dd0e1c2-3c7d-423f-977c-29119c314fd1-en-US\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical resolved}\">Resolved</span></p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 723506003}\">Resolved (qualifier value)</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.208.176.2.4.12 DC43}, {urn:oid:1.2.208.176.2.31 S77}\">Modermærkekræft</span></p><p><b>subject</b>: <a href=\"Patient-69e475df-20c8-4f54-8cea-9843568205fd.html\">Elmer Test Hansen (official) Male, DoB: 1947-09-25 ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>onset</b>: 2023-03-20</p><p><b>abatement</b>: 2023-06-07</p><p><b>recordedDate</b>: 2023-05-01</p><p><b>note</b>: Modermærkekræft på patientens venstre læg.</p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "resolved" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:723506003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "723506003" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "encounter-diagnosis" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.4.12"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DC43" ] ;
+       fhir:display [ fhir:v "Modermærkekræft i huden" ]
+     ] [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.31"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "S77" ] ;
+       fhir:display [ fhir:v "Hudkræft" ]
+     ] ) ;
+     fhir:text [ fhir:v "Modermærkekræft" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Patient/69e475df-20c8-4f54-8cea-9843568205fd> ;
+     fhir:reference [ fhir:v "Patient/69e475df-20c8-4f54-8cea-9843568205fd" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2023-03-20"^^xsd:date] ; # 
+  fhir:abatement [ fhir:v "2023-06-07"^^xsd:date] ; # 
+  fhir:recordedDate [ fhir:v "2023-05-01"^^xsd:date] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Modermærkekræft på patientens venstre læg." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

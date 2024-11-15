@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/conditionlist/Condition/f90a8472-6495-4865-be5d-fae6650a033e> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "f90a8472-6495-4865-be5d-fae6650a033e"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition f90a8472-6495-4865-be5d-fae6650a033e</b></p><a name=\"f90a8472-6495-4865-be5d-fae6650a033e\"> </a><a name=\"hcf90a8472-6495-4865-be5d-fae6650a033e\"> </a><a name=\"f90a8472-6495-4865-be5d-fae6650a033e-en-US\"> </a><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 15240007}\">Current</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.208.176.2.4.12 DI109}, {urn:oid:1.2.208.176.2.31 K86}\">Hypertensio arterialis essentialis</span></p><p><b>subject</b>: <a href=\"Patient-69e475df-20c8-4f54-8cea-9843568205fd.html\">Elmer Test Hansen (official) Male, DoB: 1947-09-25 ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>recordedDate</b>: 2024-01-17</p></div>"
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:15240007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "15240007" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.4.12"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DI109" ] ;
+       fhir:display [ fhir:v "Essentiel Hypertension" ]
+     ] [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.31"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "K86" ] ;
+       fhir:display [ fhir:v "Ukompliceret Hypertension" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hypertensio arterialis essentialis" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Patient/69e475df-20c8-4f54-8cea-9843568205fd> ;
+     fhir:reference [ fhir:v "Patient/69e475df-20c8-4f54-8cea-9843568205fd" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2024-01-17"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,156 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/conditionlist/Bundle/9d923ef7-c817-4e41-a0c2-01c80e8bde0c> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "9d923ef7-c817-4e41-a0c2-01c80e8bde0c"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:d7380136-9bb7-4556-b9f8-107db575d52c" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2024-07-10T12:50:00+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/conditionlist/Composition/bff247c2-2330-450a-aa15-c15b85ab30b5"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/conditionlist/Composition/bff247c2-2330-450a-aa15-c15b85ab30b5> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/conditionlist/Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/conditionlist/Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/conditionlist/Organization/c2e9627a-04d2-48a3-9972-792f0bd006ab"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/conditionlist/Organization/c2e9627a-04d2-48a3-9972-792f0bd006ab> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/conditionlist/Condition/3907bd98-8f4f-4b6c-9569-e232bdd7cd3b"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/conditionlist/Condition/3907bd98-8f4f-4b6c-9569-e232bdd7cd3b> )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/conditionlist/Composition/bff247c2-2330-450a-aa15-c15b85ab30b5> a fhir:Composition ;
+  fhir:id [ fhir:v "bff247c2-2330-450a-aa15-c15b85ab30b5"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "da"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"da\" lang=\"da\"><a name=\"Composition_bff247c2-2330-450a-aa15-c15b85ab30b5\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition bff247c2-2330-450a-aa15-c15b85ab30b5</b></p><a name=\"bff247c2-2330-450a-aa15-c15b85ab30b5\"> </a><a name=\"hcbff247c2-2330-450a-aa15-c15b85ab30b5\"> </a><a name=\"bff247c2-2330-450a-aa15-c15b85ab30b5-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: da</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-conditionlist-composition.html\">MedComConditionListComposition</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11450-4}\">Problem list - Reported</span></p><p><b>date</b>: 2024-07-10 12:50:00+0100</p><p><b>author</b>: <a href=\"Organization-c2e9627a-04d2-48a3-9972-792f0bd006ab.html\">Organization MedCom Testcenter</a></p><p><b>title</b>: Diagnoseoversigt for 2509479989</p><p><b>confidentiality</b>: normal</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11450-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11450-4" ] ;
+       fhir:display [ fhir:v "Problem list - Reported" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2> ;
+     fhir:reference [ fhir:v "Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2" ]
+  ] ; # 
+  fhir:date [ fhir:v "2024-07-10T12:50:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Organization/c2e9627a-04d2-48a3-9972-792f0bd006ab> ;
+     fhir:reference [ fhir:v "Organization/c2e9627a-04d2-48a3-9972-792f0bd006ab" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Diagnoseoversigt for 2509479989"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:section ( [
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition 3907bd98-8f4f-4b6c-9569-e232bdd7cd3b</b></p><a name=\"3907bd98-8f4f-4b6c-9569-e232bdd7cd3b\"></a><a name=\"hc3907bd98-8f4f-4b6c-9569-e232bdd7cd3b\"> </a><a name=\"3907bd98-8f4f-4b6c-9569-e232bdd7cd3b-en-US\"></a><p><b>code</b>: <span title=\"Codes:\">ACB</span></p><p><b>subject</b>: <a href=\"Patient-be8156f3-41d1-47e3-847a-4b064a3b42b2.html\">Pia Test Berggren (official) Female, DoB: 2005-05-05 ( urn:oid:1.2.208.176.1.2#0505059996)</a></p><p><b>recordedDate</b>: 2024-03-15</p></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/Condition/3907bd98-8f4f-4b6c-9569-e232bdd7cd3b> ;
+       fhir:reference [ fhir:v "Condition/3907bd98-8f4f-4b6c-9569-e232bdd7cd3b" ]
+     ] )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/conditionlist/Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2> a fhir:Patient ;
+  fhir:id [ fhir:v "be8156f3-41d1-47e3-847a-4b064a3b42b2"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_be8156f3-41d1-47e3-847a-4b064a3b42b2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient be8156f3-41d1-47e3-847a-4b064a3b42b2</b></p><a name=\"be8156f3-41d1-47e3-847a-4b064a3b42b2\"> </a><a name=\"hcbe8156f3-41d1-47e3-847a-4b064a3b42b2\"> </a><a name=\"be8156f3-41d1-47e3-847a-4b064a3b42b2-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Pia Test Berggren (official) Female, DoB: 2005-05-05 ( urn:oid:1.2.208.176.1.2#0505059996)</p><hr/></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0505059996" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Berggren" ] ;
+     fhir:given ( [ fhir:v "Pia" ] [ fhir:v "Test" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "2005-05-05"^^xsd:date] . # 
+
+<http://medcomfhir.dk/ig/conditionlist/Organization/c2e9627a-04d2-48a3-9972-792f0bd006ab> a fhir:Organization ;
+  fhir:id [ fhir:v "c2e9627a-04d2-48a3-9972-792f0bd006ab"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_c2e9627a-04d2-48a3-9972-792f0bd006ab\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization c2e9627a-04d2-48a3-9972-792f0bd006ab</b></p><a name=\"c2e9627a-04d2-48a3-9972-792f0bd006ab\"> </a><a name=\"hcc2e9627a-04d2-48a3-9972-792f0bd006ab\"> </a><a name=\"c2e9627a-04d2-48a3-9972-792f0bd006ab-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:1.2.208.176.1.1</code>/325381000016008</p><p><b>name</b>: MedCom Testcenter</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "325381000016008" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "MedCom Testcenter"] . # 
+
+<http://medcomfhir.dk/ig/conditionlist/Condition/3907bd98-8f4f-4b6c-9569-e232bdd7cd3b> a fhir:Condition ;
+  fhir:id [ fhir:v "3907bd98-8f4f-4b6c-9569-e232bdd7cd3b"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_3907bd98-8f4f-4b6c-9569-e232bdd7cd3b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition 3907bd98-8f4f-4b6c-9569-e232bdd7cd3b</b></p><a name=\"3907bd98-8f4f-4b6c-9569-e232bdd7cd3b\"> </a><a name=\"hc3907bd98-8f4f-4b6c-9569-e232bdd7cd3b\"> </a><a name=\"3907bd98-8f4f-4b6c-9569-e232bdd7cd3b-en-US\"> </a><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 15240007}\">Current</span></p><p><b>code</b>: <span title=\"Codes:\">ACB</span></p><p><b>subject</b>: <a href=\"Patient-be8156f3-41d1-47e3-847a-4b064a3b42b2.html\">Pia Test Berggren (official) Female, DoB: 2005-05-05 ( urn:oid:1.2.208.176.1.2#0505059996)</a></p><p><b>recordedDate</b>: 2024-03-15</p></div>"
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:15240007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "15240007" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:code [ fhir:v "ACB" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2> ;
+     fhir:reference [ fhir:v "Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2024-03-15"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

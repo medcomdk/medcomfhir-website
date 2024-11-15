@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/conditionlist/Condition/1b66f0a7-6d59-4e6a-a2bc-874cd194674b> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "1b66f0a7-6d59-4e6a-a2bc-874cd194674b"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition 1b66f0a7-6d59-4e6a-a2bc-874cd194674b</b></p><a name=\"1b66f0a7-6d59-4e6a-a2bc-874cd194674b\"> </a><a name=\"hc1b66f0a7-6d59-4e6a-a2bc-874cd194674b\"> </a><a name=\"1b66f0a7-6d59-4e6a-a2bc-874cd194674b-en-US\"> </a><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span>, <span title=\"Codes:{http://snomed.info/sct 15240007}\">Current</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 238131007}\">Overweight</span></p><p><b>subject</b>: <a href=\"Patient-170b6e56-125d-42bf-9002-298166c4ff98.html\">Pia Test Berggren (official) Female, DoB: 2005-05-05 ( urn:oid:1.2.208.176.1.2#0505059996)</a></p><p><b>recordedDate</b>: 2020-03-15</p></div>"
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "problem-list-item" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       a sct:15240007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "15240007" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:238131007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "238131007" ] ;
+       fhir:display [ fhir:v "Overweight" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/conditionlist/Patient/170b6e56-125d-42bf-9002-298166c4ff98> ;
+     fhir:reference [ fhir:v "Patient/170b6e56-125d-42bf-9002-298166c4ff98" ]
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2020-03-15"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+
