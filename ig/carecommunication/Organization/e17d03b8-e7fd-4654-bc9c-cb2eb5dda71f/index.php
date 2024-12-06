@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.json2');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.json1');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.json');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.xml2');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.xml1');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.html');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.html');
 else 
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.xml');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/Organization-e17d03b8-e7fd-4654-bc9c-cb2eb5dda71f.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

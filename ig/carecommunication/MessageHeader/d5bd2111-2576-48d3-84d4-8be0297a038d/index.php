@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.json2');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.json1');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.json');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.xml2');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.xml1');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.html');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.html');
 else 
-  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.1/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.xml');
+  Redirect('http://medcomfhir.dk/ig/carecommunication/4.0.2/MessageHeader-d5bd2111-2576-48d3-84d4-8be0297a038d.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

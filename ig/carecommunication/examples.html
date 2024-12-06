@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Examples - DK MedCom Carecommunication v4.0.1</title>
+    <title>Examples - DK MedCom Carecommunication v4.0.2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"3"}
     h3,h4,h5,h6{--heading-prefix:"3"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
@@ -59,7 +60,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom Carecommunication</span>
             <br/>
-            <span style="display:inline-block;">4.0.1 - release
+            <span style="display:inline-block;">4.0.2 - release
 
 
 
@@ -143,7 +144,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">This page is part of the DK MedCom CareCommunication (v4.0.1: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. The current version which supersedes this version is <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication">2.0.0</a>.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">This page is part of the DK MedCom CareCommunication (v4.0.2: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. The current version which supersedes this version is <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication">2.0.0</a>.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Examples</h2>
   
 
@@ -179,7 +180,7 @@ C replies to B <br/></p>
 
 <p>The initial message sent from Hjerteafdelingen på Herlev og Gentofte hospital to Plejecenter Herlev.</p>
 
-<p>The message includes one message segment and a new communication identifier. As it is a new message, the activity is in the Provenance instance ‘new-message’. The sender and receiver organizations are both referenced from the MessageHeader.</p>
+<p>The message includes one message segment and a new communication identifier. As it is a new message, the activity is in the Provenance instance 'new-message'. The sender and receiver organizations are both referenced from the MessageHeader.</p>
 
 <p>The CareCommunication contains a topic at Communication.topic.</p>
 
@@ -187,7 +188,7 @@ C replies to B <br/></p>
 
 <p><a href="Bundle-b56549f7-ed10-422d-8088-f7222b686e46.html">2nd message</a></p>
 
-<p>A reply to the 1st message. Since it is a reply to the latest CareCommunication, the Communication.identifier remains the same. Two Communication.payload is added which includes the reply to the new message, since a message text and an attachment are included. The activity is in the Provenance instance ‘reply-message’.</p>
+<p>A reply to the 1st message. Since it is a reply to the latest CareCommunication, the Communication.identifier remains the same. Two Communication.payload is added which includes the reply to the new message, since a message text and an attachment are included. The activity is in the Provenance instance 'reply-message'.</p>
 
 <p>The author of the second CareCommunication has included an attachment without structured author information.</p>
 
@@ -202,7 +203,7 @@ The unique ids of the instances are updated, however the referenced MessageHeade
 
 <p><a href="Bundle-c0426e3e-978f-46e8-a366-a30f27854b0a.html">4th message</a></p>
 
-<p>This is a forwarding of the 3rd message. Therefore is the Communication.identifier updated and the base64-encoded content from the attachment in the 2nd message is included. Additionally, is a Communciation.payload added with a reason for the forwarding. The user decides not to forward the topic, why it is not included in the CareCommunication. The activity in the Provenance instance is ‘forward-message’. A new receiver organization is included. The sender organization does not include a name in Organization.name.</p>
+<p>This is a forwarding of the 3rd message. Therefore is the Communication.identifier updated and the base64-encoded content from the attachment in the 2nd message is included. Additionally, is a Communciation.payload added with a reason for the forwarding. The user decides not to forward the topic, why it is not included in the CareCommunication. The activity in the Provenance instance is 'forward-message'. A new receiver organization is included. The sender organization does not include a name in Organization.name.</p>
 
 <h2 id="5th-message---reply-carecommunication">5th message - reply CareCommunication</h2>
 
@@ -221,10 +222,10 @@ The author role is not from the list of roles, but is included as at Practitione
 
 <p>This includes</p>
 <ul>
-  <li>Category as ‘regarding-referal’ and priority</li>
+  <li>Category as 'regarding-referal' and priority</li>
   <li>Topic that elaborates the category</li>
-  <li><a name="l375">​</a>The episodeOfCare-identifier is included in the Encounter instance and referenced from the Communication instance, as the user of a hospital system in the context of an admission, when creating a CareCommunication. Other usages is described on the page for the <a href="StructureDefinition-medcom-careCommunication-communication-intro.html">MedComCareCommunication profile</a>.</li>
-  <li><a name="l381">​</a>Specifik sender and recipient, which are described in CareTeam and Practitioner/PractitionerRole instances. This is further described on the page for the <a href="StructureDefinition-medcom-careCommunication-communication-intro.html">MedComCareCommunication profile</a></li>
+  <li><a name="l381">​</a>The episodeOfCare-identifier is included in the Encounter instance and referenced from the Communication instance, as the user of a hospital system in the context of an admission, when creating a CareCommunication. Other usages is described on the page for the <a href="StructureDefinition-medcom-careCommunication-communication-intro.html">MedComCareCommunication profile</a>.</li>
+  <li><a name="l387">​</a>Specifik sender and recipient, which are described in CareTeam and Practitioner/PractitionerRole instances. This is further described on the page for the <a href="StructureDefinition-medcom-careCommunication-communication-intro.html">MedComCareCommunication profile</a></li>
   <li>Structured author information for the author of the attached pdf-document.</li>
   <li>An attachment in terms of an URL.</li>
 </ul>
@@ -233,7 +234,7 @@ The author role is not from the list of roles, but is included as at Practitione
 
 <p><a href="Bundle-0d5b3c18-fab6-4d93-9d88-c9c8abf1f18c.html">CareCommunication where the patient has a replacement-CPR.</a></p>
 
-<p>It is allowed to send a CareCommunication for a patient with a replacement-CPR (Danish: erstatnings-CPR or ecpr). In the example, the replacement-CPR is from the national eCPR service, defined by the Patient.identifier.system = “urn:oid:1.2.208.176.1.6.1.1”. Further, an EpisodeOfCare-identifier (Danish: forløbsid) is included in the Encounter instance.</p>
+<p>It is allowed to send a CareCommunication for a patient with a replacement-CPR (Danish: erstatnings-CPR or ecpr). In the example, the replacement-CPR is from the national eCPR service, defined by the Patient.identifier.system = "urn:oid:1.2.208.176.1.6.1.1". Further, an EpisodeOfCare-identifier (Danish: forløbsid) is included in the Encounter instance.</p>
 
 <h2 id="carecommunication-as-a-reply-to-an-oioxml-or-edifact-message">CareCommunication as a reply to an OIOXML or EDIFACT message</h2>
 
@@ -260,7 +261,7 @@ The author role is not from the list of roles, but is included as at Practitione
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.carecommunication#4.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 18, 2024 11:42+0200">2024-07-18</span>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.carecommunication#4.0.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 7, 2024 14:20+0100">2024-11-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -279,7 +280,7 @@ The author role is not from the list of roles, but is included as at Practitione
     <div class="container">    <!-- container -->
     </div>    <!-- /container -->
   </div>    <!-- /segment-post-footer -->
-  
+
     <!-- JS and analytics only. -->
     <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -290,7 +291,6 @@ The author role is not from the list of roles, but is included as at Practitione
   <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
   <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
   <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
-  
     <!-- Analytics Below
   ================================================== -->
   </body>

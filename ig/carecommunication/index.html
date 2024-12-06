@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Home - DK MedCom Carecommunication v4.0.1</title>
+    <title>Home - DK MedCom Carecommunication v4.0.2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -40,7 +40,8 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"1"}
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
@@ -59,7 +60,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom Carecommunication</span>
             <br/>
-            <span style="display:inline-block;">4.0.1 - release
+            <span style="display:inline-block;">4.0.2 - release
 
 
 
@@ -143,7 +144,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">This page is part of the DK MedCom CareCommunication (v4.0.1: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. The current version which supersedes this version is <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication">2.0.0</a>.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">This page is part of the DK MedCom CareCommunication (v4.0.2: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. The current version which supersedes this version is <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication">2.0.0</a>.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/carecommunication/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   <h2>Home</h2>
   
 
@@ -158,7 +159,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication<button data-clipboard-text="http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">4.0.1<button data-clipboard-text="http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication|4.0.1" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      <span class="copy-text">4.0.2<button data-clipboard-text="http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication|4.0.2" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -174,7 +175,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2024-07-18
+            as of 2024-11-07
           
         
       </td>
@@ -238,17 +239,17 @@ The CareCommunication supports:</p>
 
 <h5 id="medcomcarecommunicationmessage">MedComCareCommunicationMessage</h5>
 
-<p><a name="l390">​</a>The <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-message.html">MedComCareCommunicationMessage</a> is a constraint of <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> further to use the <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-messageHeader.html">MedComCareCommunicationMessageHeader</a> and to require exactly one <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html">MedComCorePatient</a> resource in the message. Furthermore, it contains rules that constrains the ValueSet of activities in the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> profile to only contain activities from the <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-messagingActivities.html">MedComCareCommunicationMessageActivities ValueSet</a>, which contains the activities new-message, reply-message and forward-message.</p>
+<p><a name="l396">​</a>The <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-message.html">MedComCareCommunicationMessage</a> is a constraint of <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> further to use the <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-messageHeader.html">MedComCareCommunicationMessageHeader</a> and to require exactly one <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html">MedComCorePatient</a> resource in the message. Furthermore, it contains rules that constrains the ValueSet of activities in the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> profile to only contain activities from the <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-messagingActivities.html">MedComCareCommunicationMessageActivities ValueSet</a>, which contains the activities new-message, reply-message and forward-message.</p>
 
 <p>All referenced resources within the message shall be contained in the entry list in MedCom CareCommunication.</p>
 
 <h5 id="medcomcarecommunicationmessageheader">MedComCareCommunicationMessageHeader</h5>
 
-<p><a name="l417">​</a>The <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-messageHeader.html">MedComCareCommunicationMessageHeader</a> constrains the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> further to specify the fixed coding for this message and require a focus reference to a MedComCareCommunication profile.</p>
+<p><a name="l423">​</a>The <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-messageHeader.html">MedComCareCommunicationMessageHeader</a> constrains the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> further to specify the fixed coding for this message and require a focus reference to a MedComCareCommunication profile.</p>
 
 <h5 id="medcomcarecommunication">MedComCareCommunication</h5>
 
-<p><a name="l429">​</a>The <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-communication.html">MedComCareCommunication</a> profile contains the main content of the message. It based on the Communication resource. MedComCareCommunication profile shall include a category code as defined in the <a href="http://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html">MedComCareCommunicationCategories ValueSet</a> and it is allowed to add a topic of the message which may be in free text or from a regionally agreed list of topics that supports and elaborates the category.</p>
+<p><a name="l435">​</a>The <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-communication.html">MedComCareCommunication</a> profile contains the main content of the message. It based on the Communication resource. MedComCareCommunication profile shall include a category code as defined in the <a href="http://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html">MedComCareCommunicationCategories ValueSet</a> and it is allowed to add a topic of the message which may be in free text or from a regionally agreed list of topics that supports and elaborates the category.</p>
 
 <p>The profile also includes one or more message segment that consists of a message text and associated signature or an attachment. In MedComCareCommunication profile message segments can be found under the element Communication.payload. A CareCommunication shall always include a message segment with a message text and associated signature. A CareCommunication may include zero or more message segments with an attachment. <a href="./StructureDefinition-medcom-careCommunication-communication.html#message-segments">Click here for more information about message segments</a></p>
 
@@ -265,14 +266,14 @@ The CareCommunication supports:</p>
 
 <h5 id="medcomcarecommunicationprovenance">MedComCareCommunicationProvenance</h5>
 
-<p><a name="l484">​</a>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-carecommunication-provenance.html">MedComCareCommunicationProvenance</a> profile is used to track information about the activity of the communication, e.g. if the message describes a ‘new-message’ or ‘reply-message’. Activity codes can be found in <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-messagingActivities.html">MedComCareCommunicationMessageActivityCodes ValueSet</a> on the Terminology IG. Note that all not activity codes are allowed for a CareCommunication. The allowed activity codes are: new-message, reply-message and forward-message.</p>
+<p><a name="l490">​</a>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-carecommunication-provenance.html">MedComCareCommunicationProvenance</a> profile is used to track information about the activity of the communication, e.g. if the message describes a 'new-message' or 'reply-message'. Activity codes can be found in <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-messagingActivities.html">MedComCareCommunicationMessageActivityCodes ValueSet</a> on the Terminology IG. Note that all not activity codes are allowed for a CareCommunication. The allowed activity codes are: new-message, reply-message and forward-message.</p>
 
 <p>In cases of a previously sent CareCommunications, MedComMessagingProvenance references the metadata of the latest message which makes it possible to create a historic overview of the admission.</p>
 
 <h4 id="timestamps">Timestamps</h4>
-<p><a name="l499">​</a>A CareCommunication includes several timestamps. These timestamps are present in the profiles <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-communication.html">MedComCareCommunication</a>, <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-message.html">MedComCareCommunicationMessage</a>, and <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> and have different purposes:</p>
+<p><a name="l505">​</a>A CareCommunication includes several timestamps. These timestamps are present in the profiles <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-communication.html">MedComCareCommunication</a>, <a href="http://medcomfhir.dk/ig/carecommunication/StructureDefinition-medcom-careCommunication-message.html">MedComCareCommunicationMessage</a>, and <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> and have different purposes:</p>
 <ul>
-  <li>Communication.payload.extension:date represents real world event, where the user presses “send” to send the CareCommunication. Each message segment, both string and attachment, will be registered with a date and time for this event.</li>
+  <li>Communication.payload.extension:date represents real world event, where the user presses "send" to send the CareCommunication. Each message segment, both string and attachment, will be registered with a date and time for this event.</li>
   <li>Bundle.timestamp represents the time bundle is generated.</li>
   <li>Provenance.occuredDateTime[x] represents the time the CareCommunication is sent, in a human-readable time</li>
   <li>Provenance.recorded represents the time the CareCommunication is sent, in a machine-readable time</li>
@@ -324,7 +325,7 @@ The CareCommunication supports:</p>
 
 <p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this IG.</p>
 
-<p>If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom’s stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
+<p>If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom's stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
 
 
 
@@ -345,7 +346,7 @@ The CareCommunication supports:</p>
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.carecommunication#4.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 18, 2024 11:42+0200">2024-07-18</span>
+          IG &copy; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.carecommunication#4.0.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 7, 2024 14:20+0100">2024-11-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -364,7 +365,7 @@ The CareCommunication supports:</p>
     <div class="container">    <!-- container -->
     </div>    <!-- /container -->
   </div>    <!-- /segment-post-footer -->
-  
+
     <!-- JS and analytics only. -->
     <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -375,7 +376,6 @@ The CareCommunication supports:</p>
   <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
   <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
   <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
-  
     <!-- Analytics Below
   ================================================== -->
   </body>
