@@ -4,46 +4,45 @@
 <head>
    <meta charset="UTF-8"/>
   <title>DK MedCom Document</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="author" content="http://www.hl7.org"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="http://www.hl7.org"/>
   <link href="fhir.css" rel="stylesheet"/>
-
-   <!-- Bootstrap core CSS -->
   <link href="dist-hist/css/bootstrap.css" rel="stylesheet"/>
   <link href="assets-hist/css/bootstrap-fhir.css" rel="stylesheet"/>
-
-  <!-- Project extras -->
   <link href="assets-hist/css/project.css" rel="stylesheet"/>
   <link href="assets-hist/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="jquery-ui.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/hl7-dk.css"/>
-
-  <!-- Favicons -->
+  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
+  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
+  <link href="history.css" rel="stylesheet"/>
+  <!-- header.template starts here -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets-hist/ico/apple-touch-icon-144-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets-hist/ico/apple-touch-icon-114-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets-hist/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="assets-hist/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets-hist/ico/favicon.png"/>
-  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
-  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
-  <link href="history.css" rel="stylesheet"/>
 
+  <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+  <link href="assets/css/colors.css" rel="stylesheet"/>
+
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>  
+  <!-- header.template ends here -->
 </head>
-<body onload="document.body.style.opacity='1'">
-
+<!-- preamble.template starts here -->
+<body>
  <div id="segment-header" class="segment">  <!-- segment-header -->
   <div class="container">  <!-- container -->
+
     <div id="project-nav">
-          <a no-external="true" id="hl7-logo" href="https://github.com/medcomdk">
-            <img src="assets/image/medcom-logo-header.png" alt="MedCom" height="65"/>
-          </a>
-  </div>
-  <div id="fhir-nav">
-    <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/>
-    </a>
-   </div>
+      <a id="dk-logo" no-external="true" href="http://hl7.dk">
+        <img height="71" alt="HL7 DK" src="assets/images/HL7_Denmark.png"/>
+      </a>
+    </div>
+    <div id="family-nav">
+      <a id="fhir-logo" no-external="true" href="http://hl7.dk"><img height="50" style="margin-top: 15px;" alt="HL7 Denmark" src="assets/images/fire.png"/> </a>
+        </a>
+    </div>    
+    
    <div id="ig-status" style="font-size:24px;padding-top: 20px;">
 <b id="ig-title">DK MedCom Document</b>
 </div>
@@ -89,6 +88,7 @@
             <div class="row">
              <div class="inner-wrapper">
 
+<!-- preamble.template ends here -->
 
 <div class="col-12">
 
@@ -103,6 +103,7 @@
     #history-data table td { padding-right: 1em; }
 </style>
 
+  <!-- postamble.template starts here -->
   <!-- ==============END CONTENT END CONTENT=================== -->
 
 <p></p>
@@ -129,7 +130,7 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      <span id="ig-footer">TBD </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
+      <span id="ig-footer">medcom.fhir.dk.document </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
@@ -145,14 +146,15 @@
   </div>  <!-- /container -->
  </div>  <!-- /segment-post-footer -->
 
- <!-- JS and analytics only. -->
+  <!-- postamble.template ends here -->
+
+<!-- JS and analytics only. -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./assets-hist/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./dist-hist/js/bootstrap.min.js"> </script>
 <script src="./assets-hist/js/respond.min.js"> </script>
-
 <script src="./assets-hist/js/fhir.js"> </script>
 
 <!-- Analytics Below
@@ -160,7 +162,7 @@
 
 <!--- Include in the page --->
 <script>
-var pageJSON = '{"list":[{"version":"current","path":"https://build.fhir.org/ig/medcomdk/dk-medcom-document","status":"ci-build","sequence":"ci-build","desc":"Continuous Integration Build (latest in version control) - Content subject to frequent changes"},{"version":"1.0.0","path":"http://medcomfhir.dk/ig/document/1.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-11-15","descmd":"Initial commit of DK MedCom Document IG"}],"package-id":"medcom.fhir.dk.document","canonical":"http://medcomfhir.dk/ig/document","title":"DK MedCom Document","category":"MedCom Document","introduction":"The MedCom Document Implementation Guide includes profiles developed to be used in MedCom documents."}';
+var pageJSON = '{"list":[{"version":"current","path":"https://build.fhir.org/ig/medcomdk/dk-medcom-document","status":"ci-build","sequence":"ci-build","desc":"Continuous Integration Build (latest in version control) - Content subject to frequent changes"},{"version":"1.0.1","path":"http://medcomfhir.dk/ig/document/1.0.1","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2025-05-07","current":true,"descmd":"Fixes pathing issues of the package and publishes it properly"},{"version":"1.0.0","path":"http://medcomfhir.dk/ig/document/1.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-11-15","descmd":"Initial commit of DK MedCom Document IG"}],"package-id":"medcom.fhir.dk.document","canonical":"http://medcomfhir.dk/ig/document","title":"DK MedCom Document","category":"MedCom Document","introduction":"The MedCom Document Implementation Guide includes profiles developed to be used in MedCom documents."}';
 load(pageJSON);
 </script>
 
