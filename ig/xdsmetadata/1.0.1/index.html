@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home - Dk Terminology for XDS Metadata v1.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Dk Terminology for XDS Metadata</span>
+            <br/>
+            <span style="display:inline-block;">1.0.1 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Dk Terminology for XDS Metadata (v1.0.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/xdsmetadata/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/xdsmetadata/ImplementationGuide/medcom.fhir.dk.xdsmetadata<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/xdsmetadata/ImplementationGuide/medcom.fhir.dk.xdsmetadata"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/xdsmetadata/ImplementationGuide/medcom.fhir.dk.xdsmetadata|1.0.1"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2025-05-08
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">TerminologyforXDSMetadata</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#terminology-for-xds-metadata" id="markdown-toc-terminology-for-xds-metadata">Terminology for XDS Metadata</a>    <ul>
+      <li><a href="#content" id="markdown-toc-content">Content</a>        <ul>
+          <li><a href="#valuesets" id="markdown-toc-valuesets">ValueSets</a></li>
+          <li><a href="#codesystems" id="markdown-toc-codesystems">CodeSystems</a></li>
+        </ul>
+      </li>
+      <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+      <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="terminology-for-xds-metadata">Terminology for XDS Metadata</h1>
+<p>This Implementation Guide (IG) is a FHIR representation of the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/OID/">ValueSets in defined in the IHE-XDS metadata</a>. The ValueSets are used to define the allowed codes for a coded element in the metadata standard. A FHIR representation of the submission of <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/">IHE-XDS metadata standard</a> has also been developed using the FHIR resource DocumentReference. The <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-document/StructureDefinition-medcom-documentreference.html">profile MedComDocumentReference</a> includes bindings to the ValueSets in this IG.</p>
+
+<p>The <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/">IHE-XDS metadata standard</a> and <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/OID/">IHE-XDS metadata ValueSets</a> are currently the officially valid representations of the Danish XDS MetaData Standard and its allowed metadata and codes, respectively.</p>
+
+<blockquote>
+  <p>Please notice: This IG is published as trial use. This version is published to support metadata of the document standard ConditionList. Therefore, only generic ValueSets and specific ValueSets for that standard is included, and more ValueSets should be expected to be included.</p>
+</blockquote>
+
+<h2 id="content">Content</h2>
+<p>This IG includes ValueSets used in the MedComDocumentReference profile. Further, it includes relevant CodeSystems defined by MedCom.</p>
+
+<h3 id="valuesets">ValueSets</h3>
+<p>Codes represented in the ValueSets comes from more CodeSystems, intended for use in a particular context. For each coded element in the DocumentReference profile, a ValueSet is included. The included ValueSet can either be generic across metadata for all standards, e.g. <a href="ValueSet-MedCom-ihe-core-HealthcareFacilityTypeCode-VS.html">HealthCareFacilityTypeCode</a>, or specific for the individual standard, e.g. <a href="ValueSet-MedCom-ihe-plr-formatcode-VS.html">formatcode</a>. Therefore, several ValueSets for representing e.g. formatCode can be found, one for each type of MedCom document standard.</p>
+
+<h3 id="codesystems">CodeSystems</h3>
+<p>CodeSystems defines which codes exists and how they should be understood to avoid ambiguities. As mentioned, this IG only includes relevant CodeSystems defined by MedCom, whereas CodeSystems defined by other organizations can be found elsewhere.</p>
+
+<p>The codes in the ValueSet origin from different CodeSystems that are owned by different organizations. In the table below, these CodeSystems are represented with an OID, name, description from the <a href="http://www.oid-info.com/">OID-repository</a>, and owner of the CodeSystem.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">OID</th>
+    <th class="tg-7btt">Name</th>
+    <th class="tg-fymr">Description from OID-registry</th>
+    <th class="tg-7btt">Owner</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.96</td>
+    <td class="tg-c3ow">SCT</td>
+    <td class="tg-0pky">Systematized Nomenclature Of MEDicine (SNOMED) Clinical Terms (CT)</td>
+    <td class="tg-c3ow">IHTSDO</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.1</td>
+    <td class="tg-c3ow">LOINC</td>
+    <td class="tg-0pky">Logical Observation Identifier Names and Codes (LOINC)</td>
+    <td class="tg-c3ow">Regenstrief Institute</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.5.79</td>
+    <td class="tg-c3ow">mediaType</td>
+    <td class="tg-0pky">mediaType</td>
+    <td class="tg-c3ow">HL7</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.121</td>
+    <td class="tg-c3ow">ieft3066</td>
+    <td class="tg-0pky">Tags for the Identification of Languages</td>
+    <td class="tg-c3ow">HL7</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.5.25</td>
+    <td class="tg-c3ow">Confidentiality</td>
+    <td class="tg-0pky">Confidentiality</td>
+    <td class="tg-c3ow">HL7</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.176.2.4</td>
+    <td class="tg-c3ow">SKS</td>
+    <td class="tg-0pky">Danish collection of code systems in national health reporting (in Danish, Sundhedsvæsenets Klassifikations System (SKS))</td>
+    <td class="tg-c3ow">Danish Health Data Authority</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.176.2.1</td>
+    <td class="tg-c3ow">NPU</td>
+    <td class="tg-0pky">Nomenclature for Properties and Units (NPU) terminology in Danish</td>
+    <td class="tg-c3ow">Danish Health Data Authority</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.176.7.3.1</td>
+    <td class="tg-c3ow">schema-list</td>
+    <td class="tg-0pky">Questionnaires used in the Danish Patient Reported Outcome (PRO)</td>
+    <td class="tg-c3ow">Danish Health Data Authority</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.176.8.1</td>
+    <td class="tg-c3ow">ihe</td>
+    <td class="tg-0pky">Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain</td>
+    <td class="tg-c3ow">Danish Health Data Authority</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.9</td>
+    <td class="tg-c3ow">classcode</td>
+    <td class="tg-0pky">Danish Integrating the Healthcare Enterprise (IHE) metadata class codes</td>
+    <td class="tg-c3ow">MedCom</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.1</td>
+    <td class="tg-c3ow">message-codes</td>
+    <td class="tg-0pky">Message codes administered by MedCom</td>
+    <td class="tg-c3ow">MedCom</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.10</td>
+    <td class="tg-c3ow">formatcode</td>
+    <td class="tg-0pky">Danish Integrating the Healthcare Enterprise (IHE) metadata format codes</td>
+    <td class="tg-c3ow">MedCom</td>
+  </tr>
+</tbody>
+</table>
+
+<h2 id="usage">Usage</h2>
+<p>​Currently it is possible to <a href="downloads.html">download</a> the ValueSets and CodeSystems in different formats. The vendor of the system is responsible for using updated terminologies.</p>
+
+<p>The date of the recent update can be seen in the bottom of this page, but to see if a specific CodeSystem, ValueSet or ConceptMap is updated, you’ll have to look at the specific terminology and see if the version has been changed. In the ‘History’-tab the history of the IG can be seen.</p>
+
+<h2 id="contact">Contact</h2>
+<p><a href="https://medcom.dk/">MedCom</a> is responsible for this site. If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom’s stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.xdsmetadata#1.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 8, 2025 11:39+0000">2025-05-08</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
