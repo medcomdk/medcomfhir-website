@@ -4,46 +4,45 @@
 <head>
    <meta charset="UTF-8"/>
   <title>MedCom Terminology</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="author" content="http://www.hl7.org"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="http://www.hl7.org"/>
   <link href="fhir.css" rel="stylesheet"/>
-
-   <!-- Bootstrap core CSS -->
   <link href="dist-hist/css/bootstrap.css" rel="stylesheet"/>
   <link href="assets-hist/css/bootstrap-fhir.css" rel="stylesheet"/>
-
-  <!-- Project extras -->
   <link href="assets-hist/css/project.css" rel="stylesheet"/>
   <link href="assets-hist/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="jquery-ui.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/hl7-dk.css"/>
-
-  <!-- Favicons -->
+  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
+  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
+  <link href="history.css" rel="stylesheet"/>
+  <!-- header.template starts here -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets-hist/ico/apple-touch-icon-144-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets-hist/ico/apple-touch-icon-114-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets-hist/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="assets-hist/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets-hist/ico/favicon.png"/>
-  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
-  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
-  <link href="history.css" rel="stylesheet"/>
 
+  <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+  <link href="assets/css/colors.css" rel="stylesheet"/>
+
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>  
+  <!-- header.template ends here -->
 </head>
-<body onload="document.body.style.opacity='1'">
-
+<!-- preamble.template starts here -->
+<body>
  <div id="segment-header" class="segment">  <!-- segment-header -->
   <div class="container">  <!-- container -->
+
     <div id="project-nav">
-          <a no-external="true" id="hl7-logo" href="https://github.com/medcomdk">
-            <img src="assets/image/medcom-logo-header.png" alt="MedCom" height="65"/>
-          </a>
-  </div>
-  <div id="fhir-nav">
-    <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/>
-    </a>
-   </div>
+      <a id="dk-logo" no-external="true" href="http://hl7.dk">
+        <img height="71" alt="HL7 DK" src="assets/images/HL7_Denmark.png"/>
+      </a>
+    </div>
+    <div id="family-nav">
+      <a id="fhir-logo" no-external="true" href="http://hl7.dk"><img height="50" style="margin-top: 15px;" alt="HL7 Denmark" src="assets/images/fire.png"/> </a>
+        </a>
+    </div>    
+    
    <div id="ig-status" style="font-size:24px;padding-top: 20px;">
 <b id="ig-title">MedCom Terminology</b>
 </div>
@@ -89,6 +88,7 @@
             <div class="row">
              <div class="inner-wrapper">
 
+<!-- preamble.template ends here -->
 
 <div class="col-12">
 
@@ -103,6 +103,7 @@
     #history-data table td { padding-right: 1em; }
 </style>
 
+  <!-- postamble.template starts here -->
   <!-- ==============END CONTENT END CONTENT=================== -->
 
 <p></p>
@@ -129,7 +130,7 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      <span id="ig-footer">TBD </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
+      <span id="ig-footer">medcom.fhir.dk.terminology </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
@@ -145,14 +146,15 @@
   </div>  <!-- /container -->
  </div>  <!-- /segment-post-footer -->
 
- <!-- JS and analytics only. -->
+  <!-- postamble.template ends here -->
+
+<!-- JS and analytics only. -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./assets-hist/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./dist-hist/js/bootstrap.min.js"> </script>
 <script src="./assets-hist/js/respond.min.js"> </script>
-
 <script src="./assets-hist/js/fhir.js"> </script>
 
 <!-- Analytics Below
@@ -160,7 +162,7 @@
 
 <!--- Include in the page --->
 <script>
-var pageJSON = '{"package-id":"medcom.fhir.dk.terminology","title":"MedCom Terminology","canonical":"http://medcomfhir.dk/ig/terminology","introduction":"The MedCom Terminology Implementation Guide covers the common terminology parts of the MedCom IGs","category":"MedCom Terminology","list":[{"version":"current","desc":"Continuous Integration Build","path":"http://build.fhir.org/ig/medcomdk/dk-medcom-terminology","status":"ci-build","current":true},{"version":"1.8.0","path":"http://medcomfhir.dk/ig/terminology/1.8.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2024-11-12","descmd":"* Added the ValueSet MedComConditionListStatus","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases","current":true},{"version":"1.7.0","path":"http://medcomfhir.dk/ig/terminology/1.7.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2024-06-26","descmd":"* Added CodeSystems and ValueSet for use in MedComMessagingMessageDefinition profile. This includes MessageDefinitionIdentifierSystem, MessageDefinitionIdentifierSystemVS, MedComMessageDefinitionType, MedComMessageDefinitionTypeVS, and MedComUseContextCodeSystemVS.\r\n* Removed the CodeSystem and ValueSet for replacement-cpr (e-cpr), as DkCore include systems supporting this.\r\n* Updated *https* to *http* in url in the ValueSet MedComHospitalNotificationMessageActivities","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.6.0","path":"http://medcomfhir.dk/ig/terminology/1.6.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2024-02-05","descmd":"* Added the code image/bmp to the ValueSet MedComCoreAttachmentMimeTypes to support the CareCommunication standard.\r\n* Added the code NAVU to the ValueSet MedComCorePractitionerRoles to support the CareCommunication standard.\r\n* Updated the codes in CodeSystem MedComObservationResultGroup and ValueSet MedComObservarionResponesGroupValueSet\r\n* Updated the CodeSystem reference in the ValueSet MedComAcknowledgementIssueDetailValues","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.5.0","path":"http://medcomfhir.dk/ig/terminology/1.5.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2023-10-31","descmd":"Added ValueSets and Codsystem that shall be used in HomecareObservation message:\r\n* MedComInterpretationCodes\r\n* MedComCoreObservationStatus\r\n* MedComDiagnosticReportCodes\r\n* MedComDiagnosticReportStatus\r\n* MedComHomeCareObservationMessageActivityCodes\r\n* MedComMessagingMessageType\r\n* MedComObservationGroup\r\n* MedComObservationCodes\r\n* MedComProducerID\r\n* NPUObservationCodes\r\n* Experimental flag added to CodeSystems and ValueSets Updated MedComMessagingMapFhirToSorEdi ConceptMap","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.4.0","path":"http://medcomfhir.dk/ig/terminology/1.4.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2023-07-11","descmd":"* CodeSystem MedComAcknowledgementErrorCodes is included\r\n* ValueSet MedComAcknowledgementIssueDetails is updated to include codes from MedComAcknowledgementErrorCodes and [operation-outcome](http://hl7.org/fhir/ValueSet/operation-outcome)\r\n* In ValueSet MedComCorePractitionerRoles, the display value of two codes (radiograf and socialogsundhedsassistent) is modified. \r\n* In CodeSystem MedComMessagingSorEdiCodeSystem and ValueSet MedComMessagingSorEdiValues, the display values of FDIS91 and FDIS20 are switched\r\n* Added experimental-flag to CodeSystems and ValueSet","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.3.0","path":"http://medcomfhir.dk/ig/terminology/1.3.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2023-04-14","descmd":"* Added CodeSystem with reasons for cancellation, called MedComMessagingCancellationReason. ","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.2.0","path":"http://medcomfhir.dk/ig/terminology/1.2.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2023-03-10","descmd":"* Added the code `FCTL` and display value to CodeSystem MedComMessagingSorEdiSystem, ValueSet MedComMessagingSorEdiValues and added Acknowledgement as codes in the ConceptMap MedComMessagingMapFhirToSorEdi."},{"version":"1.1.1","date":"2023-01-05","path":"http://medcomfhir.dk/ig/terminology/1.1.1","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"Alligned the content of display values in the CodeSystem MedComMessagingActivityCodes and ValueSet MedComHospitalNotificationMessageActivityCodes.\r\n"},{"version":"1.1.0","date":"2022-11-21","path":"http://medcomfhir.dk/ig/terminology/1.1.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"- Added the CodeSystem MedComCorePractitionerRolesAutorisationsregistret and MedComCorePractitionerRolesSKSadministrativ and the ValueSet MedComCorePractitionerRoles to describe the roles of a practitioner.\n- The ValueSet MedComCareCommunicationMessageActivityCodes was updated as the code `carbon copy` was deprecated.\n- The ValueSet MedComCoreAttachmentMimeTypes was updated as the code `tiff` was added\n- The CodeSystem MedComCareCommunicationCategoryCodes was updated as Danish translations were added\n"}]}';
+var pageJSON = '{"package-id":"medcom.fhir.dk.terminology","title":"MedCom Terminology","canonical":"http://medcomfhir.dk/ig/terminology","introduction":"The MedCom Terminology Implementation Guide covers the common terminology parts of the MedCom IGs","category":"MedCom Terminology","list":[{"version":"current","desc":"Continuous Integration Build","path":"http://build.fhir.org/ig/medcomdk/dk-medcom-terminology","status":"ci-build","current":true},{"version":"1.8.1","path":"http://medcomfhir.dk/ig/terminology/1.8.1","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2025-05-09","current":true,"descmd":"Fix to hyperlink pathing issues to a local path `C:\\Users\\TMS...`","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.8.0","path":"http://medcomfhir.dk/ig/terminology/1.8.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2024-11-12","descmd":"* Added the ValueSet MedComConditionListStatus","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.6.0","path":"http://medcomfhir.dk/ig/terminology/1.6.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2024-02-05","descmd":"* Added the code image/bmp to the ValueSet MedComCoreAttachmentMimeTypes to support the CareCommunication standard.\r\n* Added the code NAVU to the ValueSet MedComCorePractitionerRoles to support the CareCommunication standard.\r\n* Updated the codes in CodeSystem MedComObservationResultGroup and ValueSet MedComObservarionResponesGroupValueSet\r\n* Updated the CodeSystem reference in the ValueSet MedComAcknowledgementIssueDetailValues","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.5.0","path":"http://medcomfhir.dk/ig/terminology/1.5.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2023-10-31","descmd":"Added ValueSets and Codsystem that shall be used in HomecareObservation message:\r\n* MedComInterpretationCodes\r\n* MedComCoreObservationStatus\r\n* MedComDiagnosticReportCodes\r\n* MedComDiagnosticReportStatus\r\n* MedComHomeCareObservationMessageActivityCodes\r\n* MedComMessagingMessageType\r\n* MedComObservationGroup\r\n* MedComObservationCodes\r\n* MedComProducerID\r\n* NPUObservationCodes\r\n* Experimental flag added to CodeSystems and ValueSets Updated MedComMessagingMapFhirToSorEdi ConceptMap","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.4.0","path":"http://medcomfhir.dk/ig/terminology/1.4.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2023-07-11","descmd":"* CodeSystem MedComAcknowledgementErrorCodes is included\r\n* ValueSet MedComAcknowledgementIssueDetails is updated to include codes from MedComAcknowledgementErrorCodes and [operation-outcome](http://hl7.org/fhir/ValueSet/operation-outcome)\r\n* In ValueSet MedComCorePractitionerRoles, the display value of two codes (radiograf and socialogsundhedsassistent) is modified. \r\n* In CodeSystem MedComMessagingSorEdiCodeSystem and ValueSet MedComMessagingSorEdiValues, the display values of FDIS91 and FDIS20 are switched\r\n* Added experimental-flag to CodeSystems and ValueSet","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.3.0","path":"http://medcomfhir.dk/ig/terminology/1.3.0","status":"release","sequence":"Releases","fhirversion":"4.0.1","date":"2023-04-14","descmd":"* Added CodeSystem with reasons for cancellation, called MedComMessagingCancellationReason. ","changes":"https://github.com/medcomdk/dk-medcom-terminology/releases"},{"version":"1.2.0","path":"http://medcomfhir.dk/ig/terminology/1.2.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2023-03-10","descmd":"* Added the code `FCTL` and display value to CodeSystem MedComMessagingSorEdiSystem, ValueSet MedComMessagingSorEdiValues and added Acknowledgement as codes in the ConceptMap MedComMessagingMapFhirToSorEdi."},{"version":"1.1.1","date":"2023-01-05","path":"http://medcomfhir.dk/ig/terminology/1.1.1","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"Alligned the content of display values in the CodeSystem MedComMessagingActivityCodes and ValueSet MedComHospitalNotificationMessageActivityCodes.\r\n"},{"version":"1.1.0","date":"2022-11-21","path":"http://medcomfhir.dk/ig/terminology/1.1.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"- Added the CodeSystem MedComCorePractitionerRolesAutorisationsregistret and MedComCorePractitionerRolesSKSadministrativ and the ValueSet MedComCorePractitionerRoles to describe the roles of a practitioner.\n- The ValueSet MedComCareCommunicationMessageActivityCodes was updated as the code `carbon copy` was deprecated.\n- The ValueSet MedComCoreAttachmentMimeTypes was updated as the code `tiff` was added\n- The CodeSystem MedComCareCommunicationCategoryCodes was updated as Danish translations were added\n"}]}';
 load(pageJSON);
 </script>
 
