@@ -1,0 +1,30 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "3614f90a-63ad-4b43-bb00-f9eb7f714a99-89",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/3614f90a-63ad-4b43-bb00-f9eb7f714a99-89",
+  "name" : "UnionMedComCoreEncounterClassAndMedComCoreEncounterClass",
+  "title" : "Union of MedComCoreEncounterClassCodes And MedComCoreEncounterClassCodes",
+  "status" : "active",
+  "date" : "2025-05-09T09:54:29+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "_ActEncounterCode"
+      }]
+    },
+    {
+      "concept" : [{
+        "code" : "other"
+      }]
+    }]
+  }
+}
