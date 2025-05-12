@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="medcom.fhir.dk.conditionlist"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.conditionlist</b></p><a name="medcom.fhir.dk.conditionlist"> </a><a name="hcmedcom.fhir.dk.conditionlist"> </a><a name="medcom.fhir.dk.conditionlist-en-US"> </a><h2>MedComConditionList</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/conditionlist/ImplementationGuide/medcom.fhir.dk.conditionlist</pre><div><p>The MedCom ConditionList Implementation Guide includes profiles developed exchange a patients diagnoses in a FHIR-document</p>
+</div></div>
+  </text>
+  <url value="http://medcomfhir.dk/ig/conditionlist/ImplementationGuide/medcom.fhir.dk.conditionlist"/>
+  <version value="1.0.1"/>
+  <name value="MedComConditionList"/>
+  <title value="DK MedCom Condition List"/>
+  <status value="active"/>
+  <date value="2025-05-12T13:33:55+00:00"/>
+  <publisher value="MedCom"/>
+  <contact>
+    <name value="MedCom"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.medcom.dk"/>
+    </telecom>
+  </contact>
+  <description value="The MedCom ConditionList Implementation Guide includes profiles developed exchange a patients diagnoses in a FHIR-document"/>
+  <packageId value="medcom.fhir.dk.conditionlist"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="6.3.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_terminology">
+    <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
+    <packageId value="medcom.fhir.dk.terminology"/>
+    <version value="1.8.1"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_core">
+    <uri value="http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"/>
+    <packageId value="medcom.fhir.dk.core"/>
+    <version value="2.4.0"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_document">
+    <uri value="http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document"/>
+    <packageId value="medcom.fhir.dk.document"/>
+    <version value="1.0.1"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_xdsmetadata">
+    <uri value="http://medcomfhir.dk/ig/xdsmetadata/ImplementationGuide/medcom.fhir.dk.xdsmetadata"/>
+    <packageId value="medcom.fhir.dk.xdsmetadata"/>
+    <version value="1.0.1"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_dk_core">
+    <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
+    <packageId value="hl7.fhir.dk.core"/>
+    <version value="3.2.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2024+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:iso:std:iso:11073:10101"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.4"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.21"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.4.12"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://medcomfhir.dk/ig/conditionlist/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2024+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:iso:std:iso:11073:10101"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.4"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.21"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.4.12"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://medcomfhir.dk/ig/conditionlist/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/23d8ece4-7cff-47c1-9680-571377c6ea74"/>
+      </reference>
+      <name value="Bundle instance - 1st ConditionList"/>
+      <description value="Bundle instance - 1st ConditionList - Maximum example"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/b991dcb7-6f2a-4e56-96f9-6b4b23cb9472"/>
+      </reference>
+      <name value="Bundle instance - 2nd ConditionList"/>
+      <description value="Bundle instance - 2nd ConditionList - Mimimal example"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/df3915a2-6f88-4dea-955a-1b0008b23853"/>
+      </reference>
+      <name value="Bundle instance - 3rd ConditionList"/>
+      <description value="Bundle instance - 3rd ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/a4630688-dc6b-4484-9ef7-b9a08148c407"/>
+      </reference>
+      <name value="Bundle instance - 4th ConditionList"/>
+      <description value="Bundle instance - 4th ConditionList - incl. text without code"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/96d37376-e176-4c6a-9c49-2b56e7aae665"/>
+      </reference>
+      <name value="Bundle instance - 5th ConditionList"/>
+      <description value="Bundle instance - 5th ConditionList - no diagnosis nor text"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/7ffa0111-1aa2-4d68-99f8-1fbf57448c8c"/>
+      </reference>
+      <name value="Bundle instance - 6th ConditionList"/>
+      <description value="Bundle instance - 6th ConditionList - other CodeSystem"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/9d923ef7-c817-4e41-a0c2-01c80e8bde0c"/>
+      </reference>
+      <name value="Bundle instance - 7th ConditionList"/>
+      <description value="Bundle instance - 7th ConditionList - other CodeSystem"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/72f2d9ad-cd73-4f63-950f-2ad178760a55"/>
+      </reference>
+      <name value="Composition instance - 1st ConditionList"/>
+      <description value="Composition instance - 1st ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/a0e783b7-027f-45c7-a487-05853876b1d7"/>
+      </reference>
+      <name value="Composition instance - 2nd ConditionList"/>
+      <description value="Composition instance - 2nd ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/15c083cc-2231-4786-beeb-2e6267655017"/>
+      </reference>
+      <name value="Composition instance - 3rd ConditionList"/>
+      <description value="Composition instance - 3rd ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/2590fc0b-d6fb-4d7f-86fb-60b7474d59a5"/>
+      </reference>
+      <name value="Composition instance - 4th ConditionList"/>
+      <description value="Composition instance - 4th ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/a2b5706a-17a2-4ad0-8a6b-059c71483036"/>
+      </reference>
+      <name value="Composition instance - 5th ConditionList"/>
+      <description value="Composition instance - 5th ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/16227c45-2d8d-445e-89d8-60589f22dae2"/>
+      </reference>
+      <name value="Composition instance - 6th ConditionList"/>
+      <description value="Composition instance - 6th ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/bff247c2-2330-450a-aa15-c15b85ab30b5"/>
+      </reference>
+      <name value="Composition instance - 7th ConditionList"/>
+      <description value="Composition instance - 7th ConditionList"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/2f703d89-787d-418f-a804-b986aa181492"/>
+      </reference>
+      <name value="Condition instance - 1st ConditionList"/>
+      <description value="Condition instance - 1st ConditionList - Type 2-diabetes"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/9dd0e1c2-3c7d-423f-977c-29119c314fd1"/>
+      </reference>
+      <name value="Condition instance - 1st ConditionList"/>
+      <description value="Condition instance - 1st ConditionList - Modermærkekræft"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/f90a8472-6495-4865-be5d-fae6650a033e"/>
+      </reference>
+      <name value="Condition instance - 1st ConditionList"/>
+      <description value="Condition instance - 1st ConditionList - Hypertension"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d"/>
+      </reference>
+      <name value="Condition instance - 2nd ConditionList"/>
+      <description value="Condition instance - 2nd ConditionList - Depression"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/41cd63cb-45b7-4b07-a202-f2ab918dec60"/>
+      </reference>
+      <name value="Condition instance - 3rd ConditionList"/>
+      <description value="Condition instance - 3rd ConditionList - Hoste"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/5af29fb2-f724-4918-94b2-cfeb18e263ac"/>
+      </reference>
+      <name value="Condition instance - 4th ConditionList"/>
+      <description value="Condition instance - 4th ConditionList - KOL"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/ff9f7978-3995-4280-9956-1101861df51e"/>
+      </reference>
+      <name value="Condition instance - 5th ConditionList"/>
+      <description value="Condition instance - 5th ConditionList - no diagnosis"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/1b66f0a7-6d59-4e6a-a2bc-874cd194674b"/>
+      </reference>
+      <name value="Condition instance - 6th ConditionList"/>
+      <description value="Condition instance - 6th ConditionList - Overweight (SNOMED CT code)"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/3907bd98-8f4f-4b6c-9569-e232bdd7cd3b"/>
+      </reference>
+      <name value="Condition instance - 7th ConditionList"/>
+      <description value="Condition instance - 7th ConditionList - Overweight (SNOMED CT code)"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/94e65db8-2f0c-4a2c-a7c9-06a160d59a12"/>
+      </reference>
+      <name value="DocumentReference instance"/>
+      <description value="DocumentReference instance"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-conditionlist-bundle"/>
+      </reference>
+      <name value="MedComConditionListBundle"/>
+      <description value="A profile for the MedCom ConditionList Bundle resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-conditionlist-composition"/>
+      </reference>
+      <name value="MedComConditionListComposition"/>
+      <description value="A profile for the MedCom ConditionList Composition resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-conditionlist-condition"/>
+      </reference>
+      <name value="MedComConditionListCondition"/>
+      <description value="An instance of the MedCom ConditionList Condition resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-conditionlist-documentreference"/>
+      </reference>
+      <name value="MedComConditionListDocumentReference"/>
+      <description value="A profile for the MedCom ConditionListDocumentReference resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-conditionlist-organization"/>
+      </reference>
+      <name value="MedComConditionListOrganization"/>
+      <description value="An instance of the MedCom ConditionList Organization resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/fd3206c6-c265-49f9-82c3-8b4c96280403"/>
+      </reference>
+      <name value="Organization instance - 1st ConditionList"/>
+      <description value="Organization instance - 1st ConditionList - incl. SOR-ID and Ydernummer as identifiers"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/1895c469-212b-45f4-8666-c5c7c1413380"/>
+      </reference>
+      <name value="Organization instance - 2nd ConditionList"/>
+      <description value="Organization instance - 2nd ConditionList - incl. SOR-ID"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/432aba79-99d5-4e03-801b-2f800fc7a251"/>
+      </reference>
+      <name value="Organization instance - 3rd ConditionList"/>
+      <description value="Organization instance - 3rd ConditionList - incl. SOR-ID"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/465b576f-9620-4394-adc7-ff00a95971d1"/>
+      </reference>
+      <name value="Organization instance - 4th ConditionList"/>
+      <description value="Organization instance - 4th ConditionList - incl. SOR-ID"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/8d5fa00a-fe4e-4c88-ab16-4458409621a9"/>
+      </reference>
+      <name value="Organization instance - 5th ConditionList"/>
+      <description value="Organization instance - 5th ConditionList - incl. SOR-ID"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/50b53da4-90cf-48b2-b579-dfeebee73428"/>
+      </reference>
+      <name value="Organization instance - 6th ConditionList"/>
+      <description value="Organization instance - 6th ConditionList - incl. SOR-ID"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/c2e9627a-04d2-48a3-9972-792f0bd006ab"/>
+      </reference>
+      <name value="Organization instance - 7th ConditionList"/>
+      <description value="Organization instance - 7th ConditionList - incl. SOR-ID"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/69e475df-20c8-4f54-8cea-9843568205fd"/>
+      </reference>
+      <name value="Patient instance - 1st ConditionList"/>
+      <description value="Patient instance - 1st ConditionList - Elmer Test Hansen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/d65cd8db-4520-4264-87be-a5fd01fb9762"/>
+      </reference>
+      <name value="Patient instance - 2nd ConditionList"/>
+      <description value="Patient instance - 2nd ConditionList - Niels Test Vendelboe"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ea75a3fe-b8f7-4326-9a12-8c950c63dd6f"/>
+      </reference>
+      <name value="Patient instance - 3rd ConditionList"/>
+      <description value="Patient instance - 3rd ConditionList - Aya Test Berggren"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/19bdc614-503b-481d-ae65-4040daf7060d"/>
+      </reference>
+      <name value="Patient instance - 4th ConditionList"/>
+      <description value="Patient instance - 4th ConditionList - Knut Odvar Test Mosebryggersen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/da0f8262-1be9-420c-98fb-ecc7b5a2333c"/>
+      </reference>
+      <name value="Patient instance - 5th ConditionList"/>
+      <description value="Patient instance - 5th ConditionList - Else Test Lauridsen"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/170b6e56-125d-42bf-9002-298166c4ff98"/>
+      </reference>
+      <name value="Patient instance - 6th ConditionList"/>
+      <description value="Patient instance - 6th ConditionList - Pia Test Berggren"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2"/>
+      </reference>
+      <name value="Patient instance - 7th ConditionList"/>
+      <description value="Patient instance - 7th ConditionList - Pia Test Berggren"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/1fcad31f-8967-4f49-b6af-7e64082e8fec"/>
+      </reference>
+      <name value="Practitioner instance - 1st ConditionList"/>
+      <description value="Practitioner instance - 1st ConditionList"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="examples.html"/>
+        </extension>
+        <nameUrl value="examples.html"/>
+        <title value="Examples"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="extensions.html"/>
+        </extension>
+        <nameUrl value="extensions.html"/>
+        <title value="Extensions"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="profiles.html"/>
+        </extension>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles"/>
+        <generation value="html"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

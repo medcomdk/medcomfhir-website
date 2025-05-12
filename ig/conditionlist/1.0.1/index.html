@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home - DK MedCom Condition List v1.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">DK MedCom Condition List</span>
+            <br/>
+            <span style="display:inline-block;">1.0.1 - release
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Condition List (v1.0.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/conditionlist/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/conditionlist/ImplementationGuide/medcom.fhir.dk.conditionlist<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/conditionlist/ImplementationGuide/medcom.fhir.dk.conditionlist"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/conditionlist/ImplementationGuide/medcom.fhir.dk.conditionlist|1.0.1"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2025-05-12
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MedComConditionList</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#download" id="markdown-toc-download">Download</a></li>
+  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
+  <li><a href="#governance" id="markdown-toc-governance">Governance</a></li>
+  <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
+</ul>
+
+</div>
+<h3 id="introduction">Introduction</h3>
+
+<p>This implementation guide (IG) is provided by MedCom to define MedCom FHIR ®© ConditionList (Danish: Diagnoseoversigt) in document-based exchange of condition lists (Danish: diagnoseoversigt) in the Danish healthcare system. The project Shared Condition Overview (Danish: Deling af diagnoseoversigt) is owned by the Danish Health Data Agency (Danish: Sundhedsdatastyrelsen), to which MedCom has provided this standard, called ConditionList.</p>
+
+<p>This IG contains profiles for MedCom ConditionList. The purpose of a ConditionList is to gather selected diagnoses into a condition list, thereby providing a well-defined overview of the patient's current health status and previously significant relevant diagnoses. The diagnoses included in the ConditionList are exclusively selected to be shared by the patient's general practitioner.</p>
+
+<p>More information about the project <a href="https://medcomdk.github.io/dk-medcom-conditionlist/">Shared Condition Overview</a> can be found here.</p>
+
+<h4 id="conditionlist">ConditionList</h4>
+<p>The structure of a ConditionList is depicted in the following diagram:</p>
+
+<p><img alt="Shows the general MedCom document model. Each document must at least contain the following resources: Bundle, Composition, Organization, Patient and Condition." src="./DocumentModel.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" /></p>
+
+<p>ConditionList follows the <a href="https://medcomfhir.dk/ig/document/index.html#general-document-model">general MedCom FHIR Document model</a>. This includes the resources Bundle, Composition, Organization, Patient and if relevant Practitioner. To hold information about the patient's condition(s), the resource Condition is also included.</p>
+
+<h4 id="profiles">Profiles</h4>
+<p>The following sections describe the overall purpose of each profile.</p>
+
+<h5 id="medcomconditionlistbundle">MedComConditionListBundle</h5>
+<p><a href="./StructureDefinition-medcom-conditionlist-bundle.html">MedComConditionListBundle</a> is used as the Bundle profile for the standard. The Bundle profile acts as the container for all included resources and they must all be referenced from the Bundle.entry element, which is illustrated in the <a href="examples.html">examples</a>.</p>
+
+<h5 id="medcomconditionlistcomposition">MedComConditionListComposition</h5>
+<p><a href="./StructureDefinition-medcom-conditionlist-composition.html">MedComConditionListComposition</a> creates the structure of the document. It is specifically designed for structuring patients' diagnoses in ConditionList, inheriting from <a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-composition.html">MedComDocumentComposition</a>. The key differences are: the Composition.type is fixed to "Problem list - Reported" to standardize the document type; the Composition.title must be the following in Danish: "Diagnoseoversigt for 'CPR-nummer'"; and the Composition.section.entry is restricted to reference <a href="./StructureDefinition-medcom-conditionlist-condition.html">MedComConditionListCondition</a>.</p>
+
+<h5 id="medcomconditionlistcondition">MedComConditionListCondition</h5>
+<p><a href="./StructureDefinition-medcom-conditionlist-condition.html">MedComConditionListCondition</a> is the profile that specifies each diagnosis in a ConditionList. It inherits from <a href="https://hl7.dk/fhir/core/StructureDefinition-dk-core-condition.html">DkCoreCondition</a> and further restricts the profile, for example is only codes from <a href="https://medinfo.dk/sks/brows.php?s_nod=6314">SKS-D</a> or <a href="https://kiap.dk/kiap/praksis/services/koder/icpc/icpc2.php">ICPC-2-DK</a> that is allowed in the standard.</p>
+
+<h5 id="medcomdocumentpatient">MedComDocumentPatient</h5>
+<p><a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-patient.html">MedComDocumentPatient</a> describes the basic requirements for information about citizens and patients when exchanging a document. The profile inherits from <a href="https://hl7.dk/fhir/core/StructureDefinition-dk-core-patient.html">DkCorePatient</a> and further limit the requirements, e.g. may documents only be exchanged for patients with a CPR-number. It is not allowed to add a replacement-CPR (Danish: erstatningsCPR), as this is not supported in the infrastructure. To limit the MustSupport elements, this profiles does not inherit from MedComCorePatient.</p>
+
+<h5 id="medcomdocumentorganization">MedComDocumentOrganization</h5>
+<p><a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-organization.html">MedComDocumentOrganization</a> is a profile representing Danish healthcare organizations that acts as the author institution in FHIR Documents. The profile inherits from <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-organization.html">MedComCoreOrganization</a>. It allows for an additional identifier, called "Ydernummer".</p>
+
+<h5 id="medcomdocumentpractitioner">MedComDocumentPractitioner</h5>
+<p><a href="https://medcomfhir.dk/ig/document/StructureDefinition-medcom-document-practitioner.html">MedComDocumentPractitioner</a> represents the health care professional that acts as the author person. The profile inherits from <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-practitioner.html">MedComCorePractitioner</a> and further requires a given and family name to be present.</p>
+
+<h5 id="medcomconditionlistdocumentreference">MedComConditionListDocumentReference</h5>
+<p>This profil must not be exchanged but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard. Metadata used for exchange of ConditionLists must obey to <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/DK_profil_metadata/">IHE XDS metadata standard</a>. This can be done by mapping the content of metadata to the DocumentReference and validating this against the IG.</p>
+
+<h4 id="timestamps">Timestamps</h4>
+<p>A ConditionList includes several timestamps. These timestamps are present in the profiles MedComConditionListBundle, MedComConditionListComposition and MedComConditionListCondition. They have different purposes:</p>
+<ul>
+  <li>Bundle.timestamp: Represents the time the bundle was assembled. This timestamp must be included.</li>
+  <li>Composition.date: The last update date of the condition list performed by the patient's general practitioner must be included (Danish: senest opdateret).</li>
+  <li>Condition.recordedDate: The date of the individual diagnosis entry in the database (Danish: registreringsdato).</li>
+  <li>Condition.onsetDateTime: Actual or estimated date the condition began, in the opinion of the patient's general practitioner (Danish: debutdato).</li>
+  <li>Condition.abatementDateTime: The date or estimated date that the condition resolved or went into remission (Danish: afslutningsdato).</li>
+</ul>
+
+<p>The <a href="Bundle-23d8ece4-7cff-47c1-9680-571377c6ea74.html">2nd example</a> includes all the above timestamps.</p>
+
+<h4 id="examples">Examples</h4>
+<p>The <a href="examples.html">examples page</a> different examples of the ConditionList standard. Each example is accompanied by a short description of the example.</p>
+
+<h4 id="terminology">Terminology</h4>
+<p>On <a href="http://medcomfhir.dk/ig/terminology/">MedCom Terminology IG</a> all referenced CodeSystem and ValueSets developed by MedCom can be found.</p>
+
+<h4 id="dependencies">Dependencies</h4>
+<p>This IG has a dependency to the <a href="http://medcomfhir.dk/ig/core/">MedCom Core IG</a>, <a href="https://medcomfhir.dk/ig/document/">MedCom FHIR Document IG</a> and <a href="https://hl7.dk/fhir/core/">DK-core v. 3.2.0</a>, where the latter is defined by <a href="https://hl7.dk/">HL7 Denmark</a>.</p>
+
+<h3 id="download">Download</h3>
+<p>Content in this IG can be downloaded in npm format under <a href="downloads.html">Download</a>. This can be used to validate local FHIR profiles against.</p>
+
+<h3 id="documentation">Documentation</h3>
+
+<h4 id="non-technical-guidelines">Non-technical guidelines</h4>
+<p>On the <a href="https://medcomdk.github.io/dk-medcom-conditionlist/">introduction page for ConditionList</a> the following documentation can be found:</p>
+<ul>
+  <li>User stories</li>
+  <li>Use cases</li>
+  <li>Mapping from logical data model to ConditionList</li>
+  <li>Test material</li>
+</ul>
+
+<h3 id="governance">Governance</h3>
+<p>MedComs FHIR profiles and extension are managed in GitHub under MedCom: <a href="https://github.com/medcomdk/dk-medcom-conditionlist">Source code</a></p>
+
+<p>A description of <a href="https://medcomdk.github.io/MedComLandingPage/#4-change-management-and-versioning">governance concerning change management and versioning</a> of MedComs FHIR artefacts, can be found on the link.</p>
+
+<h4 id="quality-assurance-report">Quality Assurance Report</h4>
+<p>In the Quality Assurance report (QA-report) for this IG, there is an error with the following description: '<em>Reference is remote which isn’t supported by the specified aggregation mode(s) for the reference (bundled)</em>'. The error occurs when creating instances of the Composition profile, and is due to some elements having a Bundled flag {b}. However, the referenced profiles are not included in a Bundle, since the instance only represents a part of the entire document. This must not influence the implementation by IT-vendors.</p>
+
+<h3 id="contact">Contact</h3>
+<p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this IG.</p>
+
+<p>If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom's stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.conditionlist#1.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 12, 2025 13:34+0000">2025-05-12</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
