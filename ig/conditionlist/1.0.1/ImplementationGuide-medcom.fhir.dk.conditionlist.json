@@ -1,0 +1,1406 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "medcom.fhir.dk.conditionlist",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.conditionlist</b></p><a name=\"medcom.fhir.dk.conditionlist\"> </a><a name=\"hcmedcom.fhir.dk.conditionlist\"> </a><a name=\"medcom.fhir.dk.conditionlist-en-US\"> </a><h2>MedComConditionList</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/conditionlist/ImplementationGuide/medcom.fhir.dk.conditionlist</pre><div><p>The MedCom ConditionList Implementation Guide includes profiles developed exchange a patients diagnoses in a FHIR-document</p>\n</div></div>"
+  },
+  "url" : "http://medcomfhir.dk/ig/conditionlist/ImplementationGuide/medcom.fhir.dk.conditionlist",
+  "version" : "1.0.1",
+  "name" : "MedComConditionList",
+  "title" : "DK MedCom Condition List",
+  "status" : "active",
+  "date" : "2025-05-13T06:30:33+00:00",
+  "publisher" : "MedCom",
+  "contact" : [{
+    "name" : "MedCom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.medcom.dk"
+    }]
+  }],
+  "description" : "The MedCom ConditionList Implementation Guide includes profiles developed exchange a patients diagnoses in a FHIR-document",
+  "packageId" : "medcom.fhir.dk.conditionlist",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "6.3.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.2.0"
+  },
+  {
+    "id" : "medcom_fhir_dk_terminology",
+    "uri" : "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology",
+    "packageId" : "medcom.fhir.dk.terminology",
+    "version" : "1.8.1"
+  },
+  {
+    "id" : "medcom_fhir_dk_core",
+    "uri" : "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core",
+    "packageId" : "medcom.fhir.dk.core",
+    "version" : "2.4.0"
+  },
+  {
+    "id" : "medcom_fhir_dk_document",
+    "uri" : "http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document",
+    "packageId" : "medcom.fhir.dk.document",
+    "version" : "1.0.1"
+  },
+  {
+    "id" : "medcom_fhir_dk_xdsmetadata",
+    "uri" : "http://medcomfhir.dk/ig/xdsmetadata/ImplementationGuide/medcom.fhir.dk.xdsmetadata",
+    "packageId" : "medcom.fhir.dk.xdsmetadata",
+    "version" : "1.0.1"
+  },
+  {
+    "id" : "hl7_fhir_dk_core",
+    "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
+    "packageId" : "hl7.fhir.dk.core",
+    "version" : "3.2.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2024+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:11073:10101"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.4"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.21"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.4.12"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://medcomfhir.dk/ig/conditionlist/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.5.0"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2024+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:iso:std:iso:11073:10101"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.4"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.21"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.4.12"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://medcomfhir.dk/ig/conditionlist/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/23d8ece4-7cff-47c1-9680-571377c6ea74"
+      },
+      "name" : "Bundle instance - 1st ConditionList",
+      "description" : "Bundle instance - 1st ConditionList - Maximum example",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/b991dcb7-6f2a-4e56-96f9-6b4b23cb9472"
+      },
+      "name" : "Bundle instance - 2nd ConditionList",
+      "description" : "Bundle instance - 2nd ConditionList - Mimimal example",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/df3915a2-6f88-4dea-955a-1b0008b23853"
+      },
+      "name" : "Bundle instance - 3rd ConditionList",
+      "description" : "Bundle instance - 3rd ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/a4630688-dc6b-4484-9ef7-b9a08148c407"
+      },
+      "name" : "Bundle instance - 4th ConditionList",
+      "description" : "Bundle instance - 4th ConditionList - incl. text without code",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/96d37376-e176-4c6a-9c49-2b56e7aae665"
+      },
+      "name" : "Bundle instance - 5th ConditionList",
+      "description" : "Bundle instance - 5th ConditionList - no diagnosis nor text",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/7ffa0111-1aa2-4d68-99f8-1fbf57448c8c"
+      },
+      "name" : "Bundle instance - 6th ConditionList",
+      "description" : "Bundle instance - 6th ConditionList - other CodeSystem",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/9d923ef7-c817-4e41-a0c2-01c80e8bde0c"
+      },
+      "name" : "Bundle instance - 7th ConditionList",
+      "description" : "Bundle instance - 7th ConditionList - other CodeSystem",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/72f2d9ad-cd73-4f63-950f-2ad178760a55"
+      },
+      "name" : "Composition instance - 1st ConditionList",
+      "description" : "Composition instance - 1st ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/a0e783b7-027f-45c7-a487-05853876b1d7"
+      },
+      "name" : "Composition instance - 2nd ConditionList",
+      "description" : "Composition instance - 2nd ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/15c083cc-2231-4786-beeb-2e6267655017"
+      },
+      "name" : "Composition instance - 3rd ConditionList",
+      "description" : "Composition instance - 3rd ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/2590fc0b-d6fb-4d7f-86fb-60b7474d59a5"
+      },
+      "name" : "Composition instance - 4th ConditionList",
+      "description" : "Composition instance - 4th ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/a2b5706a-17a2-4ad0-8a6b-059c71483036"
+      },
+      "name" : "Composition instance - 5th ConditionList",
+      "description" : "Composition instance - 5th ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/16227c45-2d8d-445e-89d8-60589f22dae2"
+      },
+      "name" : "Composition instance - 6th ConditionList",
+      "description" : "Composition instance - 6th ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/bff247c2-2330-450a-aa15-c15b85ab30b5"
+      },
+      "name" : "Composition instance - 7th ConditionList",
+      "description" : "Composition instance - 7th ConditionList",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/2f703d89-787d-418f-a804-b986aa181492"
+      },
+      "name" : "Condition instance - 1st ConditionList",
+      "description" : "Condition instance - 1st ConditionList - Type 2-diabetes",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/9dd0e1c2-3c7d-423f-977c-29119c314fd1"
+      },
+      "name" : "Condition instance - 1st ConditionList",
+      "description" : "Condition instance - 1st ConditionList - Modermærkekræft",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/f90a8472-6495-4865-be5d-fae6650a033e"
+      },
+      "name" : "Condition instance - 1st ConditionList",
+      "description" : "Condition instance - 1st ConditionList - Hypertension",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/17e3b0c0-0497-49e1-9cf1-4e1eea8fc79d"
+      },
+      "name" : "Condition instance - 2nd ConditionList",
+      "description" : "Condition instance - 2nd ConditionList - Depression",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/41cd63cb-45b7-4b07-a202-f2ab918dec60"
+      },
+      "name" : "Condition instance - 3rd ConditionList",
+      "description" : "Condition instance - 3rd ConditionList - Hoste",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/5af29fb2-f724-4918-94b2-cfeb18e263ac"
+      },
+      "name" : "Condition instance - 4th ConditionList",
+      "description" : "Condition instance - 4th ConditionList - KOL",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/ff9f7978-3995-4280-9956-1101861df51e"
+      },
+      "name" : "Condition instance - 5th ConditionList",
+      "description" : "Condition instance - 5th ConditionList - no diagnosis",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/1b66f0a7-6d59-4e6a-a2bc-874cd194674b"
+      },
+      "name" : "Condition instance - 6th ConditionList",
+      "description" : "Condition instance - 6th ConditionList - Overweight (SNOMED CT code)",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/3907bd98-8f4f-4b6c-9569-e232bdd7cd3b"
+      },
+      "name" : "Condition instance - 7th ConditionList",
+      "description" : "Condition instance - 7th ConditionList - Overweight (SNOMED CT code)",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/94e65db8-2f0c-4a2c-a7c9-06a160d59a12"
+      },
+      "name" : "DocumentReference instance",
+      "description" : "DocumentReference instance",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-conditionlist-bundle"
+      },
+      "name" : "MedComConditionListBundle",
+      "description" : "A profile for the MedCom ConditionList Bundle resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-conditionlist-composition"
+      },
+      "name" : "MedComConditionListComposition",
+      "description" : "A profile for the MedCom ConditionList Composition resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-conditionlist-condition"
+      },
+      "name" : "MedComConditionListCondition",
+      "description" : "An instance of the MedCom ConditionList Condition resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-conditionlist-documentreference"
+      },
+      "name" : "MedComConditionListDocumentReference",
+      "description" : "A profile for the MedCom ConditionListDocumentReference resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-conditionlist-organization"
+      },
+      "name" : "MedComConditionListOrganization",
+      "description" : "An instance of the MedCom ConditionList Organization resource.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/fd3206c6-c265-49f9-82c3-8b4c96280403"
+      },
+      "name" : "Organization instance - 1st ConditionList",
+      "description" : "Organization instance - 1st ConditionList - incl. SOR-ID and Ydernummer as identifiers",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/1895c469-212b-45f4-8666-c5c7c1413380"
+      },
+      "name" : "Organization instance - 2nd ConditionList",
+      "description" : "Organization instance - 2nd ConditionList - incl. SOR-ID",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/432aba79-99d5-4e03-801b-2f800fc7a251"
+      },
+      "name" : "Organization instance - 3rd ConditionList",
+      "description" : "Organization instance - 3rd ConditionList - incl. SOR-ID",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/465b576f-9620-4394-adc7-ff00a95971d1"
+      },
+      "name" : "Organization instance - 4th ConditionList",
+      "description" : "Organization instance - 4th ConditionList - incl. SOR-ID",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/8d5fa00a-fe4e-4c88-ab16-4458409621a9"
+      },
+      "name" : "Organization instance - 5th ConditionList",
+      "description" : "Organization instance - 5th ConditionList - incl. SOR-ID",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/50b53da4-90cf-48b2-b579-dfeebee73428"
+      },
+      "name" : "Organization instance - 6th ConditionList",
+      "description" : "Organization instance - 6th ConditionList - incl. SOR-ID",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/c2e9627a-04d2-48a3-9972-792f0bd006ab"
+      },
+      "name" : "Organization instance - 7th ConditionList",
+      "description" : "Organization instance - 7th ConditionList - incl. SOR-ID",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/conditionlist/StructureDefinition/medcom-conditionlist-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/69e475df-20c8-4f54-8cea-9843568205fd"
+      },
+      "name" : "Patient instance - 1st ConditionList",
+      "description" : "Patient instance - 1st ConditionList - Elmer Test Hansen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/d65cd8db-4520-4264-87be-a5fd01fb9762"
+      },
+      "name" : "Patient instance - 2nd ConditionList",
+      "description" : "Patient instance - 2nd ConditionList - Niels Test Vendelboe",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/ea75a3fe-b8f7-4326-9a12-8c950c63dd6f"
+      },
+      "name" : "Patient instance - 3rd ConditionList",
+      "description" : "Patient instance - 3rd ConditionList - Aya Test Berggren",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/19bdc614-503b-481d-ae65-4040daf7060d"
+      },
+      "name" : "Patient instance - 4th ConditionList",
+      "description" : "Patient instance - 4th ConditionList - Knut Odvar Test Mosebryggersen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/da0f8262-1be9-420c-98fb-ecc7b5a2333c"
+      },
+      "name" : "Patient instance - 5th ConditionList",
+      "description" : "Patient instance - 5th ConditionList - Else Test Lauridsen",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/170b6e56-125d-42bf-9002-298166c4ff98"
+      },
+      "name" : "Patient instance - 6th ConditionList",
+      "description" : "Patient instance - 6th ConditionList - Pia Test Berggren",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/be8156f3-41d1-47e3-847a-4b064a3b42b2"
+      },
+      "name" : "Patient instance - 7th ConditionList",
+      "description" : "Patient instance - 7th ConditionList - Pia Test Berggren",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/1fcad31f-8967-4f49-b6af-7e64082e8fec"
+      },
+      "name" : "Practitioner instance - 1st ConditionList",
+      "description" : "Practitioner instance - 1st ConditionList",
+      "exampleBoolean" : true
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "downloads.html"
+        }],
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "examples.html"
+        }],
+        "nameUrl" : "examples.html",
+        "title" : "Examples",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "extensions.html"
+        }],
+        "nameUrl" : "extensions.html",
+        "title" : "Extensions",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "profiles.html"
+        }],
+        "nameUrl" : "profiles.html",
+        "title" : "Profiles",
+        "generation" : "html"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}
