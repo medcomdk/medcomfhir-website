@@ -335,8 +335,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.45"],
       "uses" : {
       },
-      "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference",
-      "StructureDefinition-medcom-conditionlist-organization.html" : "MedComConditionListOrganization"
+      "StructureDefinition-medcom-conditionlist-organization.html" : "MedComConditionListOrganization",
+      "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -350,8 +350,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.57"],
       "uses" : {
       },
-      "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference",
-      "StructureDefinition-medcom-conditionlist-organization.html" : "MedComConditionListOrganization"
+      "StructureDefinition-medcom-conditionlist-organization.html" : "MedComConditionListOrganization",
+      "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -366,10 +366,10 @@
       "uses" : {
       },
       "StructureDefinition-medcom-conditionlist-condition.html" : "MedComConditionListCondition",
+      "StructureDefinition-medcom-conditionlist-organization.html" : "MedComConditionListOrganization",
       "StructureDefinition-medcom-conditionlist-composition.html" : "MedComConditionListComposition",
-      "StructureDefinition-medcom-conditionlist-bundle.html" : "MedComConditionListBundle",
       "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference",
-      "StructureDefinition-medcom-conditionlist-organization.html" : "MedComConditionListOrganization"
+      "StructureDefinition-medcom-conditionlist-bundle.html" : "MedComConditionListBundle"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
@@ -464,7 +464,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-conditionlist-status-valueset",
-      "version" : "1.8.0",
+      "version" : "1.8.1",
       "status" : "active",
       "name" : "MedComConditionListStatus",
       "title" : "MedComConditionListStatus",
@@ -475,8 +475,20 @@
       "StructureDefinition-medcom-conditionlist-condition.html" : "MedComConditionListCondition"
     },
     {
+      "url" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-dk-ihe-plr-typecode-VS",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "PLR_DK_IHE_TypeCode",
+      "title" : "PLR-DK IHE TypeCode",
+      "description" : "PLR-DK: Value set for the typeCode attribute. The typeCode specifies the precise type of document from the user perspective. The granularity of typeCode is finer grained than its superior classCode.",
+      "systems" : ["urn:oid:2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference"
+    },
+    {
       "url" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS",
-      "version" : "1.0.0",
+      "version" : "1.0.1",
       "status" : "active",
       "name" : "MedComIHE_CoreHealthcareFacilityTypeCode",
       "title" : "IHE HealthcareFacilityTypeCode",
@@ -488,7 +500,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-PracticeSettingCode-VS",
-      "version" : "1.0.0",
+      "version" : "1.0.1",
       "status" : "active",
       "name" : "MedComIHE_CorePracticeSettingCode",
       "title" : "IHE PracticeSettingCode",
@@ -500,7 +512,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-classcode-VS",
-      "version" : "1.0.0",
+      "version" : "1.0.1",
       "status" : "active",
       "name" : "MedComIHE_CoreClassCode",
       "title" : "IHE ClassCode",
@@ -512,7 +524,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-languagecode-VS",
-      "version" : "1.0.0",
+      "version" : "1.0.1",
       "status" : "active",
       "name" : "MedComIHE_CoreLanguageCode",
       "title" : "IHE LanguageCode",
@@ -524,12 +536,24 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-core-mimetype-VS",
-      "version" : "1.0.0",
+      "version" : "1.0.1",
       "status" : "active",
       "name" : "MedComIHE_CoreMimeType",
       "title" : "IHE MimeType",
       "description" : "Values for the document metadata attribute mimeType",
       "systems" : ["urn:oid:2.16.840.1.113883.5.79"],
+      "uses" : {
+      },
+      "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference"
+    },
+    {
+      "url" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-ihe-plr-formatcode-VS",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "MedComIHE_PLR_DK_FormatCode",
+      "title" : "PLR-DK IHE FormatCode",
+      "description" : "PLR-DK: Code system for document format code used in national Document sharing. The value set for format code is based on code system DK_IHE_FormatCode.",
+      "systems" : ["urn:oid:1.2.208.184.100.10"],
       "uses" : {
       },
       "StructureDefinition-medcom-conditionlist-documentreference.html" : "MedComConditionListDocumentReference"
