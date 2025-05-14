@@ -3,15 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="medcom.fhir.dk.messaging"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.messaging</b></p><a name="medcom.fhir.dk.messaging"> </a><a name="hcmedcom.fhir.dk.messaging"> </a><a name="medcom.fhir.dk.messaging-da-DK"> </a><h2>MedComMessaging</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging</pre><div><p>The DK MedCom Messaging IG</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.messaging</b></p><a name="medcom.fhir.dk.messaging"> </a><a name="hcmedcom.fhir.dk.messaging"> </a><a name="medcom.fhir.dk.messaging-da-DK"> </a><h2>DKMedComMessaging</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging</pre><div><p>This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication</p>
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging"/>
-  <version value="2.2.1"/>
-  <name value="MedComMessaging"/>
+  <version value="3.0.0"/>
+  <name value="DKMedComMessaging"/>
   <title value="DK MedCom Messaging"/>
   <status value="active"/>
-  <date value="2024-11-07T08:12:37+01:00"/>
+  <date value="2025-05-14T11:03:43+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -20,7 +20,7 @@
       <value value="http://www.medcom.dk"/>
     </telecom>
   </contact>
-  <description value="The DK MedCom Messaging IG"/>
+  <description value="This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.0.2"/>
+    <version value="6.3.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -45,7 +45,7 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.1.0"/>
+    <version value="5.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_dk_core">
     <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
@@ -259,7 +259,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -485,17 +485,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Provenance"/>
-      </extension>
-      <reference>
-        <reference value="Provenance/9c284936-5454-4116-95fc-3c8eeeed2400"/>
-      </reference>
-      <name value="CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
-      <description value="CareCommunication example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -647,6 +636,17 @@
       <name value="MedComMessagingProvenance"/>
       <description value="Provenance information about the messages preceeding the current message"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Provenance"/>
+      </extension>
+      <reference>
+        <reference value="Provenance/9c284936-5454-4116-95fc-3c8eeeed2400"/>
+      </reference>
+      <name value="MedComMessagingProvenance example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
+      <description value="MedComMessagingProvenance example. The Provenance instance is only valid if used in a bundle (message) - new message"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
