@@ -4,46 +4,45 @@
 <head>
    <meta charset="UTF-8"/>
   <title>DK MedCom CareCommunication</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="author" content="http://www.hl7.org"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="http://www.hl7.org"/>
   <link href="fhir.css" rel="stylesheet"/>
-
-   <!-- Bootstrap core CSS -->
   <link href="dist-hist/css/bootstrap.css" rel="stylesheet"/>
   <link href="assets-hist/css/bootstrap-fhir.css" rel="stylesheet"/>
-
-  <!-- Project extras -->
   <link href="assets-hist/css/project.css" rel="stylesheet"/>
   <link href="assets-hist/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="jquery-ui.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/hl7-dk.css"/>
-
-  <!-- Favicons -->
+  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
+  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
+  <link href="history.css" rel="stylesheet"/>
+  <!-- header.template starts here -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets-hist/ico/apple-touch-icon-144-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets-hist/ico/apple-touch-icon-114-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets-hist/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="assets-hist/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets-hist/ico/favicon.png"/>
-  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
-  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
-  <link href="history.css" rel="stylesheet"/>
 
+  <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+  <link href="assets/css/colors.css" rel="stylesheet"/>
+
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>  
+  <!-- header.template ends here -->
 </head>
-<body onload="document.body.style.opacity='1'">
-
+<!-- preamble.template starts here -->
+<body>
  <div id="segment-header" class="segment">  <!-- segment-header -->
   <div class="container">  <!-- container -->
+
     <div id="project-nav">
-          <a no-external="true" id="hl7-logo" href="https://github.com/medcomdk">
-            <img src="assets/image/medcom-logo-header.png" alt="MedCom" height="65"/>
-          </a>
-  </div>
-  <div id="fhir-nav">
-    <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/>
-    </a>
-   </div>
+      <a id="dk-logo" no-external="true" href="http://hl7.dk">
+        <img height="71" alt="HL7 DK" src="assets/images/HL7_Denmark.png"/>
+      </a>
+    </div>
+    <div id="family-nav">
+      <a id="fhir-logo" no-external="true" href="http://hl7.dk"><img height="50" style="margin-top: 15px;" alt="HL7 Denmark" src="assets/images/fire.png"/> </a>
+        </a>
+    </div>    
+    
    <div id="ig-status" style="font-size:24px;padding-top: 20px;">
 <b id="ig-title">DK MedCom CareCommunication</b>
 </div>
@@ -89,6 +88,7 @@
             <div class="row">
              <div class="inner-wrapper">
 
+<!-- preamble.template ends here -->
 
 <div class="col-12">
 
@@ -103,6 +103,7 @@
     #history-data table td { padding-right: 1em; }
 </style>
 
+  <!-- postamble.template starts here -->
   <!-- ==============END CONTENT END CONTENT=================== -->
 
 <p></p>
@@ -129,7 +130,7 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      <span id="ig-footer">TBD </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
+      <span id="ig-footer">medcom.fhir.dk.carecommunication </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
@@ -145,14 +146,15 @@
   </div>  <!-- /container -->
  </div>  <!-- /segment-post-footer -->
 
- <!-- JS and analytics only. -->
+  <!-- postamble.template ends here -->
+
+<!-- JS and analytics only. -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./assets-hist/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./dist-hist/js/bootstrap.min.js"> </script>
 <script src="./assets-hist/js/respond.min.js"> </script>
-
 <script src="./assets-hist/js/fhir.js"> </script>
 
 <!-- Analytics Below
@@ -160,10 +162,9 @@
 
 <!--- Include in the page --->
 <script>
-var pageJSON = '{"package-id":"medcom.fhir.dk.carecommunication","title":"DK MedCom CareCommunication","introduction":"CareCommunication MedCom FHIR profiles for Denmark","canonical":"http://medcomfhir.dk/ig/carecommunication","category":"MedCom CareCommunication","list":[{"version":"current","desc":"Continuous Integration Build (latest in version control)","path":"http://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication","status":"ci-build","fhirversion":"4.0.1"},{"version":"4.0.2","path":"http://medcomfhir.dk/ig/carecommunication/4.0.2","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-11-07","descmd":"* Dependency to medcom.fhir.dk.messaging changed from 2.2.0 to 2.2.1","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases","current":true},{"version":"4.0.1","path":"http://medcomfhir.dk/ig/carecommunication/4.0.1","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-11-07","descmd":"Rebuild","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"4.0.0","path":"http://medcomfhir.dk/ig/carecommunication/4.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-06-28","descmd":"- In general: \r\n    - The possibility to send cancellations, corrections, and formatted text is removed. This is done in agreement with the working group. Text is updated accordingly.\r\n    - Included an example-page to illustrate the flow of messages. \r\n    \r\n- MedComCareCommunication profile\r\n    - Added requirement to include the element Communication.identifier. The identifier must be an uuid-v4. \r\n    - Clarified the use of practitioner roles for each payload.\r\n\r\n- MedComCareCommunicationMessageDefinition profile\r\n    - Added profile which describes the characteristics of a CareCommunication message. \r\n- MedComCareCommunicationProvenance profile\r\n    - Added profile, which inherits from MedComMessagingProvenance, to include a reference to the included payload in the MedComCareCommunication. \r\n- MedComCareCommunicationMessageHeader profile\r\n    - Added requirement to include a link to the MedComCareCommunicationMessageDefinition.\r\n    - Restricted the element MessageHeader.focus from 1..2 to 1..1\r\n","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"3.0.0","date":"2023-04-14","path":"http://medcomfhir.dk/ig/carecommunication/3.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"In general: \r\n- It is made optional to send a cancellation, modifying and forwarding CareCommunication. Therefore, relevant descriptions are updated.\r\n- Updated figures. \r\n\r\nCareCommunication profile\r\n- Added description of when replying to a CareCommunication with attached files, the reply should not include the base64-encoded files or the url, only the identifier and author information. \r\n- Updated an identifier, as each message segment must include one. The identifier must be included in all message segments and must not be changed when replying, forwarding, modifying or cancelling a message and must always be returned.\r\n- Moved extensions to MedCom Core IG and updated relevant references in CareCommunication profil. Updated names and descriptions, and made the MedComIdentifierExtension (previous: AttachmentIdentifierExtension) able to support identifier in message segments with text and attachments.\r\n- Updated examples and textual description in accordance to the above mentioned changes. \r\n\r\nCareCommunicationMessage profile \r\n- Corrected invariant medcom-careCommunication-1 and medcom-careCommunication-3 to accommodate the QA-report. \r\nCareCommunicationMessageHeader profile \r\nChanged the cardinality of MessageHeader.destination:CC to 0..0. The requirements where mentioned on the index page, but not included in the profile.","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"2.1.0","date":"2023-04-14","path":"http://medcomfhir.dk/ig/carecommunication/2.1.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"- CareCommunication profile: \r\n    - In the CareCommunication profile author, authorrole, relevant phonenumber and creation date is made optional (card 0..1) to include for attachments.\r\n    - Information about the episode of care identifier is clarified.\r\n    - Figure under Scope and Usage is updated\r\n- In general: \r\n    - Examples are updated and more examples are included. \r\n    - A recommendation about use of predefined reasons for cancellations is added under Introduction > Cancel message. \r\n    - A description about download is added under Download","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"2.0.0","date":"2022-11-24","path":"http://medcomfhir.dk/ig/carecommunication/2.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"- Communication.recipient may reference a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- MedComCareCommunicationSenderExtension is added an allow reference to a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- Communication.sender is no longer MS, Communication.extension.sender is MS\r\n- MedComCareCommunicationPayloadAuthorContactExtension is added and referenced from Communication.payload.extension.authorContact\r\n- MessageHeader.focus is changed from 1..1 to 1..2\r\n- Constraint 1-13 applied to MedComCommunication and MedComCareCommunicationMessage are added or updated.\r\n- Examples and descriptions updated due to the above changes","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"1.0.0","date":"2021-03-23","desc":"MedCom CareCommunication","path":"http://medcomfhir.dk/fhir/ig/dk-medcom-carecommunication","status":"trial-use","sequence":"STU","fhirversion":"4.0.1"}]}';
+var pageJSON = '{"package-id":"medcom.fhir.dk.carecommunication","title":"DK MedCom CareCommunication","introduction":"CareCommunication MedCom FHIR profiles for Denmark","canonical":"http://medcomfhir.dk/ig/carecommunication","category":"MedCom CareCommunication","list":[{"version":"current","desc":"Continuous Integration Build (latest in version control)","path":"http://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication","status":"ci-build","fhirversion":"4.0.1"},{"version":"4.0.3","path":"http://medcomfhir.dk/ig/carecommunication/4.0.3","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2025-05-23","current":true,"desc":"Dependency bumped to fix hyperlinks in various places. No actual changes made","descmd":"In order to fix hyperlinks in various places, the dependency to medcom.fhir.dk.messaging changed from 2.2.1 to 2.2.2\nThere are no actual changes made\n\n"},{"version":"4.0.2","path":"http://medcomfhir.dk/ig/carecommunication/4.0.2","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-11-07","descmd":"* Dependency to medcom.fhir.dk.messaging changed from 2.2.0 to 2.2.1\r\n\r\n","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"4.0.1","path":"http://medcomfhir.dk/ig/carecommunication/4.0.1","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-11-07","descmd":"* Dependency to medcom.fhir.dk.messaging changed from 2.2.0 to 2.2.1\r\n\r\n","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"2.1.0","path":"http://medcomfhir.dk/ig/carecommunication/2.1.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2023-04-14","descmd":"- CareCommunication profile: \r\n    - In the CareCommunication profile author, authorrole, relevant phonenumber and creation date is made optional (card 0..1) to include for attachments.\r\n    - Information about the episode of care identifier is clarified.\r\n    - Figure under Scope and Usage is updated\r\n- In general: \r\n    - Examples are updated and more examples are included. \r\n    - A recommendation about use of predefined reasons for cancellations is added under Introduction > Cancel message. \r\n    - A description about download is added under Download","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"2.0.0","date":"2022-11-24","path":"http://medcomfhir.dk/ig/carecommunication/2.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"- Communication.recipient may reference a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- MedComCareCommunicationSenderExtension is added an allow reference to a MedComCoreCareTeam or MedComCorePractitionerRole\r\n- Communication.sender is no longer MS, Communication.extension.sender is MS\r\n- MedComCareCommunicationPayloadAuthorContactExtension is added and referenced from Communication.payload.extension.authorContact\r\n- MessageHeader.focus is changed from 1..1 to 1..2\r\n- Constraint 1-13 applied to MedComCommunication and MedComCareCommunicationMessage are added or updated.\r\n- Examples and descriptions updated due to the above changes","changes":"https://github.com/medcomdk/dk-medcom-carecommunication/releases"},{"version":"1.0.0","date":"2021-03-23","desc":"MedCom CareCommunication","path":"http://medcomfhir.dk/fhir/ig/dk-medcom-carecommunication","status":"trial-use","sequence":"STU","fhirversion":"4.0.1"}]}';
 load(pageJSON);
 </script>
-
 
 </body>
 </html>
