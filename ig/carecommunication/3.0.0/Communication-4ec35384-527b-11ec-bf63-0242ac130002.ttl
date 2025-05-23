@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Communication/4ec35384-527b-11ec-bf63-0242ac130002> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "4ec35384-527b-11ec-bf63-0242ac130002"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Communication</b><a name=\"4ec35384-527b-11ec-bf63-0242ac130002\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Communication &quot;4ec35384-527b-11ec-bf63-0242ac130002&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-careCommunication-communication.html\">MedComCareCommunication</a></p></div><p><b>status</b>: unknown</p><p><b>category</b>: Regarding Referral <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://medcomfhir.dk/ig/terminology/1.4.0/CodeSystem-medcom-careCommunication-categoryCodes.html\">MedComCareCommunicationCategories</a>#regarding-referral)</span></p><p><b>priority</b>: asap</p><p><b>subject</b>: <a href=\"Patient-e0c57a9f-9b04-43b4-9355-76f3564a1f10.html\">Patient/e0c57a9f-9b04-43b4-9355-76f3564a1f10</a> &quot; ELMER&quot;</p><h3>Payloads</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Content[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>, , , </td><td>We have a question regarding the referal you sent and it is very urgent...</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "regarding-referral" ]
+     ] )
+  ] ) ; # 
+  fhir:priority [ fhir:v "asap"] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Patient/e0c57a9f-9b04-43b4-9355-76f3564a1f10> ;
+     fhir:reference [ fhir:v "Patient/e0c57a9f-9b04-43b4-9355-76f3564a1f10" ]
+  ] ; # 
+  fhir:payload ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "2023-03-01T12:00:00+01:00"^^xsd:dateTime ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Identifier ;
+         fhir:value [ fhir:v "urn:uuid:def159a2-d54c-4449-a89b-2c70b97ea615" ] ;
+         fhir:assigner [
+           fhir:link <http://medcomfhir.dk/ig/carecommunication/Organization/fae4c8cf-e5d6-404d-867d-97ffa49a1c58> ;
+           fhir:reference [ fhir:v "Organization/fae4c8cf-e5d6-404d-867d-97ffa49a1c58" ]
+         ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://medcomfhir.dk/ig/carecommunication/PractitionerRole/ac1dfd45-a135-47b8-acd7-db0405e21dd0> ;
+         fhir:reference [ fhir:v "PractitionerRole/ac1dfd45-a135-47b8-acd7-db0405e21dd0" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:ContactPoint ;
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "38683868" ]
+       ]
+     ] ) ;
+     fhir:content [ fhir:v "We have a question regarding the referal you sent and it is very urgent..." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
