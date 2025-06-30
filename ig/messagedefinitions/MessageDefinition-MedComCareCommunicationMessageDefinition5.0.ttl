@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition5.0> a fhir:MessageDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedComCareCommunicationMessageDefinition5.0"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messagedefinitions/StructureDefinition/medcom-careCommunication-message-definition"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messagedefinitions/StructureDefinition/medcom-careCommunication-message-definition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MessageDefinition MedComCareCommunicationMessageDefinition5.0</b></p><a name=\"MedComCareCommunicationMessageDefinition5.0\"> </a><a name=\"hcMedComCareCommunicationMessageDefinition5.0\"> </a><a name=\"MedComCareCommunicationMessageDefinition5.0-da-DK\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-careCommunication-message-definition.html\">MedComCareCommunicationMessageDefinition</a></p></div><p><b>url</b>: <a href=\"MessageDefinition-MedComCareCommunicationMessageDefinition5.0.html\">MessageDefinition CareCommunication 5.0</a></p><p><b>identifier</b>: FHIR/CareCommunication 5.0 (use: official, period: 2025-08-29 --&gt; (ongoing))</p><p><b>version</b>: 5.0</p><p><b>name</b>: CareCommunication_MessageDefinition_5.0</p><p><b>title</b>: CareCommunication 5.0</p><p><b>status</b>: Aktiv</p><p><b>date</b>: 2025-05-30</p><p><b>publisher</b>: MedCom</p><p><b>contact</b>: MedCom: <a href=\"http://www.medcom.dk\">http://www.medcom.dk</a>, MedCom FHIR Team: <a href=\"mailto:fhir@medcom.dk\">fhir@medcom.dk</a></p><p><b>description</b>: </p><div><p>DK: CareCommunication (RUSA Standardkatalog - Beskrivelse jf. §3stk2 i bekendtgørelsen)</p>\n</div><h3>UseContexts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://terminology.hl7.org/6.3.0/CodeSystem-usage-context-type.html#usage-context-type-workflow\">UsageContextType workflow</a>: Workflow Setting</td><td><span title=\"Codes:\">DK: Alle sundhedsvæsnets parter der er involverede i behandling og omsorg af borgere eller patienter, herunder læger, hjemmepleje, fysioterapeuter, ergoterapeuter, plejeteam, sygeplejersker, psykologer, psykiater og mange flere. (Hvem skal anvende standarden jf. §3,3 i bekendtgørelsen)</span></td></tr></table><p><b>jurisdiction</b>: <span title=\"Codes:{urn:iso:std:iso:3166 DK}\">Denmark</span></p><p><b>purpose</b>: </p><div><p>DK: Korrespondancemeddelelsen anvendes til sikker elektronisk kommunikation af personhenførbare oplysninger og anvendes typisk til ad hoc kommunikation. (RUSA Standardkatalog - Hvad skal standarden anvendes til jf. §3,2 i bekendtgørelsen)</p>\n</div><p><b>copyright</b>: </p><div><p>Copyright © 2025 MedCom</p>\n</div><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/1.8.1/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message\">MedComMessagingEventCodes care-communication-message</a>: Care Communication Message</p><p><b>category</b>: Notification</p><p><b>responseRequired</b>: Always</p><blockquote><p><b>allowedResponse</b></p><p><b>message</b>: <a href=\"MessageDefinition-MedComAcknowledgementMessageDefinition2.0.html\">Acknowledgement 2.0</a></p></blockquote><blockquote><p><b>allowedResponse</b></p><p><b>message</b>: <a href=\"MessageDefinition-MedComCareCommunicationMessageDefinition5.0.html\">CareCommunication 5.0</a></p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition5.0"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-message-definition-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "FHIR" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "CareCommunication 5.0" ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2025-08-29"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:version [ fhir:v "5.0"] ; # 
+  fhir:name [ fhir:v "CareCommunication_MessageDefinition_5.0"] ; # 
+  fhir:title [ fhir:v "CareCommunication 5.0"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-05-30"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "MedCom FHIR Team" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@medcom.dk" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "DK: CareCommunication (RUSA Standardkatalog - Beskrivelse jf. §3stk2 i bekendtgørelsen)"] ; # 
+  fhir:useContext ( [
+     fhir:code [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "workflow" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:text [ fhir:v "DK: Alle sundhedsvæsnets parter der er involverede i behandling og omsorg af borgere eller patienter, herunder læger, hjemmepleje, fysioterapeuter, ergoterapeuter, plejeteam, sygeplejersker, psykologer, psykiater og mange flere. (Hvem skal anvende standarden jf. §3,3 i bekendtgørelsen)" ]
+     ]
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "DK: Korrespondancemeddelelsen anvendes til sikker elektronisk kommunikation af personhenførbare oplysninger og anvendes typisk til ad hoc kommunikation. (RUSA Standardkatalog - Hvad skal standarden anvendes til jf. §3,2 i bekendtgørelsen)"] ; # 
+  fhir:copyright [ fhir:v "Copyright © 2025 MedCom"] ; # 
+  fhir:event [
+     a fhir:Coding ;
+     fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "care-communication-message" ]
+  ] ; # 
+  fhir:category [ fhir:v "notification"] ; # 
+  fhir:responseRequired [ fhir:v "always"] ; # 
+  fhir:allowedResponse ( [
+     fhir:message [
+       fhir:v "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComAcknowledgementMessageDefinition2.0"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComAcknowledgementMessageDefinition2.0>
+     ]
+  ] [
+     fhir:message [
+       fhir:v "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition5.0"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition5.0>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
