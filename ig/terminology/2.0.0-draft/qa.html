@@ -1,0 +1,887 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 12, errors = 0, warn = 13, info = 4-->
+<head>
+  <title>DKMedComTerminology : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    button { padding: 0px 8px; font-size: 12px; cursor: pointer; border-radius: 2px; border: 1px solid #ccc; background-color: #f0f0f0 }
+    button:hover { background-color: #e0e0e0; }
+    .code-value { display: inline; }
+    .code-hidden { display: none; }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+    function toggleCodes() {
+      const codes = document.getElementsByClassName('code-value');
+      for (let code of codes) {
+        code.classList.toggle('code-hidden');
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for DKMedComTerminology</h1>
+ <p>Generated Mon Jul 07 12:07:33 UTC 2025, FHIR version 4.0.1 for medcom.fhir.dk.terminology#2.0.0-draft (canonical = <a href="http://medcomfhir.dk/ig/terminology">http://medcomfhir.dk/ig/terminology</a> (<a href="http://medcomfhir.dk/ig/terminology/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span style="background-color: #ffcccc">IG Publisher Version: v1.8.26, which is out of date. The current version is v2.0.8 <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = medcom.fhir.dk.terminology, Canonical = http://medcomfhir.dk/ig/terminology</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Language Info:</td><td>Stated Languages: n/a. IG Resource Lang: n/a. 3 of 47 (6%) of resources have a language. <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-resource-language-policy">Population Policy</a>: NONE</td></tr>
+ <tr><td>Publication Request:</td><td><table class="grid">
+ <tr><td>package-id</d><td>medcom.fhir.dk.terminology</td></tr>
+ <tr><td>version</d><td>2.0.0-draft</td></tr>
+ <tr><td>path</d><td>http://medcomfhir.dk/ig/terminology/2.0.0-draft</td></tr>
+ <tr><td>Pub-Mode</d><td>milestone</td></tr>
+ <tr><td>status</d><td>release</td></tr>
+ <tr><td>Release-Label</d><td>release</td></tr>
+ <tr><td>Sequence (Group)</d><td>Release (current: 'Release', others = 'Releases')</td></tr>
+ <tr><td>desc</d><td>CodeSystems and valuesets related to HomeCareObservation has been fixed.</td></tr>
+ <tr><td>descmd</d><td><p>CodeSystems and valuesets related to HomeCareObservation has been fixed.</p>
+<ul>
+<li>CodeSystem MedComObservationCodes introduced</li>
+<li>ValueSet MedComObservationValueSet id renamed 'medcom-observation-valueset' in order to match other valuesets</li>
+<li>ValueSet MedComObservationValueSet includes all codes from the CodeSystem MedComObservationCodes</li>
+<li>CodeSystem NPUObservationCodes introduced</li>
+<li>ValueSet NPUObservationCodesValueSet id renamed 'npu-observation-codes-valueset' in order to match other valuesets</li>
+<li>ValueSet NPUObservationCodesValueSet includes all codes from CodeSystem NPUObservationCodes</li>
+</ul>
+</td></tr>
+ <tr><td>RelatedIgs</d><td>(None Found)</td></tr>
+</table>
+<ul><li>This release is labelled as a milestone, so should not have a patch version (2.0.0-draft) <img src="icon-warning.png" height="16px" width="16px"/></li>
+<li>descmd cannot contain a ' <img src="icon-error.gif" height="16px" width="16px"/></li>
+</ul>
+</td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> medcom.fhir.dk.terminology</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">2.0.0-draft</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://medcomfhir.dk/ig/terminology</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.terminology.r4</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">6.4.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org/6.4.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aaa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r4</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r4</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">see above</td></tr>
+</table><para>Templates: medcom.dk.fhir.template#0.0.1 -&gt; fhir.base.template#current. Tools: 0.5.0</para></div></td></tr>
+ <tr><td>Related IGs:</td><td>n/a</td></tr>
+ <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">5 guides</a></td></tr>
+ <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, <a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Draft Dependencies:</td><td><ul>
+  <li>
+hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
+ (15 uses),     <a href="http://hl7.org/fhir/R4/codesystem-concept-properties.html">FHIR Defined Concept Properties</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/codesystem-request-priority.html">RequestPriority</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html">DiagnosticReportStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-encounter-status.html">EncounterStatus</a>
+ (1 uses)
+  </li>
+  <li>
+hl7.terminology.r4#6.4.0:     <a href="http://terminology.hl7.org/6.4.0/CodeSystem-operation-outcome.html">OperationOutcomeCodes</a>
+ (1 uses)
+  </li>
+</ul>
+</td></tr>
+ <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> <a href="comparison-v1.8.1/index.html">Comparison with version 1.8.1</a></td></tr>
+ <tr><td>IPA Comparison:</td><td> n/a</td></tr>
+ <tr><td>IPS Comparison:</td><td> n/a</td></tr>
+ <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 13, info = 4, broken links = 12, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>12</b></td><td><b>5</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-MedComDiagnosticReportCodes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-MedComDiagnosticReportCodes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-MedComProducentID"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-MedComProducentID</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-acknowledgement-error-codes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-acknowledgement-error-codes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-careCommunication-categoryCodes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-careCommunication-categoryCodes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-PractitionerRolesSKSadministrativ"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-core-PractitionerRolesSKSadministrativ</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-encounter-act-codes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-core-encounter-act-codes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-interpretation-codes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-core-interpretation-codes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-message-definition-type"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-message-definition-type</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messagedefinition-identifer-system"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-messagedefinition-identifer-system</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-activityCodes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-messaging-activityCodes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-cancellation-reason"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-messaging-cancellation-reason</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-destinationUse"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-messaging-destinationUse</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-eventCodes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-messaging-eventCodes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-sorEdiSystem"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-messaging-sorEdiSystem</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-statisticalCodes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-messaging-statisticalCodes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-observation-codes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-observation-codes</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-observation-resultGroup"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-medcom-observation-resultGroup</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-npu-observation-codes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/CodeSystem-npu-observation-codes</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ConceptMap-medcom-messaging-mapFhirToSorEdi"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ConceptMap-medcom-messaging-mapFhirToSorEdi</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ImplementationGuide-medcom.fhir.dk.terminology"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ImplementationGuide-medcom.fhir.dk.terminology</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-MedComDiagnosticReportCodesValueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-MedComDiagnosticReportCodesValueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcm-producentID-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcm-producentID-valueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-HomeCareObservation-messagingActivities"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-HomeCareObservation-messagingActivities</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-acknowledgement-issue-details"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-acknowledgement-issue-details</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-careCommunication-categories"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-careCommunication-categories</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-careCommunication-messagingActivities"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-careCommunication-messagingActivities</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-careCommunication-requestPriority"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-careCommunication-requestPriority</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-conditionlist-status-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-conditionlist-status-valueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-PractitionerRoles"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-core-PractitionerRoles</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-attachmentMimeTypes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-core-attachmentMimeTypes</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-encounter-class"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-core-encounter-class</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-interpreation-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-core-interpreation-valueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-observation-status"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-core-observation-status</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-corediagnosticreport-status"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-corediagnosticreport-status</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-hospitalNotification-encounterClass"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-hospitalNotification-encounterClass</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-hospitalNotification-encounterStatus"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-hospitalNotification-encounterStatus</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-hospitalNotification-messageActivities"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-hospitalNotification-messageActivities</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-message-definition-type-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-message-definition-type-valueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messagedefinition-identifer-system-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-messagedefinition-identifer-system-valueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messagedefinition-use-context-code-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-messagedefinition-use-context-code-valueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messaging-activityCodes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-messaging-activityCodes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messaging-messageTypes"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-messaging-messageTypes</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messaging-sorEdiValues"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-messaging-sorEdiValues</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-obs-responseGroup"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-obs-responseGroup</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-observation-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-medcom-observation-valueset</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-npu-observation-codes-valueset"><b>/tmp/ig-builds/medcom.fhir.dk.terminology#2.0.0-draft/fsh-generated/resources/ValueSet-npu-observation-codes-valueset</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-medcom-messaging-messageTypes.html#l478">output&#8203;/ValueSet-medcom-messaging-messageTypes&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/table&#8203;/tr&#8203;/td&#8203;/a at Line 245, column 1411</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-medcom-messaging-sorEdiSystem.html#medcom-messaging-sorEdiSystem-ValueSet-medcom-messaging-sorEdiValues.46html' for &quot;ValueSet-medcom-messaging-sorEdiValues.html&quot; cannot be resolved (valid targets: [medcom-messaging-sorEdiSystem-da-DK, segment-header, publish-box, bottom, hl7-logo, medcom-messaging-sorEdiSystem, segment-post-footer, hcmedcom-messaging-sorEdiSystem, family-logo, family-nav, ig-status, medcom-messaging-sorEdiSystem-FDIS91, top, codesystem-medcommessagingsoredicodesystem, root, medcom-messaging-sorEdiSystem-FDIS20, stripe, segment-footer, hl7-nav, segment-navbar, medcom-messaging-sorEdiSystem-FCTL, segment-content, segment-breadcrumb])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-medcom-messaging-messageTypes.html#l493">output&#8203;/ValueSet-medcom-messaging-messageTypes&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/table&#8203;/tr&#8203;/td&#8203;/a at Line 245, column 2034</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-medcom-messaging-sorEdiSystem.html#medcom-messaging-sorEdiSystem-ValueSet-medcom-messaging-sorEdiValues.46html' for &quot;ValueSet-medcom-messaging-sorEdiValues.html&quot; cannot be resolved (valid targets: [medcom-messaging-sorEdiSystem-da-DK, segment-header, publish-box, bottom, hl7-logo, medcom-messaging-sorEdiSystem, segment-post-footer, hcmedcom-messaging-sorEdiSystem, family-logo, family-nav, ig-status, medcom-messaging-sorEdiSystem-FDIS91, top, codesystem-medcommessagingsoredicodesystem, root, medcom-messaging-sorEdiSystem-FDIS20, stripe, segment-footer, hl7-nav, segment-navbar, medcom-messaging-sorEdiSystem-FCTL, segment-content, segment-breadcrumb])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="ValueSet-medcom-messaging-messageTypes.html#l508">output&#8203;/ValueSet-medcom-messaging-messageTypes&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/table&#8203;/tr&#8203;/td&#8203;/a at Line 245, column 2639</a></b></td><td><b>error</b></td><td><b>The link 'CodeSystem-medcom-messaging-sorEdiSystem.html#medcom-messaging-sorEdiSystem-ValueSet-medcom-messaging-sorEdiValues.46html' for &quot;ValueSet-medcom-messaging-sorEdiValues.html&quot; cannot be resolved (valid targets: [medcom-messaging-sorEdiSystem-da-DK, segment-header, publish-box, bottom, hl7-logo, medcom-messaging-sorEdiSystem, segment-post-footer, hcmedcom-messaging-sorEdiSystem, family-logo, family-nav, ig-status, medcom-messaging-sorEdiSystem-FDIS91, top, codesystem-medcommessagingsoredicodesystem, root, medcom-messaging-sorEdiSystem-FDIS20, stripe, segment-footer, hl7-nav, segment-navbar, medcom-messaging-sorEdiSystem-FCTL, segment-content, segment-breadcrumb])</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l355">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 220, column 64</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/terminology.html' for &quot;Terminology&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l364">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 224, column 278</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-activityCodes.html' for &quot;MedComMessagingActivityCodes&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l375">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 228, column 334</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html' for &quot;MedComHospitalNotificationMessageActivityCodes&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l375">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 228, column 615</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-messagingActivities.html' for &quot;MedComCareCommunicationMessageActivityCodes&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l375">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 228, column 933</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-activityCodes.html' for &quot;MedComMessagingActivityCodes&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l389">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 230, column 379</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html' for &quot;MedComCareCommunicationCategoryCodes&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l395">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 232, column 357</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html' for &quot;MedComHospitalNotificationMessageActivityCodes&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l404">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 237, column 33</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/ConceptMap-medcom-messaging-mapFhirToSorEdi.html' for &quot;MedComMessagingMapFhirToSorEdi&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l422">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 245, column 33</a></b></td><td><b>error</b></td><td><b>The link 'http://medcomfhir.dk/ig/terminology/downloads.html' for &quot;download the terminologies&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>1</b></td><td><b>warning</b></td><td><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>2</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>3</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>4</b></td><td><b>warning</b></td><td><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>IG</b></td><td><b>warning</b></td><td><b>The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-MedComDiagnosticReportCodes"> </a>
+<h2><a href="CodeSystem-MedComDiagnosticReportCodes.html">fsh-generated/resources/CodeSystem-MedComDiagnosticReportCodes.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-MedComProducentID"> </a>
+<h2><a href="CodeSystem-MedComProducentID.html">fsh-generated/resources/CodeSystem-MedComProducentID.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-acknowledgement-error-codes"> </a>
+<h2><a href="CodeSystem-medcom-acknowledgement-error-codes.html">fsh-generated/resources/CodeSystem-medcom-acknowledgement-error-codes.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-careCommunication-categoryCodes"> </a>
+<h2><a href="CodeSystem-medcom-careCommunication-categoryCodes.html">fsh-generated/resources/CodeSystem-medcom-careCommunication-categoryCodes.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret"> </a>
+<h2><a href="CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret.html">fsh-generated/resources/CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-PractitionerRolesSKSadministrativ"> </a>
+<h2><a href="CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html">fsh-generated/resources/CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-encounter-act-codes"> </a>
+<h2><a href="CodeSystem-medcom-core-encounter-act-codes.html">fsh-generated/resources/CodeSystem-medcom-core-encounter-act-codes.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-core-interpretation-codes"> </a>
+<h2><a href="CodeSystem-medcom-core-interpretation-codes.html">fsh-generated/resources/CodeSystem-medcom-core-interpretation-codes.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-message-definition-type"> </a>
+<h2><a href="CodeSystem-medcom-message-definition-type.html">fsh-generated/resources/CodeSystem-medcom-message-definition-type.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messagedefinition-identifer-system"> </a>
+<h2><a href="CodeSystem-medcom-messagedefinition-identifer-system.html">fsh-generated/resources/CodeSystem-medcom-messagedefinition-identifer-system.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-activityCodes"> </a>
+<h2><a href="CodeSystem-medcom-messaging-activityCodes.html">fsh-generated/resources/CodeSystem-medcom-messaging-activityCodes.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-cancellation-reason"> </a>
+<h2><a href="CodeSystem-medcom-messaging-cancellation-reason.html">fsh-generated/resources/CodeSystem-medcom-messaging-cancellation-reason.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-destinationUse"> </a>
+<h2><a href="CodeSystem-medcom-messaging-destinationUse.html">fsh-generated/resources/CodeSystem-medcom-messaging-destinationUse.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-eventCodes"> </a>
+<h2><a href="CodeSystem-medcom-messaging-eventCodes.html">fsh-generated/resources/CodeSystem-medcom-messaging-eventCodes.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-sorEdiSystem"> </a>
+<h2><a href="CodeSystem-medcom-messaging-sorEdiSystem.html">fsh-generated/resources/CodeSystem-medcom-messaging-sorEdiSystem.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-messaging-statisticalCodes"> </a>
+<h2><a href="CodeSystem-medcom-messaging-statisticalCodes.html">fsh-generated/resources/CodeSystem-medcom-messaging-statisticalCodes.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-observation-codes"> </a>
+<h2><a href="CodeSystem-medcom-observation-codes.html">fsh-generated/resources/CodeSystem-medcom-observation-codes.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.language (l1/c80)</b></td><td><b>information</b></td><td><b>The value provided ('da-DK') was not found in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a code is recommended to come from this value set (error message = The System URI could not be determined for the code 'da-DK' in the ValueSet 'http://hl7.org/fhir/ValueSet/languages|4.0.1'; The provided code '#da-DK' was not found in the value set 'http://hl7.org/fhir/ValueSet/languages|4.0.1')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_18</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem.property[1] (l1/c4817)</b></td><td><b>warning</b></td><td><b>The uri 'http://hl7.org/fhir/concept-properties#effectiveDate' for the property 'effectiveDate' implies a property with that URI exists in the CodeSystem FHIR Defined Concept Properties for http://hl7.org/fhir/concept-properties, or the code 'effectiveDate' does, but neither were found</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_URI_INVALID</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-medcom-observation-resultGroup"> </a>
+<h2><a href="CodeSystem-medcom-observation-resultGroup.html">fsh-generated/resources/CodeSystem-medcom-observation-resultGroup.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.language (l1/c86)</b></td><td><b>information</b></td><td><b>The value provided ('da-DK') was not found in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a code is recommended to come from this value set (error message = The System URI could not be determined for the code 'da-DK' in the ValueSet 'http://hl7.org/fhir/ValueSet/languages|4.0.1'; The provided code '#da-DK' was not found in the value set 'http://hl7.org/fhir/ValueSet/languages|4.0.1')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_18</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_CodeSystem-npu-observation-codes"> </a>
+<h2><a href="CodeSystem-npu-observation-codes.html">fsh-generated/resources/CodeSystem-npu-observation-codes.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.language (l1/c77)</b></td><td><b>information</b></td><td><b>The value provided ('da-DK') was not found in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a code is recommended to come from this value set (error message = The System URI could not be determined for the code 'da-DK' in the ValueSet 'http://hl7.org/fhir/ValueSet/languages|4.0.1'; The provided code '#da-DK' was not found in the value set 'http://hl7.org/fhir/ValueSet/languages|4.0.1')</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_18</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem (l1/c19547)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem.property[1] (l1/c19547)</b></td><td><b>warning</b></td><td><b>The uri 'http://hl7.org/fhir/concept-properties#effectiveDate' for the property 'effectiveDate' implies a property with that URI exists in the CodeSystem FHIR Defined Concept Properties for http://hl7.org/fhir/concept-properties, or the code 'effectiveDate' does, but neither were found</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_URI_INVALID</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ConceptMap-medcom-messaging-mapFhirToSorEdi"> </a>
+<h2><a href="ConceptMap-medcom-messaging-mapFhirToSorEdi.html">fsh-generated/resources/ConceptMap-medcom-messaging-mapFhirToSorEdi.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>ConceptMap: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/conceptmap.html">ConceptMap</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ConceptMap (l1/c3050)</b></td><td><b>warning</b></td><td><b>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.title is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CONCEPTMAP_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ConceptMap (l1/c3050)</b></td><td><b>warning</b></td><td><b>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CONCEPTMAP_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ConceptMap (l1/c3050)</b></td><td><b>warning</b></td><td><b>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.description is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CONCEPTMAP_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Resource</b></td><td><b>information</b></td><td><b>The resource ConceptMap/medcom-messaging-mapFhirToSorEdi could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ImplementationGuide-medcom.fhir.dk.terminology"> </a>
+<h2><a href="index.html">fsh-generated/resources/ImplementationGuide-medcom.fhir.dk.terminology.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>ImplementationGuide/medcom.fhir.dk.terminology: ImplementationGuide: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-MedComDiagnosticReportCodesValueset"> </a>
+<h2><a href="ValueSet-MedComDiagnosticReportCodesValueset.html">fsh-generated/resources/ValueSet-MedComDiagnosticReportCodesValueset.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcm-producentID-valueset"> </a>
+<h2><a href="ValueSet-medcm-producentID-valueset.html">fsh-generated/resources/ValueSet-medcm-producentID-valueset.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-HomeCareObservation-messagingActivities"> </a>
+<h2><a href="ValueSet-medcom-HomeCareObservation-messagingActivities.html">fsh-generated/resources/ValueSet-medcom-HomeCareObservation-messagingActivities.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-acknowledgement-issue-details"> </a>
+<h2><a href="ValueSet-medcom-acknowledgement-issue-details.html">fsh-generated/resources/ValueSet-medcom-acknowledgement-issue-details.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi25"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-careCommunication-categories"> </a>
+<h2><a href="ValueSet-medcom-careCommunication-categories.html">fsh-generated/resources/ValueSet-medcom-careCommunication-categories.json</a> <span id="svi26" class="toggle" onclick="toggle('vi26')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi26')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi26"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-careCommunication-messagingActivities"> </a>
+<h2><a href="ValueSet-medcom-careCommunication-messagingActivities.html">fsh-generated/resources/ValueSet-medcom-careCommunication-messagingActivities.json</a> <span id="svi27" class="toggle" onclick="toggle('vi27')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi27')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi27"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-careCommunication-requestPriority"> </a>
+<h2><a href="ValueSet-medcom-careCommunication-requestPriority.html">fsh-generated/resources/ValueSet-medcom-careCommunication-requestPriority.json</a> <span id="svi28" class="toggle" onclick="toggle('vi28')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi28')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi28"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-conditionlist-status-valueset"> </a>
+<h2><a href="ValueSet-medcom-conditionlist-status-valueset.html">fsh-generated/resources/ValueSet-medcom-conditionlist-status-valueset.json</a> <span id="svi29" class="toggle" onclick="toggle('vi29')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi29')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi29"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-PractitionerRoles"> </a>
+<h2><a href="ValueSet-medcom-core-PractitionerRoles.html">fsh-generated/resources/ValueSet-medcom-core-PractitionerRoles.json</a> <span id="svi30" class="toggle" onclick="toggle('vi30')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi30')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi30"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-attachmentMimeTypes"> </a>
+<h2><a href="ValueSet-medcom-core-attachmentMimeTypes.html">fsh-generated/resources/ValueSet-medcom-core-attachmentMimeTypes.json</a> <span id="svi31" class="toggle" onclick="toggle('vi31')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi31')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi31"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet&#8203;.compose&#8203;.include[0]&#8203;.system (l1&#8203;/c1615)</b></td><td><b>warning</b></td><td><b>URL value 'urn:ietf:bcp:13' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Type_Specific_Checks_DT_URL_Resolve</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-encounter-class"> </a>
+<h2><a href="ValueSet-medcom-core-encounter-class.html">fsh-generated/resources/ValueSet-medcom-core-encounter-class.json</a> <span id="svi32" class="toggle" onclick="toggle('vi32')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi32')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi32"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-interpreation-valueset"> </a>
+<h2><a href="ValueSet-medcom-core-interpreation-valueset.html">fsh-generated/resources/ValueSet-medcom-core-interpreation-valueset.json</a> <span id="svi33" class="toggle" onclick="toggle('vi33')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi33')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi33"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-core-observation-status"> </a>
+<h2><a href="ValueSet-medcom-core-observation-status.html">fsh-generated/resources/ValueSet-medcom-core-observation-status.json</a> <span id="svi34" class="toggle" onclick="toggle('vi34')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi34')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi34"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-corediagnosticreport-status"> </a>
+<h2><a href="ValueSet-medcom-corediagnosticreport-status.html">fsh-generated/resources/ValueSet-medcom-corediagnosticreport-status.json</a> <span id="svi35" class="toggle" onclick="toggle('vi35')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi35')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi35"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-hospitalNotification-encounterClass"> </a>
+<h2><a href="ValueSet-medcom-hospitalNotification-encounterClass.html">fsh-generated/resources/ValueSet-medcom-hospitalNotification-encounterClass.json</a> <span id="svi36" class="toggle" onclick="toggle('vi36')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi36')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi36"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-hospitalNotification-encounterStatus"> </a>
+<h2><a href="ValueSet-medcom-hospitalNotification-encounterStatus.html">fsh-generated/resources/ValueSet-medcom-hospitalNotification-encounterStatus.json</a> <span id="svi37" class="toggle" onclick="toggle('vi37')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi37')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi37"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-hospitalNotification-messageActivities"> </a>
+<h2><a href="ValueSet-medcom-hospitalNotification-messageActivities.html">fsh-generated/resources/ValueSet-medcom-hospitalNotification-messageActivities.json</a> <span id="svi38" class="toggle" onclick="toggle('vi38')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi38')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi38"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-message-definition-type-valueset"> </a>
+<h2><a href="ValueSet-medcom-message-definition-type-valueset.html">fsh-generated/resources/ValueSet-medcom-message-definition-type-valueset.json</a> <span id="svi39" class="toggle" onclick="toggle('vi39')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi39')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi39"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messagedefinition-identifer-system-valueset"> </a>
+<h2><a href="ValueSet-medcom-messagedefinition-identifer-system-valueset.html">fsh-generated/resources/ValueSet-medcom-messagedefinition-identifer-system-valueset.json</a> <span id="svi40" class="toggle" onclick="toggle('vi40')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi40')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi40"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messagedefinition-use-context-code-valueset"> </a>
+<h2><a href="ValueSet-medcom-messagedefinition-use-context-code-valueset.html">fsh-generated/resources/ValueSet-medcom-messagedefinition-use-context-code-valueset.json</a> <span id="svi41" class="toggle" onclick="toggle('vi41')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi41')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi41"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messaging-activityCodes"> </a>
+<h2><a href="ValueSet-medcom-messaging-activityCodes.html">fsh-generated/resources/ValueSet-medcom-messaging-activityCodes.json</a> <span id="svi42" class="toggle" onclick="toggle('vi42')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi42')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi42"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messaging-messageTypes"> </a>
+<h2><a href="ValueSet-medcom-messaging-messageTypes.html">fsh-generated/resources/ValueSet-medcom-messaging-messageTypes.json</a> <span id="svi43" class="toggle" onclick="toggle('vi43')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi43')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi43"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-messaging-sorEdiValues"> </a>
+<h2><a href="ValueSet-medcom-messaging-sorEdiValues.html">fsh-generated/resources/ValueSet-medcom-messaging-sorEdiValues.json</a> <span id="svi44" class="toggle" onclick="toggle('vi44')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi44')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi44"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-obs-responseGroup"> </a>
+<h2><a href="ValueSet-medcom-obs-responseGroup.html">fsh-generated/resources/ValueSet-medcom-obs-responseGroup.json</a> <span id="svi45" class="toggle" onclick="toggle('vi45')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi45')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi45"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-medcom-observation-valueset"> </a>
+<h2><a href="ValueSet-medcom-observation-valueset.html">fsh-generated/resources/ValueSet-medcom-observation-valueset.json</a> <span id="svi46" class="toggle" onclick="toggle('vi46')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi46')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi46"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_tmp_ig-builds_medcom.fhir.dk.terminology_2.0.0-draft_fsh-generated_resources_ValueSet-npu-observation-codes-valueset"> </a>
+<h2><a href="ValueSet-npu-observation-codes-valueset.html">fsh-generated/resources/ValueSet-npu-observation-codes-valueset.json</a> <span id="svi47" class="toggle" onclick="toggle('vi47')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi47')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi47"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet (l1/c1084)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="CODESYSTEM_PROPERTY_URI_INVALID"> </a>
+<h2>CODESYSTEM_PROPERTY_URI_INVALID</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-medcom-observation-codes.html">fsh-generated/resources/CodeSystem-medcom-observation-codes.json</a></td><td><b>The uri 'http://hl7.org/fhir/concept-properties#effectiveDate' for the property 'effectiveDate' implies a property with that URI exists in the CodeSystem FHIR Defined Concept Properties for http://hl7.org/fhir/concept-properties, or the code 'effectiveDate' does, but neither were found</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-npu-observation-codes.html">fsh-generated/resources/CodeSystem-npu-observation-codes.json</a></td><td><b>The uri 'http://hl7.org/fhir/concept-properties#effectiveDate' for the property 'effectiveDate' implies a property with that URI exists in the CodeSystem FHIR Defined Concept Properties for http://hl7.org/fhir/concept-properties, or the code 'effectiveDate' does, but neither were found</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="CODESYSTEM_SHAREABLE_MISSING"> </a>
+<h2>CODESYSTEM_SHAREABLE_MISSING</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-npu-observation-codes.html">fsh-generated/resources/CodeSystem-npu-observation-codes.json</a></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="CONCEPTMAP_SHAREABLE_MISSING"> </a>
+<h2>CONCEPTMAP_SHAREABLE_MISSING</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="ConceptMap-medcom-messaging-mapFhirToSorEdi.html">fsh-generated/resources/ConceptMap-medcom-messaging-mapFhirToSorEdi.json</a></td><td><b>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.title is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="ConceptMap-medcom-messaging-mapFhirToSorEdi.html">fsh-generated/resources/ConceptMap-medcom-messaging-mapFhirToSorEdi.json</a></td><td><b>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.experimental is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="ConceptMap-medcom-messaging-mapFhirToSorEdi.html">fsh-generated/resources/ConceptMap-medcom-messaging-mapFhirToSorEdi.json</a></td><td><b>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.description is mandatory, but it is not present</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_TX_NoValid_18"> </a>
+<h2>Terminology_TX_NoValid_18</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-medcom-observation-codes.html">fsh-generated/resources/CodeSystem-medcom-observation-codes.json</a></td><td><b>The value provided ('da-DK') was not found in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a code is recommended to come from this value set (error message = The System URI could not be determined for the code 'da-DK' in the ValueSet 'http://hl7.org/fhir/ValueSet/languages|4.0.1'; The provided code '#da-DK' was not found in the value set 'http://hl7.org/fhir/ValueSet/languages|4.0.1')</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-medcom-observation-resultGroup.html">fsh-generated/resources/CodeSystem-medcom-observation-resultGroup.json</a></td><td><b>The value provided ('da-DK') was not found in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a code is recommended to come from this value set (error message = The System URI could not be determined for the code 'da-DK' in the ValueSet 'http://hl7.org/fhir/ValueSet/languages|4.0.1'; The provided code '#da-DK' was not found in the value set 'http://hl7.org/fhir/ValueSet/languages|4.0.1')</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-npu-observation-codes.html">fsh-generated/resources/CodeSystem-npu-observation-codes.json</a></td><td><b>The value provided ('da-DK') was not found in the value set 'Common Languages' (http://hl7.org/fhir/ValueSet/languages|4.0.1), and a code is recommended to come from this value set (error message = The System URI could not be determined for the code 'da-DK' in the ValueSet 'http://hl7.org/fhir/ValueSet/languages|4.0.1'; The provided code '#da-DK' was not found in the value set 'http://hl7.org/fhir/ValueSet/languages|4.0.1')</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_URL_Resolve"> </a>
+<h2>Type_Specific_Checks_DT_URL_Resolve</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="ValueSet-medcom-core-attachmentMimeTypes.html">fsh-generated/resources/ValueSet-medcom-core-attachmentMimeTypes.json</a></td><td><b>URL value 'urn:ietf:bcp:13' does not resolve</b></td>
+   </tr>
+</table>
+</body>
+</html>

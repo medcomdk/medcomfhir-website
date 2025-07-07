@@ -14,11 +14,11 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.terminology</b></p><a name=\"medcom.fhir.dk.terminology\"> </a><a name=\"hcmedcom.fhir.dk.terminology\"> </a><a name=\"medcom.fhir.dk.terminology-da-DK\"> </a><h2>DKMedComTerminology</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology</pre><div><p>This IG includes CodeSystems, ValueSets and ConceptMaps defined by MedCom and used in MedCom's FHIR standards.</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "1.8.1"] ; # 
+  fhir:version [ fhir:v "2.0.0-draft"] ; # 
   fhir:name [ fhir:v "DKMedComTerminology"] ; # 
   fhir:title [ fhir:v "DK MedCom Terminology"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-05-12T07:47:19+00:00"^^xsd:dateTime] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-07-07T12:07:36+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MedCom"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MedCom" ] ;
@@ -52,7 +52,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.3.0" ]
+     fhir:version [ fhir:v "6.4.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -866,42 +866,6 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-resultGroup> ;
-         fhir:reference [ fhir:v "CodeSystem/medcom-observation-resultGroup" ]
-       ] ;
-       fhir:name [ fhir:v "MedCom Observation Result Group" ] ;
-       fhir:description [ fhir:v "The observation result group are intende to be used to sort the individual analyzes." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://medcomfhir.dk/ig/terminology/ValueSet/MedComObservationValueSet> ;
-         fhir:reference [ fhir:v "ValueSet/MedComObservationValueSet" ]
-       ] ;
-       fhir:name [ fhir:v "MedCom Observation ValueSet" ] ;
-       fhir:description [ fhir:v "Valuesets for Observation defined by MedCom" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "CodeSystem"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-acknowledgement-error-codes> ;
          fhir:reference [ fhir:v "CodeSystem/medcom-acknowledgement-error-codes" ]
        ] ;
@@ -1528,6 +1492,42 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/medcom-observation-codes" ]
+       ] ;
+       fhir:name [ fhir:v "MedComObservationCodes" ] ;
+       fhir:description [ fhir:v "CodeSystem with observations codes used in HomeCareObservation" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-resultGroup> ;
+         fhir:reference [ fhir:v "CodeSystem/medcom-observation-resultGroup" ]
+       ] ;
+       fhir:name [ fhir:v "MedComObservationResultGroup" ] ;
+       fhir:description [ fhir:v "The observation result group are intended to be used to sort the individual analyzes." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "ValueSet"
          ]
        ] ) ;
@@ -1537,6 +1537,24 @@
        ] ;
        fhir:name [ fhir:v "MedComObservationResultGroupValueSet" ] ;
        fhir:description [ fhir:v "National response groups for observation results." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/terminology/ValueSet/medcom-observation-valueset> ;
+         fhir:reference [ fhir:v "ValueSet/medcom-observation-valueset" ]
+       ] ;
+       fhir:name [ fhir:v "MedComObservationValueSet" ] ;
+       fhir:description [ fhir:v "Valuesets for Observation defined by MedCom" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1618,12 +1636,30 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/terminology/CodeSystem/npu-observation-codes> ;
+         fhir:reference [ fhir:v "CodeSystem/npu-observation-codes" ]
+       ] ;
+       fhir:name [ fhir:v "NPUObservationCodes" ] ;
+       fhir:description [ fhir:v "CodeSystem with NPU observation codes" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "ValueSet"
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://medcomfhir.dk/ig/terminology/ValueSet/NPUObservationCodesValueSet> ;
-         fhir:reference [ fhir:v "ValueSet/NPUObservationCodesValueSet" ]
+         fhir:link <http://medcomfhir.dk/ig/terminology/ValueSet/npu-observation-codes-valueset> ;
+         fhir:reference [ fhir:v "ValueSet/npu-observation-codes-valueset" ]
        ] ;
        fhir:name [ fhir:v "NPUObservationCodesValueSet" ] ;
        fhir:description [ fhir:v "ValuseSet with NPU observations Codes" ] ;

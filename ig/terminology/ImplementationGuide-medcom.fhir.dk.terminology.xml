@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
-  <version value="1.8.1"/>
+  <version value="2.0.0-draft"/>
   <name value="DKMedComTerminology"/>
   <title value="DK MedCom Terminology"/>
-  <status value="active"/>
-  <date value="2025-05-12T07:47:19+00:00"/>
+  <status value="draft"/>
+  <date value="2025-07-07T12:07:36+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.3.0"/>
+    <version value="6.4.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -472,28 +472,6 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/medcom-observation-resultGroup"/>
-      </reference>
-      <name value="MedCom Observation Result Group"/>
-      <description value="The observation result group are intende to be used to sort the individual analyzes."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/MedComObservationValueSet"/>
-      </reference>
-      <name value="MedCom Observation ValueSet"/>
-      <description value="Valuesets for Observation defined by MedCom"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
         <reference value="CodeSystem/medcom-acknowledgement-error-codes"/>
       </reference>
       <name value="MedComAcknowledgementErrorCodes"/>
@@ -876,6 +854,28 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/medcom-observation-codes"/>
+      </reference>
+      <name value="MedComObservationCodes"/>
+      <description value="CodeSystem with observations codes used in HomeCareObservation"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/medcom-observation-resultGroup"/>
+      </reference>
+      <name value="MedComObservationResultGroup"/>
+      <description value="The observation result group are intended to be used to sort the individual analyzes."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -883,6 +883,17 @@
       </reference>
       <name value="MedComObservationResultGroupValueSet"/>
       <description value="National response groups for observation results."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medcom-observation-valueset"/>
+      </reference>
+      <name value="MedComObservationValueSet"/>
+      <description value="Valuesets for Observation defined by MedCom"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -931,10 +942,21 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/npu-observation-codes"/>
+      </reference>
+      <name value="NPUObservationCodes"/>
+      <description value="CodeSystem with NPU observation codes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/NPUObservationCodesValueSet"/>
+        <reference value="ValueSet/npu-observation-codes-valueset"/>
       </reference>
       <name value="NPUObservationCodesValueSet"/>
       <description value="ValuseSet with NPU observations Codes"/>
