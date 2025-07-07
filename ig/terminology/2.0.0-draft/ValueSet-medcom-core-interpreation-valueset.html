@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MedComCoreInterpretationValueset - DK MedCom Terminology v2.0.0-draft</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.9"}
+    h3,h4,h5,h6{--heading-prefix:"4.9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">DK MedCom Terminology</span>
+            <br/>
+            <span style="display:inline-block;">2.0.0-draft - release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MedComCoreInterpretationValueset</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the MedCom Terminology (v2.0.0-draft: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This version is a pre-release. The current official version is <a data-no-external="true" href="http://medcomfhir.dk/ig/terminology">1.8.1</a>.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/terminology/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-medcom-core-interpreation-valueset.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-medcom-core-interpreation-valueset.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-medcom-core-interpreation-valueset.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: MedComCoreInterpretationValueset
+(Experimental)
+  </h2>
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-interpreation-valueset<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-interpreation-valueset"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2.0.0-draft<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-interpreation-valueset|2.0.0-draft"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2023-10-31
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MedComCoreInterpretationCodesValueset</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Valueset with code for interpretation of an observation</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<p>This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet medcom-core-interpreation-valueset</b></p><a name="medcom-core-interpreation-valueset"> </a><a name="hcmedcom-core-interpreation-valueset"> </a><a name="medcom-core-interpreation-valueset-da-DK"> </a><p>This value set includes codes based on the following rules:</p>
+<ul><li>Include all codes defined in <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html"><code>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</code></a></li>
+<li>Include these codes as defined in <a href="CodeSystem-medcom-core-interpretation-codes.html"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes</code></a>
+<table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr>
+<tr><td><a href="CodeSystem-medcom-core-interpretation-codes.html#medcom-core-interpretation-codes-NI">NI</a></td>
+<td style="color: #cccccc">Not Interpreted</td></tr></table></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>ValueSet </b></p><div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px"><p>Expansion performed internally based on:</p><ul><li><a href="CodeSystem-medcom-core-interpretation-codes.html">codesystem MedComCoreInterpretationCodes v2.0.0-draft (CodeSystem)</a></li><li><a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html">codesystem ObservationInterpretation v3.0.0 (CodeSystem)</a></li></ul></div><p>This value set contains 58 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display (da-DK)</b></td><td><b>Inactive</b></td><td><b>Definition</b></td><td><b><a href="http://hl7.org/fhir/concept-properties#status">status</a></b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-_GeneticObservationInterpretation"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-_GeneticObservationInterpretation" title="This code is not selectable ('Abstract')"><i>_GeneticObservationInterpretation</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>GeneticObservationInterpretation</td><td/><td><div><p>Codes that specify interpretation of genetic analysis, such as &quot;positive&quot;, &quot;negative&quot;, &quot;carrier&quot;, &quot;responsive&quot;, etc.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-CAR"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-CAR">CAR</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Carrier</td><td/><td><div><p>The patient is considered as carrier based on the testing results. A carrier is an individual who carries an altered form of a gene which can lead to having a child or offspring in future generations with a genetic disorder.</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-Carrier"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-Carrier">Carrier</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Carrier</td><td>inactive</td><td><div><p>The patient is considered as carrier based on the testing results. A carrier is an individual who carries an altered form of a gene which can lead to having a child or offspring in future generations with a genetic disorder.</p>
+<p><em><strong>Deprecation Comment:</strong></em> This code is currently the same string as the print name for this concept and is inconsistent with the conventions being used for the other codes in the coding system, as it is a full word with initial capitalization, rather than an all upper case mnemonic. The recommendation from OO is to deprecate the code &quot;Carrier&quot; and to add &quot;CAR&quot; as the new active code representation for this concept.</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-_ObservationInterpretationChange"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-_ObservationInterpretationChange" title="This code is not selectable ('Abstract')"><i>_ObservationInterpretationChange</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>ObservationInterpretationChange</td><td/><td><div><p>Interpretations of change of quantity and/or severity. At most one of B or W and one of U or D allowed.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-B"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-B">B</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Better</td><td/><td><div><p>The current result or observation value has improved compared to the previous result or observation value (the change is significant as defined in the respective test procedure).</p>
+<p>[Note: This can be applied to quantitative or qualitative observations.]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-D"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-D">D</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Significant change down</td><td/><td><div><p>The current result has decreased from the previous result for a quantitative observation (the change is significant as defined in the respective test procedure).</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-U"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-U">U</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Significant change up</td><td/><td><div><p>The current result has increased from the previous result for a quantitative observation (the change is significant as defined in the respective test procedure).</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-W"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-W">W</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Worse</td><td/><td><div><p>The current result or observation value has degraded compared to the previous result or observation value (the change is significant as defined in the respective test procedure).</p>
+<p>[Note: This can be applied to quantitative or qualitative observations.]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-_ObservationInterpretationExceptions"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-_ObservationInterpretationExceptions" title="This code is not selectable ('Abstract')"><i>_ObservationInterpretationExceptions</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>ObservationInterpretationExceptions</td><td/><td><div><p>Technical exceptions resulting in the inability to provide an interpretation. At most one allowed. Does not imply normality or severity.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-|3c"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-.60">&lt;</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Off scale low</td><td/><td><div><p>The result is below the minimum detection limit (the test procedure or equipment is the limiting factor).</p>
+<p>Synonyms: Below analytical limit, low off scale.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-|3e"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-.62">&gt;</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Off scale high</td><td/><td><div><p>The result is above the maximum quantifiable limit (the test procedure or equipment is the limiting factor).</p>
+<p>Synonyms: Above analytical limit, high off scale.</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-AC"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-AC">AC</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Anti-complementary substances present</td><td>inactive</td><td><div><p>A valid result cannot be obtained for the specified component / analyte due to the presence of anti-complementary substances in the sample.</p>
+<p><em><strong>Deprecation Comment:</strong></em> This code is being deprecated to match the status in V2 Table 0078 &quot;Interpretation Codes.</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-IE"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-IE">IE</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Insufficient evidence</td><td/><td><div><p>There is insufficient evidence that the species in question is a good target for therapy with the drug. A categorical interpretation is not possible.</p>
+<p>[Note: A MIC with &quot;IE&quot; and/or a comment may be reported (without an accompanying S, I or R-categorization).]</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-QCF"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-QCF">QCF</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Quality control failure</td><td>inactive</td><td><div><p>A result cannot be considered valid for the specified component / analyte or organism due to failure in the quality control testing component.</p>
+<p><em><strong>Deprecation Comment:</strong></em> This code is being deprecated to match the status in V2 Table 0078 &quot;Interpretation Codes.</p>
+</div></td><td>deprecated</td></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-TOX"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-TOX">TOX</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Cytotoxic substance present</td><td>inactive</td><td><div><p>A valid result cannot be obtained for the specified organism or cell line due to the presence of cytotoxic substances in the sample or culture.</p>
+<p><em><strong>Deprecation Comment:</strong></em> This code is being deprecated to match the status in V2 Table 0078 &quot;Interpretation Codes.</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-_ObservationInterpretationNormality"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-_ObservationInterpretationNormality" title="This code is not selectable ('Abstract')"><i>_ObservationInterpretationNormality</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>ObservationInterpretationNormality</td><td/><td><div><p>Interpretation of normality or degree of abnormality (including critical or &quot;alert&quot; level). Concepts in this category are mutually exclusive, i.e., at most one is allowed.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-A"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-A">A</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Abnormal</td><td/><td><div><p>The result or observation value is outside the reference range or expected norm (as defined for the respective test procedure).</p>
+<p>[Note: Typically applies to non-numeric results.]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-AA"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-AA">AA</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Critical abnormal</td><td/><td><div><p>The result or observation value is outside a reference range or expected norm at a level at which immediate action should be considered for patient safety (as defined for the respective test procedure).</p>
+<p>[Note: Typically applies to non-numeric results. Analogous to critical/panic limits for numeric results.]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-HH"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-HH">HH</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Critical high</td><td/><td><div><p>The result for a quantitative observation is above a reference level at which immediate action should be considered for patient safety (as defined for the respective test procedure).</p>
+<p>Synonym: Above upper panic limits.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-LL"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-LL">LL</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Critical low</td><td/><td><div><p>The result for a quantitative observation is below a reference level at which immediate action should be considered for patient safety (as defined for the respective test procedure).</p>
+<p>Synonym: Below lower panic limits.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-H"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-H">H</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>High</td><td/><td><div><p>The result for a quantitative observation is above the upper limit of the reference range (as defined for the respective test procedure).</p>
+<p>Synonym: Above high normal</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-H|3e"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-H.62">H&gt;</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Significantly high</td><td>inactive</td><td><div><p>A test result that is significantly higher than the reference (normal) or therapeutic interval, but has not reached the critically high value and might need special attention, as defined by the laboratory or the clinician.</p>
+<p>[Note: This level is situated between 'H' and 'HH'.]</p>
+<p><em>Deprecation Comment:</em> The code 'H&gt;' is being deprecated in order to align with the use of the code 'HU' for &quot;Very high&quot; in V2 Table 0078 &quot;Interpretation Codes&quot;.</p>
+<p>[Note: The use of code 'H&gt;' is non-preferred, as this code is deprecated and on track to be retired; use code 'HU' instead.</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-HU"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-HU">HU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Significantly high</td><td/><td><div><p>A test result that is significantly higher than the reference (normal) or therapeutic interval, but has not reached the critically high value and might need special attention, as defined by the laboratory or the clinician.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-L"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-L">L</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Low</td><td/><td><div><p>The result for a quantitative observation is below the lower limit of the reference range (as defined for the respective test procedure).</p>
+<p>Synonym: Below low normal</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-L|3c"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-L.60">L&lt;</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Significantly low</td><td>inactive</td><td><div><p>A test result that is significantly lower than the reference (normal) or therapeutic interval, but has not reached the critically low value and might need special attention, as defined by the laboratory or the clinician.</p>
+<p>[Note: This level is situated between 'L' and 'LL'.]</p>
+<p><em>Deprecation Comment:</em> The code 'L&lt;' is being deprecated in order to align with the use of the code 'LU' for &quot;Very low&quot; in V2 Table 0078 &quot;Interpretation Codes&quot;.</p>
+<p>[Note: The use of code 'L&lt;' is non-preferred, as this code is deprecated and on track to be retired; use code 'LU' instead.</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-LU"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-LU">LU</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Significantly low</td><td/><td><div><p>A test result that is significantly lower than the reference (normal) or therapeutic interval, but has not reached the critically low value and might need special attention, as defined by the laboratory or the clinician.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-N"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-N">N</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Normal</td><td/><td><div><p>The result or observation value is within the reference range or expected norm (as defined for the respective test procedure).</p>
+<p>[Note: Applies to numeric or non-numeric results.]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-_ObservationInterpretationSusceptibility"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-_ObservationInterpretationSusceptibility" title="This code is not selectable ('Abstract')"><i>_ObservationInterpretationSusceptibility</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>ObservationInterpretationSusceptibility</td><td/><td><div><p>Interpretations of anti-microbial susceptibility testing results (microbiology). At most one allowed.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-I"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-I">I</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Intermediate</td><td/><td><div><p>Bacterial strain inhibited in vitro by a concentration of an antimicrobial agent that is associated with uncertain therapeutic effect. Reference: CLSI (http://www.clsi.org/Content/NavigationMenu/Resources/HarmonizedTerminologyDatabase/Harmonized_Terminolo.htm) Projects: ISO 20776-1, ISO 20776-2</p>
+<p>[Note 1: Bacterial strains are categorized as intermediate by applying the appropriate breakpoints in a defined phenotypic test system.]</p>
+<p>[Note 2: This class of susceptibility implies that an infection due to the isolate can be appropriately treated in body sites where the drugs are physiologically concentrated or when a high dosage of drug can be used.]</p>
+<p>[Note 3: This class also indicates a &quot;buffer zone,&quot; to prevent small, uncontrolled, technical factors from causing major discrepancies in interpretations.]</p>
+<p>[Note 4: These breakpoints can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).]</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-MS"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-MS">MS</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>moderately susceptible</td><td>inactive</td><td><div><p>The patient is considered as carrier based on the testing results. A carrier is an individual who carries an altered form of a gene which can lead to having a child or offspring in future generations with a genetic disorder.</p>
+<p><em><strong>Deprecation Comment:</strong></em> This antimicrobial susceptibility test interpretation concept is recommended by OO to be deprecated as it is no longer recommended for use in susceptibility testing by CLSI (reference CLSI document M100-S22; Vol. 32 No.3; CLSI Performance Standards for Antimicrobial Susceptibility Testing; Twenty-Second Informational Supplement. Jan 2012).</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-NCL"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-NCL">NCL</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>No CLSI defined breakpoint</td><td/><td><div><p>Use when not enough clinical trial data published by the Clinical and Laboratory Standards Institutes (CLSI) is available to establish the breakpoints for susceptible / intermediate and resistant.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-NS"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-NS">NS</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Non-susceptible</td><td/><td><div><p>A category used for isolates for which only a susceptible interpretive criterion has been designated because of the absence or rare occurrence of resistant strains. Isolates that have MICs above or zone diameters below the value indicated for the susceptible breakpoint should be reported as non-susceptible.</p>
+<p>NOTE 1: An isolate that is interpreted as non-susceptible does not necessarily mean that the isolate has a resistance mechanism. It is possible that isolates with MICs above the susceptible breakpoint that lack resistance mechanisms may be encountered within the wild-type distribution subsequent to the time the susceptible-only breakpoint is set.</p>
+<p>NOTE 2: For strains yielding results in the &quot;nonsusceptible&quot; category, organism identification and antimicrobial susceptibility test results should be confirmed.</p>
+<p>Synonym: decreased susceptibility.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-R"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-R">R</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Resistant</td><td/><td><div><p>Bacterial strain inhibited in vitro by a concentration of an antimicrobial agent that is associated with a high likelihood of therapeutic failure. Reference: CLSI (http://www.clsi.org/Content/NavigationMenu/Resources/HarmonizedTerminologyDatabase/Harmonized_Terminolo.htm) Projects: ISO 20776-1, ISO 20776-2</p>
+<p>[Note 1: Bacterial strains are categorized as resistant by applying the appropriate breakpoints in a defined phenotypic test system.]</p>
+<p>[Note 2: This breakpoint can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-SYN-R"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-SYN-R">SYN-R</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Synergy - resistant</td><td/><td><div><p>A category for isolates where the bacteria (e.g. enterococci) are not susceptible in vitro to a combination therapy (e.g., high-level aminoglycoside and cell wall active agent). This is predictive that this combination therapy will not be effective.</p>
+<p><em>Usage Note:</em> Since the use of penicillin or ampicillin alone often results in treatment failure of serious enterococcal or other bacterial infections, combination therapy is usually indicated to enhance bactericidal activity. The synergy between a cell wall active agent (such as penicillin, ampicillin, or vancomycin) and an aminoglycoside (such as gentamicin, kanamycin or streptomycin) is best predicted by screening for high-level bacterial resistance to the aminoglycoside.</p>
+<p><em>Open Issue:</em> The print name of the code is very general and the description is very specific to a pair of classes of agents, which may lead to confusion of these concepts in the future should other synergies be found.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-S"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-S">S</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Susceptible</td><td/><td><div><p>Bacterial strain inhibited by in vitro concentration of an antimicrobial agent that is associated with a high likelihood of therapeutic success. Reference: CLSI (http://www.clsi.org/Content/NavigationMenu/Resources/HarmonizedTerminologyDatabase/Harmonized_Terminolo.htm) Synonym (earlier term): Sensitive Projects: ISO 20776-1, ISO 20776-2</p>
+<p>[Note 1: Bacterial strains are categorized as susceptible by applying the appropriate breakpoints in a defined phenotypic system.]</p>
+<p>[Note 2: This breakpoint can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-SDD"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-SDD">SDD</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Susceptible-dose dependent</td><td/><td><div><p>A category that includes isolates with antimicrobial agent minimum inhibitory concentrations (MICs) that approach usually attainable blood and tissue levels and for which response rates may be lower than for susceptible isolates.</p>
+<p>Reference: CLSI document M44-A2 2009 &quot;Method for antifungal disk diffusion susceptibility testing of yeasts; approved guideline - second edition&quot; - page 2.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-SYN-S"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-SYN-S">SYN-S</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Synergy - susceptible</td><td/><td><div><p>A category for isolates where the bacteria (e.g. enterococci) are susceptible in vitro to a combination therapy (e.g., high-level aminoglycoside and cell wall active agent). This is predictive that this combination therapy will be effective.</p>
+<p><em>Usage Note:</em> Since the use of penicillin or ampicillin alone often results in treatment failure of serious enterococcal or other bacterial infections, combination therapy is usually indicated to enhance bactericidal activity. The synergy between a cell wall active agent (such as penicillin, ampicillin, or vancomycin) and an aminoglycoside (such as gentamicin, kanamycin or streptomycin) is best predicted by screening for high-level bacterial resistance to the aminoglycoside.</p>
+<p><em>Open Issue:</em> The print name of the code is very general and the description is very specific to a pair of classes of agents, which may lead to confusion of these concepts in the future should other synergies be found.</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-VS"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-VS">VS</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>very susceptible</td><td>inactive</td><td><div><p>The patient is considered as carrier based on the testing results. A carrier is an individual who carries an altered form of a gene which can lead to having a child or offspring in future generations with a genetic disorder.</p>
+<p><em><strong>Deprecation Comment:</strong></em> This antimicrobial susceptibility test interpretation concept is recommended by OO to be deprecated as it is no longer recommended for use in susceptibility testing by CLSI (reference CLSI document M100-S22; Vol. 32 No.3; CLSI Performance Standards for Antimicrobial Susceptibility Testing; Twenty-Second Informational Supplement. Jan 2012).</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-EX"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-EX">EX</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>outside threshold</td><td/><td><div><p>The observation/test result is interpreted as being outside the inclusion range for a particular protocol within which the result is being reported.</p>
+<p><strong>Example:</strong> A positive result on a Hepatitis screening test.</p>
+<p><em>Open Issue:</em> EX, HX, LX: These three concepts do not seem to meet a clear need in the vocabulary, and their use in observation interpretation appears likely to be covered by other existing concepts (e.g., A, H, L). The only apparent significant difference is their reference to use in protocols for exclusion of study subjects. These concepts/codes were proposed by RCRIM for use in the CTLaboratory message. They were submitted and approved in the November 2005 Harmonization cycle in proposal &quot;030103C_VOCAB_RCRIM_l_quade_RCRIM Obs Interp_20051028154455&quot;. However, this proposal was not fully implemented in the vocabulary. The proposal recommended creation of the x_ClinicalResearchExclusion domain in ObservationInterpretation with a value set including those three concepts/codes, but there is no subdomain of that name or equivalent with a binding to either of the value sets that contain these concepts/codes. Members of the OO WG have recently attempted to contact members of RCRIM regarding these concepts, both by email and at the recent WGM in Atlanta, without response. It is felt by OO that the best course of action to take at this time is to add this comprehensive Open Issue rather than deprecate these three concepts at this time, until further discussion is held.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-HX"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-HX">HX</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>above high threshold</td><td/><td><div><p>The observation/test result is interpreted as being outside the inclusion range for a particular protocol within which the result is being reported.</p>
+<p><strong>Example:</strong> A positive result on a Hepatitis screening test.</p>
+<p><em>Open Issue:</em> EX, HX, LX: These three concepts do not seem to meet a clear need in the vocabulary, and their use in observation interpretation appears likely to be covered by other existing concepts (e.g., A, H, L). The only apparent significant difference is their reference to use in protocols for exclusion of study subjects. These concepts/codes were proposed by RCRIM for use in the CTLaboratory message. They were submitted and approved in the November 2005 Harmonization cycle in proposal &quot;030103C_VOCAB_RCRIM_l_quade_RCRIM Obs Interp_20051028154455&quot;. However, this proposal was not fully implemented in the vocabulary. The proposal recommended creation of the x_ClinicalResearchExclusion domain in ObservationInterpretation with a value set including those three concepts/codes, but there is no subdomain of that name or equivalent with a binding to either of the value sets that contain these concepts/codes. Members of the OO WG have recently attempted to contact members of RCRIM regarding these concepts, both by email and at the recent WGM in Atlanta, without response. It is felt by OO that the best course of action to take at this time is to add this comprehensive Open Issue rather than deprecate these three concepts at this time, until further discussion is held.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-LX"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-LX">LX</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>below low threshold</td><td/><td><div><p>The numeric observation/test result is interpreted as being below the low threshold value for a particular protocol within which the result is being reported.</p>
+<p><strong>Example:</strong> A Total White Blood Cell Count falling below a protocol-defined threshold value of 3000/mm^3</p>
+<p><em>Open Issue:</em> EX, HX, LX: These three concepts do not seem to meet a clear need in the vocabulary, and their use in observation interpretation appears likely to be covered by other existing concepts (e.g., A, H, L). The only apparent significant difference is their reference to use in protocols for exclusion of study subjects. These concepts/codes were proposed by RCRIM for use in the CTLaboratory message. They were submitted and approved in the November 2005 Harmonization cycle in proposal &quot;030103C_VOCAB_RCRIM_l_quade_RCRIM Obs Interp_20051028154455&quot;. However, this proposal was not fully implemented in the vocabulary. The proposal recommended creation of the x_ClinicalResearchExclusion domain in ObservationInterpretation with a value set including those three concepts/codes, but there is no subdomain of that name or equivalent with a binding to either of the value sets that contain these concepts/codes. Members of the OO WG have recently attempted to contact members of RCRIM regarding these concepts, both by email and at the recent WGM in Atlanta, without response. It is felt by OO that the best course of action to take at this time is to add this comprehensive Open Issue rather than deprecate these three concepts at this time, until further discussion is held.</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-HM"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-HM">HM</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Hold for Medical Review</td><td>inactive</td><td><div><p>Hold for Medical Review</p>
+<p><em>Usage Note:</em> This code is not intended for use in V3 artifacts. It is included in the code system to maintain alignment with the V2 Table 0078 &quot;Interpretation Codes.&quot;</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-ObservationInterpretationDetection"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-ObservationInterpretationDetection" title="This code is not selectable ('Abstract')"><i>ObservationInterpretationDetection</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>ObservationInterpretationDetection</td><td/><td><div><p>Interpretations of the presence or absence of a component / analyte or organism in a test or of a sign in a clinical observation. In keeping with laboratory data processing practice, these concepts provide a categorical interpretation of the &quot;meaning&quot; of the quantitative value for the same observation.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-IND"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-IND">IND</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Indeterminate</td><td/><td><div><p>The specified component / analyte, organism or clinical sign could neither be declared positive / negative nor detected / not detected by the performed test or procedure.</p>
+<p><em>Usage Note:</em> For example, if the specimen was degraded, poorly processed, or was missing the required anatomic structures, then &quot;indeterminate&quot; (i.e. &quot;cannot be determined&quot;) is the appropriate response, not &quot;equivocal&quot;.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-E"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-E">E</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Equivocal</td><td/><td><div><p>The test or procedure was successfully performed, but the results are borderline and can neither be declared positive / negative nor detected / not detected according to the current established criteria.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-NEG"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-NEG">NEG</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Negative</td><td/><td><div><p>An absence finding of the specified component / analyte, organism or clinical sign based on the established threshold of the performed test or procedure.</p>
+<p>[Note: Negative does not necessarily imply the complete absence of the specified item.]</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-ND"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-ND">ND</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Not detected</td><td/><td><div><p>The presence of the specified component / analyte, organism or clinical sign could not be determined within the limit of detection of the performed test or procedure.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-POS"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-POS">POS</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Positive</td><td/><td><div><p>A presence finding of the specified component / analyte, organism or clinical sign based on the established threshold of the performed test or procedure.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-DET"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-DET">DET</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Detected</td><td/><td><div><p>The measurement of the specified component / analyte, organism or clinical sign above the limit of detection of the performed test or procedure.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-ObservationInterpretationExpectation"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-ObservationInterpretationExpectation" title="This code is not selectable ('Abstract')"><i>ObservationInterpretationExpectation</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>ObservationInterpretationExpectation</td><td/><td><div><p>Interpretation of the observed result taking into account additional information (contraindicators) about the patient's situation. Concepts in this category are mutually exclusive, i.e., at most one is allowed.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-EXP"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-EXP">EXP</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Expected</td><td/><td><div><p>This result has been evaluated in light of known contraindicators. Once those contraindicators have been taken into account the result is determined to be &quot;Expected&quot; (e.g., presence of drugs in a patient that is taking prescription medication for pain management).</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-UNE"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-UNE">UNE</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Unexpected</td><td/><td><div><p>This result has been evaluated in light of known contraindicators. Once those contraindicators have been taken into account the result is determined to be &quot;Unexpected&quot; (e.g., presence of non-prescribed drugs in a patient that is taking prescription medication for pain management).</p>
+</div></td><td/></tr><tr style="background-color: #ffeeee"><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-OBX"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-OBX">OBX</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Interpretation qualifiers in separate OBX segments</td><td>inactive</td><td><div><p>Interpretation qualifiers in separate OBX segments</p>
+<p><em>Usage Note:</em> This code is not intended for use in V3 artifacts. It is included in the code system to maintain alignment with the V2 Table 0078 &quot;Interpretation Codes.&quot;</p>
+</div></td><td>deprecated</td></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-ReactivityObservationInterpretation"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-ReactivityObservationInterpretation" title="This code is not selectable ('Abstract')"><i>ReactivityObservationInterpretation</i></a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>ReactivityObservationInterpretation</td><td/><td><div><p>Interpretations of the presence and level of reactivity of the specified component / analyte with the reagent in the performed laboratory test.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-NR"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-NR">NR</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Non-reactive</td><td/><td><div><p>An absence finding used to indicate that the specified component / analyte did not react measurably with the reagent.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-RR"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-RR">RR</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Reactive</td><td/><td><div><p>A presence finding used to indicate that the specified component / analyte reacted with the reagent above the reliably measurable limit of the performed test.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation-WR"> </a>  <a href="http://terminology.hl7.org/6.4.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-WR">WR</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</td><td>Weakly reactive</td><td/><td><div><p>A weighted presence finding used to indicate that the specified component / analyte reacted with the reagent, but below the reliably measurable limit of the performed test.</p>
+</div></td><td/></tr><tr><td style="white-space:nowrap"><a name="x-http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes-NI"> </a>  <a href="CodeSystem-medcom-core-interpretation-codes.html#medcom-core-interpretation-codes-NI">NI</a></td><td>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes</td><td/><td/><td><div/></td><td/></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.terminology#2.0.0-draft based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 7, 2025 12:22+0000">2025-07-07</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
