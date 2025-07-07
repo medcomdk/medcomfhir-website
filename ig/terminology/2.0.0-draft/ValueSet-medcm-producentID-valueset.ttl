@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/medcm-producentID-valueset> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcm-producentID-valueset"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medcm-producentID-valueset</b></p><a name=\"medcm-producentID-valueset\"> </a><a name=\"hcmedcm-producentID-valueset\"> </a><a name=\"medcm-producentID-valueset-da-DK\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-MedComProducentID.html\"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-MedComProducentID.html#MedComProducentID-KAF\">KAF</a></td><td style=\"color: #cccccc\">Kommunal akutfunktion</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/medcm-producentID-valueset"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "2.0.0-draft"] ; # 
+  fhir:name [ fhir:v "MedComProducentIDValueSet"] ; # 
+  fhir:title [ fhir:v "MedComProducentIDValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2023-10-31"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ProducentID"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "KAF" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

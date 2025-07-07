@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/medcom-obs-responseGroup> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom-obs-responseGroup"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medcom-obs-responseGroup</b></p><a name=\"medcom-obs-responseGroup\"> </a><a name=\"hcmedcom-obs-responseGroup\"> </a><a name=\"medcom-obs-responseGroup-da-DK\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-medcom-observation-resultGroup.html\"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-resultGroup</code></a></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-obs-responseGroup"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "2.0.0-draft"] ; # 
+  fhir:name [ fhir:v "MedComObservarionResponesGroupValueSet"] ; # 
+  fhir:title [ fhir:v "MedComObservationResultGroupValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2024-01-18"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "National response groups for observation results."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-resultGroup"^^xsd:anyURI ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
