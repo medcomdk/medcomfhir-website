@@ -3,14 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="medcom.fhir.dk.homecareobservation"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.homecareobservation</b></p><a name="medcom.fhir.dk.homecareobservation"> </a><a name="hcmedcom.fhir.dk.homecareobservation"> </a><a name="medcom.fhir.dk.homecareobservation-da-DK"> </a><h2>MedComHomeCareObservation</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation</pre><div><p>Communication between general practitioners and municipal acute care team.</p>
+</div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation"/>
-  <version value="1.0.0"/>
+  <version value="1.1.0-trial-use"/>
   <name value="MedComHomeCareObservation"/>
   <title value="MedCom HomeCareObservation"/>
-  <status value="active"/>
-  <date value="2023-10-31T15:39:31+01:00"/>
+  <status value="draft"/>
+  <date value="2025-07-08T08:53:07+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -18,7 +19,12 @@
       <system value="url"/>
       <value value="http://www.medcom.dk"/>
     </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@medcom.dk"/>
+    </telecom>
   </contact>
+  <description value="Communication between general practitioners and municipal acute care team."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -35,7 +41,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.3.0"/>
+    <version value="6.5.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -43,27 +49,32 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="1.0.0"/>
+    <version value="5.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_dk_core">
-    <uri value="https://hl7.dk/fhir/core/"/>
+    <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
     <packageId value="hl7.fhir.dk.core"/>
-    <version value="2.2.0"/>
+    <version value="3.4.0"/>
   </dependsOn>
   <dependsOn id="medcom_fhir_dk_terminology">
     <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
     <packageId value="medcom.fhir.dk.terminology"/>
-    <version value="1.5.0"/>
+    <version value="2.0.0-draft"/>
   </dependsOn>
   <dependsOn id="medcom_fhir_dk_core">
     <uri value="http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"/>
     <packageId value="medcom.fhir.dk.core"/>
-    <version value="2.3.0"/>
+    <version value="2.4.0"/>
   </dependsOn>
   <dependsOn id="medcom_fhir_dk_messaging">
     <uri value="http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging"/>
     <packageId value="medcom.fhir.dk.messaging"/>
-    <version value="2.1.0"/>
+    <version value="3.0.0"/>
+  </dependsOn>
+  <dependsOn id="medcom_fhir_dk_messagedefinitions">
+    <uri value="http://medcomfhir.dk/ig/messagedefinitions/ImplementationGuide/medcom.fhir.dk.messagedefinitions"/>
+    <packageId value="medcom.fhir.dk.messagedefinitions"/>
+    <version value="1.0.0-trial-use"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -84,15 +95,15 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-contact"/>
+        <valueString value="apply-version"/>
       </extension>
       <extension url="value">
-        <valueString value="true"/>
+        <valueString value="false"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-jurisdiction"/>
+        <valueString value="default-version"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -101,6 +112,30 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="default-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -188,6 +223,14 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
         <valueString value="apply-context"/>
       </extension>
       <extension url="value">
@@ -204,7 +247,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-license"/>
+        <valueString value="apply-jurisdiction"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -212,7 +255,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-version"/>
+        <valueString value="apply-license"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -267,7 +310,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools#current"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -287,15 +330,15 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="apply-contact"/>
+        <valueCode value="apply-version"/>
       </extension>
       <extension url="value">
-        <valueString value="true"/>
+        <valueString value="false"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="apply-jurisdiction"/>
+        <valueCode value="default-version"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -304,6 +347,30 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="default-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -391,6 +458,14 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
         <valueCode value="apply-context"/>
       </extension>
       <extension url="value">
@@ -407,7 +482,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="apply-license"/>
+        <valueCode value="apply-jurisdiction"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -415,7 +490,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="apply-version"/>
+        <valueCode value="apply-license"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -510,8 +585,8 @@
         <reference value="Observation/1e2351e2-77df-4135-a77b-6a4c39e4a4ca"/>
       </reference>
       <name value="Basofilocyt observation"/>
-      <description value="Basofilocyt observation performed on a subject by the auce care team"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <description value="Basofilocyt observation performed on a subject by the acute care team"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -555,7 +630,7 @@
       </reference>
       <name value="C-reaktive protein [CRP];P"/>
       <description value="C-reaktive protein [CRP] test performed by acute care team on the subject."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -566,7 +641,7 @@
       </reference>
       <name value="Cancelled HomeCareDiagnosticReport: TOBS and ABC examination"/>
       <description value="Example of a cancelled HomeCareDiagnosticReport, with TOBS and ABC examination of Elmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -577,7 +652,7 @@
       </reference>
       <name value="Coagulation factor test"/>
       <description value="Coagulation factor on the subject"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -588,7 +663,7 @@
       </reference>
       <name value="Consciousness"/>
       <description value="Consciousness of Elmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -598,8 +673,8 @@
         <reference value="Observation/b22fcbe0-4977-433e-ad1c-d6545bc8c1cb"/>
       </reference>
       <name value="Eosinofilocyt observation"/>
-      <description value="Eosinofilocyt observation performed on a subject by the auce care team"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <description value="Eosinofilocyt observation performed on a subject by the acute care team"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -676,7 +751,7 @@
       </reference>
       <name value="Glucose measurement"/>
       <description value="Glucose measurement on the subject."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -687,7 +762,7 @@
       </reference>
       <name value="Heart Rate"/>
       <description value="HeartRate of Elmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -753,7 +828,7 @@
       </reference>
       <name value="HomeCareDiagnosticReport: spot test and EKG"/>
       <description value="Spot test and EKG performed by the acute care team on a subject."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -764,7 +839,7 @@
       </reference>
       <name value="HomeCareDiagnosticReport: Urine dipsticks tests and refused consent"/>
       <description value="Urine dipstick tests performed by the acute care team on a subject, that has refused consent."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -775,7 +850,7 @@
       </reference>
       <name value="HomeCareDiagnosticReport:TOBS and ABC examination"/>
       <description value="TOBS and ABC examination of Elmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -786,7 +861,7 @@
       </reference>
       <name value="HomeCareObservation message-retracted."/>
       <description value="Example of a retracted HomeCareObservation with clinical and analysis comment."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -797,7 +872,7 @@
       </reference>
       <name value="HomeCareObservation message-Spot test and EKG image"/>
       <description value="Example of a HomeCareObservation message-Spot Test and EKG image."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -808,7 +883,7 @@
       </reference>
       <name value="HomeCareObservation message-Urine dipsticks and subject refused consent."/>
       <description value="Example of a HomeCareObservation message-Urine dipsticks and subject refused consent."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -819,7 +894,7 @@
       </reference>
       <name value="HomeCareObservation with clinical and analysis comment."/>
       <description value="Example of a HomeCareObservation with clinical and analysis comment."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -830,7 +905,7 @@
       </reference>
       <name value="Instance of a MessageHeader resource used in a cancelled message."/>
       <description value="Example of a MessageHeader in a cancelled HomeCareDiagnosticReport message. Valid only if used in a bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -841,7 +916,7 @@
       </reference>
       <name value="Instance of a MessageHeader resource used in a modified message message."/>
       <description value="Example of a MessageHeader in a modified HomeCareDiagnosticReport message. Valid only if used in a bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -852,7 +927,7 @@
       </reference>
       <name value="Instance of a MessageHeader resource used in a new Homecare Observation message."/>
       <description value="Example of a MessageHeader in a new HomeCareDiagnosticReport message. Valid only if used in a bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -863,7 +938,7 @@
       </reference>
       <name value="Instance of a MessageHeader resource used in a new message."/>
       <description value="Example of a MessageHeader in a new HomeCareDiagnosticReport message. Valid only if used in a bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -874,7 +949,7 @@
       </reference>
       <name value="Instance of a MessageHeader resource used in a new message."/>
       <description value="Example of a MessageHeader in a new HomeCareDiagnosticReport message. Valid only if used in a bundle (message)."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -885,7 +960,7 @@
       </reference>
       <name value="Leukocyt Observation"/>
       <description value="Test of leucocyte on the subject by acute care team"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -896,7 +971,7 @@
       </reference>
       <name value="Leukocyt urine test"/>
       <description value="Test of leucocyt using urine dipstick"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -907,25 +982,14 @@
       </reference>
       <name value="Lymphocyte observation"/>
       <description value="Lymphocyte observation on the subject by acute care team"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/medcom-homecare-diagnosticreport"/>
-      </reference>
-      <name value="MedComHomeCareDiagnosticReport"/>
-      <description value="This resource is intenden to be used in relation with a HomeCareObservation message"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/medcom-homeCare-observation"/>
+        <reference value="StructureDefinition/medcom-homecare-observation"/>
       </reference>
       <name value="MedComHomeCareObservation"/>
       <description value="This profile is intended to be used in HomeCareObservation to hold information about the observation results."/>
@@ -936,10 +1000,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/medcom-homecare-message"/>
+        <reference value="StructureDefinition/medcom-homecareobservation-diagnosticreport"/>
       </reference>
-      <name value="MedComHomeCareObservationMessage"/>
-      <description value="The HomeCareObservation Message is used exchange of the observations results performed by the municipal acute care team to the general practitioner."/>
+      <name value="MedComHomeCareObservationDiagnosticReport"/>
+      <description value="This resource is intended to be used in relation with a HomeCareObservation message"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -947,7 +1011,18 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/medcom-homecareobservation-MessageHeader"/>
+        <reference value="StructureDefinition/medcom-homecareobservation-message"/>
+      </reference>
+      <name value="MedComHomeCareObservationMessage"/>
+      <description value="The HomeCareObservation Message is used in exchange of the observations results performed by the municipal acute care team to the general practitioner."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-homecareobservation-messageheader"/>
       </reference>
       <name value="MedComHomeCareObservationMessageHeader"/>
       <description value="MessageHeader for HomeCareObservation"/>
@@ -962,7 +1037,7 @@
       </reference>
       <name value="Modified HomeCareDiagnosticReport:TOBS and ABC examination"/>
       <description value="Example of a modified HomeCareDiagnosticReport with TOBS and ABC examination of Elmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -973,7 +1048,7 @@
       </reference>
       <name value="Modified HomeCareObservation message."/>
       <description value="Example of a Modified HomeCareObservation with clinical and analysis comment."/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -983,8 +1058,8 @@
         <reference value="Observation/d2b89faa-979a-430d-8887-21ccdf6f238b"/>
       </reference>
       <name value="Monocytes observation"/>
-      <description value="Monocytes observation performed on o subject by the acute care team"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <description value="Monocytes observation performed on a subject by the acute care team"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -995,7 +1070,7 @@
       </reference>
       <name value="Neutrophilocytes observation"/>
       <description value="Neutrophilocytes observation performed on o subject by the acute care team"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1006,7 +1081,7 @@
       </reference>
       <name value="Nitrite observation"/>
       <description value="Nitrit observation on Bruno"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1028,7 +1103,7 @@
       </reference>
       <name value="Observation of the haemoglobin"/>
       <description value="Observation of the haemoglobin"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1072,7 +1147,7 @@
       </reference>
       <name value="Respiration frequency"/>
       <description value="Respiration frequency of Elmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1083,7 +1158,7 @@
       </reference>
       <name value="Systolic Blood Pressure"/>
       <description value="Systolic Blood Pressure of Elmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1093,8 +1168,8 @@
         <reference value="Observation/85fd1372-cf02-49c6-bd45-7205f5541a66"/>
       </reference>
       <name value="Temperature"/>
-      <description value="Temperature of the elmerElmer"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <description value="Temperature of Elmer"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1104,8 +1179,8 @@
         <reference value="Observation/f64a0a78-53cf-4a7f-9b89-4a2338a4935c"/>
       </reference>
       <name value="TOBS"/>
-      <description value="TOBS of Emler"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <description value="TOBS of Elmer"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1116,7 +1191,7 @@
       </reference>
       <name value="Urine dipstick tests"/>
       <description value="Urine dipstick tests on Bruno"/>
-      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1132,6 +1207,14 @@
         <nameUrl value="index.html"/>
         <title value="Home"/>
         <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dependencies.html"/>
+        </extension>
+        <nameUrl value="dependencies.html"/>
+        <title value="Dependencies"/>
+        <generation value="html"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

@@ -2,23 +2,28 @@
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.homecareobservation",
   "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.homecareobservation</b></p><a name=\"medcom.fhir.dk.homecareobservation\"> </a><a name=\"hcmedcom.fhir.dk.homecareobservation\"> </a><a name=\"medcom.fhir.dk.homecareobservation-da-DK\"> </a><h2>MedComHomeCareObservation</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation</pre><div><p>Communication between general practitioners and municipal acute care team.</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation",
-  "version" : "1.0.0",
+  "version" : "1.1.0-trial-use",
   "name" : "MedComHomeCareObservation",
   "title" : "MedCom HomeCareObservation",
-  "status" : "active",
-  "date" : "2023-10-31T15:39:31+01:00",
+  "status" : "draft",
+  "date" : "2025-07-08T08:53:07+00:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
     "telecom" : [{
       "system" : "url",
       "value" : "http://www.medcom.dk"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@medcom.dk"
     }]
   }],
+  "description" : "Communication between general practitioners and municipal acute care team.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -37,7 +42,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.3.0"
+    "version" : "6.5.0"
   },
   {
     "id" : "hl7ext",
@@ -47,31 +52,37 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "1.0.0"
+    "version" : "5.2.0"
   },
   {
     "id" : "hl7_fhir_dk_core",
-    "uri" : "https://hl7.dk/fhir/core/",
+    "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
     "packageId" : "hl7.fhir.dk.core",
-    "version" : "2.2.0"
+    "version" : "3.4.0"
   },
   {
     "id" : "medcom_fhir_dk_terminology",
     "uri" : "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology",
     "packageId" : "medcom.fhir.dk.terminology",
-    "version" : "1.5.0"
+    "version" : "2.0.0-draft"
   },
   {
     "id" : "medcom_fhir_dk_core",
     "uri" : "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core",
     "packageId" : "medcom.fhir.dk.core",
-    "version" : "2.3.0"
+    "version" : "2.4.0"
   },
   {
     "id" : "medcom_fhir_dk_messaging",
     "uri" : "http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging",
     "packageId" : "medcom.fhir.dk.messaging",
-    "version" : "2.1.0"
+    "version" : "3.0.0"
+  },
+  {
+    "id" : "medcom_fhir_dk_messagedefinitions",
+    "uri" : "http://medcomfhir.dk/ig/messagedefinitions/ImplementationGuide/medcom.fhir.dk.messagedefinitions",
+    "packageId" : "medcom.fhir.dk.messagedefinitions",
+    "version" : "1.0.0-trial-use"
   }],
   "definition" : {
     "extension" : [{
@@ -99,18 +110,18 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-contact"
+        "valueString" : "apply-version"
       },
       {
         "url" : "value",
-        "valueString" : "true"
+        "valueString" : "false"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
+        "valueString" : "default-version"
       },
       {
         "url" : "value",
@@ -122,6 +133,39 @@
       "extension" : [{
         "url" : "code",
         "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "default-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludettl"
       },
       {
         "url" : "value",
@@ -242,6 +286,17 @@
     {
       "extension" : [{
         "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
         "valueString" : "apply-context"
       },
       {
@@ -264,7 +319,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-license"
+        "valueString" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -275,7 +330,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-version"
+        "valueString" : "apply-license"
       },
       {
         "url" : "value",
@@ -351,7 +406,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#current"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.5.0"
     },
     {
       "extension" : [{
@@ -378,18 +433,18 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-contact"
+        "valueCode" : "apply-version"
       },
       {
         "url" : "value",
-        "valueString" : "true"
+        "valueString" : "false"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-jurisdiction"
+        "valueCode" : "default-version"
       },
       {
         "url" : "value",
@@ -401,6 +456,39 @@
       "extension" : [{
         "url" : "code",
         "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "default-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludettl"
       },
       {
         "url" : "value",
@@ -521,6 +609,17 @@
     {
       "extension" : [{
         "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
         "valueCode" : "apply-context"
       },
       {
@@ -543,7 +642,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-license"
+        "valueCode" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -554,7 +653,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-version"
+        "valueCode" : "apply-license"
       },
       {
         "url" : "value",
@@ -673,8 +772,8 @@
         "reference" : "Observation/1e2351e2-77df-4135-a77b-6a4c39e4a4ca"
       },
       "name" : "Basofilocyt observation",
-      "description" : "Basofilocyt observation performed on a subject by the auce care team",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "description" : "Basofilocyt observation performed on a subject by the acute care team",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -722,7 +821,7 @@
       },
       "name" : "C-reaktive protein [CRP];P",
       "description" : "C-reaktive protein [CRP] test performed by acute care team on the subject.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -734,7 +833,7 @@
       },
       "name" : "Cancelled HomeCareDiagnosticReport: TOBS and ABC examination",
       "description" : "Example of a cancelled HomeCareDiagnosticReport, with TOBS and ABC examination of Elmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"
     },
     {
       "extension" : [{
@@ -746,7 +845,7 @@
       },
       "name" : "Coagulation factor test",
       "description" : "Coagulation factor on the subject",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -758,7 +857,7 @@
       },
       "name" : "Consciousness",
       "description" : "Consciousness of Elmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -769,8 +868,8 @@
         "reference" : "Observation/b22fcbe0-4977-433e-ad1c-d6545bc8c1cb"
       },
       "name" : "Eosinofilocyt observation",
-      "description" : "Eosinofilocyt observation performed on a subject by the auce care team",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "description" : "Eosinofilocyt observation performed on a subject by the acute care team",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -854,7 +953,7 @@
       },
       "name" : "Glucose measurement",
       "description" : "Glucose measurement on the subject.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -866,7 +965,7 @@
       },
       "name" : "Heart Rate",
       "description" : "HeartRate of Elmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -938,7 +1037,7 @@
       },
       "name" : "HomeCareDiagnosticReport: spot test and EKG",
       "description" : "Spot test and EKG performed by the acute care team on a subject.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"
     },
     {
       "extension" : [{
@@ -950,7 +1049,7 @@
       },
       "name" : "HomeCareDiagnosticReport: Urine dipsticks tests and refused consent",
       "description" : "Urine dipstick tests performed by the acute care team on a subject, that has refused consent.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"
     },
     {
       "extension" : [{
@@ -962,7 +1061,7 @@
       },
       "name" : "HomeCareDiagnosticReport:TOBS and ABC examination",
       "description" : "TOBS and ABC examination of Elmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"
     },
     {
       "extension" : [{
@@ -974,7 +1073,7 @@
       },
       "name" : "HomeCareObservation message-retracted.",
       "description" : "Example of a retracted HomeCareObservation with clinical and analysis comment.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
     },
     {
       "extension" : [{
@@ -986,7 +1085,7 @@
       },
       "name" : "HomeCareObservation message-Spot test and EKG image",
       "description" : "Example of a HomeCareObservation message-Spot Test and EKG image.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
     },
     {
       "extension" : [{
@@ -998,7 +1097,7 @@
       },
       "name" : "HomeCareObservation message-Urine dipsticks and subject refused consent.",
       "description" : "Example of a HomeCareObservation message-Urine dipsticks and subject refused consent.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
     },
     {
       "extension" : [{
@@ -1010,7 +1109,7 @@
       },
       "name" : "HomeCareObservation with clinical and analysis comment.",
       "description" : "Example of a HomeCareObservation with clinical and analysis comment.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
     },
     {
       "extension" : [{
@@ -1022,7 +1121,7 @@
       },
       "name" : "Instance of a MessageHeader resource used in a cancelled message.",
       "description" : "Example of a MessageHeader in a cancelled HomeCareDiagnosticReport message. Valid only if used in a bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"
     },
     {
       "extension" : [{
@@ -1034,7 +1133,7 @@
       },
       "name" : "Instance of a MessageHeader resource used in a modified message message.",
       "description" : "Example of a MessageHeader in a modified HomeCareDiagnosticReport message. Valid only if used in a bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"
     },
     {
       "extension" : [{
@@ -1046,7 +1145,7 @@
       },
       "name" : "Instance of a MessageHeader resource used in a new Homecare Observation message.",
       "description" : "Example of a MessageHeader in a new HomeCareDiagnosticReport message. Valid only if used in a bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"
     },
     {
       "extension" : [{
@@ -1058,7 +1157,7 @@
       },
       "name" : "Instance of a MessageHeader resource used in a new message.",
       "description" : "Example of a MessageHeader in a new HomeCareDiagnosticReport message. Valid only if used in a bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"
     },
     {
       "extension" : [{
@@ -1070,7 +1169,7 @@
       },
       "name" : "Instance of a MessageHeader resource used in a new message.",
       "description" : "Example of a MessageHeader in a new HomeCareDiagnosticReport message. Valid only if used in a bundle (message).",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"
     },
     {
       "extension" : [{
@@ -1082,7 +1181,7 @@
       },
       "name" : "Leukocyt Observation",
       "description" : "Test of leucocyte on the subject by acute care team",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1094,7 +1193,7 @@
       },
       "name" : "Leukocyt urine test",
       "description" : "Test of leucocyt using urine dipstick",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1106,7 +1205,7 @@
       },
       "name" : "Lymphocyte observation",
       "description" : "Lymphocyte observation on the subject by acute care team",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1114,19 +1213,7 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/medcom-homecare-diagnosticreport"
-      },
-      "name" : "MedComHomeCareDiagnosticReport",
-      "description" : "This resource is intenden to be used in relation with a HomeCareObservation message",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/medcom-homeCare-observation"
+        "reference" : "StructureDefinition/medcom-homecare-observation"
       },
       "name" : "MedComHomeCareObservation",
       "description" : "This profile is intended to be used in HomeCareObservation to hold information about the observation results.",
@@ -1138,10 +1225,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/medcom-homecare-message"
+        "reference" : "StructureDefinition/medcom-homecareobservation-diagnosticreport"
       },
-      "name" : "MedComHomeCareObservationMessage",
-      "description" : "The HomeCareObservation Message is used exchange of the observations results performed by the municipal acute care team to the general practitioner.",
+      "name" : "MedComHomeCareObservationDiagnosticReport",
+      "description" : "This resource is intended to be used in relation with a HomeCareObservation message",
       "exampleBoolean" : false
     },
     {
@@ -1150,7 +1237,19 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/medcom-homecareobservation-MessageHeader"
+        "reference" : "StructureDefinition/medcom-homecareobservation-message"
+      },
+      "name" : "MedComHomeCareObservationMessage",
+      "description" : "The HomeCareObservation Message is used in exchange of the observations results performed by the municipal acute care team to the general practitioner.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-homecareobservation-messageheader"
       },
       "name" : "MedComHomeCareObservationMessageHeader",
       "description" : "MessageHeader for HomeCareObservation",
@@ -1166,7 +1265,7 @@
       },
       "name" : "Modified HomeCareDiagnosticReport:TOBS and ABC examination",
       "description" : "Example of a modified HomeCareDiagnosticReport with TOBS and ABC examination of Elmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"
     },
     {
       "extension" : [{
@@ -1178,7 +1277,7 @@
       },
       "name" : "Modified HomeCareObservation message.",
       "description" : "Example of a Modified HomeCareObservation with clinical and analysis comment.",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-message"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
     },
     {
       "extension" : [{
@@ -1189,8 +1288,8 @@
         "reference" : "Observation/d2b89faa-979a-430d-8887-21ccdf6f238b"
       },
       "name" : "Monocytes observation",
-      "description" : "Monocytes observation performed on o subject by the acute care team",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "description" : "Monocytes observation performed on a subject by the acute care team",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1202,7 +1301,7 @@
       },
       "name" : "Neutrophilocytes observation",
       "description" : "Neutrophilocytes observation performed on o subject by the acute care team",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1214,7 +1313,7 @@
       },
       "name" : "Nitrite observation",
       "description" : "Nitrit observation on Bruno",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1238,7 +1337,7 @@
       },
       "name" : "Observation of the haemoglobin",
       "description" : "Observation of the haemoglobin",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1286,7 +1385,7 @@
       },
       "name" : "Respiration frequency",
       "description" : "Respiration frequency of Elmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1298,7 +1397,7 @@
       },
       "name" : "Systolic Blood Pressure",
       "description" : "Systolic Blood Pressure of Elmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1309,8 +1408,8 @@
         "reference" : "Observation/85fd1372-cf02-49c6-bd45-7205f5541a66"
       },
       "name" : "Temperature",
-      "description" : "Temperature of the elmerElmer",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "description" : "Temperature of Elmer",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1321,8 +1420,8 @@
         "reference" : "Observation/f64a0a78-53cf-4a7f-9b89-4a2338a4935c"
       },
       "name" : "TOBS",
-      "description" : "TOBS of Emler",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "description" : "TOBS of Elmer",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     },
     {
       "extension" : [{
@@ -1334,7 +1433,7 @@
       },
       "name" : "Urine dipstick tests",
       "description" : "Urine dipstick tests on Bruno",
-      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homeCare-observation"
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
     }],
     "page" : {
       "extension" : [{
@@ -1352,6 +1451,15 @@
         "nameUrl" : "index.html",
         "title" : "Home",
         "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "dependencies.html"
+        }],
+        "nameUrl" : "dependencies.html",
+        "title" : "Dependencies",
+        "generation" : "html"
       },
       {
         "extension" : [{
