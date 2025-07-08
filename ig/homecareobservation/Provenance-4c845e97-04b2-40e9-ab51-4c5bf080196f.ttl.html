@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>HomeCareDiagnosticReport example. The Provenance instance is only valid if used in a bundle (message) - new message - TTL Representation - MedCom HomeCareObservation v1.0.0</title>
+    <title>HomeCareDiagnosticReport example. The Provenance instance is only valid if used in a bundle (message) - new message - TTL Representation - MedCom HomeCareObservation v1.1.0-trial-use</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,8 +20,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -41,11 +43,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"5.28"}
-    h3,h4,h5,h6{--heading-prefix:"5.28"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.28"}
+    h3,h4,h5,h6{--heading-prefix:"6.28"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
@@ -60,7 +64,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.1.0-trial-use - release
 
 
 
@@ -92,9 +96,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -106,8 +107,21 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
-  <li>
-    <a href="downloads.html">Downloads</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -134,7 +148,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.1.0-trial-use: Release 1.x.x Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -166,12 +180,6 @@
   
 
 
-  
-    <li class="active">
-      <a href="#">TTL</a>
-    </li>
-  
-
 
 
 </ul>
@@ -193,6 +201,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -208,12 +217,15 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Provenance&lt;/b&gt;&lt;a name=\&quot;4c845e97-04b2-40e9-ab51-4c5bf080196f\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Provenance &amp;quot;4c845e97-04b2-40e9-ab51-4c5bf080196f&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/messaging/2.1.0/StructureDefinition-medcom-messaging-provenance.html\&quot;&gt;MedComMessagingProvenance&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;target&lt;/b&gt;: &lt;a href=\&quot;MessageHeader-e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa.html\&quot;&gt;MessageHeader/e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;occurred&lt;/b&gt;: 2023-09-13 12:24:08+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;recorded&lt;/b&gt;: 13. sep. 2023 12.24.08&lt;/p&gt;&lt;p&gt;&lt;b&gt;activity&lt;/b&gt;: A new message has been sent &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/1.5.0/CodeSystem-medcom-messaging-activityCodes.html\&quot;&gt;MedComMessagingActivityCodes&lt;/a&gt;#new-message)&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Agents&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Organization-72cc3a2c-1dda-4b95-b50a-0f7ac19640f4.html\&quot;&gt;Organization/72cc3a2c-1dda-4b95-b50a-0f7ac19640f4&lt;/a&gt; &amp;quot;Pleje og Rehabilitering&amp;quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Provenance 4c845e97-04b2-40e9-ab51-4c5bf080196f&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;4c845e97-04b2-40e9-ab51-4c5bf080196f\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc4c845e97-04b2-40e9-ab51-4c5bf080196f\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;4c845e97-04b2-40e9-ab51-4c5bf080196f-da-DK\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-messaging-provenance.html\&quot;&gt;MedComMessagingProvenance&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Provenance for &lt;a href=\&quot;MessageHeader-e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa.html\&quot;&gt;MessageHeader: event[x] = HomeCare Observation Message (MedComMessagingEventCodes#homecareobservation-message); definition = http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition1.1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Summary&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Occurrence&lt;/td&gt;&lt;td&gt;2023-09-13 12:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Recorded&lt;/td&gt;&lt;td&gt;2023-09-13 12:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Activity&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\&quot;&gt;A new message has been sent&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Agents&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Organization-72cc3a2c-1dda-4b95-b50a-0f7ac19640f4.html\&quot;&gt;Organization Pleje og Rehabilitering&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">fhir:target</a> ( [
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;MessageHeader/e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa&quot; ]
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">fhir:occurred</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2023-09-13T12:24:08+02:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">fhir:occurred</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">a</a> fhir:dateTime ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2023-09-13T12:24:08+02:00&quot;^^xsd:dateTime
+  ] ; # 
   <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">fhir:recorded</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:v</a> &quot;2023-09-13T12:24:08+02:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.activity">fhir:activity</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
@@ -243,26 +255,22 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 15:39+0100">2023-10-31</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.1.0-trial-use based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 8, 2025 10:48+0000">2025-07-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -273,7 +281,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -283,16 +291,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

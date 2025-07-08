@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Instance of a MessageHeader resource used in a new message. - MedCom HomeCareObservation v1.0.0</title>
+    <title>Instance of a MessageHeader resource used in a new message. - MedCom HomeCareObservation v1.1.0-trial-use</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,8 +18,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -39,11 +41,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"5.40"}
-    h3,h4,h5,h6{--heading-prefix:"5.40"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.40"}
+    h3,h4,h5,h6{--heading-prefix:"6.40"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
@@ -58,7 +62,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.1.0-trial-use - release
 
 
 
@@ -90,9 +94,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -104,8 +105,21 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
-  <li>
-    <a href="downloads.html">Downloads</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -132,7 +146,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.1.0-trial-use: Release 1.x.x Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
   
 
@@ -165,12 +179,6 @@
   
 
 
-  
-    <li>
-      <a href="MessageHeader-e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa.ttl.html">TTL</a>
-    </li>
-  
-
 
 
 </ul>
@@ -189,7 +197,7 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MessageHeader</b><a name="e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MessageHeader &quot;e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medcom-homecareobservation-MessageHeader.html">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: HomeCare Observation Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code homecareobservation-message = 'HomeCare Observation Message', stated as 'null')</p><h3>Destinations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style="display: none">*</td><td/><td><a href="https://sor2.sum.dsdn.dk/#id=52581000016005">https://sor2.sum.dsdn.dk/#id=52581000016005</a></td><td><a href="Organization-d1c1fa90-2c7e-4dd7-b2e8-e40281635a98.html">Organization/d1c1fa90-2c7e-4dd7-b2e8-e40281635a98</a> &quot;Skødstrup Lægepraksis&quot;</td></tr></table><p><b>sender</b>: <a href="Organization-72cc3a2c-1dda-4b95-b50a-0f7ac19640f4.html">Organization/72cc3a2c-1dda-4b95-b50a-0f7ac19640f4</a> &quot;Pleje og Rehabilitering&quot;</p><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Endpoint</b></td></tr><tr><td style="display: none">*</td><td><a href="https://sor2.sum.dsdn.dk/#id=1144561000016002">https://sor2.sum.dsdn.dk/#id=1144561000016002</a></td></tr></table><p><b>focus</b>: <a href="DiagnosticReport-6d08f000-33cc-41f3-a7c2-c086d53d31a7.html">DiagnosticReport/6d08f000-33cc-41f3-a7c2-c086d53d31a7</a></p></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MessageHeader e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa</b></p><a name="e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa"> </a><a name="hce9f4cc68-b1b7-46b2-ba74-7cc39a914bfa"> </a><a name="e9f4cc68-b1b7-46b2-ba74-7cc39a914bfa-da-DK"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medcom-homecareobservation-messageheader.html">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: <a href="http://medcomfhir.dk/ig/terminology/2.0.0-draft/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-homecareobservation-message">MedComMessagingEventCodes homecareobservation-message</a>: HomeCare Observation Message</p><h3>Destinations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style="display: none">*</td><td/><td><a href="https://sor2.sum.dsdn.dk/#id=52581000016005">https://sor2.sum.dsdn.dk/#id=52581000016005</a></td><td><a href="Organization-d1c1fa90-2c7e-4dd7-b2e8-e40281635a98.html">Organization Skødstrup Lægepraksis</a></td></tr></table><p><b>sender</b>: <a href="Organization-72cc3a2c-1dda-4b95-b50a-0f7ac19640f4.html">Organization Pleje og Rehabilitering</a></p><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Endpoint</b></td></tr><tr><td style="display: none">*</td><td><a href="https://sor2.sum.dsdn.dk/#id=1144561000016002">https://sor2.sum.dsdn.dk/#id=1144561000016002</a></td></tr></table><p><b>focus</b>: <a href="DiagnosticReport-6d08f000-33cc-41f3-a7c2-c086d53d31a7.html">Diagnostic Report for 'HomeCareDiagnosticReport' for '-&gt;Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)'</a></p><p><b>definition</b>: <a href="http://medcomfhir.dk/ig/messagedefinitions/1.0.0-trial-use/MessageDefinition-MedComHomeCareObservationMessageDefinition1.1.html">http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition1.1</a></p></div>
 
   
 
@@ -207,26 +215,22 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 15:39+0100">2023-10-31</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.1.0-trial-use based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 8, 2025 10:48+0000">2025-07-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -237,7 +241,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -247,16 +251,7 @@
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

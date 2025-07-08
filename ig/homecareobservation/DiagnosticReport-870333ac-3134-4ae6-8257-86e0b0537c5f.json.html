@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>HomeCareDiagnosticReport: spot test and EKG - JSON Representation - MedCom HomeCareObservation v1.0.0</title>
+    <title>HomeCareDiagnosticReport: spot test and EKG - JSON Representation - MedCom HomeCareObservation v1.1.0-trial-use</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,8 +20,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -41,11 +43,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"5.30"}
-    h3,h4,h5,h6{--heading-prefix:"5.30"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.30"}
+    h3,h4,h5,h6{--heading-prefix:"6.30"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
@@ -60,7 +64,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.1.0-trial-use - release
 
 
 
@@ -92,9 +96,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -106,8 +107,21 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
-  <li>
-    <a href="downloads.html">Downloads</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -134,7 +148,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 8" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.1.0-trial-use: Release 1.x.x Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -166,12 +180,6 @@
   
 
 
-  
-    <li>
-      <a href="DiagnosticReport-870333ac-3134-4ae6-8257-86e0b0537c5f.ttl.html">TTL</a>
-    </li>
-  
-
 
 
 </ul>
@@ -190,18 +198,17 @@
 
 
 
-  <pre class="json" style="white-space: pre; overflow: hidden"><code class="language-json">
-{
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport">resourceType</a>" : "DiagnosticReport",
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">id</a>" : "870333ac-3134-4ae6-8257-86e0b0537c5f",
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport"
+      <a href="StructureDefinition-medcom-homecareobservation-diagnosticreport.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"
     ]
   },
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;&lt;span title=\&quot;Codes: {http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}\&quot;&gt;HomeCareDiagnosticReport&lt;/span&gt; &lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;b&gt;Elmer (OFFICIAL)&lt;/b&gt; (no stated gender), DoB Unknown ( id:\u00a02509479989)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reported&lt;/td&gt;&lt;td&gt;2023-09-12 12:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Flags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-7fcb76a7-839b-4392-a2ff-f30035faca34.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU19748}\&quot;&gt;P—C-reaktivt protein; massek. = ? mg/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;26 mg/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-f70ae8b7-c1af-44a2-a21a-570c552dd7cc.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU02319}\&quot;&gt;B—Hæmoglobin(Fe); stofk. = ? mmol/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;7.8 mmol/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:25:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-1b089a05-0a5f-479d-9cbd-921a13470221.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU02593}\&quot;&gt;B—Leukocytter; antalk. = ? × 109/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;9.1 10^9/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:27:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-4a94a70e-6957-47a8-bec7-3e27b3145668.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU02636}\&quot;&gt;B—Lymphocytter; antalk. = ? × 109/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;2.6 10^9/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:30:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-d2b89faa-979a-430d-8887-21ccdf6f238b.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU02840}\&quot;&gt;B—Monocytter; antalk. = ? × 109/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.7 10^9/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:32:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-f84143f7-f586-477f-af56-e50c7d152605.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU02902}\&quot;&gt;B—Neutrophilocytter; antalk. = ? × 109/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;10.1 10^9/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:34:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-b22fcbe0-4977-433e-ad1c-d6545bc8c1cb.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU01933}\&quot;&gt;B—Eosinophilocytter; antalk. = ? × 109/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.1 10^9/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:36:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-1e2351e2-77df-4135-a77b-6a4c39e4a4ca.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU01349}\&quot;&gt;B—Basophilocytter; antalk. = ? × 109/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.05 10^9/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:38:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-0e4a5452-1804-42d3-82ed-484df20a09f0.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU22089}\&quot;&gt;P(kB)—Glucose; stofk. = ? mmol/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;6.8 mmol/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:40:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-470d39e4-d3f9-4301-82eb-b957ba33475e.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU01685}\&quot;&gt;P—Koagulation, vævsfaktor-induceret; rel.tid(aktuel/norm; INR; IRP 67/40; proc.) = ?&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.9&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:42:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;EKG udført. Normal sinusrytme.&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: DiagnosticReport 870333ac-3134-4ae6-8257-86e0b0537c5f&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;870333ac-3134-4ae6-8257-86e0b0537c5f\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc870333ac-3134-4ae6-8257-86e0b0537c5f\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;870333ac-3134-4ae6-8257-86e0b0537c5f-da-DK\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-medcom-homecareobservation-diagnosticreport.html\&quot;&gt;MedComHomeCareObservationDiagnosticReport&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;&lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}\&quot;&gt;HomeCareDiagnosticReport&lt;/span&gt; &lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reported&lt;/td&gt;&lt;td&gt;2023-09-12 12:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Performers&lt;/td&gt;&lt;td&gt; &lt;a href=\&quot;Organization-ef5cb9a6-835f-4d18-a34e-179c578b9a2a.html\&quot;&gt;Organization Pleje og Rehabilitering&lt;/a&gt; &lt;a href=\&quot;PractitionerRole-6ff69f1c-690d-11ed-9022-0242ac120002.html\&quot;&gt;PractitionerRole Sygeplejerske&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Flags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-7fcb76a7-839b-4392-a2ff-f30035faca34.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU19748}\&quot;&gt;P—C-reaktivt protein; massek. = ? mg/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;26 mg/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-f70ae8b7-c1af-44a2-a21a-570c552dd7cc.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU02319}\&quot;&gt;B—Hæmoglobin(Fe); stofk. = ? mmol/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;7.8 mmol/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:25:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-1b089a05-0a5f-479d-9cbd-921a13470221.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU02593}\&quot;&gt;B—Leukocytter; antalk. = ? × 10^9/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;9.1 10^9/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:27:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-4a94a70e-6957-47a8-bec7-3e27b3145668.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU02636}\&quot;&gt;B—Leukocytter; antalk. = ? × 10^9/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;2.6 10^9/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:30:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-d2b89faa-979a-430d-8887-21ccdf6f238b.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU02840}\&quot;&gt;B—Monocytter; antalk. = ? × 10^9/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.7 10^9/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:32:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-f84143f7-f586-477f-af56-e50c7d152605.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU02902}\&quot;&gt;B—Neutrophilocytter; antalk. = ? × 10^9/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;10.1 10^9/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:34:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-b22fcbe0-4977-433e-ad1c-d6545bc8c1cb.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU01933}\&quot;&gt;B—Eosinophilocytter; antalk. = ? × 10^9/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.1 10^9/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:36:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-1e2351e2-77df-4135-a77b-6a4c39e4a4ca.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU01349}\&quot;&gt;B—Basophilocytter; antalk. = ? × 10^9/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.05 10^9/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:38:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-0e4a5452-1804-42d3-82ed-484df20a09f0.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU22089}\&quot;&gt;P(kB)—Glucose; stofk. = ? mmol/L&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;6.8 mmol/L&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:40:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-470d39e4-d3f9-4301-82eb-b957ba33475e.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU01685}\&quot;&gt;P—Koagulation, vævsfaktor-induceret; rel.tid(aktuel/norm; INR; IRP 67/40; proc.) = ?&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.9 1&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  code1 = '1')&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2023-09-12 10:42:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;EKG udført. Normal sinusrytme.&lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">status</a>" : "final",
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">code</a>" : {
@@ -213,53 +220,53 @@
     ]
   },
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">subject</a>" : {
-    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/733cef33-3626-422b-955d-d506aaa65fe1"
+    <a href="Patient-733cef33-3626-422b-955d-d506aaa65fe1.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/733cef33-3626-422b-955d-d506aaa65fe1"
   },
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.issued">issued</a>" : "2023-09-12T12:24:08+02:00",
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.performer">performer</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/ef5cb9a6-835f-4d18-a34e-179c578b9a2a"
+      <a href="Organization-ef5cb9a6-835f-4d18-a34e-179c578b9a2a.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/ef5cb9a6-835f-4d18-a34e-179c578b9a2a"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/6ff69f1c-690d-11ed-9022-0242ac120002"
+      <a href="PractitionerRole-6ff69f1c-690d-11ed-9022-0242ac120002.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/6ff69f1c-690d-11ed-9022-0242ac120002"
     }
   ],
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/7fcb76a7-839b-4392-a2ff-f30035faca34"
+      <a href="Observation-7fcb76a7-839b-4392-a2ff-f30035faca34.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/7fcb76a7-839b-4392-a2ff-f30035faca34"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/f70ae8b7-c1af-44a2-a21a-570c552dd7cc"
+      <a href="Observation-f70ae8b7-c1af-44a2-a21a-570c552dd7cc.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/f70ae8b7-c1af-44a2-a21a-570c552dd7cc"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/1b089a05-0a5f-479d-9cbd-921a13470221"
+      <a href="Observation-1b089a05-0a5f-479d-9cbd-921a13470221.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/1b089a05-0a5f-479d-9cbd-921a13470221"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/4a94a70e-6957-47a8-bec7-3e27b3145668"
+      <a href="Observation-4a94a70e-6957-47a8-bec7-3e27b3145668.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/4a94a70e-6957-47a8-bec7-3e27b3145668"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/d2b89faa-979a-430d-8887-21ccdf6f238b"
+      <a href="Observation-d2b89faa-979a-430d-8887-21ccdf6f238b.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/d2b89faa-979a-430d-8887-21ccdf6f238b"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/f84143f7-f586-477f-af56-e50c7d152605"
+      <a href="Observation-f84143f7-f586-477f-af56-e50c7d152605.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/f84143f7-f586-477f-af56-e50c7d152605"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/b22fcbe0-4977-433e-ad1c-d6545bc8c1cb"
+      <a href="Observation-b22fcbe0-4977-433e-ad1c-d6545bc8c1cb.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/b22fcbe0-4977-433e-ad1c-d6545bc8c1cb"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/1e2351e2-77df-4135-a77b-6a4c39e4a4ca"
+      <a href="Observation-1e2351e2-77df-4135-a77b-6a4c39e4a4ca.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/1e2351e2-77df-4135-a77b-6a4c39e4a4ca"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/0e4a5452-1804-42d3-82ed-484df20a09f0"
+      <a href="Observation-0e4a5452-1804-42d3-82ed-484df20a09f0.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/0e4a5452-1804-42d3-82ed-484df20a09f0"
     },
     {
-      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/470d39e4-d3f9-4301-82eb-b957ba33475e"
+      <a href="Observation-470d39e4-d3f9-4301-82eb-b957ba33475e.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/470d39e4-d3f9-4301-82eb-b957ba33475e"
     }
   ],
   "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.media">media</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.media.link">link</a>" : {
-        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Media/cb277ee2-5d96-4762-829d-d36449b2b17f"
+        <a href="Media-cb277ee2-5d96-4762-829d-d36449b2b17f.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Media/cb277ee2-5d96-4762-829d-d36449b2b17f"
       }
     }
   ],
@@ -281,26 +288,22 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 15:39+0100">2023-10-31</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.1.0-trial-use based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 8, 2025 10:48+0000">2025-07-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -311,7 +314,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -321,16 +324,7 @@
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>
