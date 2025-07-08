@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>HomeCareDiagnosticReport:TOBS and ABC examination - MedCom HomeCareObservation v1.0.0</title>
+    <title>HomeCareDiagnosticReport:TOBS and ABC examination - MedCom HomeCareObservation v1.1.0-trial-use</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,8 +18,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -39,11 +41,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"5.32"}
-    h3,h4,h5,h6{--heading-prefix:"5.32"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.32"}
+    h3,h4,h5,h6{--heading-prefix:"6.32"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
@@ -58,7 +62,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.1.0-trial-use - release
 
 
 
@@ -90,9 +94,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -104,8 +105,21 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
-  <li>
-    <a href="downloads.html">Downloads</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -132,7 +146,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.1.0-trial-use: Release 1.x.x Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
   
 
@@ -165,12 +179,6 @@
   
 
 
-  
-    <li>
-      <a href="DiagnosticReport-efb1ed12-6a5d-4342-9572-861071644e46.ttl.html">TTL</a>
-    </li>
-  
-
 
 
 </ul>
@@ -189,13 +197,13 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><h2><span title="Codes: {http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}">HomeCareDiagnosticReport</span> </h2><table class="grid"><tr><td>Subject</td><td><b>Elmer (OFFICIAL)</b> (no stated gender), DoB Unknown ( id: 2509479989)</td></tr><tr><td>Reported</td><td>2023-09-12 12:24:19+0200</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href="Observation-3fd3835d-1758-4d22-8547-000182752817.html"><span title="Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88122}">Pt—Respiration; frekvens = ? X 1/min</span></a></td><td>19 1/min</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:08+0200</td></tr><tr><td><a href="Observation-ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1.html"><span title="Codes: {urn:oid:1.2.208.176.2.1 NPU21692}">Hjerte—Systole; frekv. = ? × 1/min</span></a></td><td>92  1/min</td><td><span title="Codes: ">NI</span></td><td>Patienten har været ud og går lige inden målingen.</td><td>2023-09-13 09:24:09+0200</td></tr><tr><td><a href="Observation-8917f29d-269c-4bb3-8ce9-d255c351d52b.html"><span title="Codes: {urn:oid:1.2.208.176.2.1 DNK05472}">Arm—Blodtryk(systolisk); tryk = ? mmHg</span></a></td><td>147 mmHg</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:10+0200</td></tr><tr><td><a href="Observation-6bf03841-8397-4a2a-9f9a-8966b0cfa571.html"><span title="Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88126}">Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?</span></a></td><td>0</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:11+0200</td></tr><tr><td><a href="Observation-85fd1372-cf02-49c6-bd45-7205f5541a66.html"><span title="Codes: {urn:oid:1.2.208.176.2.1 NPU08676}">Pt—Legeme; temp. = ? °C</span></a></td><td>38.7 °C</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:12+0200</td></tr><tr><td><a href="Observation-f64a0a78-53cf-4a7f-9b89-4a2338a4935c.html"><span title="Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88125}">Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?</span></a></td><td>3</td><td><span title="Codes: ">NI</span></td><td/><td>2023-09-13 09:24:13+0200</td></tr></table><p>ABCDE
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport efb1ed12-6a5d-4342-9572-861071644e46</b></p><a name="efb1ed12-6a5d-4342-9572-861071644e46"> </a><a name="hcefb1ed12-6a5d-4342-9572-861071644e46"> </a><a name="efb1ed12-6a5d-4342-9572-861071644e46-da-DK"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medcom-homecareobservation-diagnosticreport.html">MedComHomeCareObservationDiagnosticReport</a></p></div><h2><span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}">HomeCareDiagnosticReport</span> </h2><table class="grid"><tr><td>Subject</td><td>Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</td></tr><tr><td>Reported</td><td>2023-09-12 12:24:19+0200</td></tr><tr><td>Performers</td><td> <a href="Organization-a0330c62-fe29-4719-83fa-a94959084f29.html">Organization Pleje og Rehabilitering</a> <a href="PractitionerRole-4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf.html">PractitionerRole Sygeplejerske</a></td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href="Observation-3fd3835d-1758-4d22-8547-000182752817.html"><span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88122}">Pt—Respiration; frekvens = ? X 1/min</span></a></td><td>19 1/min</td><td>Final, <span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}">Not Interpreted</span></td><td/><td>2023-09-13 09:24:08+0200</td></tr><tr><td><a href="Observation-ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1.html"><span title="Codes:{urn:oid:1.2.208.176.2.1 NPU21692}">Hjerte—Systole; frekv. = ? × 1/min</span></a></td><td>92 1/min</td><td>Final, <span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}">Not Interpreted</span></td><td>Patienten har været ud og går lige inden målingen.</td><td>2023-09-13 09:24:09+0200</td></tr><tr><td><a href="Observation-8917f29d-269c-4bb3-8ce9-d255c351d52b.html"><span title="Codes:{urn:oid:1.2.208.176.2.1 DNK05472}">Arm—Blodtryk(systolisk); tryk = ? mmHg</span></a></td><td>147 mmHg</td><td>Final, <span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}">Not Interpreted</span></td><td/><td>2023-09-13 09:24:10+0200</td></tr><tr><td><a href="Observation-6bf03841-8397-4a2a-9f9a-8966b0cfa571.html"><span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88126}">Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?</span></a></td><td>0 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></td><td>Final, <span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}">Not Interpreted</span></td><td/><td>2023-09-13 09:24:11+0200</td></tr><tr><td><a href="Observation-85fd1372-cf02-49c6-bd45-7205f5541a66.html"><span title="Codes:{urn:oid:1.2.208.176.2.1 NPU08676}">Pt—Legeme; temp. = ? °C</span></a></td><td>38.7 °C</td><td>Final, <span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}">Not Interpreted</span></td><td/><td>2023-09-13 09:24:12+0200</td></tr><tr><td><a href="Observation-f64a0a78-53cf-4a7f-9b89-4a2338a4935c.html"><span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88125}">Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?</span></a></td><td>3 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></td><td>Final, <span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}">Not Interpreted</span></td><td/><td>2023-09-13 09:24:13+0200</td></tr></table><p>ABCDE
 SeFølLyt-Princippet
-A.	RF 19 – påskyndet men regelmæssig, fri respiration. SAT 93%
+A.	RF 19 - påskyndet men regelmæssig, fri respiration. SAT 93%
 B.	Puls 92 palperet på venstre håndled. Fyldig regelmæssig. Fin kapilærrespons
-C.	BT 147/83 – klamtsvedende. Kolde ekstremiteter. 
+C.	BT 147/83 - klamtsvedende. Kolde ekstremiteter. 
 D.	Reagerer habituelt. Pupilreaktion i.a. VAS 7. Bl.s. 6,8
-E.	Temperatur 38,7 Målt rektalt </p></div>
+E.	Temperatur 38,7 Målt rektalt</p></div>
 
   
 
@@ -213,26 +221,22 @@ E.	Temperatur 38,7 Målt rektalt </p></div>
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 15:39+0100">2023-10-31</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.1.0-trial-use based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 8, 2025 10:48+0000">2025-07-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -243,7 +247,7 @@ E.	Temperatur 38,7 Målt rektalt </p></div>
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -253,16 +257,7 @@ E.	Temperatur 38,7 Målt rektalt </p></div>
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

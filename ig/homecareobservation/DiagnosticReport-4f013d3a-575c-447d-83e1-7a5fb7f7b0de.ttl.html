@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Cancelled HomeCareDiagnosticReport: TOBS and ABC examination - TTL Representation - MedCom HomeCareObservation v1.0.0</title>
+    <title>Cancelled HomeCareDiagnosticReport: TOBS and ABC examination - TTL Representation - MedCom HomeCareObservation v1.1.0-trial-use</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,8 +20,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -41,11 +43,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"5.13"}
-    h3,h4,h5,h6{--heading-prefix:"5.13"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.13"}
+    h3,h4,h5,h6{--heading-prefix:"6.13"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
@@ -60,7 +64,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.1.0-trial-use - release
 
 
 
@@ -92,9 +96,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -106,8 +107,21 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
-  <li>
-    <a href="downloads.html">Downloads</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -134,7 +148,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.1.0-trial-use: Release 1.x.x Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -166,12 +180,6 @@
   
 
 
-  
-    <li class="active">
-      <a href="#">TTL</a>
-    </li>
-  
-
 
 
 </ul>
@@ -193,6 +201,7 @@
   <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
@@ -203,14 +212,14 @@
   <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;4f013d3a-575c-447d-83e1-7a5fb7f7b0de&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-diagnosticreport&gt;     ] )
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport&gt;     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;&lt;span title=\&quot;Codes: {http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}\&quot;&gt;HomeCareDiagnosticReport&lt;/span&gt; &lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;b&gt;Elmer (OFFICIAL)&lt;/b&gt; (no stated gender), DoB Unknown ( id: 2509479989)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reported&lt;/td&gt;&lt;td&gt;2023-09-12 13:00:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Flags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Note&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-3fd3835d-1758-4d22-8547-000182752817.html\&quot;&gt;&lt;span title=\&quot;Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88122}\&quot;&gt;Pt—Respiration; frekvens = ? X 1/min&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;19 1/min&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU21692}\&quot;&gt;Hjerte—Systole; frekv. = ? × 1/min&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;92  1/min&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Patienten har været ud og går lige inden målingen.&lt;/td&gt;&lt;td&gt;2023-09-13 09:24:09+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-8917f29d-269c-4bb3-8ce9-d255c351d52b.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 DNK05472}\&quot;&gt;Arm—Blodtryk(systolisk); tryk = ? mmHg&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;147 mmHg&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:10+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-6bf03841-8397-4a2a-9f9a-8966b0cfa571.html\&quot;&gt;&lt;span title=\&quot;Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88126}\&quot;&gt;Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:11+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-85fd1372-cf02-49c6-bd45-7205f5541a66.html\&quot;&gt;&lt;span title=\&quot;Codes: {urn:oid:1.2.208.176.2.1 NPU08676}\&quot;&gt;Pt—Legeme; temp. = ? °C&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;38.7 °C&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:12+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-f64a0a78-53cf-4a7f-9b89-4a2338a4935c.html\&quot;&gt;&lt;span title=\&quot;Codes: {https://terminology.medcom.dk/fhir/observation-code MCS88125}\&quot;&gt;Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: \&quot;&gt;NI&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:13+0200&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;\r\nCancellation due to incorrect CPR-number!\r\n&lt;/p&gt;&lt;/div&gt;&quot;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: DiagnosticReport 4f013d3a-575c-447d-83e1-7a5fb7f7b0de&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;4f013d3a-575c-447d-83e1-7a5fb7f7b0de\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc4f013d3a-575c-447d-83e1-7a5fb7f7b0de\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;4f013d3a-575c-447d-83e1-7a5fb7f7b0de-da-DK\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-medcom-homecareobservation-diagnosticreport.html\&quot;&gt;MedComHomeCareObservationDiagnosticReport&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;&lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}\&quot;&gt;HomeCareDiagnosticReport&lt;/span&gt; &lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reported&lt;/td&gt;&lt;td&gt;2023-09-12 13:00:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Performers&lt;/td&gt;&lt;td&gt; &lt;a href=\&quot;Organization-a0330c62-fe29-4719-83fa-a94959084f29.html\&quot;&gt;Organization Pleje og Rehabilitering&lt;/a&gt; &lt;a href=\&quot;PractitionerRole-4b3b6f0f-a475-4b04-8a92-105e8ce6a7bf.html\&quot;&gt;PractitionerRole Sygeplejerske&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Flags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Note&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-3fd3835d-1758-4d22-8547-000182752817.html\&quot;&gt;&lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88122}\&quot;&gt;Pt—Respiration; frekvens = ? X 1/min&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;19 1/min&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:08+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-ba691ee4-6d38-4f5b-82f1-40b54e3b8ad1.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU21692}\&quot;&gt;Hjerte—Systole; frekv. = ? × 1/min&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;92 1/min&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Patienten har været ud og går lige inden målingen.&lt;/td&gt;&lt;td&gt;2023-09-13 09:24:09+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-8917f29d-269c-4bb3-8ce9-d255c351d52b.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 DNK05472}\&quot;&gt;Arm—Blodtryk(systolisk); tryk = ? mmHg&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;147 mmHg&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:10+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-6bf03841-8397-4a2a-9f9a-8966b0cfa571.html\&quot;&gt;&lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88126}\&quot;&gt;Pt—Bevidsthedsniveau; arb.antal(værdi 0-3) = ?&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0 1&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  code1 = '1')&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:11+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-85fd1372-cf02-49c6-bd45-7205f5541a66.html\&quot;&gt;&lt;span title=\&quot;Codes:{urn:oid:1.2.208.176.2.1 NPU08676}\&quot;&gt;Pt—Legeme; temp. = ? °C&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;38.7 °C&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:12+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-f64a0a78-53cf-4a7f-9b89-4a2338a4935c.html\&quot;&gt;&lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88125}\&quot;&gt;Pt—Tidlig Opsporing af Begyndende Sygdom (TOBS) score; antal (værdi 0-15) = ?&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;3 1&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  code1 = '1')&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Final, &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\&quot;&gt;Not Interpreted&lt;/span&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;2023-09-13 09:24:13+0200&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;Cancellation due to incorrect CPR-number&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;cancelled&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;final&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">fhir:code</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes&quot;^^xsd:anyURI ] ;
@@ -238,7 +247,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
   ] [
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Observation/f64a0a78-53cf-4a7f-9b89-4a2338a4935c&quot; ]
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.conclusion">fhir:conclusion</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;\r\nCancellation due to incorrect CPR-number!\r\n&quot;] . # 
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.conclusion">fhir:conclusion</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Cancellation due to incorrect CPR-number&quot;] . # 
 
 </code></pre>
 
@@ -258,26 +267,22 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 15:39+0100">2023-10-31</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.1.0-trial-use based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jul 8, 2025 10:48+0000">2025-07-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -288,7 +293,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -298,16 +303,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>
