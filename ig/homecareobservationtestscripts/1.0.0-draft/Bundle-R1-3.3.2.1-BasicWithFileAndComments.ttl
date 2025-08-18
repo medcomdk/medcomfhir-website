@@ -1,0 +1,418 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/homecareobservationtestscripts/Bundle/R1-3.3.2.1-BasicWithFileAndComments> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "R1-3.3.2.1-BasicWithFileAndComments"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "message"] ; # 
+  fhir:timestamp [ fhir:v "2025-08-08T15:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/MessageHeader/R1-3.3.2.1-MessageHeader"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/MessageHeader/R1-3.3.2.1-MessageHeader> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Patient/BrunoElmerPatient"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Patient/BrunoElmerPatient> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/R1-3.3.2.1-DiagnosticReport"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/R1-3.3.2.1-DiagnosticReport> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/PractitionerRole/JohnAcuteNursePractitionerRole"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/PractitionerRole/JohnAcuteNursePractitionerRole> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Practitioner/JohnAcuteNurse"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Practitioner/JohnAcuteNurse> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Organization/AgerskovsLaegePraksisRequesterOrg"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Organization/AgerskovsLaegePraksisRequesterOrg> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Organization/SkovlyAktivitetstilbudProducerOrg"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Organization/SkovlyAktivitetstilbudProducerOrg> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Provenance/R1-3.3.2.1-Provenance"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Provenance/R1-3.3.2.1-Provenance> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Observation/GlucoseObservationOnBrunoNoComment"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Observation/GlucoseObservationOnBrunoNoComment> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Observation/HeartRateObservationOnBrunoWithAnalysisComment"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Observation/HeartRateObservationOnBrunoWithAnalysisComment> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/Media/PngImageMedComLogo"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/homecareobservation/Media/PngImageMedComLogo> )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/MessageHeader/R1-3.3.2.1-MessageHeader> a fhir:MessageHeader ;
+  fhir:id [ fhir:v "R1-3.3.2.1-MessageHeader"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_R1-3.3.2.1-MessageHeader\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader R1-3.3.2.1-MessageHeader</b></p><a name=\"R1-3.3.2.1-MessageHeader\"> </a><a name=\"hcR1-3.3.2.1-MessageHeader\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/homecareobservation/1.1.0-trial-use/StructureDefinition-medcom-homecareobservation-messageheader.html\">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/2.0.0-draft/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-homecareobservation-message\">MedComMessagingEventCodes homecareobservation-message</a>: HomeCare Observation Message</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=73091000016008\">https://sor2.sum.dsdn.dk/#id=73091000016008</a></td><td><a href=\"Bundle-3.4.1-TemporaryCPRAndNoComments.html#Organization_AgerskovsLaegePraksisRequesterOrg\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></td></tr></table><p><b>sender</b>: <a href=\"Bundle-3.4.1-TemporaryCPRAndNoComments.html#Organization_SkovlyAktivitetstilbudProducerOrg\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=1267041000016006\">https://sor2.sum.dsdn.dk/#id=1267041000016006</a></td></tr></table><p><b>focus</b>: <a href=\"Bundle-R1-3.3.2.1-BasicWithFileAndComments.html#DiagnosticReport_R1-3.3.2.1-DiagnosticReport\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></p><p><b>definition</b>: <a href=\"http://medcomfhir.dk/ig/messagedefinitions/1.0.0-trial-use/MessageDefinition-MedComHomeCareObservationMessageDefinition1.1.html\">http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition1.1</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:event [
+     a fhir:Coding ;
+     fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "homecareobservation-message" ]
+  ] ; # 
+  fhir:destination ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "primary" ]
+       ]
+     ] ) ;
+     fhir:endpoint [ fhir:v "https://sor2.sum.dsdn.dk/#id=73091000016008"^^xsd:anyURI ] ;
+     fhir:receiver [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Organization/AgerskovsLaegePraksisRequesterOrg> ;
+       fhir:reference [ fhir:v "Organization/AgerskovsLaegePraksisRequesterOrg" ]
+     ]
+  ] ) ; # 
+  fhir:sender [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Organization/SkovlyAktivitetstilbudProducerOrg> ;
+     fhir:reference [ fhir:v "Organization/SkovlyAktivitetstilbudProducerOrg" ]
+  ] ; # 
+  fhir:source [
+     fhir:endpoint [ fhir:v "https://sor2.sum.dsdn.dk/#id=1267041000016006"^^xsd:anyURI ]
+  ] ; # 
+  fhir:focus ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/DiagnosticReport/R1-3.3.2.1-DiagnosticReport> ;
+     fhir:reference [ fhir:v "DiagnosticReport/R1-3.3.2.1-DiagnosticReport" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:v "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition1.1"^^xsd:anyURI ;
+     fhir:link <http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition1.1>
+  ] . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Patient/BrunoElmerPatient> a fhir:Patient ;
+  fhir:id [ fhir:v "BrunoElmerPatient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_BrunoElmerPatient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient BrunoElmerPatient</b></p><a name=\"BrunoElmerPatient\"> </a><a name=\"hcBrunoElmerPatient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-patient.html\">MedComCorePatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</p><hr/></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2509479989" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Elmer" ] ;
+     fhir:given ( [ fhir:v "Bruno" ] )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/R1-3.3.2.1-DiagnosticReport> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "R1-3.3.2.1-DiagnosticReport"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_R1-3.3.2.1-DiagnosticReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport R1-3.3.2.1-DiagnosticReport</b></p><a name=\"R1-3.3.2.1-DiagnosticReport\"> </a><a name=\"hcR1-3.3.2.1-DiagnosticReport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/homecareobservation/1.1.0-trial-use/StructureDefinition-medcom-homecareobservation-diagnosticreport.html\">MedComHomeCareObservationDiagnosticReport</a></p></div><h2><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}\">HomeCareDiagnosticReport</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>Reported</td><td>2025-08-07 15:00:00+0200</td></tr><tr><td>Performers</td><td> <a href=\"Bundle-3.4.1-TemporaryCPRAndNoComments.html#Organization_SkovlyAktivitetstilbudProducerOrg\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a> <a href=\"Bundle-3.4.1-TemporaryCPRAndNoComments.html#PractitionerRole_JohnAcuteNursePractitionerRole\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr><tr><td/><td/></tr></table><p>Glucose measurement OK, heart rate elevated after exercise. Everything looks fine overall.</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "HomeCareReport" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Patient/BrunoElmerPatient> ;
+     fhir:reference [ fhir:v "Patient/BrunoElmerPatient" ]
+  ] ; # 
+  fhir:issued [ fhir:v "2025-08-07T15:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Organization/SkovlyAktivitetstilbudProducerOrg> ;
+     fhir:reference [ fhir:v "Organization/SkovlyAktivitetstilbudProducerOrg" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/PractitionerRole/JohnAcuteNursePractitionerRole> ;
+     fhir:reference [ fhir:v "PractitionerRole/JohnAcuteNursePractitionerRole" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Observation/GlucoseObservationOnBrunoNoComment> ;
+     fhir:reference [ fhir:v "Observation/GlucoseObservationOnBrunoNoComment" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Observation/HeartRateObservationOnBrunoWithAnalysisComment> ;
+     fhir:reference [ fhir:v "Observation/HeartRateObservationOnBrunoWithAnalysisComment" ]
+  ] ) ; # 
+  fhir:media ( [
+     fhir:link [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Media/PngImageMedComLogo> ;
+       fhir:reference [ fhir:v "Media/PngImageMedComLogo" ]
+     ]
+  ] ) ; # 
+  fhir:conclusion [ fhir:v "Glucose measurement OK, heart rate elevated after exercise. Everything looks fine overall."] . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/PractitionerRole/JohnAcuteNursePractitionerRole> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "JohnAcuteNursePractitionerRole"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_JohnAcuteNursePractitionerRole\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole JohnAcuteNursePractitionerRole</b></p><a name=\"JohnAcuteNursePractitionerRole\"> </a><a name=\"hcJohnAcuteNursePractitionerRole\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-practitionerrole.html\">MedComCorePractitionerRole</a></p></div><p><b>practitioner</b>: <a href=\"Bundle-3.4.1-TemporaryCPRAndNoComments.html#Practitioner_JohnAcuteNurse\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></p><p><b>code</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ sygeplejerske}\">Sygeplejerske</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Practitioner/JohnAcuteNurse> ;
+     fhir:reference [ fhir:v "Practitioner/JohnAcuteNurse" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "sygeplejerske" ]
+     ] )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Practitioner/JohnAcuteNurse> a fhir:Practitioner ;
+  fhir:id [ fhir:v "JohnAcuteNurse"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_JohnAcuteNurse\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner JohnAcuteNurse</b></p><a name=\"JohnAcuteNurse\"> </a><a name=\"hcJohnAcuteNurse\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-practitioner.html\">MedComCorePractitioner</a></p></div><p><b>name</b>: John </p><p><b>telecom</b>: <a href=\"tel:+4505577668\">+45 05577668</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:name ( [
+     fhir:given ( [ fhir:v "John" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+45 05577668" ]
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Organization/AgerskovsLaegePraksisRequesterOrg> a fhir:Organization ;
+  fhir:id [ fhir:v "AgerskovsLaegePraksisRequesterOrg"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-requesterorganization"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-requesterorganization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_AgerskovsLaegePraksisRequesterOrg\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization AgerskovsLaegePraksisRequesterOrg</b></p><a name=\"AgerskovsLaegePraksisRequesterOrg\"> </a><a name=\"hcAgerskovsLaegePraksisRequesterOrg\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-requesterorganization.html\">MedComMessagingRequesterOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000147465, <code>urn:oid:1.2.208.176.1.1</code>/73091000016008, <code>urn:oid:1.2.208.176.1.4</code>/045861</p><p><b>name</b>: Agerskov lægepraksis</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td>ALP </td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://www.gs1.org/gln"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5790000147465" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "73091000016008" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.4"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "045861" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Agerskov lægepraksis"] ; # 
+  fhir:contact ( [
+     fhir:name [
+       fhir:given ( [ fhir:v "ALP" ] )
+     ]
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Organization/SkovlyAktivitetstilbudProducerOrg> a fhir:Organization ;
+  fhir:id [ fhir:v "SkovlyAktivitetstilbudProducerOrg"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-producer-organization"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-producer-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_SkovlyAktivitetstilbudProducerOrg\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization SkovlyAktivitetstilbudProducerOrg</b></p><a name=\"SkovlyAktivitetstilbudProducerOrg\"> </a><a name=\"hcSkovlyAktivitetstilbudProducerOrg\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-producer-organization.html\">MedComCoreProducerOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790002757778, <code>urn:oid:1.2.208.176.1.1</code>/1267041000016006, <code>http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID</code>/KAF</p><p><b>name</b>: Pleje og Rehabilitering</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://www.gs1.org/gln"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5790002757778" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1267041000016006" ]
+  ] [
+     fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "KAF" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Pleje og Rehabilitering"] . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Provenance/R1-3.3.2.1-Provenance> a fhir:Provenance ;
+  fhir:id [ fhir:v "R1-3.3.2.1-Provenance"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_R1-3.3.2.1-Provenance\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance R1-3.3.2.1-Provenance</b></p><a name=\"R1-3.3.2.1-Provenance\"> </a><a name=\"hcR1-3.3.2.1-Provenance\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p>Provenance for <a href=\"Bundle-R1-3.3.2.1-BasicWithFileAndComments.html#MessageHeader_R1-3.3.2.1-MessageHeader\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2025-08-07 15:00:00+0200</td></tr><tr><td>Recorded</td><td>2025-08-07 15:00:00+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\">A new message has been sent</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Bundle-3.4.1-TemporaryCPRAndNoComments.html#Organization_SkovlyAktivitetstilbudProducerOrg\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/MessageHeader/R1-3.3.2.1-MessageHeader> ;
+     fhir:reference [ fhir:v "MessageHeader/R1-3.3.2.1-MessageHeader" ]
+  ] ) ; # 
+  fhir:occurred [
+     a fhir:dateTime ;
+     fhir:v "2025-08-07T15:00:00+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2025-08-07T15:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "new-message" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Organization/SkovlyAktivitetstilbudProducerOrg> ;
+       fhir:reference [ fhir:v "Organization/SkovlyAktivitetstilbudProducerOrg" ]
+     ]
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Observation/GlucoseObservationOnBrunoNoComment> a fhir:Observation ;
+  fhir:id [ fhir:v "GlucoseObservationOnBrunoNoComment"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_GlucoseObservationOnBrunoNoComment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation GlucoseObservationOnBrunoNoComment</b></p><a name=\"GlucoseObservationOnBrunoNoComment\"> </a><a name=\"hcGlucoseObservationOnBrunoNoComment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/homecareobservation/1.1.0-trial-use/StructureDefinition-medcom-homecare-observation.html\">MedComHomeCareObservation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.208.176.2.1 NPU22089}\">P(kB)—Glucose; stofk. = ? mmol/L</span></p><p><b>subject</b>: <a href=\"Bundle-3.4.5-BigExampleWithFilesCommentsAndMultipleObservations.html#Patient_BrunoElmerPatient\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></p><p><b>effective</b>: 2025-08-07 14:47:23+0200</p><p><b>value</b>: 6.8 mmol/L</p><p><b>interpretation</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\">Not Interpreted</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NPU22089" ] ;
+       fhir:display [ fhir:v "P(kB)—Glucose; stofk. = ? mmol/L" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Patient/BrunoElmerPatient> ;
+     fhir:reference [ fhir:v "Patient/BrunoElmerPatient" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-08-07T14:47:23+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 6.8 ] ;
+     fhir:unit [ fhir:v "mmol/L" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NI" ] ;
+       fhir:display [ fhir:v "Not Interpreted" ]
+     ] )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Observation/HeartRateObservationOnBrunoWithAnalysisComment> a fhir:Observation ;
+  fhir:id [ fhir:v "HeartRateObservationOnBrunoWithAnalysisComment"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_HeartRateObservationOnBrunoWithAnalysisComment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation HeartRateObservationOnBrunoWithAnalysisComment</b></p><a name=\"HeartRateObservationOnBrunoWithAnalysisComment\"> </a><a name=\"hcHeartRateObservationOnBrunoWithAnalysisComment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/homecareobservation/1.1.0-trial-use/StructureDefinition-medcom-homecare-observation.html\">MedComHomeCareObservation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.208.176.2.1 NPU21692}\">Hjerte—Systole; frekv. = ? × 1/min</span></p><p><b>subject</b>: <a href=\"Bundle-3.4.5-BigExampleWithFilesCommentsAndMultipleObservations.html#Patient_BrunoElmerPatient\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></p><p><b>effective</b>: 2025-08-07 14:30:01+0200</p><p><b>value</b>: 147 1/min</p><p><b>interpretation</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\">Not Interpreted</span></p><p><b>note</b>: </p><blockquote><div><p>Patienten har været ud og løbe lige inden målingen.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NPU21692" ] ;
+       fhir:display [ fhir:v "Hjerte—Systole; frekv. = ? × 1/min" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Patient/BrunoElmerPatient> ;
+     fhir:reference [ fhir:v "Patient/BrunoElmerPatient" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2025-08-07T14:30:01+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "147"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "1/min" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NI" ] ;
+       fhir:display [ fhir:v "Not Interpreted" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patienten har været ud og løbe lige inden målingen." ]
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/homecareobservation/Media/PngImageMedComLogo> a fhir:Media ;
+  fhir:id [ fhir:v "PngImageMedComLogo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-media"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-media>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Media_PngImageMedComLogo\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Media PngImageMedComLogo</b></p><a name=\"PngImageMedComLogo\"> </a><a name=\"hcPngImageMedComLogo\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-media.html\">MedComMedia</a></p></div><p><b>identifier</b>: urn:uuid:a63ea77f-9459-4b7d-89d7-d1450c22c808</p><p><b>status</b>: Completed</p><p><b>operator</b>: <a href=\"Bundle-3.4.1-TemporaryCPRAndNoComments.html#PractitionerRole_JohnAcuteNursePractitionerRole\">Bundle: type = message; timestamp = 2025-08-08 15:00:00+0200</a></p><h3>Contents</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Data</b></td><td><b>Title</b></td><td><b>Creation</b></td></tr><tr><td style=\"display: none\">*</td><td>image/png</td><td>(base64 data - 11,776 base64 chars)</td><td>MedCom Logo</td><td>2025-08-08 13:00:00+0200</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "urn:uuid:a63ea77f-9459-4b7d-89d7-d1450c22c808" ] ;
+     fhir:assigner [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/Organization/SkovlyAktivitetstilbudProducerOrg> ;
+       fhir:reference [ fhir:v "Organization/SkovlyAktivitetstilbudProducerOrg" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:operator [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservationtestscripts/PractitionerRole/JohnAcuteNursePractitionerRole> ;
+     fhir:reference [ fhir:v "PractitionerRole/JohnAcuteNursePractitionerRole" ]
+  ] ; # 
+  fhir:content [
+     fhir:contentType [ fhir:v "image/png" ] ;
+     fhir:data [ fhir:v "iVBORw0KGgoAAAANSUhEUgAAA7EAAAOxCAMAAAAU/dBrAAAACXBIWXMAAB7CAAAewgFu0HU+AAAAYFBMVEVHcEyCrPYjHyAHbfwjHyKauvMZcfIjHyApPWKow/Q1ddQpUZEBa/ogWKm1ye/M1OLx8fLi5u26vr+Rr+WhpKZkk+R+jIwofPxAb74piERaZW4AbP0ASrAsPUsALW4HITIXaw4uAAAAEHRSTlMAKSxBVW91eZWyuL3K6O39FBn2mgAAIapJREFUeNrswYEAAAAAgKD9qRepAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABm725zG7ehKICCCFiAf8jHGkYCWPtfZ5v0w5hkMhMnokUp5+zAsq/5LkXZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3CbVklwF2IdUI6IXFwL2oPR40bJrAbPLPf5XjcYwtdTiB+osTF1gf6DOwvQF9kqdhfkL7FvNaAzzD8RhCwrmlEr8QJ2FXRXYt7o6C1PILd6wBQX7KLDqLExdYG/RnaiAuQqsLSjYSYFVZ2E/BVadhXmlVwOxOgs7KrDqLOynwKqzsJ8Cq87C7AVWZmGXBVadheMU2MM8IJByKaW2ZxHRXpRSsjLOzgrs4begci6txS+0KrjsYiA+fp3NpcUHtZqVcmaSewzTy47TetX9EwKzFtiD19lce3xOryZkpiuwx66zqfb4EkstcxXYI9fZVFq8ENrvJT8r/8jPkgK7gwcEUu2xFuPxHuRcamvxc63V/d3BSy3uqJcjDf/dma6JpVxqjw9pteSkwP5cyxO9Vs87HFWun7kTkBXYAXV2TF49C3wgpX5+aipJgX2rpG1+YE5mv4GH2uNLWkkK7Gu9zPHd5CEl5wp+pmYF9rWe7/1aZda5gpvmJgX2lZY2GCbMxn5be4/vZ24xg5q2n4g9DOxg/Ht6MRBvcElKrMa/hX23+5QtzTE6TKTnewZWnbXA3qYXBfa1lu8TWKOxBfYzalJgX6tp8DevZdYC+3ktK7B325VLPX7LycXdK6ObmwJ7r1GyxZUNKBPxZxUF9j7rUokQ2dt59uyNosDeo/6lHpvpuuyhzsZnBfYODwjU2FATpgMFNnqe5285DltnU2yqitORjsf0pMCOrrM1tqXKHuo8W1Ng39HSikusuVhg11IU2LFbUCW25vDTsQ6gZgPx0DrbY2tdqEbKxxuaco+96nnF91OTtUu8iqLADtyCKnFlu9jBiTX0pMCOq7MtJiBYw9TYQFVgxz0gED9lLLbr9BVZgf21XkbUWGPx7qUem2gK7Kg6W+J9bsmaiT+rKLCD6myN33N/x42dW/WkwI6psy0+wtbTPrXYTFVgx9TZHh8lsZbYrTafUostzVRnU0isFjtEU2BH1Nkcc3gQr/Wl2FRRYAdktkqse7GjZAV29TpbYg5dYgeosa2eFNiP6nlXgY0msQP02FhTYNfdgioxi5PEDhCbqwrsDWrazxfYWWLXl2N71ZHEG/SSdtLo+0Vij5nYqMlAfIv6XmhzjYlUiT1qYqOlAX/LcWit5vTmerSYyqPEHjax0bMCe7NeS8kvFy7nUltMpl0kdoAck6hJgT2WR4k9dGKjl6TAHsjpIrEjPETsLrPJQDy//iixQzzUmEktSYHdtWtgJXaIh1NMppb8i+U1FwV2D84XiR3j4TEm1P7ZBb3KOZdSm9V1J84XiR3k4WITh/UDK7Gj/LGcfcBYVT9fJHZgYheLLGtqjxeJHZrYJ+2Q1fTT5SKxYxNrLmY19fEisaMTay5mJe18uUjsHRK7uMfJOuurxN4jsaosX9ZOf+dVYu+RWJHlq/pLXCX2PokVWVZYXSX2bokVWb6Q1vNzXCX23om1/cSn0yqxWyV2+dOnkI/o/4dVYjdN7HI2GfNrrf4XVomdILHLk8mY32dVYjdP7NXJR5P3h2CJnSKxllne3116Wi7PJHauxGqzvE3r0/JMYmdN7NVJZqV1+ZvETplYmeUH/fwcV4mdOrFmY/5Vn+MqsftJ7NWThfb7+fNpWSR2b4m9Ogvtt9KflkVid5rY60rrds930ZZFYnec2Kuz1H4Hp0Vid5/Yq6fzyU/yH1pbJPYgib36i717W3YTBMMwPHVsTVc2+AMShsp4/3dZ00nKZMxOBAHX954mp8/8oKi91kLgYxqbjHqI3Z5Ylx7rxNiJjcFw+XUQW0S7PlS6w2a34KiH2BKq9v3scAd3iwmILaJm34cNg7bQNMSWUB1ALB7Xg1iIXamqWSQWR5IhFmJXrQkmFm+yKL0OYvOvjiQWn8srMA6x+ddEEIsXluPuDsRGqr6KxZRFYwJic6/5LxZ7WdSShti8qyKL7bEu/u5PAhygLGT1VSyGLIr0tN0vKAtZ48RuayfLjYS+kHd4sCj+JmJ1Iq/DMFiY9aoLKxbIQlZtTKzz+i+DD/UFWxhjG5up2PL3sdIOLoPzzYGuGGNRnEV1dLEsjVcXxqxPbGIWIzazGVv+onjqFXvZSf5LY4zYnMTuNjFiSdlhAhb3g32je7MYsTmJbfpIdUm9DkZKkPWPdYvF/oCxOGKP5a6Jnddp1t7oGoX97LLtLNbEeeTElvzoDnNeXwS0HombWRx3yupi8a5ksEwNH2ZhdnYkvMV+wVdRy+LOD2wEr7g/uyjq+jGAzWtZvC/01Wz8rVfc7lmS285iSZxJdZQhq0/tGnHzhKUxSo4pY4dJIOsR17jotOUhK1J6tRetrvFPOAUVIHHGfdiSh2z6Daw0L7i+JGvBzyfqPveKAbvCkN0VtYGV9qHXK1fOiNoxYlzK6V9x9Smq2QN2sHGrQpLVIp3X63jldyCJyQFiQ8XO8JpBdbitrKA2evTcq+Pqoum/W+QKu539wnq4JLLdGl7VK6/UfgDW4KjxgkhgvKavCUFWs3Re5ROv7aP/K6mUMUYpxbE+9oi6x1xx6r+oKatFYq/sg/3uNGvwcI//dtZpxWI41ZTdeW9gEx1HtJ5eXVZh0s7udIbWTKbsLts7sCa0V5fCnJ0bifOfwxe05kD2mOvXnbl96fX9+tmFc1DLo99Ak7bK8/qTaNeJuDQLvVprLj36VYHg7NhPqEla5TNmBbUrxeWYuT/exGd4NUbJW8aCbIhOuD6cx8q4Oeb4gVi6mFXGeeX0/nUUDvhf9s5GOW0lCaMJl9gOBkYz+jERKPv+b7nYsd0G/SDJGvWMOGer9latc1NrpEP3N5oeXVKyE2oSfuOscmcszgYTYAWTnSmqLl+by+u7r84ZY435V60psi0QZyNNszvFANvt7ABfJe9mzlyU66KmdQJvEGcjYy3O6gfYOmaor82Cm4oaOxmG1liVVZezEmC1sK7JV1cO2l9hKx7wdMESVKzOPu2UA+z44yhkPbn70S7vwWuGOBtbnm2XNo3E19b+uWzanMxa8fewxFn9QivS7ubckjjNePugvFvyug+WoBYirWTanQTYcHDf8FUoMkoscXYZrL5a+yQBNhiKaoCvrmwb1yPFNkOcjdTa9ZuwaRIgphztq+Rd8/GUtijfYd4dZ2PXNrVJeJj3nYtSL0f4mtnEFWXFelQzxNko+WWS8JCdizePo+jw1WVfbOWl0XWIsxH6uk+EUJ0dOt5eFmJ7BxUD70OxDAjo8jNcX2UQ7/204mG+FiWv1yLOLo7fNgkc67I3zKDjjaUZvklFniXOEmCnQZw1w443fiuvvCyaOEuA1cH29zXr8LV6O8m4LHlbTwPMuxNgPWKG+yoHy9QjbsX60yvEWQKsBzrGZTuWh4vsiooB2gYYECDADma8r50N8auyzhhrrDXuTVneO9sA8+4E2Mkp2n11omGN0lw+5y15J14TLEGFGGBtEjWmbPbVuKr/6wEcxjZDnCXATox1ElYvjqNwQ17pYf9HV9wCcZYAOylGzhG/OI7CVPXSW7btcLIVhy22w44KAuxUyC6o2nHkVdOjnqLmrGsalmer4hXEWQLsZIizF+OyWYOwjY97SlNbbS7Y9VSHAQEC7NTOiq/1Elu8/cg0OMuobF9YgiLATkX9OHJzHVjfLZQOupUioyluhjjLlsQpMc4mn7hrC00t9bYLa9//vqIoy3fjy4LCmyTEWSUkwC6UurGm/uK8Rqq3Qb6Pk2XIt9cwIECA9YPteDeWxNnmo9sysbXf6wRMQR9NnCXAfgtb1p7X3Ha2lOLbSmnrvjJUy44KAuw3qT+xadl4IZSi64AzKlzx8a+TcxkQoCEeT/v+puYlqFL8vUFlW7YjFzjLEtSk/LLJ/eBExtvOVuJrD8orXwWOYiTOEmBHYqV+ClVh6q1xVpUDT4L68JUzooizBNjJMG3Lwc7WnG31tarKsn4Q1KevvJqWHRUE2MkwrSpWRSZmtT7Mqcqi5SSoJDHNvvKQhzhLgB2P6SifEmpN2XHqjFB8nZ4tquaz3njTJQMCBNiRdO9uktd1FJ0HLTpnjDPOXShbtvqaOZaeWIIiwI5FYmpVi5v2n1qmai+vztgL98vOcR98Jc4SYKdztiirayONCNskn6nV67LLVxpi4iwN8US4LBNrxdcz2RD5bNUSiPE1SRgQ4FCYKTEue6covujlGsJou3wFvjZDnCXATo/9lFb0qrfEZbt8tsRX4iwBdlaMcRcBteZg0S6fq/D1NgwIEGAnx4qEDcK6W2eY189F5oNmCYoAOwtlvSU2/V/sU/H4lThLgFU21uLr92BAgAA7p7G2p6+yvcm64t8jI45vYwmKADuTsULWNRVf97Xl3OOK49uIswRYH2Q3RuVM+3b/M/WfcRgFcXZ4gKUh7o8r2wukkwJa9/X6Z8zJ4iwBdgacTOO00/2uLeoscZYAOx8yPNuLUsprLyrG2wfymyc60IUdUDEr8bU/JU3PENItr+WATqyM9HzT16pqXjfmsvTGvBy3BFi4gcn+UbyTlYN9ldOgihJlx2Lz4/G4JcBCr+FZoWz2VX5SXzvu/vdLPuEe2PT4ypYAC8MG8cq27YiNBbYSXd2ZrLESs/x0m/Tl+MaWAAt9sdZYW7T4asqO8iqnQVnXsLWi4rO9wf7l+M6WAAuDKKomX62pWn01tpaLL7Sv2ElxA5MfP9kSYGEYrmzY7p9VA046tbIvo+L84l4LTsKWAAuDcLLeK06alvxqbNu+jOrrAjI59laAFbY0xDAEeQ20+JrYnodBCVkhK1LOWGte4Wq1Blhhi7Awytmvp4UXTcKa7n0ZnxR/vlBwwkwtwN6RsZtTykX39nxWnDRNh0HZHn/Fn2Y4t0IC7L0Zezrwje0D68TX+vFtlfyww9g/XbAYlVgJsHdk7Jmc72sf2EQo+h0GJRjRtZXibp2VAHuXxp5JcdYvbtA4jnV/+iHe3xMSYO/W2DM8ofeKu3kYlGCzP/0xyb0hAfaujSXO+qW+QbGw3/FVcMldIQH2zo0lzvrFZFXDy6KH+VoUBcp+BliMJc76xGZZ1ePcNdcma/3ZrGCTe0ECLMa+c+DprCecKHtBWTgj56R26NrubJbcBxJgMfZ0Is56xrqO89uqsjBJ4jp1dc4441yTssk9IDPrGPsKcXYOZYuq44jTrN1XZ+SvMXVlTbJ4JMBibB02Lk6LKCvO1ny1RaOvoqtg7tVYc/YVY09NHJjAmxqZDygbhmSdK1p8bbLR3NnSkwRYjBVjrzjQGk+NzAeU1dXMXVbfk9j1GujsroyVAIuxX4wlzs6DdR8nnJaV+JqYJmGdTXoJW9hEMC5ZFDKzjrEXxhJnZ3ZWeFXsWtiOYfd64M0uj6spTbIcJMBibM3Yv3950jMPxomvpimYiq81XMOorPgqGyAXgQRYjG009i9xdi6sMU4GaF2tJbZJE6K2IH9J+WUDZLIAJMBibIux786ycXFuXFPVFLr2RGXvf/hqR1XlksiRAIux7caeIc4qkF1Z2ENr6Z+t+CpUJokbCbAYe9NY4qxHRj6useJrXdisWtr7KyXAYuwNY//9gyc982K6J+isy1pHBKxt2EZVLuJE8rOvGHu7xhJnFXD1gOrMh83yw3qBdUZ8Fcp3isJFKK4EWIztU2OlOWYObzZs1mRlceZPK/KuvE6qMrKzoGTLP8b2qrFi7F/i7Gxk2Z9hyG7H21QRnbkoM+sY27/Gyj+JszNhZIKuB0UhEwW3iGpPhQRYjB1WY8VcnvT4RkYE+vqa9fM1uuezEmAxdmSNPcMc3mzK9nK26Pa1KsvybcigTpYEjgRYjP1GjWUOby5M9spNXdum4uXNlW0R1yUhIwEWY79VY5nDm7nMZkXR3gx31Nd3XYWyZrRNgkV2TGDsN2ssc3jzIIN4dWuLomgTUR7h/MMZY611LjtTRVNk5dRwjJ2kxrJxcTasydpxLqu6yquxF/LX3C6SMJEAi7FT1FiOlZkX61yjrca2+yq6Ci6SICsBFmOnrbFsXJwFmZ59NdedMebNxi5fna2H4vofN4kQXoDFWI81lvfhzY0tmn3NWny1RcMfNsa9YQIMsBg7cY0lzgbrq0nqZNWtfYuZTfSRAIuxU9dYTlxciK9CmSW6yMw6xk5fY4mzahRV++McN8JXocqCCLAY67nGMoenXmKr1vpqe/mqf7aMHLqGsX5qLHFWD5uV7b52yy1UZ/4Xym5jCbAY66vGEmfVMJc7iatiqK9VKRscfSqrHGCF7X/U2A94gYCKsuJsJY9frzDia70gC2Ug+yps7s3Xhx8/qLFX8D48BWfLqtPX7vEA90qzsmUyBcoBVnjzlRp7Is6qISMCg3yV8uqM/bprufbHktlJvTXEm5/ne5oae4Y4q+/sKF+vNziZ0oexBFgVY08dNZY4q45t9tXVFOxcnzL/m7grJsCqGCvONp6CSmscBAN9lfIqZA2LxQTYCI0V+tdY5vC06fa1p9+FI8BGxGq9G24sGxcDoGP8blDeLTKTzMWeAPtd1o+PNWObu2Li7MJ8lXKczITJ8fXbvp55PjVQN5Y4Gxi2GOSrK9vGf+xcC04E2O/yeEaUrXFpLHE22BA73tdChI04wP4Qll9iu539aixxNjSc7Daujcv2Xp9yyTgIsCqsHt952p0a6TaWOTxlY8+UI8bbxdfRi04E2FCdFWOJs8FhP52tBvkq/TMBNu7WuDdsXAzJ2aIc6audZ8fEC75Oy+rT2d3pFjzpCQcZ6mkfl/Xoq36A/bJjgta4H8zhBeOsGXxcKgEWZ4mzSpihvppkHARY4ix4wXTW12QcBFjiLPige1zWJAkBltaY1hhfCbABO8vGxXDJPPhKgI09zrJxMWCyqvU4ipEwsx52nJ2izPI+PD2sK5vH20dCgKU1Js56Qs5JndBXDl0LnxVPeiJFdi5Wl9ubCLDEWeJsmMgrBL7vKwGW1pg5vPmcFV/nwXLoGnEWxiLHkc9GToBl4yKMxrrM2GRGDKeG68PGRehNToANqTV+ZA4POrEEWOIsRERKgL2fOIuyNMUEWD9zeIwHQAsvBNgwW2PWn6ARTg2/K2e54emKCbDe4ixJFuqk+BrwHB41Fq6xBNg7ao1zbniKLAHW7xzepM6yVkySpSH2HmdJsXBJjq+Bt8Y8jYUL9i8E2MCdZUwWrk4Vx9ewW2N8hWtnOXRtoXN4h5yTYxaJSV8IsItpjQ9n8jRNDatNy8aaM/v0TJ7nLzTEcTn7KuneGCrqHWPMq7v4GnycPaR7qil8Yk2avxBgA53DO6TICi3aEmBDa43zPU0wdLBPX2iIg3E25/AmuI35TUscQpw98NAG+kuLP7pzeJyNCMOwFFrN1njDWhMMZo+zCqzwFaizUYGvMBr7C4Fm5if5FWiN4+E368NAmY2GnzTE8H140jMXvyiwMAV7XJqF39xqQJiNB5acYDIMyiIsoCwgLJBlybAAKOuXX9xgwEOeePjJYx1gK0VEsHECPGAwi54Y6IvhBz0xeMHiFuvEQJElxXJnAUWWFAuQsFxMUwzt78exiXdoi2mKr+473uszDLN/f5/G6Y2D5yPhecCjTxIGNs0Pp3cOHG3eB7v/+r7IU5AHw+PXQmNsejhdcmA97Bb7V12Fi09vj7EY6wPxtU5Od9yFeTleMs+nx9ITY3aJPZyaSRNowebHa+ZpUjAWY/cngda4FzY91jldYxIPYOzdG5ueujjQGteR9aaascEpy1EUPo3VF5Y4OzTACqdZlGXl6c43UNjTbVwCrQFWmKdD4XmsOnmiQr3EEmfHBFjh1MD0F5ejY9TZJJrkpzdojccHWDE2wL44R7DJ2ajKcDj1hBfGS4AdYOwh0eUFwSZns0/0sKfeHNLkrjH5sZsQn2nvjwg2ORvFrCPPYomzN8iPtzgFWGRzjJ2ejeI1lRhLnB0ZYIUAN47ZI8ZOz+ak1BZ3x1g2Lta2/I8zVvULGWM9sFG8pubUH5lKiRcPAVYI73G2OWKsBzZ6jwCkKSbO3gqw443NEy1eMNYHG8XG6fQBcbYZKwF2qLGCTXRIjxjryVitJCsbnoizYwOsENqHZV4w1gsbpa9hWXeiNW4PsBMYq9RC2Zcjxnpho5Z19qfxLH8Oz4qv3zJWq4XKjxjrh41W5yQlljjbHGDHG6u/9pQeMdabsUrKSoolzjYF2ImM1Qk9+yPG+mKj9NjOnj4hzo4PsEJI32zmiLHe2ChdVumJibO1ADuBsZprT+YFY/2x6Yo7mj3xfc7h2fQ4kgCO8RBhMdYfG5V6tT+ehrD8OTwJsD6MPcz8O2CsRzYagWcvNxhxtlacJjBW4ywKubYY65ONwr2/r99gPOmRADuOUxhFNj1irF8289/7+/oNxpMeCbATGiuY2b51MNa/sTM7mx49GKszh6cfYIWTZpGVrYkY65vNzPXK5hc3GHFWAuz30OxB5NfAWAVjZfnVWy2RG4w4K19iPowVzBwRFmMVjPVZr2x+fYMRZyXA+jX2YL13xBirYKxPZ23tleK0xnLomidjhdx3EMdYBWP93Pzi6xTGKhSTcAOscNJRVponjFUw1p+zNn9pvMF042z8AVY4aSgrjQLGKhjrbw1qn9dvMK+4RAGNACtofJXJFw/GqhsrpHaC8urDWP04qx9ghfkTg3zxYGwQxgr5foL06sFYrdZYf8fE+A90P/0vgrHhGCvkJhmOEV09GBvxHJ7Jj5Mz88Kc/CIYOyurXe8rPazS2r00wwrGSpxd9oKTMGv3Ib8Ixs7Mejeo00xNP1uluOoYK3F24QFWmDExiK8YOzfrx91gCdK9TVqxJs1Hvdhp+XFWcp+asUJuJlj+x9jZWT0ONFZa5DQ1xoioxpg0zXNfN1j8cVZyn6qxwkE+l3ELFBirwKMYOwJPN5jCHJ5CgNU0VkKOHa0rxmqw1jf2fuKsPOjSN1Z4Sc2I9USMVeJR31jdOBt/gBXGX8NcVia6+FihwFg11ndgrJCqB9ggjf0gP3trmsU1Jv2QFWNVeVQ3dvmtsQTYkI0VXvIz6Tt5noupGKvOStdYBQ52gQF2u31+fnp6fOP5ebeb+hpibDCsAzN29/z8duM9ne87hTgbY4DdbB5W6/N/Vuv14ydPO4xdJo8hGbtZry7uu91S4qzx5uv2v6ueST69Z4xdIKuAjN3I/yupFApxNqYA+/BDaPv09I39D9EWaOym+a573sUeZ206m6/1Tw9jMdaPsbvaRV3LXeeJ1MYdYLc/O8LOO08YuzDWYRi7k5uvnsieFOJsZAG2zueHh7EYO62xdWEV4mzUAbZb2WdWnjB2cmNF2Nlb49zGGmB7K6tu7BbPJjf2WdXYww9hOXHW346Jzc8h1/Zxh7HLW3l6UjRWlom1WuN9tAG2G4myusY+4NlUiA+qxsoVVYuz0QTY7cPwi/usbOxPPJve2J2msT8EvTgbf4Ad3xfTFEdEAMbuenyxrBU2LsYWYMf3xTTF8S09PWkZKzF2Ia3xXi3Ajm+heLYTY5DVM1ZuRG1nrYeZdQ1fhX5pghIbD3JN9Yz9IcQeZ/PQ7vt1ry9kUmw8yDXVMlaa4nDjrH6A9fuFzA7FGNviZy1j5ZKGGmf1A6znL2RKbJRFVsPYfivFM8/h5TbcAOtn7YllpyiL7JOOsYMCmv7GRf0A6+EBDz1xnEV2p2BsjxKrMofnAjl07WGWhwGsE8eqrIKxck2DjrP6M+s+154IsbH2xbMbWxvbCe9Jj36A9b9HBmGjVXZ2Y+WmDDjO6s+se157QtgIlR29YKzwnFFhDk8zwPpvixnZiY/V6JtfQViFOKsZYP0/vmOZOEJWY3cTKbRNCnFWM8D6L7K0xFHyOC7MKlxUhY2LmgHWf5FF2DgZd++rX9TVo29nD0Z1Zt3/RlSEVUDt3le4qBpzeAoB1leR9W/sBpe6Ub33FYTVibNqh675L7LsdIqY9dCN9goXVSnO+g+wWrvajlOyZZH4Npr1SuGiqj3pUQywXucBiLBxsxrkrMK9qTeHp3Lomv++mI74nuKs18UV/Tj79xX/O3D/U532oCO+p2Vjf9dUcw5PhL1UVvvU8PF0XU8K7D3V2WG9X83XwOPs33d8GvugvqmNArssZ7ubTB+lRL81FmFfJ4zEWG8BVrXKUmAX6GxrxfJUXvWdFWOPYqxCgPWwMufB2C2TOuGsG3d3mR7Lq35rfFbVg7FqH0vbi9tpiBfFurvQjrwv9Z3Vr7EPoWwdpyFeGKsuaW/YWmuGI2mNpcj6yrGbcNYT8fWepO0srgq6dm1c1F8r1u8jm2IOvi5WWrF21321t5uHn0E+oNI3VnwNxtnxvwe+hs3qq7VPZ213tau9Pbv6n8i6EGdPH3gIsKrO/osMrDctXVvx9pWnDx7Xq1UUcw3j8RBg1b7K5LuM8noHrF5Zv9r7+t8KqurM4XloiPVDztPzduDvsKG6QhwbF5fhq0g73NrtwwObJUAIfA7PZ4DVt/asbaO3skRBbYW44qxHX/UXFGVd4vnM9p3nM09P6xU3EdQIfw5vuTtvV2fWa1H3jfP/sFrhKsQbZ9l5CxBTa8zOIICYnMVXgJhaY0ZHAWJylgALEFNrTEMMENPGRXwFCP+dYAIBFiCmOEuABYgpzjKMBhBTnCXAAsTUGh97sSHAAgQxh0eABYgpzhJgAWKawyPAAsQUZwmwAEHF2VM3BFiAmOIsvgLE1BoTYAFicrY1wPLxAQTYGtMQA8S0cRFfAWJqjQmwADE5i68AMcVZZtYBYoqzBFiAmFpjGmKAmObw8BUgpjhLgAWIaQ6PAAsQU5ylIQaIaQ4PX//ffh2bAACEQBD8NxTsv12LMDqYKUGQYyEpZwUshMxsvd8jYCHiZ8sVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICTBQ56cFQq8LujAAAAAElFTkSuQmCC"^^xsd:base64Binary ] ;
+     fhir:title [ fhir:v "MedCom Logo" ] ;
+     fhir:creation [ fhir:v "2025-08-08T13:00:00+02:00"^^xsd:dateTime ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
