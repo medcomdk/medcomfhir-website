@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/homecareobservation/MessageHeader/36cb86f1-a01a-4115-a84d-9390aa0ddcbd> a fhir:MessageHeader ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "36cb86f1-a01a-4115-a84d-9390aa0ddcbd"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-MessageHeader>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MessageHeader</b><a name=\"36cb86f1-a01a-4115-a84d-9390aa0ddcbd\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MessageHeader &quot;36cb86f1-a01a-4115-a84d-9390aa0ddcbd&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecareobservation-MessageHeader.html\">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: HomeCare Observation Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code homecareobservation-message = 'HomeCare Observation Message', stated as 'null')</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=52581000016005\">https://sor2.sum.dsdn.dk/#id=52581000016005</a></td><td><a href=\"Organization-1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1.html\">Organization/1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1</a> &quot;Skødstrup Lægepraksis&quot;</td></tr></table><p><b>sender</b>: <a href=\"Organization-a0330c62-fe29-4719-83fa-a94959084f29.html\">Organization/a0330c62-fe29-4719-83fa-a94959084f29</a> &quot;Pleje og Rehabilitering&quot;</p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=1144561000016002\">https://sor2.sum.dsdn.dk/#id=1144561000016002</a></td></tr></table><p><b>focus</b>: </p><ul><li><a href=\"DiagnosticReport-cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919.html\">DiagnosticReport/cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919</a></li><li><a href=\"DiagnosticReport-4f013d3a-575c-447d-83e1-7a5fb7f7b0de.html\">DiagnosticReport/4f013d3a-575c-447d-83e1-7a5fb7f7b0de</a></li></ul></div>"
+  ] ; # 
+  fhir:event [
+     a fhir:Coding ;
+     fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "homecareobservation-message" ]
+  ] ; # 
+  fhir:destination ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "primary" ]
+       ]
+     ] ) ;
+     fhir:endpoint [ fhir:v "https://sor2.sum.dsdn.dk/#id=52581000016005"^^xsd:anyURI ] ;
+     fhir:receiver [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/Organization/1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1> ;
+       fhir:reference [ fhir:v "Organization/1ab9c2d9-c348-4d75-9122-60ea8a6fdcf1" ]
+     ]
+  ] ) ; # 
+  fhir:sender [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Organization/a0330c62-fe29-4719-83fa-a94959084f29> ;
+     fhir:reference [ fhir:v "Organization/a0330c62-fe29-4719-83fa-a94959084f29" ]
+  ] ; # 
+  fhir:source [
+     fhir:endpoint [ fhir:v "https://sor2.sum.dsdn.dk/#id=1144561000016002"^^xsd:anyURI ]
+  ] ; # 
+  fhir:focus ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919> ;
+     fhir:reference [ fhir:v "DiagnosticReport/cfa9e95b-b5ac-4cfe-abe7-ea29e6b67919" ]
+  ] [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/4f013d3a-575c-447d-83e1-7a5fb7f7b0de> ;
+     fhir:reference [ fhir:v "DiagnosticReport/4f013d3a-575c-447d-83e1-7a5fb7f7b0de" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
