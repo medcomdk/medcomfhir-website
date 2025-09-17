@@ -3,6 +3,7 @@
 <head>
   <title>MedComHomeCareObservation : Terminology Server Report</title>
   <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
     span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
@@ -11,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for MedComHomeCareObservation</h1>
- <p>Generated Tue Jul 08 10:49:36 UTC 2025, FHIR version 4.0.1 for medcom.fhir.dk.homecareobservation#1.1.0-trial-use (canonical = <a href="http://medcomfhir.dk/ig/homecareobservation">http://medcomfhir.dk/ig/homecareobservation</a> (<a href="http://medcomfhir.dk/ig/homecareobservation/history.html">history</a>))</p>
+ <p>Generated Wed Sep 17 12:04:52 UTC 2025, FHIR version 4.0.1 for medcom.fhir.dk.homecareobservation#1.1.1-trial-use (canonical = <a href="http://medcomfhir.dk/ig/homecareobservation">http://medcomfhir.dk/ig/homecareobservation</a> (<a href="http://medcomfhir.dk/ig/homecareobservation/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -20,7 +21,11 @@
 :     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
   </li>
   <li>
-    <b>displayLanguage</b>
+    <b>defaultDisplayLanguage</b>
+:     <code>da-DK</code>
+  </li>
+  <li>
+    <b>defaultDisplayLanguage</b>
 :     <code>da-DK</code>
   </li>
 </ul>
@@ -47,23 +52,23 @@
     </td>
   </tr>
   <tr>
-    <td>System not handled by any servers. Using primary server</td>
-    <td>https://tx.fhir.org/r4</td>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
     <td>null</td>
-    <td>http://hl7.org/fhir/fhir-types</td>
-    <td>auth = , candidates=</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
-    <td>Fallback: primary server</td>
-    <td>https://tx.fhir.org/r4</td>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
     <td>null</td>
-    <td>http://hl7.org/fhir/fhir-types</td>
-    <td>auth = , candidates=</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
 </table>
 <h2>Primary Server: https://tx.fhir.org/r4</h2>
 <a href="https://tx.fhir.org/r4"></a>
-<p>Use Count: 1. Code Systems used: </p>
+<p>Use Count: 0. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -80,10 +85,20 @@
     </th>
   </tr>
   <tr>
-    <td>http://hl7.org/fhir/fhir-types</td>
+    <td>http://unitsofmeasure.org</td>
     <td>0</td>
     <td>1</td>
-    <td></td>
+    <td>
+      <a href="http://terminology.hl7.org/6.5.0/CodeSystem-v3-ucum.html">Unified Code for Units of Measure (UCUM)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:iso:std:iso:3166</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="http://terminology.hl7.org/6.5.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+    </td>
   </tr>
 </table>
 </body>
