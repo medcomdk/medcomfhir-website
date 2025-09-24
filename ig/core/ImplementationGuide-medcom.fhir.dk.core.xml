@@ -3,15 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="medcom.fhir.dk.core"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.core</b></p><a name="medcom.fhir.dk.core"> </a><a name="hcmedcom.fhir.dk.core"> </a><a name="hcmedcom.fhir.dk.core-da-DK"> </a><h2>MedComCore</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core</pre><div><p>Danish MedCom Core IG</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.core</b></p><a name="medcom.fhir.dk.core"> </a><a name="hcmedcom.fhir.dk.core"> </a><h2>MedComCore</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core</pre><div><p>This IG includes core profiles defined by MedCom. These profiles are used in MedCom's FHIR standards</p>
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"/>
-  <version value="2.4.0"/>
+  <version value="3.0.0"/>
   <name value="MedComCore"/>
   <title value="DK MedCom Core"/>
   <status value="active"/>
-  <date value="2024-06-27T14:13:17+02:00"/>
+  <date value="2025-09-24T12:42:36+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -20,7 +20,7 @@
       <value value="http://www.medcom.dk"/>
     </telecom>
   </contact>
-  <description value="Danish MedCom Core IG"/>
+  <description value="This IG includes core profiles defined by MedCom. These profiles are used in MedCom's FHIR standards"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.5.0"/>
+    <version value="6.5.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -45,17 +45,17 @@
     </extension>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.1.0"/>
+    <version value="5.2.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_dk_core">
-    <uri value="https://hl7.dk/fhir/core/3.2.0/"/>
+    <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
     <packageId value="hl7.fhir.dk.core"/>
-    <version value="3.2.0"/>
+    <version value="3.4.0"/>
   </dependsOn>
   <dependsOn id="medcom_fhir_dk_terminology">
     <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
     <packageId value="medcom.fhir.dk.terminology"/>
-    <version value="1.7.0"/>
+    <version value="2.0.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -93,6 +93,22 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -259,7 +275,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.7.1"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -296,6 +312,22 @@
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
         <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludettl"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -771,6 +803,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/ProducerActor"/>
+      </reference>
+      <name value="Producer of FHIR resources"/>
+      <description value="The system that creates the FHIR resources"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -794,6 +837,14 @@
         <nameUrl value="index.html"/>
         <title value="Home"/>
         <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dependencies.html"/>
+        </extension>
+        <nameUrl value="dependencies.html"/>
+        <title value="Dependencies"/>
+        <generation value="html"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

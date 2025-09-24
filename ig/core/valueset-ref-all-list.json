@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.dk/fhir/core/ValueSet/DkCoreProfessionGroupValueSet",
-      "version" : "3.2.0",
+      "version" : "3.4.0",
       "status" : "active",
       "name" : "DkCoreProfessionGroupValueSet",
       "title" : "DK Profession Group",
@@ -16,7 +16,7 @@
     },
     {
       "url" : "http://hl7.dk/fhir/core/ValueSet/dk-core-MunicipalityCodes",
-      "version" : "3.2.0",
+      "version" : "3.4.0",
       "status" : "active",
       "name" : "MunicipalityCodes",
       "title" : "DK Municipality Codes",
@@ -30,23 +30,8 @@
       "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization"
     },
     {
-      "url" : "http://hl7.dk/fhir/core/ValueSet/dk-core-RelatedPersonRelationshipTypes",
-      "version" : "3.2.0",
-      "status" : "active",
-      "name" : "RelatedPersonRelationshipTypes",
-      "title" : "DK Related Person Relationship Types",
-      "description" : "DK Related Person Relationship Types",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-        "http://hl7.dk/fhir/core/CodeSystem/dk-relatedperson-relationshipcodes"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient"
-    },
-    {
       "url" : "http://hl7.dk/fhir/core/ValueSet/dk-core-TechniquesSCTCodes",
-      "version" : "3.2.0",
+      "version" : "3.4.0",
       "status" : "active",
       "name" : "TechniquesSCTCodes",
       "title" : "DK TechniquesSCTCodes",
@@ -58,7 +43,7 @@
     },
     {
       "url" : "http://hl7.dk/fhir/core/ValueSet/dk-marital-status",
-      "version" : "3.2.0",
+      "version" : "3.4.0",
       "status" : "active",
       "name" : null,
       "title" : "DK MaritalStatus",
@@ -73,8 +58,24 @@
       "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient"
     },
     {
+      "url" : "http://hl7.dk/fhir/core/ValueSet/extended-patient-contactrelationship",
+      "version" : "3.4.0",
+      "status" : "active",
+      "name" : "extended-patient-contactrelationship",
+      "title" : "DK Extended Patient Contact Relationship",
+      "description" : "DK Extended Patient Contact Relationship",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "http://hl7.dk/fhir/core/CodeSystem/dk-relatedperson-relationshipcodes",
+        "http://terminology.hl7.org/CodeSystem/v2-0131"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient"
+    },
+    {
       "url" : "http://hl7.dk/fhir/core/ValueSet/sor-organization-type",
-      "version" : "3.2.0",
+      "version" : "3.4.0",
       "status" : "active",
       "name" : "SorOrganizationType",
       "title" : "DK SOR Organization Type",
@@ -124,8 +125,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1"],
       "uses" : {
       },
-      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient",
-      "StructureDefinition-medcom-core-practitioner.html" : "MedComCorePractitioner"
+      "StructureDefinition-medcom-core-practitioner.html" : "MedComCorePractitioner",
+      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -211,8 +212,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.71"],
       "uses" : {
       },
-      "StructureDefinition-medcom-messaging-contactpoint.html" : "MedComMessagingContactPoint",
-      "StructureDefinition-medcom-core-contact-extension.html" : "ContactExtension"
+      "StructureDefinition-medcom-core-contact-extension.html" : "ContactExtension",
+      "StructureDefinition-medcom-messaging-contactpoint.html" : "MedComMessagingContactPoint"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
@@ -226,8 +227,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.73"],
       "uses" : {
       },
-      "StructureDefinition-medcom-messaging-contactpoint.html" : "MedComMessagingContactPoint",
-      "StructureDefinition-medcom-core-contact-extension.html" : "ContactExtension"
+      "StructureDefinition-medcom-core-contact-extension.html" : "ContactExtension",
+      "StructureDefinition-medcom-messaging-contactpoint.html" : "MedComMessagingContactPoint"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
@@ -475,9 +476,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.45"],
       "uses" : {
       },
-      "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization",
+      "StructureDefinition-lpr3-Identifier.html" : "LPR3 Identifier",
+      "StructureDefinition-medcom-core-diagnosticreport.html" : "MedComCoreDiagnosticReport",
+      "StructureDefinition-medcom-core-observation.html" : "MedComCoreObservation",
       "StructureDefinition-medcom-assigned-identifier.html" : "AssignedIdentifier",
-      "StructureDefinition-lpr3-Identifier.html" : "LPR3 Identifier"
+      "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -491,9 +494,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.57"],
       "uses" : {
       },
-      "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization",
+      "StructureDefinition-lpr3-Identifier.html" : "LPR3 Identifier",
+      "StructureDefinition-medcom-core-diagnosticreport.html" : "MedComCoreDiagnosticReport",
+      "StructureDefinition-medcom-core-observation.html" : "MedComCoreObservation",
       "StructureDefinition-medcom-assigned-identifier.html" : "AssignedIdentifier",
-      "StructureDefinition-lpr3-Identifier.html" : "LPR3 Identifier"
+      "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -507,15 +512,15 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-medcom-core-media.html" : "MedComMedia",
-      "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization",
-      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient",
-      "StructureDefinition-medcom-core-practitionerrole.html" : "MedComCorePractitionerRole",
+      "StructureDefinition-medcom-core-practitioner.html" : "MedComCorePractitioner",
       "StructureDefinition-medcom-core-encounter.html" : "MedComCoreEncounter",
+      "StructureDefinition-medcom-core-media.html" : "MedComMedia",
+      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient",
       "StructureDefinition-medcom-core-careteam.html" : "MedComCoreCareTeam",
       "StructureDefinition-medcom-core-diagnosticreport.html" : "MedComCoreDiagnosticReport",
-      "StructureDefinition-medcom-core-practitioner.html" : "MedComCorePractitioner",
-      "StructureDefinition-medcom-core-observation.html" : "MedComCoreObservation"
+      "StructureDefinition-medcom-core-observation.html" : "MedComCoreObservation",
+      "StructureDefinition-medcom-core-practitionerrole.html" : "MedComCorePractitionerRole",
+      "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -602,6 +607,25 @@
       "uses" : {
       },
       "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/narrative-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "NarrativeStatus",
+      "title" : "NarrativeStatus",
+      "description" : "The status of a resource narrative.",
+      "systems" : ["http://hl7.org/fhir/narrative-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.55"],
+      "sources" : ["2.16.840.1.113883.4.642.3.55"],
+      "uses" : {
+      },
+      "StructureDefinition-medcom-core-practitioner.html" : "MedComCorePractitioner",
+      "StructureDefinition-medcom-core-encounter.html" : "MedComCoreEncounter",
+      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient",
+      "StructureDefinition-medcom-core-careteam.html" : "MedComCoreCareTeam",
+      "StructureDefinition-medcom-core-practitionerrole.html" : "MedComCorePractitionerRole",
+      "StructureDefinition-medcom-core-organization.html" : "MedComCoreOrganization"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-category",
@@ -748,8 +772,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.27"],
       "uses" : {
       },
-      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient",
-      "StructureDefinition-medcom-core-encounter.html" : "MedComCoreEncounter"
+      "StructureDefinition-medcom-core-encounter.html" : "MedComCoreEncounter",
+      "StructureDefinition-medcom-core-patient.html" : "MedComCorePatient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/service-type",
@@ -767,7 +791,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/MedComDiagnosticReportCodesValueset",
-      "version" : "1.7.0",
+      "version" : "1.0.0",
       "status" : "draft",
       "name" : "MedComDiagnosticReportCodesValueset",
       "title" : "MedComDiagnosticReportCodesValueset",
@@ -781,11 +805,11 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-PractitionerRoles",
-      "version" : "1.7.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "MedComCorePractitionerRoles",
       "title" : "MedComCorePractitionerRoles",
-      "description" : "ValueSet containing codes for practionerroles (Danish: Stillingsbetegnelser) from MedCom",
+      "description" : "ValueSet containing codes for practionerroles (Danish: Stillingsbetegnelser) from MedCom.",
       "systems" : [
         "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesAutorisationsregistret",
         "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
@@ -797,7 +821,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-attachmentMimeTypes",
-      "version" : "1.7.0",
+      "version" : "1.1.0",
       "status" : "active",
       "name" : "MedComCoreAttachmentMimeTypes",
       "title" : "MedComCoreAttachmentMimeTypes",
@@ -809,7 +833,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-encounter-class",
-      "version" : "1.7.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "MedComCoreEncounterClass",
       "title" : "MedComCoreEncounterClassCodes",
@@ -824,7 +848,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-observation-status",
-      "version" : "1.7.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "MedComCoreObservationStatus",
       "title" : "MedComCoreObservationStatus",
@@ -836,7 +860,7 @@
     },
     {
       "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-corediagnosticreport-status",
-      "version" : "1.7.0",
+      "version" : "1.0.0",
       "status" : "active",
       "name" : "MedComCoreDiagnosticReportStatus",
       "title" : "MedComCoreDiagnosticReportStatus",
