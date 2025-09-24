@@ -4,46 +4,46 @@
 <head>
    <meta charset="UTF-8"/>
   <title>DK MedCom Core</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="author" content="http://www.hl7.org"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="http://www.hl7.org"/>
   <link href="fhir.css" rel="stylesheet"/>
-
-   <!-- Bootstrap core CSS -->
   <link href="dist-hist/css/bootstrap.css" rel="stylesheet"/>
   <link href="assets-hist/css/bootstrap-fhir.css" rel="stylesheet"/>
-
-  <!-- Project extras -->
   <link href="assets-hist/css/project.css" rel="stylesheet"/>
   <link href="assets-hist/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="jquery-ui.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/hl7-dk.css"/>
-
-  <!-- Favicons -->
+  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
+  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
+  <link href="history.css" rel="stylesheet"/>
+  <!-- header.template starts here -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets-hist/ico/apple-touch-icon-144-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets-hist/ico/apple-touch-icon-114-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets-hist/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="assets-hist/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="assets-hist/ico/favicon.png"/>
-  <script type="application/javascript" src="https://hl7.org/fhir/history-cm.js"> </script>
-  <script type="application/javascript" src="https://hl7.org/fhir/history.js"> </script>
-  <link href="history.css" rel="stylesheet"/>
 
+  <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+  <link href="assets/css/colors.css" rel="stylesheet"/>
+
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>  
+  <!-- header.template ends here -->
 </head>
-<body onload="document.body.style.opacity='1'">
-
+<!-- preamble.template starts here -->
+<body>
  <div id="segment-header" class="segment">  <!-- segment-header -->
   <div class="container">  <!-- container -->
+
     <div id="project-nav">
-          <a no-external="true" id="hl7-logo" href="https://github.com/medcomdk">
-            <img src="assets/image/medcom-logo-header.png" alt="MedCom" height="65"/>
-          </a>
-  </div>
-  <div id="fhir-nav">
-    <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/>
-    </a>
-   </div>
+      <a id="dk-logo" no-external="true" href="http://hl7.dk">
+        <img height="71" alt="HL7 DK" src="assets/images/HL7_Denmark.png"/>
+      </a>
+    </div>
+    <div id="family-nav">
+      <a id="fhir-logo" no-external="true" href="http://hl7.dk">
+        <img height="50" alt="HL7 Denmark" src="assets-hist/images/fhir-logo.png" style="margin-top: 15px;"/>
+      </a>
+    </div>    
+    
    <div id="ig-status" style="font-size:24px;padding-top: 20px;">
 <b id="ig-title">DK MedCom Core</b>
 </div>
@@ -89,6 +89,7 @@
             <div class="row">
              <div class="inner-wrapper">
 
+<!-- preamble.template ends here -->
 
 <div class="col-12">
 
@@ -103,6 +104,7 @@
     #history-data table td { padding-right: 1em; }
 </style>
 
+  <!-- postamble.template starts here -->
   <!-- ==============END CONTENT END CONTENT=================== -->
 
 <p></p>
@@ -129,7 +131,7 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      <span id="ig-footer">TBD </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
+      <span id="ig-footer">medcom.fhir.dk.core </span> &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir">FHIR</a> |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
@@ -145,14 +147,15 @@
   </div>  <!-- /container -->
  </div>  <!-- /segment-post-footer -->
 
- <!-- JS and analytics only. -->
+  <!-- postamble.template ends here -->
+
+<!-- JS and analytics only. -->
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="./assets-hist/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./dist-hist/js/bootstrap.min.js"> </script>
 <script src="./assets-hist/js/respond.min.js"> </script>
-
 <script src="./assets-hist/js/fhir.js"> </script>
 
 <!-- Analytics Below
@@ -160,7 +163,7 @@
 
 <!--- Include in the page --->
 <script>
-var pageJSON = '{"package-id":"medcom.fhir.dk.core","title":"DK MedCom Core","introduction":"MedCom Core FHIR profiles for Denmark","canonical":"http://medcomfhir.dk/ig/core","category":"MedCom Core","list":[{"version":"current","desc":"Continuous Integration Build (latest in version control)","path":"http://build.fhir.org/ig/medcomdk/dk-medcom-core","status":"ci-build","fhirVersion":"4.0.1"},{"version":"2.4.0","date":"2024-06-27","path":"http://medcomfhir.dk/ig/core/2.4.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"- Updated dependency to DkCore v. 3.2.0, resulting in new slices for replacement-CPR (e-cpr) in Patient.identifier.","changes":"https://github.com/medcomdk/dk-medcom-core/releases","current":true},{"version":"2.3.0","desc":"-  MedComCoreMedia, MedComCoreObservation and MedComCore DiagnosticReport added. All profiles are developed and intended to be part of a production trial of the communication between the general practitioner and municipal acute care team.","path":"http://medcomfhir.dk/ig/core/2.3.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2023-10-31"},{"version":"2.2.0","desc":"- Moved extensions from the CareCommunication IG to this IG and updated the names and descriptions.","path":"http://medcomfhir.dk/ig/core/2.2.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2023-10-04"},{"version":"2.1.0","desc":"- The profile MedComCoreCareTeam is added to describe careteams involved in patient care.\r\n- In MedComCorePractitionerRole profile is the element organization made MustSupport.","path":"http://medcomfhir.dk/ig/core/2.1.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2022-11-24"},{"version":"2.0.0","desc":"MedCom Core","path":"http://medcomfhir.dk/ig/core/2.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2022-10-05"}]}';
+var pageJSON = '{"package-id":"medcom.fhir.dk.core","title":"DK MedCom Core","introduction":"MedCom Core FHIR profiles for Denmark","canonical":"http://medcomfhir.dk/ig/core","category":"MedCom Core","list":[{"version":"current","desc":"Continuous Integration Build (latest in version control)","path":"http://build.fhir.org/ig/medcomdk/dk-medcom-core","status":"ci-build","fhirVersion":"4.0.1"},{"version":"3.0.0","path":"http://medcomfhir.dk/ig/core/3.0.0","status":"release","sequence":"Release 3.x.x","fhirversion":"4.0.1","date":"2025-09-24","current":true,"desc":"Fixed uuid invariants, removed Patient.deceased MustSupport, added Dependencies tab, and updated profiles with new cardinalities, MustSupport, and narrative obligations.","descmd":"- Invariants **medcom-uuidv4** and **medcom-uuidv5** is corrected as it did not work as intended.\n\n- MustSupport for the element **deceased** in *MedComCorePatient* is removed, as it is not relevant for all MedCom standards using the profile.  \n\n- **Dependencies** tab in the menu bar is added.  \n\n- The following **cardinalities**, **MustSupport**, and **Obligation (SHALL:in-narrative)** have been added:  \n\n  - **Profile: MedComCoreCareTeam**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `name`, `managingOrganization`  \n\n  - **Profile: MedComCoreCoreEncounter**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`, `episodeOfCare:lpr3identifier.identifier`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `class`, `subject`, `episodeOfCare:All Slices.identifier`, `serviceProvider`  \n\n  - **Profile: MedComCoreOrganization**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `identifier:SOR-ID`, `name`  \n\n  - **Profile: MedComCorePatient**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `identifier:cpr`, `identifier:x-ecpr`, `identifier:d-ecpr`, `name.family`, `name.given`, `telecom`, `address.line`, `address.city`, `address.postalCode`  \n\n  - **Profile: MedComCorePractitioner**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `name`  \n\n  - **Profile: MedComCorePractitionerRole**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `practitioner`, `organization`, `code.coding`, `code.text`  \n"},{"version":"2.4.0","path":"http://medcomfhir.dk/ig/core/2.4.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2024-06-27","descmd":"* Updated dependency to DkCore v. 3.2.0, resulting in new slices for replacement-CPR (e-cpr) in Patient.identifier."},{"version":"2.3.0","path":"http://medcomfhir.dk/ig/core/2.3.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2023-10-31","descmd":"*  MedComCoreMedia, MedComCoreObservation and MedComCore DiagnosticReport added. All profiles are developed and intended to be part of a production trial of the communication between the general practitioner and municipal acute care team."},{"version":"2.2.0","path":"http://medcomfhir.dk/ig/core/2.2.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2023-10-04","descmd":"- Moved extensions from the CareCommunication IG to this IG and updated the names and descriptions."},{"version":"2.1.0","date":"2022-11-24","path":"http://medcomfhir.dk/ig/core/2.1.0","status":"release","sequence":"Release","fhirversion":"4.0.1","descmd":"- The profile MedComCoreCareTeam is added to describe careteams involved in patient care.\r\n- In MedComCorePractitionerRole profile is the element organization made MustSupport. \r\n","changes":"https://github.com/medcomdk/dk-medcom-core/releases"},{"version":"2.0.0","desc":"MedCom Core","path":"http://medcomfhir.dk/ig/core/2.0.0","status":"release","sequence":"Release","fhirversion":"4.0.1","date":"2022-10-05"}]}';
 load(pageJSON);
 </script>
 

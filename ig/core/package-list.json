@@ -13,6 +13,17 @@
       "fhirVersion" : "4.0.1"
     },
     {
+      "version" : "3.0.0",
+      "path" : "http://medcomfhir.dk/ig/core/3.0.0",
+      "status" : "release",
+      "sequence" : "Release 3.x.x",
+      "fhirversion" : "4.0.1",
+      "date" : "2025-09-24",
+      "current" : true,
+      "desc" : "Fixed uuid invariants, removed Patient.deceased MustSupport, added Dependencies tab, and updated profiles with new cardinalities, MustSupport, and narrative obligations.",
+      "descmd" : "- Invariants **medcom-uuidv4** and **medcom-uuidv5** is corrected as it did not work as intended.\n\n- MustSupport for the element **deceased** in *MedComCorePatient* is removed, as it is not relevant for all MedCom standards using the profile.  \n\n- **Dependencies** tab in the menu bar is added.  \n\n- The following **cardinalities**, **MustSupport**, and **Obligation (SHALL:in-narrative)** have been added:  \n\n  - **Profile: MedComCoreCareTeam**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `name`, `managingOrganization`  \n\n  - **Profile: MedComCoreCoreEncounter**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`, `episodeOfCare:lpr3identifier.identifier`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `class`, `subject`, `episodeOfCare:All Slices.identifier`, `serviceProvider`  \n\n  - **Profile: MedComCoreOrganization**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `identifier:SOR-ID`, `name`  \n\n  - **Profile: MedComCorePatient**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `identifier:cpr`, `identifier:x-ecpr`, `identifier:d-ecpr`, `name.family`, `name.given`, `telecom`, `address.line`, `address.city`, `address.postalCode`  \n\n  - **Profile: MedComCorePractitioner**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `name`  \n\n  - **Profile: MedComCorePractitionerRole**  \n    - MustSupport + Obligation (SHALL:in-narrative): `id`  \n    - MustSupport: `text`, `text.status`, `text.div`  \n    - Cardinality 1..1: `text.status`, `text.div`  \n    - Obligation (SHALL:in-narrative): `practitioner`, `organization`, `code.coding`, `code.text`  \n"
+    },
+    {
       "version" : "2.4.0",
       "path" : "http://medcomfhir.dk/ig/core/2.4.0",
       "status" : "release",
@@ -28,8 +39,7 @@
       "sequence" : "Release",
       "fhirversion" : "4.0.1",
       "date" : "2023-10-31",
-      "descmd" : "*  MedComCoreMedia, MedComCoreObservation and MedComCore DiagnosticReport added. All profiles are developed and intended to be part of a production trial of the communication between the general practitioner and municipal acute care team.",
-      "current" : true
+      "descmd" : "*  MedComCoreMedia, MedComCoreObservation and MedComCore DiagnosticReport added. All profiles are developed and intended to be part of a production trial of the communication between the general practitioner and municipal acute care team."
     },
     {
       "version" : "2.2.0",
