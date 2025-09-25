@@ -1,0 +1,151 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/messaging/Bundle/eb26be85-fdb7-454d-a980-95cba6d1745b> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eb26be85-fdb7-454d-a980-95cba6d1745b"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-message>
+     ] )
+  ] ; # 
+  fhir:type [ fhir:v "message"] ; # 
+  fhir:timestamp [ fhir:v "2020-09-28T12:34:56Z"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/messaging/MessageHeader/3881874e-2042-4a00-aee8-23512799f512"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/messaging/MessageHeader/3881874e-2042-4a00-aee8-23512799f512> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/messaging/Provenance/f61adfbe-d50f-11ec-9d64-0242ac120002"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/messaging/Provenance/f61adfbe-d50f-11ec-9d64-0242ac120002> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/messaging/Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/messaging/Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d> )
+  ] [
+     fhir:fullUrl [ fhir:v "http://medcomfhir.dk/ig/messaging/Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"^^xsd:anyURI ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/messaging/Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d> )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/messaging/MessageHeader/3881874e-2042-4a00-aee8-23512799f512> a fhir:MessageHeader ;
+  fhir:id [ fhir:v "3881874e-2042-4a00-aee8-23512799f512"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-messageHeader"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-messageHeader>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_3881874e-2042-4a00-aee8-23512799f512\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 3881874e-2042-4a00-aee8-23512799f512</b></p><a name=\"3881874e-2042-4a00-aee8-23512799f512\"> </a><a name=\"hc3881874e-2042-4a00-aee8-23512799f512\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-messaging-messageHeader.html\">MedComMessagingMessageHeader</a></p></div><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/2.0.0/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-empty-message\">MedComMessagingEventCodes empty-message</a>: Message with no content</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"http://medcomfhir.dk/unknown\">http://medcomfhir.dk/unknown</a></td><td><a href=\"Organization-74cdf292-abf3-4f5f-80ea-60a48013ff6d.html\">Organization Receiver Organization</a></td></tr></table><p><b>sender</b>: <a href=\"Organization-d7056980-a8b2-42aa-8a0e-c1fc85d1f40d.html\">Organization Sender Organization</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"http://medcomfhir.dk/unknown\">http://medcomfhir.dk/unknown</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:event [
+     a fhir:Coding ;
+     fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "empty-message" ]
+  ] ; # 
+  fhir:destination ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "primary" ]
+       ]
+     ] ) ;
+     fhir:endpoint [ fhir:v "http://medcomfhir.dk/unknown"^^xsd:anyURI ] ;
+     fhir:receiver [
+       fhir:link <http://medcomfhir.dk/ig/messaging/Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d> ;
+       fhir:reference [ fhir:v "Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d" ]
+     ]
+  ] ) ; # 
+  fhir:sender [
+     fhir:link <http://medcomfhir.dk/ig/messaging/Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d> ;
+     fhir:reference [ fhir:v "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d" ]
+  ] ; # 
+  fhir:source [
+     fhir:endpoint [ fhir:v "http://medcomfhir.dk/unknown"^^xsd:anyURI ]
+  ] . # 
+
+<http://medcomfhir.dk/ig/messaging/Provenance/f61adfbe-d50f-11ec-9d64-0242ac120002> a fhir:Provenance ;
+  fhir:id [ fhir:v "f61adfbe-d50f-11ec-9d64-0242ac120002"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_f61adfbe-d50f-11ec-9d64-0242ac120002\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance f61adfbe-d50f-11ec-9d64-0242ac120002</b></p><a name=\"f61adfbe-d50f-11ec-9d64-0242ac120002\"> </a><a name=\"hcf61adfbe-d50f-11ec-9d64-0242ac120002\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p>Provenance for <a href=\"MessageHeader-3881874e-2042-4a00-aee8-23512799f512.html\">MessageHeader: event[x] = Message with no content (MedComMessagingEventCodes#empty-message)</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2020-09-28 12:34:56+0000</td></tr><tr><td>Recorded</td><td>2020-09-28 12:34:56+0000</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\">A new message has been sent</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Organization-d7056980-a8b2-42aa-8a0e-c1fc85d1f40d.html\">Organization Sender Organization</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://medcomfhir.dk/ig/messaging/MessageHeader/3881874e-2042-4a00-aee8-23512799f512> ;
+     fhir:reference [ fhir:v "MessageHeader/3881874e-2042-4a00-aee8-23512799f512" ]
+  ] ) ; # 
+  fhir:occurred [
+     a fhir:dateTime ;
+     fhir:v "2020-09-28T12:34:56Z"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2020-09-28T12:34:56Z"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "new-message" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://medcomfhir.dk/ig/messaging/Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d> ;
+       fhir:reference [ fhir:v "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d" ]
+     ]
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/messaging/Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d> a fhir:Organization ;
+  fhir:id [ fhir:v "d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_d7056980-a8b2-42aa-8a0e-c1fc85d1f40d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization d7056980-a8b2-42aa-8a0e-c1fc85d1f40d</b></p><a name=\"d7056980-a8b2-42aa-8a0e-c1fc85d1f40d\"> </a><a name=\"hcd7056980-a8b2-42aa-8a0e-c1fc85d1f40d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-messaging-organization.html\">MedComMessagingOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790001382445, <code>urn:oid:1.2.208.176.1.1</code>/123456789012345</p><p><b>name</b>: Sender Organization</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://www.gs1.org/gln"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5790001382445" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "123456789012345" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Sender Organization"] . # 
+
+<http://medcomfhir.dk/ig/messaging/Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d> a fhir:Organization ;
+  fhir:id [ fhir:v "74cdf292-abf3-4f5f-80ea-60a48013ff6d"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_74cdf292-abf3-4f5f-80ea-60a48013ff6d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 74cdf292-abf3-4f5f-80ea-60a48013ff6d</b></p><a name=\"74cdf292-abf3-4f5f-80ea-60a48013ff6d\"> </a><a name=\"hc74cdf292-abf3-4f5f-80ea-60a48013ff6d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-messaging-organization.html\">MedComMessagingOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000121526, <code>urn:oid:1.2.208.176.1.1</code>/543210987654321</p><p><b>name</b>: Receiver Organization</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://www.gs1.org/gln"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5790000121526" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "543210987654321" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Receiver Organization"] . # 
+
+# -------------------------------------------------------------------------------------
+
