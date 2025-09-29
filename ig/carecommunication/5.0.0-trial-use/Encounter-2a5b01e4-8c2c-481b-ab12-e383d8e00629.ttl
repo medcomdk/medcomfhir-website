@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunication/Encounter/2a5b01e4-8c2c-481b-ab12-e383d8e00629> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2a5b01e4-8c2c-481b-ab12-e383d8e00629"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter 2a5b01e4-8c2c-481b-ab12-e383d8e00629</b></p><a name=\"2a5b01e4-8c2c-481b-ab12-e383d8e00629\"> </a><a name=\"hc2a5b01e4-8c2c-481b-ab12-e383d8e00629\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/3.0.0/StructureDefinition-medcom-core-encounter.html\">MedComCoreEncounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode IMP</a>: inpatient encounter</p><p><b>subject</b>: <a href=\"Patient-b8e3000b-3b95-43e2-8e5b-fc347d0a2411.html\">Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>episodeOfCare</b>: Identifier: <code>https://sor2.sum.dsdn.dk/#id=265161000016000</code>/fc60e762-b13b-5773-865e-67f3907bdcc7</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "IMP" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunication/Patient/b8e3000b-3b95-43e2-8e5b-fc347d0a2411> ;
+     fhir:reference [ fhir:v "Patient/b8e3000b-3b95-43e2-8e5b-fc347d0a2411" ]
+  ] ; # 
+  fhir:episodeOfCare ( [
+     fhir:identifier [
+       fhir:system [ fhir:v "https://sor2.sum.dsdn.dk/#id=265161000016000"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "fc60e762-b13b-5773-865e-67f3907bdcc7" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
