@@ -3,14 +3,14 @@
   "id" : "medcom.fhir.dk.carecommunication",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.carecommunication</b></p><a name=\"medcom.fhir.dk.carecommunication\"> </a><a name=\"hcmedcom.fhir.dk.carecommunication\"> </a><a name=\"medcom.fhir.dk.carecommunication-da-DK\"> </a><h2>MedComCarecommunication</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication</pre><div><p>The DK MedCom Carecommunication IG</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.carecommunication</b></p><a name=\"medcom.fhir.dk.carecommunication\"> </a><a name=\"hcmedcom.fhir.dk.carecommunication\"> </a><h2>MedComCarecommunication</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication</pre><div><p>The DK MedCom Carecommunication IG</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication",
-  "version" : "4.0.3",
+  "version" : "5.0.0",
   "name" : "MedComCarecommunication",
   "title" : "DK MedCom Carecommunication",
   "status" : "active",
-  "date" : "2025-05-23T11:28:08+00:00",
+  "date" : "2025-10-27T14:45:58+00:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.3.0"
+    "version" : "6.5.0"
   },
   {
     "id" : "hl7ext",
@@ -52,27 +52,33 @@
   },
   {
     "id" : "hl7_fhir_dk_core",
-    "uri" : "https://hl7.dk/fhir/core/3.2.0/",
+    "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
     "packageId" : "hl7.fhir.dk.core",
-    "version" : "3.2.0"
+    "version" : "3.4.0"
   },
   {
     "id" : "medcom_fhir_dk_core",
     "uri" : "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core",
     "packageId" : "medcom.fhir.dk.core",
-    "version" : "2.4.0"
+    "version" : "3.0.0"
   },
   {
     "id" : "medcom_fhir_dk_messaging",
     "uri" : "http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging",
     "packageId" : "medcom.fhir.dk.messaging",
-    "version" : "2.2.2"
+    "version" : "4.0.0"
   },
   {
     "id" : "medcom_fhir_dk_terminology",
     "uri" : "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology",
     "packageId" : "medcom.fhir.dk.terminology",
-    "version" : "1.7.0"
+    "version" : "2.0.0"
+  },
+  {
+    "id" : "medcom_fhir_dk_messagedefinitions",
+    "uri" : "http://medcomfhir.dk/ig/messagedefinitions/ImplementationGuide/medcom.fhir.dk.messagedefinitions",
+    "packageId" : "medcom.fhir.dk.messagedefinitions",
+    "version" : "1.0.0"
   }],
   "definition" : {
     "extension" : [{
@@ -82,7 +88,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2021+"
+        "valueString" : "2025+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -94,6 +100,28 @@
       {
         "url" : "value",
         "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "default-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -123,6 +151,28 @@
       "extension" : [{
         "url" : "code",
         "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludettl"
       },
       {
         "url" : "value",
@@ -276,17 +326,6 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-version"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueString" : "apply-wg"
       },
       {
@@ -352,7 +391,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#0.2.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
     },
     {
       "extension" : [{
@@ -361,7 +400,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2021+"
+        "valueString" : "2025+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -373,6 +412,28 @@
       {
         "url" : "value",
         "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "default-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -402,6 +463,28 @@
       "extension" : [{
         "url" : "code",
         "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludettl"
       },
       {
         "url" : "value",
@@ -545,17 +628,6 @@
       "extension" : [{
         "url" : "code",
         "valueCode" : "apply-license"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "apply-version"
       },
       {
         "url" : "value",
@@ -1355,22 +1427,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/medcom-careCommunication-message-definition"
-      },
-      "name" : "MedComCareCommunicationMessageDefinition",
-      "description" : "The MessageDefinition for a CareCommunication messsage.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
         "reference" : "StructureDefinition/medcom-careCommunication-messageHeader"
       },
       "name" : "MedComCareCommunicationMessageHeader",
-      "description" : "Message header for care communication message",
+      "description" : "Message header for CareCommunication message",
       "exampleBoolean" : false
     },
     {
@@ -1428,30 +1488,6 @@
       }],
       "reference" : {
         "reference" : "PractitionerRole/8bf63050-5504-11ed-bdc3-0242ac120002"
-      },
-      "name" : "PractitionerRole with a role and reference to a practitioner",
-      "description" : "PractitionerRole with a role and reference to a practitioner",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "PractitionerRole"
-      }],
-      "reference" : {
-        "reference" : "PractitionerRole/2d734f53-c71b-443a-a2d0-41327653b57c"
-      },
-      "name" : "PractitionerRole with a role and reference to a practitioner",
-      "description" : "PractitionerRole with a role and reference to a practitioner",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "PractitionerRole"
-      }],
-      "reference" : {
-        "reference" : "PractitionerRole/b0b3f1f5-3818-4d1c-aa25-cf08b01697a1"
       },
       "name" : "PractitionerRole with a role and reference to a practitioner",
       "description" : "PractitionerRole with a role and reference to a practitioner",
@@ -1580,6 +1616,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/ProducerActor"
+      },
+      "name" : "Producer of FHIR resources",
+      "description" : "The system that creates the FHIR resources",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
@@ -1608,30 +1656,6 @@
       }],
       "reference" : {
         "reference" : "Practitioner/7ffff970-5504-11ed-bdc3-0242ac120002"
-      },
-      "name" : "Simple practitioner with a name",
-      "description" : "Simple practitioner with a name",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Practitioner"
-      }],
-      "reference" : {
-        "reference" : "Practitioner/2a57c93e-de08-423b-b4ee-fcab85cc29bd"
-      },
-      "name" : "Simple practitioner with a name",
-      "description" : "Simple practitioner with a name",
-      "exampleBoolean" : true
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Practitioner"
-      }],
-      "reference" : {
-        "reference" : "Practitioner/9a274f97-57e9-4847-8022-4dc6152351c3"
       },
       "name" : "Simple practitioner with a name",
       "description" : "Simple practitioner with a name",
@@ -1773,6 +1797,15 @@
         "nameUrl" : "index.html",
         "title" : "Home",
         "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "dependencies.html"
+        }],
+        "nameUrl" : "dependencies.html",
+        "title" : "Dependencies",
+        "generation" : "html"
       },
       {
         "extension" : [{
