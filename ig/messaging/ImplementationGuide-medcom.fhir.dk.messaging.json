@@ -3,14 +3,14 @@
   "id" : "medcom.fhir.dk.messaging",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.messaging</b></p><a name=\"medcom.fhir.dk.messaging\"> </a><a name=\"hcmedcom.fhir.dk.messaging\"> </a><a name=\"medcom.fhir.dk.messaging-da-DK\"> </a><h2>DKMedComMessaging</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging</pre><div><p>This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.messaging</b></p><a name=\"medcom.fhir.dk.messaging\"> </a><a name=\"hcmedcom.fhir.dk.messaging\"> </a><h2>DKMedComMessaging</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging</pre><div><p>This IG includes messaging profiles defined by MedCom. These profiles are used in messagebased communication</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/messaging/ImplementationGuide/medcom.fhir.dk.messaging",
-  "version" : "3.0.0",
+  "version" : "4.0.0",
   "name" : "DKMedComMessaging",
   "title" : "DK MedCom Messaging",
   "status" : "active",
-  "date" : "2025-05-14T11:03:43+00:00",
+  "date" : "2025-10-27T13:40:53+00:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
@@ -38,7 +38,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.3.0"
+    "version" : "6.5.0"
   },
   {
     "id" : "hl7ext",
@@ -54,13 +54,13 @@
     "id" : "hl7_fhir_dk_core",
     "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
     "packageId" : "hl7.fhir.dk.core",
-    "version" : "3.2.0"
+    "version" : "3.4.0"
   },
   {
     "id" : "medcom_fhir_dk_core",
     "uri" : "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core",
     "packageId" : "medcom.fhir.dk.core",
-    "version" : "2.4.0"
+    "version" : "3.0.0"
   }],
   "definition" : {
     "extension" : [{
@@ -111,6 +111,28 @@
       "extension" : [{
         "url" : "code",
         "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludettl"
       },
       {
         "url" : "value",
@@ -340,7 +362,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.5.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
     },
     {
       "extension" : [{
@@ -390,6 +412,28 @@
       "extension" : [{
         "url" : "code",
         "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludettl"
       },
       {
         "url" : "value",
@@ -755,30 +799,6 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/medcom-messaging-messagedefinition"
-      },
-      "name" : "MedComMessagingMessageDefinition",
-      "description" : "An example profile of the MessageDefinition resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/medcom-messaging-messagedefinition-fhir"
-      },
-      "name" : "MedComMessagingMessageDefinitionFhir",
-      "description" : "An example profile of the MessageDefinition-fhir resource.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
         "reference" : "StructureDefinition/medcom-messaging-messageHeader"
       },
       "name" : "MedComMessagingMessageHeader",
@@ -884,6 +904,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/ProducerActor"
+      },
+      "name" : "Producer of FHIR resources",
+      "description" : "The system that creates the FHIR resources",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
       }],
       "reference" : {
@@ -909,6 +941,15 @@
         "nameUrl" : "index.html",
         "title" : "Home",
         "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "dependencies.html"
+        }],
+        "nameUrl" : "dependencies.html",
+        "title" : "Dependencies",
+        "generation" : "html"
       },
       {
         "extension" : [{
