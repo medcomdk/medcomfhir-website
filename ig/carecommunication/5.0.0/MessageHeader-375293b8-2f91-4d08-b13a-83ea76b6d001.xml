@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MessageHeader xmlns="http://hl7.org/fhir">
+  <id value="375293b8-2f91-4d08-b13a-83ea76b6d001"/>
+  <meta>
+    <profile value="http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MessageHeader 375293b8-2f91-4d08-b13a-83ea76b6d001</b></p><a name="375293b8-2f91-4d08-b13a-83ea76b6d001"> </a><a name="hc375293b8-2f91-4d08-b13a-83ea76b6d001"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-medcom-careCommunication-messageHeader.html">MedComCareCommunicationMessageHeader</a></p></div><p><b>event</b>: <a href="http://medcomfhir.dk/ig/terminology/1.8.1/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message">MedComMessagingEventCodes care-communication-message</a>: Care Communication Message</p><h3>Destinations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style="display: none">*</td><td/><td><a href="https://sor2.sum.dsdn.dk/#id=953741000016009">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td><td><a href="Organization-33153a8a-97c8-4f55-b7ad-bbedee8bd0e1.html">Organization Plejecenter Herlev</a></td></tr></table><p><b>sender</b>: <a href="Organization-c39b114b-a9c1-46bb-ac30-e3ce71f28c3a.html">Organization Hjerteafdelingen på Herlev og Gentofte hospital</a></p><h3>Sources</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Endpoint</b></td></tr><tr><td style="display: none">*</td><td><a href="https://sor2.sum.dsdn.dk/#id=265161000016000">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td></tr></table><p><b>focus</b>: <a href="Communication-c34e8284-b353-468f-a2ea-f6ef6330292c.html">Communication: extension = -&gt;PractitionerRole Sygeplejerske; identifier = urn:uuid:f9cf2547-7a1c-4639-9fd3-9f717556ad36; status = unknown; category = Vedr. henvisning; priority = asap; topic = </a></p><p><b>definition</b>: <a href="http://medcomfhir.dk/ig/messagedefinitions/1.0.0/MessageDefinition-MedComCareCommunicationMessageDefinitionV5.0.html">http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0</a></p></div>
+  </text>
+  <eventCoding>
+    <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"/>
+    <code value="care-communication-message"/>
+  </eventCoding>
+  <destination>
+    <extension url="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension">
+      <valueCoding>
+        <system value="http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"/>
+        <code value="primary"/>
+      </valueCoding>
+    </extension>
+    <endpoint value="https://sor2.sum.dsdn.dk/#id=953741000016009"/>
+    <receiver>
+      <reference value="Organization/33153a8a-97c8-4f55-b7ad-bbedee8bd0e1"/>
+    </receiver>
+  </destination>
+  <sender>
+    <reference value="Organization/c39b114b-a9c1-46bb-ac30-e3ce71f28c3a"/>
+  </sender>
+  <source>
+    <endpoint value="https://sor2.sum.dsdn.dk/#id=265161000016000"/>
+  </source>
+  <focus>
+    <reference value="Communication/c34e8284-b353-468f-a2ea-f6ef6330292c"/>
+  </focus>
+  <definition value="http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"/>
+</MessageHeader>
