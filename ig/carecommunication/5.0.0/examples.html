@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Examples - DK MedCom Carecommunication v5.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">DK MedCom Carecommunication</span>
+            <br/>
+            <span style="display:inline-block;">5.0.0 - release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="dependencies.html">Dependencies</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Examples</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom CareCommunication (v5.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/carecommunication/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Examples</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<h1 id="flow-of-carecommunication">Flow of CareCommunication</h1>
+
+<p>This section describes five subsequent CareCommunications sent between three healthcare departments concerning the same citizen with test-CPR-nr. 250947-9989. <br /></p>
+
+<p><em>Note: The narrative texts (text.div) elements in the examples are autogenerated. They are not representative of the MedCom Governance demands for narratives and must only be treated as incomplete example representations. Find <a href="https://medcomdk.github.io/MedComLandingPage/assets/documents/GeneralGovernanceFHIRStandards.html">MedCom Governance for narratives here</a>.</em> <br /></p>
+
+<p>The flow that the examples support is: <br /></p>
+
+<p>A sends a new message to B <br />
+B replies to A <br />
+A replies to B <br />
+B forwards to C <br />
+C replies to B <br /></p>
+
+<h2 id="1st-message---new-carecommunication">1st message - new CareCommunication</h2>
+
+<p><a href="Bundle-add5e7e2-0c0f-4a4a-bfff-f6f984fa7e3c.html">1st message</a></p>
+
+<p>The initial message sent from Hjerteafdelingen på Herlev og Gentofte hospital to Plejecenter Herlev.</p>
+
+<p>The message includes one message segment and a new communication identifier. As it is a new message, the activity is in the Provenance instance 'new-message'. The sender and receiver organizations are both referenced from the MessageHeader.</p>
+
+<p>The CareCommunication contains a topic at Communication.topic.</p>
+
+<h2 id="2nd-message---reply-carecommunication">2nd message - reply CareCommunication</h2>
+
+<p><a href="Bundle-b56549f7-ed10-422d-8088-f7222b686e46.html">2nd message</a></p>
+
+<p>A reply to the 1st message. Since it is a reply to the latest CareCommunication, the Communication.identifier remains the same. Two Communication.payload is added which includes the reply to the new message, since a message text and an attachment are included. The activity is in the Provenance instance 'reply-message'.</p>
+
+<p>The author of the second CareCommunication has included an attachment without structured author information.</p>
+
+<h2 id="3rd-message---reply-carecommunication">3rd message - reply CareCommunication</h2>
+
+<p><a href="Bundle-3dcb5618-3055-406a-9034-1b8fc8de0fea.html">3rd message</a></p>
+
+<p>This is a reply to the 2nd message. Therefore, the Communication.identifier remains the same. One Communication.payload has been added with the reply. The base64-encoded content from the attachment in the 2nd message is not included, only the identifier and author information.
+The unique ids of the instances are updated, however the referenced MessageHeader in the Provenance instances from the previous messages remain the same.</p>
+
+<h2 id="4th-message---forward-carecommunication">4th message - forward CareCommunication</h2>
+
+<p><a href="Bundle-c0426e3e-978f-46e8-a366-a30f27854b0a.html">4th message</a></p>
+
+<p>This is a forwarding of the 3rd message. Therefore is the Communication.identifier updated and the base64-encoded content from the attachment in the 2nd message is included. Additionally, is a Communciation.payload added with a reason for the forwarding. The user decides not to forward the topic, why it is not included in the CareCommunication. The activity in the Provenance instance is 'forward-message'. A new receiver organization is included. The sender organization does not include a name in Organization.name.</p>
+
+<h2 id="5th-message---reply-carecommunication">5th message - reply CareCommunication</h2>
+
+<p><a href="Bundle-d11968f5-4bdf-4b50-b146-a8e1cc890fc3.html">5th message</a></p>
+
+<p>Is a reply to the 4th message. The Communication.identifier remains the same and the base64-encoded content from the attachment in the 2nd message is not included. The user has included a new attachment, which is a link to a webpage. 
+The author role is not from the list of roles, but is included as at PractitionerRole.code.text.</p>
+
+<h1 id="additional-examples-of-carecommunication">Additional examples of CareCommunication</h1>
+
+<p>The examples below demonstrates how different information is included in a CareCommunication.</p>
+
+<h2 id="carecommunication-with-all-optional-content">CareCommunication with all optional content</h2>
+
+<p><a href="Bundle-gfd00bc2-9c26-4174-934e-f6e4360845de.html">CareCommunication with all optional content</a></p>
+
+<p>This includes</p>
+<ul>
+  <li>Category as 'regarding-referal' and priority</li>
+  <li>Topic that elaborates the category</li>
+  <li>The episodeOfCare-identifier is included in the Encounter instance and referenced from the Communication instance, as the user of a hospital system in the context of an admission, when creating a CareCommunication. Other usages is described on the page for the <a href="StructureDefinition-medcom-careCommunication-communication.html">MedComCareCommunication profile</a>.</li>
+  <li>Specifik sender and recipient, which are described in CareTeam and Practitioner/PractitionerRole instances. This is further described on the page for the <a href="StructureDefinition-medcom-careCommunication-communication.html">MedComCareCommunication profile</a></li>
+  <li>Structured author information for the author of the attached pdf-document.</li>
+  <li>An attachment in terms of an URL.</li>
+</ul>
+
+<h2 id="carecommunication-where-patient-has-a-replacement-cpr-ecpr">CareCommunication where patient has a replacement-CPR. (eCPR)</h2>
+
+<p><a href="Bundle-0d5b3c18-fab6-4d93-9d88-c9c8abf1f18c.html">CareCommunication where the patient has a replacement-CPR.</a></p>
+
+<p>It is allowed to send a CareCommunication for a patient with a replacement-CPR (Danish: erstatnings-CPR or ecpr). In the example, the replacement-CPR is from the national eCPR service, defined by the Patient.identifier.system = "urn:oid:1.2.208.176.1.6.1.1". Further, an EpisodeOfCare-identifier (Danish: forløbsid) is included in the Encounter instance.</p>
+
+<h2 id="carecommunication-as-a-reply-to-an-oioxml-or-edifact-message">CareCommunication as a reply to an OIOXML or EDIFACT message</h2>
+
+<p><a href="./Bundle-k7bfbc0c-553d-11ed-bdc3-0242ac120002.html">Reply to an OIOXML message.</a></p>
+
+<p>It is allowed to answer a received MedCom EDIFACT or OIOXML message with a MedCom CareCommunication. The Provenance.entity.what.identifier shall contain a reference to the received OIOXML. The reference shall contain the locationnumber and letter identifier, divided by #. If the message being replied contains an episodOfCareIdentifier, this shall be included in the CareCommunication message.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.carecommunication#5.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 27, 2025 14:44+0000">2025-10-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
