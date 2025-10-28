@@ -1,0 +1,155 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-PractitionerRoles> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medcom-core-PractitionerRoles"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medcom-core-PractitionerRoles</b></p><a name=\"medcom-core-PractitionerRoles\"> </a><a name=\"hcmedcom-core-PractitionerRoles\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret.html\"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesAutorisationsregistret</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret.html#medcom-core-PractitionerRolesAutorisationsregistret-ambulancebehandler\">ambulancebehandler</a></td><td style=\"color: #cccccc\">Ambulancebehandler</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret.html#medcom-core-PractitionerRolesAutorisationsregistret-laege\">laege</a></td><td style=\"color: #cccccc\">Læge</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesAutorisationsregistret.html#medcom-core-PractitionerRolesAutorisationsregistret-osteopat\">osteopat</a></td><td style=\"color: #cccccc\">Osteopat</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html\"><code>http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-speciallaege\">speciallaege</a></td><td style=\"color: #cccccc\">Speciallæge</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-speciallaegeipraksis\">speciallaegeipraksis</a></td><td style=\"color: #cccccc\">Speciallæge i praksis</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-cheflaege\">cheflaege</a></td><td style=\"color: #cccccc\">Cheflæge</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-overlaege\">overlaege</a></td><td style=\"color: #cccccc\">Overlæge</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-afdelingslaege\">afdelingslaege</a></td><td style=\"color: #cccccc\">Afdelingslæge</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-sygehuslaege\">sygehuslaege</a></td><td style=\"color: #cccccc\">Sygehuslæge</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-sygeplejerske\">sygeplejerske</a></td><td style=\"color: #cccccc\">Sygeplejerske</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-sundhedsplejerske\">sundhedsplejerske</a></td><td style=\"color: #cccccc\">Sundhedsplejerske</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-socialogsundhedsassistent\">socialogsundhedsassistent</a></td><td style=\"color: #cccccc\">Social- og sundhedsassistent</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-socialogsundhedsmedhjaelper\">socialogsundhedsmedhjaelper</a></td><td style=\"color: #cccccc\">Social- og sundhedsmedhjælper</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-socialogsundhedsmehjaelper\">socialogsundhedsmehjaelper</a></td><td style=\"color: #cccccc\">Social- og sundhedsmedhjælper</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-sygehjaelper\">sygehjaelper</a></td><td style=\"color: #cccccc\">Sygehjælper</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-plejer\">plejer</a></td><td style=\"color: #cccccc\">Plejer</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-plejehjemsassistent\">plejehjemsassistent</a></td><td style=\"color: #cccccc\">Plejehjemsassistent</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-tandlaege\">tandlaege</a></td><td style=\"color: #cccccc\">Tandlæge</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-klinisktandtekniker\">klinisktandtekniker</a></td><td style=\"color: #cccccc\">Klinisk tandtekniker</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-tandplejer\">tandplejer</a></td><td style=\"color: #cccccc\">Tandplejer</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-farmaceut\">farmaceut</a></td><td style=\"color: #cccccc\">Farmaceut</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-apoteker\">apoteker</a></td><td style=\"color: #cccccc\">Apoteker</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-psykolog\">psykolog</a></td><td style=\"color: #cccccc\">Psykolog</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-pyskolog\">pyskolog</a></td><td style=\"color: #cccccc\">Psykolog</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-jordemoder\">jordemoder</a></td><td style=\"color: #cccccc\">Jordemoder</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-fysioterapeut\">fysioterapeut</a></td><td style=\"color: #cccccc\">Fysioterapeut</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-ergoterapeut\">ergoterapeut</a></td><td style=\"color: #cccccc\">Ergoterapeut</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-bioanalytiker\">bioanalytiker</a></td><td style=\"color: #cccccc\">Bioanalytiker</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-radiograf\">radiograf</a></td><td style=\"color: #cccccc\">Radiograf</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-diaetist\">diaetist</a></td><td style=\"color: #cccccc\">Diætist</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-diaetistassistent\">diaetistassistent</a></td><td style=\"color: #cccccc\">Diætistassistent</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-audilogiassistent\">audilogiassistent</a></td><td style=\"color: #cccccc\">Audilogiassistent</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-neurofysiologassistent\">neurofysiologassistent</a></td><td style=\"color: #cccccc\">Neurofysiologassistent</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-kiropraktor\">kiropraktor</a></td><td style=\"color: #cccccc\">Kiropraktor</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-zoneterapeut\">zoneterapeut</a></td><td style=\"color: #cccccc\">Zoneterapeut</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-psykoterapeut\">psykoterapeut</a></td><td style=\"color: #cccccc\">Psykoterapeut</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-audiologopaed\">audiologopaed</a></td><td style=\"color: #cccccc\">Audiologopæd</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-laegesekretaer\">laegesekretaer</a></td><td style=\"color: #cccccc\">Lægesekretær</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-ledendelaegesekretaer\">ledendelaegesekretaer</a></td><td style=\"color: #cccccc\">Ledende lægesekretær</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-sygeplejesekretaer\">sygeplejesekretaer</a></td><td style=\"color: #cccccc\">Sygeplejesekretær</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-sygeplejesekretear\">sygeplejesekretear</a></td><td style=\"color: #cccccc\">Sygeplejesekretær</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-fodterapeut\">fodterapeut</a></td><td style=\"color: #cccccc\">Fodterapeut</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-socialraadgiver\">socialraadgiver</a></td><td style=\"color: #cccccc\">Socialrådgiver</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-ledendesocialraadgiver\">ledendesocialraadgiver</a></td><td style=\"color: #cccccc\">Ledende socialrådgiver</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-laerer\">laerer</a></td><td style=\"color: #cccccc\">Lærer</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-paedagog\">paedagog</a></td><td style=\"color: #cccccc\">Pædagog</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-beskaeftigelsesvejleder\">beskaeftigelsesvejleder</a></td><td style=\"color: #cccccc\">Beskæftigelsesvejleder</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-bandagist\">bandagist</a></td><td style=\"color: #cccccc\">Bandagist</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-skomager\">skomager</a></td><td style=\"color: #cccccc\">Skomager</td></tr><tr><td><a href=\"CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html#medcom-core-PractitionerRolesSKSadministrativ-optiker\">optiker</a></td><td style=\"color: #cccccc\">Optiker</td></tr></table></li><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-NullFlavor.html\"><code>http://terminology.hl7.org/CodeSystem/v3-NullFlavor</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.5.0/CodeSystem-v3-NullFlavor.html#v3-NullFlavor-NAVU\">NAVU</a></td><td style=\"color: #cccccc\">Not available</td><td>Information is not available at this time (with no expectation regarding whether it will or will not be available in the future).</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-PractitionerRoles"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "2.0.0"] ; # 
+  fhir:name [ fhir:v "MedComCorePractitionerRoles"] ; # 
+  fhir:title [ fhir:v "MedComCorePractitionerRoles"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-09-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ValueSet containing codes for practionerroles (Danish: Stillingsbetegnelser) from MedCom."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesAutorisationsregistret"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "ambulancebehandler" ]
+       ] [
+         fhir:code [ fhir:v "laege" ]
+       ] [
+         fhir:code [ fhir:v "osteopat" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "speciallaege" ]
+       ] [
+         fhir:code [ fhir:v "speciallaegeipraksis" ]
+       ] [
+         fhir:code [ fhir:v "cheflaege" ]
+       ] [
+         fhir:code [ fhir:v "overlaege" ]
+       ] [
+         fhir:code [ fhir:v "afdelingslaege" ]
+       ] [
+         fhir:code [ fhir:v "sygehuslaege" ]
+       ] [
+         fhir:code [ fhir:v "sygeplejerske" ]
+       ] [
+         fhir:code [ fhir:v "sundhedsplejerske" ]
+       ] [
+         fhir:code [ fhir:v "socialogsundhedsassistent" ]
+       ] [
+         fhir:code [ fhir:v "socialogsundhedsmedhjaelper" ]
+       ] [
+         fhir:code [ fhir:v "socialogsundhedsmehjaelper" ]
+       ] [
+         fhir:code [ fhir:v "sygehjaelper" ]
+       ] [
+         fhir:code [ fhir:v "plejer" ]
+       ] [
+         fhir:code [ fhir:v "plejehjemsassistent" ]
+       ] [
+         fhir:code [ fhir:v "tandlaege" ]
+       ] [
+         fhir:code [ fhir:v "klinisktandtekniker" ]
+       ] [
+         fhir:code [ fhir:v "tandplejer" ]
+       ] [
+         fhir:code [ fhir:v "farmaceut" ]
+       ] [
+         fhir:code [ fhir:v "apoteker" ]
+       ] [
+         fhir:code [ fhir:v "psykolog" ]
+       ] [
+         fhir:code [ fhir:v "pyskolog" ]
+       ] [
+         fhir:code [ fhir:v "jordemoder" ]
+       ] [
+         fhir:code [ fhir:v "fysioterapeut" ]
+       ] [
+         fhir:code [ fhir:v "ergoterapeut" ]
+       ] [
+         fhir:code [ fhir:v "bioanalytiker" ]
+       ] [
+         fhir:code [ fhir:v "radiograf" ]
+       ] [
+         fhir:code [ fhir:v "diaetist" ]
+       ] [
+         fhir:code [ fhir:v "diaetistassistent" ]
+       ] [
+         fhir:code [ fhir:v "audilogiassistent" ]
+       ] [
+         fhir:code [ fhir:v "neurofysiologassistent" ]
+       ] [
+         fhir:code [ fhir:v "kiropraktor" ]
+       ] [
+         fhir:code [ fhir:v "zoneterapeut" ]
+       ] [
+         fhir:code [ fhir:v "psykoterapeut" ]
+       ] [
+         fhir:code [ fhir:v "audiologopaed" ]
+       ] [
+         fhir:code [ fhir:v "laegesekretaer" ]
+       ] [
+         fhir:code [ fhir:v "ledendelaegesekretaer" ]
+       ] [
+         fhir:code [ fhir:v "sygeplejesekretaer" ]
+       ] [
+         fhir:code [ fhir:v "sygeplejesekretear" ]
+       ] [
+         fhir:code [ fhir:v "fodterapeut" ]
+       ] [
+         fhir:code [ fhir:v "socialraadgiver" ]
+       ] [
+         fhir:code [ fhir:v "ledendesocialraadgiver" ]
+       ] [
+         fhir:code [ fhir:v "laerer" ]
+       ] [
+         fhir:code [ fhir:v "paedagog" ]
+       ] [
+         fhir:code [ fhir:v "beskaeftigelsesvejleder" ]
+       ] [
+         fhir:code [ fhir:v "bandagist" ]
+       ] [
+         fhir:code [ fhir:v "skomager" ]
+       ] [
+         fhir:code [ fhir:v "optiker" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "NAVU" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
