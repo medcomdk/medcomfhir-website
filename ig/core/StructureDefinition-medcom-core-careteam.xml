@@ -13,10 +13,10 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam"/>
-  <version value="3.0.0"/>
+  <version value="3.0.1"/>
   <name value="MedComCoreCareTeam"/>
   <status value="active"/>
-  <date value="2025-09-24T12:42:36+00:00"/>
+  <date value="2025-10-29T07:28:01+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -131,7 +131,7 @@
           <valueCanonical value="http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam|3.0.0"/>
+          <valueCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam|3.0.1"/>
         </extension>
       </extension>
       <path value="CareTeam.id"/>
@@ -241,7 +241,7 @@
         </extension>
         <strength value="preferred"/>
         <description value="A human language."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/languages|4.0.1"/>
       </binding>
     </element>
     <element id="CareTeam.text">
@@ -646,7 +646,7 @@
         </extension>
         <strength value="example"/>
         <description value="Indicates the type of care team."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/care-team-category"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/care-team-category|4.0.1"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -662,7 +662,7 @@
           <valueCanonical value="http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam|3.0.0"/>
+          <valueCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam|3.0.1"/>
         </extension>
       </extension>
       <path value="CareTeam.name"/>
@@ -706,8 +706,8 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient|4.0.1"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -742,7 +742,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -970,7 +970,7 @@
         </extension>
         <strength value="example"/>
         <description value="Indicates specific responsibility of an individual within the care team, such as &quot;Primary physician&quot;, &quot;Team coordinator&quot;, &quot;Caregiver&quot;, etc."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/participant-role"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/participant-role|4.0.1"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -995,12 +995,12 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient|4.0.1"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1039,7 +1039,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1107,7 +1107,7 @@
         </extension>
         <strength value="example"/>
         <description value="Indicates the reason for the care team."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/clinical-findings"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/clinical-findings|4.0.1"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -1127,7 +1127,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition|4.0.1"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1153,7 +1153,7 @@
           <valueCanonical value="http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-source">
-          <valueCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam|3.0.0"/>
+          <valueCanonical value="http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam|3.0.1"/>
         </extension>
       </extension>
       <path value="CareTeam.managingOrganization"/>
