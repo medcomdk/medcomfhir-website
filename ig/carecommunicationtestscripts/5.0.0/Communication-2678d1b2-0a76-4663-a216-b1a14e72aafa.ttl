@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunicationtestscripts/Communication/2678d1b2-0a76-4663-a216-b1a14e72aafa> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2678d1b2-0a76-4663-a216-b1a14e72aafa"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication 2678d1b2-0a76-4663-a216-b1a14e72aafa</b></p><a name=\"2678d1b2-0a76-4663-a216-b1a14e72aafa\"> </a><a name=\"hc2678d1b2-0a76-4663-a216-b1a14e72aafa\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-communication.html\">MedComCareCommunication</a></p></div><p><b>identifier</b>: urn:uuid:c29f6032-28bf-4a11-af98-6f451fa77fee</p><p><b>status</b>: Unknown</p><p><b>category</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes examination-results}\">Undersøgelsessvar</span></p><p><b>subject</b>: <a href=\"Patient-2f6d23d0-239c-44bb-9033-acab45416029.html\">Bruno Test Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>topic</b>: <span title=\"Codes:\">Resultater fra hjemmesygeplejen</span></p><p><b>encounter</b>: <a href=\"Encounter-c3efbaa3-4b9e-4da1-bb4a-496d33953abd.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP)</a></p><blockquote><p><b>payload</b></p><p><b>DateTimeExtension</b>: 2024-09-15 15:20:00+0200</p><p><b>IdentifierExtension</b>: urn:uuid:ee96d66f-f95a-4f23-855c-44befb31c52b</p><p><b>PractitionerExtension</b>: <a href=\"PractitionerRole-ab46bc08-6adb-4e35-8640-e2b9fed48fe7.html\">PractitionerRole Sygeplejerske</a></p><p><b>ContactExtension</b>: ph: 004523232323</p><p><b>content</b>: Til rette vedkommende. Hermed fremsendes undersøgelsesresultater fra seneste besøg af hjemmesygeplejen.....\nHilsen Michael Magnus Burns\nSygeplejerske</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "urn:uuid:c29f6032-28bf-4a11-af98-6f451fa77fee" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "examination-results" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Patient/2f6d23d0-239c-44bb-9033-acab45416029> ;
+     fhir:reference [ fhir:v "Patient/2f6d23d0-239c-44bb-9033-acab45416029" ]
+  ] ; # 
+  fhir:topic [
+     fhir:text [ fhir:v "Resultater fra hjemmesygeplejen" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Encounter/c3efbaa3-4b9e-4da1-bb4a-496d33953abd> ;
+     fhir:reference [ fhir:v "Encounter/c3efbaa3-4b9e-4da1-bb4a-496d33953abd" ]
+  ] ; # 
+  fhir:payload ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2024-09-15T15:20:00+02:00"^^xsd:dateTime
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Identifier ;
+         fhir:value [ fhir:v "urn:uuid:ee96d66f-f95a-4f23-855c-44befb31c52b" ] ;
+         fhir:assigner [
+           fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Organization/674cb75e-4a5c-4609-b740-8b09e06b0e42> ;
+           fhir:reference [ fhir:v "Organization/674cb75e-4a5c-4609-b740-8b09e06b0e42" ]
+         ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/PractitionerRole/ab46bc08-6adb-4e35-8640-e2b9fed48fe7> ;
+         fhir:reference [ fhir:v "PractitionerRole/ab46bc08-6adb-4e35-8640-e2b9fed48fe7" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:ContactPoint ;
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "004523232323" ]
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:string ;
+       fhir:v "Til rette vedkommende. Hermed fremsendes undersøgelsesresultater fra seneste besøg af hjemmesygeplejen.....\nHilsen Michael Magnus Burns\nSygeplejerske"
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

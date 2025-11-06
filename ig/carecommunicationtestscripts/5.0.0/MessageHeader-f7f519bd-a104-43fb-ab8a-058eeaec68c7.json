@@ -1,0 +1,38 @@
+{
+  "resourceType" : "MessageHeader",
+  "id" : "f7f519bd-a104-43fb-ab8a-058eeaec68c7",
+  "meta" : {
+    "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader f7f519bd-a104-43fb-ab8a-058eeaec68c7</b></p><a name=\"f7f519bd-a104-43fb-ab8a-058eeaec68c7\"> </a><a name=\"hcf7f519bd-a104-43fb-ab8a-058eeaec68c7\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-messageHeader.html\">MedComCareCommunicationMessageHeader</a></p></div><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/1.8.1/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message\">MedComMessagingEventCodes care-communication-message</a>: Care Communication Message</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=1017421000016003\">https://sor2.sum.dsdn.dk/#id=1017421000016003</a></td><td><a href=\"Organization-d8ca8b48-565a-46c8-a1c8-e781c498626a.html\">Organization 2100 Lægehuset Østerbro</a></td></tr></table><p><b>sender</b>: <a href=\"Organization-aea5f134-5cc9-44b1-b5db-7155e45717ee.html\">Organization Sundhedsplejen, Aabenraa kommune</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=330461000016004\">https://sor2.sum.dsdn.dk/#id=330461000016004</a></td></tr></table><p><b>focus</b>: <a href=\"Communication-930876e5-8cf8-40f0-bd6c-3e38520d61de.html\">Communication: identifier = urn:uuid:b84738c1-a67f-4de9-a883-fab6d0ba0c44; status = unknown; category = Dødsfald; topic = </a></p><p><b>definition</b>: <a href=\"http://medcomfhir.dk/ig/messagedefinitions/1.0.0/MessageDefinition-MedComCareCommunicationMessageDefinitionV5.0.html\">http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0</a></p></div>"
+  },
+  "eventCoding" : {
+    "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
+    "code" : "care-communication-message"
+  },
+  "destination" : [{
+    "extension" : [{
+      "url" : "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+      "valueCoding" : {
+        "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+        "code" : "primary"
+      }
+    }],
+    "endpoint" : "https://sor2.sum.dsdn.dk/#id=1017421000016003",
+    "receiver" : {
+      "reference" : "Organization/d8ca8b48-565a-46c8-a1c8-e781c498626a"
+    }
+  }],
+  "sender" : {
+    "reference" : "Organization/aea5f134-5cc9-44b1-b5db-7155e45717ee"
+  },
+  "source" : {
+    "endpoint" : "https://sor2.sum.dsdn.dk/#id=330461000016004"
+  },
+  "focus" : [{
+    "reference" : "Communication/930876e5-8cf8-40f0-bd6c-3e38520d61de"
+  }],
+  "definition" : "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
+}

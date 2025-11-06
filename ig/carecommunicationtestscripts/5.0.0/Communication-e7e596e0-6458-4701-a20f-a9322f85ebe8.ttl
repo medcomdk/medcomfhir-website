@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunicationtestscripts/Communication/e7e596e0-6458-4701-a20f-a9322f85ebe8> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "e7e596e0-6458-4701-a20f-a9322f85ebe8"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication e7e596e0-6458-4701-a20f-a9322f85ebe8</b></p><a name=\"e7e596e0-6458-4701-a20f-a9322f85ebe8\"> </a><a name=\"hce7e596e0-6458-4701-a20f-a9322f85ebe8\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-communication.html\">MedComCareCommunication</a></p></div><p><b>identifier</b>: urn:uuid:06a106f9-df1c-4064-9031-b6a4cb841e85</p><p><b>status</b>: Unknown</p><p><b>category</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes decease}\">Dødsfald</span></p><p><b>subject</b>: <a href=\"Patient-db2fd52e-9a7a-418f-90d1-b422e07c895d.html\">Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>topic</b>: <span title=\"Codes:\">Afgået ved døden</span></p><blockquote><p><b>payload</b></p><p><b>DateTimeExtension</b>: 2024-09-14 13:00:00+0200</p><p><b>IdentifierExtension</b>: urn:uuid:954183f4-bc89-4d75-8073-9b397bacd6ec</p><p><b>PractitionerExtension</b>: <a href=\"PractitionerRole-84eb6a09-63cf-433d-8522-41465d78756a.html\">PractitionerRole Lægesekretær</a></p><p><b>ContactExtension</b>: ph: 85572787</p><p><b>content</b>: Til rette vedkommende hos Per Thorsleth. Bruno Elmer er desværre død i nat kl. 4.15. I hans kalender fremgår det, at han vil komme til læge i morgen kl. 11. Det gør han ikke.\nHilsen Nancy Jensen\nLægesekretær</p></blockquote><blockquote><p><b>payload</b></p><p><b>DateTimeExtension</b>: 2024-09-14 14:25:00+0200</p><p><b>IdentifierExtension</b>: urn:uuid:cfc9886a-5f54-463b-9255-99bfaf778d8c</p><p><b>PractitionerExtension</b>: <a href=\"PractitionerRole-1840f077-7ca1-4141-a46b-1bce43065c76.html\">PractitionerRole Sygeplejerske</a></p><p><b>ContactExtension</b>: ph: 87875455</p><p><b>content</b>: Tak for informationen. Jeg videresender beskeden til Brunos læge.\nHilsen Kim Jensen\nSygeplejerske</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "urn:uuid:06a106f9-df1c-4064-9031-b6a4cb841e85" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "decease" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Patient/db2fd52e-9a7a-418f-90d1-b422e07c895d> ;
+     fhir:reference [ fhir:v "Patient/db2fd52e-9a7a-418f-90d1-b422e07c895d" ]
+  ] ; # 
+  fhir:topic [
+     fhir:text [ fhir:v "Afgået ved døden" ]
+  ] ; # 
+  fhir:payload ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2024-09-14T13:00:00+02:00"^^xsd:dateTime
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Identifier ;
+         fhir:value [ fhir:v "urn:uuid:954183f4-bc89-4d75-8073-9b397bacd6ec" ] ;
+         fhir:assigner [
+           fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Organization/7260b118-d744-4396-bbf2-80245933b1dd> ;
+           fhir:reference [ fhir:v "Organization/7260b118-d744-4396-bbf2-80245933b1dd" ]
+         ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/PractitionerRole/84eb6a09-63cf-433d-8522-41465d78756a> ;
+         fhir:reference [ fhir:v "PractitionerRole/84eb6a09-63cf-433d-8522-41465d78756a" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:ContactPoint ;
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "85572787" ]
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:string ;
+       fhir:v "Til rette vedkommende hos Per Thorsleth. Bruno Elmer er desværre død i nat kl. 4.15. I hans kalender fremgår det, at han vil komme til læge i morgen kl. 11. Det gør han ikke.\nHilsen Nancy Jensen\nLægesekretær"
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2024-09-14T14:25:00+02:00"^^xsd:dateTime
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Identifier ;
+         fhir:value [ fhir:v "urn:uuid:cfc9886a-5f54-463b-9255-99bfaf778d8c" ] ;
+         fhir:assigner [
+           fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Organization/d2ac69eb-568e-4201-b29d-2af8d3126518> ;
+           fhir:reference [ fhir:v "Organization/d2ac69eb-568e-4201-b29d-2af8d3126518" ]
+         ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/PractitionerRole/1840f077-7ca1-4141-a46b-1bce43065c76> ;
+         fhir:reference [ fhir:v "PractitionerRole/1840f077-7ca1-4141-a46b-1bce43065c76" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:ContactPoint ;
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "87875455" ]
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:string ;
+       fhir:v "Tak for informationen. Jeg videresender beskeden til Brunos læge.\nHilsen Kim Jensen\nSygeplejerske"
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

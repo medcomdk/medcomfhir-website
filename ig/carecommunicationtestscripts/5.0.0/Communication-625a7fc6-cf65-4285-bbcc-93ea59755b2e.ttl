@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunicationtestscripts/Communication/625a7fc6-cf65-4285-bbcc-93ea59755b2e> a fhir:Communication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "625a7fc6-cf65-4285-bbcc-93ea59755b2e"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Communication 625a7fc6-cf65-4285-bbcc-93ea59755b2e</b></p><a name=\"625a7fc6-cf65-4285-bbcc-93ea59755b2e\"> </a><a name=\"hc625a7fc6-cf65-4285-bbcc-93ea59755b2e\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-communication.html\">MedComCareCommunication</a></p></div><p><b>identifier</b>: urn:uuid:eca85df4-e6c9-41d7-88c0-7e6fb79029b9</p><p><b>status</b>: Unknown</p><p><b>category</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes examination-results}\">Undersøgelsessvar</span></p><p><b>subject</b>: <a href=\"Patient-938544b6-721d-4d14-9e61-016e726ae180.html\">Bruno Test Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.6.1.1#0703921VJ4)</a></p><blockquote><p><b>payload</b></p><p><b>DateTimeExtension</b>: 2025-09-29 09:00:00+0200</p><p><b>IdentifierExtension</b>: urn:uuid:a7c9e37e-0a5f-4607-939b-7abf11e0c85f</p><p><b>PractitionerExtension</b>: <a href=\"PractitionerRole-aa97d8ad-4fdf-47ac-9a63-c50446c46bdf.html\">PractitionerRole Sygeplejerske</a></p><p><b>ContactExtension</b>: <a href=\"tel:+4512345789\">+4512345789</a></p><p><b>content</b>: Dette er en korrespondancemeddelelse med et almindeligt CPR-nummer men også et erstatnings-CPR.\nHilsen Michael, sygeplejerske.</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "urn:uuid:eca85df4-e6c9-41d7-88c0-7e6fb79029b9" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "examination-results" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Patient/938544b6-721d-4d14-9e61-016e726ae180> ;
+     fhir:reference [ fhir:v "Patient/938544b6-721d-4d14-9e61-016e726ae180" ]
+  ] ; # 
+  fhir:payload ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2025-09-29T09:00:00+02:00"^^xsd:dateTime
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Identifier ;
+         fhir:value [ fhir:v "urn:uuid:a7c9e37e-0a5f-4607-939b-7abf11e0c85f" ] ;
+         fhir:assigner [
+           fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Organization/f6494a29-1837-4f64-b903-da0d46e5da69> ;
+           fhir:reference [ fhir:v "Organization/f6494a29-1837-4f64-b903-da0d46e5da69" ]
+         ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:Reference ;
+         fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/PractitionerRole/aa97d8ad-4fdf-47ac-9a63-c50446c46bdf> ;
+         fhir:reference [ fhir:v "PractitionerRole/aa97d8ad-4fdf-47ac-9a63-c50446c46bdf" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:ContactPoint ;
+         fhir:system [ fhir:v "phone" ] ;
+         fhir:value [ fhir:v "+4512345789" ]
+       ]
+     ] ) ;
+     fhir:content [
+       a fhir:string ;
+       fhir:v "Dette er en korrespondancemeddelelse med et almindeligt CPR-nummer men også et erstatnings-CPR.\nHilsen Michael, sygeplejerske."
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

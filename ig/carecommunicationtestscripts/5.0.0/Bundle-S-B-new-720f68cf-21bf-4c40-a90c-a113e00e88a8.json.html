@@ -1,0 +1,589 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Send-B-new - JSON Representation - CareCommunication Test scripts v5.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.201"}
+    h3,h4,h5,h6{--heading-prefix:"5.201"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CareCommunication Test scripts</span>
+            <br/>
+            <span style="display:inline-block;">5.0.0 - release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="testscripts.html">Test scripts used in TouchStone</a>
+  </li>
+  <li>
+    <a href="testexamples.html">Test examples for test protocols</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts Summary</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Send-B-new</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">This page is part of the CareCommunication Testscripts (v5.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/carecommunicationtestscripts/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Bundle-S-B-new-720f68cf-21bf-4c40-a90c-a113e00e88a8.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-S-B-new-720f68cf-21bf-4c40-a90c-a113e00e88a8.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Send-B-new - JSON Representation</h2>
+
+
+<p><a href="Bundle-S-B-new-720f68cf-21bf-4c40-a90c-a113e00e88a8.json" no-download="true">Raw json</a> | <a href="Bundle-S-B-new-720f68cf-21bf-4c40-a90c-a113e00e88a8.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "S-B-new-720f68cf-21bf-4c40-a90c-a113e00e88a8",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-message.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "message",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">timestamp</a>" : "2024-09-06T17:15:00+02:00",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/MessageHeader/2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c",
+      "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/messageheader.html">resourceType</a>" : "MessageHeader",
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.id">id</a>" : "2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c",
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-messageHeader.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;MessageHeader_2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: MessageHeader 2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-messageHeader.html\&quot;&gt;MedComCareCommunicationMessageHeader&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;event&lt;/b&gt;: &lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/1.8.1/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message\&quot;&gt;MedComMessagingEventCodes care-communication-message&lt;/a&gt;: Care Communication Message&lt;/p&gt;&lt;h3&gt;Destinations&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Extension&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Receiver&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;a href=\&quot;https://sor2.sum.dsdn.dk/#id=1017421000016003\&quot;&gt;https://sor2.sum.dsdn.dk/#id=1017421000016003&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Organization-585e0101-8450-4126-b049-19b19c42e2dd.html\&quot;&gt;Organization 2100 Lægehuset Østerbro&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;sender&lt;/b&gt;: &lt;a href=\&quot;Organization-630bbfae-6b43-46f8-9b51-98cdea34e46d.html\&quot;&gt;Organization Sundhedsplejen, Aabenraa kommune&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Sources&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Endpoint&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;https://sor2.sum.dsdn.dk/#id=330461000016004\&quot;&gt;https://sor2.sum.dsdn.dk/#id=330461000016004&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;focus&lt;/b&gt;: &lt;a href=\&quot;Communication-d0c09c24-42bb-44eb-807e-6b3b22f6dbfc.html\&quot;&gt;Communication: identifier = urn:uuid:a036001b-7c8f-4f10-8aa1-cc8711223eee; status = unknown; category = Vedr. henvisning; priority = asap&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;definition&lt;/b&gt;: &lt;a href=\&quot;http://medcomfhir.dk/ig/messagedefinitions/1.0.0/MessageDefinition-MedComCareCommunicationMessageDefinitionV5.0.html\&quot;&gt;http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.event[x]">eventCoding</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "care-communication-message"
+        },
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination">destination</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCoding</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "primary"
+                }
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.endpoint">endpoint</a>" : "https://sor2.sum.dsdn.dk/#id=1017421000016003",
+            "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.destination.receiver">receiver</a>" : {
+              <a href="Organization-585e0101-8450-4126-b049-19b19c42e2dd.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/585e0101-8450-4126-b049-19b19c42e2dd"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.sender">sender</a>" : {
+          <a href="Organization-630bbfae-6b43-46f8-9b51-98cdea34e46d.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/630bbfae-6b43-46f8-9b51-98cdea34e46d"
+        },
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source">source</a>" : {
+          "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.endpoint">endpoint</a>" : "https://sor2.sum.dsdn.dk/#id=330461000016004"
+        },
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.focus">focus</a>" : [
+          {
+            <a href="Communication-d0c09c24-42bb-44eb-807e-6b3b22f6dbfc.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Communication/d0c09c24-42bb-44eb-807e-6b3b22f6dbfc"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.definition">definition</a>" : "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/Patient/2bc74be8-a622-4422-98c9-894b7c245d70",
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "2bc74be8-a622-4422-98c9-894b7c245d70",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/core/3.0.0/StructureDefinition-medcom-core-patient.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Patient_2bc74be8-a622-4422-98c9-894b7c245d70\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient 2bc74be8-a622-4422-98c9-894b7c245d70&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2bc74be8-a622-4422-98c9-894b7c245d70\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2bc74be8-a622-4422-98c9-894b7c245d70\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/core/3.0.0/StructureDefinition-medcom-core-patient.html\&quot;&gt;MedComCorePatient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)&lt;/p&gt;&lt;hr/&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.208.176.1.2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "2509479989"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Elmer"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/Communication/d0c09c24-42bb-44eb-807e-6b3b22f6dbfc",
+      "<a href="http://hl7.org/fhir/R4/communication.html#Communication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/communication.html">resourceType</a>" : "Communication",
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.id">id</a>" : "d0c09c24-42bb-44eb-807e-6b3b22f6dbfc",
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-communication.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Communication_d0c09c24-42bb-44eb-807e-6b3b22f6dbfc\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Communication d0c09c24-42bb-44eb-807e-6b3b22f6dbfc&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;d0c09c24-42bb-44eb-807e-6b3b22f6dbfc\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcd0c09c24-42bb-44eb-807e-6b3b22f6dbfc\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-communication.html\&quot;&gt;MedComCareCommunication&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: urn:uuid:a036001b-7c8f-4f10-8aa1-cc8711223eee&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Unknown&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes regarding-referral}\&quot;&gt;Vedr. henvisning&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;priority&lt;/b&gt;: ASAP&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-2bc74be8-a622-4422-98c9-894b7c245d70.html\&quot;&gt;Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)&lt;/a&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;DateTimeExtension&lt;/b&gt;: 2024-09-06 17:15:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;IdentifierExtension&lt;/b&gt;: urn:uuid:24a4d8f0-6490-46ef-95bd-b699198fdc00&lt;/p&gt;&lt;p&gt;&lt;b&gt;PractitionerExtension&lt;/b&gt;: &lt;a href=\&quot;PractitionerRole-2308beab-7e2d-4958-9031-64b487d4f598.html\&quot;&gt;PractitionerRole Overlæge&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;ContactExtension&lt;/b&gt;: ph: 45645645&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: Til rette vedkommende. Som aftalt pr.tlf. dd. vedrørende ovenstående patient: Vi vurderer at funktionsevnen for Spise og for Drikke skal ændres til Moderat.\nHilsen Kim Petersen\nOverlæge&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;payload&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;DateTimeExtension&lt;/b&gt;: 2024-09-06 17:15:00+0200&lt;/p&gt;&lt;p&gt;&lt;b&gt;IdentifierExtension&lt;/b&gt;: urn:uuid:4ad37a69-99c9-4d68-9216-450267bb2a9a&lt;/p&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;: image/png: 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&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:a036001b-7c8f-4f10-8aa1-cc8711223eee"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.status">status</a>" : "unknown",
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.category">category</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "regarding-referral"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.priority">priority</a>" : "asap",
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.subject">subject</a>" : {
+          <a href="Patient-2bc74be8-a622-4422-98c9-894b7c245d70.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/2bc74be8-a622-4422-98c9-894b7c245d70"
+        },
+        "<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload">payload</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a>" : "2024-09-06T17:15:00+02:00"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:24a4d8f0-6490-46ef-95bd-b699198fdc00",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+                    <a href="Organization-630bbfae-6b43-46f8-9b51-98cdea34e46d.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/630bbfae-6b43-46f8-9b51-98cdea34e46d"
+                  }
+                }
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueReference</a>" : {
+                  <a href="PractitionerRole-2308beab-7e2d-4958-9031-64b487d4f598.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "PractitionerRole/2308beab-7e2d-4958-9031-64b487d4f598"
+                }
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueContactPoint</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "45645645"
+                }
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentString</a>" : "Til rette vedkommende. Som aftalt pr.tlf. dd. vedrørende ovenstående patient: Vi vurderer at funktionsevnen for Spise og for Drikke skal ændres til Moderat.\nHilsen Kim Petersen\nOverlæge"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a>" : "2024-09-06T17:15:00+02:00"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueIdentifier</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:4ad37a69-99c9-4d68-9216-450267bb2a9a",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+                    <a href="Organization-630bbfae-6b43-46f8-9b51-98cdea34e46d.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/630bbfae-6b43-46f8-9b51-98cdea34e46d"
+                  }
+                }
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/communication.html#Communication.payload.content[x]">contentAttachment</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "image/png",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">data</a>" : "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQUEhYUExUXFxYYGh4cGRkZGSMeHxwhHhsaIh8iHCIiIyoiJCInHiEYJTMjKSstMDAwHiI2OzYvOiovMC0BCwsLDw4PHBERHDgoIic0Ly8tLy8xLy80LTExMS8vLTEvMTE6Ly84Ly8vLy8vLy8vLy8vLzEvLy8vLy8vLy8vL//AABEIANIA8AMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcBAgj/xABCEAACAQIEBAQDBQYEBQQDAAABAhEAAwQSITEFBkFREyJhcTKBkQcUobHRFSNCUpLwU2LB8SQzgrLhFkNy0kRUov/EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACwRAAICAgEDAgUEAwEAAAAAAAABAhEDIRIiMUEEE1FhgZGhMnGxwULh8BT/2gAMAwEAAhEDEQA/AO40pSgFKUoBSlKAUpSgFKUoBSlKAUpXw9wKCToBQGvjL0Qg+J9B6dz8hXmAukrlb4l0P00Pzr5wQLE3D10UdlH670xkqwuDYaOPTv7iqW+4N6lfKma+quBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoDyoziHndbQ2+J9en99P0rbx+LW1ba45hVEmofhePW6ha2wZ2MtvoOgHoKyyTS0WjFvZXOfud2wV9LIAUG2GDZQdczCNTGgH41qcl89visQLRL3FdWB8iwsdSV1jpr3q7W1djFxRHcjb61l4gwRPJC5jEgR0Pb23rCWfjCWRppLZvGUa4cVb8mry54gzi4+YFiyazCnYekRse9TtUvBXPDcZN5O7Fp0PWdOv9irbhr4dQw2P4dwar6H1a9RC0qozzQ4yNilKV3GQpSlAKUpQClKUApSlAKUpQClKUApSlAKUpQClKUApSlAK8pVW5o40EcYcG4jnIwuDRYLEMJ3kAE6Dcr61DdKyYxcnSNri9g4kvaE5EBzdJYjSPbeojlLlm9ZfPcIUDYK05vfTT21rFh+MEKbZm1LMZG513kQYiNR0qW4PxMKcrs2uxY5gfZv9DXPxjKSlLubrnCLivJA/arwG/iVteHdtW7Sz4gcsWMkRlUHKYj0Pr0qF5eNvDkDDnEMo0yu0qx7lQRr1G2wqxXcNjrrM3goAxkTdGmm2x2Om3rWzh+WLrf8wIvs5Y/9oH41aa52q0aQUILqaf1MmA40gdc1sSTAYE6T1g7aetTFkm1eyH/l3CSp7N1HzqKxK4LBFDeMEkeZszKJ0BbdVE9Tt+NTuLsLdt6EagMrDX1BBHQ+nSohiUI1FJV4WjDJJSdo3q9qP4VizcTzCHU5XHqP1rfrdNNWjI9pSlSBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoDyqHzWwvDOWPhq2VN46SfwNWTjuMYZbVs+dzHqB3+v5GvcdwVHsi1/CBFZS6nS8F4Pi7OcteDAWy0lZCmfUQPzqR4Y+U6NOsEH8Qa+eI8oJaJbIxgzmUmRH97RVS5h4wto/eLSPKiHMQrajKWjtqJ06D2zcWnR1KacbOq2+KeG6IoY59RGw1qU43iXS0XtiWBGkEyJ10Gu1cmwX2lWjZtvbtzfEhgSIQmNYkZgY0MwOta/HOabpVWu3yFcAwjsCO20EfI1onJHPKnsi+Y7GNOIkYsF71yEXw8ok7JGoEba/Ou28o4W5awlq1dKFkXL5AQunv8A+PYVwi1za9q94lm4bwETbu7kf5H+IH3muu8pc32MVam2xUjRl0DIT0YGR7HUHpVoqtlZO1RNY/8Ac3ReE5H8tz07NU1VWxLYzxkUm1dwzmLjMMpUR6dZjoQY3WpHgWIMGy586fivT3/SKhdMq+JUmaUpWhApSlAKUpQClKUApSlAKUpQClKUApSlAKUpQHlYr95UUsxgASTWaoHjdw3biYdDBJzORuAP7+sVScqVg18FdclsTkZy3lVVI0URJE6xIj66a1tnjF3/APXf2k//AF71LWrYVQqiABAFZCaqoNLuTZBtxS6Qf+HcHYbnXppAEfP3iuV4nhPHrl4sWaMxiWIWJGgULAEdgJrqWO5lRCQil43MwP1rDg+YGbcLB2/v/Wao8kVpv8F1CXejnmN+y21ctoAl61cUAO1tARcaNWIJgCddO51qK4T9n3FED2vDtrZuDKxzgkjr5d5I081dzwuLV/Q9qzO4USSAPWtI049yrtM4ngfsshvOrR6A9++3bWrFwzkqxaYXLdnELdEjOLg19CMoDKexBH0roVviFpmyrdQt/KHBP0ma+rmIAJBmqPpVuRNt+CqWWxiuMltysbEhZHsZ79CKOcSrpe8IoE0cOy/DrOXLPppI6kVa7WIDGBvWwyyINTGpR07IejHYvBlDDYgEfOs1QXCybV5rB+Fpe2T26r8v171O1eLtFRSlKuBSlKAUpSgFKUoBSlKAUpSgFKUoBSvh2AEkwBvVM4lzvbJNuwddYeJ+ag/hP0qspqPctGLl2LXxHFC3bZz0Gnqeg+tVSxxyzhla7fb97c1ygeYDoIJn1k+m8VBrfxb3F8XEC5bknI9lJ0G48um419fWveJcOt3XzXFLHqwgQIJmNPXpv71yzy27Xg2jiSdSZIWftJRnCi0Qp/iLT+XX0qXuc22mQ+Uk7RI+s1WBwHArb8RmumIkAntvoNv9q+s2DIVbWca/zAiNTOkn5Csp55JaZp7UX2Rs4e3acyQVk6EHbp1HvUpheDsTAuKR3I1JmZgCJ22qHxVlEAay7XNdfLETsQdf7isGA4veW4TLafwienoNNRr69pFZw+ZLT8HQuH4AWxvJ/vaqVznwXEPfzoZRiAuYZ8rAErlAEr5p1JI1qycB4hcuETqsa776dTqfwrmfEftQvvjbXgh7dpWKPZe3qxkjMWE+kKOx76dyjGcaWjBOUZGfj1y7gRa+8FUztIfOWGkSHgMwImIHlPQgnTc4Vzj97vCxZJFxRlUgnJdCyc6E7aT5Wg6aelf564g2OvWrr2EXDraC3cxBe0Wcg6gxvlK6azOx0jbX3bh12xfsXLl1nD5gwFsooygAqJUk5m19DWWTBilBxf4NoLLJppL+vqdV4PzBYSxexN2+rpa0uFfNlMxAjckwBGmtS/DObMJfuLbtXVZ2UOF2MH366HTeuQX+BDFLdTAqMPhVQ3TN05bvlWRdzMICmYMQBJ1mqzy3xXDriEa8zW7dppzJOYZdgjdmIjWAJ3GlW9PBY4KMexOTHC25On8PgfpHjGDNxAyf8xPMh9eo07xX1wjia30LKGEHKZEeYbge1RS81W7tgXbIaXnJ4ilfZoO67ERvWLgU2PDzNmt3RE9nk6+zdfWp92Pu8V9f6OXjq2WulKV0lBSlKAUpSgFKUoBSlKAUpSgFKUoCv87YjJhH/wA0KY7HcfMAiuZYHS4DkAaNDv1E/UafOur8x8OF/Dvb0kiVJ6MNR676H0JrjPCuIhrvhnRwCMraHcdOu0SJrlzx3Z0Ynqi1NBXLpEw0+gOo07ifaaz2rZbMjGSyssD1UqNNRMQNNz0rRsIWGVZ9omfeZge31qYwuAuZmgEAjRm6EREDf9Z3rFI07FDzAFWFs2yIPn8PUT3BBEilyywJyZEHjM9tgsiNIjKT9PXYVeMTyJYu3CzFkJIIgKRMg7lZgkAlZisuH4Vg7C+Dlz7y6gCIOoEGYBJ0Gg1Ggqnttdzb3YvsQH39zqGSeozlY+qzW5ZxNzdgY7gz9ABP4V5e4bYcxbuQDsSIAmYjLKmddQBtE1K8B5fsqYe8hJEZQ0Zp7g6ms/bbdIhzilbJ7gVosA4uMR2IP5k/+aovFuQbDYy/cvNcuLcuG4lkOVRc0STlIYksDEEACNztfMXfuIAlgIqjdu3sIg+/51p4nGTmN5FJCEkqNu0TrOo01rpyxnHFUHT8s5oSUp20U7FckYYBkCvakyYuEzOsuXLNvB0PyNVG3ypeJtpirb+A7AG5bKtl31kExrG+89auvEcYxAdCYisnL/HsyMCpdMpnQkRG+nSK8uHqsnnfz7tHpRThBqPnujY4Dy3Yt2ja+8G4hS4kOkeW4pVhvtEaelROA5X4TgSpP767Mq14hoPoICD0JBPrWxzbj1whUBboRlBa4UlVJ2Ut8M+h12qqYbH4fEhxiHQsdVZFCFW1gSNSuw16Hoa7MbzNVKkvkcvtqcuUtkrxTnBWvLABtkEk7wPXtpBDetY7vNeIuG74KC5YkZbedCVCwAVBIYbToOp9aodjipzwP3TW1Krl3YzoCdD06zuanOTMRgzeyXc9rMoXyuQMwO+s77dvStI4uCdG9RekrO1cv8xG4y2ntt4gBzsCpUETI0M+kxqas1cmXDi1fS4l64jFQXW4YJzaDUR2g6dt5q18L4vdUrnDEEhSrEMdTupG/sfwrbD6hNKzjy+nrcS30pSuw5BSlKAUpSgFKUoBSlKAUpWK9cCqWYwAJJ9BQELzPjSFWzb1uXjlA7KdCT2/37VB8f5OsvZRCoYoNGiGnqQRqCTNa55kt2rr4m8rM7HJbVR8KfzE9ZGwEsYMA1HcT52vXYNlAttYNwhlJIkhp3KqO8AyNI3rmUk7b+n7GkYs1sLzi+Fmzibc5AcjCAWUHSD8JMb9ayH7SbJByWjMEjM4BJjsKxWSbyhsSAchZgSo1AVt1ygMCNZIAj1FbzYmxhlBaxbCkx4loADpEiNiOsx8oJzb+DN0l5RE8J58xOILL4IXoAltiSI6lgV/AVPXsLiLjBiBBUazJzCSCwIjcjafatocw4RYGeGMEKLZn01iPxr5tX8Vcv2xaQfdgZdm+I76TPeNvrVWlJ1ZNtbqiHfDuRorRt00Ekb7SGkxJ/0q62uF2rallU3CoJAmCxjbcCT66CegrBc4JbdmZmfzHaRAkQYkTHp6VvhfDXQzlG5309RFa48ai9mWTJy7EKnGXsWrmIx6WbNjy+Gqk3LqSYi5lBUmeqk1P4exaa1mEMrANmPURIP0rSfinp+P/itnAu93UgBR07ntWtp6M2/PkofPXEwt+3btEDKB4nudcpHoN/eOlTVvGraso4RArDKwUCJA009VH4Vyvi+JuG6ztqzMS3uTr+NWazxIvgbgYkwsjqZXUR6yK8fMuXbV/wAl8c25pMtPEeO4bwWsXbf7u6rLlVdNRtA1mdiBv2rlfKX2eYm+vjrl8NWYQWhnKHWBEQSIkkVM8l8XKY1b91T4IBts5BAQvENr0BABPQNXZ3BBDIRkOrCN9vMD7fXSurBGUIVJ/wCjpy1jaUfuUPC46yRDW1tOGksqKGkHUNK/WqD9qvArFlrOIwoFsXSVuIvw5xqGUdJEyBpoO5q98820XFJlVy11JbIpYSDAJgaEjT/praPCcPbw6/eUF1ycyownLOknsP8AbvVMUskJvk+leWYX8DnnALN67aN3E5ntlQqydwIGhGsaAA+9X3lTidhYKWQjqNBJP0knWOu9fGPvjQWwIjQbD6dvyrR4Zwu4We4i6ICxK9AP9f0qnuOU+n6G88kpLqejrWFvh0VhswBHzE1mrU4Y6G0ht/BlAX0AG1blewnaOBilKVIFKUoBSlKAUpSgPKrXMJa9et4dDpBa7qYyyNDHXr9O9THFcctm01xug0ExJ6Ae5qL4Dw1jaa7cZluXoYlTqo/hAPt+dYzfJ8V9f2JWtle5o5TuXGBRlVNBkAPm0gSVEgrvJ9Ndwabi+XsTbhBYhhbOQkL5zI0GVZMjQ5gDBI8o1rpWMVLYKnFX2M/CrgttqJ/Xbp3qv3sSssVe82XYszuUJjKCFUR2MNr3rnm0mbwcmVbC8LxISwpt3vEDTlMLtnzEKoMjUCAdJnQ1eOCctHPN1YUkyrFc24gjKNQwCyTGi6iT5ftLZukt495QQDKMyjYyACx7agGt/C8FVtFxd8nY+fsBIg/2KQdvt+SJSkjNa5MwisH8PUbAsY+kxU8uHULlAAERUVb4Iw//ACb+8/EDttuu3pWwnDXBJ+8XdfRI+XlrpWv8f4MnJvuyKGLYCJ+tZsPmuGCd6zngv+YmvtOFkaC4ynuACR9QR+FFGViz4HCF61v4dMggbVB47h7ooNzGXVDNlDEDKCZAkjYdBJGsbGKy/wDp+50xd7buO0H8Ijt86cmnqP8ABBQeauA3WxDNasMysZIWN+u8aVY+V+WGVJuJlPRTGnvGlafOOKOB8IPiMTce6WyqpiQsTrrGrDoflvUbybzHdvX/AAr967bkHI2aQT2M6A9tNSIrl4QU9x3+4tJlk4xyc11SqmAa95c5axlhfDbEg2+gKyw9jMfhW/xzEXMDg719TdxBtjMEZgOoEkgTlGrH0mufWPtjdhF6yUHe00H/APoN/pW04Re2i/uyqjqlvhQRQEIVh1KzPv8A71B8Z5Zu3rhcOokAGZiAdIXp9azYS011VP3jEWyQIVykidpyjf39qz3uFXlDMcZcA7lR2joe/pO1Q1Gca42voQpNPuaeH5KXLF24WHUDyj9SPQmp/hXB7VhctpQo9Kg+H4NnkJjbpI3BUgjWSYb5a1ocT4/bsGHxVxjnW02RAcmu7FZGh0O51g9xaPGC/TX2J6pE5gicPf8AB08G5LWumVt2UehJkCp+oPF8IN20Q1wudGRoAysNQVInTpGtbXA8ebtoMwh1JW4OzLv7d49atB06+xRknSlK2IFKUoBSlKAgua+Ppg7HiuCxLBFHdjJ/IE/KqZiucsRdQi262ycwU2xnEgbHQt22E+2ky32uL/waQYi8v/a9cjw2Ma2ZDQZJI1HeYjUGD9JrmyyfKkzoxQTjdF1wvGbhuOl/ztbKsFZs0gAZT/mYkmdBvHvfrHMCXrZFvRyvwnTX32rkuM5isKFe6Ge7BGVdToAZPmAgQupkjoBVfHH2DE2AVBMgXG8RuggO3m3iRJiazje68lpRTOn4rDXLVzzIcxadCYYyAOunQbmZPz+LrwUURoTn03IAhmUQBqQdYM6dakfsx4rcxmGcX8rG22TMBBIImD6jb2irHjeA2niUjSPKzLp6wY3qPadWiOaTplf8RWI9GBUH4ST/ABdesjWTPyNbGBxiW7wV8gfcA/GQNPLOpB067qR0JrOyYWy2U3VmZy5yxnrtr9fSa5Xz3jlONs3zmFsoFQLoQqu2+87gx71Cg09kppovXOf2gLaTJafI7g5XgHKQYMzoSOwmKg+BfaLfSzNy6uIymWdreU5Z1JCaeXUzppv3rn/Eglm54V8B8PdBa1c1kTOuaZlW0Ouo3kGtLD3PAueLZRvDRhLyWX+GPNHWQI9hW3U92QoxWqP0PwHnfD4kotskl51jQEdDO09KtNfmbB3mzjFWH8O2GDX7YJZEzQCwU6hZ6fwyIMTHfuX+K+Phbd1POWGkEaiYnXTbWtISbdMynBJWjW4jdxgd1NrD3bJkAHMCQejaMPTbX02qrY3G4iyGNlGto057TXA6CRB8MiLqfLTaAIq+picwkae+tYMZbBGptH0bSfxP5UnC/Jmco434eMtKFvtnEnw3uZiCf8NjofYqPetDC8AxLKgtWbqFZlzcUMTrEroumn0610XF8FQWHxCAWoUsyT5SBrJ6AxrpVD4BzS1zEm2AuXJmVhM6EA6fy66HuPWvN9RLLj7K1Vm+LDGa26fYsXFOM38Pg8mIuWCWGXw7rormevxhdNTvr2qu4TlnCY1FFgG1iCNfB81jTdnMZB0EI07aV0F8cblpkdA6lTmUw2b2nSar3D8IF8E2W8NBuiqQG0MmJ0Gs/h6nPB62OTSt13+BaeNw6aJ/g2CxiIFxCKzLobltxlYDSSGgg9xqKiftN5tbCeAhDMSmZsokTtqf6o+dS1tbtxRF1kAY5h/NmOs7b/PeqZzWP3oTEZQ4QkFmymC7QFYaEdhqRXXjyKL1Gr+ZXHiuVM1eWPtOLYm2t204QmCUQs2ug0HSSJ3Poax8b4c9vHPbQt5nJUrJBDk79jrBB/KsvLFzCiHAcs1zKudjAgSTEmYHT2qbuHEYljlxjow1ZFVUIB20hXAOsZprSXHJqWjohl/807S0/j8i/cr4B7OHRLjZnGrGZieg9hArTx7/AHbEre/9q9C3I6P0b5j8j1NVQYXFZ1yYrFZwAVylbikf5hlgg+8+9WzDYo3bL2sWAukMwYAEd9D5fcwPQbV0Sh0rj47HFKbcm35LGK9qE5exRhrFwzds+U/5l0ytt1EVN1aLtWVFKUqwFKVzPnr7VVwWIbDW7Ju3EUF2LZVUsAwG2vlIJOm/0Asn2g8KfEYN0txnUh1nY5Z0nppOtfn65dOfKwgx+v8ArNWfiP2k8TxBFu14YRwsjDWzceGEsvmmWAkEDSQdetRycp4+6He+fDQKwti8+Uj+UlUkLHUGPY1jOCk7Ncc3HRFOrsFXKAJnMQB0GkmJHpXy1gj+JQQf4QSZ/AdtjXmHTwmCX86NECRo22qtqGHqNKn7NhFAZco0k6zPUayY01isZNR0bxTlstXI73rNlxhrqM10hmL2zmUgZdFzae5makrvLXEMSf3uKule3wL/AEqQD9K5x+2Qk3LMuykRkPmEn+HqTqPhmJG1dG5B58a4Dbxhe2zMPCa5EGekgeXWIzeuvSrwd6kZzg1tEzY5StYXD3H+N0tuQB1IUmuRcdufeLIS6cl1doEjf4onqNCOldw5lDnD3gpIYowEe1cKu2DcvBQdySCNB33gmKjJSaoYtp2LPBb62tVt4qygLZE+NSdzlaCdP5Z/T5wuFxD4RbGHsZwW8xGkDy5lIcgFiQO/yqS4jwPEYa394BFxBuUYGJ08yssEagdd9qim43eYDIiqCdx5YPYx1mdKzjJy2jRpLybqcMxFm4r2kt4dmEXELhkbYSFXMNRuDoeldi+z3EWxhrdlP/bUJIUgEqBMfnEn3Ncw4NwPFXWz3XthY/zFvx0ronAcK1pERHmGBAGgEb6ayTpInvSGTr7kZIriTuM8Q3CE0EmSP9eu3vXybNz+JgR1k6VuwB+tAwrtOQjHtnwTBkw2225/hMg+s7+lUy7wZUuNiEtAW2QNKxoGCsVE9M2w9q6Fi7yW8zNATLPzHQep009KofMPFjZwmHtEDMLaeKp1A+EQfUEN9K5PVwUo0zXHlcNogb/NlxWgZFXYBgSCI9BP5T2FfZ4iLi57bbRmALCJMDQgSCYA+W0iqdiLlq45J/dXNZzEvbOWZiPODGo+Ia1nwWOe15gMwGmcQbTakGAoKkREiR6hSa5I+njGNRVELLK7bsvXLvHYeHk66Gfl+tZvtGwa37diVzajzg5SqkHM2uhAOUwR3661WLeH8VkNkNDGB5fgP5xoYM+8ndg+N22uLYuKzBJQMGZCwBbz6nYmQJB233jbEnWzb3FBqSKqnGEw6JbHndbhuFtQAGCgLG+oEnaCRGxmz8B5sw7sga7dsldgTKHSIOWCAd5g1Ted+GKt+5dsOblq42YT8Sk/ErjcMGn5RVZVyK7FjhLdGOTI8j6jpnHuBY7EXFv4m9bezIy+HmeyJIAVFmZJIABBYk6961+GcNtJfZxmwxthkcrnRgwaPEsvJEDSU1GWdWkkVnl7mjE4Zpss0R5l3UjrmG0e9XDgWMsYxgLJt4a6Mo8I6WWImI8sqGJKnVhrECRUTUkrTMmi4ctcSxovq+ZcRatpma4EAc2mgxKkK2kH4RqNCdZ6vZuBlDDYgEexrivDrN/C3Cn8Vlii5Q0m23myEtbIMTpE5hGugroXJfEJBssGWBmthwQ2U6kEHqpjqapCfVT8kp2W2lKV0g8qscd5cwZvffr1lDctLJczsoMSs5WI6EgkadhFnrm/2r8zCyngjU/E0EzMaKY20IM/+apOVItFW6I3A8TL3bmIVlZrkAECQq6aL02yj5GtqxxN9AxziQYbrr6QY/DuDXJLeIsqS9h7uHf+LQujHXQxI77ipLh/PTLpeRXH81owT7qSK5uEl2OlKKOncStYbEoLd5CkLAO4nSCGHmUj2iuccwctthTJVL1pvgulZA12Ygj67T2qdw/MK3EDWEZu+YZQI7mfyq68gYNL1m8bpDMxAZMsKogxoerST7RNIycnxYkuC5HKrT3VWFw9lDO+vwnaBJEx11jStN+Fv5rjXnMjzKD016D2O0a12S/9m+FBLs7qg80ZhlWNdJEj5GvOB4PhocgWgGBAV7vmLAnQgtJGvep4tPbSK+5a0rILhfMWMu4DEXGAZkyi08DOwJGclR/KpJB0kg77mmJh72IuoLcWyolmuA6hgQAABqdK6/z1+6wdw2dGBXNl3CyJge34TVJwXH7mItPYW2HZgRJYKFPRp7g7RrWXqJOMkvkaYVcW0aLcPxQIsXmtPYuAh3BnKBGmUiZOw6b6ipvB8NwNjzJZt5hHmZR9ROg+VVW5wTF4Y+NiHVtFQFWzLGpMkgEHbpGu9ffjFvhOcnSAc3yrB3HS/BpXLZe/vFm6jLorxoy6a+vQ+1aPKPEW+8Laub5ip9wf1qu8Ow2IS6AbbIIzFnEKqjdiT0FWTgvLs3De+8BiWzJ5YAYmV6zvFTGLck/+ZWdJNFxFwq7mZE6dtJmvTi5WRHt1rXx1ohkJgCSdDO5Gh0G3es9zErHrr0PSvTXY4X3FgM6IGOVoBaOhy6xPrVI4rxC399exesqbYAUeIu40gydwfMZ6yO1Wq5jhYw9zE38wVBJAgmNBpsJJiuacV58w165nWzfZRAkXAjRI6AER6Zu0xNVyQclSLwq9okcMOCYhpW0VZiGnxbiCe480DftBrTv8o4JXBsXMQjTI8K4rdNhCEx8+gqj8fv2PGL4R2NtzItspW5bPUHowmYIJ7dJO/wAr8QuBbhJJRQNviUyNV66aaetZvH8zSKg3TOm8m8uWrNxrpZw7SPOoUtMHVRGx2JE71X+P8pYo8T/cBfCb96XZoVSx84keYmZI0MTtAqV4Dxe9dIF2AQBF1pAcHTtqR3A96tV/AEgPdur4cGTmIEepjT8Kpv8ATVlZ46dM5NxZDbuXrGJtw6tOYbsDGUoyp5hl1nL6GIqL4hgcPdARnuoWEqCg3BPmHmjLroNNzXT+Y+XsJirtu+L9xSqBVNuCpAZjImf5jqPSqbjcbhrWIa21p75tkIr3bkGcuphANfcaaa1RpxfSzBqmYeSWtYK5nQFgykXC4ElV1MiSIMsI/wAhmtri3JuBuFsfg8R4WGhmdQjsEIaGyKoLZd5EQIn4dBXLvEpcvb8hUsMikysuxBGYmUymDvsZ3qzcg8wslw2rzMyOpZYWQpB1BCwFkFjmA9TXXBWtmlWiV5a5qRGNu8tzGWMnlvLhXzSCIDAprpMGdu/SZ4jzJ4nhnC4HEo9pgUZ0W0I6rDODBHoPxNVLj3AeInEP93d7lnRkY3CIDAGD7TH0qPHLHET8V1E/+V5v0iqNKKplVCT7I7fY5hsHIGYq7wMpUmCehIBXfrMVM1+e05Lx4v27bX0Rn1UtcYqSDt8O/pX6DFaRlZBqcTxXhWnuROVSQO56D61RON8nvfwDi4qHE3G8XO0+Rtco07AkEbanep7ifELN2+qPcRbdsgmXADsQYWDoRHbWT0ymZG7zDhRIN637Bp/Lr6b1m3GUrb7FlaPzjjOCNZcJiENl+lxDKkz8gPX+zXziuFX1GaLV9e7AT9QfbrXduMpw/EKy3LiwAJkbTsNt/TfbuKrI5O4Sqsr4glZ1UXGXX2WCT9YqJNeGjWORVtHNOC20BzWrGW5szZiVA7iSBv7/ACrsnJ7tgsKWxl1URjKBgFYkyWMaEzpAOo9Kw8v4HhGEYm3ezEbeI7OF/wDgCI/OpHjmK4XiCPGe3cZZynzGPmo29KoqT5WvuTLImuNaKpzBz9458OyjXADoqjT/AKyf9vzqt3OKutwPfvW0USPCSGJ02Y9D6a1scQ4eitlt3Vu22k5EBsqu5EiJY+1feF4LaBzThEMTLG4za/8ATr7DasZSUntmkXFLRPcr8SS44NxQLd3yNJ3H8BPsdPatjmflIoVbCWCsE5ltwM0xrrAkVqWOH2oGbH2UWAYS0SY7ebr6RPpV9tcz4NQF8dTlAE666d419e3WtIKLTjJqv3KTyVJOJXeCcGuC213GStsCcjwY6awSOp+o7VrcR4NhvD8XD2lV1IMgDNGx0H+lWTinMWCuW3tm+hzCNJ9IiB3g1RExgstmGItkhoAUmI11J/sa1hn6VxhTj53snHLk+Uu5YsLh7tzDXfE0QIw8wOxHm032qJ4LhfAAvZxdAI0BIK+oBJB96sGD5msNYYXLyBjIA1OkdYHWqtwzjFu07W1uJknTQj57VSUajHi7/ktGf6kzoF7ETbtF1KljEdpmPwE1jxDLlJkkgH++lenjeFYR94tHKBPm/H+9qwJxvBL5vvFs/Mn8K9NTjXdfc5GtmbmPAi9h3tMudSBmUEgsAQSAQQQdN65M/K+FZiBbc+YkgXHBAjYDLJggnqTm17Drf/qPCCf+It6es1B8fxlm6uWzjLSgnXPLRvEHcf300rPJJPcX+TSEq00VHh3LuDsP4pt+IxjJnJMGNTG4MzuOlWfh+ItorXLVq0vc5RIjuTrprUJheDWif3mOslRrKgyNdB5usT0ka1OLbwqrlW/a6SM0gz7/AN96w6u9/k0cosqXMHFTdL3TdDuIUBdtNYH1qFw/OzeIlrFKfCRpyROuhDMCIJGhHQb7wavBNhSUtmxk6WwUygjfynQfSa0+K8q4bEtZuXb9iy6KfGVHBFwDKV2OhAzCdyCOwq2NJNuy3uLyiWx5Bw4v2m8jAMrvsBrObplPcxHeqHxzlq4zoFZC9wZozAE67hphv7+XVsRjsOLPhWcRZQBQoGfKAogQCNpXaNeoqnpyvYRGW1i7D2ScxtO/lSTvbaSUYd/rNROKTuL/ACcs9vRB8Y5LVsPaZrltLyKAZgqSNG9dwRI6iq3wnhONt37T20DAMCHEFSBvroYia6nwfl7AYZmP3lGnzEPcEH10gN+Ne4rBpcvOfvllUJAgOJG2g2H9+9WeTJFap/U0xRi31ukafEOMPCoCWbfKsGW0306RoKhOZLl67cWw4FvMN2YBZAJC3CdVHw6zsR0M1Kjht+2x+74zA2/Uqbj7xuTvpqANKh8Twu4l03MRifH8RxnayCcmVQAUBzZlg+ZRpDCBpFUWNt8pStnQ8kJdENL4/E2cHxGUtojXL7re8NIQqguM2aB10hjmG8CdNuu8KxfiWwxkMNGBEQw36n86gOXPu1uzat57D5DKMoGra65QoAeO2u5gVt4bFW/HNyywdLkC5kE5SM0MSOhOh03+dbQSi7T7nHVaJHCYO2yLmRG0G6g+v51k/Zdj/Bt/0L+lKVddgepw60NrVseyD9K8/Zln/Ct/0D9KUqAZLuGQrBRdo2G3b2r5u4K3/hp/SKUq9EHn3C1B/dprE+Ua++lP2fa1/dW/6B+leUqhJ4/D7X+Gm6n4RuDodt69/Zdj/Bt/0L+lKUoHyeH2spHhpER8I219K8PDbOYnwrclYPkG30pSoBkucOtHe1bPug/Svj9k2Nf3NrXfyLr76V7SgPf2fa837tP6R/KPSvv9n2v8NP6R+lKVpRB8LgLQaRbQHNPwjfLvtX2cFb0/dppt5Rp7UpQH19zt/wAif0ivn9n2v8NP6R+lKUB5+z7X+Fb/AKB+lY34fa837tOn8I/SvaVUk9/Z9r/DTb+QfpXh4dZn/lW9/wCQfpSlVB928HbEQiD4tlHU61l8BdPKNNtBXtK0IPnwV/lHXp33p4S9h8MbdO1KVYH2FHavMo7UpVgf/9k=",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.title">title</a>" : "madpyramiden"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/PractitionerRole/2308beab-7e2d-4958-9031-64b487d4f598",
+      "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a>" : "2308beab-7e2d-4958-9031-64b487d4f598",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/core/3.0.0/StructureDefinition-medcom-core-practitionerrole.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;PractitionerRole_2308beab-7e2d-4958-9031-64b487d4f598\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole 2308beab-7e2d-4958-9031-64b487d4f598&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;2308beab-7e2d-4958-9031-64b487d4f598\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc2308beab-7e2d-4958-9031-64b487d4f598\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/core/3.0.0/StructureDefinition-medcom-core-practitionerrole.html\&quot;&gt;MedComCorePractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-e9b0072b-d261-47d9-861d-0165525da25d.html\&quot;&gt;Practitioner Kim Petersen &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ overlaege}\&quot;&gt;Overlæge&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+          <a href="Practitioner-e9b0072b-d261-47d9-861d-0165525da25d.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/e9b0072b-d261-47d9-861d-0165525da25d"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "overlaege"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/Practitioner/e9b0072b-d261-47d9-861d-0165525da25d",
+      "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "e9b0072b-d261-47d9-861d-0165525da25d",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/core/3.0.0/StructureDefinition-medcom-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Practitioner_e9b0072b-d261-47d9-861d-0165525da25d\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner e9b0072b-d261-47d9-861d-0165525da25d&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;e9b0072b-d261-47d9-861d-0165525da25d\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hce9b0072b-d261-47d9-861d-0165525da25d\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/core/3.0.0/StructureDefinition-medcom-core-practitioner.html\&quot;&gt;MedComCorePractitioner&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Kim Petersen &lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Petersen",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Kim"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/Organization/630bbfae-6b43-46f8-9b51-98cdea34e46d",
+      "<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/organization.html">resourceType</a>" : "Organization",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a>" : "630bbfae-6b43-46f8-9b51-98cdea34e46d",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/messaging/4.0.0/StructureDefinition-medcom-messaging-organization.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Organization_630bbfae-6b43-46f8-9b51-98cdea34e46d\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Organization 630bbfae-6b43-46f8-9b51-98cdea34e46d&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;630bbfae-6b43-46f8-9b51-98cdea34e46d\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc630bbfae-6b43-46f8-9b51-98cdea34e46d\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/messaging/4.0.0/StructureDefinition-medcom-messaging-organization.html\&quot;&gt;MedComMessagingOrganization&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://www.gs1.org/gln&lt;/code&gt;/5790001353308, &lt;code&gt;urn:oid:1.2.208.176.1.1&lt;/code&gt;/330461000016004&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Sundhedsplejen, Aabenraa kommune&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://www.gs1.org/gln",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "5790001353308"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.208.176.1.1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "330461000016004"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "Sundhedsplejen, Aabenraa kommune"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/Organization/585e0101-8450-4126-b049-19b19c42e2dd",
+      "<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/organization.html">resourceType</a>" : "Organization",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a>" : "585e0101-8450-4126-b049-19b19c42e2dd",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/messaging/4.0.0/StructureDefinition-medcom-messaging-organization.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Organization_585e0101-8450-4126-b049-19b19c42e2dd\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Organization 585e0101-8450-4126-b049-19b19c42e2dd&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;585e0101-8450-4126-b049-19b19c42e2dd\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc585e0101-8450-4126-b049-19b19c42e2dd\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/messaging/4.0.0/StructureDefinition-medcom-messaging-organization.html\&quot;&gt;MedComMessagingOrganization&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://www.gs1.org/gln&lt;/code&gt;/5790002408496, &lt;code&gt;urn:oid:1.2.208.176.1.1&lt;/code&gt;/1017421000016003&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: 2100 Lægehuset Østerbro&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://www.gs1.org/gln",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "5790002408496"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:1.2.208.176.1.1",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1017421000016003"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "2100 Lægehuset Østerbro"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "https://medcomfhir.dk/ig/carecommunication/Provenance/4e64df0c-6452-4505-8189-b3ae0c0e3d8b",
+      "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/provenance.html">resourceType</a>" : "Provenance",
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.id">id</a>" : "4e64df0c-6452-4505-8189-b3ae0c0e3d8b",
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-provenance.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Provenance_4e64df0c-6452-4505-8189-b3ae0c0e3d8b\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Provenance 4e64df0c-6452-4505-8189-b3ae0c0e3d8b&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;4e64df0c-6452-4505-8189-b3ae0c0e3d8b\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc4e64df0c-6452-4505-8189-b3ae0c0e3d8b\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://medcomfhir.dk/ig/carecommunication/5.0.0/StructureDefinition-medcom-careCommunication-provenance.html\&quot;&gt;MedComCareCommunicationProvenance&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;Provenance for &lt;a href=\&quot;MessageHeader-2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c.html\&quot;&gt;MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Summary&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Occurrence&lt;/td&gt;&lt;td&gt;2024-09-06 17:15:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Recorded&lt;/td&gt;&lt;td&gt;2024-09-06 17:15:00+0200&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Activity&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\&quot;&gt;A new message has been sent&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Agents&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;who&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Organization-630bbfae-6b43-46f8-9b51-98cdea34e46d.html\&quot;&gt;Organization Sundhedsplejen, Aabenraa kommune&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">target</a>" : [
+          {
+            <a href="MessageHeader-2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MessageHeader/2dd1d41f-4fc5-40e7-8fd6-850bbc3cc22c"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.occurred[x]">occurredDateTime</a>" : "2024-09-06T17:15:00+02:00",
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">recorded</a>" : "2024-09-06T17:15:00+02:00",
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.activity">activity</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "new-message"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent">agent</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.who">who</a>" : {
+              <a href="Organization-630bbfae-6b43-46f8-9b51-98cdea34e46d.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/630bbfae-6b43-46f8-9b51-98cdea34e46d"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity">entity</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a>" : "source",
+            "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:24a4d8f0-6490-46ef-95bd-b699198fdc00"
+              }
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.role">role</a>" : "source",
+            "<a href="http://hl7.org/fhir/R4/provenance.html#Provenance.entity.what">what</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:4ad37a69-99c9-4d68-9216-450267bb2a9a"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:fhir@medcom.dk"></a>.  Package medcom.fhir.dk.carecommunicationtestscripts#5.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 6, 2025 09:30+0000">2025-11-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
