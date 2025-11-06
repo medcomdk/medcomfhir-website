@@ -1,0 +1,38 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunicationtestscripts/PractitionerRole/fd823675-9a45-4cf6-9348-5b9806e8385f> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fd823675-9a45-4cf6-9348-5b9806e8385f"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole fd823675-9a45-4cf6-9348-5b9806e8385f</b></p><a name=\"fd823675-9a45-4cf6-9348-5b9806e8385f\"> </a><a name=\"hcfd823675-9a45-4cf6-9348-5b9806e8385f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/3.0.1/StructureDefinition-medcom-core-practitionerrole.html\">MedComCorePractitionerRoleversion: null3.0.1)</a></p></div><p><b>practitioner</b>: <a href=\"Practitioner-4d528261-ef8c-4f83-ab61-deb5b5e6823e.html\">Practitioner Michael Burns </a></p><p><b>organization</b>: <a href=\"Organization-5007be8f-49dd-48ae-9808-66270aef1865.html\">Organization Arden Lægehus</a></p><p><b>code</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ sygeplejerske}\">Sygeplejerske</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Practitioner/4d528261-ef8c-4f83-ab61-deb5b5e6823e> ;
+     fhir:reference [ fhir:v "Practitioner/4d528261-ef8c-4f83-ab61-deb5b5e6823e" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Organization/5007be8f-49dd-48ae-9808-66270aef1865> ;
+     fhir:reference [ fhir:v "Organization/5007be8f-49dd-48ae-9808-66270aef1865" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "sygeplejerske" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

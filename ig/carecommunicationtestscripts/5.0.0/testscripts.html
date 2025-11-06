@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Testscripts - CareCommunication Test scripts v5.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CareCommunication Test scripts</span>
+            <br/>
+            <span style="display:inline-block;">5.0.0 - release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="testscripts.html">Test scripts used in TouchStone</a>
+  </li>
+  <li>
+    <a href="testexamples.html">Test examples for test protocols</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts Summary</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Testscripts</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the CareCommunication Testscripts (v5.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/carecommunicationtestscripts/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Testscripts</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#before-getting-started" id="markdown-toc-before-getting-started">Before getting started</a></li>
+  <li><a href="#send-carecommunication-test-scripts" id="markdown-toc-send-carecommunication-test-scripts">Send CareCommunication test scripts</a></li>
+</ul>
+
+</div>
+<p>The test scripts are created by MedCom for testing in <a href="https://touchstone.aegis.net/touchstone/">TouchStone</a> during MedCom test and certification. The test scripts may be used locally by vendors in their own testsetup, e.g. during code development or test.</p>
+
+<p>Test scripts are based on the <a href="https://www.hl7.org/fhir/testscript.html">FHIR TestScript resource</a>.</p>
+
+<p>TouchStone and an application programming interface (API), e.g. Postman, or the system under test (SUT), are used to execute the test scripts.</p>
+
+<h3 id="before-getting-started">Before getting started</h3>
+
+<p>Use cases described in the <a href="https://medcomdk.github.io/dk-medcom-carecommunication/#12-use-cases">use case document</a> forms the basis for the tests.</p>
+
+<p>In addition to test scripts based on the use cases, test scripts testing the technical aspects are included. They will focus on the technical tests within the boundaries of the CareCommunication standard and governance. All tests are used to support the test protocols for sending CareCommunications.</p>
+
+<h4 id="touchstone-and-api">TouchStone and API</h4>
+<p>Before getting started with test script execution, it is necessary to have an account, be a member of MedComs Org Group, and to create a test system in TouchStone. Please follow <a href="https://medcomdk.github.io/MedComLandingPage/assets/documents/TouchStoneGettingStarted.html">this guide to setup an account and test system</a>.</p>
+
+<h4 id="test-script-naming">Test script naming</h4>
+<p><strong>Use cases:</strong> The name of the test scripts is constituted by CareCommunication_TestScript_[send]-[type], describing the type of messages being sent, for instance CareCommunication_TestScript_send-new-message.</p>
+
+<p><strong>Technical cases:</strong> The name of the test scripts is constituted by CareCommunication_TestScript_[send]-[tec]-[number]. For instance CareCommunication_Testscript_send-tec-02.</p>
+
+<h4 id="test-examples">Test examples</h4>
+
+<p>Test examples are, in TouchStone testing, called fixtures. When testing the CareCommunication standard, the fixtures are previously sent CareCommunications. The fixtures are already uploaded in TouchStone. During setup of a test, all relevant fixtures will automatically be uploaded to the server that is used during test. From an API it is possible to request relevant fixtures. Timestamps in fixtures are defined to be added to the fixture when the test is executed.</p>
+
+<p>All fixtures are based on the test patient:</p>
+<ul>
+  <li>Name: Bruno Test Elmer</li>
+  <li>CPR-nr.: 250947-9989</li>
+</ul>
+
+<h4 id="operations">Operations</h4>
+
+<p>When sending a CareCommunication, a POST operation is required for all types of messages, and must be used for both the preconditional messages and actual messages being sent. The POST operation should be used from the API or SUT, and each posted message will be validated against the CareCommunication IG. Further, a number of asserts will test for correct concent of the CareCommunication message. The endpoint of the POST operation depends on the setup of the testscript, but it migth be similar to: <code class="language-plaintext highlighter-rouge">http://touchstone.aegis.net:49917/fhir4-0-1/Bundle</code></p>
+
+<p>When receiving a CareCommunication, which is the cases is a precondition, a GET operation must be used from the API or SUT. When using the GET operation a fixture will send from the server, which can be visualized in SUT.
+The endpoint of the GET operation depends on the setup of the testscript, but it will be composed by the server endpoint, Resource type and id. It migth be similar to <code class="language-plaintext highlighter-rouge">http://touchstone.aegis.net:49917/fhir4-0-1/Bundle/b10620cb-e2e6-436e-9185-c35f7e196cea</code>.</p>
+
+<h3 id="send-carecommunication-test-scripts">Send CareCommunication test scripts</h3>
+<p>To execute all the test scripts, both POST and GET operations must be used.</p>
+
+<p>Since forwarding is optional, the test scripts regarding forwarding are optional as well.</p>
+
+<p>The Conformance suite for all CareCommunication test scripts, can be found here: <a href="https://touchstone.aegis.net/touchstone/conformance/suites?name=FHIR4-0-1-CareCommunication-send-Client">conformance test suite.</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:fhir@medcom.dk"></a>.  Package medcom.fhir.dk.carecommunicationtestscripts#5.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 6, 2025 10:57+0000">2025-11-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

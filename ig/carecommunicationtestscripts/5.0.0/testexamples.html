@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Testexamples - CareCommunication Test scripts v5.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/hl7-dk.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+          <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a no-external="true" id="hl7-logo" href="https://www.medcom.dk">
+            <img src="assets/images/dark-medcom-logo.png" alt="Visit MedComs website" height="50"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CareCommunication Test scripts</span>
+            <br/>
+            <span style="display:inline-block;">5.0.0 - release
+
+
+
+  <img src="assets/images/dnk.svg" alt="Denmark flag" title="Denmark" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="testscripts.html">Test scripts used in TouchStone</a>
+  </li>
+  <li>
+    <a href="testexamples.html">Test examples for test protocols</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts Summary</a>
+  </li>
+  <li>
+    <a href="downloads.html">Download</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Testexamples</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">This page is part of the CareCommunication Testscripts (v5.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. No current official version has been published yet.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/carecommunicationtestscripts/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Testexamples</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#test-patientcitizens" id="markdown-toc-test-patientcitizens">Test patient/citizens</a></li>
+  <li><a href="#naming-convention-for-test-examples" id="markdown-toc-naming-convention-for-test-examples">Naming Convention for Test Examples</a></li>
+  <li><a href="#test-examples-for-sending-a-carecommunication" id="markdown-toc-test-examples-for-sending-a-carecommunication">Test examples for sending a CareCommunication</a></li>
+  <li><a href="#test-examples-for-receiving-a-carecommunication" id="markdown-toc-test-examples-for-receiving-a-carecommunication">Test examples for receiving a CareCommunication</a></li>
+</ul>
+
+</div>
+<p>The examples presented below are intended to be used in the test protocol for sending and receiving CareCommunication. Testprotocols can be found on the <a href="https://medcomdk.github.io/dk-medcom-carecommunication/#2-test-and-certification">GitHub pages for CareCommunication</a>.</p>
+
+<p><em>Note: The narrative text in the test examples is not representative of what should be included in the narrative. Find <a href="https://medcomdk.github.io/MedComLandingPage/assets/documents/GeneralGovernanceFHIRStandards.html">MedCom Governance for narratives here</a></em></p>
+
+<h3 id="test-patientcitizens">Test patient/citizens</h3>
+<p>All examples include are based on the test patient:</p>
+<ul>
+  <li>Name: Bruno Test Elmer</li>
+  <li>CPR-no.: 2509479989
+and</li>
+  <li>Name: Peter Hansen</li>
+  <li>E-CPR: 0703921VJ5
+and</li>
+  <li>Name: Peter (unknown family name)</li>
+  <li>E-CPR: 1206550VK9</li>
+</ul>
+
+<h3 id="naming-convention-for-test-examples">Naming Convention for Test Examples</h3>
+<p>All test examples follow a structured naming convention to ensure clarity and consistency:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;S|R&gt;-&lt;ScenarioLetter&gt;-&lt;MessageType&gt;-&lt;UUID&gt;</code></p>
+
+<ul>
+  <li>S / R → Indicates whether the example represents a Send (S) or Receive (R) scenario.</li>
+  <li>ScenarioLetter → A letter (A, B, C, …) identifying the sequence or scenario number.</li>
+  <li>MessageType → Describes the type of message, e.g. new, reply, forward.</li>
+  <li>UUID → A unique identifier (Bundle ID) ensuring that every example name is globally unique.</li>
+</ul>
+
+<h3 id="test-examples-for-sending-a-carecommunication">Test examples for sending a CareCommunication</h3>
+
+<p><a name="l351">​</a><a href="input\attachments\SendExamples.zip">Download test examples for sending a CareCommunication (.zip)</a></p>
+
+<h3 id="test-examples-for-receiving-a-carecommunication">Test examples for receiving a CareCommunication</h3>
+
+<p><a name="l358">​</a><a href="input\attachments\ReceiveExamples.zip">Download test examples for receiving a CareCommunication (.zip)</a></p>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:fhir@medcom.dk"></a>.  Package medcom.fhir.dk.carecommunicationtestscripts#5.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 6, 2025 10:57+0000">2025-11-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" href="https://www.was.digst.dk/medcomfhir-dk-ig-" target="_blank">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
