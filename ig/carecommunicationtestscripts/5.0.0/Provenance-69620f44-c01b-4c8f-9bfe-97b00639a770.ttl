@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/carecommunicationtestscripts/Provenance/69620f44-c01b-4c8f-9bfe-97b00639a770> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "69620f44-c01b-4c8f-9bfe-97b00639a770"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance 69620f44-c01b-4c8f-9bfe-97b00639a770</b></p><a name=\"69620f44-c01b-4c8f-9bfe-97b00639a770\"> </a><a name=\"hc69620f44-c01b-4c8f-9bfe-97b00639a770\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/carecommunication/5.0.1/StructureDefinition-medcom-careCommunication-provenance.html\">MedComCareCommunicationProvenance</a></p></div><p>Provenance for <a href=\"MessageHeader-5c2cdf2c-bcbd-4c15-adce-6b862a84249c.html\">MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2024-11-10 15:20:00+0100</td></tr><tr><td>Recorded</td><td>2024-11-10 15:20:00+0100</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\">A new message has been sent</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Organization-409b87d3-398e-44cb-9246-35b47ff75cc4.html\">Organization Klinik for Ældresygdomme, AUH, Skejby</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/MessageHeader/5c2cdf2c-bcbd-4c15-adce-6b862a84249c> ;
+     fhir:reference [ fhir:v "MessageHeader/5c2cdf2c-bcbd-4c15-adce-6b862a84249c" ]
+  ] ) ; # 
+  fhir:occurred [
+     a fhir:dateTime ;
+     fhir:v "2024-11-10T15:20:00+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2024-11-10T15:20:00+01:00"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "new-message" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://medcomfhir.dk/ig/carecommunicationtestscripts/Organization/409b87d3-398e-44cb-9246-35b47ff75cc4> ;
+       fhir:reference [ fhir:v "Organization/409b87d3-398e-44cb-9246-35b47ff75cc4" ]
+     ]
+  ] ) ; # 
+  fhir:entity ( [
+     fhir:role [ fhir:v "source" ] ;
+     fhir:what [
+       fhir:identifier [
+         fhir:value [ fhir:v "urn:uuid:6abbaeaf-0c35-4212-9fc2-48d7b520ac69" ]
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
