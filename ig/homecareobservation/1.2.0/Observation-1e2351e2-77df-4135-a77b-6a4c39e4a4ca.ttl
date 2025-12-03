@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/homecareobservation/Observation/1e2351e2-77df-4135-a77b-6a4c39e4a4ca> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "1e2351e2-77df-4135-a77b-6a4c39e4a4ca"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation 1e2351e2-77df-4135-a77b-6a4c39e4a4ca</b></p><a name=\"1e2351e2-77df-4135-a77b-6a4c39e4a4ca\"> </a><a name=\"hc1e2351e2-77df-4135-a77b-6a4c39e4a4ca\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecare-observation.html\">MedComHomeCareObservation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.208.176.2.1 NPU01349}\">B—Basophilocytter; antalk. = ? × 10^9/L</span></p><p><b>subject</b>: <a href=\"Patient-733cef33-3626-422b-955d-d506aaa65fe1.html\">Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>effective</b>: 2023-09-12 10:38:08+0200</p><p><b>value</b>: 0.05 10^9/L</p><p><b>interpretation</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\">Not Interpreted</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:1.2.208.176.2.1"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NPU01349" ] ;
+       fhir:display [ fhir:v "B—Basophilocytter; antalk. = ? × 10^9/L" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/Patient/733cef33-3626-422b-955d-d506aaa65fe1> ;
+     fhir:reference [ fhir:v "Patient/733cef33-3626-422b-955d-d506aaa65fe1" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2023-09-12T10:38:08+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 0.05 ] ;
+     fhir:unit [ fhir:v "10^9/L" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NI" ] ;
+       fhir:display [ fhir:v "Not Interpreted" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
