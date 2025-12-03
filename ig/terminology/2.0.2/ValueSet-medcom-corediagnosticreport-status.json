@@ -1,0 +1,76 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "medcom-corediagnosticreport-status",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medcom-corediagnosticreport-status</b></p><a name=\"medcom-corediagnosticreport-status\"> </a><a name=\"hcmedcom-corediagnosticreport-status\"> </a><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html\"><code>http://hl7.org/fhir/diagnostic-report-status</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>Dansk (Danish, da)</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html#diagnostic-report-status-registered\">registered</a></td><td>Registered</td><td>The existence of the report is registered, but there is nothing yet available.</td><td>Modtaget</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html#diagnostic-report-status-partial\">partial</a></td><td>Partial</td><td>This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.</td><td>Del svar</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html#diagnostic-report-status-final\">final</a></td><td>Final</td><td>The report is complete and verified by an authorized person.</td><td>Komplet svar</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html#diagnostic-report-status-corrected\">corrected</a></td><td>Corrected</td><td>Subsequent to being final, the report has been modified  to correct an error in the report or referenced results.</td><td>Rettet</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html#diagnostic-report-status-cancelled\">cancelled</a></td><td>Cancelled</td><td>The report is unavailable because the measurement was not started or not completed (also sometimes called &quot;aborted&quot;).</td><td>Annulleret</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://medcomfhir.dk/ig/terminology/ValueSet/medcom-corediagnosticreport-status",
+  "version" : "1.8.1",
+  "name" : "MedComCoreDiagnosticReportStatus",
+  "title" : "MedComCoreDiagnosticReportStatus",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2023-10-31",
+  "publisher" : "MedCom",
+  "contact" : [{
+    "name" : "MedCom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.medcom.dk"
+    }]
+  }],
+  "description" : "ValueSet containing status codes for MedCom DiagnosticReport",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/diagnostic-report-status",
+      "concept" : [{
+        "code" : "registered",
+        "display" : "Registered",
+        "designation" : [{
+          "language" : "da",
+          "value" : "Modtaget"
+        }]
+      },
+      {
+        "code" : "partial",
+        "display" : "Partial",
+        "designation" : [{
+          "language" : "da",
+          "value" : "Del svar"
+        }]
+      },
+      {
+        "code" : "final",
+        "display" : "Final",
+        "designation" : [{
+          "language" : "da",
+          "value" : "Komplet svar"
+        }]
+      },
+      {
+        "code" : "corrected",
+        "display" : "Corrected",
+        "designation" : [{
+          "language" : "da",
+          "value" : "Rettet"
+        }]
+      },
+      {
+        "code" : "cancelled",
+        "display" : "Cancelled",
+        "designation" : [{
+          "language" : "da",
+          "value" : "Annulleret"
+        }]
+      }]
+    }]
+  }
+}
