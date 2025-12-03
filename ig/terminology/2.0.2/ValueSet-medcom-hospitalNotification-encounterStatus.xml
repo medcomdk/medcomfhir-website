@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="medcom-hospitalNotification-encounterStatus"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet medcom-hospitalNotification-encounterStatus</b></p><a name="medcom-hospitalNotification-encounterStatus"> </a><a name="hcmedcom-hospitalNotification-encounterStatus"> </a><ul><li>Include these codes as defined in <a href="http://hl7.org/fhir/R4/codesystem-encounter-status.html"><code>http://hl7.org/fhir/encounter-status</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-encounter-status.html#encounter-status-in-progress">in-progress</a></td><td style="color: #cccccc">In Progress</td><td>The Encounter has begun and the patient is present / the practitioner and the patient are meeting.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-encounter-status.html#encounter-status-onleave">onleave</a></td><td style="color: #cccccc">On Leave</td><td>The Encounter has begun, but the patient is temporarily on leave.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-encounter-status.html#encounter-status-finished">finished</a></td><td style="color: #cccccc">Finished</td><td>The Encounter has ended.</td></tr><tr><td><a href="http://hl7.org/fhir/R4/codesystem-encounter-status.html#encounter-status-entered-in-error">entered-in-error</a></td><td style="color: #cccccc">Entered in Error</td><td>This instance should not have been part of this patient's medical record.</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://medcomfhir.dk/ig/terminology/ValueSet/medcom-hospitalNotification-encounterStatus"/>
+  <version value="1.8.1"/>
+  <name value="MedComHospitalNotificationEncounterStatus"/>
+  <title value="MedComHospitalNotificationEncounterStatusCodes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-09-01"/>
+  <publisher value="MedCom"/>
+  <contact>
+    <name value="MedCom"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.medcom.dk"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet containing status codes for hospital notification encounter"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DK"/>
+      <display value="Denmark"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/encounter-status"/>
+      <concept>
+        <code value="in-progress"/>
+      </concept>
+      <concept>
+        <code value="onleave"/>
+      </concept>
+      <concept>
+        <code value="finished"/>
+      </concept>
+      <concept>
+        <code value="entered-in-error"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
