@@ -14,11 +14,11 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.homecareobservation</b></p><a name=\"medcom.fhir.dk.homecareobservation\"> </a><a name=\"hcmedcom.fhir.dk.homecareobservation\"> </a><h2>MedComHomeCareObservation</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation</pre><div><p>Communication between general practitioners and municipal acute care team.</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "1.2.0"] ; # 
+  fhir:version [ fhir:v "1.2.1"] ; # 
   fhir:name [ fhir:v "MedComHomeCareObservation"] ; # 
   fhir:title [ fhir:v "MedCom HomeCareObservation"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-12-03T12:37:39+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-12-19T07:53:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MedCom"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MedCom" ] ;
@@ -55,7 +55,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.0" ]
+     fhir:version [ fhir:v "7.0.1" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -1996,6 +1996,82 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/Bundle/ReceiveTestExample1> ;
+         fhir:reference [ fhir:v "Bundle/ReceiveTestExample1" ]
+       ] ;
+       fhir:name [ fhir:v "ReceiveTestExample1" ] ;
+       fhir:description [ fhir:v "Test Example 1 used in HomeCareObservation receive test protocol. Two observations without clinical or analysis comments and the requesting doctor's initials are known." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"^^xsd:anyURI ;
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/Bundle/ReceiveTestExample2> ;
+         fhir:reference [ fhir:v "Bundle/ReceiveTestExample2" ]
+       ] ;
+       fhir:name [ fhir:v "ReceiveTestExample2" ] ;
+       fhir:description [ fhir:v "Test Example 2 used in HomeCareObservation receive test protocol.\nWith a clinical comment and requesting doctor's initials are unknown. \nTwo observations: One with an analysis comment + an NPU code and the other without an analysis comment and a result using the MedComObservation valueset. \nBoth observations use a comparator ('<' or '>')" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"^^xsd:anyURI ;
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/Bundle/ReceiveTestExample3> ;
+         fhir:reference [ fhir:v "Bundle/ReceiveTestExample3" ]
+       ] ;
+       fhir:name [ fhir:v "ReceiveTestExample3" ] ;
+       fhir:description [ fhir:v "Test Example 3 used in the HomeCareObservation receive test protocol. E-cpr and no comments." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"^^xsd:anyURI ;
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/Bundle/ReceiveTestExample4> ;
+         fhir:reference [ fhir:v "Bundle/ReceiveTestExample4" ]
+       ] ;
+       fhir:name [ fhir:v "ReceiveTestExample4" ] ;
+       fhir:description [ fhir:v "Test Example 4 used in the HomeCareObservation receive test protocol. Many observations" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"^^xsd:anyURI ;
+         fhir:link <http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "Observation"
          ]
        ] ) ;
@@ -2171,6 +2247,20 @@
          ] ;
          fhir:title [ fhir:v "Profiles" ] ;
          fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "testProtocolTestExample.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "testProtocolTestExample.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Test Protocol Test Example" ] ;
+         fhir:generation [ fhir:v "markdown" ]
        ] )
      ] ;
      fhir:parameter ( [

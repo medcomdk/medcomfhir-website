@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation"/>
-  <version value="1.2.0"/>
+  <version value="1.2.1"/>
   <name value="MedComHomeCareObservation"/>
   <title value="MedCom HomeCareObservation"/>
   <status value="active"/>
-  <date value="2025-12-03T12:37:39+00:00"/>
+  <date value="2025-12-19T07:53:40+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -41,7 +41,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.0.0"/>
+    <version value="7.0.1"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -1140,6 +1140,50 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ReceiveTestExample1"/>
+      </reference>
+      <name value="ReceiveTestExample1"/>
+      <description value="Test Example 1 used in HomeCareObservation receive test protocol. Two observations without clinical or analysis comments and the requesting doctor's initials are known."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ReceiveTestExample2"/>
+      </reference>
+      <name value="ReceiveTestExample2"/>
+      <description value="Test Example 2 used in HomeCareObservation receive test protocol.&#xA;With a clinical comment and requesting doctor's initials are unknown. &#xA;Two observations: One with an analysis comment + an NPU code and the other without an analysis comment and a result using the MedComObservation valueset. &#xA;Both observations use a comparator ('&lt;' or '&gt;')"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ReceiveTestExample3"/>
+      </reference>
+      <name value="ReceiveTestExample3"/>
+      <description value="Test Example 3 used in the HomeCareObservation receive test protocol. E-cpr and no comments."/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ReceiveTestExample4"/>
+      </reference>
+      <name value="ReceiveTestExample4"/>
+      <description value="Test Example 4 used in the HomeCareObservation receive test protocol. Many observations"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -1239,6 +1283,14 @@
         <nameUrl value="profiles.html"/>
         <title value="Profiles"/>
         <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="testProtocolTestExample.html"/>
+        </extension>
+        <nameUrl value="testProtocolTestExample.html"/>
+        <title value="Test Protocol Test Example"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <parameter>
