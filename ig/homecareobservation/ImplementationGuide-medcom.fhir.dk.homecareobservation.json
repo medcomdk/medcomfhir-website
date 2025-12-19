@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.homecareobservation</b></p><a name=\"medcom.fhir.dk.homecareobservation\"> </a><a name=\"hcmedcom.fhir.dk.homecareobservation\"> </a><h2>MedComHomeCareObservation</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation</pre><div><p>Communication between general practitioners and municipal acute care team.</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation",
-  "version" : "1.2.0",
+  "version" : "1.2.1",
   "name" : "MedComHomeCareObservation",
   "title" : "MedCom HomeCareObservation",
   "status" : "active",
-  "date" : "2025-12-03T12:37:39+00:00",
+  "date" : "2025-12-19T07:53:40+00:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
@@ -42,7 +42,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.0.0"
+    "version" : "7.0.1"
   },
   {
     "id" : "hl7ext",
@@ -1378,6 +1378,54 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ReceiveTestExample1"
+      },
+      "name" : "ReceiveTestExample1",
+      "description" : "Test Example 1 used in HomeCareObservation receive test protocol. Two observations without clinical or analysis comments and the requesting doctor's initials are known.",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ReceiveTestExample2"
+      },
+      "name" : "ReceiveTestExample2",
+      "description" : "Test Example 2 used in HomeCareObservation receive test protocol.\nWith a clinical comment and requesting doctor's initials are unknown. \nTwo observations: One with an analysis comment + an NPU code and the other without an analysis comment and a result using the MedComObservation valueset. \nBoth observations use a comparator ('<' or '>')",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ReceiveTestExample3"
+      },
+      "name" : "ReceiveTestExample3",
+      "description" : "Test Example 3 used in the HomeCareObservation receive test protocol. E-cpr and no comments.",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/ReceiveTestExample4"
+      },
+      "name" : "ReceiveTestExample4",
+      "description" : "Test Example 4 used in the HomeCareObservation receive test protocol. Many observations",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Observation"
       }],
       "reference" : {
@@ -1487,6 +1535,15 @@
         "nameUrl" : "profiles.html",
         "title" : "Profiles",
         "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "testProtocolTestExample.html"
+        }],
+        "nameUrl" : "testProtocolTestExample.html",
+        "title" : "Test Protocol Test Example",
+        "generation" : "markdown"
       }]
     },
     "parameter" : [{

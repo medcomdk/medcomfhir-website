@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/homecareobservation/Provenance/babb316c-796c-4d10-b97b-45274b5a0c44> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "babb316c-796c-4d10-b97b-45274b5a0c44"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance babb316c-796c-4d10-b97b-45274b5a0c44</b></p><a name=\"babb316c-796c-4d10-b97b-45274b5a0c44\"> </a><a name=\"hcbabb316c-796c-4d10-b97b-45274b5a0c44\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p>Provenance for <a href=\"MessageHeader-36cb86f1-a01a-4115-a84d-9390aa0ddcbd.html\">MessageHeader: event[x] = HomeCare Observation Message (MedComMessagingEventCodes#homecareobservation-message); definition = http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition|1.1</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2023-09-12 13:00:00+0200</td></tr><tr><td>Recorded</td><td>2023-09-12 13:00:00+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes retract-message}\">A message has been retracted/cancelled</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Organization-a0330c62-fe29-4719-83fa-a94959084f29.html\">Organization Pleje og Rehabilitering</a></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://medcomfhir.dk/ig/homecareobservation/MessageHeader/36cb86f1-a01a-4115-a84d-9390aa0ddcbd> ;
+     fhir:reference [ fhir:v "MessageHeader/36cb86f1-a01a-4115-a84d-9390aa0ddcbd" ]
+  ] ) ; # 
+  fhir:occurred [
+     a fhir:dateTime ;
+     fhir:v "2023-09-12T13:00:00+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2023-09-12T13:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "retract-message" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:who [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/Organization/a0330c62-fe29-4719-83fa-a94959084f29> ;
+       fhir:reference [ fhir:v "Organization/a0330c62-fe29-4719-83fa-a94959084f29" ]
+     ]
+  ] ) ; # 
+  fhir:entity ( [
+     fhir:role [ fhir:v "removal" ] ;
+     fhir:what [
+       fhir:link <http://medcomfhir.dk/ig/homecareobservation/MessageHeader/489de4f2-0d8d-4de2-a7ce-ccb93568799f> ;
+       fhir:reference [ fhir:v "MessageHeader/489de4f2-0d8d-4de2-a7ce-ccb93568799f" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

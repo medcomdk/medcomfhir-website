@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home - MedCom HomeCareObservation v1.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>        
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
+            <br/>
+            <span style="display:inline-block;">1.2.1 - release
+
+
+
+  <span title="">DK</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="testProtocolTestExample.html">Test Examples - Test Protocol</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.2.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">1.2.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/homecareobservation/ImplementationGuide/medcom.fhir.dk.homecareobservation|1.2.1"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2025-12-19
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MedComHomeCareObservation</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#home" id="markdown-toc-home">Home</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+      <li><a href="#medcom-homecareobservation" id="markdown-toc-medcom-homecareobservation">MedCom HomeCareObservation</a>        <ul>
+          <li><a href="#medcomhomecareobservationmessage" id="markdown-toc-medcomhomecareobservationmessage">MedComHomeCareObservationMessage</a></li>
+          <li><a href="#medcomhomecareobservationmessageheader" id="markdown-toc-medcomhomecareobservationmessageheader">MedComHomeCareObservationMessageHeader</a></li>
+          <li><a href="#medcomhomecarediagnosticreport" id="markdown-toc-medcomhomecarediagnosticreport">MedComHomeCareDiagnosticReport</a></li>
+          <li><a href="#medcomhomecareobservation" id="markdown-toc-medcomhomecareobservation">MedComHomeCareObservation</a></li>
+          <li><a href="#medcomcorepatient" id="markdown-toc-medcomcorepatient">MedComCorePatient</a></li>
+          <li><a href="#medcommessagingprovenance" id="markdown-toc-medcommessagingprovenance">MedComMessagingProvenance</a></li>
+          <li><a href="#medcommessagingorganization" id="markdown-toc-medcommessagingorganization">MedComMessagingOrganization</a></li>
+          <li><a href="#medcomrequesterorganization" id="markdown-toc-medcomrequesterorganization">MedComRequesterOrganization</a></li>
+          <li><a href="#medcomproducerorganization" id="markdown-toc-medcomproducerorganization">MedComProducerOrganization</a></li>
+          <li><a href="#medcomcoremedia" id="markdown-toc-medcomcoremedia">MedComCoreMedia</a></li>
+        </ul>
+      </li>
+      <li><a href="#timestamps" id="markdown-toc-timestamps">Timestamps</a></li>
+      <li><a href="#modification-and-cancellation-of-the-homecareobservationmessage" id="markdown-toc-modification-and-cancellation-of-the-homecareobservationmessage">Modification and Cancellation of the HomeCareObservationMessage</a>        <ul>
+          <li><a href="#modify-homecareobservation-message" id="markdown-toc-modify-homecareobservation-message">Modify HomeCareObservation Message</a></li>
+          <li><a href="#cancel-homecareobservation-messsage" id="markdown-toc-cancel-homecareobservation-messsage">Cancel HomeCareObservation Messsage</a></li>
+        </ul>
+      </li>
+      <li><a href="#simplified-examples-of-the-homecareobservation-message" id="markdown-toc-simplified-examples-of-the-homecareobservation-message">Simplified examples of the HomeCareObservation Message</a>        <ul>
+          <li><a href="#homecareobservation-message-spot-test-and-ekg-image" id="markdown-toc-homecareobservation-message-spot-test-and-ekg-image">HomeCareObservation Message-Spot test and EKG image</a></li>
+          <li><a href="#homecareobservation-message-urinestix-and-refused-consent" id="markdown-toc-homecareobservation-message-urinestix-and-refused-consent">HomeCareObservation Message-Urinestix and refused consent</a></li>
+          <li><a href="#homecareobservation-message-tobs-with-clinical-and-analysis-comment" id="markdown-toc-homecareobservation-message-tobs-with-clinical-and-analysis-comment">HomeCareObservation Message-TOBS with clinical and analysis comment</a></li>
+          <li><a href="#modify-homecareobservation-message-1" id="markdown-toc-modify-homecareobservation-message-1">Modify HomeCareObservation Message</a></li>
+          <li><a href="#cancel-homecareobservation-messsage-1" id="markdown-toc-cancel-homecareobservation-messsage-1">Cancel HomeCareObservation Messsage</a></li>
+        </ul>
+      </li>
+      <li><a href="#terminology" id="markdown-toc-terminology">Terminology</a></li>
+      <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies</a></li>
+      <li><a href="#download" id="markdown-toc-download">Download</a></li>
+      <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
+      <li><a href="#quality-assurance-report" id="markdown-toc-quality-assurance-report">Quality Assurance Report</a></li>
+      <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<blockquote>
+  <p>This IG is developed to be part of a production trial of the communication between the general practitioner and municipal acute care team.</p>
+</blockquote>
+
+<h1 id="home">Home</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This implementation guide (IG) is provided by MedCom to describe the use of FHIR ®© in message based exchange of structured health data between the municipal acute care team and the general practitioner.</p>
+
+<p>This IG contains profiles for MedCom HomeCareObservation (Danish: Kommunale Prøvesvar). The purpose of the HomeCareObservation is to support digital structured communication of results and observations performed and produced by the municipal acute care team. The HomeCareObservation will be sent from the municipal acute care team to the general practitioner on the condition that the general practitioner previously has requisitioned the acute care team to perform an emergency visit. With HomeCareObservation the quality of the results and observations (hereafter mentioned as observations results) are increased as structured data concerning sender, producer of the results, analysis codes and clinical observations, among others, are part of the HomeCareObservation. This allows the general practitioner to easily create an overview of the citizens health data.</p>
+
+<p>The MedCom HomeCareObservation supports following content in relation to healthcare:</p>
+<ul>
+  <li>exchange of observation results that the municipal acute care team has performed, analyzed and produced</li>
+  <li>exchange of clinical observations (nursing assessments) that are necessary in order to understand and interpret the citizens overall results and health status</li>
+  <li>exchange of analysis comments that are necessary in order to understand and interpret individual analysis and results</li>
+  <li>exchange of relevant files (e.g. images or PDF)</li>
+</ul>
+
+<p><a href="https://medcomdk.github.io/dk_HomeCareObservations/#11-clinical-guidelines-and-documentation">More information about the clinical guidelines for applications can be found here.</a></p>
+
+<h2 id="medcom-homecareobservation">MedCom HomeCareObservation</h2>
+<p>The structure of a MedComHomeCareObservation is despicted on the following diagram:</p>
+<figure>
+<img alt="Shows the structure of a HomeCareObservationMessage. The HomeCareObservationMessage includes a MedComHomeCareObservationMessageHeader and a MedComMessagingProvenance. MedComHomeCareObservationMessageHeader references a sender and receiver organization, the MedComCoreOrganization and a focus which is a reference to a HomeCare Report. Form the HomeCareRepport is a MedComCorePatient and HomeCareObservation and a MedComObservationProducerOrganization. " src="./HomeCareObservation/HomeCareObservationMessage.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" id="Fig1" />
+<figcaption text-align="center"><b>Figure 1: Overview of the references between profiles in a MedCom HomeCareObservation. </b></figcaption>
+</figure>
+<p><br />
+<br /></p>
+
+<p>MedCom HomeCareObservation follows the general MedCom FHIR messaging model, except that the carbon-copy destination is not allowed to use. The following sections describe the overall purpose of each profile.</p>
+
+<h3 id="medcomhomecareobservationmessage">MedComHomeCareObservationMessage</h3>
+<p>The MedComHomeCareObservationMessage profile is used to bundle all observations and relevant information together. All referenced resources in the HomeCareObservationMessage shall be contained in the entry list in MedComHomeCareObservationMessage.</p>
+
+<p>The <a href="StructureDefinition-medcom-homecareobservation-message.html">MedComHomeCareObservationMessage</a> is a constraint of the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> further to use the <a href="StructureDefinition-medcom-homecareobservation-messageheader.html">MedComHomeCareObservationMessageHeader</a> and to require exactly one <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html">MedComCorePatient</a>.
+Furthermore, it contains rules that constrains the ValueSet of activities in the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> profile to only contain activities from the <a href="http://medcomfhir.dk/ig/terminology/ValueSet-medcom-HomeCareObservation-messagingActivities.html">MedComHomeCareObservationMessageAcitivityCodes</a> ValueSet, which contains activities such as new-message, forward-message, and other activities triggering the message.</p>
+
+<h3 id="medcomhomecareobservationmessageheader">MedComHomeCareObservationMessageHeader</h3>
+<p>The <a href="StructureDefinition-medcom-homecareobservation-messageheader.html">MedComHomeCareObservationMessageHeader</a> constrains the <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> further to specify the fixed coding for this message and constrains the use of carbon-copy destination.</p>
+
+<h3 id="medcomhomecarediagnosticreport">MedComHomeCareDiagnosticReport</h3>
+<p>The <a href="StructureDefinition-medcom-homecareobservation-diagnosticreport.html">MedComHomeCareObservationDiagnosticReport</a> profile contains the main content of the HomeCareObservation message. It is inherited from the profile <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-diagnosticreport.html">MedComCoreDiagnosticReport</a>. The MedComHomeCareObservationDiagnosticReport shall include observation results performed and produced by the municipalties acute care team. Futher shall the MedComHomeCareDiagnostiscRepport include an information about the status of the observation results.<br />
+The profile also includes information about the performer, i.e the person who performed and produced observations results. The perfomer informations consist of a signature that requires the name, title and relevant telephone number.Further, this profile also contains the clinical observations (nursing assessments) regarding the citizens overall results and health status.</p>
+
+<p>This profile also allows to send relevant attachments from the acute home care visit.  Attachment that are allowed to sendt with the HomeCareDiagnosticReport are: pdf, jpeg, png, tiff or gif.</p>
+
+<h3 id="medcomhomecareobservation">MedComHomeCareObservation</h3>
+<p>The <a href="StructureDefinition-medcom-homecare-observation.html">MedComHomeCareObservation</a> profile inherits from the MedComCoreObservation profile. This profile includes infromation about what observation was performed, what date &amp; time, by whom, and what result was obtained.
+Too expres what observation was performed a Observation.code.coding elemen shall be used. In HomeCareObservation it is allowed to ude NPU codes for observations and MedCom (MCS) codes for  observations. 
+<a href="https://medcomfhir.dk/ig/terminology/ValueSet-NPUObservationCodesValueSet.html">Click here to see the ValueSet for NPU codes.</a></p>
+
+<p><a href="https://medcomfhir.dk/ig/terminology/ValueSet-MedComObservationValueSet.html">Click here to see the ValueSet for MCS codes.</a></p>
+
+<p>It is also allowed to send an analysis comment on the individual result, if this comment is relevant to include. 
+Further it is required to send information that the result of the observation is not reference assessed (Dansk: ikke reference vurderet).</p>
+
+<h3 id="medcomcorepatient">MedComCorePatient</h3>
+<p>The <a href="http://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html">MedComCorePatient</a> profile is used in a MedComHomeCareObservations message to represent the patient.</p>
+
+<h3 id="medcommessagingprovenance">MedComMessagingProvenance</h3>
+<p>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> profile is used to track information about the activity of the HomeCareObservation message, e.g 'new-message' or 'modify-message'. The allowed activity codes for HomeCareObservation message can be found in <a href="http://medcomfhir.dk/ig/terminology/ValueSet-medcom-HomeCareObservation-messagingActivities.html">MedComHomeCareObservationMessageAcitivityCodes</a> on the Terminology IG.</p>
+
+<h3 id="medcommessagingorganization">MedComMessagingOrganization</h3>
+<p>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html">MedComMessagingOrganization </a> profile is used in the MedComHomeCareObservationMessageHeader profile to describe the sender organization of the HomeCareDiagnosticReport. The sender organization can be the municipality to which the acute ceare team belongs.</p>
+
+<h3 id="medcomrequesterorganization">MedComRequesterOrganization</h3>
+<p>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-requesterorganization.html">MedComRequesterOrganization</a> represents the receiver of the HomeCareObservation message. The receiver information consist of the initials of the general practitioner that requisitioned acute homecare visit and observation, if known, and identifiers such as SOR-, EAN and Ydernummer-identifier to represent the general practitioner.
+If the initials of the general practitioner are unknown, then the code "unknown" form the <a href="http://hl7.org/fhir/R4/valueset-data-absent-reason.html">data-absent-reason ValueSet</a> shall be sent.  In MedComRequesterOrganization the contact.name.given shall be used to express the initials of the general practitioner. The standard follows HL7 rulse to expres initals. <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName">Click here to read the rules</a></p>
+
+<h3 id="medcomproducerorganization">MedComProducerOrganization</h3>
+<p>The <a href="https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-producer-organization.html">MedComProducerOrganization</a> profile is used in a HomeCareObservation message to represent the organization that is responsible for performing and analysing, thereby producing, the observation results e.g. acute careteam. The MedComProducerOrganization shall be identified using municipality SOR-ID, and a producer-ID. The producer-ID consists of a <a href="http://medcomfhir.dk/ig/terminology/CodeSystem-MedComProducentID.html">three letter code, which is displayed on the terminology IG</a>. In a receiver system, the interpretation of the two codes will together state that an acute care team from e.g. Aarhus municipality is the producer of the results.</p>
+
+<h3 id="medcomcoremedia">MedComCoreMedia</h3>
+<p>The <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-media.html">MedComCoreMedia</a> profile is used in HomeCareObservation message to represents the relevant attachements added to the HomeCareDagnosticReport. MedComCoreMedia is referred from HomCareDiagnosticReport.media.link.</p>
+
+<p>If the attached file are send, it is a requirement that the ID and title of the attached file shall be sent. Furthermore, MedCom recommended that the name of the author, as well as the time of creation, of the attached file can be signed and sent with it.</p>
+
+<h2 id="timestamps">Timestamps</h2>
+<p>The HomeCareObservation message includes several timestamps. These timestamps are present in the profiles <a href="StructureDefinition-medcom-homecareobservation-diagnosticreport.html">MedComHomeCareObservationDiagnosticReport</a>, <a href="StructureDefinition-medcom-homecare-observation.html">MedComHomeCareObservation</a>,<a href="StructureDefinition-medcom-homecareobservation-message.html">MedComHomeCareObservationMessage</a>, and <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> and have different purposes:</p>
+<ul>
+  <li>Observation sampling date and time (Danish: Prøvetagningsdato og tidspunkt)
+    <ul>
+      <li>HomeCareObservation.effective.dateTime represents the date and time when the sample was performed and produced.</li>
+    </ul>
+  </li>
+  <li>DiagnosticReport generation date and time (Danish: Genereringsdato og tidspunkt)
+    <ul>
+      <li>HomeCareDiagnosticReport.issued represents the dateTime the version of the report was made.</li>
+    </ul>
+  </li>
+  <li>Sending date and time (Danish: Afsendelsesdato og tidspunkt)
+    <ul>
+      <li>Bundle.timestamp represents the time Bundle is generated.</li>
+      <li>Provenance.occuredDateTime[x] represents the time the HomeCareObservation message is sent, in a human-readable time</li>
+      <li>Provenance.recorded represents the time the HomeCareObservation  is sent, in a machine-readable time</li>
+    </ul>
+  </li>
+</ul>
+
+<p>It is assumed that in most cases, the Bundle.timestamp, provenance.occuredDateTime[x] and provenance.recorded will be equal,as the events happens instantly after eachother. However, there might be systems where the sending is delayed compared to the real world-event and bundle generation, hence will the Provenance timestamps differentiate from Bundle timestamp.</p>
+
+<h2 id="modification-and-cancellation-of-the-homecareobservationmessage">Modification and Cancellation of the HomeCareObservationMessage</h2>
+<p>It is allowed to modify and cancel a HomeCareObservation Message. If the message is modified or cancelled it shall be clearly indicated on the user interface. When sending a modification or cancellation of the HomeCareObservation the MessageHeader.id should be the same so the receiver system can see if there are some changes or if the message has been cancelled.</p>
+
+<h3 id="modify-homecareobservation-message">Modify HomeCareObservation Message</h3>
+<p>It is a requirement that the sender of HomeCareObservation message can modify an already sent HomeCareObservation message if the user wants to correct the content.
+The modification can only happen if the modification is regarding observation sampling date and time, observation result, a clinical comment (overall nursing assessment), an analysis comment, content of an attached file (as long as the content is send on the correct civil registration number (Danish: CPR-nummer)), the initials of the requisitioning general practitioner or sender's signature. 
+When sending a modification it is requirede to have a Provenance instance referencing the message being modified, and a Provenance instance referencing the modification message, where Provenance.entity.what.reference element points to the MessageHeader.id of the previous message.the It is also required that the Provenance instance referencing the modification message, have a Provenance.entity.role that shall be <em>revision</em> and the Provenance.activity shall be <em>modify-message</em>.</p>
+
+<p>The receiver system shall be able to receive and show modification of an already received HomeCareObservation message. It is also required that the receiver system clearly shows what was modified in the received correction, in the user interface of the receiver system. Further, there shall be traceability to previously received HomeCareObservation message in the receiver system.</p>
+
+<h3 id="cancel-homecareobservation-messsage">Cancel HomeCareObservation Messsage</h3>
+<p>The sender of the HomeCareObservation Message shall be able to cancel the already sent HomeCareObservation Message if the message has been sent on an incorrect civil registration number, if the receiver is incorrect or if the content in an attachment is concerning an incorrect civic registration number. If the sender cancel the already sent HomeCareObservation Message then the cancellation applies to whole message and not only to the wrong observation result. 
+If the user wants to cancel the message, then the reason of cancellation shall be written in the clinical comment. Alternatively, the user can also add one of MedCom's predefined cancellation reason phrases that should be added to the clinical comment. 
+<a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-cancellation-reason.html">Click here to read MedCom's predefined phrases.</a>. The cancellation reason shall be added to the DiagnosticRepport.conclusion element.</p>
+
+<p>There shall be a Provenance instance referencing to the message being cancelled, and a Provenance instance referencing the cancellation message, where Provenance.entity.what.reference element points to the message being cancelled.
+In the latter instance of the Provenance resource, the Provenance.entity.role shall be <em>removal</em> and the Provenance.activity shall be <em>retract-message</em>.</p>
+
+<p>The receiver system shall be able to receive a cancellation of an already received HomeCareObservation Message and show clearly that the message has been cancelled in the user interface. The cancelled HomeCareObservation Message should not be deleted for reasons of subsequent traceability, but should instead be archived and clearly marked as cancelled.</p>
+
+<h2 id="simplified-examples-of-the-homecareobservation-message">Simplified examples of the HomeCareObservation Message</h2>
+
+<h3 id="homecareobservation-message-spot-test-and-ekg-image">HomeCareObservation Message-Spot test and EKG image</h3>
+<p>Below can a simplified example of a new HomeCareObservation Message be seen. This HomeCareObservation meessage contains results form performed spot test and  an attachment containg performed EKG. Since the example is a new message is the activity in the Provenance instance 'new-message'.</p>
+
+<p><a href="./Bundle-add5e7e2-0c0f-4a4a-bfff-f6f984fa7e3c.html">Click here to see the generated example of HomeCareObservation containing results from Spot test and EKG image</a></p>
+
+<h3 id="homecareobservation-message-urinestix-and-refused-consent">HomeCareObservation Message-Urinestix and refused consent</h3>
+<p>Below can a simplified example of a new HomeCareObservation Message be seen. This HomeCareObservation meessage contains urinestix results and refused consent to exchange the results. Since the example is a new message is the activity in the Provenance instance 'new-message'.
+<a href="./Bundle-faa0c104-0ebf-49cb-bad1-9e0f59436e18.html">Click here to see the generated example of HomeCareObservation caontaing result from Urinestix and refusec consent</a></p>
+
+<h3 id="homecareobservation-message-tobs-with-clinical-and-analysis-comment">HomeCareObservation Message-TOBS with clinical and analysis comment</h3>
+<p>Below can a simplified example of a new HomeCareObservation Message be seen. This HomeCareObservation meessage contains TOBS results and clinical and analysis comment. Since the example is a new message is the activity in the Provenance instance 'new-message'.
+<a href="./Bundle-401cbc36-db1e-4fe0-bf90-6df331dde179.html">Click here to see the generated example of HomeCareObservation containg TOBS result and clinical and analysis comment</a></p>
+
+<h3 id="modify-homecareobservation-message-1">Modify HomeCareObservation Message</h3>
+<p>Below can a simplified example of a modified HomeCareObservation Message be seen. This HomeCareObservation meessage is a modification of HomeCareObservation message containing TOBS results and clinical and analysis commet. Since the example is a modification message the activity in the provenacne instance shall be 'modified-message'.
+<a href="./Bundle-73996cdc-3192-4d15-bd16-c365ef0085e7.html">Click here to see the generated example of simplified example of modify HomeCareObservation Message</a></p>
+
+<h3 id="cancel-homecareobservation-messsage-1">Cancel HomeCareObservation Messsage</h3>
+<p>Below can a simplified example of a modified HomeCareObservation Message be seen. This HomeCareObservation meessage is a cancellation of HomeCareObservation message containing TOBS results and clinical and analysis commet. 
+Since it is a cancellation messag there shall be two provenance instances; one provenance instance for the message that was sent frist and one for the message that cancels the first one. 
+<a href="./Bundle-5f341feb-9a20-463a-96cc-a9ca8ace5567.html">Click here to see the generated example of simplified example of cancelled HomeCareObservation Message</a></p>
+
+<h2 id="terminology">Terminology</h2>
+<p>On <a href="http://medcomfhir.dk/ig/terminology/">MedCom Terminology IG</a> all referenced CodeSystem and ValueSets developed by MedCom can be found.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+<p>This IG has a dependency to the <a href="http://medcomfhir.dk/ig/core/">MedCom Core IG</a>, <a href="http://medcomfhir.dk/ig/messaging/">MedCom Messaging IG</a>, <a href="http://medcomfhir.dk/ig/terminology/">MedCom Terminology IG</a> and <a href="https://hl7.dk/fhir/core/">DK-core v. 2.0.0</a>, where the latter is defined by <a href="https://hl7.dk/">HL7 Denmark</a>. These dependencies are currently reflected in MedComHomeCareMessage, and MedComHomeMessageHeader which both inherits from profiles defined MedComMessaging IG. Further, it is reflected in references to MedComCorePatient, MedComCoreEncounter, MedComCoreOrganization and MedComMessagingOrganization.</p>
+
+<h2 id="download">Download</h2>
+<p>Content in this IG can be downloaded in npm format under <a href="downloads.html">Download</a>. This can be used to validate locale FHIR profiles against.</p>
+
+<h2 id="documentation">Documentation</h2>
+<p>On the <a href="https://medcomdk.github.io/dk_HomeCareObservations/">introduction page for HomeCareObservations</a> the following documentation can be found:</p>
+<ul>
+  <li>Clinical guidelines</li>
+  <li>Use cases</li>
+</ul>
+
+<h2 id="quality-assurance-report">Quality Assurance Report</h2>
+
+<p>In the Quality Assurance report (QA-report) for this IG, there is an error with the following description: <em>Reference is remote which isn’t supported by the specified aggregation mode(s) for the reference (bundled)</em>. The error occurs when creating instances of the profiles and is due to some elements having a Bundled flag {b}, however the referenced profile is not included in a Bundle in an instance, since the instance only represents a part of the entire message. This should not influence the implementation by IT-vendors.</p>
+
+<h2 id="contact">Contact</h2>
+
+<p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this IG.</p>
+
+<p>If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom's stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
+
+<h4 id="tilgængelighedserklæring">Tilgængelighedserklæring</h4>
+
+<p><a href="https://www.was.digst.dk/medcomfhir-dk-ig-">tilgængelighedserklæring</a></p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 19, 2025 07:51+0000">2025-12-19</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
