@@ -14,11 +14,11 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.core</b></p><a name=\"medcom.fhir.dk.core\"> </a><a name=\"hcmedcom.fhir.dk.core\"> </a><h2>MedComCore</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core</pre><div><p>This IG includes core profiles defined by MedCom. These profiles are used in MedCom's FHIR standards</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "3.0.1"] ; # 
+  fhir:version [ fhir:v "4.0.0"] ; # 
   fhir:name [ fhir:v "MedComCore"] ; # 
   fhir:title [ fhir:v "DK MedCom Core"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-10-29T07:28:01+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-01-13T14:04:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MedCom"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MedCom" ] ;
@@ -52,7 +52,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.5.0" ]
+     fhir:version [ fhir:v "7.0.1" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -75,7 +75,7 @@
        fhir:link <http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.dk.core" ] ;
-     fhir:version [ fhir:v "3.4.0" ]
+     fhir:version [ fhir:v "3.5.0" ]
   ] [
      fhir:id [ fhir:v "medcom_fhir_dk_terminology" ] ;
      fhir:uri [
@@ -83,7 +83,7 @@
        fhir:link <http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology>
      ] ;
      fhir:packageId [ fhir:v "medcom.fhir.dk.terminology" ] ;
-     fhir:version [ fhir:v "2.0.1" ]
+     fhir:version [ fhir:v "2.0.2" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1169,6 +1169,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-observation-value-attachment-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/medcom-observation-value-attachment-extension" ]
+       ] ;
+       fhir:name [ fhir:v "MedCom Observation ValueAttachment Extension" ] ;
+       fhir:description [ fhir:v "Generic extension for Observation value as Attachment type." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -1231,7 +1249,7 @@
          fhir:reference [ fhir:v "StructureDefinition/medcom-core-observation" ]
        ] ;
        fhir:name [ fhir:v "MedComCoreObservation" ] ;
-       fhir:description [ fhir:v "Observation profile intended to be used in MedComHomeCareObservation and MedCom's Laboratory standards." ] ;
+       fhir:description [ fhir:v "Observation profile." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1322,24 +1340,6 @@
        ] ;
        fhir:name [ fhir:v "MedComMedia" ] ;
        fhir:description [ fhir:v "Profile to capture relevant images,audio, video and document as part of the healthcare process" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:complex-type"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-messaging-contactpoint> ;
-         fhir:reference [ fhir:v "StructureDefinition/medcom-messaging-contactpoint" ]
-       ] ;
-       fhir:name [ fhir:v "MedComMessagingContactPoint" ] ;
-       fhir:description [ fhir:v "The datatype ContactPoint is specified for use in MedCom messages." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

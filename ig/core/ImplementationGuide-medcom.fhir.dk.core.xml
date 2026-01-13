@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"/>
-  <version value="3.0.1"/>
+  <version value="4.0.0"/>
   <name value="MedComCore"/>
   <title value="DK MedCom Core"/>
   <status value="active"/>
-  <date value="2025-10-29T07:28:01+00:00"/>
+  <date value="2026-01-13T14:04:58+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -37,7 +37,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.5.0"/>
+    <version value="7.0.1"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -50,12 +50,12 @@
   <dependsOn id="hl7_fhir_dk_core">
     <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
     <packageId value="hl7.fhir.dk.core"/>
-    <version value="3.4.0"/>
+    <version value="3.5.0"/>
   </dependsOn>
   <dependsOn id="medcom_fhir_dk_terminology">
     <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
     <packageId value="medcom.fhir.dk.terminology"/>
-    <version value="2.0.1"/>
+    <version value="2.0.2"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -649,6 +649,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-observation-value-attachment-extension"/>
+      </reference>
+      <name value="MedCom Observation ValueAttachment Extension"/>
+      <description value="Generic extension for Observation value as Attachment type."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -688,7 +699,7 @@
         <reference value="StructureDefinition/medcom-core-observation"/>
       </reference>
       <name value="MedComCoreObservation"/>
-      <description value="Observation profile intended to be used in MedComHomeCareObservation and MedCom's Laboratory standards."/>
+      <description value="Observation profile."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -744,17 +755,6 @@
       </reference>
       <name value="MedComMedia"/>
       <description value="Profile to capture relevant images,audio, video and document as part of the healthcare process"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:complex-type"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/medcom-messaging-contactpoint"/>
-      </reference>
-      <name value="MedComMessagingContactPoint"/>
-      <description value="The datatype ContactPoint is specified for use in MedCom messages."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
