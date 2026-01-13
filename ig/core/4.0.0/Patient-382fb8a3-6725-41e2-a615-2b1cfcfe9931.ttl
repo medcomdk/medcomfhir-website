@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/core/Patient/382fb8a3-6725-41e2-a615-2b1cfcfe9931> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "382fb8a3-6725-41e2-a615-2b1cfcfe9931"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"^^xsd:anyURI ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 382fb8a3-6725-41e2-a615-2b1cfcfe9931</b></p><a name=\"382fb8a3-6725-41e2-a615-2b1cfcfe9931\"> </a><a name=\"hc382fb8a3-6725-41e2-a615-2b1cfcfe9931\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-core-patient.html\">MedComCorePatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Cæcar Test Østergård (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2311143995)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 24533421(Home)</li><li>Testhjemmet 1 Odense M 5230 </li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:1.2.208.176.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2311143995" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Østergård" ] ;
+     fhir:given ( [ fhir:v "Cæcar" ] [ fhir:v "Test" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "24533421" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:deceased [
+     a fhir:boolean ;
+     fhir:v true
+  ] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "Testhjemmet 1" ] ) ;
+     fhir:city [ fhir:v "Odense M" ] ;
+     fhir:postalCode [ fhir:v "5230" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
