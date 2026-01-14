@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title> - MedCom HomeCareObservation v1.0.0</title>
+    <title> - MedCom HomeCareObservation v1.2.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -22,8 +22,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -34,20 +36,22 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:""}
     h3,h4,h5,h6{--heading-prefix:""}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
@@ -62,11 +66,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MedCom HomeCareObservation</span>
             <br/>
-            <span style="display:inline-block;">1.0.0 - release
+            <span style="display:inline-block;">1.2.1 - release
 
 
 
-  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
+  <span title="">DK</span>
 
 
             </span>
@@ -94,9 +98,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -109,7 +110,23 @@
     <a href="artifacts.html">Artifacts</a>
   </li>
   <li>
-    <a href="downloads.html">Downloads</a>
+    <a href="testProtocolTestExample.html">Test Examples - Test Protocol</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -137,7 +154,7 @@
 
 
 <div style="counter-reset: section 10" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.0.0: Release) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the The DK MedCom HomeCareObservation (v1.2.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/homecareobservation/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -153,20 +170,20 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="StructureDefinition-medcom-homeCare-observation.html">Content</a>
+    <a href="StructureDefinition-medcom-homecare-observation.html">Content</a>
   </li>
 
 
 
   <li>
-    <a href="StructureDefinition-medcom-homeCare-observation-definitions.html">Detailed Descriptions</a>
+    <a href="StructureDefinition-medcom-homecare-observation-definitions.html">Detailed Descriptions</a>
   </li>
 
 
 
   
     <li>
-      <a href="StructureDefinition-medcom-homeCare-observation-mappings.html">Mappings</a>
+      <a href="StructureDefinition-medcom-homecare-observation-mappings.html">Mappings</a>
     </li>
   
 
@@ -178,7 +195,7 @@
   
     
       <li>
-        <a href="StructureDefinition-medcom-homeCare-observation-examples.html">Examples</a>
+        <a href="StructureDefinition-medcom-homecare-observation-examples.html">Examples</a>
       </li>
     
   
@@ -188,23 +205,17 @@
 
   
     <li>
-      <a href="StructureDefinition-medcom-homeCare-observation.profile.xml.html">XML</a>
+      <a href="StructureDefinition-medcom-homecare-observation.profile.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="StructureDefinition-medcom-homeCare-observation.profile.json.html">JSON</a>
+      <a href="StructureDefinition-medcom-homecare-observation.profile.json.html">JSON</a>
     </li>
   
 
-
-  
-    <li>
-      <a href="StructureDefinition-medcom-homeCare-observation.profile.ttl.html">TTL</a>
-    </li>
-  
 
 
 </ul>
@@ -220,7 +231,7 @@
         
           Active
           
-            as of 2023-10-31
+            as of 2025-12-19
           
         
       </td>
@@ -228,7 +239,7 @@
     </tr>
   </table>
 
-  <p>Changes in the medcom-homeCare-observation resource profile.</p>
+  <p>Changes in the medcom-homecare-observation resource profile.</p>
 
   
 
@@ -242,49 +253,24 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    try {
-      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
-    } catch(exception) {
-    }
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
-    if (!currentTabIndex)
-      currentTabIndex = '0';
-
-    $( '#tabs' ).tabs({
-      active: currentTabIndex,
-      activate: function( event, ui ) {
-        var active = $('.selector').tabs('option', 'active');
-        currentTabIndex = ui.newTab.index();
-        document.activeElement.blur();
-        try {
-          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
-        } catch(exception) {
-        }
-      }
-    });
-  </script>
-
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 31, 2023 15:39+0100">2023-10-31</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.homecareobservation#1.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 19, 2025 07:54+0000">2025-12-19</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -295,7 +281,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -305,16 +291,7 @@
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

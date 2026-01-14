@@ -10,11 +10,18 @@
     single schematron that validates contained resources (if you have any) 
   -->
   <sch:pattern>
+    <sch:title>f:MessageHeader</sch:title>
+    <sch:rule context="f:MessageHeader">
+      <sch:assert test="count(f:definition) &gt;= 1">definition: minimum cardinality of 'definition' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>f:MessageHeader/f:destination</sch:title>
     <sch:rule context="f:MessageHeader/f:destination">
-      <sch:assert test="count(f:extension[@url = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension']) &lt;= 1">extension with URL = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension']) &gt;= 1">extension with URL = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension']) &lt;= 1">extension with URL = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:receiver) &gt;= 1">receiver: minimum cardinality of 'receiver' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension']) &gt;= 1">extension with URL = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension']) &lt;= 1">extension with URL = 'http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:receiver) &gt;= 1">receiver: minimum cardinality of 'receiver' is 1</sch:assert>
     </sch:rule>
