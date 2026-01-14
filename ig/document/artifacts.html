@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - DK MedCom Document v1.0.1</title>
+    <title>Artifacts Summary - DK MedCom Document v2.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -32,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -62,7 +62,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom Document</span>
             <br/>
-            <span style="display:inline-block;">1.0.1 - release
+            <span style="display:inline-block;">2.0.0 - release
+
+
+
+  <span title="">DK</span>
 
 
             </span>
@@ -90,9 +94,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -104,8 +105,24 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
-  <li>
-    <a href="downloads.html">Downloads</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="unstructuredclinicalcontent.html">Profiling unstructured content</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -139,7 +156,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Document (v1.0.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/document/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Document (v2.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/document/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
@@ -157,7 +174,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#2">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#3">Example: Example Instances</a>
+         <a href="#3">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#5">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -173,6 +196,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-contained-documentreference.html"
+                  title="StructureDefinition/medcom-contained-documentreference">MedComContainedDocumentReference</a>
+            </td>
+            <td>
+<p>A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-medcom-document-bundle.html"
                   title="StructureDefinition/medcom-document-bundle">MedComDocumentBundle</a>
             </td>
@@ -182,11 +214,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-document-careteam.html"
+                  title="StructureDefinition/medcom-document-careteam">MedComDocumentCareTeam</a>
+            </td>
+            <td>
+<p>Careteam participating in the care of a patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-medcom-document-composition.html"
                   title="StructureDefinition/medcom-document-composition">MedComDocumentComposition</a>
             </td>
             <td>
 <p>The profile of the MedCom Document Composition containing the minimum allowed content.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-document-observation.html"
+                  title="StructureDefinition/medcom-document-observation">MedComDocumentObservation</a>
+            </td>
+            <td>
+<p>Observation profile to be used in MedCom FHIR Documents.</p>
 </td>
          </tr>
          <tr>
@@ -218,11 +268,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-medcom-documentreference.html"
-                  title="StructureDefinition/medcom-documentreference">MedComDocumentReference</a>
+               <a href="StructureDefinition-medcom-document-practitionerrole.html"
+                  title="StructureDefinition/medcom-document-practitionerrole">MedComDocumentPractitionerRole</a>
             </td>
             <td>
-<p>A profile stating the rules, when exchanging a FHIR document.</p>
+<p>Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care.</p>
 </td>
          </tr>
       </tbody>
@@ -254,6 +304,139 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tbody>
    </table>
    <a name="3"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-classcode-VS-TEMP">IHE ClassCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Value set for the classCode attribute. classCode used in DK IHE Document sharing</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-confidentialitycode-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-confidentialitycode-VS-TEMP">IHE ConfidentialityCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Confidentiality code used in Danish Document sharing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-formatcode-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-formatcode-VS-TEMP">IHE FormatCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP ValueSet containing FormatCodes defines by MedCom.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-HealthcareFacilityTypeCode-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS-TEMP">IHE HealthcareFacilityTypeCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Value set for healthcare facility type code represents the type of organizational setting of the clinical encounter during which the documented act occurred.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-languagecode-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-languagecode-VS-TEMP">IHE LanguageCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Tags for the Identification of Languages (RFC 3066)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-mimetype-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-mimetype-VS-TEMP">IHE MimeType_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Values for the document metadata attribute mimeType</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-PracticeSettingCode-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-PracticeSettingCode-VS-TEMP">IHE PracticeSettingCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Values used for the document metadata attribute practiceSettingCode, which is an attribute specifying the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology). The value set is based on a subset of the code list from the SOR lookup table 'SOR-Kliniske specialer' (https://sor.sum.dsdn.dk/lookupdata/#clinical_speciality, accessable on Sundhedsdatanettet (SDN)), which is based on SNOMED codes.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-typecode-VS-TEMP">IHE TypeCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP ValueSet containing TypeCode.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-MedCom-ihe-core-homeCommunityId-VS-TEMP.html"
+                  title="ValueSet/MedCom-ihe-core-homeCommunityId-VS-TEMP">_TEMP IHE HomeCommunityId</a>
+            </td>
+            <td>
+<p>_TEMP List of operational and in production home communities (XCA) in Danish Document Sharing</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-MedCom-ihe-classcode-CS-TEMP.html"
+                  title="CodeSystem/MedCom-ihe-classcode-CS-TEMP">DK IHE ClassCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata class codes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-MedCom-ihe-formatcode-CS-TEMP.html"
+                  title="CodeSystem/MedCom-ihe-formatcode-CS-TEMP">DK IHE FormatCode_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata format codes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-MedCom-message-codes-CS-TEMP.html"
+                  title="CodeSystem/MedCom-message-codes-CS-TEMP">MedCom Message Codes_TEMP</a>
+            </td>
+            <td>
+<p>_TEMP MedCom Message Codes, which includes document type codes (Danish).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-MedCom-ihe-homeCommunityId-CS-TEMP.html"
+                  title="CodeSystem/MedCom-ihe-homeCommunityId-CS-TEMP">_TEMP IHE XDS Affinity Domain</a>
+            </td>
+            <td>
+<p>_TEMPIHE XDS Affinity Domains who has agreed to share healthcare related documents in Denmark</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -279,11 +462,83 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Bundle-0a74554f-ded3-4bc7-bef1-535699565c5b.html"
+                  title="Bundle/0a74554f-ded3-4bc7-bef1-535699565c5b">Bundle instance</a>
+            </td>
+            <td>
+<p>Bundle instance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-384ca229-c562-4a26-a035-c0c38108e037.html"
+                  title="Composition/384ca229-c562-4a26-a035-c0c38108e037">Elektrokardiogram-12-aflednings</a>
+            </td>
+            <td>
+<p>Composition example</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ef810168-ee8c-4f14-9012-6aff6c1d86e7.html"
+                  title="Observation/ef810168-ee8c-4f14-9012-6aff6c1d86e7">Observation</a>
+            </td>
+            <td>
+<p>Observation EKG PDF</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-f8d0eb07-5336-4005-9081-b065f9a82663.html"
+                  title="Organization/f8d0eb07-5336-4005-9081-b065f9a82663">Organization</a>
+            </td>
+            <td>
+<p>Instance of an author organization</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Patient-37628912-7816-47a3-acd8-396b610be142.html"
                   title="Patient/37628912-7816-47a3-acd8-396b610be142">Patient</a>
             </td>
             <td>
 <p>Instance of a patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-379ebb53-11e3-42ac-b9db-0bad0ece46d1.html"
+                  title="Patient/379ebb53-11e3-42ac-b9db-0bad0ece46d1">Patient</a>
+            </td>
+            <td>
+<p>Instance of a patient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-48ed6310-3095-44da-9e34-d1cd6bd830c9.html"
+                  title="Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9">Practitioner</a>
+            </td>
+            <td>
+<p>Instance of a practitioner</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820.html"
+                  title="PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820">PractitionerRole</a>
+            </td>
+            <td>
+<p>PractitionerRole with a role and reference to a practitioner and an organization</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-ProducerActor.html"
+                  title="ActorDefinition/ProducerActor">Producer of FHIR resources</a>
+            </td>
+            <td>
+<p>The system that creates the FHIR resources</p>
 </td>
          </tr>
       </tbody>
@@ -306,7 +561,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.document#1.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 12, 2025 13:09+0000">2025-05-12</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.document#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 10:38+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
