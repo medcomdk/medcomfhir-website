@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - DK MedCom Document v1.0.1</title>
+    <title>Home - DK MedCom Document v2.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -32,10 +32,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -62,7 +62,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom Document</span>
             <br/>
-            <span style="display:inline-block;">1.0.1 - release
+            <span style="display:inline-block;">2.0.0 - release
+
+
+
+  <span title="">DK</span>
 
 
             </span>
@@ -90,9 +94,6 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="toc.html">Table of Contents</a>
-  </li>
-  <li>
     <a href="index.html">Home</a>
   </li>
   <li>
@@ -104,8 +105,24 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
-  <li>
-    <a href="downloads.html">Downloads</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+      <li>
+        <a href="unstructuredclinicalcontent.html">Profiling unstructured content</a>
+      </li>
+    </ul>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -139,7 +156,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Document (v1.0.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/document/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Document (v2.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/document/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -154,7 +171,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">1.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document|1.0.1"/></span>
+      <span class="copy-text">2.0.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document|2.0.0"/></span>
       </td>
     </tr>
 
@@ -170,7 +187,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2025-05-12
+            as of 2026-01-14
           
         
       </td>
@@ -198,7 +215,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#dk-medcom-document" id="markdown-toc-dk-medcom-document">DK MedCom Document</a>    <ul>
       <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
-      <li><a href="#governance" id="markdown-toc-governance">Governance</a></li>
+      <li><a href="#governance-and-guidance" id="markdown-toc-governance-and-guidance">Governance and guidance</a></li>
+      <li><a href="#temporary-representations-of-code-systems-and-valuesets-from-the-medcom-xds-metadata-ig" id="markdown-toc-temporary-representations-of-code-systems-and-valuesets-from-the-medcom-xds-metadata-ig">Temporary representations of code systems and valuesets from the MedCom XDS Metadata IG</a></li>
       <li><a href="#contact" id="markdown-toc-contact">Contact</a></li>
     </ul>
   </li>
@@ -207,69 +225,152 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="dk-medcom-document">DK MedCom Document</h1>
 
-<p>This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR ®© in document based exchange of data in Danish healthcare.</p>
+<p>This Implementation Guide (IG) is provided by MedCom to describe the use of FHIR ®© in document-based exchange of data in Danish healthcare.</p>
 
-<p>The IG contains profiles which are used to define a general model for FHIR documents. The use case specific profiles, such as <a href="http://medcomfhir.dk/ig/conditionlist">ConditionList</a>, are maintained in an individuel IG.</p>
+<p>The IG contains profiles that are used to define a general model for MedCom FHIR documents. The use case-specific profiles are maintained in individual IGs.</p>
 
-<p>The profiles builds upon the knowledge obtained through the use of CDA in Denmark and the work around <a href="https://hl7.org/fhir/R4/documents.html">FHIR documents from HL7 International</a>.</p>
+<p>The profiles build upon the knowledge obtained through the use of CDA in Denmark and the work around <a href="https://hl7.org/fhir/R4/documents.html">FHIR documents from HL7 International</a>.</p>
 
 <h4 id="general-document-model">General Document Model</h4>
 
-<p>The figure below illustrates a general document model, which all MedCom document will comply to. Document profiles are all prefixed "MedComDocument". Beside the profiles on the figure, a MedCom document will also include some MedComCore profiles and profiles made to support a specific use case. All together they constitute the actual content of a MedCom document. The following sections describe the overall purpose of each document profile.</p>
+<p>The figure below illustrates a general document model, which all MedCom documents will comply to. Document profiles in this IG are all prefixed  with "MedComDocument". Besides the profiles shown in the figure, a MedCom document can also include some MedCom Core profiles and profiles made to support a specific use case. Altogether they constitute the actual content of a MedCom FHIR document. The following sections describe the overall purpose of each document profile.</p>
 
-<p><img alt="Shows the general MedCom document model. Each document must at least contain the following resources: Bundle, Composition, Organization, Patient and use case specific resources." src="./DocumentModel.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" /></p>
+<p><img alt="Shows the general MedCom document model. Structural overview of a MedCom Document Bundle, illustrating the relationships between Bundle, Composition, author (person and organization), subject (patient), and referenced resources such as Practitioner, PractitionerRole, Organization, RelatedPerson, Device, and use-case–specific content." src="./DocumentModel.svg" style="float:none; display:block; margin-left:auto; margin-right:auto;" /></p>
 
-<h5 id="medcomdocumentbundle">MedComDocumentBundle</h5>
+<p>The figure shows the general MedCom document model. It is a structural overview of a MedCom Document Bundle, illustrating the relationships between Bundle, Composition, authorPerson, subject (patient), and referenced resources such as Practitioner, PractitionerRole, Organization, RelatedPerson, Device, and use-case–specific content.</p>
 
-<p><a href="./StructureDefinition-medcom-document-bundle.html">MedComDocumentBundle</a> is a Bundle resource defined to be of the type 'document'. All profiles included in a message shall be referenced from the entry element in the profile, with a Composition as the first resource.</p>
+<h5 id="medcomdocument-profiles">MedComDocument Profiles</h5>
+<p>You will find a list of all MedCom Document profiles in the "Profiles" tab in the menu.</p>
 
-<p><strong>Note:</strong> Be aware that entries in a document in general are unordered.</p>
+<h5 id="resource-identifiers-in-medcom-fhir-documents">Resource Identifiers in MedCom FHIR Documents</h5>
 
-<h5 id="medcomdocumentcompostition">MedComDocumentCompostition</h5>
+<p>In FHIR, <code class="language-plaintext highlighter-rouge">Resource.identifier</code> is intended to capture business identifiers that remain constant across system boundaries, which differs from <code class="language-plaintext highlighter-rouge">Resource.id</code>, the internal technical identifier used within a single FHIR Bundle.
+All resources included in a MedCom FHIR document <strong>MUST</strong> carry an <code class="language-plaintext highlighter-rouge">identifier</code> element consisting of both a <code class="language-plaintext highlighter-rouge">system</code> and a <code class="language-plaintext highlighter-rouge">value</code>. The identifier SHALL be globally unique, persistent, and stable over time. This means that the identifier <strong>MUST NOT</strong> change as long as the resource represents the same underlying real-world entity or dataset. For example, a Patient resource will always carry the same civil registration number (CPR) as its identifier.</p>
 
-<p>When the Bundle is of the type 'document', the <a href="./StructureDefinition-medcom-document-composition.html">MedComDocumentCompostition</a> resource must be the first resource. The resource creates the structure for the document and references the relevant clinical information.</p>
+<p><strong>Global uniqueness:</strong> To ensure global uniqueness, implementations may for example use UUIDv4 or UUIDv5. Use authoritative identifiers when available, such as CPR numbers or SOR codes.</p>
 
-<h5 id="medcomdocumentorganization">MedComDocumentOrganization</h5>
-
-<p>The <a href="./StructureDefinition-medcom-document-organization.html">MedComDocumentOrganization</a> profile inherits from MedComCoreOrganization and is used to describe author organization. The resource constrains the MedComCoreOrganization profile to contain a SOR identifier and a name.</p>
-
-<h5 id="medcomdocumentpatient">MedComDocumentPatient</h5>
-
-<p>The <a href="./StructureDefinition-medcom-document-patient.html">MedComDocumentPatient</a> profile desribes the basic requirements for information about citizens and patients when exhancging a document. The profile inherits from DkCorePatient and furhter limit the requirements, e.g. may documents only be exchanged for patients with a CPR-number. To limit the MustSupport elements, this profiles does not inherit from MedComCorePatient.</p>
-
-<h5 id="medcomdocumentpractitioner">MedComDocumentPractitioner</h5>
-
-<p>The <a href="./StructureDefinition-medcom-document-practitioner.html">MedComDocumentPractitioner</a> profile inherits from MedComCorePractitioner and further requires a given and family name to be present.</p>
-
-<h5 id="medcomdocumentreference">MedComDocumentReference</h5>
-
-<p>The <a href="./StructureDefinition-medcom-documentreference.html">MedComDocumentReference</a> profile should not be exchanged, but can be used for internal validation of the metadata associated with a document, as the DocumentReference contains the same information as the IHE XDS metadata standard.</p>
-
-<h4 id="general-document-assumptions">General document assumptions</h4>
+<p><strong>Persistence across snapshots:</strong> Even if a document is re-created or updated, resources representing the same entity (e.g., Patient, Practitioner, Organization, Encounter) <strong>MUST</strong> retain their identifier.</p>
 
 <p><strong>Bundle.identifier:</strong> Once a document is assembled into a Bundle, the document is immutable, meaning its content cannot be changed, and the document id (Bundle.identifier) can never be reused.</p>
 
+<h5 id="xml-and-json">XML and JSON</h5>
 <p><strong>XML and JSON:</strong> Note that the document may be represented in either XML or JSON and interconverted between these or have its character encoding changed, all the while remaining the same document.</p>
 
-<p><strong>Narrative:</strong> It is a key element in documents that they contain a narrative text. The requirements concerning the narrative text, follows the <a href="https://hl7.org/fhir/R4/documents.html#presentation">recommendations from HL7 for narrative text</a>. This states that there must be narrative text included in the subject resource, which is the Patient resource in this IG, the Composition resource and for each Composition.section.text.</p>
+<h4 id="terminology-ig-and-metadata-ig">Terminology IG and metadata IG</h4>
+<p>In the <a href="http://medcomfhir.dk/ig/terminology/">MedCom Terminology IG</a> all referenced MedCom Terminology CodeSystems and Value sets developed by MedCom can be found.</p>
 
-<h4 id="terminology">Terminology</h4>
-<p>On <a href="http://medcomfhir.dk/ig/terminology/">MedCom Terminology IG</a> all referenced CodeSystem and ValueSets developed by MedCom can be found.</p>
+<p>In the <a href="https://medcomfhir.dk/ig/xdsmetadata/">MedCom Terminology for XDS Metadata</a> all MedCom CodeSystems and Value sets related to metadata can be found.</p>
+
+<p><strong>Note</strong> that the IG versions linked may be newer than the versions used as dependencies in this implementation guide. For the exact dependency versions applied, see the <strong>Dependencies</strong> tab in the top menu under <strong>More</strong>.</p>
 
 <h4 id="dependencies">Dependencies</h4>
-<p>This IG has a dependency to the <a href="http://medcomfhir.dk/ig/core/">MedComCore IG</a> and <a href="https://hl7.dk/fhir/core/">DK-core</a> v. 3.2.0, defined by <a href="https://hl7.dk/">HL7 Denmark</a>.</p>
+<p>Besides Terminology and metadata IGs, this IG has a dependency to the <a href="http://medcomfhir.dk/ig/core/">MedComCore IG</a>, <a href="https://hl7.dk/fhir/core/">DK-core</a>, defined by <a href="https://hl7.dk/">HL7 Denmark</a> and <a href="https://profiles.ihe.net/ITI/MHD/">IHE MHD</a>. <strong>Note</strong> that the IG versions linked may be newer than the versions used as dependencies in this implementation guide. For the exact dependency versions applied, see the <strong>Dependencies</strong> tab in the top menu under <strong>More</strong>.</p>
 
 <h3 id="documentation">Documentation</h3>
+<p><a href="https://medcomdk.github.io/dk-medcom-document/">More information about MedCom Document</a> can be found here. MedCom document profiles does not alone constitute a standard.</p>
 
-<p><a href="https://medcomdk.github.io/dk-medcom-document/">More information about MedCom Document</a> can be found here. MedCom document profiles does not alone constitute a standard, why the documentation is limited.</p>
-
-<h3 id="governance">Governance</h3>
-
+<h3 id="governance-and-guidance">Governance and guidance</h3>
 <p>FHIR profiles are managed under MedCom: <a href="https://github.com/medcomdk/dk-medcom-document">Source code</a>.</p>
 
-<h4 id="quality-assurance-report">Quality Assurance Report</h4>
+<p>A description of governance and guidance for MedCom's FHIR standards, can be found on the <a href="https://medcomdk.github.io/MedComLandingPage">MedCom Landing Page</a>.</p>
 
-<p>In the Quality Assurance report (QA-report) for this IG, there is an error with the following description: <em>Reference is remote which isn’t supported by the specified aggregation mode(s) for the reference (bundled)</em>. The error occurs when creating instances of the profiles and is due to some elements having a Bundled flag {b}, however the referenced profile is not included in a Bundle in an instance, since the instance only represents a part of the entire message. This should not influence the implementation by IT-vendors.</p>
+<p>The MedCom FHIR landing page provides an overview of governance requirements that apply to MedCom’s FHIR standards. This includes e.g. the mandatory rules for interpreting MustSupport, the formal validation requirements that implementers must follow, the expectations for producing narrative texts and governance for how MedCom Terminology is versioned. In addition, the governance section outlines the rules for MedCom FHIR Messaging and Document Sharing, including requirements for e.g. message flow and envelope usage.</p>
+
+<p>The landing page also offers help to developers to understand how to work with MedCom’s FHIR standards. This includes a guide on how to read an Implementation Guide. Users will also find instructions on how to use some of the required tools, such as validation setup and how to use Touchstone.</p>
+
+<h3 id="temporary-representations-of-code-systems-and-valuesets-from-the-medcom-xds-metadata-ig">Temporary representations of code systems and valuesets from the MedCom XDS Metadata IG</h3>
+<p>Due to inconsistencies between MedCom’s XDS Metadata Standard and FHIR representations of code systems and value sets, selected code systems and value sets from the MedCom XDS Metadata Standard IG are temporarily included in this Implementation Guide with necessary adaptations. They will be removed from this IG once these issues are resolved in version 2.0 of the MedCom XDS Metadata Standard.</p>
+
+<p>The affected code systems are listed below (value sets using these code systems are included as well):</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">OID</th>
+    <th class="tg-7btt">Name</th>
+    <th class="tg-fymr">Description from OID-registry</th>
+    <th class="tg-7btt">Owner</th>
+    <th class="tg-fymr">CodeSystem reference</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.96</td>
+    <td class="tg-c3ow">SCT</td>
+    <td class="tg-0pky">Systematized Nomenclature Of MEDicine (SNOMED) Clinical Terms (CT)</td>
+    <td class="tg-c3ow">IHTSDO</td>
+    <td class="tg-0pky">http://snomed.info/sct|http://snomed.info/sct/554471000005108</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.1</td>
+    <td class="tg-c3ow">LOINC</td>
+    <td class="tg-0pky">Logical Observation Identifier Names and Codes (LOINC)</td>
+    <td class="tg-c3ow">Regenstrief Institute</td>
+    <td class="tg-0pky">http://loinc.org</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.5.79</td>
+    <td class="tg-c3ow">mediaType</td>
+    <td class="tg-0pky">mediaType</td>
+    <td class="tg-c3ow">HL7</td>
+    <td class="tg-0pky">urn:ietf:bcp:13</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.6.121</td>
+    <td class="tg-c3ow">ieft3066</td>
+    <td class="tg-0pky">Tags for the Identification of Languages</td>
+    <td class="tg-c3ow">HL7</td>
+    <td class="tg-0pky">urn:ietf:bcp:47</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2.16.840.1.113883.5.25</td>
+    <td class="tg-c3ow">Confidentiality</td>
+    <td class="tg-0pky">Confidentiality</td>
+    <td class="tg-c3ow">HL7</td>
+    <td class="tg-0pky">http://terminology.hl7.org/CodeSystem/v3-Confidentiality</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.9</td>
+    <td class="tg-c3ow">classcode</td>
+    <td class="tg-0pky">Danish Integrating the Healthcare Enterprise (IHE) metadata class codes</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.1</td>
+    <td class="tg-c3ow">message-codes</td>
+    <td class="tg-0pky">Message codes administered by MedCom</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1.2.208.184.100.10</td>
+    <td class="tg-c3ow">formatcode</td>
+    <td class="tg-0pky">Danish Integrating the Healthcare Enterprise (IHE) metadata format codes</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">-</td>
+    <td class="tg-c3ow">homeCommunityId</td>
+    <td class="tg-0pky">-</td>
+    <td class="tg-c3ow">MedCom</td>
+    <td class="tg-0pky"></td>
+  </tr>
+</tbody>
+</table>
 
 <h3 id="contact">Contact</h3>
 
@@ -296,7 +397,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.document#1.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 12, 2025 13:09+0000">2025-05-12</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.document#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 10:38+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

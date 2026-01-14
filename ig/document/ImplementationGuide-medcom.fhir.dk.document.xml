@@ -3,15 +3,15 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="medcom.fhir.dk.document"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.document</b></p><a name="medcom.fhir.dk.document"> </a><a name="hcmedcom.fhir.dk.document"> </a><a name="medcom.fhir.dk.document-en-US"> </a><h2>MedComDocument</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document</pre><div><p>The DK MedCom Document IG</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.document</b></p><a name="medcom.fhir.dk.document"> </a><a name="hcmedcom.fhir.dk.document"> </a><h2>MedComDocument</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document</pre><div><p>The DK MedCom Document IG</p>
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document"/>
-  <version value="1.0.1"/>
+  <version value="2.0.0"/>
   <name value="MedComDocument"/>
   <title value="DK MedCom Document"/>
   <status value="active"/>
-  <date value="2025-05-12T13:09:34+00:00"/>
+  <date value="2026-01-14T10:37:57+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -19,8 +19,19 @@
       <system value="url"/>
       <value value="http://www.medcom.dk"/>
     </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@medcom.dk"/>
+    </telecom>
   </contact>
   <description value="The DK MedCom Document IG"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DK"/>
+      <display value="Denmark"/>
+    </coding>
+  </jurisdiction>
   <packageId value="medcom.fhir.dk.document"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
@@ -30,7 +41,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="6.3.0"/>
+    <version value="7.0.1"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -45,15 +56,25 @@
     <packageId value="medcom.fhir.dk.xdsmetadata"/>
     <version value="1.0.1"/>
   </dependsOn>
+  <dependsOn id="medcom_fhir_dk_terminology">
+    <uri value="http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology"/>
+    <packageId value="medcom.fhir.dk.terminology"/>
+    <version value="2.0.2"/>
+  </dependsOn>
   <dependsOn id="medcom_fhir_dk_core">
     <uri value="http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core"/>
     <packageId value="medcom.fhir.dk.core"/>
-    <version value="2.4.0"/>
+    <version value="4.0.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_dk_core">
     <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
     <packageId value="hl7.fhir.dk.core"/>
-    <version value="3.2.0"/>
+    <version value="3.5.0"/>
+  </dependsOn>
+  <dependsOn id="ihe_iti_mhd">
+    <uri value="https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd"/>
+    <packageId value="ihe.iti.mhd"/>
+    <version value="4.2.3"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -70,6 +91,142 @@
       </extension>
       <extension url="value">
         <valueString value="release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.9"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.6.96"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.6.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.4"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.7.3.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.10"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.8.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.6.121"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.5.79"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -154,14 +311,6 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-contact"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueString value="apply-context"/>
       </extension>
       <extension url="value">
@@ -178,23 +327,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-jurisdiction"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueString value="apply-license"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="apply-publisher"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -257,7 +390,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.8.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -273,6 +406,142 @@
       </extension>
       <extension url="value">
         <valueString value="release"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="pin-canonicals"/>
+      </extension>
+      <extension url="value">
+        <valueString value="pin-multiples"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.9"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.6.96"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.6.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.4"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.2.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.7.3.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.10"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.176.8.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.6.121"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:2.16.840.1.113883.5.79"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -357,14 +626,6 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="apply-contact"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueCode value="apply-context"/>
       </extension>
       <extension url="value">
@@ -381,23 +642,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="apply-jurisdiction"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueCode value="apply-license"/>
-      </extension>
-      <extension url="value">
-        <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="apply-publisher"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -483,6 +728,138 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/0a74554f-ded3-4bc7-bef1-535699565c5b"/>
+      </reference>
+      <name value="Bundle instance"/>
+      <description value="Bundle instance"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-bundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/MedCom-ihe-classcode-CS-TEMP"/>
+      </reference>
+      <name value="DK IHE ClassCode_TEMP"/>
+      <description value="_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata class codes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/MedCom-ihe-formatcode-CS-TEMP"/>
+      </reference>
+      <name value="DK IHE FormatCode_TEMP"/>
+      <description value="_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata format codes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/384ca229-c562-4a26-a035-c0c38108e037"/>
+      </reference>
+      <name value="Elektrokardiogram-12-aflednings"/>
+      <description value="Composition example"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-composition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-classcode-VS-TEMP"/>
+      </reference>
+      <name value="IHE ClassCode_TEMP"/>
+      <description value="_TEMP Value set for the classCode attribute. classCode used in DK IHE Document sharing"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-confidentialitycode-VS-TEMP"/>
+      </reference>
+      <name value="IHE ConfidentialityCode_TEMP"/>
+      <description value="_TEMP Confidentiality code used in Danish Document sharing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-formatcode-VS-TEMP"/>
+      </reference>
+      <name value="IHE FormatCode_TEMP"/>
+      <description value="_TEMP ValueSet containing FormatCodes defines by MedCom."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS-TEMP"/>
+      </reference>
+      <name value="IHE HealthcareFacilityTypeCode_TEMP"/>
+      <description value="_TEMP Value set for healthcare facility type code represents the type of organizational setting of the clinical encounter during which the documented act occurred."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-languagecode-VS-TEMP"/>
+      </reference>
+      <name value="IHE LanguageCode_TEMP"/>
+      <description value="_TEMP Tags for the Identification of Languages (RFC 3066)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-mimetype-VS-TEMP"/>
+      </reference>
+      <name value="IHE MimeType_TEMP"/>
+      <description value="_TEMP Values for the document metadata attribute mimeType"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-PracticeSettingCode-VS-TEMP"/>
+      </reference>
+      <name value="IHE PracticeSettingCode_TEMP"/>
+      <description value="_TEMP Values used for the document metadata attribute practiceSettingCode, which is an attribute specifying the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology). The value set is based on a subset of the code list from the SOR lookup table 'SOR-Kliniske specialer' (https://sor.sum.dsdn.dk/lookupdata/#clinical_speciality, accessable on Sundhedsdatanettet (SDN)), which is based on SNOMED codes."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-typecode-VS-TEMP"/>
+      </reference>
+      <name value="IHE TypeCode_TEMP"/>
+      <description value="_TEMP ValueSet containing TypeCode."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -490,6 +867,17 @@
       </reference>
       <name value="MedCom Document HomeCommunityID"/>
       <description value="Extension containing information about operational and in production home communities (XCA) in Danish Document Sharing"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/MedCom-message-codes-CS-TEMP"/>
+      </reference>
+      <name value="MedCom Message Codes_TEMP"/>
+      <description value="_TEMP MedCom Message Codes, which includes document type codes (Danish)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -508,6 +896,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/medcom-contained-documentreference"/>
+      </reference>
+      <name value="MedComContainedDocumentReference"/>
+      <description value="A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/medcom-document-bundle"/>
       </reference>
       <name value="MedComDocumentBundle"/>
@@ -519,10 +918,32 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/medcom-document-careteam"/>
+      </reference>
+      <name value="MedComDocumentCareTeam"/>
+      <description value="Careteam participating in the care of a patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/medcom-document-composition"/>
       </reference>
       <name value="MedComDocumentComposition"/>
       <description value="The profile of the MedCom Document Composition containing the minimum allowed content."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/medcom-document-observation"/>
+      </reference>
+      <name value="MedComDocumentObservation"/>
+      <description value="Observation profile to be used in MedCom FHIR Documents."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -563,11 +984,44 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/medcom-documentreference"/>
+        <reference value="StructureDefinition/medcom-document-practitionerrole"/>
       </reference>
-      <name value="MedComDocumentReference"/>
-      <description value="A profile stating the rules, when exchanging a FHIR document."/>
+      <name value="MedComDocumentPractitionerRole"/>
+      <description value="Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ef810168-ee8c-4f14-9012-6aff6c1d86e7"/>
+      </reference>
+      <name value="Observation"/>
+      <description value="Observation EKG PDF"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/f8d0eb07-5336-4005-9081-b065f9a82663"/>
+      </reference>
+      <name value="Organization"/>
+      <description value="Instance of an author organization"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/379ebb53-11e3-42ac-b9db-0bad0ece46d1"/>
+      </reference>
+      <name value="Patient"/>
+      <description value="Instance of a patient"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -579,6 +1033,61 @@
       <name value="Patient"/>
       <description value="Instance of a patient"/>
       <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9"/>
+      </reference>
+      <name value="Practitioner"/>
+      <description value="Instance of a practitioner"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820"/>
+      </reference>
+      <name value="PractitionerRole"/>
+      <description value="PractitionerRole with a role and reference to a practitioner and an organization"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitionerrole"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ActorDefinition"/>
+      </extension>
+      <reference>
+        <reference value="ActorDefinition/ProducerActor"/>
+      </reference>
+      <name value="Producer of FHIR resources"/>
+      <description value="The system that creates the FHIR resources"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/MedCom-ihe-core-homeCommunityId-VS-TEMP"/>
+      </reference>
+      <name value="_TEMP IHE HomeCommunityId"/>
+      <description value="_TEMP List of operational and in production home communities (XCA) in Danish Document Sharing"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/MedCom-ihe-homeCommunityId-CS-TEMP"/>
+      </reference>
+      <name value="_TEMP IHE XDS Affinity Domain"/>
+      <description value="_TEMPIHE XDS Affinity Domains who has agreed to share healthcare related documents in Denmark"/>
+      <exampleBoolean value="false"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -594,6 +1103,14 @@
         <nameUrl value="index.html"/>
         <title value="Home"/>
         <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="dependencies.html"/>
+        </extension>
+        <nameUrl value="dependencies.html"/>
+        <title value="Dependencies"/>
+        <generation value="html"/>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -618,6 +1135,14 @@
         <nameUrl value="profiles.html"/>
         <title value="Profiles"/>
         <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="unstructuredclinicalcontent.html"/>
+        </extension>
+        <nameUrl value="unstructuredclinicalcontent.html"/>
+        <title value="Unstructuredclinicalcontent"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <parameter>

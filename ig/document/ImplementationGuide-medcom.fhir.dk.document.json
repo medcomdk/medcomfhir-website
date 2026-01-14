@@ -3,23 +3,34 @@
   "id" : "medcom.fhir.dk.document",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.document</b></p><a name=\"medcom.fhir.dk.document\"> </a><a name=\"hcmedcom.fhir.dk.document\"> </a><a name=\"medcom.fhir.dk.document-en-US\"> </a><h2>MedComDocument</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document</pre><div><p>The DK MedCom Document IG</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide medcom.fhir.dk.document</b></p><a name=\"medcom.fhir.dk.document\"> </a><a name=\"hcmedcom.fhir.dk.document\"> </a><h2>MedComDocument</h2><p>The official URL for this implementation guide is: </p><pre>http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document</pre><div><p>The DK MedCom Document IG</p>\n</div></div>"
   },
   "url" : "http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document",
-  "version" : "1.0.1",
+  "version" : "2.0.0",
   "name" : "MedComDocument",
   "title" : "DK MedCom Document",
   "status" : "active",
-  "date" : "2025-05-12T13:09:34+00:00",
+  "date" : "2026-01-14T10:37:57+00:00",
   "publisher" : "MedCom",
   "contact" : [{
     "name" : "MedCom",
     "telecom" : [{
       "system" : "url",
       "value" : "http://www.medcom.dk"
+    },
+    {
+      "system" : "email",
+      "value" : "fhir@medcom.dk"
     }]
   }],
   "description" : "The DK MedCom Document IG",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
   "packageId" : "medcom.fhir.dk.document",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
@@ -31,7 +42,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.3.0"
+    "version" : "7.0.1"
   },
   {
     "id" : "hl7ext",
@@ -50,16 +61,28 @@
     "version" : "1.0.1"
   },
   {
+    "id" : "medcom_fhir_dk_terminology",
+    "uri" : "http://medcomfhir.dk/ig/terminology/ImplementationGuide/medcom.fhir.dk.terminology",
+    "packageId" : "medcom.fhir.dk.terminology",
+    "version" : "2.0.2"
+  },
+  {
     "id" : "medcom_fhir_dk_core",
     "uri" : "http://medcomfhir.dk/ig/core/ImplementationGuide/medcom.fhir.dk.core",
     "packageId" : "medcom.fhir.dk.core",
-    "version" : "2.4.0"
+    "version" : "4.0.0"
   },
   {
     "id" : "hl7_fhir_dk_core",
     "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
     "packageId" : "hl7.fhir.dk.core",
-    "version" : "3.2.0"
+    "version" : "3.5.0"
+  },
+  {
+    "id" : "ihe_iti_mhd",
+    "uri" : "https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd",
+    "packageId" : "ihe.iti.mhd",
+    "version" : "4.2.3"
   }],
   "definition" : {
     "extension" : [{
@@ -81,6 +104,193 @@
       {
         "url" : "value",
         "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludettl"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.184.100.9"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.6.96"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.6.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.184.100.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.4"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.7.3.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.184.100.10"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.8.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.6.121"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.5.79"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -197,17 +407,6 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-contact"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueString" : "apply-context"
       },
       {
@@ -230,29 +429,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueString" : "apply-license"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "apply-publisher"
       },
       {
         "url" : "value",
@@ -339,7 +516,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#0.5.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.8.0"
     },
     {
       "extension" : [{
@@ -360,6 +537,193 @@
       {
         "url" : "value",
         "valueString" : "release"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-multiples"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludettl"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.184.100.9"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.6.96"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.6.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.184.100.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.4"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.2.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.7.3.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.184.100.10"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:1.2.208.176.8.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.6.121"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "urn:oid:2.16.840.1.113883.5.79"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -476,17 +840,6 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-contact"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueCode" : "apply-context"
       },
       {
@@ -509,29 +862,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "apply-jurisdiction"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueCode" : "apply-license"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "apply-publisher"
       },
       {
         "url" : "value",
@@ -643,6 +974,150 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/0a74554f-ded3-4bc7-bef1-535699565c5b"
+      },
+      "name" : "Bundle instance",
+      "description" : "Bundle instance",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-bundle"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/MedCom-ihe-classcode-CS-TEMP"
+      },
+      "name" : "DK IHE ClassCode_TEMP",
+      "description" : "_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata class codes",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/MedCom-ihe-formatcode-CS-TEMP"
+      },
+      "name" : "DK IHE FormatCode_TEMP",
+      "description" : "_TEMP Danish Integrating the Healthcare Enterprise (IHE) metadata format codes",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/384ca229-c562-4a26-a035-c0c38108e037"
+      },
+      "name" : "Elektrokardiogram-12-aflednings",
+      "description" : "Composition example",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-composition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-classcode-VS-TEMP"
+      },
+      "name" : "IHE ClassCode_TEMP",
+      "description" : "_TEMP Value set for the classCode attribute. classCode used in DK IHE Document sharing",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-confidentialitycode-VS-TEMP"
+      },
+      "name" : "IHE ConfidentialityCode_TEMP",
+      "description" : "_TEMP Confidentiality code used in Danish Document sharing.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-formatcode-VS-TEMP"
+      },
+      "name" : "IHE FormatCode_TEMP",
+      "description" : "_TEMP ValueSet containing FormatCodes defines by MedCom.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-HealthcareFacilityTypeCode-VS-TEMP"
+      },
+      "name" : "IHE HealthcareFacilityTypeCode_TEMP",
+      "description" : "_TEMP Value set for healthcare facility type code represents the type of organizational setting of the clinical encounter during which the documented act occurred.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-languagecode-VS-TEMP"
+      },
+      "name" : "IHE LanguageCode_TEMP",
+      "description" : "_TEMP Tags for the Identification of Languages (RFC 3066)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-mimetype-VS-TEMP"
+      },
+      "name" : "IHE MimeType_TEMP",
+      "description" : "_TEMP Values for the document metadata attribute mimeType",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-PracticeSettingCode-VS-TEMP"
+      },
+      "name" : "IHE PracticeSettingCode_TEMP",
+      "description" : "_TEMP Values used for the document metadata attribute practiceSettingCode, which is an attribute specifying the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology). The value set is based on a subset of the code list from the SOR lookup table 'SOR-Kliniske specialer' (https://sor.sum.dsdn.dk/lookupdata/#clinical_speciality, accessable on Sundhedsdatanettet (SDN)), which is based on SNOMED codes.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-typecode-VS-TEMP"
+      },
+      "name" : "IHE TypeCode_TEMP",
+      "description" : "_TEMP ValueSet containing TypeCode.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -650,6 +1125,18 @@
       },
       "name" : "MedCom Document HomeCommunityID",
       "description" : "Extension containing information about operational and in production home communities (XCA) in Danish Document Sharing",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/MedCom-message-codes-CS-TEMP"
+      },
+      "name" : "MedCom Message Codes_TEMP",
+      "description" : "_TEMP MedCom Message Codes, which includes document type codes (Danish).",
       "exampleBoolean" : false
     },
     {
@@ -670,6 +1157,18 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/medcom-contained-documentreference"
+      },
+      "name" : "MedComContainedDocumentReference",
+      "description" : "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/medcom-document-bundle"
       },
       "name" : "MedComDocumentBundle",
@@ -682,10 +1181,34 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
+        "reference" : "StructureDefinition/medcom-document-careteam"
+      },
+      "name" : "MedComDocumentCareTeam",
+      "description" : "Careteam participating in the care of a patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
         "reference" : "StructureDefinition/medcom-document-composition"
       },
       "name" : "MedComDocumentComposition",
       "description" : "The profile of the MedCom Document Composition containing the minimum allowed content.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/medcom-document-observation"
+      },
+      "name" : "MedComDocumentObservation",
+      "description" : "Observation profile to be used in MedCom FHIR Documents.",
       "exampleBoolean" : false
     },
     {
@@ -730,11 +1253,47 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/medcom-documentreference"
+        "reference" : "StructureDefinition/medcom-document-practitionerrole"
       },
-      "name" : "MedComDocumentReference",
-      "description" : "A profile stating the rules, when exchanging a FHIR document.",
+      "name" : "MedComDocumentPractitionerRole",
+      "description" : "Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/ef810168-ee8c-4f14-9012-6aff6c1d86e7"
+      },
+      "name" : "Observation",
+      "description" : "Observation EKG PDF",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/f8d0eb07-5336-4005-9081-b065f9a82663"
+      },
+      "name" : "Organization",
+      "description" : "Instance of an author organization",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/379ebb53-11e3-42ac-b9db-0bad0ece46d1"
+      },
+      "name" : "Patient",
+      "description" : "Instance of a patient",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient"
     },
     {
       "extension" : [{
@@ -747,6 +1306,66 @@
       "name" : "Patient",
       "description" : "Instance of a patient",
       "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9"
+      },
+      "name" : "Practitioner",
+      "description" : "Instance of a practitioner",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820"
+      },
+      "name" : "PractitionerRole",
+      "description" : "PractitionerRole with a role and reference to a practitioner and an organization",
+      "exampleCanonical" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitionerrole"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/ProducerActor"
+      },
+      "name" : "Producer of FHIR resources",
+      "description" : "The system that creates the FHIR resources",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/MedCom-ihe-core-homeCommunityId-VS-TEMP"
+      },
+      "name" : "_TEMP IHE HomeCommunityId",
+      "description" : "_TEMP List of operational and in production home communities (XCA) in Danish Document Sharing",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/MedCom-ihe-homeCommunityId-CS-TEMP"
+      },
+      "name" : "_TEMP IHE XDS Affinity Domain",
+      "description" : "_TEMPIHE XDS Affinity Domains who has agreed to share healthcare related documents in Denmark",
+      "exampleBoolean" : false
     }],
     "page" : {
       "extension" : [{
@@ -764,6 +1383,15 @@
         "nameUrl" : "index.html",
         "title" : "Home",
         "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "dependencies.html"
+        }],
+        "nameUrl" : "dependencies.html",
+        "title" : "Dependencies",
+        "generation" : "html"
       },
       {
         "extension" : [{
@@ -791,6 +1419,15 @@
         "nameUrl" : "profiles.html",
         "title" : "Profiles",
         "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "unstructuredclinicalcontent.html"
+        }],
+        "nameUrl" : "unstructuredclinicalcontent.html",
+        "title" : "Unstructuredclinicalcontent",
+        "generation" : "markdown"
       }]
     },
     "parameter" : [{
