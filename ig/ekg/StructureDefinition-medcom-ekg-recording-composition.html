@@ -7,7 +7,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MedComEkgRecordingComposition - DK MedCom EKG v1.0.1</title>
+    <title>MedComEkgRecordingComposition - DK MedCom EKG v1.0.2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -66,11 +66,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom EKG</span>
             <br/>
-            <span style="display:inline-block;">1.0.1 - release
+            <span style="display:inline-block;">1.0.2 - release
 
 
 
-  <span title="">DK</span>
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
 
 
             </span>
@@ -150,7 +150,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom EKG (v1.0.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/ekg/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom EKG (v1.0.2: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/ekg/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -234,7 +234,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">1.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition|1.0.1"/></span>
+      <span class="copy-text">1.0.2<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition|1.0.2"/></span>
       </td>
     </tr>
 
@@ -246,20 +246,16 @@
 
 
 
-      <td colspan="3">
+      <td colspan="4">
         
           Active
           
-            as of 2026-01-15
+            as of 2026-01-28
           
         
       </td>
 
 
-
-      <td>
-        <i>Realm:</i> <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
-      </td>
 
       <td><i>Computable Name</i>: <span style="font-family: monospace;">MedComEkgRecordingComposition</span></td>
     </tr>
@@ -295,15 +291,15 @@
 <p>This resource links the various resources used for sharing EKG recordings. The specific resources are:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Observation</code> (MedComDocumentObservation)​</li>
+  <li><code class="language-plaintext highlighter-rouge">Observation</code> (MedComEkgRecordingObservation)​</li>
   <li><code class="language-plaintext highlighter-rouge">Patient</code> (MedComDocumentPatient)​</li>
   <li><code class="language-plaintext highlighter-rouge">Organization</code> (MedComDocumentOrganization)​</li>
   <li><code class="language-plaintext highlighter-rouge">PractitionerRole</code> (MedComDocumentPractitionerRole) and/or Practitioner (MedComDocumentPractitioner) (both optional)</li>
 </ul>
 
-<p>The <code class="language-plaintext highlighter-rouge">section.entry</code> element <strong>MUST</strong> reference the MedComDocumentObservation that contains the EKG PDF-A attachment.</p>
+<p>The <code class="language-plaintext highlighter-rouge">section.entry</code> element <strong>MUST</strong> reference the MedComEkgRecordingObservation that contains the EKG PDF-A attachment.</p>
 
-<p>It is required to use the profiles <code class="language-plaintext highlighter-rouge">MedComDocumentObservation</code> (representing the EKG PDF-A file and an optional note), <code class="language-plaintext highlighter-rouge">MedComDocumentPatient</code> (the patient of the EKG recording) and <code class="language-plaintext highlighter-rouge">MedComDocumentOrganization</code> (the author organization of the EKG recording), whereas it is optional to include a <code class="language-plaintext highlighter-rouge">MedComDocumentPractitionerRole</code> and/or <code class="language-plaintext highlighter-rouge">MedComDocumentPractitioner</code> (representing the author person).</p>
+<p>It is required to use the profiles <code class="language-plaintext highlighter-rouge">MedComEkgRecordingObservation</code> (representing the EKG PDF-A file and an optional note), <code class="language-plaintext highlighter-rouge">MedComDocumentPatient</code> (the patient of the EKG recording) and <code class="language-plaintext highlighter-rouge">MedComDocumentOrganization</code> (the author organization of the EKG recording), whereas it is optional to include a <code class="language-plaintext highlighter-rouge">MedComDocumentPractitionerRole</code> and/or <code class="language-plaintext highlighter-rouge">MedComDocumentPractitioner</code> (representing the author person).</p>
 
 <h3 id="profile-identification-and-versioning-metaprofile">Profile identification and versioning (meta.profile)</h3>
 
@@ -626,7 +622,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-medcom-ekg-recording-observation.html">MedComEkgRecordingObservation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A reference to data that supports this section<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 28cfdcdf-6f71-4f1d-bb83-f2e7450f5370
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d12f5292-6811-447b-8fc8-4c5187534fb7
 document.getElementById('cbmedcom-ekg-recording-compositionK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('medcom-ekg-recording-compositionK'), 'binding', document.getElementById('cbmedcom-ekg-recording-compositionK-binding').checked, document.getElementById('ppmedcom-ekg-recording-compositionK'));
 document.getElementById('cbmedcom-ekg-recording-compositionK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -636,17 +632,162 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionK'), 'obliga
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Composition.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td>Fixed Value: da<div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.text.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The status of a resource narrative."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a><div><code>http://hl7.org/fhir/ValueSet/narrative-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.identifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The workflow/clinical status of the composition.">Pattern Value: final<div><code>http://hl7.org/fhir/ValueSet/composition-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">MedComIHE_CoreTypeCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">MedComIHE_CoreClassCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.confidentiality</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes specifying the level of confidentiality of the composition.">Fixed Value: N<div><code>http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.attester.mode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The way in which a person authenticated a composition."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a><div><code>http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.event.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="This list of codes represents the main clinical acts being documented."><a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">ActCode</a><div><code>http://terminology.hl7.org/ValueSet/v3-ActCode</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode"></button></div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.language</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-languagecode-VS-TEMP.html">IHE LanguageCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.text.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The status of a resource narrative.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.identifier.​use</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The workflow/clinical status of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-status.html">CompositionStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.type</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">IHE TypeCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.category</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">IHE ClassCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.confidentiality</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Codes specifying the level of confidentiality of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ConfidentialityClassification/vs.html">V3 Value SetConfidentialityClassification</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 2014-03-26">&#x1F4CD;2014-03-26</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.attester.​mode</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The way in which a person authenticated a composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.event.code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="This list of codes represents the main clinical acts being documented.">
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">v3 Code System ActCode</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -656,23 +797,163 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionK'), 'obliga
             <a name="inv-key"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>cmp-1</td><td>error</td><td>Composition.section</td><td>A section must contain at least one of text, entries, or sub-sections<br/>: text.exists() or entry.exists() or section.exists()</td><td></td></tr>
-<tr><td>cmp-2</td><td>error</td><td>Composition.section</td><td>A section can only have an emptyReason if it is empty<br/>: emptyReason.empty() or entry.empty()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>medcom-canonical-fixed-major</td><td>error</td><td>Composition.meta.profile</td><td>If a version is present in the canonical, MAJOR SHALL be a fixed value.<br/>: matches('^.*[|]1[.].*$')</td><td></td></tr>
-<tr><td>medcom-canonical-semver</td><td>error</td><td>Composition.meta.profile</td><td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).<br/>: matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</td><td></td></tr>
-<tr><td>medcom-datetime-has-time-offset-zulu</td><td>error</td><td>Composition.event.period.start, Composition.event.period.end</td><td>dateTime must include date, time, and time zone.<br/>: $this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</td><td></td></tr>
-<tr><td>medcom-uuid</td><td>error</td><td>Composition.identifier.value</td><td>The value shall correspond to the structure of an UUID<br/>: $this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</td><td></td></tr>
-<tr><td>txt-1</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes<br/>: htmlChecks()</td><td></td></tr>
-<tr><td>txt-2</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL have some non-whitespace content<br/>: htmlChecks()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-1</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section must contain at least one of text, entries, or sub-sections</td>
+    <td>
+      <code>text.exists() or entry.exists() or section.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-2</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section can only have an emptyReason if it is empty</td>
+    <td>
+      <code>emptyReason.empty() or entry.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Composition</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-fixed-major</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>If a version is present in the canonical, MAJOR SHALL be a fixed value.</td>
+    <td>
+      <code>matches('^.*[|]1[.].*$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-semver</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).</td>
+    <td>
+      <code>matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-datetime-has-time-offset-zulu</td>
+    <td>error</td>
+    <td>Composition.event.period.start, Composition.event.period.end</td>
+    <td>dateTime must include date, time, and time zone.</td>
+    <td>
+      <code>$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-uuid</td>
+    <td>error</td>
+    <td>Composition.identifier.value</td>
+    <td>The value shall correspond to the structure of an UUID</td>
+    <td>
+      <code>$this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-1</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-2</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL have some non-whitespace content</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -818,7 +1099,7 @@ as an author person.</span></td></tr>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-medcom-ekg-recording-observation.html">MedComEkgRecordingObservation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">A reference to data that supports this section</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 28cfdcdf-6f71-4f1d-bb83-f2e7450f5370
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d12f5292-6811-447b-8fc8-4c5187534fb7
 document.getElementById('cbmedcom-ekg-recording-compositionD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('medcom-ekg-recording-compositionD'), 'binding', document.getElementById('cbmedcom-ekg-recording-compositionD-binding').checked, document.getElementById('ppmedcom-ekg-recording-compositionD'));
 document.getElementById('cbmedcom-ekg-recording-compositionD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -836,10 +1117,42 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionD'), 'obliga
             <a name="inv-diff"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>medcom-canonical-fixed-major</td><td>error</td><td>Composition.meta.profile</td><td>If a version is present in the canonical, MAJOR SHALL be a fixed value.<br/>: matches('^.*[|]1[.].*$')</td><td></td></tr>
-<tr><td>medcom-datetime-has-time-offset-zulu</td><td>error</td><td>Composition.event.period.start, Composition.event.period.end</td><td>dateTime must include date, time, and time zone.<br/>: $this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-fixed-major</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>If a version is present in the canonical, MAJOR SHALL be a fixed value.</td>
+    <td>
+      <code>matches('^.*[|]1[.].*$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-datetime-has-time-offset-zulu</td>
+    <td>error</td>
+    <td>Composition.event.period.start, Composition.event.period.end</td>
+    <td>dateTime must include date, time, and time zone.</td>
+    <td>
+      <code>$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -1378,7 +1691,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/composition.html#Composition.section" title="Composition.section">section (Composition)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Nested Section<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 28cfdcdf-6f71-4f1d-bb83-f2e7450f5370
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d12f5292-6811-447b-8fc8-4c5187534fb7
 document.getElementById('cbmedcom-ekg-recording-compositionS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('medcom-ekg-recording-compositionS'), 'binding', document.getElementById('cbmedcom-ekg-recording-compositionS-binding').checked, document.getElementById('ppmedcom-ekg-recording-compositionS'));
 document.getElementById('cbmedcom-ekg-recording-compositionS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1388,25 +1701,282 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionS'), 'obliga
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Composition.meta.security</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Security Labels from the Healthcare Privacy and Security Classification System."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-security-labels.html">All Security Labels</a><div><code>http://hl7.org/fhir/ValueSet/security-labels|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/security-labels|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.meta.tag</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot;."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-common-tags.html">CommonTags</a><div><code>http://hl7.org/fhir/ValueSet/common-tags|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/common-tags|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td>Fixed Value: da<div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.text.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The status of a resource narrative."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a><div><code>http://hl7.org/fhir/ValueSet/narrative-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.identifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.identifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The workflow/clinical status of the composition.">Pattern Value: final<div><code>http://hl7.org/fhir/ValueSet/composition-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">MedComIHE_CoreTypeCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">MedComIHE_CoreClassCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.confidentiality</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes specifying the level of confidentiality of the composition.">Fixed Value: N<div><code>http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.attester.mode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The way in which a person authenticated a composition."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a><div><code>http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.relatesTo.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of relationship between documents."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-document-relationship-type.html">DocumentRelationshipType</a><div><code>http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.event.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="This list of codes represents the main clinical acts being documented."><a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">ActCode</a><div><code>http://terminology.hl7.org/ValueSet/v3-ActCode</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode"></button></div></td></tr>
-<tr><td>Composition.section.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Classification of a section of a composition/document."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-doc-section-codes.html">DocumentSectionCodes</a><div><code>http://hl7.org/fhir/ValueSet/doc-section-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/doc-section-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.section.mode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The processing mode that applies to this section."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-mode.html">ListMode</a><div><code>http://hl7.org/fhir/ValueSet/list-mode|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/list-mode|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.section.orderedBy</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="What order applies to the items in the entry."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-order.html">ListOrderCodes</a><div><code>http://hl7.org/fhir/ValueSet/list-order|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/list-order|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.section.emptyReason</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="If a section is empty, why it is empty."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-empty-reason.html">ListEmptyReasons</a><div><code>http://hl7.org/fhir/ValueSet/list-empty-reason|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/list-empty-reason|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.meta.security</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td title="Security Labels from the Healthcare Privacy and Security Classification System.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-security-labels.html">SecurityLabels</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/security-labels|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.meta.tag</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot;.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-common-tags.html">Common Tags</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/common-tags|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.language</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-languagecode-VS-TEMP.html">IHE LanguageCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.text.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The status of a resource narrative.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.identifier.​use</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.identifier.​type</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The workflow/clinical status of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-status.html">CompositionStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.type</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">IHE TypeCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.category</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">IHE ClassCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.confidentiality</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Codes specifying the level of confidentiality of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ConfidentialityClassification/vs.html">V3 Value SetConfidentialityClassification</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 2014-03-26">&#x1F4CD;2014-03-26</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.attester.​mode</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The way in which a person authenticated a composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.relatesTo.​code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The type of relationship between documents.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-document-relationship-type.html">DocumentRelationshipType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.event.code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="This list of codes represents the main clinical acts being documented.">
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">v3 Code System ActCode</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="Classification of a section of a composition/document.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-doc-section-codes.html">Document Section Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/doc-section-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​mode</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The processing mode that applies to this section.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-mode.html">ListMode</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/list-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​orderedBy</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
+    </td>
+    <td title="What order applies to the items in the entry.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-order.html">List Order Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/list-order|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​emptyReason</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
+    </td>
+    <td title="If a section is empty, why it is empty.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-empty-reason.html">List Empty Reasons</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/list-empty-reason|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -1416,23 +1986,163 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionS'), 'obliga
             <a name="inv-snap"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>cmp-1</td><td>error</td><td>Composition.section</td><td>A section must contain at least one of text, entries, or sub-sections<br/>: text.exists() or entry.exists() or section.exists()</td><td></td></tr>
-<tr><td>cmp-2</td><td>error</td><td>Composition.section</td><td>A section can only have an emptyReason if it is empty<br/>: emptyReason.empty() or entry.empty()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>medcom-canonical-fixed-major</td><td>error</td><td>Composition.meta.profile</td><td>If a version is present in the canonical, MAJOR SHALL be a fixed value.<br/>: matches('^.*[|]1[.].*$')</td><td></td></tr>
-<tr><td>medcom-canonical-semver</td><td>error</td><td>Composition.meta.profile</td><td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).<br/>: matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</td><td></td></tr>
-<tr><td>medcom-datetime-has-time-offset-zulu</td><td>error</td><td>Composition.event.period.start, Composition.event.period.end</td><td>dateTime must include date, time, and time zone.<br/>: $this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</td><td></td></tr>
-<tr><td>medcom-uuid</td><td>error</td><td>Composition.identifier.value</td><td>The value shall correspond to the structure of an UUID<br/>: $this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</td><td></td></tr>
-<tr><td>txt-1</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes<br/>: htmlChecks()</td><td></td></tr>
-<tr><td>txt-2</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL have some non-whitespace content<br/>: htmlChecks()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-1</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section must contain at least one of text, entries, or sub-sections</td>
+    <td>
+      <code>text.exists() or entry.exists() or section.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-2</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section can only have an emptyReason if it is empty</td>
+    <td>
+      <code>emptyReason.empty() or entry.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Composition</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-fixed-major</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>If a version is present in the canonical, MAJOR SHALL be a fixed value.</td>
+    <td>
+      <code>matches('^.*[|]1[.].*$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-semver</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).</td>
+    <td>
+      <code>matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-datetime-has-time-offset-zulu</td>
+    <td>error</td>
+    <td>Composition.event.period.start, Composition.event.period.end</td>
+    <td>dateTime must include date, time, and time zone.</td>
+    <td>
+      <code>$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-uuid</td>
+    <td>error</td>
+    <td>Composition.identifier.value</td>
+    <td>The value shall correspond to the structure of an UUID</td>
+    <td>
+      <code>$this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-1</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-2</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL have some non-whitespace content</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -1846,7 +2556,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-medcom-ekg-recording-observation.html">MedComEkgRecordingObservation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A reference to data that supports this section<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 28cfdcdf-6f71-4f1d-bb83-f2e7450f5370
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d12f5292-6811-447b-8fc8-4c5187534fb7
 document.getElementById('cbmedcom-ekg-recording-compositionKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('medcom-ekg-recording-compositionKA'), 'binding', document.getElementById('cbmedcom-ekg-recording-compositionKA-binding').checked, document.getElementById('ppmedcom-ekg-recording-compositionKA'));
 document.getElementById('cbmedcom-ekg-recording-compositionKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1856,17 +2566,162 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionKA'), 'oblig
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Composition.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td>Fixed Value: da<div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.text.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The status of a resource narrative."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a><div><code>http://hl7.org/fhir/ValueSet/narrative-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.identifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The workflow/clinical status of the composition.">Pattern Value: final<div><code>http://hl7.org/fhir/ValueSet/composition-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">MedComIHE_CoreTypeCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">MedComIHE_CoreClassCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.confidentiality</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes specifying the level of confidentiality of the composition.">Fixed Value: N<div><code>http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.attester.mode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The way in which a person authenticated a composition."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a><div><code>http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.event.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="This list of codes represents the main clinical acts being documented."><a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">ActCode</a><div><code>http://terminology.hl7.org/ValueSet/v3-ActCode</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode"></button></div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.language</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-languagecode-VS-TEMP.html">IHE LanguageCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.text.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The status of a resource narrative.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.identifier.​use</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The workflow/clinical status of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-status.html">CompositionStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.type</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">IHE TypeCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.category</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">IHE ClassCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.confidentiality</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Codes specifying the level of confidentiality of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ConfidentialityClassification/vs.html">V3 Value SetConfidentialityClassification</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 2014-03-26">&#x1F4CD;2014-03-26</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.attester.​mode</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The way in which a person authenticated a composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.event.code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="This list of codes represents the main clinical acts being documented.">
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">v3 Code System ActCode</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -1876,23 +2731,163 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionKA'), 'oblig
             <a name="inv-all-key"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>cmp-1</td><td>error</td><td>Composition.section</td><td>A section must contain at least one of text, entries, or sub-sections<br/>: text.exists() or entry.exists() or section.exists()</td><td></td></tr>
-<tr><td>cmp-2</td><td>error</td><td>Composition.section</td><td>A section can only have an emptyReason if it is empty<br/>: emptyReason.empty() or entry.empty()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>medcom-canonical-fixed-major</td><td>error</td><td>Composition.meta.profile</td><td>If a version is present in the canonical, MAJOR SHALL be a fixed value.<br/>: matches('^.*[|]1[.].*$')</td><td></td></tr>
-<tr><td>medcom-canonical-semver</td><td>error</td><td>Composition.meta.profile</td><td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).<br/>: matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</td><td></td></tr>
-<tr><td>medcom-datetime-has-time-offset-zulu</td><td>error</td><td>Composition.event.period.start, Composition.event.period.end</td><td>dateTime must include date, time, and time zone.<br/>: $this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</td><td></td></tr>
-<tr><td>medcom-uuid</td><td>error</td><td>Composition.identifier.value</td><td>The value shall correspond to the structure of an UUID<br/>: $this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</td><td></td></tr>
-<tr><td>txt-1</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes<br/>: htmlChecks()</td><td></td></tr>
-<tr><td>txt-2</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL have some non-whitespace content<br/>: htmlChecks()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-1</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section must contain at least one of text, entries, or sub-sections</td>
+    <td>
+      <code>text.exists() or entry.exists() or section.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-2</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section can only have an emptyReason if it is empty</td>
+    <td>
+      <code>emptyReason.empty() or entry.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Composition</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-fixed-major</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>If a version is present in the canonical, MAJOR SHALL be a fixed value.</td>
+    <td>
+      <code>matches('^.*[|]1[.].*$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-semver</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).</td>
+    <td>
+      <code>matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-datetime-has-time-offset-zulu</td>
+    <td>error</td>
+    <td>Composition.event.period.start, Composition.event.period.end</td>
+    <td>dateTime must include date, time, and time zone.</td>
+    <td>
+      <code>$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-uuid</td>
+    <td>error</td>
+    <td>Composition.identifier.value</td>
+    <td>The value shall correspond to the structure of an UUID</td>
+    <td>
+      <code>$this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-1</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-2</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL have some non-whitespace content</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -2038,7 +3033,7 @@ as an author person.</span></td></tr>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-medcom-ekg-recording-observation.html">MedComEkgRecordingObservation</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">A reference to data that supports this section</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 28cfdcdf-6f71-4f1d-bb83-f2e7450f5370
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d12f5292-6811-447b-8fc8-4c5187534fb7
 document.getElementById('cbmedcom-ekg-recording-compositionDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('medcom-ekg-recording-compositionDA'), 'binding', document.getElementById('cbmedcom-ekg-recording-compositionDA-binding').checked, document.getElementById('ppmedcom-ekg-recording-compositionDA'));
 document.getElementById('cbmedcom-ekg-recording-compositionDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2055,10 +3050,42 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionDA'), 'oblig
             <a name="inv-all-diff"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>medcom-canonical-fixed-major</td><td>error</td><td>Composition.meta.profile</td><td>If a version is present in the canonical, MAJOR SHALL be a fixed value.<br/>: matches('^.*[|]1[.].*$')</td><td></td></tr>
-<tr><td>medcom-datetime-has-time-offset-zulu</td><td>error</td><td>Composition.event.period.start, Composition.event.period.end</td><td>dateTime must include date, time, and time zone.<br/>: $this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-fixed-major</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>If a version is present in the canonical, MAJOR SHALL be a fixed value.</td>
+    <td>
+      <code>matches('^.*[|]1[.].*$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-datetime-has-time-offset-zulu</td>
+    <td>error</td>
+    <td>Composition.event.period.start, Composition.event.period.end</td>
+    <td>dateTime must include date, time, and time zone.</td>
+    <td>
+      <code>$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -2597,7 +3624,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/composition.html#Composition.section" title="Composition.section">section (Composition)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Nested Section<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 28cfdcdf-6f71-4f1d-bb83-f2e7450f5370
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d12f5292-6811-447b-8fc8-4c5187534fb7
 document.getElementById('cbmedcom-ekg-recording-compositionSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('medcom-ekg-recording-compositionSA'), 'binding', document.getElementById('cbmedcom-ekg-recording-compositionSA-binding').checked, document.getElementById('ppmedcom-ekg-recording-compositionSA'));
 document.getElementById('cbmedcom-ekg-recording-compositionSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2607,25 +3634,282 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionSA'), 'oblig
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td><td><b>URI</b></td></tr>
-<tr><td>Composition.meta.security</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Security Labels from the Healthcare Privacy and Security Classification System."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-security-labels.html">All Security Labels</a><div><code>http://hl7.org/fhir/ValueSet/security-labels|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/security-labels|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.meta.tag</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot;."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-common-tags.html">CommonTags</a><div><code>http://hl7.org/fhir/ValueSet/common-tags|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/common-tags|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td>Fixed Value: da<div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.text.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The status of a resource narrative."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a><div><code>http://hl7.org/fhir/ValueSet/narrative-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.identifier.use</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identifies the purpose for this identifier, if known ."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a><div><code>http://hl7.org/fhir/ValueSet/identifier-use|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.identifier.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">Identifier Type Codes</a><div><code>http://hl7.org/fhir/ValueSet/identifier-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The workflow/clinical status of the composition.">Pattern Value: final<div><code>http://hl7.org/fhir/ValueSet/composition-status|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">MedComIHE_CoreTypeCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">MedComIHE_CoreClassCode_TEMP</a><div><code>http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP"></button></div></td></tr>
-<tr><td>Composition.confidentiality</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes specifying the level of confidentiality of the composition.">Fixed Value: N<div><code>http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.attester.mode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The way in which a person authenticated a composition."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a><div><code>http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.relatesTo.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The type of relationship between documents."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-document-relationship-type.html">DocumentRelationshipType</a><div><code>http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.event.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="This list of codes represents the main clinical acts being documented."><a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">ActCode</a><div><code>http://terminology.hl7.org/ValueSet/v3-ActCode</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode"></button></div></td></tr>
-<tr><td>Composition.section.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Classification of a section of a composition/document."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-doc-section-codes.html">DocumentSectionCodes</a><div><code>http://hl7.org/fhir/ValueSet/doc-section-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/doc-section-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.section.mode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="The processing mode that applies to this section."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-mode.html">ListMode</a><div><code>http://hl7.org/fhir/ValueSet/list-mode|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/list-mode|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.section.orderedBy</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="What order applies to the items in the entry."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-order.html">ListOrderCodes</a><div><code>http://hl7.org/fhir/ValueSet/list-order|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/list-order|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>Composition.section.emptyReason</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="If a section is empty, why it is empty."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-empty-reason.html">ListEmptyReasons</a><div><code>http://hl7.org/fhir/ValueSet/list-empty-reason|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/list-empty-reason|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.meta.security</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td title="Security Labels from the Healthcare Privacy and Security Classification System.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-security-labels.html">SecurityLabels</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/security-labels|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.meta.tag</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="Codes that represent various types of tags, commonly workflow-related; e.g. &quot;Needs review by Dr. Jones&quot;.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-common-tags.html">Common Tags</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/common-tags|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.language</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-languagecode-VS-TEMP.html">IHE LanguageCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-languagecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.text.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The status of a resource narrative.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-narrative-status.html">NarrativeStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/narrative-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.identifier.​use</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Identifies the purpose for this identifier, if known .">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.identifier.​type</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.status</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The workflow/clinical status of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-status.html">CompositionStatus</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-status|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.type</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-typecode-VS-TEMP.html">IHE TypeCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-typecode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.category</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
+    </td>
+    <td>
+      <a style="opacity: 1.0" href="http://medcomfhir.dk/ig/document/2.0.0/ValueSet-MedCom-ihe-core-classcode-VS-TEMP.html">IHE ClassCode_TEMP</a>
+      <button data-clipboard-text="http://medcomfhir.dk/ig/document/ValueSet/MedCom-ihe-core-classcode-VS-TEMP" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.0.0, the version found through the package references">&#x1F4E6;2.0.0</td>
+    <td>
+      <a href="http://medcomfhir.dk/ig/document/2.0.0">DK MedCom Document v2.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.confidentiality</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="Codes specifying the level of confidentiality of the composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ConfidentialityClassification/vs.html">V3 Value SetConfidentialityClassification</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification|2014-03-26" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 2014-03-26">&#x1F4CD;2014-03-26</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.attester.​mode</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The way in which a person authenticated a composition.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-composition-attestation-mode.html">CompositionAttestationMode</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/composition-attestation-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.relatesTo.​code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The type of relationship between documents.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-document-relationship-type.html">DocumentRelationshipType</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.event.code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="This list of codes represents the main clinical acts being documented.">
+      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html">v3 Code System ActCode</a>
+      <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActCode" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td>
+      <a href="http://terminology.hl7.org/7.0.1">THO v7.0</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​code</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
+    </td>
+    <td title="Classification of a section of a composition/document.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-doc-section-codes.html">Document Section Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/doc-section-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​mode</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
+    </td>
+    <td title="The processing mode that applies to this section.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-mode.html">ListMode</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/list-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​orderedBy</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
+    </td>
+    <td title="What order applies to the items in the entry.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-order.html">List Order Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/list-order|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Composition.section.​emptyReason</td>
+    <td>Base</td>
+    <td>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
+    </td>
+    <td title="If a section is empty, why it is empty.">
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-list-empty-reason.html">List Empty Reasons</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/list-empty-reason|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -2635,23 +3919,163 @@ filterDesc(document.getElementById('medcom-ekg-recording-compositionSA'), 'oblig
             <a name="inv-all-snap"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>cmp-1</td><td>error</td><td>Composition.section</td><td>A section must contain at least one of text, entries, or sub-sections<br/>: text.exists() or entry.exists() or section.exists()</td><td></td></tr>
-<tr><td>cmp-2</td><td>error</td><td>Composition.section</td><td>A section can only have an emptyReason if it is empty<br/>: emptyReason.empty() or entry.empty()</td><td></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Composition</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Composition</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>Composition</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>medcom-canonical-fixed-major</td><td>error</td><td>Composition.meta.profile</td><td>If a version is present in the canonical, MAJOR SHALL be a fixed value.<br/>: matches('^.*[|]1[.].*$')</td><td></td></tr>
-<tr><td>medcom-canonical-semver</td><td>error</td><td>Composition.meta.profile</td><td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).<br/>: matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</td><td></td></tr>
-<tr><td>medcom-datetime-has-time-offset-zulu</td><td>error</td><td>Composition.event.period.start, Composition.event.period.end</td><td>dateTime must include date, time, and time zone.<br/>: $this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</td><td></td></tr>
-<tr><td>medcom-uuid</td><td>error</td><td>Composition.identifier.value</td><td>The value shall correspond to the structure of an UUID<br/>: $this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</td><td></td></tr>
-<tr><td>txt-1</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes<br/>: htmlChecks()</td><td></td></tr>
-<tr><td>txt-2</td><td>error</td><td>Composition.text.div</td><td>The narrative SHALL have some non-whitespace content<br/>: htmlChecks()</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-1</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section must contain at least one of text, entries, or sub-sections</td>
+    <td>
+      <code>text.exists() or entry.exists() or section.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>cmp-2</td>
+    <td>error</td>
+    <td>Composition.section</td>
+    <td>A section can only have an emptyReason if it is empty</td>
+    <td>
+      <code>emptyReason.empty() or entry.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>Composition</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>Composition</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-fixed-major</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>If a version is present in the canonical, MAJOR SHALL be a fixed value.</td>
+    <td>
+      <code>matches('^.*[|]1[.].*$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-canonical-semver</td>
+    <td>error</td>
+    <td>Composition.meta.profile</td>
+    <td>The canonical SHALL include an explicit semantic version (semver) with optional prerelease (-...) and build metadata (+...).</td>
+    <td>
+      <code>matches('^.*[|][0-9]+[.][0-9]+([.][0-9]+)?(-[0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?([+][0-9A-Za-z-]+([.][0-9A-Za-z-]+)*)?$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-datetime-has-time-offset-zulu</td>
+    <td>error</td>
+    <td>Composition.event.period.start, Composition.event.period.end</td>
+    <td>dateTime must include date, time, and time zone.</td>
+    <td>
+      <code>$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>medcom-uuid</td>
+    <td>error</td>
+    <td>Composition.identifier.value</td>
+    <td>The value shall correspond to the structure of an UUID</td>
+    <td>
+      <code>$this.matches('(?i)^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[45][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$')</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-1</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained style attributes</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>txt-2</td>
+    <td>error</td>
+    <td>Composition.text.div</td>
+    <td>The narrative SHALL have some non-whitespace content</td>
+    <td>
+      <code>htmlChecks()</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -2850,7 +4274,7 @@ Summary
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.ekg#1.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 15, 2026 08:36+0000">2026-01-15</span>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.ekg#1.0.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 28, 2026 10:08+0000">2026-01-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
