@@ -1,0 +1,41 @@
+# Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital. - DK MedCom HospitalNotification v3.0.2
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital.**
+
+## Organization: Sender organization - Hjerteafdelingen på Herlev og Gentofte hospital.
+
+Profile: [MedComMessagingOrganization](http://medcomfhir.dk/ig/messaging/2.1.0/StructureDefinition-medcom-messaging-organization.html)
+
+**identifier**: `https://www.gs1.org/gln`/5790000209354, `urn:oid:1.2.208.176.1.1`/265161000016000
+
+**name**: Hjerteafdelingen på Herlev og Gentofte hospital
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Organization",
+  "id" : "5961ade8-81ca-11ed-a1eb-0242ac120002",
+  "meta" : {
+    "profile" : [
+      "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "https://www.gs1.org/gln",
+      "value" : "5790000209354"
+    },
+    {
+      "system" : "urn:oid:1.2.208.176.1.1",
+      "value" : "265161000016000"
+    }
+  ],
+  "name" : "Hjerteafdelingen på Herlev og Gentofte hospital"
+}
+
+```
