@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MEDCOM.FHIR.DK.HOSPITALNOTIFICATION\Home - FHIR v4.0.1</title>
+    <title>Home - DK MedCom HospitalNotification v3.0.2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,8 +18,10 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/medcom-dk.css" rel="stylesheet"/>
+    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
 
@@ -30,25 +32,27 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"1"}
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
         <div id="hl7-nav">
           <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
-            <img height="50" alt="Visit the MedComs website" src="assets/images/Medcom_logo.png"/>
+            <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
           </a>
         </div>
         <div id="family-nav">
@@ -58,7 +62,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom HospitalNotification</span>
             <br/>
-            <span style="display:inline-block;">3.0.1 - Release
+            <span style="display:inline-block;">3.0.2 - release
 
 
 
@@ -97,6 +101,9 @@
   </li>
   <li>
     <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
   </li>
   <li>
     <a href="extensions.html">Extensions</a>
@@ -139,7 +146,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom HospitalNotification (v3.0.1: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version.  For a full list of available versions, see the <a href="http://medcomfhir.dk/ig/hospitalnotification/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom HospitalNotification (v3.0.2: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/hospitalnotification/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Home</h2>
   
 
@@ -154,7 +161,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">3.0.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification|3.0.1"/></span>
+      <span class="copy-text">3.0.2<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/medcom.fhir.dk.hospitalnotification|3.0.2"/></span>
       </td>
     </tr>
 
@@ -170,7 +177,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Active
           
-            as of 2023-03-02
+            as of 2026-02-10
           
         
       </td>
@@ -208,7 +215,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>This implementation guide (IG) is provided by MedCom to describe the use of FHIR ®© in message based exchange of data in Danish healthcare.</p>
 
-<p>The IG contains profiles for MedCom HospitalNotification (Dansk: Sygehusadvis), which is used to inform a municipality about hospitalization of a patient. The HospitalNotification contributes to securing the foundation for a coherent clinical pathway across sectors. The specific purpose of the HospitalNotification is to inform the citizen’s current care and health provider in the primary sector about the start and end of the citizen’s stay at the hospital. It makes it possible to pause the current care and health providers’ services during the hospital stay and resume them when it ends. At the same time, the HospitalNotification can trigger the automatic sending of Report of Admission (<a href="https://svn.medcom.dk/svn/releases/Standarder/National%20Sygehus-Kommunesamarbejde/1.0.3/XDIS16/Dokumentation/">XDIS16</a>) from the receiver’s system, which gives the health professionals an overview of the citizen’s current services, level of function and health-related problems. The HospitalNotification also contains notification of the patient’s leave from the hospital stay and acute ambulant care.</p>
+<p>The IG contains profiles for MedCom HospitalNotification (Dansk: Sygehusadvis), which is used to inform a municipality about hospitalization of a patient. The HospitalNotification contributes to securing the foundation for a coherent clinical pathway across sectors. The specific purpose of the HospitalNotification is to inform the citizen's current care and health provider in the primary sector about the start and end of the citizen's stay at the hospital. It makes it possible to pause the current care and health providers' services during the hospital stay and resume them when it ends. At the same time, the HospitalNotification can trigger the automatic sending of Report of Admission (<a href="https://svn.medcom.dk/svn/releases/Standarder/National%20Sygehus-Kommunesamarbejde/1.0.3/XDIS16/Dokumentation/">XDIS16</a>) from the receiver's system, which gives the health professionals an overview of the citizen's current services, level of function and health-related problems. The HospitalNotification also contains notification of the patient's leave from the hospital stay and acute ambulant care.</p>
 
 <p>Profiles used in HospitalNotification are not as open as other profiles because the message is automatically sent and thus not based on a patient consent. The legislation permits this exchange, but the message shall not contain more information than necessary.</p>
 
@@ -224,21 +231,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h5 id="medcomhospitalnotificationmessage">MedComHospitalNotificationMessage</h5>
 
-<p>The <a href="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-message.html">MedComHospitalNotificationMessage</a> profile constrains the <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> to further use the MedComHospitalNotificationMessageHeader and to require exactly one patient resource in the message. Furthermore, it constrains the Provenance.activity to contain only activities from the MedComHospitalNotificationMessageActivities ValueSet.</p>
+<p>The <a href="https://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-message.html">MedComHospitalNotificationMessage</a> profile constrains the <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-message.html">MedComMessagingMessage</a> to further use the MedComHospitalNotificationMessageHeader and to require exactly one patient resource in the message. Furthermore, it constrains the Provenance.activity to contain only activities from the MedComHospitalNotificationMessageActivities ValueSet.</p>
 
 <p>All referenced resources within the message shall be contained in the entry list in MedComHospitalNotificationMessage.</p>
 
 <h5 id="medcomhospitalnotificationmessageheader">MedComHospitalNotificationMessageHeader</h5>
 
-<p>The <a href="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-messageHeader.html">MedComHospitalNotificationMessageHeader</a> profile constrains the <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> further to specify the fixed coding for this message and require a focus of the message to be a MedComHospitalNotificationEncounter.</p>
+<p>The <a href="https://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-messageHeader.html">MedComHospitalNotificationMessageHeader</a> profile constrains the <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-messageHeader.html">MedComMessagingMessageHeader</a> further to specify the fixed coding for this message and require a focus of the message to be a MedComHospitalNotificationEncounter.</p>
 
 <h5 id="medcomhospitalnotificationencounter">MedComHospitalNotificationEncounter</h5>
 
-<p>The <a href="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-encounter.html">MedComHospitalNotificationEncounter</a> profile contains the main clinical content of the message. It constrains the <a href="http://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-encounter.html">MedComCoreEncounter</a> further to require a episodeOfCare-identifier and restricts the status and class to ValueSet of relevant values. The start time of the encounter and a reference to the service provider organization are also mandatory. Most other values are disallowed due to the legislation.</p>
+<p>The <a href="https://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-encounter.html">MedComHospitalNotificationEncounter</a> profile contains the main clinical content of the message. It constrains the <a href="http://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-encounter.html">MedComCoreEncounter</a> further to require a episodeOfCare-identifier and restricts the status and class to ValueSet of relevant values. The start time of the encounter and a reference to the service provider organization are also mandatory. Most other values are disallowed due to the legislation.</p>
 
 <h5 id="medcommessagingprovenance">MedComMessagingProvenance</h5>
 
-<p>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> profile is used to track information about the activity of the notification, e.g. if the message describes a ‘start hospital stay - inpatient’ or ‘end leave’. The allowed activity codes for a HospitalNotification message can be found in <a href="http://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html">MedComHospitalNotificationMessageActivityCodes ValueSet</a> on the Terminology IG.</p>
+<p>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html">MedComMessagingProvenance</a> profile is used to track information about the activity of the notification, e.g. if the message describes a 'start hospital stay - inpatient' or 'end leave'. The allowed activity codes for a HospitalNotification message can be found in <a href="http://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html">MedComHospitalNotificationMessageActivityCodes ValueSet</a> on the Terminology IG.</p>
 
 <p>In cases of a previously sent HospitalNotification message, MedComMessagingProvenance references the lateste message which makes it possible to create a historic overview of the admission.</p>
 
@@ -246,25 +253,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>The <a href="http://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html">MedComCorePatient</a> profile is used in a HospitalNotification message. However, a HospitalNotification message may only be exchanged for patients with an official Danish civil person register (CPR)-number.</p>
 
 <h5 id="medcomcoreorganization">MedComCoreOrganization</h5>
-<p>The <a href="http://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-organization.html">MedComCoreOrganization</a> profile is used in a HospitalNotification message to describe the serviceprovider organisation, which is the organisation responsible for the patient’s admission.</p>
+<p>The <a href="http://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-organization.html">MedComCoreOrganization</a> profile is used in a HospitalNotification message to describe the serviceprovider organisation, which is the organisation responsible for the patient's admission.</p>
 
 <h5 id="medcommessagingorganization">MedComMessagingOrganization</h5>
 <p>The <a href="http://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-organization.html">MedComMessagingOrganization</a> profile is used in a HospitalNotification message to describe the sender and primary receiver of the notification. Please notice, that carbon-copy receiver is not allowed in a HospitalNotification message.</p>
 
 <h4 id="timestamps">Timestamps</h4>
 
-<p>HospitalNotification messages are generated and sent based on real-time registration in the EPR/PAS system. In case the EPR allows future registrations of planned contacts or a period of leave, the HospitalNotifications shall only be triggered when the event occurs, i.e. at the patient’s physical attendance, as described in the <a href="https://medcomdk.github.io/dk-medcom-hospitalnotification/#11-clinical-guidelines-for-application">Clinical guidelines for application</a>.</p>
+<p>HospitalNotification messages are generated and sent based on real-time registration in the EPR/PAS system. In case the EPR allows future registrations of planned contacts or a period of leave, the HospitalNotifications shall only be triggered when the event occurs, i.e. at the patient's physical attendance, as described in the <a href="https://medcomdk.github.io/dk-medcom-hospitalnotification/#11-clinical-guidelines-for-application">Clinical guidelines for application</a>.</p>
 
 <p>The HospitalNotification message contains several timestamps. These timestamps are present in the profiles MedComHospitalNotificationEncounter, MedComHospitalNotificationMessage and MedComMessagingProvenance and have different purposes:</p>
 
 <ul>
-  <li>Encounter-timestamps represent the time of an event. For receiving systems, this is the timestamps that must be displayed for the end user in the HospitalNotification as ‘date and time of start/end for the event’. <a href="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-encounter.html">The usage of these timestamps is more thoroughly described here.</a></li>
+  <li>Encounter-timestamps represent the time of an event. For receiving systems, this is the timestamps that must be displayed for the end user in the HospitalNotification as ‘date and time of start/end for the event’. <a href="https://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-encounter.html">The usage of these timestamps is more thoroughly described here.</a></li>
   <li>Bundle.timestamp represents the time bundle is generated.</li>
   <li>Provenance.occuredDateTime[x] represents the time the HospitalNotification is sent, in a human-readable time</li>
   <li>Provenance.recorded represents the time the HospitalNotification is sent, in a machine-readable time</li>
 </ul>
 
-<h4 id="ids">ID’s</h4>
+<h4 id="ids">ID's</h4>
 
 <p>All profiles shall have a global unique id by using an UUID. <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/052.2_MessageHeader_Identifiers_Timestamps.html">Read more about the use of ids here</a>.</p>
 
@@ -272,62 +279,62 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>The simplified examples contain the required content of a HospitalNotification message. Throughout this section different activity codes and statuses are used. <a href="https://medcomdk.github.io/dk-medcom-hospitalnotification/#14-hospitalnotification-codes">To get an overview of all the codes and statuses, please go to GitHub pages for HospitalNotification</a>.</p>
 
-<p>In the sections below is a limited number HospitalNotifications simplified examples. <a href="http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-message-examples.html">More examples of a HospitalNotification message can be found here</a>. For examples of a profile, take a look under the tab ‘Examples’ on the site for the given profile.</p>
+<p>In the sections below is a limited number HospitalNotifications simplified examples. <a href="https://medcomfhir.dk/ig/hospitalnotification/StructureDefinition-medcom-hospitalNotification-message-examples.html">More examples of a HospitalNotification message can be found here</a>. For examples of a profile, take a look under the tab 'Examples' on the site for the given profile.</p>
 
 <blockquote>
   <p>Please notice, that in the following examples is the resources listed as an array. This is just an example of an order, resources may be listed in any order.</p>
 </blockquote>
 
 <h5 id="stin---start-hospital-stay---admitted">STIN - Start hospital stay - admitted</h5>
-<p>The simplified example below is an example of a ‘Start hospital stay - admitted’ HospitalNotification. In the MessageHeader there is a request for a reportOfAdmission (extension:reportOfAdmissionFlag). In the Encounter instance the status is ‘in-progress’, and the Encounter is populated with a start timestamp (period.start). In the Provenance instance is the activity code ‘admit-inpatient’. The sender and serviceProvider organisation is the same.</p>
+<p>The simplified example below is an example of a 'Start hospital stay - admitted' HospitalNotification. In the MessageHeader there is a request for a reportOfAdmission (extension:reportOfAdmissionFlag). In the Encounter instance the status is 'in-progress', and the Encounter is populated with a start timestamp (period.start). In the Provenance instance is the activity code 'admit-inpatient'. The sender and serviceProvider organisation is the same.</p>
 
 <ul>
-  <li><a href="./hospitalnotification/HNAdmitInPat.svg">1 - Simplified example of ‘Start hospital stay - admitted’</a></li>
+  <li><a href="./hospitalnotification/HNAdmitInPat.svg">1 - Simplified example of 'Start hospital stay - admitted'</a></li>
 </ul>
 
 <p><a href="https://medcomfhir.dk/ig/hospitalnotification/Bundle-a5e5b880-c087-4055-b9ec-99108695f81d.html">Click here to see the generated example of simplified example number 1.</a></p>
 
 <h5 id="stor---start-leave">STOR - Start leave</h5>
-<p>The simplified example below is an example of a ‘Start leave’ HospitalNotification which is sent in continuation of simplified example number 1. The status in the Encounter is changed from ‘in-progress’ to ‘onleave’, and the Encounter is populated with a start timestamp for the period of leave (extension:leavePeriod.start). In the Provenance instance is the activity code ‘start-leave-inpatient’. The sender and serviceProvider organisation is the same.</p>
+<p>The simplified example below is an example of a 'Start leave' HospitalNotification which is sent in continuation of simplified example number 1. The status in the Encounter is changed from 'in-progress' to 'onleave', and the Encounter is populated with a start timestamp for the period of leave (extension:leavePeriod.start). In the Provenance instance is the activity code 'start-leave-inpatient'. The sender and serviceProvider organisation is the same.</p>
 
 <ul>
-  <li><a href="./hospitalnotification/HNstartOnleave.svg">2 - Simplified example of ‘Start leave’</a></li>
+  <li><a href="./hospitalnotification/HNstartOnleave.svg">2 - Simplified example of 'Start leave'</a></li>
 </ul>
 
 <p><a href="https://medcomfhir.dk/ig/hospitalnotification/Bundle-d3128d9b-cede-4c7f-8904-809eab322d7d.html">Click here to see the generated example of simplified example number 2.</a></p>
 
 <h5 id="slor---end-leave">SLOR - End leave</h5>
-<p>The simplified example below is an example of a ‘End leave’ HospitalNotification which is sent in continuation of simplified example number 2. The status in the Encounter is changed from ‘onleave’ to ‘in-progress’, and the Encounter is populated with a end timestamp for the period of leave (extension:leavePeriod.end). In the Provenance instance is the activity code ‘end-leave-inpatient’. The sender and serviceProvider organisation is the same.</p>
+<p>The simplified example below is an example of a 'End leave' HospitalNotification which is sent in continuation of simplified example number 2. The status in the Encounter is changed from 'onleave' to 'in-progress', and the Encounter is populated with a end timestamp for the period of leave (extension:leavePeriod.end). In the Provenance instance is the activity code 'end-leave-inpatient'. The sender and serviceProvider organisation is the same.</p>
 
 <ul>
-  <li><a href="./hospitalnotification/HNendOnleave.svg">3 - Simplified example of ‘End leave’</a></li>
+  <li><a href="./hospitalnotification/HNendOnleave.svg">3 - Simplified example of 'End leave'</a></li>
 </ul>
 
 <p><a href="https://medcomfhir.dk/ig/hospitalnotification/Bundle-e94de8ee-bd94-475e-b454-b8fbbef8a685.html">Click here to see the generated example of simplified example number 3.</a></p>
 
 <h5 id="slhj---end-hospital-stay---patient-completed-to-homeprimary-sector-inpatient">SLHJ - End hospital stay - patient completed to home/primary sector (inpatient)</h5>
-<p>The simplified example below is an example of a ‘End hospital stay - patient completed to home/primary sector’ HospitalNotification which is sent in continuation of simplified example number 1. The status in the Encounter is changed from ‘in-progress’ to ‘finished’, and the Encounter is populated with a timestamp indicating end of the encounter (period.end). In the Provenance instance is the activity code ‘discharge-inpatient-home’. The sender and serviceProvider organisation is the same.</p>
+<p>The simplified example below is an example of a 'End hospital stay - patient completed to home/primary sector' HospitalNotification which is sent in continuation of simplified example number 1. The status in the Encounter is changed from 'in-progress' to 'finished', and the Encounter is populated with a timestamp indicating end of the encounter (period.end). In the Provenance instance is the activity code 'discharge-inpatient-home'. The sender and serviceProvider organisation is the same.</p>
 
 <ul>
-  <li><a href="./hospitalnotification/HNdischargeInPat.svg">4 - Simplified example of ‘End hospital stay - patient completed to home/primary sector’</a></li>
+  <li><a href="./hospitalnotification/HNdischargeInPat.svg">4 - Simplified example of 'End hospital stay - patient completed to home/primary sector'</a></li>
 </ul>
 
 <p><a href="https://medcomfhir.dk/ig/hospitalnotification/Bundle-f4aa42a4-86db-4e68-9b38-9dda0dfd5774.html">Click here to see the generated example of simplified example number 4.</a></p>
 
 <h5 id="mors---deceased-inpatient">MORS - Deceased (inpatient)</h5>
-<p>The simplified example below is an example of a ‘Deceased’ HospitalNotification which is sent in continuation of simplified example number 1. The status in the Encounter is changed from ‘in-progress’ to ‘finished’, and the Encounter is populated with a timestamp indicating end of the encounter (period.end) i.e. the death of the patient. The element Patient.deceased is sat to ‘true’, indicating that the patient is deceased. In the Provenance instance is the activity code ‘admit-inpatient’, as it shall remain the current activity. The sender and serviceProvider organisation is the same.</p>
+<p>The simplified example below is an example of a 'Deceased' HospitalNotification which is sent in continuation of simplified example number 1. The status in the Encounter is changed from 'in-progress' to 'finished', and the Encounter is populated with a timestamp indicating end of the encounter (period.end) i.e. the death of the patient. The element Patient.deceased is sat to 'true', indicating that the patient is deceased. In the Provenance instance is the activity code 'admit-inpatient', as it shall remain the current activity. The sender and serviceProvider organisation is the same.</p>
 
 <ul>
-  <li><a href="./hospitalnotification/HNdeceasedInPat.svg">5 - Simplified example of ‘Deceased’</a></li>
+  <li><a href="./hospitalnotification/HNdeceasedInPat.svg">5 - Simplified example of 'Deceased'</a></li>
 </ul>
 
 <p><a href="https://medcomfhir.dk/ig/hospitalnotification/Bundle-g099bbf3-3fca-4722-a248-bfe1aa956410.html">Click here to see the generated example of simplified example number 5.</a></p>
 
 <h5 id="an_stin---cancellation-start-hospital-stay---admitted">AN_STIN - Cancellation Start hospital stay - admitted</h5>
-<p>The simplified example below is an example of a ‘Cancellation Start hospital stay - admitted’ HospitalNotification which is sent in continuation of simplified example number 1. In the Provenance instance the activity code is changed to ‘cancel-admit-inpatient’ and the entity.what is now ‘removal’ indicating that the previous message is cancelled. The sender and serviceProvider organisation is the same.</p>
+<p>The simplified example below is an example of a 'Cancellation Start hospital stay - admitted' HospitalNotification which is sent in continuation of simplified example number 1. In the Provenance instance the activity code is changed to 'cancel-admit-inpatient' and the entity.what is now 'removal' indicating that the previous message is cancelled. The sender and serviceProvider organisation is the same.</p>
 
 <ul>
-  <li><a href="./hospitalnotification/HNcancelEnteredInError.svg">6 - Simplified example of ‘Cancellation Start hospital stay - admitted’</a></li>
+  <li><a href="./hospitalnotification/HNcancelEnteredInError.svg">6 - Simplified example of 'Cancellation Start hospital stay - admitted'</a></li>
 </ul>
 
 <p><a href="https://medcomfhir.dk/ig/hospitalnotification/Bundle-c83671a4-9584-11ec-b909-0242ac120002.html">Click here to see the generated example of simplified example number 6.</a></p>
@@ -365,7 +372,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this IG.</p>
 
-<p>If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom’s stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
+<p>If you have any questions, please contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or write to MedCom's stream in <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">Zulip</a>.</p>
 
 
 
@@ -379,26 +386,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.hospitalnotification#3.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 2, 2023 09:56+0100">2023-03-02</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.hospitalnotification#3.0.2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 10, 2026 12:55+0000">2026-02-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
                  
                 
+
+| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->
@@ -409,7 +412,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -419,16 +422,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>
