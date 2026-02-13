@@ -5,6 +5,10 @@ on:
     types: [closed]
     branches: [main]
 
+permissions:
+  contents: read
+  pull-requests: read
+  
 jobs:
   release-note-on-merge:
     uses: medcomdk/fhir-publishing/.github/workflows/create-release-note-on-merge.yaml@main
