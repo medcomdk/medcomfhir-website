@@ -1,0 +1,42 @@
+# Bruno Test Elmer - DK MedCom Carecommunication v5.0.2
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Bruno Test Elmer**
+
+## Example Patient: Bruno Test Elmer
+
+Profile: [MedComCorePatient](http://medcomfhir.dk/ig/core/3.0.1/StructureDefinition-medcom-core-patient.html)
+
+Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)
+
+-------
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Patient",
+  "id" : "23ebfcd8-e4f2-4ce8-908b-aa7cfb9ffef5",
+  "meta" : {
+    "profile" : [
+      "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+    ]
+  },
+  "identifier" : [
+    {
+      "system" : "urn:oid:1.2.208.176.1.2",
+      "value" : "2509479989"
+    }
+  ],
+  "name" : [
+    {
+      "use" : "official",
+      "family" : "Elmer"
+    }
+  ]
+}
+
+```
