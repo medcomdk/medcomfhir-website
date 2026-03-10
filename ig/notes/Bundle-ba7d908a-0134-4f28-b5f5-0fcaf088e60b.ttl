@@ -1,0 +1,311 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/notes/Bundle/ba7d908a-0134-4f28-b5f5-0fcaf088e60b> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ba7d908a-0134-4f28-b5f5-0fcaf088e60b"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-bundle"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:cf5a0508-063d-4200-9c53-7317ee1a69e4" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2026-12-12T11:30:00Z"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "http://medcomfhir.dk/ig/dk-medcom-notes/Composition/cff723a9-fae7-4fc6-8db2-6e49cbbc928a"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/dk-medcom-notes/Composition/cff723a9-fae7-4fc6-8db2-6e49cbbc928a>
+     ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/dk-medcom-notes/Composition/cff723a9-fae7-4fc6-8db2-6e49cbbc928a> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://medcomfhir.dk/ig/dk-medcom-notes/Observation/if810168-ee7c-4f34-8012-9aff6c1d86e7"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/dk-medcom-notes/Observation/if810168-ee7c-4f34-8012-9aff6c1d86e7>
+     ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/dk-medcom-notes/Observation/if810168-ee7c-4f34-8012-9aff6c1d86e7> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://medcomfhir.dk/ig/dk-medcom-notes/Patient/d65cd8db-4520-4264-87be-a5fd01fb9762"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/dk-medcom-notes/Patient/d65cd8db-4520-4264-87be-a5fd01fb9762>
+     ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/dk-medcom-notes/Patient/d65cd8db-4520-4264-87be-a5fd01fb9762> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://medcomfhir.dk/ig/dk-medcom-notes/Organization/f8d0eb07-5336-4005-9081-b065f9a82663"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/dk-medcom-notes/Organization/f8d0eb07-5336-4005-9081-b065f9a82663>
+     ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/dk-medcom-notes/Organization/f8d0eb07-5336-4005-9081-b065f9a82663> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://medcomfhir.dk/ig/dk-medcom-notes/Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/dk-medcom-notes/Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9>
+     ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/dk-medcom-notes/Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9> )
+  ] [
+     fhir:fullUrl [
+       fhir:v "http://medcomfhir.dk/ig/dk-medcom-notes/PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/dk-medcom-notes/PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820>
+     ] ;
+     fhir:resource ( <http://medcomfhir.dk/ig/dk-medcom-notes/PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820> )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/dk-medcom-notes/Composition/cff723a9-fae7-4fc6-8db2-6e49cbbc928a> a fhir:Composition ;
+  fhir:id [ fhir:v "cff723a9-fae7-4fc6-8db2-6e49cbbc928a"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-composition|1.0.0"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-composition?version=1.0.0>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "da"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"da\" lang=\"da\"><a name=\"Composition_cff723a9-fae7-4fc6-8db2-6e49cbbc928a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition cff723a9-fae7-4fc6-8db2-6e49cbbc928a</b></p><a name=\"cff723a9-fae7-4fc6-8db2-6e49cbbc928a\"> </a><a name=\"hccff723a9-fae7-4fc6-8db2-6e49cbbc928a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: da</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-notes-composition.html\">MedComNotesCompositionversion: null1.0.0-trial-use)</a></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.0.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:47ef2e1b-5f14-42ca-bd8f-feafb4154240</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 866144008}\">Encounter note</span></p><p><b>category</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-ihe-classcode-CS 001}\">Klinisk rapport</span></p><p><b>date</b>: 2026-12-12 14:50:00+0100</p><p><b>author</b>: </p><ul><li><a href=\"Organization-f8d0eb07-5336-4005-9081-b065f9a82663.html\">Organization Lægerne Hasseris Bymidte</a></li><li><a href=\"Practitioner-48ed6310-3095-44da-9e34-d1cd6bd830c9.html\">Practitioner Sidsel Andersen </a></li></ul><p><b>title</b>: Journalnotat for 3001749995</p><p><b>confidentiality</b>: normal</p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>2026-12-12 09:05:00+0100 --&gt; (ongoing)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:47ef2e1b-5f14-42ca-bd8f-feafb4154240" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:866144008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "866144008" ] ;
+       fhir:display [ fhir:v "Encounter note" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-ihe-classcode-CS"^^xsd:anyURI ;
+         fhir:l <http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-ihe-classcode-CS>
+       ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "Klinisk rapport" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://medcomfhir.dk/ig/notes/Patient/d65cd8db-4520-4264-87be-a5fd01fb9762> ;
+     fhir:reference [ fhir:v "Patient/d65cd8db-4520-4264-87be-a5fd01fb9762" ]
+  ] ; # 
+  fhir:date [ fhir:v "2026-12-12T14:50:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <http://medcomfhir.dk/ig/notes/Organization/f8d0eb07-5336-4005-9081-b065f9a82663> ;
+     fhir:reference [ fhir:v "Organization/f8d0eb07-5336-4005-9081-b065f9a82663" ]
+  ] [
+     fhir:l <http://medcomfhir.dk/ig/notes/Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9> ;
+     fhir:reference [ fhir:v "Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Journalnotat for 3001749995"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:event ( [
+     fhir:period [
+       fhir:start [ fhir:v "2026-12-12T09:05:00+01:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:section ( [
+     fhir:entry ( [
+       fhir:l <http://medcomfhir.dk/ig/notes/Observation/if810168-ee7c-4f34-8012-9aff6c1d86e7> ;
+       fhir:reference [ fhir:v "Observation/if810168-ee7c-4f34-8012-9aff6c1d86e7" ]
+     ] )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/dk-medcom-notes/Observation/if810168-ee7c-4f34-8012-9aff6c1d86e7> a fhir:Observation ;
+  fhir:id [ fhir:v "if810168-ee7c-4f34-8012-9aff6c1d86e7"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-observation|1.0.0"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-observation?version=1.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_if810168-ee7c-4f34-8012-9aff6c1d86e7\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation if810168-ee7c-4f34-8012-9aff6c1d86e7</b></p><a name=\"if810168-ee7c-4f34-8012-9aff6c1d86e7\"> </a><a name=\"hcif810168-ee7c-4f34-8012-9aff6c1d86e7\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-notes-observation.html\">MedComNotesObservationversion: null1.0.0-trial-use)</a></p></div><p><b>MedCom Observation ValueAttachment Extension</b>: text/html: IDxwPlBhdGllbnRlbiBzZXMgdGlsIDxiPsOlcnNrb250cm9sIGFmIGRpYWJldGVzPC9iPi4gQmVoYW5kbGluZyBmw7hsZ2VzLCBvZyBwdC4gYW5naXZlciBpbmdlbiBoeXBvZ2x5a8OmbWlza2UgZXBpc29kZXIuPC9wPgoKPHA+T2JqZWt0aXZ0Ojxici8+CkJUIDEzOC84MiBtbUhnLiBCTUkgPGk+MjcsMzwvaT4uIEZvZHN0YXR1cyB1LmEuPC9wPgoKPHA+UGFyYWtsaW5pazo8YnIvPgpIYkExYyA1OCBtbW9sL21vbCAoPGVtPm92ZXIgbcOlbDwvZW0+KS48L3A+Cgo8cD5WdXJkZXJpbmcvcGxhbjogPGI+VHlwZSAyIGRpYWJldGVzPC9iPiBtZWQgZGVsdmlzIHJlZ3VsZXJpbmcuIEp1c3RlcmluZyBhZiBtZXRmb3JtaW4gb2cgcsOlZGdpdm5pbmcgb20gbGl2c3N0aWwuIEtvbnRyb2wgb20gNiBtZHIuPC9wPgoKPHA+VW5kZXJza3JpZnQ6IERyLiA8dHQ+QW5kZXJzZW48L3R0PjwvcD4=</p><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.0.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3e4907e4-a5f9-4403-b0a0-9b3201a97074</p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 866144008}\">Encounter note</span></p><p><b>subject</b>: <a href=\"Patient-d65cd8db-4520-4264-87be-a5fd01fb9762.html\">Niels Test Vendelboe (official) Mand, DoB: 1974-01-30 ( urn:oid:1.2.208.176.1.2#3001749995)</a></p><p><b>effective</b>: 2026-12-12 09:05:00+0000</p><p><b>performer</b>: </p><ul><li><a href=\"Organization-f8d0eb07-5336-4005-9081-b065f9a82663.html\">Organization Lægerne Hasseris Bymidte</a></li><li><a href=\"PractitionerRole-bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820.html\">PractitionerRole Speciallæge i praksis</a></li><li><a href=\"Practitioner-48ed6310-3095-44da-9e34-d1cd6bd830c9.html\">Practitioner Sidsel Andersen </a></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-observation-value-attachment-extension"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-observation-value-attachment-extension>
+     ] ;
+     fhir:value [
+       a fhir:Attachment ;
+       fhir:contentType [ fhir:v "text/html" ] ;
+       fhir:data [ fhir:v "IDxwPlBhdGllbnRlbiBzZXMgdGlsIDxiPsOlcnNrb250cm9sIGFmIGRpYWJldGVzPC9iPi4gQmVoYW5kbGluZyBmw7hsZ2VzLCBvZyBwdC4gYW5naXZlciBpbmdlbiBoeXBvZ2x5a8OmbWlza2UgZXBpc29kZXIuPC9wPgoKPHA+T2JqZWt0aXZ0Ojxici8+CkJUIDEzOC84MiBtbUhnLiBCTUkgPGk+MjcsMzwvaT4uIEZvZHN0YXR1cyB1LmEuPC9wPgoKPHA+UGFyYWtsaW5pazo8YnIvPgpIYkExYyA1OCBtbW9sL21vbCAoPGVtPm92ZXIgbcOlbDwvZW0+KS48L3A+Cgo8cD5WdXJkZXJpbmcvcGxhbjogPGI+VHlwZSAyIGRpYWJldGVzPC9iPiBtZWQgZGVsdmlzIHJlZ3VsZXJpbmcuIEp1c3RlcmluZyBhZiBtZXRmb3JtaW4gb2cgcsOlZGdpdm5pbmcgb20gbGl2c3N0aWwuIEtvbnRyb2wgb20gNiBtZHIuPC9wPgoKPHA+VW5kZXJza3JpZnQ6IERyLiA8dHQ+QW5kZXJzZW48L3R0PjwvcD4="^^xsd:base64Binary ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:3e4907e4-a5f9-4403-b0a0-9b3201a97074" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:866144008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "866144008" ] ;
+       fhir:display [ fhir:v "Encounter note" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://medcomfhir.dk/ig/notes/Patient/d65cd8db-4520-4264-87be-a5fd01fb9762> ;
+     fhir:reference [ fhir:v "Patient/d65cd8db-4520-4264-87be-a5fd01fb9762" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-12-12T09:05:00Z"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://medcomfhir.dk/ig/notes/Organization/f8d0eb07-5336-4005-9081-b065f9a82663> ;
+     fhir:reference [ fhir:v "Organization/f8d0eb07-5336-4005-9081-b065f9a82663" ]
+  ] [
+     fhir:l <http://medcomfhir.dk/ig/notes/PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820> ;
+     fhir:reference [ fhir:v "PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820" ]
+  ] [
+     fhir:l <http://medcomfhir.dk/ig/notes/Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9> ;
+     fhir:reference [ fhir:v "Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9" ]
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/dk-medcom-notes/Patient/d65cd8db-4520-4264-87be-a5fd01fb9762> a fhir:Patient ;
+  fhir:id [ fhir:v "d65cd8db-4520-4264-87be-a5fd01fb9762"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient|2.0.0"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient?version=2.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_d65cd8db-4520-4264-87be-a5fd01fb9762\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient d65cd8db-4520-4264-87be-a5fd01fb9762</b></p><a name=\"d65cd8db-4520-4264-87be-a5fd01fb9762\"> </a><a name=\"hcd65cd8db-4520-4264-87be-a5fd01fb9762\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/document/2.0.1/StructureDefinition-medcom-document-patient.html\">MedComDocumentPatientversion: null2.0.1)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Niels Test Vendelboe (official) Mand, DoB: 1974-01-30 ( urn:oid:1.2.208.176.1.2#3001749995)</p><hr/></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:oid:1.2.208.176.1.2"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.208.176.1.2>
+     ] ;
+     fhir:value [ fhir:v "3001749995" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Vendelboe" ] ;
+     fhir:given ( [ fhir:v "Niels" ] [ fhir:v "Test" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1974-01-30"^^xsd:date] . # 
+
+<http://medcomfhir.dk/ig/dk-medcom-notes/Organization/f8d0eb07-5336-4005-9081-b065f9a82663> a fhir:Organization ;
+  fhir:id [ fhir:v "f8d0eb07-5336-4005-9081-b065f9a82663"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization|2.0.0"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization?version=2.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_f8d0eb07-5336-4005-9081-b065f9a82663\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization f8d0eb07-5336-4005-9081-b065f9a82663</b></p><a name=\"f8d0eb07-5336-4005-9081-b065f9a82663\"> </a><a name=\"hcf8d0eb07-5336-4005-9081-b065f9a82663\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/document/2.0.1/StructureDefinition-medcom-document-organization.html\">MedComDocumentOrganizationversion: null2.0.1)</a></p></div><p><b>identifier</b>: <code>urn:oid:1.2.208.176.1.1</code>/61741000016007, <code>urn:oid:1.2.208.176.1.4</code>/77410</p><p><b>name</b>: Lægerne Hasseris Bymidte</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:oid:1.2.208.176.1.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.208.176.1.1>
+     ] ;
+     fhir:value [ fhir:v "61741000016007" ]
+  ] [
+     fhir:system [
+       fhir:v "urn:oid:1.2.208.176.1.4"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.208.176.1.4>
+     ] ;
+     fhir:value [ fhir:v "77410" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Lægerne Hasseris Bymidte"] . # 
+
+<http://medcomfhir.dk/ig/dk-medcom-notes/Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9> a fhir:Practitioner ;
+  fhir:id [ fhir:v "48ed6310-3095-44da-9e34-d1cd6bd830c9"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner|2.0.0"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner?version=2.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_48ed6310-3095-44da-9e34-d1cd6bd830c9\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 48ed6310-3095-44da-9e34-d1cd6bd830c9</b></p><a name=\"48ed6310-3095-44da-9e34-d1cd6bd830c9\"> </a><a name=\"hc48ed6310-3095-44da-9e34-d1cd6bd830c9\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/document/2.0.1/StructureDefinition-medcom-document-practitioner.html\">MedComDocumentPractitionerversion: null2.0.1)</a></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.0.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:0ee2db70-d972-4497-a156-0a8109aaa771</p><p><b>name</b>: Sidsel Andersen </p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:0ee2db70-d972-4497-a156-0a8109aaa771" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Andersen" ] ;
+     fhir:given ( [ fhir:v "Sidsel" ] )
+  ] ) . # 
+
+<http://medcomfhir.dk/ig/dk-medcom-notes/PractitionerRole/bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitionerrole|2.0.0"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitionerrole?version=2.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820</b></p><a name=\"bb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820\"> </a><a name=\"hcbb6fa4e1-f8b1-4bf4-b77e-bb03b2cc9820\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/document/2.0.1/StructureDefinition-medcom-document-practitionerrole.html\">MedComDocumentPractitionerRoleversion: null2.0.1)</a></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.0.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:9a6fb982-ba4a-41d0-ac09-f04cc51c8f38</p><p><b>practitioner</b>: <a href=\"Practitioner-48ed6310-3095-44da-9e34-d1cd6bd830c9.html\">Practitioner Sidsel Andersen </a></p><p><b>organization</b>: <a href=\"Organization-f8d0eb07-5336-4005-9081-b065f9a82663.html\">Organization Lægerne Hasseris Bymidte</a></p><p><b>code</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ speciallaegeipraksis}\">Speciallæge i praksis</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:9a6fb982-ba4a-41d0-ac09-f04cc51c8f38" ]
+  ] ) ; # 
+  fhir:practitioner [
+     fhir:l <http://medcomfhir.dk/ig/notes/Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9> ;
+     fhir:reference [ fhir:v "Practitioner/48ed6310-3095-44da-9e34-d1cd6bd830c9" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <http://medcomfhir.dk/ig/notes/Organization/f8d0eb07-5336-4005-9081-b065f9a82663> ;
+     fhir:reference [ fhir:v "Organization/f8d0eb07-5336-4005-9081-b065f9a82663" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"^^xsd:anyURI ;
+         fhir:l <http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ>
+       ] ;
+       fhir:code [ fhir:v "speciallaegeipraksis" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
