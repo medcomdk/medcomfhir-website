@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/notes/Observation/d2c9d517-3abd-450e-a3c2-18f18da6fd88> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "d2c9d517-3abd-450e-a3c2-18f18da6fd88"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-observation|1.0.0"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-observation?version=1.0.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation d2c9d517-3abd-450e-a3c2-18f18da6fd88</b></p><a name=\"d2c9d517-3abd-450e-a3c2-18f18da6fd88\"> </a><a name=\"hcd2c9d517-3abd-450e-a3c2-18f18da6fd88\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-notes-observation.html\">MedComNotesObservationversion: null1.0.0-trial-use)</a></p></div><p><b>MedCom Observation ValueAttachment Extension</b>: text/html: w6Vyc2tvbnRyb2w6IEJUIDEzOC84MiBtbUhn</p><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.0.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3e4907e4-a5f9-4403-b0a0-9b3201a97074</p><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 866144008}\">Encounter note</span></p><p><b>subject</b>: <a href=\"Patient-b3b07166-24d7-462b-acb3-1a29269c4740.html\">Niels Test Vendelboe (official) Mand, DoB: 1974-01-30 ( urn:oid:1.2.208.176.1.2#3001749995)</a></p><p><b>effective</b>: 2026-12-10 10:00:00+0100</p><p><b>performer</b>: <a href=\"Organization-b3860fb8-4b1d-4be5-8290-e6a026d10555.html\">Organization Lægerne Hasseris Bymidte</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-observation-value-attachment-extension"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-observation-value-attachment-extension>
+     ] ;
+     fhir:value [
+       a fhir:Attachment ;
+       fhir:contentType [ fhir:v "text/html" ] ;
+       fhir:data [ fhir:v "w6Vyc2tvbnRyb2w6IEJUIDEzOC84MiBtbUhn"^^xsd:base64Binary ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:3e4907e4-a5f9-4403-b0a0-9b3201a97074" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:866144008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "866144008" ] ;
+       fhir:display [ fhir:v "Encounter note" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://medcomfhir.dk/ig/notes/Patient/b3b07166-24d7-462b-acb3-1a29269c4740> ;
+     fhir:reference [ fhir:v "Patient/b3b07166-24d7-462b-acb3-1a29269c4740" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-12-10T10:00:00+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://medcomfhir.dk/ig/notes/Organization/b3860fb8-4b1d-4be5-8290-e6a026d10555> ;
+     fhir:reference [ fhir:v "Organization/b3860fb8-4b1d-4be5-8290-e6a026d10555" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
