@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOTypeCodeVS> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedComHCOTypeCodeVS"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet MedComHCOTypeCodeVS</b></p><a name=\"MedComHCOTypeCodeVS\"> </a><a name=\"hcMedComHCOTypeCodeVS\"> </a><ul><li>Include these codes as defined in <code>http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-typecode-VS</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HCOM</td><td>HomeCareObservation message</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOTypeCodeVS"^^xsd:anyURI ;
+     fhir:l <http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOTypeCodeVS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-homecareobservation-draft"] ; # 
+  fhir:name [ fhir:v "MedComHCOTypeCodeVS"] ; # 
+  fhir:title [ fhir:v "MedComHCOTypeCodeVS"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-04-16T11:17:50+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://medcom.dk/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ValueSet containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar)."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-typecode-VS"^^xsd:anyURI ;
+         fhir:l <http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-typecode-VS>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "HCOM" ] ;
+         fhir:display [ fhir:v "HomeCareObservation message" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
