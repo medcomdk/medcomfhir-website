@@ -1,4 +1,4 @@
-# MedCom XDS Version ID extension - DK MedCom Document v2.0.1
+# MedCom XDS Version ID extension - DK MedCom Document v2.0.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension | *Version*:2.0.1 |
-| Active as of 2026-03-10 | *Computable Name*:MedComDocumentVersionID |
+| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension | *Version*:2.0.2 |
+| Active as of 2026-04-29 | *Computable Name*:MedComDocumentVersionID |
 
 Extension containing information about the version of the DocumentReference for a specific standard. The version is included in the R5 version of the resource.
 
@@ -42,11 +42,11 @@ Other representations of profile: [CSV](StructureDefinition-medcom-document-vers
   "resourceType" : "StructureDefinition",
   "id" : "medcom-document-version-id-extension",
   "url" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-version-id-extension",
-  "version" : "2.0.1",
+  "version" : "2.0.2",
   "name" : "MedComDocumentVersionID",
   "title" : "MedCom XDS Version ID extension",
   "status" : "active",
-  "date" : "2026-03-10T10:54:08+00:00",
+  "date" : "2026-04-29T08:07:21+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

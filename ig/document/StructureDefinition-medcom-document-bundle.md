@@ -1,4 +1,4 @@
-# MedComDocumentBundle - DK MedCom Document v2.0.1
+# MedComDocumentBundle - DK MedCom Document v2.0.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-bundle | *Version*:2.0.1 |
-| Active as of 2026-03-10 | *Computable Name*:MedComDocumentBundle |
+| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-bundle | *Version*:2.0.2 |
+| Active as of 2026-04-29 | *Computable Name*:MedComDocumentBundle |
 
  
 The Bundle profile for a document 
@@ -45,10 +45,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-document-bund
   "resourceType" : "StructureDefinition",
   "id" : "medcom-document-bundle",
   "url" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-bundle",
-  "version" : "2.0.1",
+  "version" : "2.0.2",
   "name" : "MedComDocumentBundle",
   "status" : "active",
-  "date" : "2026-03-10T10:54:08+00:00",
+  "date" : "2026-04-29T08:07:21+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

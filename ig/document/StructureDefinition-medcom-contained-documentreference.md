@@ -1,4 +1,4 @@
-# MedComContainedDocumentReference - DK MedCom Document v2.0.1
+# MedComContainedDocumentReference - DK MedCom Document v2.0.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-contained-documentreference | *Version*:2.0.1 |
-| Active as of 2026-03-10 | *Computable Name*:MedComContainedDocumentReference |
+| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-contained-documentreference | *Version*:2.0.2 |
+| Active as of 2026-04-29 | *Computable Name*:MedComContainedDocumentReference |
 
  
 A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using IHE MHD and IHE XDS based document sharing. 
@@ -61,10 +61,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-contained-doc
   "resourceType" : "StructureDefinition",
   "id" : "medcom-contained-documentreference",
   "url" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-contained-documentreference",
-  "version" : "2.0.1",
+  "version" : "2.0.2",
   "name" : "MedComContainedDocumentReference",
   "status" : "active",
-  "date" : "2026-03-10T10:54:08+00:00",
+  "date" : "2026-04-29T08:07:21+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
