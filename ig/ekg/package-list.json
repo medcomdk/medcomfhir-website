@@ -8,13 +8,23 @@
       "desc" : "Continuous Integration Build (latest in version control) - Content subject to frequent changes"
     },
     {
+      "version" : "2.0.0-trial-use-2026-04-28",
+      "path" : "http://medcomfhir.dk/ig/ekg/2.0.0-trial-use-2026-04-28",
+      "status" : "trial-use",
+      "sequence" : "Trial uses",
+      "fhirversion" : "4.0.1",
+      "date" : "2026-04-29",
+      "current" : true,
+      "desc" : "Release 2.0.0-trial-use-2026-04-28 - see release notes",
+      "descmd" : "## Release Notes\n\nThis release is published as a **patch release**. It addresses issues that were identified shortly after publication, and as a result, **no implementations of versions 1.0.0, 1.0.1 or 1.0.2 are expected to exist**.  \nTherefore, **versions 1.0.0, 1.0.1 and 1.0.2 MUST NOT be used**.\n\n### Changes\n\n- The standard is updated from **version 1.0 to 2.0**\n- The `Composition.meta.profile` element is updated to contain version 2.0 in the profile canonical.\n- The textual description of the handling of **quotation marks in JSON** has been corrected in the Observation resource description.\n- The requirement for **PDF/A** has been loosened to accept standard **PDF**.\n- The specification for **line breaks** has been updated; literal newlines in element text are no longer permitted.\n- Clarified requirements for **special characters** in the observation note.\n- Clarified that `attester`, `event.code`, and `event.detail` are optional XDS metadata elements, but is not used in this standard.\n- Updated dependency to **medcom.fhir.dk.document#2.0.2** to include dependency to the updated FormatCode.\n"
+    },
+    {
       "version" : "1.0.2",
       "path" : "http://medcomfhir.dk/ig/ekg/1.0.2",
       "status" : "release",
       "sequence" : "Release 1.x.x",
       "fhirversion" : "4.0.1",
       "date" : "2026-01-28",
-      "current" : true,
       "desc" : "Release 1.0.2 - see release notes",
       "descmd" : "## Release Notes\n\nThis release is published as a **patch release**. It addresses issues that were identified shortly after publication, and as a result, **no implementations of versions 1.0.0 or 1.0.1 are expected to exist**.  \nTherefore, **versions 1.0.0 and 1.0.1 MUST NOT be used**.\n\n### Changes\n\n- **Relaxed cardinality for the observation note**  \n  The observation note requirement was incorrectly profiled. The cardinality has been changed from `1..1` to `0..1`.\n\n- **Corrected Composition profile description**  \n  A text in the profile description incorrectly stated that an Observation from the MedCom Document IG must be used. This has been corrected to be an Observation from this EKG Recording IG.  \n  There is no change to the actual profiling of the resource.\n\n- **Removed dependency on the MHD IG**  \n  The dependency to the MHD Implementation Guide has been removed, as it was only used for `DocumentReference`, which is not included in this IG. This has no influence on the profiles in this IG."
     },
