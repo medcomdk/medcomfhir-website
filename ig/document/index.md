@@ -1,4 +1,4 @@
-# Home - DK MedCom Document v2.0.1
+# Home - DK MedCom Document v2.0.2
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document | *Version*:2.0.1 |
-| Active as of 2026-03-10 | *Computable Name*:MedComDocument |
+| *Official URL*:http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document | *Version*:2.0.2 |
+| Active as of 2026-04-29 | *Computable Name*:MedComDocument |
 
 # DK MedCom Document
 
@@ -103,11 +103,11 @@ If you have any questions, please contact [fhir@medcom.dk](mailto:fhir@medcom.dk
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.document",
   "url" : "http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document",
-  "version" : "2.0.1",
+  "version" : "2.0.2",
   "name" : "MedComDocument",
   "title" : "DK MedCom Document",
   "status" : "active",
-  "date" : "2026-03-10T10:54:08+00:00",
+  "date" : "2026-04-29T08:07:21+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -187,6 +187,12 @@ If you have any questions, please contact [fhir@medcom.dk](mailto:fhir@medcom.dk
       "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
       "packageId" : "hl7.fhir.dk.core",
       "version" : "3.5.0"
+    },
+    {
+      "id" : "hl7_fhir_uv_xver_r5_r4",
+      "uri" : "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "packageId" : "hl7.fhir.uv.xver-r5.r4",
+      "version" : "0.1.0"
     },
     {
       "id" : "ihe_iti_mhd",

@@ -1,4 +1,4 @@
-# MedComDocumentComposition - DK MedCom Document v2.0.1
+# MedComDocumentComposition - DK MedCom Document v2.0.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-composition | *Version*:2.0.1 |
-| Active as of 2026-03-10 | *Computable Name*:MedComDocumentComposition |
+| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-composition | *Version*:2.0.2 |
+| Active as of 2026-04-29 | *Computable Name*:MedComDocumentComposition |
 
  
 The profile of the MedCom Document Composition containing the minimum allowed content. 
@@ -57,10 +57,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-document-comp
   "resourceType" : "StructureDefinition",
   "id" : "medcom-document-composition",
   "url" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-composition",
-  "version" : "2.0.1",
+  "version" : "2.0.2",
   "name" : "MedComDocumentComposition",
   "status" : "active",
-  "date" : "2026-03-10T10:54:08+00:00",
+  "date" : "2026-04-29T08:07:21+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

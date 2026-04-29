@@ -1,4 +1,4 @@
-# MedComDocumentObservation - DK MedCom Document v2.0.1
+# MedComDocumentObservation - DK MedCom Document v2.0.2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-observation | *Version*:2.0.1 |
-| Active as of 2026-03-10 | *Computable Name*:MedComDocumentObservation |
+| *Official URL*:http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-observation | *Version*:2.0.2 |
+| Active as of 2026-04-29 | *Computable Name*:MedComDocumentObservation |
 
  
 Observation profile to be used in MedCom FHIR Documents. 
@@ -41,11 +41,11 @@ Other representations of profile: [CSV](StructureDefinition-medcom-document-obse
   "resourceType" : "StructureDefinition",
   "id" : "medcom-document-observation",
   "url" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-observation",
-  "version" : "2.0.1",
+  "version" : "2.0.2",
   "name" : "MedComDocumentObservation",
   "title" : "MedComDocumentObservation",
   "status" : "active",
-  "date" : "2026-03-10T10:54:08+00:00",
+  "date" : "2026-04-29T08:07:21+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
