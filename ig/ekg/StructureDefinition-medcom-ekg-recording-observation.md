@@ -1,4 +1,4 @@
-# MedComEkgRecordingObservation - DK MedCom EKG v1.0.2
+# MedComEkgRecordingObservation - DK MedCom EKG v2.0.0-trial-use-2026-04-28
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation | *Version*:1.0.2 |
-| Active as of 2026-01-28 | *Computable Name*:MedComEkgRecordingObservation |
+| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation | *Version*:2.0.0-trial-use-2026-04-28 |
+| Draft as of 2026-04-29 | *Computable Name*:MedComEkgRecordingObservation |
 
  
 Observation profile intended to be used in MedCom's Ekg Recording standard. 
@@ -20,11 +20,11 @@ This page describes how the **MedCom Ekg Recording Observation** profile is inte
 
 ## Purpose of the Profile
 
-This profile specifies how the Observation represents the PDF/A-encoded EKG recording using a dedicated extension. It also specifies how the related attachment metadata, acquisition note, and timing information must be captured, and how the required LOINC coding and references to the patient and performing organization must be applied. Read more about this in the following paragrafs.
+This profile specifies how the Observation represents the PDF-encoded EKG recording using a dedicated extension. It also specifies how the related attachment metadata, acquisition note, and timing information must be captured, and how the required LOINC coding and references to the patient and performing organization must be applied. Read more about this in the following paragrafs.
 
 ### Use of the valueAttachment Extension
 
-This Observation contains a FHIR extension designed to hold an EKG recording as a PDF/A file encoded in Base64. The `valueAttachment` element is implemented as an extension because the base `value[x]` element does not support the `Attachment` type in FHIR R4. The extension also captures essential metadata for the attachment - the MIME type and the title.
+This Observation contains a FHIR extension designed to hold an EKG recording as a PDF file encoded in Base64. The `valueAttachment` element is implemented as an extension because the base `value[x]` element does not support the `Attachment` type in FHIR R4. The extension also captures essential metadata for the attachment - the MIME type and the title.
 
 ### EKG Recording note
 
@@ -32,12 +32,12 @@ This Observation includes a free-text note related to the EKG acquisition, inten
 
 #### Line breaks and special characters in the note
 
-Implementations must preserve the logical string value, including line breaks and Unicode characters, across both XML and JSON. Line breaks in FHIR string values must follow the underlying format:
+Implementations must preserve the logical value, including line breaks and Unicode characters, across both XML and JSON. The note element **MUST** follow:
 
-* In JSON, line breaks **SHALL** be written as the escaped newline sequence `\n` inside the string.
-* In XML, line breaks **SHALL** be represented either as a literal newline in the element text or as the character reference `&#xA;`. Escaping of characters in XML **SHALL** preserve the logical value of the FHIR string. XML-reserved characters `&`, `<`, `>`, and `"` **SHALL** be escaped.
+* In JSON, line breaks **SHALL** be written as the escaped newline sequence `\n`. The special character `"` **MUST** be escaped with `\"` when used inside the note.
+* In XML, line breaks **SHALL** be represented as the character reference `&#xA;`. Escaping of characters in XML **SHALL** preserve the logical value. XML-reserved characters `&`, `<`, `>`, `'` and `"` **SHALL** be escaped.
 
-Unicode characters (e.g. ÆØÅ, ë, ð, ý) **SHALL** be supported without restriction in both XML and JSON.
+Unicode characters (e.g. ÆØÅ, ë, ð, ý) **SHALL** be supported without restriction in both XML and JSON as document consumer system and **SHOULD** be supported without restriction in both XML and JSON as document source system.
 
 ### EKG Recording date and time
 
@@ -81,11 +81,11 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
   "resourceType" : "StructureDefinition",
   "id" : "medcom-ekg-recording-observation",
   "url" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation",
-  "version" : "1.0.2",
+  "version" : "2.0.0-trial-use-2026-04-28",
   "name" : "MedComEkgRecordingObservation",
   "title" : "MedComEkgRecordingObservation",
-  "status" : "active",
-  "date" : "2026-01-28T10:08:45+00:00",
+  "status" : "draft",
+  "date" : "2026-04-29T09:39:42+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -208,7 +208,7 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
       {
         "id" : "Observation.extension:valueAttachment.value[x].data",
         "path" : "Observation.extension.value[x].data",
-        "short" : "Base64-encoded content of the EKG recording PDF/A document.",
+        "short" : "Base64-encoded content of the EKG recording PDF document.",
         "min" : 1,
         "mustSupport" : true
       },
@@ -476,7 +476,7 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
       {
         "id" : "Observation.note",
         "path" : "Observation.note",
-        "short" : "Free-text note, used to document relevant measurement-related remarks. Line breaks in FHIR string values must be represented as escaped newline characters \\n in JSON and either as a literal newline in the element text or as the character reference &#xA; in XML.",
+        "short" : "Free-text note, used to document relevant measurement-related remarks. Line breaks must be represented as escaped newline characters \\n in JSON and as the character reference &#xA; in XML.",
         "max" : "1",
         "mustSupport" : true
       },

@@ -1,4 +1,4 @@
-# MedComEkgRecordingBundle - DK MedCom EKG v1.0.2
+# MedComEkgRecordingBundle - DK MedCom EKG v2.0.0-trial-use-2026-04-28
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-bundle | *Version*:1.0.2 |
-| Active as of 2026-01-28 | *Computable Name*:MedComEkgRecordingBundle |
+| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-bundle | *Version*:2.0.0-trial-use-2026-04-28 |
+| Draft as of 2026-04-29 | *Computable Name*:MedComEkgRecordingBundle |
 
  
 A profile for the MedCom ConditionList Bundle resource. 
@@ -45,10 +45,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
   "resourceType" : "StructureDefinition",
   "id" : "medcom-ekg-recording-bundle",
   "url" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-bundle",
-  "version" : "1.0.2",
+  "version" : "2.0.0-trial-use-2026-04-28",
   "name" : "MedComEkgRecordingBundle",
-  "status" : "active",
-  "date" : "2026-01-28T10:08:45+00:00",
+  "status" : "draft",
+  "date" : "2026-04-29T09:39:42+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
