@@ -17,11 +17,11 @@
      fhir:v "http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments"^^xsd:anyURI ;
      fhir:l <http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments>
   ] ; # 
-  fhir:version [ fhir:v "0.1.0-homecareobservation-draft"] ; # 
+  fhir:version [ fhir:v "0.1.0-homecareobservation-draft-2"] ; # 
   fhir:name [ fhir:v "MedComXDSDocuments"] ; # 
   fhir:title [ fhir:v "Danish XDS Documents profiles"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-04-16T11:19:10+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-30T11:35:54+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "MedCom"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "MedCom" ] ;
@@ -70,6 +70,14 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
      fhir:version [ fhir:v "5.2.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_xver_r5_r4" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.xver-r5.r4" ] ;
+     fhir:version [ fhir:v "0.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7_fhir_dk_core" ] ;
      fhir:uri [
@@ -242,6 +250,30 @@
          fhir:value [
            a fhir:String ;
            fhir:v "true"
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-parameter>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "code"^^xsd:anyURI ;
+           fhir:l fhir:code
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "special-url"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "value"^^xsd:anyURI ;
+           fhir:l fhir:value
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "urn:oid:1.2.208.184.100.1"
          ]
        ] ) ;
        fhir:url [
@@ -913,6 +945,30 @@
          ] ;
          fhir:value [
            a fhir:Code ;
+           fhir:v "special-url"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "value"^^xsd:anyURI ;
+           fhir:l fhir:value
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "urn:oid:1.2.208.184.100.1"
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-parameter>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "code"^^xsd:anyURI ;
+           fhir:l fhir:code
+         ] ;
+         fhir:value [
+           a fhir:Code ;
            fhir:v "autoload-resources"
          ]
        ] [
@@ -1418,6 +1474,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "DocumentReference"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://medcomfhir.dk/ig/xdsdocuments/DocumentReference/16002002-ac41-45de-ad6b-eb02b098e859> ;
+         fhir:reference [ fhir:v "DocumentReference/16002002-ac41-45de-ad6b-eb02b098e859" ]
+       ] ;
+       fhir:name [ fhir:v "Example HomeCareObservation DocumentReference" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"^^xsd:anyURI ;
+         fhir:l <http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -1469,6 +1546,27 @@
        ] ;
        fhir:name [ fhir:v "MedComHCOFormatCodeVS" ] ;
        fhir:description [ fhir:v "Valueset containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar)." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://medcomfhir.dk/ig/xdsdocuments/CodeSystem/MedComHCOTypeCodeCS> ;
+         fhir:reference [ fhir:v "CodeSystem/MedComHCOTypeCodeCS" ]
+       ] ;
+       fhir:name [ fhir:v "MedComHCOTypeCodeCS" ] ;
+       fhir:description [ fhir:v "Codesystem containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar)." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false

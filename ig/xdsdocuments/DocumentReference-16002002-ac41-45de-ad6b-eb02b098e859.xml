@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="16002002-ac41-45de-ad6b-eb02b098e859"/>
+  <meta>
+    <profile value="http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>DocumentReference resource</p></div>
+  </text>
+  <contained>
+    <Patient>
+      <id value="769e04f2-6c09-45fe-8037-31ec1d59ce3b"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-patient"/>
+      </meta>
+      <text>
+        <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">CPR: 0602631234, Name: Grethe KGBTest</div>
+      </text>
+      <identifier>
+        <system value="urn:oid:1.2.208.176.1.2"/>
+        <value value="0602631234"/>
+      </identifier>
+      <name>
+        <use value="official"/>
+        <family value="KGBTest"/>
+        <given value="Grethe"/>
+      </name>
+      <gender value="female"/>
+      <birthDate value="1963-02-06"/>
+    </Patient>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="a7e61c7a-c2e7-40a5-ba9f-58d44cc2f6e1"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization"/>
+      </meta>
+      <text>
+        <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Name: Aarhus Kommune, Identifier: 937961000016000, GLN: 5790000123117</div>
+      </text>
+      <identifier>
+        <system value="urn:oid:1.2.208.176.1.1"/>
+        <value value="937961000016000"/>
+      </identifier>
+      <identifier>
+        <system value="http://www.gs1.org/gln"/>
+        <value value="5790000123117"/>
+      </identifier>
+      <name value="Aarhus Kommune"/>
+    </Organization>
+  </contained>
+  <contained>
+    <Practitioner>
+      <id value="6f7bf020-4417-4f29-a896-4ee70fcb1780"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner"/>
+      </meta>
+      <text>
+        <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Name: Mia null</div>
+      </text>
+      <identifier>
+        <system value="http://cura.systematic.com"/>
+        <value value="6f7bf020-4417-4f29-a896-4ee70fcb1780"/>
+      </identifier>
+      <name>
+        <family value="null"/>
+        <given value="Mia"/>
+      </name>
+    </Practitioner>
+  </contained>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version">
+    <valueString value="2.0"/>
+  </extension>
+  <masterIdentifier>
+    <use value="usual"/>
+    <system value="https://systematic.dk/columna/cura"/>
+    <value value="urn:uuid:acf1f0c6-d9e1-404c-a580-392f2e38395d"/>
+  </masterIdentifier>
+  <identifier>
+    <use value="official"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:16002002-ac41-45de-ad6b-eb02b098e859"/>
+  </identifier>
+  <status value="current"/>
+  <type>
+    <coding>
+      <system value="urn:oid:1.2.208.184.100.1"/>
+      <code value="HCOM"/>
+      <display value="HomeCareObservation message"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://medcomfhir.dk/ig/document/CodeSystem/MedCom-ihe-classcode-CS-TEMP"/>
+      <code value="001"/>
+      <display value="Klinisk rapport"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="#769e04f2-6c09-45fe-8037-31ec1d59ce3b"/>
+  </subject>
+  <author>
+    <reference value="#a7e61c7a-c2e7-40a5-ba9f-58d44cc2f6e1"/>
+  </author>
+  <author>
+    <reference value="#6f7bf020-4417-4f29-a896-4ee70fcb1780"/>
+  </author>
+  <securityLabel>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality"/>
+      <code value="N"/>
+    </coding>
+  </securityLabel>
+  <content>
+    <attachment>
+      <contentType value="application/fhir+xml"/>
+      <language value="da"/>
+      <url value="HCOM-8bc6cf81-47b0-4cdf-bb89-75311909d35b.xml"/>
+      <title value="HCOM-8bc6cf81-47b0-4cdf-bb89-75311909d35b.xml"/>
+      <creation value="2026-04-28T10:15:52+02:00"/>
+    </attachment>
+    <format>
+      <system value="http://medcomfhir.dk/ig/xdsdocuments/CodeSystem/MedComHCOFormatCodeCS"/>
+      <code value="urn:ad:dk:medcom:msg:hco-v1.2:full"/>
+      <display value="DK HomeCareObservation message v1.2"/>
+    </format>
+  </content>
+  <context>
+    <period>
+      <start value="2026-04-28T10:15:52+02:00"/>
+    </period>
+    <facilityType>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/554471000005108"/>
+        <code value="550621000005101"/>
+        <display value="hjemmesygeplejeenhed"/>
+      </coding>
+    </facilityType>
+    <practiceSetting>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/554471000005108"/>
+        <code value="658161000005107"/>
+        <display value="hjemmesygepleje"/>
+      </coding>
+    </practiceSetting>
+    <sourcePatientInfo>
+      <reference value="#769e04f2-6c09-45fe-8037-31ec1d59ce3b"/>
+      <identifier>
+        <system value="urn:oid:1.2.208.176.1.2"/>
+        <value value="0602631234"/>
+      </identifier>
+    </sourcePatientInfo>
+  </context>
+</DocumentReference>

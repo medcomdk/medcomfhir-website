@@ -1,4 +1,4 @@
-# HomeCareObservationDocumentReference - Danish XDS Documents profiles v0.1.0-homecareobservation-draft
+# HomeCareObservationDocumentReference - Danish XDS Documents profiles v0.1.0-homecareobservation-draft-2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,15 +8,15 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference | *Version*:0.1.0-homecareobservation-draft |
-| Draft as of 2026-04-16 | *Computable Name*:HomeCareObservationDocumentReference |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference | *Version*:0.1.0-homecareobservation-draft-2 |
+| Draft as of 2026-04-30 | *Computable Name*:HomeCareObservationDocumentReference |
 
  
 A profile stating the rules, when exchanging a document including homecare observation (DA: Kommunale Prøvesvar). 
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Implementation Guide
+* Examples for this Profile: [DocumentReference/16002002-ac41-45de-ad6b-eb02b098e859](DocumentReference-16002002-ac41-45de-ad6b-eb02b098e859.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/medcom.fhir.dk.xdsdocuments|current/StructureDefinition/homecare-observation-documentreference)
 
@@ -37,10 +37,10 @@ Other representations of profile: [CSV](StructureDefinition-homecare-observation
   "resourceType" : "StructureDefinition",
   "id" : "homecare-observation-documentreference",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference",
-  "version" : "0.1.0-homecareobservation-draft",
+  "version" : "0.1.0-homecareobservation-draft-2",
   "name" : "HomeCareObservationDocumentReference",
   "status" : "draft",
-  "date" : "2026-04-16T11:19:10+00:00",
+  "date" : "2026-04-30T11:35:54+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -141,6 +141,11 @@ Other representations of profile: [CSV](StructureDefinition-homecare-observation
         "path" : "DocumentReference.extension",
         "sliceName" : "versionid",
         "mustSupport" : true
+      },
+      {
+        "id" : "DocumentReference.extension:versionid.extension",
+        "path" : "DocumentReference.extension.extension",
+        "max" : "0"
       },
       {
         "id" : "DocumentReference.extension:versionid.value[x]",
@@ -246,7 +251,7 @@ Other representations of profile: [CSV](StructureDefinition-homecare-observation
         "id" : "DocumentReference.type.coding",
         "path" : "DocumentReference.type.coding",
         "patternCoding" : {
-          "system" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-typecode-VS",
+          "system" : "urn:oid:1.2.208.184.100.1",
           "code" : "HCOM",
           "display" : "HomeCareObservation message"
         },
@@ -322,7 +327,7 @@ Other representations of profile: [CSV](StructureDefinition-homecare-observation
               "http://hl7.dk/fhir/core/StructureDefinition/dk-core-related-person",
               "http://hl7.org/fhir/StructureDefinition/Device"
             ],
-            "aggregation" : ["bundled"]
+            "aggregation" : ["contained"]
           }
         ]
       },
@@ -338,6 +343,25 @@ Other representations of profile: [CSV](StructureDefinition-homecare-observation
             "code" : "Reference",
             "targetProfile" : [
               "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization"
+            ]
+          }
+        ],
+        "mustSupport" : true
+      },
+      {
+        "id" : "DocumentReference.author:person",
+        "path" : "DocumentReference.author",
+        "sliceName" : "person",
+        "short" : "A person/role/patient/device author of the document.",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitionerrole",
+              "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-practitioner",
+              "http://hl7.dk/fhir/core/StructureDefinition/dk-core-related-person"
             ]
           }
         ],

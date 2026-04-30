@@ -1,4 +1,4 @@
-# MedComHCOFormatCodeVS - Danish XDS Documents profiles v0.1.0-homecareobservation-draft
+# MedComHCOFormatCodeVS - Danish XDS Documents profiles v0.1.0-homecareobservation-draft-2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOFormatCodeVS | *Version*:0.1.0-homecareobservation-draft |
-| Draft as of 2026-04-16 | *Computable Name*:MedComHCOFormatCodeVS |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOFormatCodeVS | *Version*:0.1.0-homecareobservation-draft-2 |
+| Draft as of 2026-04-30 | *Computable Name*:MedComHCOFormatCodeVS |
 
  
 Valueset containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar). 
@@ -46,11 +46,11 @@ Valueset containing the format codes for HomeCareObservation documents (DA: Komm
   "resourceType" : "ValueSet",
   "id" : "MedComHCOFormatCodeVS",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOFormatCodeVS",
-  "version" : "0.1.0-homecareobservation-draft",
+  "version" : "0.1.0-homecareobservation-draft-2",
   "name" : "MedComHCOFormatCodeVS",
   "title" : "MedComHCOFormatCodeVS",
   "status" : "draft",
-  "date" : "2026-04-16T11:19:10+00:00",
+  "date" : "2026-04-30T11:35:54+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
