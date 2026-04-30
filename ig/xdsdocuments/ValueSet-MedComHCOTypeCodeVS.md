@@ -1,4 +1,4 @@
-# MedComHCOTypeCodeVS - Danish XDS Documents profiles v0.1.0-homecareobservation-draft
+# MedComHCOTypeCodeVS - Danish XDS Documents profiles v0.1.0-homecareobservation-draft-2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOTypeCodeVS | *Version*:0.1.0-homecareobservation-draft |
-| Draft as of 2026-04-16 | *Computable Name*:MedComHCOTypeCodeVS |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOTypeCodeVS | *Version*:0.1.0-homecareobservation-draft-2 |
+| Draft as of 2026-04-30 | *Computable Name*:MedComHCOTypeCodeVS |
 
  
 ValueSet containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar). 
@@ -23,8 +23,6 @@ ValueSet containing the type codes for HomeCareObservation documents (DA: Kommun
  
 
 ### Expansion
-
-No Expansion for this valueset (not supported by Publication Tooling)
 
 -------
 
@@ -48,11 +46,11 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "resourceType" : "ValueSet",
   "id" : "MedComHCOTypeCodeVS",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/ValueSet/MedComHCOTypeCodeVS",
-  "version" : "0.1.0-homecareobservation-draft",
+  "version" : "0.1.0-homecareobservation-draft-2",
   "name" : "MedComHCOTypeCodeVS",
   "title" : "MedComHCOTypeCodeVS",
   "status" : "draft",
-  "date" : "2026-04-16T11:19:10+00:00",
+  "date" : "2026-04-30T11:35:54+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -69,13 +67,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "compose" : {
     "include" : [
       {
-        "system" : "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-typecode-VS",
-        "concept" : [
-          {
-            "code" : "HCOM",
-            "display" : "HomeCareObservation message"
-          }
-        ]
+        "system" : "urn:oid:1.2.208.184.100.1"
       }
     ]
   }

@@ -7,11 +7,11 @@
 </div></div>
   </text>
   <url value="http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments"/>
-  <version value="0.1.0-homecareobservation-draft"/>
+  <version value="0.1.0-homecareobservation-draft-2"/>
   <name value="MedComXDSDocuments"/>
   <title value="Danish XDS Documents profiles"/>
   <status value="draft"/>
-  <date value="2026-04-16T11:19:10+00:00"/>
+  <date value="2026-04-30T11:35:54+00:00"/>
   <publisher value="MedCom"/>
   <contact>
     <name value="MedCom"/>
@@ -39,6 +39,11 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_xver_r5_r4">
+    <uri value="http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"/>
+    <packageId value="hl7.fhir.uv.xver-r5.r4"/>
+    <version value="0.1.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_dk_core">
     <uri value="http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core"/>
@@ -107,6 +112,14 @@
       </extension>
       <extension url="value">
         <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.1"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -330,6 +343,14 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
+        <valueCode value="special-url"/>
+      </extension>
+      <extension url="value">
+        <valueString value="urn:oid:1.2.208.184.100.1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
         <valueCode value="autoload-resources"/>
       </extension>
       <extension url="value">
@@ -498,6 +519,16 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/16002002-ac41-45de-ad6b-eb02b098e859"/>
+      </reference>
+      <name value="Example HomeCareObservation DocumentReference"/>
+      <exampleCanonical value="http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -527,6 +558,17 @@
       </reference>
       <name value="MedComHCOFormatCodeVS"/>
       <description value="Valueset containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/MedComHCOTypeCodeCS"/>
+      </reference>
+      <name value="MedComHCOTypeCodeCS"/>
+      <description value="Codesystem containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

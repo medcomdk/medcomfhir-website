@@ -1,4 +1,4 @@
-# Home - Danish XDS Documents profiles v0.1.0-homecareobservation-draft
+# Home - Danish XDS Documents profiles v0.1.0-homecareobservation-draft-2
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments | *Version*:0.1.0-homecareobservation-draft |
-| Draft as of 2026-04-16 | *Computable Name*:MedComXDSDocuments |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments | *Version*:0.1.0-homecareobservation-draft-2 |
+| Draft as of 2026-04-30 | *Computable Name*:MedComXDSDocuments |
 
 # Metadata for CDA Document
 
@@ -39,11 +39,11 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.xdsdocuments",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments",
-  "version" : "0.1.0-homecareobservation-draft",
+  "version" : "0.1.0-homecareobservation-draft-2",
   "name" : "MedComXDSDocuments",
   "title" : "Danish XDS Documents profiles",
   "status" : "draft",
-  "date" : "2026-04-16T11:19:10+00:00",
+  "date" : "2026-04-30T11:35:54+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -84,6 +84,12 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
       "version" : "5.2.0"
+    },
+    {
+      "id" : "hl7_fhir_uv_xver_r5_r4",
+      "uri" : "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "packageId" : "hl7.fhir.uv.xver-r5.r4",
+      "version" : "0.1.0"
     },
     {
       "id" : "hl7_fhir_dk_core",
@@ -186,6 +192,19 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
           {
             "url" : "value",
             "valueString" : "true"
+          }
+        ],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "code",
+            "valueString" : "special-url"
+          },
+          {
+            "url" : "value",
+            "valueString" : "urn:oid:1.2.208.184.100.1"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -549,6 +568,19 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
         "extension" : [
           {
             "url" : "code",
+            "valueCode" : "special-url"
+          },
+          {
+            "url" : "value",
+            "valueString" : "urn:oid:1.2.208.184.100.1"
+          }
+        ],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "code",
             "valueCode" : "autoload-resources"
           },
           {
@@ -824,6 +856,19 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "DocumentReference"
+          }
+        ],
+        "reference" : {
+          "reference" : "DocumentReference/16002002-ac41-45de-ad6b-eb02b098e859"
+        },
+        "name" : "Example HomeCareObservation DocumentReference",
+        "exampleCanonical" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString" : "StructureDefinition:resource"
           }
         ],
@@ -860,6 +905,20 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
         },
         "name" : "MedComHCOFormatCodeVS",
         "description" : "Valueset containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "CodeSystem"
+          }
+        ],
+        "reference" : {
+          "reference" : "CodeSystem/MedComHCOTypeCodeCS"
+        },
+        "name" : "MedComHCOTypeCodeCS",
+        "description" : "Codesystem containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).",
         "exampleBoolean" : false
       },
       {
