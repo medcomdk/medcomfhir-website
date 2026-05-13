@@ -1,4 +1,4 @@
-# Home - DK MedCom Notes v1.0.0-trial-use
+# Home - DK MedCom Notes v1.0.0
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/notes/ImplementationGuide/medcom.fhir.dk.notes | *Version*:1.0.0-trial-use |
-| Active as of 2026-03-10 | *Computable Name*:MedComNotes |
+| *Official URL*:http://medcomfhir.dk/ig/notes/ImplementationGuide/medcom.fhir.dk.notes | *Version*:1.0.0 |
+| Active as of 2026-05-13 | *Computable Name*:MedComNotes |
 
 ### Introduction
 
@@ -90,11 +90,11 @@ On [MedCom Terminology IG](http://medcomfhir.dk/ig/terminology/) all referenced 
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.notes",
   "url" : "http://medcomfhir.dk/ig/notes/ImplementationGuide/medcom.fhir.dk.notes",
-  "version" : "1.0.0-trial-use",
+  "version" : "1.0.0",
   "name" : "MedComNotes",
   "title" : "DK MedCom Notes",
   "status" : "active",
-  "date" : "2026-03-10T13:54:36+00:00",
+  "date" : "2026-05-13T11:53:00+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -181,7 +181,13 @@ On [MedCom Terminology IG](http://medcomfhir.dk/ig/terminology/) all referenced 
       "id" : "medcom_fhir_dk_document",
       "uri" : "http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document",
       "packageId" : "medcom.fhir.dk.document",
-      "version" : "2.0.1"
+      "version" : "2.0.2"
+    },
+    {
+      "id" : "hl7_fhir_uv_xver_r5_r4",
+      "uri" : "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "packageId" : "hl7.fhir.uv.xver-r5.r4",
+      "version" : "0.1.0"
     }
   ],
   "definition" : {
