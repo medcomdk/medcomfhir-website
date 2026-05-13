@@ -1,4 +1,4 @@
-# MedComNotesBundle - DK MedCom Notes v1.0.0-trial-use
+# MedComNotesBundle - DK MedCom Notes v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-bundle | *Version*:1.0.0-trial-use |
-| Active as of 2026-03-10 | *Computable Name*:MedComNotesBundle |
+| *Official URL*:http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-bundle | *Version*:1.0.0 |
+| Active as of 2026-05-13 | *Computable Name*:MedComNotesBundle |
 
  
 A profile for a MedCom Notes Document Bundle. 
@@ -45,10 +45,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-notes-bundle.
   "resourceType" : "StructureDefinition",
   "id" : "medcom-notes-bundle",
   "url" : "http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-bundle",
-  "version" : "1.0.0-trial-use",
+  "version" : "1.0.0",
   "name" : "MedComNotesBundle",
   "status" : "active",
-  "date" : "2026-03-10T13:54:36+00:00",
+  "date" : "2026-05-13T11:53:00+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

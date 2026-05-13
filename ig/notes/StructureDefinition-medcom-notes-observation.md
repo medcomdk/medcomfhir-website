@@ -1,4 +1,4 @@
-# MedComNotesObservation - DK MedCom Notes v1.0.0-trial-use
+# MedComNotesObservation - DK MedCom Notes v1.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-observation | *Version*:1.0.0-trial-use |
-| Active as of 2026-03-10 | *Computable Name*:MedComNotesObservation |
+| *Official URL*:http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-observation | *Version*:1.0.0 |
+| Active as of 2026-05-13 | *Computable Name*:MedComNotesObservation |
 
  
 Observation profile intended to be used in MedCom's Notes standard. 
@@ -66,11 +66,11 @@ Other representations of profile: [CSV](StructureDefinition-medcom-notes-observa
   "resourceType" : "StructureDefinition",
   "id" : "medcom-notes-observation",
   "url" : "http://medcomfhir.dk/ig/notes/StructureDefinition/medcom-notes-observation",
-  "version" : "1.0.0-trial-use",
+  "version" : "1.0.0",
   "name" : "MedComNotesObservation",
   "title" : "MedComNotesObservation",
   "status" : "active",
-  "date" : "2026-03-10T13:54:36+00:00",
+  "date" : "2026-05-13T11:53:00+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -192,29 +192,6 @@ Other representations of profile: [CSV](StructureDefinition-medcom-notes-observa
         "short" : "Base64-encoded content of the note (Da: journalnotatet)",
         "min" : 1,
         "mustSupport" : true
-      },
-      {
-        "id" : "Observation.extension:valueAttachment.value[x].title",
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean" : true
-          },
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/notes/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.extension.value[x].title"
       },
       {
         "id" : "Observation.status",
