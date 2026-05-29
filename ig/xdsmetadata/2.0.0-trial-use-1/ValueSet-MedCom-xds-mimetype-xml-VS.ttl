@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-mimetype-xml-VS> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedCom-xds-mimetype-xml-VS"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet MedCom-xds-mimetype-xml-VS</b></p><a name=\"MedCom-xds-mimetype-xml-VS\"> </a><a name=\"hcMedCom-xds-mimetype-xml-VS\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-mediaType.html\"><code>http://terminology.hl7.org/CodeSystem/v3-mediaType</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 4.0.0, the version found through the package references\"> version ?4.0.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-mediaType.html#v3-mediaType-text.47xml\">text/xml</a></td><td style=\"color: #cccccc\">XML Text</td><td>For structured character based data. There is a risk that general SGML/XML is too powerful to allow a sharing of general SGML/XML documents between different applications.</td></tr><tr><td><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-mediaType.html#v3-mediaType-application.47cda.43xml\">application/cda+xml</a></td><td/><td/></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-mimetype-xml-VS"^^xsd:anyURI ;
+     fhir:l <http://medcomfhir.dk/ig/xdsmetadata/ValueSet/MedCom-xds-mimetype-xml-VS>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "MedCom_XDS_MimeType_XML"] ; # 
+  fhir:title [ fhir:v "DK XDS MimeType for non-FHIR XML documents"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2015-01-04"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "MedCom"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "MedCom" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.medcom.dk" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Values for the document metadata attribute mimeType"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "DK" ] ;
+       fhir:display [ fhir:v "Denmark" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-mediaType"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-mediaType>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "text/xml" ]
+       ] [
+         fhir:code [ fhir:v "application/cda+xml" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
