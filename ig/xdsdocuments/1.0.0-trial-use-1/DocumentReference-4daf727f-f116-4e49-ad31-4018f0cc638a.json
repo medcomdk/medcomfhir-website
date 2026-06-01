@@ -1,0 +1,162 @@
+{
+  "resourceType" : "DocumentReference",
+  "id" : "4daf727f-f116-4e49-ad31-4018f0cc638a",
+  "meta" : {
+    "profile" : ["http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-conditionlist-documentreference"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>ConditionList DocumentReference resource example</p></div>"
+  },
+  "contained" : [{
+    "resourceType" : "Practitioner",
+    "id" : "1fcad31f-8967-4f49-b6af-7e64082e8fec",
+    "meta" : {
+      "profile" : ["http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitioner"]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bo Test Vestergaard</div>"
+    },
+    "identifier" : [{
+      "system" : "urn:ietf:rfc:3986",
+      "value" : "urn:uuid:b6c11dab-a9e9-46b8-9bb3-fe06d6587e07"
+    }],
+    "name" : [{
+      "use" : "official",
+      "family" : "Vestergaard",
+      "given" : ["Bo",
+      "Test"]
+    }]
+  },
+  {
+    "resourceType" : "Organization",
+    "id" : "fd3206c6-c265-49f9-82c3-8b4c96280403",
+    "meta" : {
+      "profile" : ["http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-organization"]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">MedCom Testcenter, SOR-ID: 325381000016008</div>"
+    },
+    "identifier" : [{
+      "system" : "urn:oid:1.2.208.176.1.1",
+      "value" : "325381000016008"
+    }],
+    "name" : "MedCom Testcenter"
+  },
+  {
+    "resourceType" : "Patient",
+    "id" : "69e475df-20c8-4f54-8cea-9843568205fd",
+    "meta" : {
+      "profile" : ["http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-patient"]
+    },
+    "text" : {
+      "status" : "generated",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Name:Elmer Test Hansen, CPR: 2509479989</div>"
+    },
+    "identifier" : [{
+      "system" : "urn:oid:1.2.208.176.1.2",
+      "value" : "2509479989"
+    }],
+    "name" : [{
+      "use" : "official",
+      "family" : "Hansen",
+      "given" : ["Elmer",
+      "Test"]
+    }],
+    "gender" : "male",
+    "birthDate" : "1947-09-25"
+  }],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version",
+    "valueString" : "1.0-trial-use-1"
+  },
+  {
+    "url" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-homecommunityid-extension",
+    "valueCoding" : {
+      "system" : "http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-xds-homeCommunityId-CS",
+      "code" : "1.2.208.176.8.1",
+      "display" : "Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain"
+    }
+  }],
+  "masterIdentifier" : {
+    "use" : "usual",
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:bf1bb63b-d405-4dfe-9810-37b16b333a01"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:7c596b9a-112e-4386-ae71-5ecdd3ed7c50"
+  }],
+  "status" : "current",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "11450-4",
+      "display" : "Problem list - Reported"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-xds-classcode-CS",
+      "code" : "001",
+      "display" : "Klinisk rapport"
+    }]
+  }],
+  "subject" : {
+    "reference" : "#69e475df-20c8-4f54-8cea-9843568205fd"
+  },
+  "author" : [{
+    "reference" : "#fd3206c6-c265-49f9-82c3-8b4c96280403"
+  }],
+  "authenticator" : {
+    "reference" : "#1fcad31f-8967-4f49-b6af-7e64082e8fec"
+  },
+  "securityLabel" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+      "code" : "N"
+    }]
+  }],
+  "content" : [{
+    "attachment" : {
+      "contentType" : "application/fhir+json",
+      "language" : "da",
+      "url" : "ConditionListDocument.json",
+      "title" : "Diagnoseoversigt for 2509479989",
+      "creation" : "2024-05-01T12:00:00+01:00"
+    },
+    "format" : {
+      "system" : "http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-xds-formatcode-CS",
+      "code" : "urn:ad:dk:medcom:plr-v1.0:full",
+      "display" : "DK PLR schema"
+    }
+  }],
+  "context" : {
+    "period" : {
+      "start" : "2026-05-19T10:10:10+02:00"
+    },
+    "facilityType" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "394761003",
+        "display" : "GP (general practitioner) site"
+      }]
+    },
+    "practiceSetting" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "408443003",
+        "display" : "General medical practice"
+      }]
+    },
+    "sourcePatientInfo" : {
+      "reference" : "#69e475df-20c8-4f54-8cea-9843568205fd",
+      "identifier" : {
+        "value" : "2509479989"
+      }
+    }
+  }
+}

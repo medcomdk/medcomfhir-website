@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - Danish XDS Documents profiles v0.1.0-homecareobservation-draft-2</title>
+    <title>Artifacts Summary - Danish XDS Documents profiles v1.0.0-trial-use-1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,8 +43,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"4"}
-    h3,h4,h5,h6{--heading-prefix:"4.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -62,7 +62,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Danish XDS Documents profiles</span>
             <br/>
-            <span style="display:inline-block;">0.1.0-homecareobservation-draft-2 - release
+            <span style="display:inline-block;">1.0.0-trial-use-1 - release
+
+
+
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
 
 
             </span>
@@ -101,6 +105,22 @@
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="toc.html">Table of Contents</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="dependencies.html">Dependencies</a>
+      </li>
+    </ul>
+  </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
@@ -133,7 +153,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom XDS Documents (v0.1.0-homecareobservation-draft-2: Drafts Draft) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/xdsdocuments/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom XDS Documents (v1.0.0-trial-use-1: Trial Uses) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/xdsdocuments/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
@@ -148,13 +168,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#2">Terminology: Value Sets</a>
+         <a href="#2">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#3">Terminology: Code Systems</a>
-      </li>
-      <li>
-         <a href="#4">Example: Example Instances</a>
+         <a href="#3">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -177,61 +194,80 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>A profile stating the rules, when exchanging a document including homecare observation (DA: Kommunale Prøvesvar).</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-conditionlist-documentreference.html"
+                  title="StructureDefinition/medcom-conditionlist-documentreference">MedComConditionListDocumentReference</a>
+            </td>
+            <td>
+<p>A profile for the MedCom ConditionListDocumentReference resource.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-contained-documentreference.html"
+                  title="StructureDefinition/medcom-contained-documentreference">MedComContainedDocumentReference</a>
+            </td>
+            <td>
+<p>A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-document-organization.html"
+                  title="StructureDefinition/medcom-document-organization">MedComDocumentOrganization</a>
+            </td>
+            <td>
+<p>A profile including requirements for a MedCom Document Organization resource</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-document-patient.html"
+                  title="StructureDefinition/medcom-document-patient">MedComDocumentPatient</a>
+            </td>
+            <td>
+<p>A profile including requirements for a MedCom Document Patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-document-practitioner.html"
+                  title="StructureDefinition/medcom-document-practitioner">MedComDocumentPractitioner</a>
+            </td>
+            <td>
+<p>A profile including requirements for a MedCom Document Practitioner</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-medcom-document-practitionerrole.html"
+                  title="StructureDefinition/medcom-document-practitionerrole">MedComDocumentPractitionerRole</a>
+            </td>
+            <td>
+<p>Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care.</p>
+</td>
+         </tr>
       </tbody>
    </table>
    <a name="2"> </a>
-   <h3>Terminology: Value Sets </h3>
-    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-MedComHCOFormatCodeVS.html"
-                  title="ValueSet/MedComHCOFormatCodeVS">MedComHCOFormatCodeVS</a>
+               <a href="StructureDefinition-medcom-document-homecommunityid-extension.html"
+                  title="StructureDefinition/medcom-document-homecommunityid-extension">MedCom Document HomeCommunityID</a>
             </td>
             <td>
-<p>Valueset containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-MedComHCOTypeCodeVS.html"
-                  title="ValueSet/MedComHCOTypeCodeVS">MedComHCOTypeCodeVS</a>
-            </td>
-            <td>
-<p>ValueSet containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).</p>
+<p>Extension containing information about operational and in production home communities (XCA) in Danish Document Sharing</p>
 </td>
          </tr>
       </tbody>
    </table>
    <a name="3"> </a>
-   <h3>Terminology: Code Systems </h3>
-    <p>These define new code systems used by systems conforming to this implementation guide.</p>
-<table class="grid">
-      <col style="width:20%"/>
-      <tbody>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-MedComHCOFormatCodeCS.html"
-                  title="CodeSystem/MedComHCOFormatCodeCS">MedComHCOFormatCodeCS</a>
-            </td>
-            <td>
-<p>Codesystem containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-MedComHCOTypeCodeCS.html"
-                  title="CodeSystem/MedComHCOTypeCodeCS">MedComHCOTypeCodeCS</a>
-            </td>
-            <td>
-<p>Codesystem containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).</p>
-</td>
-         </tr>
-      </tbody>
-   </table>
-   <a name="4"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -239,9 +275,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="DocumentReference-4daf727f-f116-4e49-ad31-4018f0cc638a.html"
+                  title="DocumentReference/4daf727f-f116-4e49-ad31-4018f0cc638a">DocumentReference instance</a>
+            </td>
+            <td>
+<p>DocumentReference instance</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="DocumentReference-16002002-ac41-45de-ad6b-eb02b098e859.html"
                   title="DocumentReference/16002002-ac41-45de-ad6b-eb02b098e859">Example HomeCareObservation DocumentReference</a>
             </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-ProducerActor.html"
+                  title="ActorDefinition/ProducerActor">Producer of FHIR resources</a>
+            </td>
+            <td>
+<p>The system that creates the FHIR resources</p>
+</td>
          </tr>
       </tbody>
    </table>
@@ -263,7 +320,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://medcom.dk/">MedCom</a>.  Package medcom.fhir.dk.xdsdocuments#0.1.0-homecareobservation-draft-2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 30, 2026 11:35+0000">2026-04-30</span>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://medcom.dk/">MedCom</a>.  Package medcom.fhir.dk.xdsdocuments#1.0.0-trial-use-1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 1, 2026 09:36+0000">2026-06-01</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
