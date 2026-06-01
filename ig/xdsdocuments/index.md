@@ -1,4 +1,4 @@
-# Home - Danish XDS Documents profiles v0.1.0-homecareobservation-draft-2
+# Home - Danish XDS Documents profiles v1.0.0-trial-use-1
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,28 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments | *Version*:0.1.0-homecareobservation-draft-2 |
-| Draft as of 2026-04-30 | *Computable Name*:MedComXDSDocuments |
-
-# Metadata for CDA Document
-
-This implementation guide includes a core profile of the DocumentReference resource. The intension of this IG is to gather all general constraints in regards to CDA-metadata. Therefore several
-
-## Maping from XDS metadata to FHIR Document Reference resource
-
-The following mapping origins from [HL7's mapping between XDS metadata to FHIR DocumentReference resource](https://www.hl7.org/fhir/documentreference-mappings.html#xds). The list of ValueSets is added. These restrictions are also defined in the profile, which can be found under the tab 'Artifacts'.
-
-HomeCommunityId is not included in the mapping, why the extension MedCom XDS HomeCommunityID is created. The extension can be found under the tab 'Artifacts' and is included in the profile MedComMinimalDocumentReference.
-
-## CodeSystems and ValueSets
-
-More information about ValueSets can be found in the [Terminology for XDS Metadata IG version 2.0.0](https://build.fhir.org/ig/medcomdk/dk-medcom-xds-metadata/branches/2.0/).
-
-## Examples
-
-| | | |
-| :--- | :--- | :--- |
-| [HCOM DocumentReference example](DocumentReference-77787891-083a-4d19-9e56-423e7a223e30) | Illustrate a regular DocumentReference for HomeCareObservation | [HCOM DocumentReference profile](StructureDefinition-homecare-observation-documentreference) |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments | *Version*:1.0.0-trial-use-1 |
+| Draft as of 2026-06-01 | *Computable Name*:MedComXDSDocuments |
 
 
 
@@ -39,11 +19,11 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.xdsdocuments",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments",
-  "version" : "0.1.0-homecareobservation-draft-2",
+  "version" : "1.0.0-trial-use-1",
   "name" : "MedComXDSDocuments",
   "title" : "Danish XDS Documents profiles",
   "status" : "draft",
-  "date" : "2026-04-30T11:35:54+00:00",
+  "date" : "2026-06-01T09:36:40+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -52,11 +32,26 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
         {
           "system" : "url",
           "value" : "https://medcom.dk/"
+        },
+        {
+          "system" : "email",
+          "value" : "fhir@medcom.dk"
         }
       ]
     }
   ],
   "description" : "Danish XDS Documents profiles consists of both the Documents themselves being FHIR Documents or Messages and their corresponding DocumentReferences",
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "DK",
+          "display" : "Denmark"
+        }
+      ]
+    }
+  ],
   "packageId" : "medcom.fhir.dk.xdsdocuments",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
@@ -83,7 +78,7 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
       ],
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
-      "version" : "5.2.0"
+      "version" : "5.3.0"
     },
     {
       "id" : "hl7_fhir_uv_xver_r5_r4",
@@ -95,7 +90,7 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
       "id" : "hl7_fhir_dk_core",
       "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
       "packageId" : "hl7.fhir.dk.core",
-      "version" : "3.5.0"
+      "version" : "3.6.0"
     },
     {
       "id" : "medcom_fhir_dk_core",
@@ -104,16 +99,16 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
       "version" : "4.0.0"
     },
     {
-      "id" : "medcom_fhir_dk_document",
-      "uri" : "http://medcomfhir.dk/ig/document/ImplementationGuide/medcom.fhir.dk.document",
-      "packageId" : "medcom.fhir.dk.document",
-      "version" : "2.0.1"
-    },
-    {
       "id" : "ihe_iti_mhd",
       "uri" : "https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd",
       "packageId" : "ihe.iti.mhd",
       "version" : "4.2.3"
+    },
+    {
+      "id" : "medcom_fhir_dk_xdsmetadata",
+      "uri" : "http://medcomfhir.dk/ig/xdsmetadata/ImplementationGuide/medcom.fhir.dk.xdsmetadata",
+      "packageId" : "medcom.fhir.dk.xdsmetadata",
+      "version" : "2.0.0-trial-use-1"
     }
   ],
   "definition" : {
@@ -126,7 +121,7 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
           },
           {
             "url" : "value",
-            "valueString" : "2023+"
+            "valueString" : "2026+"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -188,6 +183,32 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
           {
             "url" : "code",
             "valueString" : "default-publisher"
+          },
+          {
+            "url" : "value",
+            "valueString" : "true"
+          }
+        ],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "code",
+            "valueString" : "pin-canonicals"
+          },
+          {
+            "url" : "value",
+            "valueString" : "pin-multiples"
+          }
+        ],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "code",
+            "valueString" : "excludettl"
           },
           {
             "url" : "value",
@@ -494,7 +515,7 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
           },
           {
             "url" : "value",
-            "valueString" : "2023+"
+            "valueString" : "2026+"
           }
         ],
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -556,6 +577,32 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
           {
             "url" : "code",
             "valueCode" : "default-publisher"
+          },
+          {
+            "url" : "value",
+            "valueString" : "true"
+          }
+        ],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "code",
+            "valueCode" : "pin-canonicals"
+          },
+          {
+            "url" : "value",
+            "valueString" : "pin-multiples"
+          }
+        ],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "code",
+            "valueCode" : "excludettl"
           },
           {
             "url" : "value",
@@ -860,6 +907,20 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
           }
         ],
         "reference" : {
+          "reference" : "DocumentReference/4daf727f-f116-4e49-ad31-4018f0cc638a"
+        },
+        "name" : "DocumentReference instance",
+        "description" : "DocumentReference instance",
+        "exampleCanonical" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-conditionlist-documentreference"
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "DocumentReference"
+          }
+        ],
+        "reference" : {
           "reference" : "DocumentReference/16002002-ac41-45de-ad6b-eb02b098e859"
         },
         "name" : "Example HomeCareObservation DocumentReference",
@@ -883,57 +944,113 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
+            "valueString" : "StructureDefinition:extension"
           }
         ],
         "reference" : {
-          "reference" : "CodeSystem/MedComHCOFormatCodeCS"
+          "reference" : "StructureDefinition/medcom-document-homecommunityid-extension"
         },
-        "name" : "MedComHCOFormatCodeCS",
-        "description" : "Codesystem containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).",
+        "name" : "MedCom Document HomeCommunityID",
+        "description" : "Extension containing information about operational and in production home communities (XCA) in Danish Document Sharing",
         "exampleBoolean" : false
       },
       {
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
+            "valueString" : "StructureDefinition:resource"
           }
         ],
         "reference" : {
-          "reference" : "ValueSet/MedComHCOFormatCodeVS"
+          "reference" : "StructureDefinition/medcom-conditionlist-documentreference"
         },
-        "name" : "MedComHCOFormatCodeVS",
-        "description" : "Valueset containing the format codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).",
+        "name" : "MedComConditionListDocumentReference",
+        "description" : "A profile for the MedCom ConditionListDocumentReference resource.",
         "exampleBoolean" : false
       },
       {
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "CodeSystem"
+            "valueString" : "StructureDefinition:resource"
           }
         ],
         "reference" : {
-          "reference" : "CodeSystem/MedComHCOTypeCodeCS"
+          "reference" : "StructureDefinition/medcom-contained-documentreference"
         },
-        "name" : "MedComHCOTypeCodeCS",
-        "description" : "Codesystem containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).",
+        "name" : "MedComContainedDocumentReference",
+        "description" : "A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using  IHE MHD and IHE XDS based document sharing.",
         "exampleBoolean" : false
       },
       {
         "extension" : [
           {
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString" : "ValueSet"
+            "valueString" : "StructureDefinition:resource"
           }
         ],
         "reference" : {
-          "reference" : "ValueSet/MedComHCOTypeCodeVS"
+          "reference" : "StructureDefinition/medcom-document-organization"
         },
-        "name" : "MedComHCOTypeCodeVS",
-        "description" : "ValueSet containing the type codes for HomeCareObservation documents (DA: Kommunale Prøvesvar).",
+        "name" : "MedComDocumentOrganization",
+        "description" : "A profile including requirements for a MedCom Document Organization resource",
         "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/medcom-document-patient"
+        },
+        "name" : "MedComDocumentPatient",
+        "description" : "A profile including requirements for a MedCom Document Patient.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/medcom-document-practitioner"
+        },
+        "name" : "MedComDocumentPractitioner",
+        "description" : "A profile including requirements for a MedCom Document Practitioner",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "StructureDefinition:resource"
+          }
+        ],
+        "reference" : {
+          "reference" : "StructureDefinition/medcom-document-practitionerrole"
+        },
+        "name" : "MedComDocumentPractitionerRole",
+        "description" : "Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care.",
+        "exampleBoolean" : false
+      },
+      {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString" : "ActorDefinition"
+          }
+        ],
+        "reference" : {
+          "reference" : "ActorDefinition/ProducerActor"
+        },
+        "name" : "Producer of FHIR resources",
+        "description" : "The system that creates the FHIR resources",
+        "exampleBoolean" : true
       }
     ],
     "page" : {
@@ -956,6 +1073,28 @@ More information about ValueSets can be found in the [Terminology for XDS Metada
           ],
           "nameUrl" : "index.html",
           "title" : "Home",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "dependencies.html"
+            }
+          ],
+          "nameUrl" : "dependencies.html",
+          "title" : "Dependencies",
+          "generation" : "html"
+        },
+        {
+          "extension" : [
+            {
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "downloads.html"
+            }
+          ],
+          "nameUrl" : "downloads.html",
+          "title" : "Downloads",
           "generation" : "markdown"
         },
         {
