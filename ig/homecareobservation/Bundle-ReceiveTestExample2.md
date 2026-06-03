@@ -1,0 +1,416 @@
+# ReceiveTestExample2 - MedCom HomeCareObservation v1.2.2
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **ReceiveTestExample2**
+
+## Example Bundle: ReceiveTestExample2
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "ReceiveTestExample2",
+  "meta" : {
+    "profile" : [
+      "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-message"
+    ]
+  },
+  "type" : "message",
+  "timestamp" : "2026-05-05T21:27:00+02:00",
+  "entry" : [
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/MessageHeader/ReceiveTestExample2-MessageHeader",
+      "resource" : {
+        "resourceType" : "MessageHeader",
+        "id" : "ReceiveTestExample2-MessageHeader",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-messageheader"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_ReceiveTestExample2-MessageHeader\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader ReceiveTestExample2-MessageHeader</b></p><a name=\"ReceiveTestExample2-MessageHeader\"> </a><a name=\"hcReceiveTestExample2-MessageHeader\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecareobservation-messageheader.html\">MedComHomeCareObservationMessageHeader</a></p></div><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/2.0.2/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-homecareobservation-message\">MedComMessagingEventCodes: homecareobservation-message</a> (HomeCare Observation Message)</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=73091000016008\">https://sor2.sum.dsdn.dk/#id=73091000016008</a></td><td><a href=\"Bundle-ReceiveTestExample2.html#Organization_AgerskovsLaegePraksisRequesterOrgUnknownDr\">Organization Agerskov lægepraksis</a></td></tr></table><p><b>sender</b>: <a href=\"Bundle-ReceiveTestExample1.html#Organization_SkovlyAktivitetstilbudProducerOrg\">Organization Pleje og Rehabilitering</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=1267041000016006\">https://sor2.sum.dsdn.dk/#id=1267041000016006</a></td></tr></table><p><b>focus</b>: <a href=\"Bundle-ReceiveTestExample2.html#DiagnosticReport_ReceiveTestExample2-DiagnosticReport\">Diagnostic Report for 'HomeCareDiagnosticReport' for '-&gt;Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)'</a></p><p><b>definition</b>: <a href=\"http://medcomfhir.dk/ig/messagedefinitions/1.0.1-trial-use/MessageDefinition-MedComHomeCareObservationMessageDefinitionV1.1.html\">http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition|1.1</a></p></div>"
+        },
+        "eventCoding" : {
+          "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
+          "code" : "homecareobservation-message"
+        },
+        "destination" : [
+          {
+            "extension" : [
+              {
+                "url" : "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+                "valueCoding" : {
+                  "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+                  "code" : "primary"
+                }
+              }
+            ],
+            "endpoint" : "https://sor2.sum.dsdn.dk/#id=73091000016008",
+            "receiver" : {
+              "reference" : "Organization/AgerskovsLaegePraksisRequesterOrgUnknownDr"
+            }
+          }
+        ],
+        "sender" : {
+          "reference" : "Organization/SkovlyAktivitetstilbudProducerOrg"
+        },
+        "source" : {
+          "endpoint" : "https://sor2.sum.dsdn.dk/#id=1267041000016006"
+        },
+        "focus" : [
+          {
+            "reference" : "DiagnosticReport/ReceiveTestExample2-DiagnosticReport"
+          }
+        ],
+        "definition" : "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition|1.1"
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/Patient/BrunoElmerPatient",
+      "resource" : {
+        "resourceType" : "Patient",
+        "id" : "BrunoElmerPatient",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_BrunoElmerPatient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient BrunoElmerPatient</b></p><a name=\"BrunoElmerPatient\"> </a><a name=\"hcBrunoElmerPatient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-patient.html\">MedComCorePatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</p><hr/></div>"
+        },
+        "identifier" : [
+          {
+            "system" : "urn:oid:1.2.208.176.1.2",
+            "value" : "2509479989"
+          }
+        ],
+        "name" : [
+          {
+            "use" : "official",
+            "family" : "Elmer",
+            "given" : ["Bruno"]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/DiagnosticReport/ReceiveTestExample2-DiagnosticReport",
+      "resource" : {
+        "resourceType" : "DiagnosticReport",
+        "id" : "ReceiveTestExample2-DiagnosticReport",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecareobservation-diagnosticreport"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_ReceiveTestExample2-DiagnosticReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport ReceiveTestExample2-DiagnosticReport</b></p><a name=\"ReceiveTestExample2-DiagnosticReport\"> </a><a name=\"hcReceiveTestExample2-DiagnosticReport\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecareobservation-diagnosticreport.html\">MedComHomeCareObservationDiagnosticReport</a></p></div><h2><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes HomeCareReport}\">HomeCareDiagnosticReport</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</td></tr><tr><td>Reported</td><td>2026-05-05 15:00:00+0200</td></tr><tr><td>Performers</td><td> <a href=\"Bundle-ReceiveTestExample1.html#Organization_SkovlyAktivitetstilbudProducerOrg\">Organization Pleje og Rehabilitering</a> <a href=\"Bundle-ReceiveTestExample1.html#PractitionerRole_JohnAcuteNursePractitionerRole\">PractitionerRole Sygeplejerske</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Bundle-ReceiveTestExample2.html#Observation_GlucoseObservationOnBrunoWithComment\"><span title=\"Codes:{urn:oid:1.2.208.176.2.1 NPU22089}\">P(kB)—Glucose; stofk. = ? mmol/L</span></a></td><td>&lt;7.1 mmol/L</td><td>Final, <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\">Not Interpreted</span></td><td><blockquote><div><p>Glucose measurement expected. Patient was not fasting as requested</p>\n</div></blockquote></td><td>2026-05-05 14:47:23+0200</td></tr><tr><td><a href=\"Bundle-ReceiveTestExample2.html#Observation_HighRespirationObservationOnBrunoNoComment2\"><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88122}\">Pt—Respiration; frekvens = ? X 1/min</span></a></td><td>&gt;25 1/min</td><td>Final, <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\">Not Interpreted</span></td><td/><td>2026-05-05 22:44:01+0200</td></tr></table><p>Proin aliquet sit amet justo quis auctor. Integer malesuada tempor purus sit amet dictum. Nulla dictum pharetra erat sit amet faucibus. Fusce porttitor, lectus sed volutpat pulvinar, tortor leo sodales elit, non mattis ligula enim dignissim ex. Donec ornare laoreet elit dapibus maximus. Mauris malesuada enim vitae ligula feugiat, eget rutrum orci auctor. Aenean feugiat volutpat magna ut venenatis. Proin eu ornare metus, in pretium sem. Aenean id bibendum urna. Sed ultricies mauris in erat bibendum rhoncus. Suspendisse ac porttitor tellus. Sed molestie pharetra turpis, pellentesque ultrices tortor sodales sit amet. Integer et nulla luctus, fermentum felis eget, consequat est. Curabitur sed blandit nunc. Etiam cursus neque id diam consequat pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. &lt;br/&gt; Nulla vitae lectus ut ipsum lobortis porttitor id eu purus. In finibus erat vitae orci volutpat, in euismod lorem dignissim. Vivamus volutpat orci sit amet velit pulvinar, id elementum lacus placerat. Donec scelerisque ligula at risus auctor venenatis ac et nibh. Donec eget cursus ipsum. Etiam interdum, velit vitae pulvinar egestas, quam risus interdum nisi, ut porta odio magna at diam. Cras dignissim tempor urna id condimentum. Cras molestie sagittis venenatis. Aenean at rutrum tellus, sit amet mollis elit. &lt;br/&gt; Praesent dictum lacinia enim sit amet scelerisque. Proin cursus enim luctus mi fringilla rhoncus. Praesent sagittis, erat vel auctor pretium, elit leo vulputate quam, a tincidunt ante justo sit amet eros. Duis condimentum, dui sed finibus convallis, ipsum neque dictum mauris, quis pulvinar mauris mi feugiat enim. Proin ullamcorper nibh lorem, nec consequat erat rhoncus ut. Praesent nisi ligula, molestie in nulla a, interdum sagittis neque. Nulla viverra elit ac eros mattis ultricies. Pellentesque a iaculis tellus. &lt;br/&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo nibh nulla, sit amet interdum ex condimentum ac. Mauris sodales placerat mollis. Suspendisse non quam pretium, ultricies nisl in, vehicula neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut condimentum vel orci efficitur viverra. Praesent posuere molestie lacus at consectetur. Vivamus pharetra, eros vel porta pretium, urna sem sodales nisi, ac tristique massa nisl nec sem. Donec at massa non felis ullamcorper eleifend. Morbi sit amet pharetra orci. Vivamus laoreet viverra tempor.</p></div>"
+        },
+        "status" : "final",
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComDiagnosticReportCodes",
+              "code" : "HomeCareReport"
+            }
+          ]
+        },
+        "subject" : {
+          "reference" : "Patient/BrunoElmerPatient"
+        },
+        "issued" : "2026-05-05T15:00:00+02:00",
+        "performer" : [
+          {
+            "reference" : "Organization/SkovlyAktivitetstilbudProducerOrg"
+          },
+          {
+            "reference" : "PractitionerRole/JohnAcuteNursePractitionerRole"
+          }
+        ],
+        "result" : [
+          {
+            "reference" : "Observation/GlucoseObservationOnBrunoWithComment"
+          },
+          {
+            "reference" : "Observation/HighRespirationObservationOnBrunoNoComment2"
+          }
+        ],
+        "conclusion" : "Proin aliquet sit amet justo quis auctor. Integer malesuada tempor purus sit amet dictum. Nulla dictum pharetra erat sit amet faucibus. Fusce porttitor, lectus sed volutpat pulvinar, tortor leo sodales elit, non mattis ligula enim dignissim ex. Donec ornare laoreet elit dapibus maximus. Mauris malesuada enim vitae ligula feugiat, eget rutrum orci auctor. Aenean feugiat volutpat magna ut venenatis. Proin eu ornare metus, in pretium sem. Aenean id bibendum urna. Sed ultricies mauris in erat bibendum rhoncus. Suspendisse ac porttitor tellus. Sed molestie pharetra turpis, pellentesque ultrices tortor sodales sit amet. Integer et nulla luctus, fermentum felis eget, consequat est. Curabitur sed blandit nunc. Etiam cursus neque id diam consequat pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br/> Nulla vitae lectus ut ipsum lobortis porttitor id eu purus. In finibus erat vitae orci volutpat, in euismod lorem dignissim. Vivamus volutpat orci sit amet velit pulvinar, id elementum lacus placerat. Donec scelerisque ligula at risus auctor venenatis ac et nibh. Donec eget cursus ipsum. Etiam interdum, velit vitae pulvinar egestas, quam risus interdum nisi, ut porta odio magna at diam. Cras dignissim tempor urna id condimentum. Cras molestie sagittis venenatis. Aenean at rutrum tellus, sit amet mollis elit. <br/> Praesent dictum lacinia enim sit amet scelerisque. Proin cursus enim luctus mi fringilla rhoncus. Praesent sagittis, erat vel auctor pretium, elit leo vulputate quam, a tincidunt ante justo sit amet eros. Duis condimentum, dui sed finibus convallis, ipsum neque dictum mauris, quis pulvinar mauris mi feugiat enim. Proin ullamcorper nibh lorem, nec consequat erat rhoncus ut. Praesent nisi ligula, molestie in nulla a, interdum sagittis neque. Nulla viverra elit ac eros mattis ultricies. Pellentesque a iaculis tellus. <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo nibh nulla, sit amet interdum ex condimentum ac. Mauris sodales placerat mollis. Suspendisse non quam pretium, ultricies nisl in, vehicula neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut condimentum vel orci efficitur viverra. Praesent posuere molestie lacus at consectetur. Vivamus pharetra, eros vel porta pretium, urna sem sodales nisi, ac tristique massa nisl nec sem. Donec at massa non felis ullamcorper eleifend. Morbi sit amet pharetra orci. Vivamus laoreet viverra tempor."
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/PractitionerRole/JohnAcuteNursePractitionerRole",
+      "resource" : {
+        "resourceType" : "PractitionerRole",
+        "id" : "JohnAcuteNursePractitionerRole",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_JohnAcuteNursePractitionerRole\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole JohnAcuteNursePractitionerRole</b></p><a name=\"JohnAcuteNursePractitionerRole\"> </a><a name=\"hcJohnAcuteNursePractitionerRole\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-practitionerrole.html\">MedComCorePractitionerRole</a></p></div><p><b>practitioner</b>: <a href=\"Bundle-ReceiveTestExample1.html#Practitioner_JohnAcuteNurse\">Practitioner John Pedersen </a></p><p><b>code</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ sygeplejerske}\">Sygeplejerske</span></p></div>"
+        },
+        "practitioner" : {
+          "reference" : "Practitioner/JohnAcuteNurse"
+        },
+        "code" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ",
+                "code" : "sygeplejerske"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/Practitioner/JohnAcuteNurse",
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "id" : "JohnAcuteNurse",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_JohnAcuteNurse\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner JohnAcuteNurse</b></p><a name=\"JohnAcuteNurse\"> </a><a name=\"hcJohnAcuteNurse\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-practitioner.html\">MedComCorePractitioner</a></p></div><p><b>name</b>: John Pedersen </p><p><b>telecom</b>: <a href=\"tel:+4505577668\">+45 05577668</a></p></div>"
+        },
+        "name" : [
+          {
+            "family" : "Pedersen",
+            "given" : ["John"]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "+45 05577668"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/Organization/AgerskovsLaegePraksisRequesterOrgUnknownDr",
+      "resource" : {
+        "resourceType" : "Organization",
+        "id" : "AgerskovsLaegePraksisRequesterOrgUnknownDr",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-requesterorganization"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_AgerskovsLaegePraksisRequesterOrgUnknownDr\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization AgerskovsLaegePraksisRequesterOrgUnknownDr</b></p><a name=\"AgerskovsLaegePraksisRequesterOrgUnknownDr\"> </a><a name=\"hcAgerskovsLaegePraksisRequesterOrgUnknownDr\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-requesterorganization.html\">MedComMessagingRequesterOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000147465, <code>urn:oid:1.2.208.176.1.1</code>/73091000016008, <code>urn:oid:1.2.208.176.1.4</code>/045861</p><p><b>name</b>: Agerskov lægepraksis</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td></tr><tr><td style=\"display: none\">*</td><td/></tr></table></div>"
+        },
+        "identifier" : [
+          {
+            "system" : "https://www.gs1.org/gln",
+            "value" : "5790000147465"
+          },
+          {
+            "system" : "urn:oid:1.2.208.176.1.1",
+            "value" : "73091000016008"
+          },
+          {
+            "system" : "urn:oid:1.2.208.176.1.4",
+            "value" : "045861"
+          }
+        ],
+        "name" : "Agerskov lægepraksis",
+        "contact" : [
+          {
+            "extension" : [
+              {
+                "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode" : "unknown"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/Organization/SkovlyAktivitetstilbudProducerOrg",
+      "resource" : {
+        "resourceType" : "Organization",
+        "id" : "SkovlyAktivitetstilbudProducerOrg",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-producer-organization"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_SkovlyAktivitetstilbudProducerOrg\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization SkovlyAktivitetstilbudProducerOrg</b></p><a name=\"SkovlyAktivitetstilbudProducerOrg\"> </a><a name=\"hcSkovlyAktivitetstilbudProducerOrg\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-producer-organization.html\">MedComCoreProducerOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790002757778, <code>urn:oid:1.2.208.176.1.1</code>/1267041000016006, <code>http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID</code>/KAF</p><p><b>name</b>: Pleje og Rehabilitering</p></div>"
+        },
+        "identifier" : [
+          {
+            "system" : "https://www.gs1.org/gln",
+            "value" : "5790002757778"
+          },
+          {
+            "system" : "urn:oid:1.2.208.176.1.1",
+            "value" : "1267041000016006"
+          },
+          {
+            "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID",
+            "value" : "KAF"
+          }
+        ],
+        "name" : "Pleje og Rehabilitering"
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/Provenance/ReceiveTestExample2-Provenance",
+      "resource" : {
+        "resourceType" : "Provenance",
+        "id" : "ReceiveTestExample2-Provenance",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_ReceiveTestExample2-Provenance\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance ReceiveTestExample2-Provenance</b></p><a name=\"ReceiveTestExample2-Provenance\"> </a><a name=\"hcReceiveTestExample2-Provenance\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://medcomfhir.dk/ig/messaging/3.0.0/StructureDefinition-medcom-messaging-provenance.html\">MedComMessagingProvenance</a></p></div><p>Provenance for <a href=\"Bundle-ReceiveTestExample2.html#MessageHeader_ReceiveTestExample2-MessageHeader\">MessageHeader: event[x] = HomeCare Observation Message (MedComMessagingEventCodes#homecareobservation-message); definition = http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComHomeCareObservationMessageDefinition|1.1</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2026-05-05 15:00:00+0200</td></tr><tr><td>Recorded</td><td>2026-05-05 15:00:00+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}\">A new message has been sent</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Bundle-ReceiveTestExample1.html#Organization_SkovlyAktivitetstilbudProducerOrg\">Organization Pleje og Rehabilitering</a></td></tr></table></div>"
+        },
+        "target" : [
+          {
+            "reference" : "MessageHeader/ReceiveTestExample2-MessageHeader"
+          }
+        ],
+        "occurredDateTime" : "2026-05-05T15:00:00+02:00",
+        "recorded" : "2026-05-05T15:00:00+02:00",
+        "activity" : {
+          "coding" : [
+            {
+              "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+              "code" : "new-message"
+            }
+          ]
+        },
+        "agent" : [
+          {
+            "who" : {
+              "reference" : "Organization/SkovlyAktivitetstilbudProducerOrg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/Observation/GlucoseObservationOnBrunoWithComment",
+      "resource" : {
+        "resourceType" : "Observation",
+        "id" : "GlucoseObservationOnBrunoWithComment",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_GlucoseObservationOnBrunoWithComment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation GlucoseObservationOnBrunoWithComment</b></p><a name=\"GlucoseObservationOnBrunoWithComment\"> </a><a name=\"hcGlucoseObservationOnBrunoWithComment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecare-observation.html\">MedComHomeCareObservation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{urn:oid:1.2.208.176.2.1 NPU22089}\">P(kB)—Glucose; stofk. = ? mmol/L</span></p><p><b>subject</b>: <a href=\"Bundle-ReceiveTestExample1.html#Patient_BrunoElmerPatient\">Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>effective</b>: 2026-05-05 14:47:23+0200</p><p><b>value</b>: &lt;7.1 mmol/L</p><p><b>interpretation</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\">Not Interpreted</span></p><p><b>note</b>: </p><blockquote><div><p>Glucose measurement expected. Patient was not fasting as requested</p>\n</div></blockquote></div>"
+        },
+        "status" : "final",
+        "code" : {
+          "coding" : [
+            {
+              "system" : "urn:oid:1.2.208.176.2.1",
+              "code" : "NPU22089",
+              "display" : "P(kB)—Glucose; stofk. = ? mmol/L"
+            }
+          ]
+        },
+        "subject" : {
+          "reference" : "Patient/BrunoElmerPatient"
+        },
+        "effectiveDateTime" : "2026-05-05T14:47:23+02:00",
+        "valueQuantity" : {
+          "value" : 7.1,
+          "comparator" : "<",
+          "unit" : "mmol/L"
+        },
+        "interpretation" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes",
+                "code" : "NI",
+                "display" : "Not Interpreted"
+              }
+            ]
+          }
+        ],
+        "note" : [
+          {
+            "text" : "Glucose measurement expected. Patient was not fasting as requested"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "http://medcomfhir.dk/ig/homecareobservation/Observation/HighRespirationObservationOnBrunoNoComment2",
+      "resource" : {
+        "resourceType" : "Observation",
+        "id" : "HighRespirationObservationOnBrunoNoComment2",
+        "meta" : {
+          "profile" : [
+            "http://medcomfhir.dk/ig/homecareobservation/StructureDefinition/medcom-homecare-observation"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_HighRespirationObservationOnBrunoNoComment2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation HighRespirationObservationOnBrunoNoComment2</b></p><a name=\"HighRespirationObservationOnBrunoNoComment2\"> </a><a name=\"hcHighRespirationObservationOnBrunoNoComment2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-homecare-observation.html\">MedComHomeCareObservation</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes MCS88122}\">Pt—Respiration; frekvens = ? X 1/min</span></p><p><b>subject</b>: <a href=\"Bundle-ReceiveTestExample1.html#Patient_BrunoElmerPatient\">Bruno Elmer (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.2#2509479989)</a></p><p><b>effective</b>: 2026-05-05 22:44:01+0200</p><p><b>value</b>: &gt;25 1/min</p><p><b>interpretation</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes NI}\">Not Interpreted</span></p></div>"
+        },
+        "status" : "final",
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-observation-codes",
+              "code" : "MCS88122",
+              "display" : "Pt—Respiration; frekvens = ? X 1/min"
+            }
+          ]
+        },
+        "subject" : {
+          "reference" : "Patient/BrunoElmerPatient"
+        },
+        "effectiveDateTime" : "2026-05-05T22:44:01+02:00",
+        "valueQuantity" : {
+          "value" : 25,
+          "comparator" : ">",
+          "unit" : "1/min"
+        },
+        "interpretation" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-interpretation-codes",
+                "code" : "NI",
+                "display" : "Not Interpreted"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+
+```
