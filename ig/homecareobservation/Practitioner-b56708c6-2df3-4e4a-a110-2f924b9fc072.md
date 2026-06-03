@@ -1,0 +1,41 @@
+# Acute nurse - MedCom HomeCareObservation v1.2.2
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Acute nurse**
+
+## Example Practitioner: Acute nurse
+
+Profile: [MedComCorePractitioner](http://medcomfhir.dk/ig/core/2.4.0/StructureDefinition-medcom-core-practitioner.html)
+
+**name**: Mia 
+
+**telecom**: [+45 05577668](tel:+4505577668)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Practitioner",
+  "id" : "b56708c6-2df3-4e4a-a110-2f924b9fc072",
+  "meta" : {
+    "profile" : [
+      "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+    ]
+  },
+  "name" : [
+    {
+      "given" : ["Mia"]
+    }
+  ],
+  "telecom" : [
+    {
+      "system" : "phone",
+      "value" : "+45 05577668"
+    }
+  ]
+}
+
+```
