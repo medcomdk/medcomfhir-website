@@ -1,4 +1,4 @@
-# MedComCareCommunication - DK MedCom Carecommunication v5.0.2
+# MedComCareCommunication - DK MedCom Carecommunication v5.0.3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication | *Version*:5.0.2 |
-| Active as of 2026-02-13 | *Computable Name*:MedComCareCommunication |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication | *Version*:5.0.3 |
+| Active as of 2026-06-03 | *Computable Name*:MedComCareCommunication |
 
  
 Care related communication between two or more parties in Danish healthcare 
@@ -111,10 +111,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
   "resourceType" : "StructureDefinition",
   "id" : "medcom-careCommunication-communication",
   "url" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication",
-  "version" : "5.0.2",
+  "version" : "5.0.3",
   "name" : "MedComCareCommunication",
   "status" : "active",
-  "date" : "2026-02-13T11:55:29+00:00",
+  "date" : "2026-06-03T09:32:39+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

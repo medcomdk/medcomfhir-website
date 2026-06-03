@@ -1,4 +1,4 @@
-# Home - DK MedCom Carecommunication v5.0.2
+# Home - DK MedCom Carecommunication v5.0.3
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication | *Version*:5.0.2 |
-| Active as of 2026-02-13 | *Computable Name*:MedComCarecommunication |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication | *Version*:5.0.3 |
+| Active as of 2026-06-03 | *Computable Name*:MedComCarecommunication |
 
 ### Introduction
 
@@ -140,11 +140,11 @@ If you have any questions, please contact [fhir@medcom.dk](mailto:fhir@medcom.dk
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.carecommunication",
   "url" : "http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication",
-  "version" : "5.0.2",
+  "version" : "5.0.3",
   "name" : "MedComCarecommunication",
   "title" : "DK MedCom Carecommunication",
   "status" : "active",
-  "date" : "2026-02-13T11:55:29+00:00",
+  "date" : "2026-06-03T09:32:39+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -183,7 +183,7 @@ If you have any questions, please contact [fhir@medcom.dk](mailto:fhir@medcom.dk
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.0.1"
+      "version" : "7.1.0"
     },
     {
       "id" : "hl7ext",
@@ -195,7 +195,7 @@ If you have any questions, please contact [fhir@medcom.dk](mailto:fhir@medcom.dk
       ],
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
-      "version" : "5.2.0"
+      "version" : "5.3.0"
     },
     {
       "id" : "hl7_fhir_dk_core",

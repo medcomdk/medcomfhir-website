@@ -1,4 +1,4 @@
-# MedComCareCommunicationProvenance - DK MedCom Carecommunication v5.0.2
+# MedComCareCommunicationProvenance - DK MedCom Carecommunication v5.0.3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance | *Version*:5.0.2 |
-| Active as of 2026-02-13 | *Computable Name*:MedComCareCommunicationProvenance |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance | *Version*:5.0.3 |
+| Active as of 2026-06-03 | *Computable Name*:MedComCareCommunicationProvenance |
 
  
 Provenance information about the current and preceeding message. 
@@ -47,10 +47,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
   "resourceType" : "StructureDefinition",
   "id" : "medcom-careCommunication-provenance",
   "url" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance",
-  "version" : "5.0.2",
+  "version" : "5.0.3",
   "name" : "MedComCareCommunicationProvenance",
   "status" : "active",
-  "date" : "2026-02-13T11:55:29+00:00",
+  "date" : "2026-06-03T09:32:39+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
