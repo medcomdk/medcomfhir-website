@@ -1,4 +1,4 @@
-# MedComCareCommunicationMessageHeader - DK MedCom Carecommunication v5.0.2
+# MedComCareCommunicationMessageHeader - DK MedCom Carecommunication v5.0.3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader | *Version*:5.0.2 |
-| Active as of 2026-02-13 | *Computable Name*:MedComCareCommunicationMessageHeader |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader | *Version*:5.0.3 |
+| Active as of 2026-06-03 | *Computable Name*:MedComCareCommunicationMessageHeader |
 
  
 Message header for CareCommunication message 
@@ -46,10 +46,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
   "resourceType" : "StructureDefinition",
   "id" : "medcom-careCommunication-messageHeader",
   "url" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader",
-  "version" : "5.0.2",
+  "version" : "5.0.3",
   "name" : "MedComCareCommunicationMessageHeader",
   "status" : "active",
-  "date" : "2026-02-13T11:55:29+00:00",
+  "date" : "2026-06-03T09:32:39+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -159,7 +159,7 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
             "key" : "medcom-carecommunication-definition-url",
             "severity" : "error",
             "human" : "SHALL reference a MedCom CareCommunication MessageDefinition whose canonical URL starts with\nhttp://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5. — that is, any version 5.x of the message definition. The current minor version the sender uses must be added in the end of the definition.",
-            "expression" : "matches('^http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5[.][0-9]{1,2}$')",
+            "expression" : "matches('^http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition[|]5[.][0-9]{1,2}$')",
             "source" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"
           }
         ]

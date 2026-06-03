@@ -1,4 +1,4 @@
-# MedComCareCommunicationMessage - DK MedCom Carecommunication v5.0.2
+# MedComCareCommunicationMessage - DK MedCom Carecommunication v5.0.3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message | *Version*:5.0.2 |
-| Active as of 2026-02-13 | *Computable Name*:MedComCareCommunicationMessage |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message | *Version*:5.0.3 |
+| Active as of 2026-06-03 | *Computable Name*:MedComCareCommunicationMessage |
 
  
 The CareCommunication is used to ensure secure electronic communication of personally identifiable information and is most often used for ad hoc communication between parties in Danish Healthcare. However, the CareCommunication shall only be used in areas where no other MedCom standard is available, and it must not be used for cases with an acute nature. 
@@ -47,10 +47,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
   "resourceType" : "StructureDefinition",
   "id" : "medcom-careCommunication-message",
   "url" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message",
-  "version" : "5.0.2",
+  "version" : "5.0.3",
   "name" : "MedComCareCommunicationMessage",
   "status" : "active",
-  "date" : "2026-02-13T11:55:29+00:00",
+  "date" : "2026-06-03T09:32:39+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
