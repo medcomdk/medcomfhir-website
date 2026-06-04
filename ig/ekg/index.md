@@ -1,4 +1,4 @@
-# Home - DK MedCom EKG v2.0.0-trial-use-2026-04-28
+# Home - DK MedCom EKG v2.0.0
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/ekg/ImplementationGuide/medcom.fhir.dk.ekg | *Version*:2.0.0-trial-use-2026-04-28 |
-| Draft as of 2026-04-29 | *Computable Name*:DKMedComEKG |
+| *Official URL*:http://medcomfhir.dk/ig/ekg/ImplementationGuide/medcom.fhir.dk.ekg | *Version*:2.0.0 |
+| Active as of 2026-06-04 | *Computable Name*:DKMedComEKG |
 
 ## Introduction
 
@@ -61,11 +61,11 @@ Besides Terminology and metadata IGs, this IG has a dependency to the [MedCom Co
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.ekg",
   "url" : "http://medcomfhir.dk/ig/ekg/ImplementationGuide/medcom.fhir.dk.ekg",
-  "version" : "2.0.0-trial-use-2026-04-28",
+  "version" : "2.0.0",
   "name" : "DKMedComEKG",
   "title" : "DK MedCom EKG",
-  "status" : "draft",
-  "date" : "2026-04-29T09:39:42+00:00",
+  "status" : "active",
+  "date" : "2026-06-04T11:20:25+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -120,7 +120,7 @@ Besides Terminology and metadata IGs, this IG has a dependency to the [MedCom Co
       ],
       "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
       "packageId" : "hl7.fhir.uv.extensions.r4",
-      "version" : "5.2.0"
+      "version" : "5.3.0"
     },
     {
       "id" : "medcom_fhir_dk_xdsmetadata",
@@ -151,12 +151,6 @@ Besides Terminology and metadata IGs, this IG has a dependency to the [MedCom Co
       "uri" : "http://hl7.dk/fhir/core/ImplementationGuide/hl7.fhir.dk.core",
       "packageId" : "hl7.fhir.dk.core",
       "version" : "3.5.0"
-    },
-    {
-      "id" : "hl7_fhir_uv_xver_r5_r4",
-      "uri" : "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
-      "packageId" : "hl7.fhir.uv.xver-r5.r4",
-      "version" : "0.1.0"
     }
   ],
   "definition" : {

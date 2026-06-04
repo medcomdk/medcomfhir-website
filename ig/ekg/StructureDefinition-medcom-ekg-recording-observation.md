@@ -1,4 +1,4 @@
-# MedComEkgRecordingObservation - DK MedCom EKG v2.0.0-trial-use-2026-04-28
+# MedComEkgRecordingObservation - DK MedCom EKG v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation | *Version*:2.0.0-trial-use-2026-04-28 |
-| Draft as of 2026-04-29 | *Computable Name*:MedComEkgRecordingObservation |
+| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation | *Version*:2.0.0 |
+| Active as of 2026-06-04 | *Computable Name*:MedComEkgRecordingObservation |
 
  
 Observation profile intended to be used in MedCom's Ekg Recording standard. 
@@ -81,11 +81,11 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
   "resourceType" : "StructureDefinition",
   "id" : "medcom-ekg-recording-observation",
   "url" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation",
-  "version" : "2.0.0-trial-use-2026-04-28",
+  "version" : "2.0.0",
   "name" : "MedComEkgRecordingObservation",
   "title" : "MedComEkgRecordingObservation",
-  "status" : "draft",
-  "date" : "2026-04-29T09:39:42+00:00",
+  "status" : "active",
+  "date" : "2026-06-04T11:20:25+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

@@ -1,4 +1,4 @@
-# MedComEkgRecordingComposition - DK MedCom EKG v2.0.0-trial-use-2026-04-28
+# MedComEkgRecordingComposition - DK MedCom EKG v2.0.0
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition | *Version*:2.0.0-trial-use-2026-04-28 |
-| Draft as of 2026-04-29 | *Computable Name*:MedComEkgRecordingComposition |
+| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition | *Version*:2.0.0 |
+| Active as of 2026-06-04 | *Computable Name*:MedComEkgRecordingComposition |
 
  
 A profile for the MedCom Ekg Recording Composition resource. 
@@ -51,7 +51,7 @@ The `[major].[minor]` version components are versioned in lockstep. Any change t
 * **FHIR `Composition.meta.profile`:**
  `http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition|2.0`
 
-#### Timestamps
+### Timestamps
 
 `Composition.event.period.start` and `Composition.event.period.end` is used to represent the time interval of the EKG recording.
 
@@ -89,10 +89,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
   "resourceType" : "StructureDefinition",
   "id" : "medcom-ekg-recording-composition",
   "url" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition",
-  "version" : "2.0.0-trial-use-2026-04-28",
+  "version" : "2.0.0",
   "name" : "MedComEkgRecordingComposition",
-  "status" : "draft",
-  "date" : "2026-04-29T09:39:42+00:00",
+  "status" : "active",
+  "date" : "2026-06-04T11:20:25+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -258,7 +258,7 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
       {
         "id" : "Composition.event.period.start",
         "path" : "Composition.event.period.start",
-        "short" : "The end time of the EKG recording",
+        "short" : "The start time of the EKG recording",
         "constraint" : [
           {
             "key" : "medcom-datetime-has-time-offset-zulu",
@@ -272,6 +272,7 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
       {
         "id" : "Composition.event.period.end",
         "path" : "Composition.event.period.end",
+        "short" : "The end time of the EKG recording",
         "constraint" : [
           {
             "key" : "medcom-datetime-has-time-offset-zulu",
