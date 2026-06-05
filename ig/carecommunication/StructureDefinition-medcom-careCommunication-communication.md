@@ -1,4 +1,4 @@
-# MedComCareCommunication - DK MedCom Carecommunication v5.0.3
+# MedComCareCommunication - DK MedCom Carecommunication v5.0.4
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication | *Version*:5.0.3 |
-| Active as of 2026-06-03 | *Computable Name*:MedComCareCommunication |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication | *Version*:5.0.4 |
+| Active as of 2026-06-05 | *Computable Name*:MedComCareCommunication |
 
  
 Care related communication between two or more parties in Danish healthcare 
@@ -111,10 +111,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
   "resourceType" : "StructureDefinition",
   "id" : "medcom-careCommunication-communication",
   "url" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication",
-  "version" : "5.0.3",
+  "version" : "5.0.4",
   "name" : "MedComCareCommunication",
   "status" : "active",
-  "date" : "2026-06-03T09:32:39+00:00",
+  "date" : "2026-06-05T08:11:03+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -201,13 +201,6 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
             "severity" : "error",
             "human" : "An episodeOfCare-identifier must be included when an Encounter instance is included.",
             "expression" : "iif(encounter.exists().not(), true, encounter.reference.resolve().episodeOfCare.identifier.exists())",
-            "source" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"
-          },
-          {
-            "key" : "medcom-careCommunication-15",
-            "severity" : "error",
-            "human" : "If an Encounter resource is present in the bundle, there must be a reference to it in Communication.encounter. If no Encounter is present, Communication.encounter must not be populated.",
-            "expression" : "iif(encounter.exists(), Communication.encounter.reference.exists(), Communication.encounter.exists().not())",
             "source" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"
           }
         ]

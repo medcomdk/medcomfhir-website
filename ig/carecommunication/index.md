@@ -1,4 +1,4 @@
-# Home - DK MedCom Carecommunication v5.0.3
+# Home - DK MedCom Carecommunication v5.0.4
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication | *Version*:5.0.3 |
-| Active as of 2026-06-03 | *Computable Name*:MedComCarecommunication |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication | *Version*:5.0.4 |
+| Active as of 2026-06-05 | *Computable Name*:MedComCarecommunication |
 
 ### Introduction
 
@@ -140,11 +140,11 @@ If you have any questions, please contact [fhir@medcom.dk](mailto:fhir@medcom.dk
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.carecommunication",
   "url" : "http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/medcom.fhir.dk.carecommunication",
-  "version" : "5.0.3",
+  "version" : "5.0.4",
   "name" : "MedComCarecommunication",
   "title" : "DK MedCom Carecommunication",
   "status" : "active",
-  "date" : "2026-06-03T09:32:39+00:00",
+  "date" : "2026-06-05T08:11:03+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

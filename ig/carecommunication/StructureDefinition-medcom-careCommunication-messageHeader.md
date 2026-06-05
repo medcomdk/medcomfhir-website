@@ -1,4 +1,4 @@
-# MedComCareCommunicationMessageHeader - DK MedCom Carecommunication v5.0.3
+# MedComCareCommunicationMessageHeader - DK MedCom Carecommunication v5.0.4
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader | *Version*:5.0.3 |
-| Active as of 2026-06-03 | *Computable Name*:MedComCareCommunicationMessageHeader |
+| *Official URL*:http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader | *Version*:5.0.4 |
+| Active as of 2026-06-05 | *Computable Name*:MedComCareCommunicationMessageHeader |
 
  
 Message header for CareCommunication message 
@@ -46,10 +46,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-careCommunica
   "resourceType" : "StructureDefinition",
   "id" : "medcom-careCommunication-messageHeader",
   "url" : "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader",
-  "version" : "5.0.3",
+  "version" : "5.0.4",
   "name" : "MedComCareCommunicationMessageHeader",
   "status" : "active",
-  "date" : "2026-06-03T09:32:39+00:00",
+  "date" : "2026-06-05T08:11:03+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
