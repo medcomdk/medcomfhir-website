@@ -1,4 +1,4 @@
-# HomeCareObservationDocumentReference - Danish XDS Documents profiles v1.0.0-trial-use-1
+# HomeCareObservationDocumentReference - Danish XDS Documents profiles v1.0.0-trial-use-2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference | *Version*:1.0.0-trial-use-1 |
-| Draft as of 2026-06-01 | *Computable Name*:HomeCareObservationDocumentReference |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference | *Version*:1.0.0-trial-use-2 |
+| Draft as of 2026-06-17 | *Computable Name*:HomeCareObservationDocumentReference |
 
  
 A profile stating the rules, when exchanging a document including homecare observation (DA: Kommunale Prøvesvar). 
@@ -37,10 +37,10 @@ Other representations of profile: [CSV](StructureDefinition-homecare-observation
   "resourceType" : "StructureDefinition",
   "id" : "homecare-observation-documentreference",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/homecare-observation-documentreference",
-  "version" : "1.0.0-trial-use-1",
+  "version" : "1.0.0-trial-use-2",
   "name" : "HomeCareObservationDocumentReference",
   "status" : "draft",
-  "date" : "2026-06-01T09:36:40+00:00",
+  "date" : "2026-06-17T08:46:47+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -136,7 +136,7 @@ Other representations of profile: [CSV](StructureDefinition-homecare-observation
       {
         "id" : "DocumentReference.extension:versionid.value[x]",
         "path" : "DocumentReference.extension.value[x]",
-        "patternString" : "1.0-trial-use-1"
+        "patternString" : "2.0"
       },
       {
         "id" : "DocumentReference.type.coding",

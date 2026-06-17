@@ -1,4 +1,4 @@
-# MedComDocumentPractitionerRole - Danish XDS Documents profiles v1.0.0-trial-use-1
+# MedComDocumentPractitionerRole - Danish XDS Documents profiles v1.0.0-trial-use-2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitionerrole | *Version*:1.0.0-trial-use-1 |
-| Draft as of 2026-06-01 | *Computable Name*:MedComDocumentPractitionerRole |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitionerrole | *Version*:1.0.0-trial-use-2 |
+| Draft as of 2026-06-17 | *Computable Name*:MedComDocumentPractitionerRole |
 
  
 Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care. 
@@ -37,10 +37,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-document-prac
   "resourceType" : "StructureDefinition",
   "id" : "medcom-document-practitionerrole",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitionerrole",
-  "version" : "1.0.0-trial-use-1",
+  "version" : "1.0.0-trial-use-2",
   "name" : "MedComDocumentPractitionerRole",
   "status" : "draft",
-  "date" : "2026-06-01T09:36:40+00:00",
+  "date" : "2026-06-17T08:46:47+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {

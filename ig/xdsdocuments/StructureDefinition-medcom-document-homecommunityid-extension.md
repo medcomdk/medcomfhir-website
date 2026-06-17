@@ -1,4 +1,4 @@
-# MedCom Document HomeCommunityID - Danish XDS Documents profiles v1.0.0-trial-use-1
+# MedCom Document HomeCommunityID - Danish XDS Documents profiles v1.0.0-trial-use-2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-homecommunityid-extension | *Version*:1.0.0-trial-use-1 |
-| Draft as of 2026-06-01 | *Computable Name*:MedComDocumentHomeCommunityID |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-homecommunityid-extension | *Version*:1.0.0-trial-use-2 |
+| Draft as of 2026-06-17 | *Computable Name*:MedComDocumentHomeCommunityID |
 
 Extension containing information about operational and in production home communities (XCA) in Danish Document Sharing
 
@@ -43,11 +43,11 @@ Other representations of profile: [CSV](StructureDefinition-medcom-document-home
   "resourceType" : "StructureDefinition",
   "id" : "medcom-document-homecommunityid-extension",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-homecommunityid-extension",
-  "version" : "1.0.0-trial-use-1",
+  "version" : "1.0.0-trial-use-2",
   "name" : "MedComDocumentHomeCommunityID",
   "title" : "MedCom Document HomeCommunityID",
   "status" : "draft",
-  "date" : "2026-06-01T09:36:40+00:00",
+  "date" : "2026-06-17T08:46:47+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
