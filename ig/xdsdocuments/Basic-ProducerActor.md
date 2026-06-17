@@ -15,7 +15,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version",
-      "valueString" : "1.0.0-trial-use-1"
+      "valueString" : "1.0.0-trial-use-2"
     },
     {
       "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name",
@@ -31,7 +31,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date",
-      "valueDateTime" : "2026-06-01T09:36:40+00:00"
+      "valueDateTime" : "2026-06-17T08:46:47+00:00"
     },
     {
       "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher",

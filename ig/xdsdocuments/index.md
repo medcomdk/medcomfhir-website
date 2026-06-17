@@ -1,4 +1,4 @@
-# Home - Danish XDS Documents profiles v1.0.0-trial-use-1
+# Home - Danish XDS Documents profiles v1.0.0-trial-use-2
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments | *Version*:1.0.0-trial-use-1 |
-| Draft as of 2026-06-01 | *Computable Name*:MedComXDSDocuments |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments | *Version*:1.0.0-trial-use-2 |
+| Draft as of 2026-06-17 | *Computable Name*:MedComXDSDocuments |
 
 
 
@@ -19,11 +19,11 @@
   "resourceType" : "ImplementationGuide",
   "id" : "medcom.fhir.dk.xdsdocuments",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/ImplementationGuide/medcom.fhir.dk.xdsdocuments",
-  "version" : "1.0.0-trial-use-1",
+  "version" : "1.0.0-trial-use-2",
   "name" : "MedComXDSDocuments",
   "title" : "Danish XDS Documents profiles",
   "status" : "draft",
-  "date" : "2026-06-01T09:36:40+00:00",
+  "date" : "2026-06-17T08:46:47+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
@@ -66,7 +66,7 @@
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "7.1.0"
+      "version" : "7.2.0"
     },
     {
       "id" : "hl7ext",

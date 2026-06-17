@@ -1,4 +1,4 @@
-# MedComContainedDocumentReference - Danish XDS Documents profiles v1.0.0-trial-use-1
+# MedComContainedDocumentReference - Danish XDS Documents profiles v1.0.0-trial-use-2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-contained-documentreference | *Version*:1.0.0-trial-use-1 |
-| Draft as of 2026-06-01 | *Computable Name*:MedComContainedDocumentReference |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-contained-documentreference | *Version*:1.0.0-trial-use-2 |
+| Draft as of 2026-06-17 | *Computable Name*:MedComContainedDocumentReference |
 
  
 A profile stating the rules, when exchanging a FHIR document in the Danish Healthcare sector using IHE MHD and IHE XDS based document sharing. 
@@ -37,10 +37,10 @@ Other representations of profile: [CSV](StructureDefinition-medcom-contained-doc
   "resourceType" : "StructureDefinition",
   "id" : "medcom-contained-documentreference",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-contained-documentreference",
-  "version" : "1.0.0-trial-use-1",
+  "version" : "1.0.0-trial-use-2",
   "name" : "MedComContainedDocumentReference",
   "status" : "draft",
-  "date" : "2026-06-01T09:36:40+00:00",
+  "date" : "2026-06-17T08:46:47+00:00",
   "publisher" : "MedCom",
   "contact" : [
     {
