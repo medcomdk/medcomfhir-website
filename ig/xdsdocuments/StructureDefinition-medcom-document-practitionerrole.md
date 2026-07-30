@@ -1,4 +1,4 @@
-# MedComDocumentPractitionerRole - Danish XDS Documents profiles v1.0.0-trial-use-2
+# MedComDocumentPractitionerRole - Danish XDS Documents profiles v1.0.0-trial-use-3
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitionerrole | *Version*:1.0.0-trial-use-2 |
-| Draft as of 2026-06-17 | *Computable Name*:MedComDocumentPractitionerRole |
+| *Official URL*:http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitionerrole | *Version*:1.0.0-trial-use-3 |
+| Draft as of 2026-07-30 | *Computable Name*:MedComDocumentPractitionerRole |
 
  
 Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care. 
@@ -18,7 +18,7 @@ Document PractitionerRole resource used to describe the role of a healthcare pro
 
 * Refer to this Profile: [MedComContainedDocumentReference](StructureDefinition-medcom-contained-documentreference.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/medcom.fhir.dk.xdsdocuments|current/StructureDefinition/medcom-document-practitionerrole)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/medcom.fhir.dk.xdsdocuments|current/StructureDefinition/StructureDefinition-medcom-document-practitionerrole.json)
 
 ### Formal Views of Profile Content
 
@@ -37,118 +37,98 @@ Other representations of profile: [CSV](StructureDefinition-medcom-document-prac
   "resourceType" : "StructureDefinition",
   "id" : "medcom-document-practitionerrole",
   "url" : "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitionerrole",
-  "version" : "1.0.0-trial-use-2",
+  "version" : "1.0.0-trial-use-3",
   "name" : "MedComDocumentPractitionerRole",
   "status" : "draft",
-  "date" : "2026-06-17T08:46:47+00:00",
+  "date" : "2026-07-30T12:32:51+00:00",
   "publisher" : "MedCom",
-  "contact" : [
+  "contact" : [{
+    "name" : "MedCom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://medcom.dk/"
+    },
     {
-      "name" : "MedCom",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://medcom.dk/"
-        },
-        {
-          "system" : "email",
-          "value" : "fhir@medcom.dk"
-        }
-      ]
-    }
-  ],
+      "system" : "email",
+      "value" : "fhir@medcom.dk"
+    }]
+  }],
   "description" : "Document PractitionerRole resource used to describe the role of a healthcare professional or another actor involved in citizen or patient care.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "DK",
-          "display" : "Denmark"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "servd",
-      "uri" : "http://www.omg.org/spec/ServD/1.0/",
-      "name" : "ServD"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "servd",
+    "uri" : "http://www.omg.org/spec/ServD/1.0/",
+    "name" : "ServD"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "PractitionerRole",
   "baseDefinition" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "PractitionerRole",
-        "path" : "PractitionerRole"
-      },
-      {
-        "id" : "PractitionerRole.identifier",
-        "path" : "PractitionerRole.identifier",
-        "short" : "Globally unique, stable identifier for this resource. The same identifier SHALL be used when this resource is recreated from the same source data.",
-        "min" : 1,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "PractitionerRole.identifier.system",
-        "path" : "PractitionerRole.identifier.system",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "PractitionerRole.identifier.value",
-        "path" : "PractitionerRole.identifier.value",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "PractitionerRole.practitioner",
-        "path" : "PractitionerRole.practitioner",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitioner"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "PractitionerRole.organization",
-        "path" : "PractitionerRole.organization",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-organization"
-            ],
-            "aggregation" : ["bundled"]
-          }
-        ]
-      }
-    ]
+    "element" : [{
+      "id" : "PractitionerRole",
+      "path" : "PractitionerRole"
+    },
+    {
+      "id" : "PractitionerRole.identifier",
+      "path" : "PractitionerRole.identifier",
+      "short" : "Globally unique, stable identifier for this resource. The same identifier SHALL be used when this resource is recreated from the same source data.",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.identifier.system",
+      "path" : "PractitionerRole.identifier.system",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.identifier.value",
+      "path" : "PractitionerRole.identifier.value",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "PractitionerRole.practitioner",
+      "path" : "PractitionerRole.practitioner",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitioner"]
+      }]
+    },
+    {
+      "id" : "PractitionerRole.organization",
+      "path" : "PractitionerRole.organization",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-organization"],
+        "aggregation" : ["bundled"]
+      }]
+    }]
   }
 }
 

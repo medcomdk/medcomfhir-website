@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="4daf727f-f116-4e49-ad31-4018f0cc638a"/>
+  <meta>
+    <profile value="http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-conditionlist-documentreference"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>ConditionList DocumentReference resource example</p></div>
+  </text>
+  <contained>
+    <Practitioner>
+      <id value="1fcad31f-8967-4f49-b6af-7e64082e8fec"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-practitioner"/>
+      </meta>
+      <text>
+        <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Bo Test Vestergaard</div>
+      </text>
+      <identifier>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:uuid:b6c11dab-a9e9-46b8-9bb3-fe06d6587e07"/>
+      </identifier>
+      <name>
+        <use value="official"/>
+        <family value="Vestergaard"/>
+        <given value="Bo"/>
+        <given value="Test"/>
+      </name>
+    </Practitioner>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="fd3206c6-c265-49f9-82c3-8b4c96280403"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-organization"/>
+      </meta>
+      <text>
+        <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">MedCom Testcenter, SOR-ID: 325381000016008</div>
+      </text>
+      <identifier>
+        <system value="urn:oid:1.2.208.176.1.1"/>
+        <value value="325381000016008"/>
+      </identifier>
+      <name value="MedCom Testcenter"/>
+    </Organization>
+  </contained>
+  <contained>
+    <Patient>
+      <id value="69e475df-20c8-4f54-8cea-9843568205fd"/>
+      <meta>
+        <profile value="http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-patient"/>
+      </meta>
+      <text>
+        <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Name:Elmer Test Hansen, CPR: 2509479989</div>
+      </text>
+      <identifier>
+        <system value="urn:oid:1.2.208.176.1.2"/>
+        <value value="2509479989"/>
+      </identifier>
+      <name>
+        <use value="official"/>
+        <family value="Hansen"/>
+        <given value="Elmer"/>
+        <given value="Test"/>
+      </name>
+      <gender value="male"/>
+      <birthDate value="1947-09-25"/>
+    </Patient>
+  </contained>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.version">
+    <valueString value="2.0"/>
+  </extension>
+  <extension url="http://medcomfhir.dk/ig/xdsdocuments/StructureDefinition/medcom-document-homecommunityid-extension">
+    <valueCoding>
+      <system value="http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-xds-homeCommunityId-CS"/>
+      <code value="1.2.208.176.8.1"/>
+      <display value="Common Danish IHE XDS domain. Integrating the Healthcare Enterprise (IHE) cross[X]-enterprise Document Sharing (XDS) domain"/>
+    </valueCoding>
+  </extension>
+  <masterIdentifier>
+    <use value="usual"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:bf1bb63b-d405-4dfe-9810-37b16b333a01"/>
+  </masterIdentifier>
+  <identifier>
+    <use value="official"/>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:7c596b9a-112e-4386-ae71-5ecdd3ed7c50"/>
+  </identifier>
+  <status value="current"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11450-4"/>
+      <display value="Problem list - Reported"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-xds-classcode-CS"/>
+      <code value="001"/>
+      <display value="Klinisk rapport"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="#69e475df-20c8-4f54-8cea-9843568205fd"/>
+  </subject>
+  <author>
+    <reference value="#fd3206c6-c265-49f9-82c3-8b4c96280403"/>
+  </author>
+  <authenticator>
+    <reference value="#1fcad31f-8967-4f49-b6af-7e64082e8fec"/>
+  </authenticator>
+  <securityLabel>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality"/>
+      <code value="N"/>
+    </coding>
+  </securityLabel>
+  <content>
+    <attachment>
+      <contentType value="application/fhir+json"/>
+      <language value="da"/>
+      <url value="ConditionListDocument.json"/>
+      <title value="Diagnoseoversigt for 2509479989"/>
+      <creation value="2024-05-01T12:00:00+01:00"/>
+    </attachment>
+    <format>
+      <system value="http://medcomfhir.dk/ig/xdsmetadata/CodeSystem/MedCom-xds-formatcode-CS"/>
+      <code value="urn:ad:dk:medcom:plr-v1.0:full"/>
+      <display value="DK PLR schema"/>
+    </format>
+  </content>
+  <context>
+    <period>
+      <start value="2026-05-19T10:10:10+02:00"/>
+    </period>
+    <facilityType>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="394761003"/>
+        <display value="GP (general practitioner) site"/>
+      </coding>
+    </facilityType>
+    <practiceSetting>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="408443003"/>
+        <display value="General medical practice"/>
+      </coding>
+    </practiceSetting>
+    <sourcePatientInfo>
+      <reference value="#69e475df-20c8-4f54-8cea-9843568205fd"/>
+      <identifier>
+        <value value="2509479989"/>
+      </identifier>
+    </sourcePatientInfo>
+  </context>
+</DocumentReference>
