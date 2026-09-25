@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently asked qustions | MedCom FHIR</title>
+  <link rel="stylesheet" href="../../assets/css/documentation.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a href="../../index.html" aria-label="MedCom FHIR home"><img class="logo" src="../../assets/images/medcom+fhir-logo.png" alt="MedCom FHIR"></a>
+    <p>MedCom standards based on HL7 FHIR® R4</p>
+    <nav aria-label="Main navigation">
+      <a href="../../index.html">Documentation</a>
+      <a href="../../ig/index.html">Implementation guides</a>
+      <a href="../../assets/documents/NewToFHIR.html">New to FHIR?</a>
+      <a href="../../assets/documents/FAQ.html" aria-current="page">FAQ</a>
+      <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#network-layer">Messaging governance</a>
+    </nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+<h1 id="frequently-asked-qustions">Frequently asked qustions</h1>
+
+<p>On this page you will finde the answears to the most asked questions.
+<strong>Table of contents</strong></p>
+<ul>
+  <li><a href="#why-are-there-multiple-implementation-guides">1 Why are there Multiple Implementation Guides?</a></li>
+  <li><a href="#how-does-inheritance-work-and-what-is-dkcore">2 How does Inheritance Work and What is DKCore? </a></li>
+</ul>
+
+<h2 id="why-are-there-multiple-implementation-guides">1 Why are there Multiple Implementation Guides?</h2>
+
+<p>FHIR allows for a great deal of reuse. When creating a MedCom FHIR message, profiles from the MedComCore and MedComMessaging IG are used to create a complete understanding. Currently, there are three FHIR standards: HospitalNotification, CareCommunication and Acknowledgement, which all are composed of profiles from the Core and Messaging IG as well as the IG for the specific standard, and terminogy codes from the Terminology IG.</p>
+
+<p>Keeping the IG’s seperate allows us to version them individually,meaning that updates in the MedComHospitalNotification IG will not affect the version of the MedComCareCommunication IG. However, an update in the MedComMessaging IG will affect all standard that use profiles or inherit profiles from this IG. 
+Additionally, it makes it possible to reuse the profiles from the Core IG in different MedCom standard and in different exchange formats.</p>
+
+<p><a href="#Fig1"> Figure 1</a> illustrates that the messaging standard uses multiple profiles from the Core and Messaging IG and uses some profiles that are specific to the given standard.</p>
+
+<figure>
+<img src="../images/MultipleIGs.png" alt="Overview of the MedCom Messaging Standard" style="width:50%" id="Fig1" />
+<figcaption text-align="center"><b>Figure 1: Overview of the MedCom Messaging Standard </b></figcaption>
+</figure>
+<p><br />
+<br /></p>
+
+<h2 id="how-does-inheritance-work-and-what-is-dkcore">2 How does Inheritance Work and What is DKCore?</h2>
+<p>In Denmark, we have a national HL7 affiliate, called <a href="https://hl7.dk/" target="_blank">HL7-DK</a>. The affiliate works on the development of international HL7 standards that supports healthcare. HL7-DK has focuses on profiling the international standard in a Danish context to provide a common foundation in Denmark.  HL7-DK develops DK-core which are generic FHIR profiles that can be used freely for FHIR projects in Denmark. At present, DK-core includes the following profiles: DkCorePatient, DkCorePractitioner and DkCoreOrganization. The profile MedComCorePatient inherits from <a href="https://hl7.dk/fhir/core/1.1.0/StructureDefinition-dk-core-patient.html" target="_blank">DKCorePatient</a>. This means that when a MedCom standard uses a civil registration number (Danish: CPR-nummer) from DKCorePatient, it is defined in the same way as when other projects inherit from DK-core and use a civil registration number, securing consistency across projects. DKCorePatient is the foundation of MedComCorePatient,which is why MedComCorePatient is said to inherit from DKCorePatient.<br /></p>
+
+<figure>
+<img src="../images/WhatisDKCore.png" alt="The inheritance of profiles " style="width:50%" id="Fig2" />
+<figcaption text-align="center"><b>Figre 2: The inheritance of profiles </b></figcaption>
+</figure>
+
+<p><a href="#Fig2">Figure 2 </a> also illustrates that there is a dependency between the IGs and the FHIR resources defined by HL7. 
+<br />
+<a href="https://www.medcom.dk/standarder/moderniseringsnyheder/nyhedsbrev-29-november-2021" target="_blank">You can read more about the work of HL7-DK here</a>.</p>
+
+
+  </main>
+  <footer>
+    <h2 id="About">About</h2>
+    <h3>Support or contact</h3>
+    <p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this page. For questions, contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or visit <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">MedCom's stream on Zulip</a>.</p>
+    <p>Documentation imported from MedComLandingPage version 2.0.6. <a href="https://github.com/medcomdk/MedComLandingPage/releases">Original release notes</a>.</p>
+    <p><small>FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this implementation guide by HL7, nor affirmation that this content is conformant to the various applicable standards.</small></p>
+    <a href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+  </footer>
+</body>
+</html>

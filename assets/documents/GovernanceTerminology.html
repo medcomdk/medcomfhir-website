@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Governance for Medcom FHIR Terminology | MedCom FHIR</title>
+  <link rel="stylesheet" href="../../assets/css/documentation.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a href="../../index.html" aria-label="MedCom FHIR home"><img class="logo" src="../../assets/images/medcom+fhir-logo.png" alt="MedCom FHIR"></a>
+    <p>MedCom standards based on HL7 FHIR® R4</p>
+    <nav aria-label="Main navigation">
+      <a href="../../index.html">Documentation</a>
+      <a href="../../ig/index.html">Implementation guides</a>
+      <a href="../../assets/documents/NewToFHIR.html">New to FHIR?</a>
+      <a href="../../assets/documents/FAQ.html">FAQ</a>
+      <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#network-layer">Messaging governance</a>
+    </nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+<p><a href="../../index.html">Return</a></p>
+
+<h1 id="governance-for-medcom-fhir-terminology">Governance for Medcom FHIR Terminology</h1>
+
+<p><strong>Table of contents</strong></p>
+<ul>
+  <li><a href="#1-introduction-to-governance-for-medcom-fhir-terminology">1 Introduction to Governance for MedCom FHIR Terminology</a></li>
+  <li><a href="#11-medcom-fhir-codesystems">1.1 MedCom FHIR CodeSystems</a></li>
+  <li><a href="#12-medcom-fhir-valuesets">1.2 MedCom FHIR ValueSets</a></li>
+  <li><a href="#13-medcom-fhir-conceptmaps">1.3 MedCom FHIR ConceptMaps</a></li>
+  <li><a href="#2-medcom-fhir-terminology-versioning">2 MedCom FHIR Terminology Versioning</a>
+    <ul>
+      <li><a href="#21-versioning-of-individual-artefacts-in-the-medcom-terminology-ig">2.1 Versioning of individual artefacts in the MedCom Terminology IG</a>
+        <ul>
+          <li><a href="#211-major-version">2.1.1 Major version</a></li>
+          <li><a href="#212-minor-version">2.1.2 Minor version</a></li>
+          <li><a href="#213-patch-version">2.1.3 Patch version</a></li>
+        </ul>
+      </li>
+      <li><a href="#22-versioning-of-medcom-terminology-ig">2.2 Versioning of individual artefacts in the MedCom Terminology IG</a>
+        <ul>
+          <li><a href="#221-major-version">2.2.1 Major version</a></li>
+          <li><a href="#222-minor-version">2.2.2 Minor version</a></li>
+          <li><a href="#223-patch-version">2.2.3 Patch version</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#3-governance-for-terminology-artefact-dates">3 Governance for Terminology artefact dates</a></li>
+  <li><a href="#4-links-for-medcom-fhir-terminology">4 Links for MedCom FHIR Terminology</a></li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="1-introduction-to-governance-for-medcom-fhir-terminology">1 Introduction to Governance for MedCom FHIR Terminology</h2>
+
+<p>Governance for MedCom FHIR Terminology covers version management and dates Codesystems, Valuesets and ConceptMaps, which are published through the MedCom FHIR Terminology IG.</p>
+
+<p>The term Terminology is in this governance a term covering all kinds of terminology, classifications, enumerations and qualifiers.</p>
+
+<p>All elements of a MedCom FHIR Message <strong>SHALL</strong> be compliant with the terminologies that are pointed out by these elements. No updates will be made without consulting relevant working groups beforehand.</p>
+
+<p>MedCom applies semantic versioning. Read MedCom’s description of semantic versioning <a href="../../#41-versioning-of-medcom-fhir-standards">here</a>.</p>
+
+<h3 id="11-medcom-fhir-codesystems">1.1 MedCom FHIR CodeSystems</h3>
+
+<p>No code in a CodeSystem will be deleted. Incompatible versions of a CodeSystem will have a unique name. Codes in CodeSystems may be deprecated with a deprecation date and new codes may be added to the CodeSystem. In both cases will the version and date be updated.</p>
+
+<h3 id="12-medcom-fhir-valuesets">1.2 MedCom FHIR ValueSets</h3>
+
+<p>Some ValueSets are intensional defined, meaning that all codes from a CodeSystem is included. Whenever the CodeSystem is updated, so is the ValueSet. For intensional defined ValueSets, there will always only be one active ValueSet.</p>
+
+<p>Other ValueSets are extensional defined, meaning that codes from CodeSystems are explicitly listed in each ValueSet. ValueSets will therefore not automatically be expanded when a CodeSystem is - it requires a change in the ValueSet.</p>
+
+<p>In exceptional cases, a ValueSet may be marked as fixed, meaning it must not be changed or versioned.</p>
+
+<h3 id="13-medcom-fhir-conceptmaps">1.3 MedCom FHIR ConceptMaps</h3>
+
+<p>ConceptMaps may be more or less static. ConceptMaps used for sending purposes will rarely change, and ConceptMaps used to describe the content of a message/document may change more frequently.</p>
+
+<p>A ConceptMap is valid until the date of a newer version of this ConceptMap is reached - then only the newest version is valid. If a code in a CodeSystem is deprecated, a new version of the ConceptMaps is created.</p>
+
+<h2 id="2-medcom-fhir-terminology-versioning">2 MedCom FHIR Terminology Versioning</h2>
+
+<p>MedCom defines a separation between versioning of the overall MedCom Terminology Implementation Guide (IG) and the individual terminology artefacts, such as CodeSystems, ValueSets, and ConceptMaps. While the Terminology IG is versioned as a whole, each terminology artefact is versioned independently to ensure precise tracking of changes and stable references across MedCom standards.</p>
+
+<h3 id="21-versioning-of-individual-artefacts-in-the-medcom-terminology-ig">2.1 Versioning of individual artefacts in the MedCom Terminology IG</h3>
+
+<p>MedCom applies a versioning model to manage updates to individual MedCom FHIR Terminology artefacts (CodeSystems, ValueSets, ConceptMaps), using the format Major.Minor.Patch.</p>
+
+<p>Each component of the version number signals the type and impact of a change. Any MedCom standards affected by changes of individual terminology artefacts in the MedCom Terminology IG will reflect the same version change level as the artefact it incorporates that has the highest level of change (major &gt; minor &gt; patch). MedCom will communicate changes at the major and minor version levels to affected vendors. Vendors must be able to handle patch level changes without being notified by MedCom. Venders can use GitHub subscriptions to get notifications.</p>
+
+<p><br /></p>
+
+<p>Examples:</p>
+
+<ul>
+  <li>A minor change in a ValueSet will result in a minor version change in the standards that incorporate it.</li>
+  <li>MedCom releases a new major version of multiple terminology artefacts not used in MedCom Standard A. Standard A’s version is then not affected on any level.</li>
+</ul>
+
+<h4 id="211-major-version">2.1.1 Major version</h4>
+
+<p>The major version (X.0.0) is incremented when changes are introduced that may break backward compatibility or significantly alter the structure or meaning of the individual terminology artefact.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Structural changes to existing terminology artefacts.</li>
+  <li>Changing or deprecating existing codes.</li>
+  <li>Corrections to display names that impacts functionality in systems using the terminology.</li>
+  <li>Embedding a group from one terminology artefact into another terminology artefact.</li>
+  <li>Adding, deprecating or changing a code in a way that impacts functionality in systems using the terminology.</li>
+</ul>
+
+<h4 id="212-minor-version">2.1.2 Minor version</h4>
+
+<p>The minor version (X.Y.0) is incremented when new content is added in a way that is fully backward compatible and does not alter the structure or semantics of existing terminology artefacts.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Addition of one or more new codes to existing terminology artefacts (e.g. a new category).</li>
+  <li>Corrections to display names that do not affect semantic meaning.</li>
+  <li>Changes that do not affect functionality but still require updated documentation or user guidance – e.g. clarifying a code definition or providing new usage instructions.</li>
+</ul>
+
+<h4 id="213-patch-version">2.1.3 Patch version</h4>
+
+<p>The patch version (X.Y.Z) is incremented for small changes that are backward compatible and do not affect the meaning or structure of existing content in individual terminology artefacts.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Corrections to descriptions that do not affect semantic meaning.</li>
+  <li>Making small technical or editorial updates or fixing bugs that do not affect system behaviour or require changes by users.</li>
+</ul>
+
+<h3 id="22-versioning-of-medcom-terminology-ig">2.2 Versioning of MedCom Terminology IG</h3>
+
+<p>MedCom applies a versioning model to manage updates to <a href="https://medcomfhir.dk/ig/terminology/">MedCom FHIR Terminology</a>, using the format Major.Minor.Patch.</p>
+
+<p>Changes to individual terminology artefacts do not automatically result in the same level of version change in the Terminology IG. The IG version is determined based on the overall impact of the update.</p>
+
+<p>For instance, a minor change to a ValueSet may be reflected as a patch version in the MedCom Terminology IG.</p>
+
+<p>Changes are documented in the <a href="https://medcomfhir.dk/ig/terminology/history.html">Directory of published versions</a> of the Terminology IG.</p>
+
+<p>Examples:</p>
+
+<ul>
+  <li>A new version of MedCom Terminology has been released as a major version which includes changes to artefacts (e.g. ValueSets and CodeSystems) not used in MedCom Standard A. Standard A’s version is not affected at any level.</li>
+  <li>A new version of MedCom Terminology has been released. ValueSet B’s version is changed at the minor level and the MedCom Terminology is changed at the patch level. Standard B, which incorporates ValueSet B, is updated on the major level.</li>
+  <li>A new version of MedCom Terminology has been released, and it includes changes to multiple artefacts (e.g. ValueSets and CodeSystems) used in MedCom Standard C. The IG of MedCom Standard C will be updated to match the highest version change level (major &gt; minor &gt; patch) among the individual terminology artefacts it incorporates and not the version of the MedCom Terminology IG itself.</li>
+</ul>
+
+<h4 id="221-major-version">2.2.1 Major version</h4>
+
+<p>The major version (X.0.0) is incremented when changes are introduced that may break backward compatibility or significantly alter the structure or meaning of one or more artefacts (e.g. Codesystems and ValueSets) in the MedCom Terminology IG.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Major terminology structural changes to existing artefacts, such as CodeSystems or ValueSets.</li>
+</ul>
+
+<h4 id="222-minor-version">2.2.2 Minor version</h4>
+
+<p>The minor version (X.Y.0) is incremented when individual terminology artefacts (e.g. CodeSystems, ValueSets) are added, changed, or deprecated in a way that may impact core functionality in consuming systems, without changing the overall structure or methodology of the MedCom Terminology IG. Larger changes to existing artefacts, as well as the addition of entirely new artefacts, are managed through minor version updates as well. These changes are considered backward compatible at the Terminology IG framework level, but may require attention from implementers using affected artefacts.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Addition of entirely new CodeSystems or ValueSets.</li>
+  <li>Addition of a new group of codes (e.g. a new domain or category within an existing CodeSystem).</li>
+  <li>Adding, deprecating or changing a code or display name in a way that impacts functionality in systems using the terminology.</li>
+</ul>
+
+<p>Changes that do not affect terminology functionality but still require updated documentation or user guidance.</p>
+
+<h4 id="223-patch-version">2.2.3 Patch version</h4>
+
+<p>The patch version (X.Y.Z) is incremented for small changes that are backward compatible and do not affect the meaning or structure of existing content in existing artefacts (e.g. Codesystems and ValueSets) in the MedCom Terminology IG.</p>
+
+<p>Examples include:</p>
+
+<ul>
+  <li>Addition of new individual codes to an existing artefact that do not affect system functionality.</li>
+  <li>Corrections to descriptions that do not affect semantic meaning.</li>
+  <li>Small technical or editorial updates (like contact info or version notes) that do not affect system behavior or require changes by users.</li>
+</ul>
+
+<h2 id="3-governance-for-terminology-artefact-dates">3 Governance for Terminology artefact dates</h2>
+
+<p>The individual MedCom Terminology artefacts (such as CodeSystems) contain two types of dates that support version control and usage guidance. One applies to the entire artefact, while the other applies to individual codes or values within it. Dates in CodeSystems and ConceptMaps apply only to the artefact as a whole. CodeSystems contain both types of dates. The following outlines how these dates are used and interpreted.</p>
+
+<p><strong>Date for the entire artifact:</strong></p>
+
+<p>This date applies to the whole artifact and indicates the date of the most recent change.</p>
+
+<p><strong>Date for each individual code in the CodeSystem:</strong></p>
+
+<p>This date indicates the most recent status change date for the individual value/code.</p>
+
+<p>There are four different statuses:</p>
+
+<ul>
+  <li>Experimental: The code is recommended for trial use only.</li>
+  <li>Active: The code is actively in use and recommended.</li>
+  <li>Deprecated: Use is discouraged. It is expected to be retired in a future release.</li>
+  <li>Retired: The code must no longer be used.</li>
+</ul>
+
+<p>If a code or artifact does not have an associated date, it is because dates were not implemented in the terminology at the time of creation; they will be added the next time the element is updated.</p>
+
+<h2 id="4-links-for-medcom-fhir-terminology">4 Links for MedCom FHIR Terminology</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Links for Terminology</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://medcomdk.github.io/dk-medcom-terminology/">Detailed specification for MedCom FHIR Terminology server</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://medcomfhir.dk/ig/terminology/" target="_blank">Detailed specification for MedCom FHIR Terminology in MedCom FHIR Terminology IG</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://hl7.org/fhir/R4/terminology-service.html" target="_blank">Detailed specification for Terminology in FHIR R4</a></td>
+    </tr>
+  </tbody>
+</table>
+
+  </main>
+  <footer>
+    <h2 id="About">About</h2>
+    <h3>Support or contact</h3>
+    <p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this page. For questions, contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or visit <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">MedCom's stream on Zulip</a>.</p>
+    <p>Documentation imported from MedComLandingPage version 2.0.6. <a href="https://github.com/medcomdk/MedComLandingPage/releases">Original release notes</a>.</p>
+    <p><small>FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this implementation guide by HL7, nor affirmation that this content is conformant to the various applicable standards.</small></p>
+    <a href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+  </footer>
+</body>
+</html>
