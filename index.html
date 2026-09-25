@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to MedCom&#39;s FHIR®© standards | MedCom FHIR</title>
+  <link rel="stylesheet" href="assets/css/documentation.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a href="index.html" aria-label="MedCom FHIR home"><img class="logo" src="assets/images/medcom+fhir-logo.png" alt="MedCom FHIR"></a>
+    <p>MedCom standards based on HL7 FHIR® R4</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Documentation</a>
+      <a href="ig/index.html">Implementation guides</a>
+      <a href="assets/documents/NewToFHIR.html">New to FHIR?</a>
+      <a href="assets/documents/FAQ.html">FAQ</a>
+      <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#network-layer">Messaging governance</a>
+    </nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+<h1 id="welcome-to-medcoms-fhir-standards">Welcome to MedCom’s FHIR®© standards</h1>
+<p><strong>Table of contents</strong></p>
+<ul>
+  <li><a href="#1-medcoms-fhir-standards">1 MedComs FHIR standards</a></li>
+  <li><a href="#2-implementing-a-medcom-fhir-standard">2 Implementing a MedCom FHIR standard</a>
+    <ul>
+      <li><a href="#21-standard-documentation">2.1 Standard documentation</a></li>
+      <li><a href="#22-general-goverance-for-medcom-fhir-standards">2.2 General goverance for MedCom FHIR standards</a></li>
+      <li><a href="#23-governance-for-medcom-hl7-fhir-messaging">2.3 Governance for MedCom HL7 FHIR Messaging</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-test-and-certification">3 Test and certification</a>
+    <ul>
+      <li><a href="#31-test-of-fhir-messages-and-documents">3.1 Test of FHIR messages</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-change-management-and-versioning">4 Change management and versioning</a>
+    <ul>
+      <li><a href="#41-versioning-of-medcom-fhir-standards">4.1 Versioning of FHIR standard</a></li>
+      <li><a href="#42-governance-for-medcom-fhir-terminology">4.2 Governance for Medcom FHIR Terminology</a></li>
+      <li><a href="#43-change-requests-and-improvements">4.3 Change requests and improvements</a></li>
+    </ul>
+  </li>
+  <li><a href="#Want-to-stay-updated">5 Want to stay updated?</a></li>
+  <li><a href="#New-to-fhir">6 New to FHIR?</a></li>
+  <li><a href="#7-frequently-asked-questions">7 Frequently asked questions</a></li>
+</ul>
+
+<blockquote>
+  <p>Note: Clinical guidelines are available in both Danish and English. All the remaining documentation will be in English.</p>
+</blockquote>
+<p>&nbsp;</p>
+
+<p>MedCom’s modernisation project involves both rethinking business requirements and technical improvement. The modernisation is done in collaboration with MedCom’s central partners.</p>
+
+<p>On our website <a href="https://www.medcom.dk/standarder/modernisering-af-medcom-standarder/" target="_blank">medcom.dk </a>, the political and strategical aspects of the modernisation are described. These aspects involve the initial wave of modernisation including HospitalNotification (Danish: Advis om sygehusophold), CareCommunication (Danish: Korrespondancemeddelelse), and Acknowledgement (Danish: Kvittering) standards. Furthermore, you can find descriptions of the gradual phase-out of the existing standard formats (EDIFACT and OIOXML), the implementation plan for the initial wave and descriptions of the upcoming waves of modernisation.</p>
+
+<p>The purpose of this site is to guide you to find both the business and technical implementation of the requirements for each standard.</p>
+<p>&nbsp;</p>
+
+<h2 id="1-medcoms-fhir-standards">1 MedCom’s FHIR standards</h2>
+<p>The business requirements describe the context in which a standard should be used, and they are presented on a webpage for each standard.
+For a MedCom FHIR standard, the technical implementation is presented in an Implementation Guide (IG). An IG includes several rules, extensions, profiles and more. Each profile describes a delimited area within healthcare e.g., a patient, an organisation, or an encounter.
+Some of the profiles are often used across standards. An example is the Patient profile which includes the most central information about a patient or citizen, such as the civil registration number (Danish: CPR-nummer) or name. These types of profiles are called core profiles (Danish: kerneprofiler) and are gathered in the Core IG. Additionally, some profiles are often used when defining a message. These profiles are called messaging profiles (Danish: meddelelsesprofiler) and are gathered in the Messaging IG. The same applies to MedCom FHIR documents.
+Some profiles are specific for a standard, which is why they are gathered in the respective IG. 
+Lastly, the terminology codes (Danish: terminologi), including all CodeSystems, ValueSet, and ConceptMaps are gathered in the Terminology IG.</p>
+
+<p>Due to the above mentioned, the <a href="#Tab1"> Table 1</a> is divided into three parts:</p>
+<ol>
+  <li>MedCom’s FHIR standards describes the MedCom FHIR standards and their business requirements.</li>
+  <li>Terminology describes the terminology used in the MedCom FHIR standards.</li>
+  <li>Generic profiles describes the profiles used across MedCom FHIR standards.</li>
+</ol>
+
+<p><br />
+Over time, the modernised FHIR standards will replace the existing MedCom standards. For example, HospitalNotification replaces 
+<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/EDI/Dokumentation/" target="_blank">DIS17</a>/
+<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS17/Dokumentation/" target="_blank">XDIS17</a> and
+<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/EDI/Dokumentation/" target="_blank">DIS20</a>/
+<a href="https://svn.medcom.dk/svn/releases/Standarder/Det%20gode%20kommuneadvis/XDIS20/Dokumentation/" target="_blank">XDIS20</a>. CareCommunication replaces 
+<a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20korrespondance/EDI/Dokumentation/" target="_blank">DIS91</a>/ <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20korrespondance/XML/Dokumentation/" target="_blank">XDIS91 </a> and Acknowledgement replaces <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20CONTRL/EDI/Dokumentation/" target="_blank">CTL01-03</a>/<a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20CONTRL/XML/Dokumentation/" target="_blank">XCTL01-03 </a>.</p>
+
+<p><br />
+The links to the webpage presentations of the standards can be found in the <a href="#Tab1"> Table 1</a>. On the webpages, you can find the links to the IG and other relevant information that is essential for the individual standard.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0; width:50%;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-ippy{border-color:#000000;color:#2c415c;text-align:left;vertical-align:top}
+.tg .tg-ztr9{border-color:#000000;color:#2c415c;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-1ady{background-color:#9dbad7;border-color:#000000;color:#333333;text-align:left;vertical-align:top}
+.tg .tg-on52{border-color:#000000;color:#333333;text-align:left;vertical-align:top}
+</style>
+
+<div style="overflow-x:auto;">
+<table class="tg" style="table-layout: fixed; width: 942px" id="Tab1">
+<caption style="color:#2c415c;font-weight:bold"> Table 1: Overview of the modernised FHIR standards </caption>
+<colgroup>
+<col style="width: 200.88889px" />
+<col style="width: 184.88889px" />
+<col style="width: 409.88889px" />
+<col style="width: 207.88889px" />
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-ippy"><span style="font-weight:bold">English</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">Danish</span></th>
+    <th class="tg-ippy"><span style="font-weight:bold">Short description</span></th>
+    <th class="tg-ztr9">Version approved by RUSA</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-1ady" colspan="4"><span style="font-style:italic">MedCom's Messaging standards</span></td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><a href="https://medcomdk.github.io/dk-medcom-hospitalnotification/" rel="noopener noreferrer"><span style="text-decoration:none">HospitalNotification</span></a></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Advis om sygehusophold</span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Used to inform municipalities about hospitalization of a patient</span></td>
+    <td class="tg-on52"> Version 3.0</td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><span style="background-color:#FFF"><a href="https://medcomdk.github.io/dk-medcom-carecommunication/" rel="noopener noreferrer"><span style="text-decoration:none">CareCommunication </span></a></span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Korrespondancemeddelelse</span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Used in all parts of the Danish health care sector to communicate between parties.</span></td>
+    <td class="tg-on52"> Version 5.0</td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><span style="background-color:#FFF"> <a href="https://medcomdk.github.io/dk-medcom-acknowledgement/" rel="noopener noreferrer"><span style="text-decoration:none">Acknowledgement </span></a></span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Kvittering</span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">When a message is received, an acknowledgement message shall be returned to the sender, which states whether the message was valid and the transportation went good.</span></td>
+    <td class="tg-on52"> Version 2.0</td>
+  </tr>
+    <tr>
+    <td class="tg-on52"><span style="background-color:#FFF"> <a href="https://medcomdk.github.io/dk_HomeCareObservations/" rel="noopener noreferrer"><span style="text-decoration:none">HomeCareObservation </span></a></span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Kommunale Prøvesvar</span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">This standard is developed to be part of a production trial of the communication between the general practitioner and municipal acute care team. Used to exchange results and observations performed and produced by the municipal acute care team. </span></td>
+    <td class="tg-on52"> Version 1.0</td>
+  </tr>
+    <tr>
+    <td class="tg-1ady" colspan="4"><span style="font-style:italic">MedCom's Document standards</span></td>
+  </tr>
+    <tr>
+    <td class="tg-on52"><span style="background-color:#FFF"> <a href="https://medcomdk.github.io/dk-medcom-conditionlist/" rel="noopener noreferrer"><span style="text-decoration:none">ConditionList</span></a></span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Deling af diagnoser</span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">This document based standard is developed to support sharing of a citizens diagnoses selected by the citizens general practitioner to the citizen and healthcare providers.</span></td>
+    <td class="tg-on52">Version 1.0</td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><span style="background-color:#FFF"> <a href="https://medcomdk.github.io/dk-medcom-ekg/" rel="noopener noreferrer"><span style="text-decoration:none">EKG Recording</span></a></span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Deling af EKG-optagelser</span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">The standard supports the establishment of a national sharing portal for EKG data in the form of PDF documents enclosed in a FHIR Document.</span></td>
+    <td class="tg-on52">Version 2.0</td>
+  </tr>
+   <tr>
+    <td class="tg-on52"><span style="background-color:#FFF"> <a href="https://medcomdk.github.io/dk-medcom-notes/" rel="noopener noreferrer"><span style="text-decoration:none">Shared Notes</span></a></span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">Deling af Journalnotater</span></td>
+    <td class="tg-on52"><span style="background-color:#FFF">This document based standard is developed to support sharing of a citizens notes to the citizen and other healthcare providers.</span></td>
+    <td class="tg-on52"></td>
+  </tr>
+  <tr>
+    <td class="tg-1ady" colspan="4"><span style="font-style:italic">Terminology</span></td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><a href="https://medcomdk.github.io/dk-medcom-terminology/" rel="noopener noreferrer"><span style="text-decoration:none">Terminology </span></a></td>
+    <td class="tg-on52">Terminologi</td>
+    <td class="tg-on52">Includes CodeSystem, ValueSet and ConceptMaps developed by MedCom used in the standards</td>
+    <td class="tg-on52"></td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><a href="https://medcomfhir.dk/ig/xdsmetadata/" rel="noopener noreferrer"><span style="text-decoration:none">XDS-metadata </span></a></td>
+    <td class="tg-on52">XDS-metadata</td>
+    <td class="tg-on52">Includes CodeSystem, and ValueSet for use as metadata in document-based exchange. Please notice, the <a href="https://svn.medcom.dk/svn/releases/Standarder/IHE/OID/" target="_blank">ValueSets in defined in the IHE-XDS metadata (.xslx)</a> is currently the valid representation.</td>
+    <td class="tg-on52"></td>
+  </tr>
+   <tr>
+    <td class="tg-1ady" colspan="4"><span style="font-style:italic">Generic profiles</span></td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><a href="https://medcomdk.github.io/dk-medcom-core/" rel="noopener noreferrer"><span style="text-decoration:none">Core</span></a></td>
+    <td class="tg-on52">Kerneprofiler</td>
+    <td class="tg-on52">Core profiles that are static and used across standards.</td>
+    <td class="tg-on52"></td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><a href="https://medcomdk.github.io/dk-medcom-messaging/" rel="noopener noreferrer"><span style="text-decoration:none">Messaging</span></a></td>
+    <td class="tg-on52">Meddelsesprofiler</td>
+    <td class="tg-on52">Messaging profiles used across all messaging-based standards.</td>
+    <td class="tg-on52"></td>
+  </tr>
+  <tr>
+    <td class="tg-on52"><a href="https://medcomdk.github.io/dk-medcom-document/" rel="noopener noreferrer"><span style="text-decoration:none">Document</span></a></td>
+    <td class="tg-on52">Dokumentprofiler</td>
+    <td class="tg-on52">Document profiles used across document-based standards.</td>
+    <td class="tg-on52"></td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p><br /><br /></p>
+
+<h2 id="2-implementing-a-medcom-fhir-standard">2 Implementing a MedCom FHIR standard</h2>
+<p>When implementing a MedCom FHIR standard, it is fundamental to understand in which context the standard should be used to ensure that the implementation fulfills the business requirements. Therefore, it is important to understand the standard documentation for the given standard. 
+Furthermore, it is essential to understand the governance, as it defines the process for how information is packaged and sent.
+<br /></p>
+<p>&nbsp;</p>
+
+<h3 id="21-standard-documentation">2.1 Standard documentation</h3>
+<p>The purpose of the standard documentation is to describe the context in which a standard should be used and which requirements the standard should fulfill. Standard documentation is only provided for Medcom’s FHIR standards and thus not for the generic Core or, Document or Messaging Profiles. The content of the standard documentation can vary between the standards. It may be useful to note that the terms <em>standards</em> and <em>profiles</em> are often used interchangeably, at least in the context of a MedCom FHIR Message and a MedCom FHIR Document.</p>
+
+<!-- An implementation guide, use cases, clinical guidelines for application and testprotocols will be available for all standards -->
+
+<!-- .Furthermore, some additional documents might be available to support implementation, such as a mapping document.  -->
+<p>The standard documentation can consist of:</p>
+<ul>
+  <li><strong>Implementation Guide</strong>: the technical specifications of the standard.</li>
+  <li><strong>Clinical guidelines for application</strong>: the clinical consideration behind the modernisation.</li>
+  <li><strong>Use cases</strong>: the intended use of the standard.</li>
+  <li><strong>Testprotocol</strong>: used during test and certification to document that the vendor implementation fulfills the standard.</li>
+  <li><strong>Mapping document</strong>: the mapping from the previous OIOXML standard to FHIR.</li>
+</ul>
+<p>&nbsp;</p>
+
+<h3 id="22-general-goverance-for-medcom-fhir-standards">2.2 General goverance for MedCom FHIR standards</h3>
+<p>The general governance is important to understand before implementing a MedCom FHIR standard, as it describes the general governance for both MedCom FHIR document and messaging standards. Governance for the individual standard types can be found below.
+<a href="assets/documents/GeneralGovernanceFHIRStandards.html">Click here to get more information about the general governance for MedCom FHIR standards.</a></p>
+<p>&nbsp;</p>
+
+<h3 id="23-governance-for-medcom-hl7-fhir-messaging">2.3 Governance for MedCom HL7 FHIR Messaging</h3>
+<p>The messaging governance is important to understand before implementing a MedCom FHIR messaging standard, as it describes the Danish profiling of the FHIR messaging framework and the network layer, which is the VANS network at present. Since the existing VANS network is used to deliver messages, messages must be sent in a VANSenvelope unless otherwise specified. <br />
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#network-layer" target="_blank"> Click here to get more information about messaging governance.</a></p>
+<p>&nbsp;</p>
+
+<h2 id="3-test-and-certification">3 Test and certification</h2>
+<p>Before using the implemented standard in a production environment to exchange patient data, it must be tested and certified by MedCom to ensure it fulfills the standard and business requirements. In addition to the usual <a href="https://medcom.dk/standarder/test-og-certificering/" target="_blank">MedCom test setup</a> with a self test and live test, <a href="https://test.itb.medcom.dk/" target="_blank">Interoperability Test Bed (ITB)</a> is used as a tool to validate FHIR messages and documents sent in different use cases.</p>
+
+<p>ITB is an infrastructure that allows for automated tests. For each FHIR standard MedCom will develope test scripts, that will be available in the ITB. These test scripts can be used both during implementation/development and as a part of the test and certification. <br />
+<a href="assets/documents/ITBGettingStarted.html">Click here to get started with ITB</a></p>
+<p>&nbsp;</p>
+
+<h3 id="31-test-of-fhir-messages-and-documents">3.1 Test of FHIR Messages and Documents</h3>
+<p>Since MedCom’s FHIR messages are sent over the VANS network, vendors implementing messaging standards must to be able to include the message in a VANSenvelope before sending the message.<br />
+Vendors implementing MedCom’s FHIR document standards must be able to share documents in the relevant infrastructure, typically in the Danish national Document Sharing infrastructure (DDS).<br />
+Vendors should expect to demonstrate this as a part of test and certification.</p>
+
+<h2 id="4-change-management-and-versioning">4 Change management and versioning</h2>
+
+<h3 id="41-versioning-of-medcom-fhir-standards">4.1 Versioning of Medcom FHIR standards</h3>
+<p>MedComs FHIR standards follow the <a href="https://semver.org/" target="_blank">semantic versioning, version 2.0</a>, which is adjusted to the workflow in MedCom. Some documents, such as use cases or test protocols, will have an individual version and a release note, to keep track of the changes in the document. The IG will have one version that covers all the included artefacts. Versioning of the clinical guidelines, use cases, test material, and more will follow the major and minor version of the technical specifications in the IG, but may have a patch version that is different from the IG’s patch-version.</p>
+
+<p>Semantic versioning includes three numbers, which are separated by a dot, e.g. 2.1.4. The numbers are called <i>major.minor.patch</i>,which represent different degrees of changes:</p>
+<ul>
+  <li>MAJOR version changes when you make incompatible API changes</li>
+  <li>MINOR version changed when you add functionality in a backwards compatible manner</li>
+  <li>PATCH version changed when you make backwards compatible bug fixes</li>
+</ul>
+
+<p>The major and minor versions are  recorded  in  <a href="https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/om-referencearkitektur-og-standarder/udvalg" target="_blank">Det Rådgivende Udvalg for Standarder og Arkitekturer (RUSA)</a>.
+RUSA is a Danish advisory committee for standards and architecture. RUSA is working to ensure coherence and interoperability in digital solutions in the healthcare field. 
+If a document or an IG has an extra number eg. 2.1.4-a.1 it is a prerelease and therefore not ready for implementation. In this Standard Operating Procedure (SOP) 4.1 you can read more about the use of semantic versioning in MedCom and what it means for changes in the FHIR standards. 
+<a href="https://svn.medcom.dk/svn/qms/Offentlig/SOPer/" target="_blank">Click here to read SOP-4.1.</a></p>
+<p>&nbsp;</p>
+
+<h3 id="42-governance-for-medcom-fhir-terminology">4.2 Governance for Medcom FHIR Terminology</h3>
+<p>Governance of MedCom FHIR Terminology covers change management and versioning of the Terminology IG and corresponding affected standards. It specificlally adresses Codesystems, Valuesets and ConceptMaps, which are published through the MedCom FHIR Terminology IG.
+<a href="assets/documents/GovernanceTerminology.html">Click here to get more information about the governance for MedCom FHIR Terminology</a></p>
+<p>&nbsp;</p>
+
+<h3 id="43-change-requests-and-improvements">4.3 Change requests and improvements</h3>
+<p>Stakeholders and vendors are alway welcome to submit requests for changes or improvements to the IG or other documentation.</p>
+<ul>
+  <li>If the request concerns the IG, it is possible to:
+    <ol>
+      <li>submit an issue to the relevant <a href="https://github.com/medcomdk" target="_blank">MedCom GitHub repository</a></li>
+      <li>write an email to <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> describing the request</li>
+    </ol>
+  </li>
+  <li>If the request concerns other documentation, please write an email to <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a>. 
+<br />
+Based on an analysis of the severity of the request, MedCom decides if the changes should be implemented and thus change the version of the artefact or IG to reflect the changes.</li>
+</ul>
+<p>&nbsp;</p>
+
+<h2 id="Want-to-stay-updated">5 Want to stay updated?</h2>
+<p>It is possible to be notified about the latest changes in the standard documentation.
+Here is what to do:</p>
+<ol>
+  <li>Go to the <a href="https://github.com/medcomdk" target="_blank">MedCom GitHub repository</a></li>
+  <li>Choose the repository that you want to receive information about</li>
+  <li>Choose the “watch” button in the right upper corner.<br />
+<br /></li>
+</ol>
+
+<blockquote>
+  <p>Please notice that you must have a GitHub account to be able to “watch” the repository. If you don’t have a GitHub account, you can create one at <a href="https://github.com/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Corg-login%3E&amp;source=header"> GitHub</a></p>
+</blockquote>
+
+<h2 id="New-to-fhir">6 New to FHIR?</h2>
+<p>This section aims to give a brief introduction to MedCom’s FHIR universe. The introduction is aimed at stakeholders with no or limited knowledge about FHIR. The section will take you through the most commonly used expressions used throughout the FHIR pages. Additionally, it introduces a step-by-step guide which guides you through an IG and can be used as a starting point to understand an IG and its structure. Furthermore some of the frequently asked questions are addressed. If more questions appear you are more than welcome to contact MedCom. You can find contact information at the bottom of the page. Lastly, the introduction includes links to HL7 FHIR pages describing, in more detail, what FHIR is and how it can be used. Here, you can also find, previous webinars held by MedCom. <br />
+<a href="assets/documents/NewToFHIR.html">Click here to get a short introduction to FHIR and how to read an Implementation Guide.</a></p>
+<p>&nbsp;</p>
+
+<h2 id="7-frequently-asked-questions">7 Frequently asked questions</h2>
+<p>In this section you will find descriptions that addresses some often asked questions about MedCom’s FHIR universe.<br />
+<a href="assets/documents/FAQ.html">Click here to read frequently asked questions</a></p>
+
+
+
+  </main>
+  <footer>
+    <h2 id="About">About</h2>
+    <h3>Support or contact</h3>
+    <p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this page. For questions, contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or visit <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">MedCom's stream on Zulip</a>.</p>
+    <p>Documentation imported from MedComLandingPage version 2.0.6. <a href="https://github.com/medcomdk/MedComLandingPage/releases">Original release notes</a>.</p>
+    <p><small>FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this implementation guide by HL7, nor affirmation that this content is conformant to the various applicable standards.</small></p>
+    <a href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+  </footer>
+</body>
+</html>

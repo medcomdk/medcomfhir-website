@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Governance for FHIR Validation Using MedCom FHIR Standards | MedCom FHIR</title>
+  <link rel="stylesheet" href="../../assets/css/documentation.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a href="../../index.html" aria-label="MedCom FHIR home"><img class="logo" src="../../assets/images/medcom+fhir-logo.png" alt="MedCom FHIR"></a>
+    <p>MedCom standards based on HL7 FHIR® R4</p>
+    <nav aria-label="Main navigation">
+      <a href="../../index.html">Documentation</a>
+      <a href="../../ig/index.html">Implementation guides</a>
+      <a href="../../assets/documents/NewToFHIR.html">New to FHIR?</a>
+      <a href="../../assets/documents/FAQ.html">FAQ</a>
+      <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#network-layer">Messaging governance</a>
+    </nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+<p><a href="../../index.html">Return</a></p>
+
+<h1 id="governance-for-fhir-validation-using-medcom-fhir-standards">Governance for FHIR Validation Using MedCom FHIR Standards</h1>
+
+<p><strong>Table of contents</strong></p>
+<ul>
+  <li><a href="#governance-for-fhir-validation-using-medcom-fhir-standards">Governance for FHIR Validation Using MedCom FHIR Standards</a>
+    <ul>
+      <li><a href="#1-introduction">1 Introduction</a></li>
+      <li><a href="#2-validation-in-vendor-systems">2 Validation in Vendor Systems</a>
+        <ul>
+          <li><a href="#21-fhir-messaging---validation-governance">2.1 FHIR Messaging - Validation Governance</a>
+            <ul>
+              <li><a href="#211-sender-side-validation">2.1.1 Sender-side validation</a></li>
+              <li><a href="#212-receiver-side-validation">2.1.2 Receiver-side validation</a></li>
+            </ul>
+          </li>
+          <li><a href="#22-fhir-documents---validation-governance">2.2 FHIR Documents - Validation Governance</a>
+            <ul>
+              <li><a href="#221-document-source-validation">2.2.1 Document source validation</a></li>
+              <li><a href="#222-document-consumer-validation">2.2.2 Document consumer validation</a></li>
+              <li><a href="#223-transition-to-future-fhir-based-infrastructure">2.2.3 Transition to future FHIR-based infrastructure</a></li>
+              <li><a href="#224-more-information">2.2.4 More information</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#3-validation-in-medcom-fhir-test-validation-tool">3 Validation in MedCom FHIR test validation tool</a>
+        <ul>
+          <li><a href="#extras">Extras</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Note:</strong></p>
+
+<p>1) For sharing MedCom FHIR messages via the messaging infrastructure, this governance is mandatory.</p>
+
+<p>2) For sharing MedCom FHIR documents via DDS (the National Document Sharing Service), this governance is currently advisory, as both the governance framework and infrastructure are still being developed and adapted to FHIR. MedCom strongly recommends early implementation, as FHIR’s built-in tools improve document quality and will support readiness when this governance becomes mandatory.</p>
+
+<h2 id="1-introduction">1 Introduction</h2>
+
+<p>To ensure interoperability and robustness in FHIR-based exchanges within the Danish healthcare domain, MedCom defines the following governance for validation. The governance ensures that exchanged FHIR content is syntactically valid, semantically conformant, and fully compliant with the relevant profiles.</p>
+
+<p>Notice that the governance principles for MedCom FHIR Messaging differ from those for MedCom FHIR Documents, and vendors <strong>SHALL</strong> ensure that the appropriate rules are applied depending on the communication method.
+You can read more about FHIR validation in general on HL7 FHIR’s official web page: <a href="https://hl7.org/fhir/R4/validation.html">Validating Resources</a>.</p>
+
+<h2 id="2-validation-in-vendor-systems">2 Validation in Vendor Systems</h2>
+
+<p>Vendors <strong>SHALL</strong> implement FHIR validation as part of their own solutions and apply it in production environments to ensure continuous conformance with MedCom’s FHIR standards.</p>
+
+<p>Vendors <strong>SHALL</strong> use a FHIR validator that is based on an officially maintained HL7 FHIR implementation. The selected validator <strong>SHALL</strong> be capable of validating resources against all required Implementation Guides, including profiles, extensions, and terminology bindings. MedCom does not recommend a specific solution.</p>
+
+<p>The list below shows examples of FHIR validators commonly used in the international community. The list is provided for guidance only, to help vendors identify tools suitable for their own technical environment. MedCom has not tested these validators and cannot guarantee their behaviour. MedCom encourages vendors to contact FHIR@medcom.dk with comments or suggestions regarding the list.</p>
+
+<p>Notice that the validation behaviour may show minor variations between different validator implementations and programming languages - for example between C# and Java. In case of disagreement about validation results, MedCom <strong>SHALL</strong> be contacted via email (FHIR@medcom.dk) to clarify.</p>
+
+<p>Vendors <strong>SHALL</strong> maintain logs for troubleshooting.</p>
+
+<p><strong>Examples overview of Potential FHIR Validator Options</strong></p>
+
+<ul>
+  <li><a href="https://www.nuget.org/packages/Firely.Fhir.Validation.R4">Firely</a></li>
+  <li>For .NET <a href="https://www.nuget.org/packages/Firely.Fhir.Validation.R4">Firely</a> with docs <a href="https://docs.fire.ly/projects/Firely-NET-SDK/en/latest/validation/profile-validation.html">here</a> and a MedCom example <a href="https://github.com/medcomdk/ValidationCodeExamples/tree/main">here</a></li>
+  <li><a href="https://confluence.hl7.org/spaces/FHIR/pages/35718580/Using+the+FHIR+Validator">HL7 International – FHIR Validator</a>. This can be setup as an HTTP service.</li>
+  <li><a href="https://hapifhir.io/hapi-fhir/docs/validation/instance_validator.html">HAPI FHIR – Instance Validator</a></li>
+  <li><a href="https://smilecdr.com/docs/smileutil/validate.html">SMILE Digital Health</a></li>
+  <li><a href="https://linuxforhealth.github.io/FHIR/guides/FHIRValidationGuide/">LinuxForHealth</a></li>
+  <li><a href="https://www.health-samurai.io/docs/aidbox/modules/profiling-and-validation/fhir-schema-validator">AidBox – FHIR Schema Validator</a></li>
+</ul>
+
+<h3 id="21-fhir-messaging---validation-governance">2.1 FHIR Messaging - Validation Governance</h3>
+
+<p>This governance applies specifically to MedCom FHIR Messaging and aligns with MedCom’s general principles for <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/020_Governance-for-Reliable-Messaging-in-general.html">Reliable Messaging</a>.</p>
+
+<h4 id="211-sender-side-validation">2.1.1 Sender-side validation</h4>
+
+<ul>
+  <li>The sender <strong>SHALL</strong> provide valid outgoing FHIR messages according to the relevant FHIR Implementation Guide(s) (IG) before transmission. This includes Acknowledgements.</li>
+  <li>Messages with validation errors <strong>SHALL NOT</strong> be sent unless explicitly approved by the responsible authority within the sending organization.</li>
+</ul>
+
+<h4 id="212-receiver-side-validation">2.1.2 Receiver-side validation</h4>
+
+<ul>
+  <li>The receiver <strong>SHALL</strong> ensure the validity of the received incoming messages according to the relevant FHIR Implementation Guide(s) (IG) before further processing.</li>
+  <li>Receivers <strong>SHALL</strong> accept non-critical warnings but <strong>SHALL</strong> reject messages that violate mandatory constraints and rules.</li>
+  <li>The sender <strong>SHALL</strong> ensure the validity of the received incoming acknowledgements and ensure that they correctly reference the original message. If an Acknowledgement is not valid, the receiver <strong>SHALL</strong> contact the sending system through alternative communication channels to inform them that their acknowledgement messages are not conformant.</li>
+</ul>
+
+<h3 id="22-fhir-documents---validation-governance">2.2 FHIR Documents - Validation Governance</h3>
+
+<p>This governance applies to MedCom FHIR Documents exchanged through the current national document-sharing infrastructure, which is based on IHE XDS.
+The existing infrastructure does not perform FHIR validation today. Until the infrastructure is updated to support FHIR-native operations in the future, vendors <strong>SHALL</strong> ensure that all FHIR documents are valid.</p>
+
+<h4 id="221-document-source-validation">2.2.1 Document source validation</h4>
+
+<ul>
+  <li>The document source SHALL provide valid FHIR documents according to the relevant FHIR Implementation Guide(s) (IG) to the national infrastructure.</li>
+  <li>Documents that are not valid <strong>SHALL NOT</strong> be submitted.
+    <ul>
+      <li>In cases where the document source is unable to produce a conformant FHIR document, the document source <strong>SHALL</strong> prevent transmission, <strong>SHALL</strong> log the validation failure, <strong>SHALL</strong> perform internal escalation and troubleshooting, and can seek guidance from MedCom if the issue cannot be resolved locally.</li>
+      <li>On-demand documents: If the document source is unable to produce a conformant document, the document source <strong>SHALL</strong> return an error response. In the current IHE XDS-based infrastructure, the document source <strong>SHALL</strong> return an IHE-compliant error response structured in accordance with ITI-43 Retrieve Document Set (IHE ITI Technical Framework, Volume 3).</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="222-document-consumer-validation">2.2.2 Document consumer validation</h4>
+
+<ul>
+  <li>The document consumer <strong>SHALL</strong> ensure the validity of the received document according to the relevant FHIR Implementation Guide(s) (IG) prior to presenting it to the user.</li>
+  <li>The document consumer <strong>SHOULD</strong>, as far as possible, display documents that contain validation errors. In such cases, the document consumer <strong>SHALL</strong> present a disclaimer indicating that the document contains error(s). The document consumer <strong>MAY</strong> present a clear, user-friendly explanation of the document’s contained error(s) understandable to non-technical users.</li>
+  <li>If the document cannot be processed, the document consumer <strong>MUST</strong> provide an error message to the user. The document consumer <strong>MAY</strong> still display the narrative content to ensure that essential clinical information remains accessible to the user if possible.</li>
+  <li>If identifiable, the relevant document source organization <strong>SHALL</strong> be notified, and MedCom <strong>MAY</strong> be notified.</li>
+</ul>
+
+<h4 id="223-transition-to-future-fhir-based-infrastructure">2.2.3 Transition to future FHIR-based infrastructure</h4>
+<p>The national infrastructure is expected to transition to a more FHIR-based architecture in the future. Work on this architecture is ongoing, and the specific design— including whether the infrastructure will perform central validation of metadata and document content, and how validation responsibilities will be shared between participants—has not yet been decided.</p>
+
+<p>Until a future governance model is formally established, document source and document consumer validation remains required.</p>
+
+<p>Regardless of the final architectural decisions, experiences from international FHIR implementations show that vendors will continue to need local validation capabilities for development, testing, debugging, and quality assurance. For this reason, implementing validation now is not a redundant investment, even in a scenario where future infrastructure-level validation is introduced.</p>
+
+<h4 id="224-more-information">2.2.4 More information</h4>
+<p><a href="https://sundhedsdatastyrelsen.dk/digitale-loesninger/referencearkitektur-og-standarder/domaeneregler-patientindeks">Domæneregler for patientindeks for dokumentdeling</a></p>
+
+<h2 id="3-validation-in-medcom-fhir-test-validation-tool">3 Validation in MedCom FHIR test validation tool</h2>
+
+<p><strong>NB: The MedCom FHIR test server has been replaced.</strong> You can use the validator at <a href="https://test.itb.medcom.dk/">itb.medcom.dk</a> instead.</p>
+
+<p><strong>How to use <a href="https://validator.fhir.medcom.dk/">MedComs FHIR validator</a></strong></p>
+
+<ol>
+  <li>Click the button “try out our demos”</li>
+  <li>Click “My conformance statements” in the left side navigation menu</li>
+  <li>Navigate to the standard you want to validate</li>
+  <li>Click on the play button</li>
+  <li>Click on “Start” in the upper right corner</li>
+  <li>Paste your FHIR Bundle into the popup dialog</li>
+  <li>Click on the Validate step to see errors/warnings/information messages</li>
+</ol>
+
+<h3 id="extras">Extras</h3>
+<p>It is also possible to validate your FHIR resources yourself. More information can be found <a href="https://confluence.hl7.org/spaces/FHIR/pages/35718580/Using+the+FHIR+Validator">here</a>.</p>
+
+  </main>
+  <footer>
+    <h2 id="About">About</h2>
+    <h3>Support or contact</h3>
+    <p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this page. For questions, contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or visit <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">MedCom's stream on Zulip</a>.</p>
+    <p>Documentation imported from MedComLandingPage version 2.0.6. <a href="https://github.com/medcomdk/MedComLandingPage/releases">Original release notes</a>.</p>
+    <p><small>FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this implementation guide by HL7, nor affirmation that this content is conformant to the various applicable standards.</small></p>
+    <a href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+  </footer>
+</body>
+</html>

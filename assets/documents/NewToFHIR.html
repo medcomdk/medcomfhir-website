@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New to FHIR? | MedCom FHIR</title>
+  <link rel="stylesheet" href="../../assets/css/documentation.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a href="../../index.html" aria-label="MedCom FHIR home"><img class="logo" src="../../assets/images/medcom+fhir-logo.png" alt="MedCom FHIR"></a>
+    <p>MedCom standards based on HL7 FHIR® R4</p>
+    <nav aria-label="Main navigation">
+      <a href="../../index.html">Documentation</a>
+      <a href="../../ig/index.html">Implementation guides</a>
+      <a href="../../assets/documents/NewToFHIR.html" aria-current="page">New to FHIR?</a>
+      <a href="../../assets/documents/FAQ.html">FAQ</a>
+      <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#network-layer">Messaging governance</a>
+    </nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+<p><a href="../../index.html">Return</a></p>
+
+<h1 id="new-to-fhir">New to FHIR?</h1>
+
+<p><strong>Table of contents</strong></p>
+<ul>
+  <li><a href="#1-fhir-glossary">1 FHIR glossary</a></li>
+  <li><a href="#2-how-to-read-a-medcom-implementation-guide">2 How to read a MedCom Implementation Guide</a></li>
+  <li><a href="#3-more-information">3 More information</a>
+    <ul>
+      <li><a href="#31-webinars">3.1 Webinars</a></li>
+      <li><a href="#32-hl7-fhir-documentation">3.2 HL7 FHIR documentation</a>
+<!-- - [5 Release Notes](#5-release-notes) --></li>
+    </ul>
+  </li>
+</ul>
+
+<p>The purpose of this section is to give an introduction to MedCom’s FHIR standards to stakeholders with no or limited knowledge about FHIR. On this page, you will find a brief introduction to the most frequently used terms and guidance to more information about FHIR and MedComs FHIR standards.</p>
+
+<h2 id="1-fhir-glossary">1 FHIR Glossary</h2>
+<p><a href="https://www.hl7.org/fhir/" target="_blank">Fast Healthcare Interoperability Resources (FHIR®©)</a> is developed by the international organization Health Level 7 (HL7) and is an open-source standard developed to exchange healthcare-related information. FHIR defines several resources, often referred to as ‘building blocks’, each describing a delimited area within healthcare, e.g. a Patient or an Encounter. These resources are generic and can therefore be used across the world. However, when using the resources in a specific context, such as communication between Danish healthcare parties, the resources need to be profiled to accommodate the use. The profiling could be to require the last name of a Patient. In some cases, it is necessary to extend the generic resources to fit the context, e.g. to add a civil registration number (Danish: CPR-nummer) as a patient identifier.</p>
+
+<p>When creating a MedCom FHIR standard, multiple profiles are assembled to include the information necessary to support the business requirements. Under the auspices of MedCom, these profiles will most often come from multiple Implementation Guides (IG). This decision is further addressed in  section “<a href="FAQ.html">Why are there Multiple Implementation Guides?</a>” that can be founded in the Frequently asked questions page.</p>
+
+<p>The first wave of MedCom’s modernisation only includes FHIR messages, which means that there must always be a sender and a receiver. A relevant exchange paradigm could be to upload data as services or as documents where multiple receivers have access to data or documents. If another exchange paradigm is to be used, it is possible to reuse the profiles from the Core IG. This is an example of FHIR’s reusability across standards and exchange paradigms. The optimal exchange paradigm for a standard will be considered when modernizing the next wave of MedCom standards.</p>
+
+<p>In the <a href="#Tab1">Table 1</a> you will find the most common terms and associated descriptions and examples. These terms all describe a fundamental feature in FHIR, and they make the foundation for understanding FHIR, and why they are presented initially.</p>
+
+<blockquote>
+  <p>Note: the <a href="#Tab1">Table 1</a> uses FHIR-paths to describe exactly which element is referred to e.g. Patient.name refers to the nameelement in the Patient resource.</p>
+</blockquote>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:65%;width:75%;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-az2b{background-color:#FFF;color:#333333;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-316y{color:#2c415c;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-t3tv{color:#333333;text-align:left;vertical-align:middle}
+.tg .tg-cxm4{color:#333333;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-4m1j{color:#333333;text-align:left;text-decoration:underline;vertical-align:top}
+</style>
+
+<div style="overflow-x:auto;">
+<table class="tg" id="Tab1">
+<caption style="color:#2c415c;font-weight:bold">Table 1: Most used terms in MedCom's FHIR universe</caption>
+<thead>
+  <tr>
+    <th class="tg-316y">Term</th>
+    <th class="tg-316y">Description</th>
+    <th class="tg-316y">Example</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-1wig"><span style="font-weight:bold">Implementation Guide (IG)</span></td>
+    <td class="tg-t3tv">The technical specification of a MedCom FHIR standard. A set of rules and associated documentation describing, how FHIR profiles should be implemented to accommodate a given standard and its requirements.</td>
+    <td class="tg-t3tv"> <a href="http://medcomfhir.dk/ig/acknowledgement/" target="_blank">Acknowledgement IG </a>, 
+    <a href="http://medcomfhir.dk/ig/hospitalnotification/" target="_blank">HospitalNotification IG </a>, 
+    <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication/" target="_blank">CareCommunication IG </a>, 
+    <a href="http://medcomfhir.dk/ig/terminology/" target="_blank">Terminology IG </a>, 
+    <a href="http://medcomfhir.dk/ig/core/" target="_blank">Core IG target="_blank"</a>,
+    <a href="http://medcomfhir.dk/ig/messaging/" target="_blank">Messagaging IG </a> 
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Standard</span></td>
+    <td class="tg-t3tv">FHIR standard define how health and care information can be exchanged between providers and their system regardles of how the information is stored in those systems. </td>
+    <td class="tg-t3tv">MedCom FHIR standards are HospitalNotification, CareCommunication</td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Element</span></td>
+    <td class="tg-t3tv">A resource consists of multiple elements each describing a specific part of the content.</td>
+    <td class="tg-t3tv">Patient.name or Patient.address.</td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Cardinality</span></td>
+    <td class="tg-t3tv">Each element is described with a minimum and maximum cardinality, determining how many times an element may or shall appear:<br />
+    <ul>
+      <li> If the minimum cardinality is 0, the element may appear</li>
+      <li> If the minimum cardinality is 1, or more the element shall at least appear the number of times stated.</li>
+      <li> If the maximum cardinality is 0, the element must not appear</li>  
+      <li> If the maximum cardinality is 1, the element may not appear more than once</li>
+      <li> If the maximum cardinality is *, the element may appear several times  </li>    
+    </ul>
+    </td>
+    <td class="tg-t3tv">In the generic resource <i>Patient.name</i> has the cardinality 0..*, meaning a patient may have zero or more names.<br />In the generic resource <i>Encounter.status</i> has the cardinality 1..1, meaning that a status always shall appear, and in may only appear once.</td>
+  </tr>
+   <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Resources</span></td>
+    <td class="tg-t3tv">FHIR consists of generic resources, each describing a clinically delimited area. Resources are 'building blocks' defined by HL7.</td>
+    <td class="tg-t3tv">A Patient resource, an Allergy resource, an Observation resource, an Encounter resource ect.</td>
+  </tr>
+   <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Profile</span></td>
+    <td class="tg-t3tv">FHIR profile is a set of specified constrains and/or extensions on the base resource</td>
+    <td class="tg-t3tv"><a href="https://medcomfhir.dk/ig/messaging/profiles.html">MedComMessaging profiles </a>, <br /> <a href="https://medcomfhir.dk/ig/core/profiles.html" target="_blank">MedComCore profiles</a> </td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Profiling</span></td>
+    <td class="tg-t3tv">Profiling allows us to fit a resource to a given context, by defining constrains and/or by define extensions. It is widely recognised that when exchanging data it is impossible to make a one size fits all within the healthcare worldwide.<br />To accommodate this condition, the resources are made generic with the possibility of being profiled to fit a specific context, such as exchanging a CareCommunication message between Danish healthcare parties.</td>
+    <td class="tg-t3tv">Profiling could be to require a lastname and an identifier of a patient or citizen when exchanging information about the person.</td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Extensions</span></td>
+    <td class="tg-t3tv">To extend a resource to include additional information than defined by HL7. </td>
+    <td class="tg-t3tv"> Extending the MedCom MessageHeader with a reportOfAdmissionFlag.</td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">CodeSystem</span></td>
+    <td class="tg-t3tv">A collection of codes, which can be predetermined by HL7, from a international terminology or defined by the developer of the IG.</td>
+    <td class="tg-t3tv">Predetermined by HL7 e.g. <a href="http://hl7.org/fhir/valueset-administrative-gender.html" target="_blank" rel="noopener noreferrer"><span style="text-decoration:none">gender</span></a>, from an international terminology e.g. <a href="https://browser.ihtsdotools.org/?" target="_blank" rel="noopener noreferrer"><span style="text-decoration:none">SNOMED CT</span></a>, or defined by the developer of the IG e.g. <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-careCommunication-categoryCodes.html" target="_blank" rel="noopener noreferrer"><span style="text-decoration:none">categories </span></a>categories in a CareCommunication message.</td>
+  </tr>
+  <tr>
+    <td class="tg-az2b"><span style="font-weight:bold;background-color:#FFF">ValueSet</span></td>
+    <td class="tg-t3tv">A collection of codes from one or more CodeSystems. ValueSets can either include all codes from a CodeSystem or only some codes.</td>
+    <td class="tg-tysj"><a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-messaging-messageTypes.html" target="_blank" rel="noopener noreferrer">MedComMessagingMessageTypes</a>  is a ValueSet that includes all codes from the <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-eventCodes.html" target="_blank" rel="noopener noreferrer">MedComMessagingEvents</a> CodeSystem. The ValueSet includes the codes for MedComs FHIR standards</td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">MustSupport</span></td>
+    <td class="tg-t3tv">Indicates which information which shall be included in a MedCom standard if available in the sender systemer and which information the receiver system shall be able to handle. MustSupport is defined during profiling of the resource.</td>
+    <td class="tg-t3tv">The elements Patient.identifier, Patient.name and Patient.address does all have the flag MustSupport in the <a href="https://medcomfhir.dk/ig/core/StructureDefinition-medcom-core-patient.html" target="_blank"> MedComCorePatient</a> profile.</td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Modifier</span></td>
+    <td class="tg-t3tv">An element which modifies or changes the understanding of the resource. '!?' indicates in the IG that the element is a modifier element, which is often defined in the generic resource or in developed extensions</td>
+    <td class="tg-t3tv">Patient.deceased is a modifier element since it modifies the way the content of the profile should be understood, if the patient is deceased.</td>
+  </tr>
+  <tr>
+    <td class="tg-cxm4"><span style="font-weight:bold">Narrative</span></td>
+    <td class="tg-t3tv"> A textual summary of the information   in a message which can be   used to display information if the structured data cannot be displayed. All   information in a message shall be included in the summary. </td>
+    <td class="tg-t3tv">All content from a message, including the patients name or CPR-number and the written correspondence in a CareCommunication message.</td>
+  </tr>
+</tbody>
+</table>
+</div>
+<p><br />
+<br /></p>
+
+<h2 id="2-how-to-read-a-medcom-implementation-guide">2 How to read a MedCom Implementation Guide</h2>
+<p>If you are interested in understanding the basic content and the composition of an IG, you can follow this <a href="FHIRImplementationGuide.html">step-by-step guide</a>.</p>
+
+<h2 id="3-more-information">3 More information</h2>
+
+<h3 id="31-webinars">3.1 Webinars</h3>
+<p>In 2022 MedCom has held  two webinars concerning the modernization of MedCom standards. Both webinars are free and available in Danish:</p>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=8doBKskz3J8" target="_blank">FHIR-introductionswebinar (17. may 2022)</a></li>
+  <li><a href="https://www.youtube.com/watch?v=bfzx7U2Suug" target="_blank">FHIR demo-webinar with MedCom, Mjølner and Trifork (10 . february 2022)</a></li>
+</ul>
+<p>&nbsp;</p>
+
+<h3 id="32-hl7-fhir-documentation">3.2 HL7 FHIR Documentation</h3>
+
+<p>All FHIR documentation can be found at <a href="https://www.hl7.org/fhir/" target="_blank">www.hl7.org/fhir/</a>. Here you will find detailed descriptions of basic principles, presentations to all resources and much more.</p>
+
+<!-- ## 5 Release Notes
+
+[The latest changes of this page can be found here.](ReleaseNotesNewToFHIR.html) -->
+
+  </main>
+  <footer>
+    <h2 id="About">About</h2>
+    <h3>Support or contact</h3>
+    <p><a href="https://www.medcom.dk/">MedCom</a> is responsible for this page. For questions, contact <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a> or visit <a href="https://chat.fhir.org/#narrow/stream/315677-denmark.2Fmedcom.2FFHIRimplementationErfaGroup">MedCom's stream on Zulip</a>.</p>
+    <p>Documentation imported from MedComLandingPage version 2.0.6. <a href="https://github.com/medcomdk/MedComLandingPage/releases">Original release notes</a>.</p>
+    <p><small>FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this implementation guide by HL7, nor affirmation that this content is conformant to the various applicable standards.</small></p>
+    <a href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+  </footer>
+</body>
+</html>
