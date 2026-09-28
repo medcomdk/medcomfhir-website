@@ -1,0 +1,35 @@
+/* Keep the release header readable when its two logos no longer fit beside the title. */
+@media (max-width: 767px) {
+  #segment-header > .container {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 12px;
+    padding: 12px 15px;
+  }
+
+  #segment-header > .container::before,
+  #segment-header > .container::after {
+    display: none;
+  }
+
+  #hl7-nav, #family-nav, #hl7-logo, #family-logo {
+    float: none;
+    margin: 0;
+    line-height: normal;
+  }
+
+  #hl7-logo img, #family-logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #ig-status {
+    grid-column: 1 / -1;
+    height: auto;
+    margin-top: 0;
+  }
+
+  #ig-status p {
+    margin-bottom: 0;
+  }
+}

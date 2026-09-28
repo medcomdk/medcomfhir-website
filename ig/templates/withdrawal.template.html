@@ -7,41 +7,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="https://medcom.dk/"/>
 
-  <link href="https://hl7.org/fhir/fhir.css" rel="stylesheet"/>
+  <link href="fhir.css" rel="stylesheet"/>
 
   <!-- Bootstrap core CSS -->
-  <link href="https://hl7.org/fhir/dist-hist/css/bootstrap.css" rel="stylesheet"/>
   <link href="css/bootstrap-fhir.css" rel="stylesheet"/>
 
   <!-- Project extras -->
   <link href="css/project.css" rel="stylesheet"/>
   <link href="css/pygments-manni.css" rel="stylesheet"/>
   <link href="css/hl7-dk.css" rel="stylesheet"/>
-  <link href="css/colors.css" rel="stylesheet"/>
+  <link href="css/withdrawal.css" rel="stylesheet"/>
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png"/>
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png"/>
-  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/icon-fhir-144.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/icon-fhir-114.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/icon-fhir-72.png"/>
+  <link rel="apple-touch-icon-precomposed" href="ico/icon-fhir-57.png"/>
   <link rel="shortcut icon" href="ico/favicon.png"/>
 </head>
 
 <body>
   <div id="segment-header" class="segment">
     <div class="container">
-      <div id="project-nav">
-        <a id="dk-logo" no-external="true" href="http://hl7.dk">
-          <img height="71" alt="HL7 DK" src="images/HL7_Denmark.png"/>
+      <div id="hl7-nav">
+        <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
+          <img height="50" alt="Visit MedComs website" src="images/dark-medcom-logo.png"/>
         </a>
       </div>
       <div id="family-nav">
-        <a id="fhir-logo" no-external="true" href="http://hl7.dk">
-          <img height="50" alt="HL7 Denmark" src="images/fhir-logo.png" style="margin-top: 15px;"/>
+        <a id="family-logo" no-external="true" href="http://hl7.org/fhir">
+          <img height="50" alt="Visit the FHIR website" src="images/fhir-logo-www.png"/>
         </a>
       </div>
       <div id="ig-status">
-        <b id="ig-title">[%title%]</b>
+        <p><span id="ig-title" style="font-size:12pt;font-weight:bold">[%title%]</span>
+          <br/>
+          <span style="display:inline-block;">[%ver%] - Withdrawn
+            <img alt="Denmark flag" src="images/dnk.svg" height="16" title="Denmark"/>
+          </span>
+        </p>
       </div>
     </div>
   </div>
@@ -59,11 +63,20 @@
           <a class="navbar-brand hidden" href="https://hl7.org/fhir/index.html">FHIR</a>
           <div class="nav-collapse collapse navbar-inverse-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="[%history%]">History</a></li>
+              <li><a no-external="true" href="[%history%]">History</a></li>
             </ul>
           </div>
         </div>
       </nav>
+    </div>
+  </div>
+
+  <div id="segment-breadcrumb" class="segment">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a no-external="true" href="[%history%]">History</a></li>
+        <li><b>Withdrawal Notice</b></li>
+      </ul>
     </div>
   </div>
 
@@ -72,7 +85,7 @@
       <div class="row">
         <div class="inner-wrapper">
           <div class="col-12">
-            <h2>Withdrawal Notice: [%id%] ([%title%])</h2>
+            <h2>Withdrawal Notice</h2>
             <p>[%notice%]</p>
             [%desc%]
           </div>
@@ -85,8 +98,13 @@
     <div class="container">
       <div class="inner-wrapper">
         <p>
-          <span id="ig-footer">[%id%] </span> &reg;&copy; <a style="color: #81BEF7" href="https://hl7.org/fhir">FHIR</a> |
-          <a style="color: #81BEF7" rel="license" href="https://hl7.org/fhir/license.html"><img style="border-style: none;" alt="CC0" src="images/cc0.png"/></a>
+          IG &#169; <a style="color: var(--footer-hyperlink-text-color)" href="https://medcom.dk">MedCom</a>.
+          <span id="ig-footer">Package [%id%]#[%ver%].</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="[%history%]">History</a> |
+            <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+          </span>
         </p>
       </div>
     </div>
@@ -98,8 +116,7 @@
 
   <!-- Keep spaces inside script elements to prevent empty-tag serialization. -->
   <script src="js/jquery.js"> </script>
-  <script src="https://hl7.org/fhir/dist-hist/js/bootstrap.min.js"> </script>
+  <script src="js/bootstrap.min.js"> </script>
   <script src="js/respond.min.js"> </script>
-  <script src="js/fhir.js"> </script>
 </body>
 </html>
