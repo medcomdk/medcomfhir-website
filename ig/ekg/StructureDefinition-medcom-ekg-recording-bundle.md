@@ -1,4 +1,4 @@
-# MedComEkgRecordingBundle - DK MedCom EKG v2.0.0
+# MedComEkgRecordingBundle - DK MedCom EKG v2.0.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-bundle | *Version*:2.0.0 |
-| Active as of 2026-06-04 | *Computable Name*:MedComEkgRecordingBundle |
+| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-bundle | *Version*:2.0.1 |
+| Active as of 2026-10-01 | *Computable Name*:MedComEkgRecordingBundle |
 
  
 A profile for the MedCom ConditionList Bundle resource. 
@@ -26,7 +26,7 @@ The `Bundle.timestamp` **MUST** be the time of the assemblement of the Bundle.
 
 * Examples for this Profile: [Bundle/0a74554f-ded3-4bc7-bef1-535699565c5a](Bundle-0a74554f-ded3-4bc7-bef1-535699565c5a.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/medcom.fhir.dk.ekg|current/StructureDefinition/medcom-ekg-recording-bundle)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/medcom.fhir.dk.ekg|current/StructureDefinition/StructureDefinition-medcom-ekg-recording-bundle.json)
 
 ### Formal Views of Profile Content
 
@@ -45,108 +45,90 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
   "resourceType" : "StructureDefinition",
   "id" : "medcom-ekg-recording-bundle",
   "url" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-bundle",
-  "version" : "2.0.0",
+  "version" : "2.0.1",
   "name" : "MedComEkgRecordingBundle",
   "status" : "active",
-  "date" : "2026-06-04T11:20:25+00:00",
+  "date" : "2026-10-01T09:27:07+00:00",
   "publisher" : "MedCom",
-  "contact" : [
+  "contact" : [{
+    "name" : "MedCom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.medcom.dk"
+    },
     {
-      "name" : "MedCom",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://www.medcom.dk"
-        },
-        {
-          "system" : "email",
-          "value" : "fhir@medcom.dk"
-        }
-      ]
-    }
-  ],
+      "system" : "email",
+      "value" : "fhir@medcom.dk"
+    }]
+  }],
   "description" : "A profile for the MedCom ConditionList Bundle resource.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "DK",
-          "display" : "Denmark"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "cda",
-      "uri" : "http://hl7.org/v3/cda",
-      "name" : "CDA (R2)"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "cda",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Bundle",
   "baseDefinition" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-bundle",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Bundle",
-        "path" : "Bundle"
-      },
-      {
-        "id" : "Bundle.entry",
-        "path" : "Bundle.entry",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "type",
-              "path" : "$this.resource"
-            }
-          ],
-          "description" : "Slicing based on the resource type",
-          "rules" : "open"
-        }
-      },
-      {
-        "id" : "Bundle.entry:medcom-ekg-recording-composition",
-        "path" : "Bundle.entry",
-        "sliceName" : "medcom-ekg-recording-composition",
-        "short" : "First entry is a composition",
-        "min" : 1,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.entry:medcom-ekg-recording-composition.resource",
-        "path" : "Bundle.entry.resource",
-        "type" : [
-          {
-            "code" : "Composition",
-            "profile" : [
-              "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition"
-            ]
-          }
-        ]
+    "element" : [{
+      "id" : "Bundle",
+      "path" : "Bundle"
+    },
+    {
+      "id" : "Bundle.entry",
+      "path" : "Bundle.entry",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this.resource"
+        }],
+        "description" : "Slicing based on the resource type",
+        "rules" : "open"
       }
-    ]
+    },
+    {
+      "id" : "Bundle.entry:medcom-ekg-recording-composition",
+      "path" : "Bundle.entry",
+      "sliceName" : "medcom-ekg-recording-composition",
+      "short" : "First entry is a composition",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.entry:medcom-ekg-recording-composition.resource",
+      "path" : "Bundle.entry.resource",
+      "type" : [{
+        "code" : "Composition",
+        "profile" : ["http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-composition"]
+      }]
+    }]
   }
 }
 

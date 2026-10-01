@@ -1,4 +1,4 @@
-# MedComEkgRecordingObservation - DK MedCom EKG v2.0.0
+# MedComEkgRecordingObservation - DK MedCom EKG v2.0.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation | *Version*:2.0.0 |
-| Active as of 2026-06-04 | *Computable Name*:MedComEkgRecordingObservation |
+| *Official URL*:http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation | *Version*:2.0.1 |
+| Active as of 2026-10-01 | *Computable Name*:MedComEkgRecordingObservation |
 
  
 Observation profile intended to be used in MedCom's Ekg Recording standard. 
@@ -62,7 +62,7 @@ This Observation references the `Patient` resource through the `subject` element
 * Refer to this Profile: [MedComEkgRecordingComposition](StructureDefinition-medcom-ekg-recording-composition.md)
 * Examples for this Profile: [Observation/ef810168-ee8c-4f14-9012-6aff6c1d86e7](Observation-ef810168-ee8c-4f14-9012-6aff6c1d86e7.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/medcom.fhir.dk.ekg|current/StructureDefinition/medcom-ekg-recording-observation)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/medcom.fhir.dk.ekg|current/StructureDefinition/StructureDefinition-medcom-ekg-recording-observation.json)
 
 ### Formal Views of Profile Content
 
@@ -81,427 +81,361 @@ Other representations of profile: [CSV](StructureDefinition-medcom-ekg-recording
   "resourceType" : "StructureDefinition",
   "id" : "medcom-ekg-recording-observation",
   "url" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation",
-  "version" : "2.0.0",
+  "version" : "2.0.1",
   "name" : "MedComEkgRecordingObservation",
   "title" : "MedComEkgRecordingObservation",
   "status" : "active",
-  "date" : "2026-06-04T11:20:25+00:00",
+  "date" : "2026-10-01T09:27:07+00:00",
   "publisher" : "MedCom",
-  "contact" : [
+  "contact" : [{
+    "name" : "MedCom",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.medcom.dk"
+    },
     {
-      "name" : "MedCom",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "http://www.medcom.dk"
-        },
-        {
-          "system" : "email",
-          "value" : "fhir@medcom.dk"
-        }
-      ]
-    }
-  ],
+      "system" : "email",
+      "value" : "fhir@medcom.dk"
+    }]
+  }],
   "description" : "Observation profile intended to be used in MedCom's Ekg Recording standard.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "DK",
-          "display" : "Denmark"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DK",
+      "display" : "Denmark"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "workflow",
-      "uri" : "http://hl7.org/fhir/workflow",
-      "name" : "Workflow Pattern"
-    },
-    {
-      "identity" : "sct-concept",
-      "uri" : "http://snomed.info/conceptdomain",
-      "name" : "SNOMED CT Concept Domain Binding"
-    },
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    },
-    {
-      "identity" : "sct-attr",
-      "uri" : "http://snomed.org/attributebinding",
-      "name" : "SNOMED CT Attribute Binding"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Observation",
   "baseDefinition" : "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-observation",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Observation",
-        "path" : "Observation"
-      },
-      {
-        "id" : "Observation.extension",
-        "path" : "Observation.extension",
-        "min" : 1
-      },
-      {
-        "id" : "Observation.extension:valueAttachment",
-        "path" : "Observation.extension",
-        "sliceName" : "valueAttachment",
-        "min" : 1,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.extension:valueAttachment.url",
-        "path" : "Observation.extension.url",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.extension:valueAttachment.value[x]",
-        "path" : "Observation.extension.value[x]",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.extension:valueAttachment.value[x].contentType",
-        "extension" : [
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.extension.value[x].contentType",
-        "short" : "MIME type of the attached EKG recording.",
-        "min" : 1,
-        "fixedCode" : "application/pdf",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.extension:valueAttachment.value[x].data",
-        "path" : "Observation.extension.value[x].data",
-        "short" : "Base64-encoded content of the EKG recording PDF document.",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.extension:valueAttachment.value[x].title",
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean" : true
-          },
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.extension.value[x].title",
-        "min" : 1,
-        "patternString" : "Elektrokardiogram-12-aflednings",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.status",
-        "path" : "Observation.status",
-        "short" : "Status MUST be final.",
-        "patternCode" : "final"
-      },
-      {
-        "id" : "Observation.code.coding",
-        "path" : "Observation.code.coding",
-        "min" : 1
-      },
-      {
-        "id" : "Observation.code.coding:LOINC",
-        "path" : "Observation.code.coding",
-        "sliceName" : "LOINC",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.code.coding:LOINC.system",
-        "extension" : [
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.code.coding.system",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.code.coding:LOINC.code",
-        "extension" : [
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.code.coding.code",
-        "fixedCode" : "11524-6",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.code.coding:LOINC.display",
-        "extension" : [
-          {
-            "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean" : true
-          },
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.code.coding.display",
-        "min" : 1,
-        "fixedString" : "EKG study",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.effective[x]",
-        "path" : "Observation.effective[x]",
-        "slicing" : {
-          "discriminator" : [
-            {
-              "type" : "type",
-              "path" : "$this"
-            }
-          ],
-          "ordered" : false,
-          "rules" : "open"
+    "element" : [{
+      "id" : "Observation",
+      "path" : "Observation"
+    },
+    {
+      "id" : "Observation.extension",
+      "path" : "Observation.extension",
+      "min" : 1
+    },
+    {
+      "id" : "Observation.extension:valueAttachment",
+      "path" : "Observation.extension",
+      "sliceName" : "valueAttachment",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.extension:valueAttachment.url",
+      "path" : "Observation.extension.url",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.extension:valueAttachment.value[x]",
+      "path" : "Observation.extension.value[x]",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.extension:valueAttachment.value[x].contentType",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
         },
-        "short" : "The time or time period of the EKG recording.",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "dateTime"
-          },
-          {
-            "code" : "Period"
-          }
-        ],
-        "mustSupport" : true
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.extension.value[x].contentType",
+      "short" : "MIME type of the attached EKG recording.",
+      "min" : 1,
+      "fixedCode" : "application/pdf",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.extension:valueAttachment.value[x].data",
+      "path" : "Observation.extension.value[x].data",
+      "short" : "Base64-encoded content of the EKG recording PDF document.",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.extension:valueAttachment.value[x].title",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+        "valueBoolean" : true
       },
       {
-        "id" : "Observation.effective[x]:effectiveDateTime",
-        "extension" : [
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.effective[x]",
-        "sliceName" : "effectiveDateTime",
-        "short" : "The time of the EKG recording. Use this if effectivePeriod.start is unknown.",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "dateTime"
-          }
-        ],
-        "constraint" : [
-          {
-            "key" : "medcom-datetime-has-time-offset-zulu",
-            "severity" : "error",
-            "human" : "dateTime must include date, time, and time zone.",
-            "expression" : "$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')",
-            "source" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation"
-          }
-        ],
-        "mustSupport" : true
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.extension.value[x].title",
+      "min" : 1,
+      "patternString" : "Elektrokardiogram-12-aflednings",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.status",
+      "path" : "Observation.status",
+      "short" : "Status MUST be final.",
+      "patternCode" : "final"
+    },
+    {
+      "id" : "Observation.code.coding",
+      "path" : "Observation.code.coding",
+      "min" : 1
+    },
+    {
+      "id" : "Observation.code.coding:LOINC",
+      "path" : "Observation.code.coding",
+      "sliceName" : "LOINC",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:LOINC.system",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.code.coding.system",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:LOINC.code",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.code.coding.code",
+      "fixedCode" : "11524-6",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.code.coding:LOINC.display",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+        "valueBoolean" : true
       },
       {
-        "id" : "Observation.effective[x]:effectivePeriod",
-        "path" : "Observation.effective[x]",
-        "sliceName" : "effectivePeriod",
-        "min" : 0,
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Period"
-          }
-        ],
-        "mustSupport" : true
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.code.coding.display",
+      "min" : 1,
+      "fixedString" : "EKG study",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]",
+      "path" : "Observation.effective[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "short" : "The time or time period of the EKG recording.",
+      "min" : 1,
+      "type" : [{
+        "code" : "dateTime"
       },
       {
-        "id" : "Observation.effective[x]:effectivePeriod.start",
-        "extension" : [
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.effective[x].start",
-        "short" : "The start time of the EKG recording",
-        "min" : 1,
-        "constraint" : [
-          {
-            "key" : "medcom-datetime-has-time-offset-zulu",
-            "severity" : "error",
-            "human" : "dateTime must include date, time, and time zone.",
-            "expression" : "$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')",
-            "source" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation"
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.effective[x]:effectivePeriod.end",
-        "extension" : [
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.effective[x].end",
-        "short" : "The end time of the EKG recording",
-        "constraint" : [
-          {
-            "key" : "medcom-datetime-has-time-offset-zulu",
-            "severity" : "error",
-            "human" : "dateTime must include date, time, and time zone.",
-            "expression" : "$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')",
-            "source" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation"
-          }
-        ],
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.performer",
-        "path" : "Observation.performer",
-        "max" : "1",
-        "type" : [
-          {
-            "code" : "Reference",
-            "targetProfile" : [
-              "http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization"
-            ]
-          }
-        ]
-      },
-      {
-        "id" : "Observation.note",
-        "path" : "Observation.note",
-        "short" : "Free-text note, used to document relevant measurement-related remarks. Line breaks must be represented as escaped newline characters \\n in JSON and as the character reference &#xA; in XML.",
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Observation.note.text",
-        "extension" : [
-          {
-            "extension" : [
-              {
-                "url" : "code",
-                "valueCode" : "SHALL:in-narrative"
-              },
-              {
-                "url" : "actor",
-                "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
-              }
-            ],
-            "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
-          }
-        ],
-        "path" : "Observation.note.text",
-        "maxLength" : 1024,
-        "mustSupport" : true
-      }
-    ]
+        "code" : "Period"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]:effectiveDateTime",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.effective[x]",
+      "sliceName" : "effectiveDateTime",
+      "short" : "The time of the EKG recording. Use this if effectivePeriod.start is unknown.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }],
+      "constraint" : [{
+        "key" : "medcom-datetime-has-time-offset-zulu",
+        "severity" : "error",
+        "human" : "dateTime must include date, time, and time zone.",
+        "expression" : "$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')",
+        "source" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]:effectivePeriod",
+      "path" : "Observation.effective[x]",
+      "sliceName" : "effectivePeriod",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Period"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]:effectivePeriod.start",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.effective[x].start",
+      "short" : "The start time of the EKG recording",
+      "min" : 1,
+      "constraint" : [{
+        "key" : "medcom-datetime-has-time-offset-zulu",
+        "severity" : "error",
+        "human" : "dateTime must include date, time, and time zone.",
+        "expression" : "$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')",
+        "source" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.effective[x]:effectivePeriod.end",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.effective[x].end",
+      "short" : "The end time of the EKG recording",
+      "constraint" : [{
+        "key" : "medcom-datetime-has-time-offset-zulu",
+        "severity" : "error",
+        "human" : "dateTime must include date, time, and time zone.",
+        "expression" : "$this.toString().matches('^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$')",
+        "source" : "http://medcomfhir.dk/ig/ekg/StructureDefinition/medcom-ekg-recording-observation"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.performer",
+      "path" : "Observation.performer",
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://medcomfhir.dk/ig/document/StructureDefinition/medcom-document-organization"]
+      }]
+    },
+    {
+      "id" : "Observation.note",
+      "path" : "Observation.note",
+      "short" : "Free-text note, used to document relevant measurement-related remarks. Line breaks must be represented as escaped newline characters \\n in JSON and as the character reference &#xA; in XML.",
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.note.text",
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCode" : "SHALL:in-narrative"
+        },
+        {
+          "url" : "actor",
+          "valueCanonical" : "http://medcomfhir.dk/ig/ekg/ActorDefinition/ProducerActor"
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/obligation"
+      }],
+      "path" : "Observation.note.text",
+      "maxLength" : 1024,
+      "mustSupport" : true
+    }]
   }
 }
 
