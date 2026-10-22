@@ -3,58 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse MedCom’s FHIR implementation guides: shared profiles, specifications, archived test scripts, and XDS guides.">
   <title>MedCom FHIR implementation guides</title>
-  <style>
-    body { max-width: 60rem; margin: 3rem auto; padding: 0 1.5rem; font: 1rem/1.6 system-ui, sans-serif; color: #243746; background: #fff; }
-    img { max-width: 100%; height: auto; }
-    h1, h2 { line-height: 1.2; }
-    a { color: #005b85; }
-    a:hover { text-decoration-thickness: 2px; }
-    a:focus-visible { outline: 3px solid #005b85; outline-offset: 4px; }
-    li { margin: .5rem 0; }
-    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ccd5db; }
-  </style>
+  <link rel="canonical" href="./">
+  <link rel="stylesheet" href="directory.css">
 </head>
 <body>
-  <header><img src="dark-medcom-logo.png" alt="MedCom"></header>
-  <main>
-    <nav aria-label="Breadcrumb"><a href="../index.html">Home</a></nav>
-    <h1>MedCom FHIR implementation guides</h1>
-    <p>Select a guide to browse its published documentation.</p>
-    <nav aria-label="Implementation guides">
-      <ul>
-        <li><a href="acknowledgement/index.html">Acknowledgement</a></li>
-        <li><a href="acknowledgementtestscript/index.html">Acknowledgement test scripts</a></li>
-        <li><a href="carecommunication/index.html">Care communication</a></li>
-        <li><a href="carecommunicationtestscripts/index.html">Care communication test scripts</a></li>
-        <li><a href="conditionlist/index.html">Condition list</a></li>
-        <li><a href="core/index.html">Core</a></li>
-        <li><a href="document/index.html">Document</a></li>
-        <li><a href="ekg/index.html">EKG</a></li>
-        <li><a href="homecareobservation/index.html">Home care observation</a></li>
-        <li><a href="homecareobservationtestscripts/index.html">Home care observation test scripts</a></li>
-        <li><a href="hospitalnotification/index.html">Hospital notification</a></li>
-        <li><a href="hospitalnotificationtestscripts/index.html">Hospital notification test scripts</a></li>
-        <li><a href="messagedefinitions/index.html">Message definitions</a></li>
-        <li><a href="messaging/index.html">Messaging</a></li>
-        <li><a href="notes/index.html">Notes</a></li>
-        <li><a href="terminology/index.html">Terminology</a></li>
-        <li><a href="xdsdocuments/index.html">XDS documents</a></li>
-        <li><a href="xdsmetadata/index.html">XDS metadata</a></li>
-      </ul>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header page-width">
+    <a class="brand" href="./" aria-label="MedCom implementation guides home"><img src="dark-medcom-logo.png" alt="MedCom" width="774" height="132"></a>
+    <span class="header-label">Implementation guides</span>
+  </header>
+  <main id="main-content" class="page-width" tabindex="-1">
+    <div class="intro">
+      <p class="eyebrow">MedCom · HL7 FHIR® R4</p>
+      <h1>MedCom's FHIR Implementation Guides</h1>
+    </div>
+    <nav class="section-nav" aria-label="Guide categories">
+      <a href="#general">General IGs <span>05</span></a>
+      <a href="#specifications">Specification IGs <span>07</span></a>
+      <a href="#xds">XDS <span>02</span></a>
+      <a href="#old-test-scripts">Old test script IGs <span>04</span></a>
     </nav>
-    <h2>Templates</h2>
-    <p>Publishing files in the templates/ folder:</p>
-    <ul>
-      <li><a href="templates/header.template">header.template</a></li>
-      <li><a href="templates/postamble.template">postamble.template</a></li>
-      <li><a href="templates/preamble.template">preamble.template</a></li>
-      <li><a href="templates/searchform.template.html">searchform.template.html</a></li>
-    </ul>
+
+    <section id="general" aria-labelledby="general-heading">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">01</span>
+        <div><h2 id="general-heading">General IGs</h2><p>The shared foundations used across MedCom’s FHIR standards.</p></div>
+      </div>
+      <ul class="guide-grid">
+        <li><a class="guide-card" href="core/index.html"><h3>Core <span aria-hidden="true">↗</span></h3><p>Common profiles for patients, practitioners, organisations, and other core resources.</p></a></li>
+        <li><a class="guide-card" href="messaging/index.html"><h3>Messaging <span aria-hidden="true">↗</span></h3><p>Shared profiles and building blocks for exchanging FHIR messages.</p></a></li>
+        <li><a class="guide-card" href="document/index.html"><h3>Document <span aria-hidden="true">↗</span></h3><p>Common profiles for creating and sharing FHIR documents.</p></a></li>
+        <li><a class="guide-card" href="messagedefinitions/index.html"><h3>Message definitions <span aria-hidden="true">↗</span></h3><p>Definitions of the messages used in MedCom’s FHIR communication.</p></a></li>
+        <li><a class="guide-card" href="terminology/index.html"><h3>Terminology <span aria-hidden="true">↗</span></h3><p>Code systems, value sets, and concept maps used across the standards.</p></a></li>
+      </ul>
+    </section>
+
+    <section id="specifications" aria-labelledby="specifications-heading">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">02</span>
+        <div><h2 id="specifications-heading">Specification IGs</h2><p>Implementation details for individual messages and clinical documents.</p></div>
+      </div>
+      <section id="messaging-specifications" class="specification-group" aria-labelledby="messaging-specifications-heading">
+        <h3 id="messaging-specifications-heading" class="specification-heading">Messaging</h3>
+        <ul class="guide-grid">
+          <li><a class="guide-card" href="hospitalnotification/index.html"><h4>HospitalNotification <span aria-hidden="true">↗</span></h4><p class="guide-danish" lang="da">Advis om sygehusophold</p><p>Notifying municipalities about a patient’s hospital stay.</p></a></li>
+          <li><a class="guide-card" href="carecommunication/index.html"><h4>CareCommunication <span aria-hidden="true">↗</span></h4><p class="guide-danish" lang="da">Korrespondancemeddelelse</p><p>Communication between parties across the Danish healthcare sector.</p></a></li>
+          <li><a class="guide-card" href="acknowledgement/index.html"><h4>Acknowledgement <span aria-hidden="true">↗</span></h4><p class="guide-danish" lang="da">Kvittering</p><p>Acknowledgement messages reporting the outcome of message receipt.</p></a></li>
+          <li><a class="guide-card" href="homecareobservation/index.html"><h4>HomeCareObservation <span aria-hidden="true">↗</span></h4><p class="guide-danish" lang="da">Kommunale Prøvesvar</p><p>Exchanging results and observations from municipal acute care teams.</p></a></li>
+        </ul>
+      </section>
+      <section id="document-specifications" class="specification-group" aria-labelledby="document-specifications-heading">
+        <h3 id="document-specifications-heading" class="specification-heading">Document</h3>
+        <ul class="guide-grid">
+          <li><a class="guide-card" href="conditionlist/index.html"><h4>ConditionList <span aria-hidden="true">↗</span></h4><p class="guide-danish" lang="da">Deling af diagnoser</p><p>Sharing a citizen’s diagnoses with citizens and healthcare providers.</p></a></li>
+          <li><a class="guide-card" href="ekg/index.html"><h4>EKG Recording <span aria-hidden="true">↗</span></h4><p class="guide-danish" lang="da">Deling af EKG-optagelser</p><p>Sharing EKG recordings as PDF documents within a FHIR document.</p></a></li>
+          <li><a class="guide-card" href="notes/index.html"><h4>Shared Notes <span aria-hidden="true">↗</span></h4><p class="guide-danish" lang="da">Deling af Journalnotater</p><p>Sharing clinical notes with citizens and healthcare providers.</p></a></li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="xds" aria-labelledby="xds-heading">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">03</span>
+        <div><h2 id="xds-heading">XDS</h2><p>Guides for cross-enterprise document sharing.</p></div>
+      </div>
+      <ul class="guide-grid xds-grid">
+        <li><a class="guide-card" href="xdsdocuments/index.html"><h3>XDS documents <span aria-hidden="true">↗</span></h3><p>Danish profiles for documents shared through XDS infrastructure.</p></a></li>
+        <li><a class="guide-card" href="xdsmetadata/index.html"><h3>XDS metadata <span aria-hidden="true">↗</span></h3><p>Terminology and metadata for document-based exchange.</p></a></li>
+      </ul>
+    </section>
+
+    <section id="old-test-scripts" class="archive-section" aria-labelledby="test-scripts-heading">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">04</span>
+        <div><h2 id="test-scripts-heading">Old test script IGs</h2><p>Previous test scripts, retained for historical reference.</p></div>
+      </div>
+      <div class="archive-warning" role="note">
+        <span class="archive-badge">Do not use</span>
+        <p>These old test script IGs are obsolete and must not be used for implementation, testing, or certification. They are available for historical reference only.</p>
+      </div>
+      <ul class="guide-grid archive-grid">
+        <li><a class="guide-card" href="acknowledgementtestscript/index.html"><h3>Acknowledgement <span aria-hidden="true">↗</span></h3><p>Old test scripts · Historical reference only</p></a></li>
+        <li><a class="guide-card" href="carecommunicationtestscripts/index.html"><h3>Care communication <span aria-hidden="true">↗</span></h3><p>Old test scripts · Historical reference only</p></a></li>
+        <li><a class="guide-card" href="homecareobservationtestscripts/index.html"><h3>Home care observation <span aria-hidden="true">↗</span></h3><p>Old test scripts · Historical reference only</p></a></li>
+        <li><a class="guide-card" href="hospitalnotificationtestscripts/index.html"><h3>Hospital notification <span aria-hidden="true">↗</span></h3><p>Old test scripts · Historical reference only</p></a></li>
+      </ul>
+    </section>
+
   </main>
-  <footer>
-    <a href="https://medcomdk.github.io/MedComLandingPage/">MedCom FHIR landing page and repositories</a><br>
-    <a href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+  <footer class="site-footer page-width">
+    <div><strong>MedCom FHIR</strong><p>Questions about the guides? <a href="mailto:fhir@medcom.dk">fhir@medcom.dk</a></p></div>
+    <a href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement <span lang="da">(Tilgængelighedserklæring)</span></a>
   </footer>
 </body>
 </html>
