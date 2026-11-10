@@ -11,7 +11,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MedComCoreDiagnosticReport - JSON Representation - DK MedCom Core v4.0.0</title>
+    <title>MedComCoreDiagnosticReport - JSON Representation - DK MedCom Core v1.0.0-test</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -28,7 +28,13 @@
   	<link href="assets/css/prism.css" rel="stylesheet" />
   	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+    <link href="assets/css/hl7-dk.css?v=1794298808" rel="stylesheet"/>
+    <link href="assets/css/medcom.css?v=1794298808" rel="stylesheet"/>
+    <link href="assets/css/heading-numbering.css?v=1794298808" rel="stylesheet"/>
+    <script src="assets/js/publish-box-status.js?v=1794298808" defer="defer"> </script>
+    <script src="assets/js/page-navigation.js?v=1794298808" defer="defer"> </script>
+    <link href="assets/css/ig-tour.css?v=1794298808" rel="stylesheet"/>
+    <script src="assets/js/ig-tour.js?v=1794298808" defer="defer"> </script>
 
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -51,13 +57,16 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.2"}
-    h3,h4,h5,h6{--heading-prefix:"9.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"14.2"}
+    h3,h4,h5,h6{--heading-prefix:"14.2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
         <!-- Placeholder for child template header declarations -->
 
+        <span id="medcom-page-top" class="medcom-top-anchor" tabindex="-1"> </span>
+        <a class="medcom-skip-link" href="#segment-content">Skip to content</a>
+        <div class="medcom-brand">
         <div id="hl7-nav">
           <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
             <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
@@ -65,16 +74,27 @@
         </div>
         <div id="family-nav">
           <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
-        </div>        
+        </div>
+        </div>
+        
+
+        
+        
+        <form class="medcom-search" role="search" aria-label="Search this IG" action="searchform.html" method="get">
+          <label class="sr-only" for="medcom-search-query">Search this IG</label>
+          <input id="medcom-search-query" name="q" type="search" placeholder="Search this IG" required="required" maxlength="200"/>
+          <button type="submit">Search</button>
+        </form>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom Core</span>
             <br/>
-            <span style="display:inline-block;">4.0.0 - release
+            <span style="display:inline-block;">1.0.0-test - release
 
 
 
-  <span title="">DK</span>
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
 
 
             </span>
@@ -98,38 +118,179 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+              <!-- menu.xml  --><ul class="nav navbar-nav">
+   
+   <li>
+      <a href="index.html">Home</a>
+      </li>
+   
+   <li class="dropdown">
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+         <b class="caret"></b>
+         </a>
+      
+      <ul class="dropdown-menu">
+         
+         <li>
+            <a href="general-governance.html">General governance</a>
+            </li>
+         
+         <li>
+            <a href="test-and-certification.html">Test and certification</a>
+            </li>
+         
+         <li>
+            <a href="itb-getting-started.html">Getting started with ITB</a>
+            </li>
+         
+         <li>
+            <a href="versioning-change-management.html">Versioning and change management</a>
+            </li>
+         </ul>
+      </li>
+   
+   <li class="dropdown">
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Guidance
+         <b class="caret"></b>
+         </a>
+      
+      <ul class="dropdown-menu">
+         
+         <li>
+            <a href="validation.html">FHIR Validation Governance</a>
+            </li>
+         
+         <li>
+            <a href="new-to-fhir.html">New to FHIR</a>
+            </li>
+         
+         <li>
+            <a href="faq.html">FAQ</a>
+            </li>
+         </ul>
+      </li>
+   
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Home</a>
-  </li>
-  <li>
-    <a href="profiles.html">Profiles</a>
-  </li>
-  <li>
-    <a href="extensions.html">Extensions</a>
-  </li>
-  <li>
-    <a href="artifacts.html">Artifacts</a>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="toc.html">Table of Contents</a>
-      </li>
-      <li>
-        <a href="downloads.html">Downloads</a>
-      </li>
-      <li>
-        <a href="dependencies.html">Dependencies</a>
-      </li>
-    </ul>
-  </li>
+
+
+<li class="dropdown medcom-profiles-menu">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profiles <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+
+  
+  
+    
+    <li><a href="StructureDefinition-lpr3-Identifier.html">LPR3 Identifier</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-assigned-identifier.html">AssignedIdentifier</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-careteam.html">MedComCoreCareTeam</a></li>
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-diagnosticreport.html">MedComCoreDiagnosticReport</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-encounter.html">MedComCoreEncounter</a></li>
+  
+
+  
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-media.html">MedComMedia</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-observation.html">MedComCoreObservation</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-organization.html">MedComCoreOrganization</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-patient.html">MedComCorePatient</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-practitioner.html">MedComCorePractitioner</a></li>
+  
+
+  
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-practitionerrole.html">MedComCorePractitionerRole</a></li>
+  
+
+  
+  
+
+  
+  
+
 </ul>
+</li>
+
+
+   
+   <li>
+      <a href="extensions.html">Extensions</a>
+      </li>
+   
+   <li>
+      <a href="artifacts.html">Artifacts</a>
+      </li>
+   
+   <li class="dropdown">
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+         <b class="caret"></b>
+         </a>
+      
+      <ul class="dropdown-menu">
+         
+         <li>
+            <a href="downloads.html">Downloads</a>
+            </li>
+         
+         <li>
+            <a href="dependencies.html">Dependencies</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -138,14 +299,7 @@
     </div>  <!-- /segment-navbar -->
     <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
-        <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MedComCoreDiagnosticReport</b></li>
 
-        </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
     <div id="segment-content" class="segment">  <!-- segment-content -->
@@ -154,7 +308,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 8" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Core (v4.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/core/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Core (v1.0.0-test: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/core/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -221,7 +375,7 @@
         
           Active
           
-            as of 2026-01-13
+            as of 2026-11-10
           
         
       </td>
@@ -239,19 +393,19 @@
 
 
 
-  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition">resourceType</a>" : "StructureDefinition",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.id">id</a>" : "medcom-core-diagnosticreport",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.text">text</a>" : {
+  "<a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.id">id</a>" : "medcom-core-diagnosticreport",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#StructureDefinition.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition medcom-core-diagnosticreport&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;medcom-core-diagnosticreport\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmedcom-core-diagnosticreport\&quot;&gt; &lt;/a&gt;&lt;table border=\&quot;0\&quot; cellpadding=\&quot;0\&quot; cellspacing=\&quot;0\&quot; style=\&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\&quot;&gt;&lt;tr style=\&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\&quot;&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;The logical name of the element\&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Information about the use of the element\&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Minimum and Maximum # of times the element can appear in the instance\&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Reference to the type of the element\&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Additional information about the element\&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\&quot;float: right\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_resource.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport\&quot;&gt;DiagnosticReport&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/diagnosticreport.html\&quot;&gt;DiagnosticReport&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.id\&quot;&gt;id&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.id\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#id\&quot;&gt;id&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Logical id of this artifact&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.text\&quot;&gt;text&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.text\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Narrative\&quot;&gt;Narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.text.status\&quot;&gt;status&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.text.status\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;generated | extensions | additional | empty&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.text.div\&quot;&gt;div&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.text.div\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/narrative.html#xhtml\&quot;&gt;xhtml&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Limited xhtml content&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.status\&quot;&gt;status&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.status\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;registered | partial | preliminary | final | corrected | cancelled | entered-in-error&lt;br class=\&quot;binding\&quot;/&gt;&lt;span style=\&quot;font-weight:bold\&quot; title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt;Binding: &lt;/span&gt;&lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/2.0.2/ValueSet-medcom-corediagnosticreport-status.html\&quot; title=\&quot;http://medcomfhir.dk/ig/terminology/ValueSet/medcom-corediagnosticreport-status\&quot; class=\&quot;binding\&quot;&gt;MedComCoreDiagnosticReportStatus&lt;/a&gt;&lt;span title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt; (&lt;/span&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/terminologies.html#required\&quot; title=\&quot;To be conformant, the concept in this element SHALL be from the specified value set.\&quot; class=\&quot;binding\&quot;&gt;required&lt;/a&gt;&lt;span title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt;)&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.code\&quot;&gt;code&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.code\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\&quot;&gt;CodeableConcept&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Name/Code for this diagnostic report&lt;/span&gt;&lt;br class=\&quot;binding\&quot;/&gt;&lt;span style=\&quot;font-weight:bold\&quot; title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt;Binding: &lt;/span&gt;&lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/2.0.2/ValueSet-MedComDiagnosticReportCodesValueset.html\&quot; title=\&quot;http://medcomfhir.dk/ig/terminology/ValueSet/MedComDiagnosticReportCodesValueset\&quot; class=\&quot;binding\&quot;&gt;MedComDiagnosticReportCodesValueset&lt;/a&gt;&lt;span title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt; (&lt;/span&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/terminologies.html#required\&quot; title=\&quot;To be conformant, the concept in this element SHALL be from the specified value set.\&quot; class=\&quot;binding\&quot;&gt;required&lt;/a&gt;&lt;span title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt;)&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.subject\&quot;&gt;subject&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.subject\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-patient.html\&quot;&gt;MedComCorePatient&lt;/a&gt;)&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt; {&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot; title=\&quot;When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.\&quot;&gt;b&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt;}&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;The subject of the report - usually, but not always, the patient&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.performer\&quot;&gt;performer&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.performer\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-practitioner.html\&quot;&gt;MedComCorePractitioner&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole.html\&quot;&gt;MedComCorePractitionerRole&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-careteam.html\&quot;&gt;MedComCoreCareTeam&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Responsible Diagnostic Service&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.resultsInterpreter\&quot;&gt;resultsInterpreter&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.resultsInterpreter\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-practitioner.html\&quot;&gt;MedComCorePractitioner&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole.html\&quot;&gt;MedComCorePractitionerRole&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-organization.html\&quot;&gt;MedComCoreOrganization&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-careteam.html\&quot;&gt;MedComCoreCareTeam&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Primary result interpreter&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.result\&quot;&gt;result&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.result\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-observation.html\&quot;&gt;MedComCoreObservation&lt;/a&gt;)&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt; {&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot; title=\&quot;When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.\&quot;&gt;b&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt;}&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Observations&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.media\&quot;&gt;media&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.media\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#BackboneElement\&quot;&gt;BackboneElement&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;Attachments that are relevant for assessment of the patient's condition.&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.media.link\&quot;&gt;link&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.media.link\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-media.html\&quot;&gt;MedComMedia&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Reference to the image source&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\&quot;5\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;br/&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition medcom-core-diagnosticreport&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;medcom-core-diagnosticreport\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmedcom-core-diagnosticreport\&quot;&gt; &lt;/a&gt;&lt;table border=\&quot;0\&quot; cellpadding=\&quot;0\&quot; cellspacing=\&quot;0\&quot; class=\&quot;xhtTableBorder0\&quot;&gt;&lt;tr class=\&quot;xhtRowBorder1\&quot;&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;The logical name of the element\&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Information about the use of the element\&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Minimum and Maximum # of times the element can appear in the instance\&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;; width: 100px\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Reference to the type of the element\&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Additional information about the element\&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\&quot;float: right\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck1.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_resource.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport\&quot;&gt;DiagnosticReport&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;/&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/diagnosticreport.html\&quot;&gt;DiagnosticReport&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.id\&quot;&gt;id&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.id\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#id\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;id&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Logical id of this artifact&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck11.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.text\&quot;&gt;text&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.text\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Narrative\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck110.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.text.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.text.status\&quot;&gt;status&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.text.status\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;generated | extensions | additional | empty&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck100.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.text.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.text.div\&quot;&gt;div&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.text.div\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/narrative.html#xhtml\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;xhtml&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Limited xhtml content&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.status\&quot;&gt;status&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.status\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;registered | partial | preliminary | final | corrected | cancelled | entered-in-error&lt;br class=\&quot;binding\&quot;/&gt;&lt;span class=\&quot;xhtPieceBold binding\&quot;&gt;Binding: &lt;/span&gt;&lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/2.0.2/ValueSet-medcom-corediagnosticreport-status.html\&quot; title=\&quot;http://medcomfhir.dk/ig/terminology/ValueSet/medcom-corediagnosticreport-status\&quot; class=\&quot;binding\&quot;&gt;MedComCoreDiagnosticReportStatus&lt;/a&gt;&lt;span class=\&quot;binding\&quot;&gt; (&lt;/span&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/terminologies.html#required\&quot; title=\&quot;To be conformant, the concept in this element SHALL be from the specified value set.\&quot; class=\&quot;binding\&quot;&gt;required&lt;/a&gt;&lt;span class=\&quot;binding\&quot;&gt;)&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.code\&quot;&gt;code&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.code\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;CodeableConcept&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Name/Code for this diagnostic report&lt;/span&gt;&lt;br class=\&quot;binding\&quot;/&gt;&lt;span class=\&quot;xhtPieceBold binding\&quot;&gt;Binding: &lt;/span&gt;&lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/2.0.2/ValueSet-MedComDiagnosticReportCodesValueset.html\&quot; title=\&quot;http://medcomfhir.dk/ig/terminology/ValueSet/MedComDiagnosticReportCodesValueset\&quot; class=\&quot;binding\&quot;&gt;MedComDiagnosticReportCodesValueset&lt;/a&gt;&lt;span class=\&quot;binding\&quot;&gt; (&lt;/span&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/terminologies.html#required\&quot; title=\&quot;To be conformant, the concept in this element SHALL be from the specified value set.\&quot; class=\&quot;binding\&quot;&gt;required&lt;/a&gt;&lt;span class=\&quot;binding\&quot;&gt;)&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.subject\&quot;&gt;subject&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.subject\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-patient.html\&quot;&gt;MedComCorePatient&lt;/a&gt;)&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt; {&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot; title=\&quot;When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.\&quot;&gt;b&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt;}&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;The subject of the report - usually, but not always, the patient&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.performer\&quot;&gt;performer&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.performer\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;/&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-practitioner.html\&quot;&gt;MedComCorePractitioner&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole.html\&quot;&gt;MedComCorePractitionerRole&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-careteam.html\&quot;&gt;MedComCoreCareTeam&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Responsible Diagnostic Service&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.resultsInterpreter\&quot;&gt;resultsInterpreter&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.resultsInterpreter\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;/&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-practitioner.html\&quot;&gt;MedComCorePractitioner&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole.html\&quot;&gt;MedComCorePractitionerRole&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-organization.html\&quot;&gt;MedComCoreOrganization&lt;/a&gt; | &lt;a href=\&quot;StructureDefinition-medcom-core-careteam.html\&quot;&gt;MedComCoreCareTeam&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Primary result interpreter&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.result\&quot;&gt;result&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.result\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;/&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-observation.html\&quot;&gt;MedComCoreObservation&lt;/a&gt;)&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt; {&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot; title=\&quot;When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.\&quot;&gt;b&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt;}&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Observations&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck01.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.media\&quot;&gt;media&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.media\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;/&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#BackboneElement\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;BackboneElement&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;Attachments that are relevant for assessment of the patient's condition.&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck000.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;DiagnosticReport.media.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-diagnosticreport-definitions.html#DiagnosticReport.media.link\&quot;&gt;link&lt;/a&gt;&lt;a name=\&quot;DiagnosticReport.media.link\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;/&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-media.html\&quot;&gt;MedComMedia&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Reference to the image source&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\&quot;5\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;br/&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a>" : "4.0.0",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a>" : "1.0.0-test",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a>" : "MedComCoreDiagnosticReport",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a>" : "MedComCoreDiagnosticReport",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-01-13T14:04:58+00:00",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-11-10T08:19:20+00:00",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "MedCom",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -305,15 +459,15 @@
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "constraint",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
-    "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.extension">extension</a>" : [
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#StructureDefinition.snapshot.extension">extension</a>" : [
       {
         "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
-        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "4.0.1"
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "4.0.1"
       }
     ],
     "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
@@ -367,14 +521,14 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
           },
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.constraint.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueMarkdown</a>" : "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "dom-6",
@@ -407,21 +561,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.id",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|1.0.0-test"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -440,10 +594,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "id"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "id"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -454,7 +608,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.meta",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.meta",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.meta",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Metadata about the resource",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -484,7 +638,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.implicitRules",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.implicitRules",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.implicitRules",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A set of rules under which this content was created",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -516,7 +670,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.language",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.language",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.language",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Language of the resource content",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The base language in which the resource is written.",
@@ -546,14 +700,14 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
             },
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Language"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "Language"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
@@ -562,7 +716,7 @@
         }
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -606,7 +760,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
@@ -622,10 +776,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "string"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -641,7 +795,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
@@ -700,7 +854,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text.status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "generated | extensions | additional | empty",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.",
@@ -730,10 +884,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "NarrativeStatus"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "NarrativeStatus"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
@@ -748,7 +902,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text.div",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Limited xhtml content",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The actual narrative content, a stripped down version of XHTML.",
@@ -802,7 +956,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.contained",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.contained",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.contained",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Contained, inline Resources",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -834,7 +988,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -883,7 +1037,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -934,7 +1088,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.identifier",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Business identifier for report",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Identifiers assigned to this report by the performer or other systems.",
@@ -989,7 +1143,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.basedOn",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.basedOn",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.basedOn",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "What was requested",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Details concerning a service requested.",
@@ -1009,10 +1163,10 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.org/fhir/R4/careplan.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1"<a href="http://hl7.org/fhir/R4/immunizationrecommendation.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1"<a href="http://hl7.org/fhir/R4/medicationrequest.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1"<a href="http://hl7.org/fhir/R4/nutritionorder.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1"<a href="http://hl7.org/fhir/R4/servicerequest.html" style="color: Maroon">&#x1F517;</a> ,
+              <a href="http://hl7.org/fhir/R4/careplan.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1"<a href="http://hl7.org/fhir/R4/immunizationrecommendation.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1"<a href="http://hl7.org/fhir/R4/medicationrequest.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1"<a href="http://hl7.org/fhir/R4/nutritionorder.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1"<a href="http://hl7.org/fhir/R4/servicerequest.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1"
             ]
           }
@@ -1045,21 +1199,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.status",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|1.0.0-test"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1119,7 +1273,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.category",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.category",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.category",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Service category",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.",
@@ -1155,10 +1309,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "DiagnosticServiceSection"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "DiagnosticServiceSection"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
@@ -1181,21 +1335,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.code",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.code",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|1.0.0-test"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1256,21 +1410,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.subject",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.subject",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-diagnosticreport|1.0.0-test"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1294,7 +1448,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-patient.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+              <a href="StructureDefinition-medcom-core-patient.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.aggregation">aggregation</a>" : [
               "bundled"
@@ -1338,7 +1492,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.encounter",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.encounter",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.encounter",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Health care event when test ordered",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about.",
@@ -1358,7 +1512,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.org/fhir/R4/encounter.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"
+              <a href="http://hl7.org/fhir/R4/encounter.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"
             ]
           }
         ],
@@ -1394,7 +1548,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.effective[x]",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.effective[x]",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.effective[x]",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Clinically relevant time/time-period for report",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.",
@@ -1452,7 +1606,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.issued",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.issued",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.issued",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "DateTime this version was made",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.",
@@ -1503,7 +1657,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.performer",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.performer",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.performer",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Responsible Diagnostic Service",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The diagnostic service that is responsible for issuing the report.",
@@ -1529,8 +1683,8 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-careteam.html" style="color: Maroon">&#x1F517;</a> ,
+              <a href="StructureDefinition-medcom-core-practitioner.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-careteam.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
               "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam"
             ]
           }
@@ -1567,7 +1721,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.resultsInterpreter",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.resultsInterpreter",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.resultsInterpreter",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Primary result interpreter",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The practitioner or organization that is responsible for the report's conclusions and interpretations.",
@@ -1588,9 +1742,9 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-organization.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"<a href="StructureDefinition-medcom-core-careteam.html" style="color: Maroon">&#x1F517;</a> ,
+              <a href="StructureDefinition-medcom-core-practitioner.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-organization.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"<a href="StructureDefinition-medcom-core-careteam.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
               "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam"
             ]
           }
@@ -1627,7 +1781,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.specimen",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.specimen",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.specimen",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Specimens this report is based on",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Details about the specimens on which this diagnostic report is based.",
@@ -1644,7 +1798,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.org/fhir/R4/specimen.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1"
+              <a href="http://hl7.org/fhir/R4/specimen.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1"
             ]
           }
         ],
@@ -1672,7 +1826,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.result",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.result",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.result",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Observations",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report.",
@@ -1700,7 +1854,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-observation.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-observation"
+              <a href="StructureDefinition-medcom-core-observation.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-observation"
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.aggregation">aggregation</a>" : [
               "bundled"
@@ -1731,7 +1885,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.imagingStudy",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.imagingStudy",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.imagingStudy",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Reference to full details of imaging associated with the diagnostic report",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.",
@@ -1747,7 +1901,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.org/fhir/R4/imagingstudy.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/ImagingStudy|4.0.1"
+              <a href="http://hl7.org/fhir/R4/imagingstudy.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/ImagingStudy|4.0.1"
             ]
           }
         ],
@@ -1771,7 +1925,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Attachments that are relevant for assessment of the patient's condition.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).",
@@ -1817,7 +1971,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
@@ -1833,10 +1987,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "string"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -1852,7 +2006,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1901,7 +2055,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored even if unrecognized",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1953,7 +2107,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media.comment",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media.comment",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media.comment",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Comment about the image (e.g. explanation)",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.",
@@ -1991,7 +2145,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media.link",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media.link",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media.link",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Reference to the image source",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Reference to the image source.",
@@ -2006,7 +2160,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-media.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-media"
+              <a href="StructureDefinition-medcom-core-media.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-media"
             ]
           }
         ],
@@ -2030,7 +2184,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.conclusion",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.conclusion",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.conclusion",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Clinical conclusion (interpretation) of test results",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.",
@@ -2074,7 +2228,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.conclusionCode",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.conclusionCode",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.conclusionCode",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Codes for the clinical conclusion of test results",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.",
@@ -2103,10 +2257,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "AdjunctDiagnosis"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "AdjunctDiagnosis"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
@@ -2125,7 +2279,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.presentedForm",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.presentedForm",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.presentedForm",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Entire report as issued",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.",
@@ -2171,21 +2325,21 @@
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
     "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport"
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.id",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2196,34 +2350,34 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text.status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.text.div",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.status",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2238,17 +2392,17 @@
         }
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.code",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.code",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2262,17 +2416,17 @@
         }
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.subject",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.subject",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2284,7 +2438,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-patient.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+              <a href="StructureDefinition-medcom-core-patient.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.aggregation">aggregation</a>" : [
               "bundled"
@@ -2294,42 +2448,42 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.performer",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.performer",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.performer",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-careteam.html" style="color: Maroon">&#x1F517;</a> ,
+              <a href="StructureDefinition-medcom-core-practitioner.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-careteam.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
               "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam"
             ]
           }
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.resultsInterpreter",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.resultsInterpreter",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.resultsInterpreter",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-organization.html" style="color: Maroon">&#x1F517;</a> ,
-              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"<a href="StructureDefinition-medcom-core-careteam.html" style="color: Maroon">&#x1F517;</a> ,
+              <a href="StructureDefinition-medcom-core-practitioner.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"<a href="StructureDefinition-medcom-core-practitionerrole.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"<a href="StructureDefinition-medcom-core-organization.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
+              "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"<a href="StructureDefinition-medcom-core-careteam.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> ,
               "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam"
             ]
           }
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.result",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.result",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.result",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-observation.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-observation"
+              <a href="StructureDefinition-medcom-core-observation.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-observation"
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.aggregation">aggregation</a>" : [
               "bundled"
@@ -2338,18 +2492,18 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Attachments that are relevant for assessment of the patient's condition."
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "DiagnosticReport.media.link",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "DiagnosticReport.media.link",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "DiagnosticReport.media.link",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-media.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-media"
+              <a href="StructureDefinition-medcom-core-media.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-media"
             ]
           }
         ]
@@ -2383,15 +2537,27 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.core#4.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 14:05+0000">2026-01-13</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.core#1.0.0-test based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 10, 2026 08:19+0000">2026-11-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
-                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                 
-                
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
 
-| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+
+| <a class="medcom-history-link" href="http://medcomfhir.dk/ig/core/history.html">History of published versions</a>
+| <a target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+<a class="medcom-back-to-top medcom-footer-top" hidden="hidden" href="#medcom-page-top">To the top <span aria-hidden="true">↑</span></a>
+
+
+
+  
+
+  
+
+  
+    
+    
+<button type="button" class="medcom-tour-launch" data-medcom-start-tour="true" data-tour-home="index.html" data-tour-profile="StructureDefinition-medcom-core-careteam.html">Guide tour</button>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

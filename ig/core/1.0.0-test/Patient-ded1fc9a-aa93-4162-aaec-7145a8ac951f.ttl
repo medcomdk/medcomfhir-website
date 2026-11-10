@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/core/Patient/ded1fc9a-aa93-4162-aaec-7145a8ac951f> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ded1fc9a-aa93-4162-aaec-7145a8ac951f"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient" ;
+       fhir:index 0 ;
+       fhir:link <http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient ded1fc9a-aa93-4162-aaec-7145a8ac951f</b></p><a name=\"ded1fc9a-aa93-4162-aaec-7145a8ac951f\"> </a><a name=\"hcded1fc9a-aa93-4162-aaec-7145a8ac951f\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-core-patient.html\">MedComCorePatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Birgit Berggren (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.6.1.1#0703921VJ4 (use: temp))</p><hr/></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.use [ fhir:value "temp" ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.208.176.1.6.1.1" ] ;
+     fhir:Identifier.value [ fhir:value "0703921VJ4" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.family [ fhir:value "Berggren" ] ;
+     fhir:HumanName.given [
+       fhir:value "Birgit" ;
+       fhir:index 0
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/core/Patient/ded1fc9a-aa93-4162-aaec-7145a8ac951f.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
