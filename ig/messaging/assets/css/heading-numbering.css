@@ -1,0 +1,12 @@
+/* Replace the base template's page-label prefixes with document section numbers.
+ * Original: https://github.com/HL7/ig-template-base/blob/master/content/assets/css/project.css
+ */
+#segment-content .col-12 :is(h1, h2, h3, h4, h5, h6)::before {
+  content: none;
+  counter-increment: none;
+}
+
+#segment-content .col-12 [data-section-number]::before {
+  color: var(--medcom-muted, #52646b);
+  content: attr(data-section-number) ". ";
+}

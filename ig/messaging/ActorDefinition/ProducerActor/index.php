@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/ActorDefinition-ProducerActor.json2');
+  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/ActorDefinition-ProducerActor.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/ActorDefinition-ProducerActor.json1');
+  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/ActorDefinition-ProducerActor.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/ActorDefinition-ProducerActor.json');
+  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/ActorDefinition-ProducerActor.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/ActorDefinition-ProducerActor.xml2');
+  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/ActorDefinition-ProducerActor.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/ActorDefinition-ProducerActor.xml1');
+  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/ActorDefinition-ProducerActor.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/ActorDefinition-ProducerActor.html');
+  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/ActorDefinition-ProducerActor.html');
 else 
-  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/ActorDefinition-ProducerActor.xml');
+  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/ActorDefinition-ProducerActor.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

@@ -1,11 +1,8 @@
-# Profiles - DK MedCom Messaging v4.0.2
-
-* [**Table of Contents**](toc.md)
-* **Profiles**
+# Profiles - DK MedCom Messaging v4.0.3
 
 ## Profiles
 
- The following profiles set the minimum expectations to record, search and fetch health data associated with a MedCom FHIR Message: 
+The following profiles are defined in DK MedCom Messaging.
 
 * [MedComCoreProducerOrganization](StructureDefinition-medcom-producer-organization.md) 
 This profile is intended to be used to represent the producer of the observations. 

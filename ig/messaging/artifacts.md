@@ -1,7 +1,4 @@
-# Artifacts Summary - DK MedCom Messaging v4.0.2
-
-* [**Table of Contents**](toc.md)
-* **Artifacts Summary**
+# Artifacts Summary - DK MedCom Messaging v4.0.3
 
 ## Artifacts Summary
 
