@@ -1,20 +1,12 @@
-try {
-  var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
-} catch(exception) {
-}
+/* Open every profile on its complete Snapshot view. Select by tab target
+ * because profiles and extensions have different tab orders.
+ */
+(function ($) {
+  "use strict";
+  var tabs = $("#tabs");
+  var links = tabs.find("> ul > li > a");
+  var active = links.index(links.filter('[href="#tabs-snap"]'));
+  if (active < 0) active = 0;
 
-if (!currentTabIndex)
-  currentTabIndex = '0';
-
-$( '#tabs' ).tabs({
-  active: currentTabIndex,
-  activate: function( event, ui ) {
-    var active = $('.selector').tabs('option', 'active');
-    currentTabIndex = ui.newTab.index();
-    document.activeElement.blur();
-    try {
-      sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
-    } catch(exception) {
-    }
-  }
-});
+  tabs.tabs({active: active});
+}(jQuery));
