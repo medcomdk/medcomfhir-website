@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/messaging/Organization/ef5cb9a6-835f-4d18-a34e-179c578b9a2a> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ef5cb9a6-835f-4d18-a34e-179c578b9a2a"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-producer-organization" ;
+       fhir:index 0 ;
+       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-producer-organization>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization ef5cb9a6-835f-4d18-a34e-179c578b9a2a</b></p><a name=\"ef5cb9a6-835f-4d18-a34e-179c578b9a2a\"> </a><a name=\"hcef5cb9a6-835f-4d18-a34e-179c578b9a2a\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-producer-organization.html\">MedComCoreProducerOrganization</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Pleje og Rehabilitering (https://www.gs1.org/gln#5790000123117)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>urn:oid:1.2.208.176.1.1</code>/1144561000016002</li><li><code>http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID</code>/KAF</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://www.gs1.org/gln" ] ;
+     fhir:Identifier.value [ fhir:value "5790000123117" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.208.176.1.1" ] ;
+     fhir:Identifier.value [ fhir:value "1144561000016002" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Identifier.system [ fhir:value "http://medcomfhir.dk/ig/terminology/CodeSystem/MedComProducentID" ] ;
+     fhir:Identifier.value [ fhir:value "KAF" ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Pleje og Rehabilitering"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://medcomfhir.dk/ig/messaging/Organization/ef5cb9a6-835f-4d18-a34e-179c578b9a2a.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,9 +1,7 @@
-# Dependencies - DK MedCom Messaging v4.0.2
-
-* [**Table of Contents**](toc.md)
-* **Dependencies**
+# Dependencies - DK MedCom Messaging v4.0.3
 
 ## Dependencies
+
 
 
 

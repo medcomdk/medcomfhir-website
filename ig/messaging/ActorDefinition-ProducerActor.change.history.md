@@ -1,4 +1,4 @@
-#  - DK MedCom Messaging v4.0.2
+#  - DK MedCom Messaging v4.0.3
 
 ## : Producer of FHIR resources - Change History
 

@@ -87,7 +87,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).","","","","","","","","",,,,,"",,,,"Bundle.entry.fullUrl",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Bundle.entry.resource","Bundle.entry.resource","","","",0,1,"Y","","Y","Resource {[]} {[]}
-","Each MedCom message shall contain a MedComMessagingMessageHeader and MedComMessagingProvenance. Please refer to invariant medcom-messaging-1, medcom-messaging-2, and medcom-messaging-3.","The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
+","Message contents. Invariant medcom-messaging-2 requires at least one Provenance resource; inherited bdl-12 requires a MessageHeader as the first resource.","The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.","","","","","","","","","",,,,,"",,,,"Bundle.entry.resource",0,1,"",""
 "Bundle.entry.search","Bundle.entry.search","","","",0,1,"","","Y","BackboneElement {[]} {[]}
 ","Search related information","Information about the search process that lead to the creation of this entry.","","","","","","","","","",,,,,"",,,,"Bundle.entry.search",0,1,"bdl-2
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

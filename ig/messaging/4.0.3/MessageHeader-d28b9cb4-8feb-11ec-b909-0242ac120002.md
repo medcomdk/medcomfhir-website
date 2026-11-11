@@ -1,0 +1,61 @@
+# MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message) - DK MedCom Messaging v4.0.3
+
+## Example MessageHeader: MessageHeader for a Acknowledgement message. Valid only if used in a bundle (message)
+
+Profile: [MedComMessagingMessageHeader](StructureDefinition-medcom-messaging-messageHeader.md)
+
+**event**: [MedComMessagingEventCodes: acknowledgement-message](http://medcomfhir.dk/ig/terminology/2.0.1/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-acknowledgement-message) (Acknowledgement Message)
+
+### Destinations
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| - | **Extension** | **Endpoint** | **Receiver** |
+| * |  | [http://medcomfhir.dk/unknown](http://medcomfhir.dk/unknown) | [Receiver Organization (https://www.gs1.org/gln#5790000121526)](Organization-74cdf292-abf3-4f5f-80ea-60a48013ff6d.md) |
+
+**sender**: [Sender Organization (https://www.gs1.org/gln#5790001382445)](Organization-d7056980-a8b2-42aa-8a0e-c1fc85d1f40d.md)
+
+### Sources
+
+| | |
+| :--- | :--- |
+| - | **Endpoint** |
+| * | [http://medcomfhir.dk/unknown](http://medcomfhir.dk/unknown) |
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "MessageHeader",
+  "id" : "d28b9cb4-8feb-11ec-b909-0242ac120002",
+  "meta" : {
+    "profile" : ["http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-messageHeader"]
+  },
+  "eventCoding" : {
+    "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
+    "code" : "acknowledgement-message"
+  },
+  "destination" : [{
+    "extension" : [{
+      "url" : "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+      "valueCoding" : {
+        "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+        "code" : "primary"
+      }
+    }],
+    "endpoint" : "http://medcomfhir.dk/unknown",
+    "receiver" : {
+      "reference" : "Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d"
+    }
+  }],
+  "sender" : {
+    "reference" : "Organization/d7056980-a8b2-42aa-8a0e-c1fc85d1f40d"
+  },
+  "source" : {
+    "endpoint" : "http://medcomfhir.dk/unknown"
+  }
+}
+
+```
