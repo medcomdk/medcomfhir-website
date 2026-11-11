@@ -11,7 +11,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>MedComCorePractitionerRole - JSON Representation - DK MedCom Core v4.0.0</title>
+    <title>MedComCorePractitionerRole - JSON Representation - DK MedCom Core v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -25,10 +25,17 @@
     <link href="assets/css/project.css" rel="stylesheet"/>
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	
   	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
-    <link href="assets/css/hl7-dk.css" rel="stylesheet"/>
+    <link href="assets/css/hl7-dk.css?v=1794383158" rel="stylesheet"/>
+    <link href="assets/css/medcom.css?v=1794383158" rel="stylesheet"/>
+    <link href="assets/css/heading-numbering.css?v=1794383158" rel="stylesheet"/>
+    <script src="assets/js/publish-box-status.js?v=1794383158" defer="defer"> </script>
+    <script src="assets/js/page-navigation.js?v=1794383158" defer="defer"> </script>
+    <script src="assets/js/page-libraries.js?v=1794383158" defer="defer"> </script>
+    <link href="assets/css/ig-tour.css?v=1794383158" rel="stylesheet"/>
+    <script src="assets/js/ig-tour.js?v=1794383158" defer="defer"> </script>
 
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -48,16 +55,19 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-	  <script src="assets/js/prism.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"9.8"}
-    h3,h4,h5,h6{--heading-prefix:"9.8"}</style>
+	  
+    
+    
+    <style type="text/css">h2{--heading-prefix:"14.8"}
+    h3,h4,h5,h6{--heading-prefix:"14.8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
         <!-- Placeholder for child template header declarations -->
 
+        <span id="medcom-page-top" class="medcom-top-anchor" tabindex="-1"> </span>
+        <a class="medcom-skip-link" href="#segment-content">Skip to content</a>
+        <div class="medcom-brand">
         <div id="hl7-nav">
           <a id="hl7-logo" no-external="true" href="https://www.medcom.dk">
             <img height="50" alt="Visit MedComs website" src="assets/images/dark-medcom-logo.png"/>
@@ -65,16 +75,27 @@
         </div>
         <div id="family-nav">
           <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
-        </div>        
+        </div>
+        </div>
+        
+
+        
+        
+        <form class="medcom-search" role="search" aria-label="Search this IG" action="searchform.html" method="get">
+          <label class="sr-only" for="medcom-search-query">Search this IG</label>
+          <input id="medcom-search-query" name="q" type="search" placeholder="Search this IG" required="required" maxlength="200"/>
+          <button type="submit">Search</button>
+        </form>
+
 
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">DK MedCom Core</span>
             <br/>
-            <span style="display:inline-block;">4.0.0 - release
+            <span style="display:inline-block;">4.0.1 - release
 
 
 
-  <span title="">DK</span>
+  <img alt="Denmark flag" src="assets/images/dnk.svg" height="16" title="Denmark"/>
 
 
             </span>
@@ -98,38 +119,179 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <!-- menu.xml  -->
+              <!-- menu.xml  --><ul class="nav navbar-nav">
+   
+   <li>
+      <a href="index.html">Home</a>
+      </li>
+   
+   <li class="dropdown">
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation
+         <b class="caret"></b>
+         </a>
+      
+      <ul class="dropdown-menu">
+         
+         <li>
+            <a href="general-governance.html">General governance</a>
+            </li>
+         
+         <li>
+            <a href="test-and-certification.html">Test and certification</a>
+            </li>
+         
+         <li>
+            <a href="itb-getting-started.html">Getting started with ITB</a>
+            </li>
+         
+         <li>
+            <a href="versioning-change-management.html">Versioning and change management</a>
+            </li>
+         </ul>
+      </li>
+   
+   <li class="dropdown">
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Guidance
+         <b class="caret"></b>
+         </a>
+      
+      <ul class="dropdown-menu">
+         
+         <li>
+            <a href="validation.html">FHIR Validation Governance</a>
+            </li>
+         
+         <li>
+            <a href="new-to-fhir.html">New to FHIR</a>
+            </li>
+         
+         <li>
+            <a href="faq.html">FAQ</a>
+            </li>
+         </ul>
+      </li>
+   
 
-<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Home</a>
-  </li>
-  <li>
-    <a href="profiles.html">Profiles</a>
-  </li>
-  <li>
-    <a href="extensions.html">Extensions</a>
-  </li>
-  <li>
-    <a href="artifacts.html">Artifacts</a>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="toc.html">Table of Contents</a>
-      </li>
-      <li>
-        <a href="downloads.html">Downloads</a>
-      </li>
-      <li>
-        <a href="dependencies.html">Dependencies</a>
-      </li>
-    </ul>
-  </li>
+
+
+<li class="dropdown medcom-profiles-menu">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profiles <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+
+  
+  
+    
+    <li><a href="StructureDefinition-lpr3-Identifier.html">LPR3 Identifier</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-assigned-identifier.html">AssignedIdentifier</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-careteam.html">MedComCoreCareTeam</a></li>
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-diagnosticreport.html">MedComCoreDiagnosticReport</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-encounter.html">MedComCoreEncounter</a></li>
+  
+
+  
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-media.html">MedComMedia</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-observation.html">MedComCoreObservation</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-organization.html">MedComCoreOrganization</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-patient.html">MedComCorePatient</a></li>
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-practitioner.html">MedComCorePractitioner</a></li>
+  
+
+  
+  
+
+  
+  
+    
+    <li><a href="StructureDefinition-medcom-core-practitionerrole.html">MedComCorePractitionerRole</a></li>
+  
+
+  
+  
+
+  
+  
+
 </ul>
+</li>
+
+
+   
+   <li>
+      <a href="extensions.html">Extensions</a>
+      </li>
+   
+   <li>
+      <a href="artifacts.html">Artifacts</a>
+      </li>
+   
+   <li class="dropdown">
+      <a data-toggle="dropdown" href="#" class="dropdown-toggle">More
+         <b class="caret"></b>
+         </a>
+      
+      <ul class="dropdown-menu">
+         
+         <li>
+            <a href="downloads.html">Downloads</a>
+            </li>
+         
+         <li>
+            <a href="dependencies.html">Dependencies</a>
+            </li>
+         </ul>
+      </li>
+   </ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -138,14 +300,7 @@
     </div>  <!-- /segment-navbar -->
     <!--status-bar-->
 
-    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
-      <div class="container">  <!-- container -->
-        <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MedComCorePractitionerRole</b></li>
 
-        </ul>
-      </div>  <!-- /container -->
-    </div>  <!-- /segment-breadcrumb -->
 
     <a name="top"> </a>
     <div id="segment-content" class="segment">  <!-- segment-content -->
@@ -154,7 +309,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 8" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Core (v4.0.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/core/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the DK MedCom Core (v4.0.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://medcomfhir.dk/ig/core/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -231,7 +386,7 @@
         
           Active
           
-            as of 2026-01-13
+            as of 2026-11-11
           
         
       </td>
@@ -249,18 +404,18 @@
 
 
 
-  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition">resourceType</a>" : "StructureDefinition",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.id">id</a>" : "medcom-core-practitionerrole",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.text">text</a>" : {
+  "<a href="http://hl7.org/fhir/R4/resource.html#StructureDefinition.id">id</a>" : "medcom-core-practitionerrole",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#StructureDefinition.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition medcom-core-practitionerrole&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;medcom-core-practitionerrole\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmedcom-core-practitionerrole\&quot;&gt; &lt;/a&gt;&lt;table border=\&quot;0\&quot; cellpadding=\&quot;0\&quot; cellspacing=\&quot;0\&quot; style=\&quot;border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\&quot;&gt;&lt;tr style=\&quot;border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\&quot;&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;The logical name of the element\&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Information about the use of the element\&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Minimum and Maximum # of times the element can appear in the instance\&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Reference to the type of the element\&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Additional information about the element\&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\&quot;float: right\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_resource.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;a name=\&quot;PractitionerRole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\&quot; href=\&quot;http://hl7.org/fhir/R4/conformance-rules.html#constraints\&quot; title=\&quot;This element has or is affected by constraints ( medcom-core-practitionerrole-code-xor-text )\&quot;&gt;C&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.dk/fhir/core/3.5.0/StructureDefinition-dk-core-practitioner-role.html\&quot;&gt;DkCorePractitionerRole&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Roles/organizations the practitioner is associated with&lt;/span&gt;&lt;br class=\&quot;constraint\&quot;/&gt;&lt;span title=\&quot;null\&quot; class=\&quot;constraint\&quot;&gt;Constraints: &lt;/span&gt;&lt;span style=\&quot;font-weight:bold\&quot; title=\&quot;There shall exist a practitioner role code.coding or text if code is present.\&quot; class=\&quot;constraint\&quot;&gt;medcom-core-practitionerrole-code-xor-text&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.id\&quot;&gt;id&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.id\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#id\&quot;&gt;id&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Logical id of this artifact&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.text\&quot;&gt;text&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.text\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Narrative\&quot;&gt;Narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.text.status\&quot;&gt;status&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.text.status\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;generated | extensions | additional | empty&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.text.div\&quot;&gt;div&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.text.div\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/narrative.html#xhtml\&quot;&gt;xhtml&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Limited xhtml content&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.practitioner\&quot;&gt;practitioner&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.practitioner\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-practitioner.html\&quot;&gt;MedComCorePractitioner&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Practitioner that is able to provide the defined services for the organization&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.organization\&quot;&gt;organization&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.organization\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-organization.html\&quot;&gt;MedComCoreOrganization&lt;/a&gt;)&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt; {&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot; title=\&quot;When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.\&quot;&gt;b&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt;}&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Organization where the roles are available&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code\&quot;&gt;code&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\&quot;&gt;CodeableConcept&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Roles which this practitioner may perform&lt;/span&gt;&lt;br class=\&quot;binding\&quot;/&gt;&lt;span style=\&quot;font-weight:bold\&quot; title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt;Binding: &lt;/span&gt;&lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/2.0.2/ValueSet-medcom-core-PractitionerRoles.html\&quot; title=\&quot;http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-PractitionerRoles\&quot; class=\&quot;binding\&quot;&gt;MedComCorePractitionerRoles&lt;/a&gt;&lt;span title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt; (&lt;/span&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/terminologies.html#example\&quot; title=\&quot;Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.\&quot; class=\&quot;binding\&quot;&gt;example&lt;/a&gt;&lt;span title=\&quot;null\&quot; class=\&quot;binding\&quot;&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.coding\&quot;&gt;coding&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.coding\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Coding\&quot;&gt;Coding&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Code defined by a terminology system&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.coding.system\&quot;&gt;system&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.coding.system\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#uri\&quot;&gt;uri&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Identity of the terminology system&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.coding.code\&quot;&gt;code&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.coding.code\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;1..&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Symbol in syntax defined by the system&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\&quot;border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\&quot;&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;.\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.text\&quot;&gt;text&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.text\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: red\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;0&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;..&lt;/span&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;a style=\&quot;opacity: 0.5; opacity: 0.5\&quot; href=\&quot;http://hl7.org/fhir/R4/datatypes.html#string\&quot;&gt;string&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;span style=\&quot;opacity: 0.5\&quot;&gt;Plain text representation of the concept&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.3.0-ballot-tc1/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px; opacity: 0.5;\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\&quot;5\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;br/&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: StructureDefinition medcom-core-practitionerrole&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;medcom-core-practitionerrole\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcmedcom-core-practitionerrole\&quot;&gt; &lt;/a&gt;&lt;table border=\&quot;0\&quot; cellpadding=\&quot;0\&quot; cellspacing=\&quot;0\&quot; class=\&quot;xhtTableBorder0\&quot;&gt;&lt;tr class=\&quot;xhtRowBorder1\&quot;&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;The logical name of the element\&quot;&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Information about the use of the element\&quot;&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Minimum and Maximum # of times the element can appear in the instance\&quot;&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;; width: 100px\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Reference to the type of the element\&quot;&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th scope=\&quot;col\&quot; style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Additional information about the element\&quot;&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\&quot;float: right\&quot;&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck1.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_resource.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;a name=\&quot;PractitionerRole\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/conformance-rules.html#constraints\&quot; title=\&quot;This element has or is affected by constraints ( medcom-core-practitionerrole-code-xor-text )\&quot; class=\&quot;xhtConstraintStyle\&quot;&gt;C&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.dk/fhir/core/3.5.0/StructureDefinition-dk-core-practitioner-role.html\&quot;&gt;DkCorePractitionerRole&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Roles/organizations the practitioner is associated with&lt;/span&gt;&lt;br class=\&quot;constraint\&quot;/&gt;&lt;span class=\&quot;constraint\&quot;&gt;Constraints: &lt;/span&gt;&lt;span title=\&quot;There shall exist a practitioner role code.coding or text if code is present.\&quot; class=\&quot;xhtPieceBold constraint\&quot;&gt;medcom-core-practitionerrole-code-xor-text&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.id\&quot;&gt;id&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.id\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#id\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;id&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Logical id of this artifact&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck11.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.text\&quot;&gt;text&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.text\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Narrative\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck110.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.text.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.text.status\&quot;&gt;status&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.text.status\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;generated | extensions | additional | empty&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck100.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.text.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.text.div\&quot;&gt;div&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.text.div\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/narrative.html#xhtml\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;xhtml&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Limited xhtml content&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.practitioner\&quot;&gt;practitioner&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.practitioner\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-practitioner.html\&quot;&gt;MedComCorePractitioner&lt;/a&gt;)&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Practitioner that is able to provide the defined services for the organization&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck10.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_reference.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Reference to another Resource\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.organization\&quot;&gt;organization&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.organization\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/references.html\&quot;&gt;Reference&lt;/a&gt;(&lt;a href=\&quot;StructureDefinition-medcom-core-organization.html\&quot;&gt;MedComCoreOrganization&lt;/a&gt;)&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt; {&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot; title=\&quot;When the resource is in a Bundle, the resource the reference points to will be found in the same bundle as the resource that includes the reference.\&quot;&gt;b&lt;/a&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/valueset-resource-aggregation-mode.html\&quot;&gt;}&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Organization where the roles are available&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck01.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code\&quot;&gt;code&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;CodeableConcept&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Roles which this practitioner may perform&lt;/span&gt;&lt;br class=\&quot;binding\&quot;/&gt;&lt;span class=\&quot;xhtPieceBold binding\&quot;&gt;Binding: &lt;/span&gt;&lt;a href=\&quot;http://medcomfhir.dk/ig/terminology/2.0.2/ValueSet-medcom-core-PractitionerRoles.html\&quot; title=\&quot;http://medcomfhir.dk/ig/terminology/ValueSet/medcom-core-PractitionerRoles\&quot; class=\&quot;binding\&quot;&gt;MedComCorePractitionerRoles&lt;/a&gt;&lt;span class=\&quot;binding\&quot;&gt; (&lt;/span&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/terminologies.html#example\&quot; title=\&quot;Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.\&quot; class=\&quot;binding\&quot;&gt;example&lt;/a&gt;&lt;span class=\&quot;binding\&quot;&gt;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck011.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.code.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.coding\&quot;&gt;coding&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.coding\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element must be supported\&quot;&gt;S&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#Coding\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Coding&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Code defined by a terminology system&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck0110.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.code.coding.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.coding.system\&quot;&gt;system&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.coding.system\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#uri\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;uri&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Identity of the terminology system&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowEven\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck0100.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vline.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: white; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.code.coding.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.coding.code\&quot;&gt;code&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.coding.code\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;1..&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#code\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;code&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Symbol in syntax defined by the system&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr class=\&quot;xhtRowBorder0 xhtRowOdd\&quot;&gt;&lt;td style=\&quot;background-image: url(tbl_bck000.png)\&quot; class=\&quot;hierarchy xhtCellBorder0 xhtCellNoWrap\&quot;&gt;&lt;img src=\&quot;tbl_spacer.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_blank.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;tbl_vjoin_end.png\&quot; alt=\&quot;\&quot; style=\&quot;background-color: inherit\&quot; class=\&quot;hierarchy\&quot;/&gt;&lt;img src=\&quot;icon_element.gif\&quot; alt=\&quot;\&quot; style=\&quot;background-color: #F7F7F7; background-color: inherit\&quot; title=\&quot;Element\&quot; class=\&quot;hierarchy\&quot;/&gt; &lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt;PractitionerRole.code.&lt;/span&gt;&lt;a href=\&quot;StructureDefinition-medcom-core-practitionerrole-definitions.html#PractitionerRole.code.text\&quot;&gt;text&lt;/a&gt;&lt;a name=\&quot;PractitionerRole.code.text\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span style=\&quot;padding-left: 3px; padding-right: 3px; color: white; background-color: #B60000\&quot; title=\&quot;This element has obligations and must be supported\&quot;&gt;SO&lt;/span&gt;&lt;span style=\&quot;position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0\&quot; class=\&quot;sr-only\&quot;&gt; This element has obligations and must be supported. &lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;0&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;..&lt;/span&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/datatypes.html#string\&quot; class=\&quot;xhtPieceDeEmphasized\&quot;&gt;string&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;\&quot; class=\&quot;hierarchy xhtCellBorder0\&quot;&gt;&lt;span class=\&quot;xhtPieceDeEmphasized\&quot;&gt;Plain text representation of the concept&lt;/span&gt;&lt;table class=\&quot;obligation grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Obligations&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;font-size: 11px\&quot;&gt;&lt;b&gt;SHALL&lt;/b&gt;:&lt;a href=\&quot;http://hl7.org/fhir/extensions/5.4.0/CodeSystem-obligation.html#obligation-in-narrative\&quot; title=\&quot;Obligation Codes: include in narrative\&quot;&gt;in-narrative&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;font-size: 11px\&quot; class=\&quot;unchangedStyle\&quot;&gt;&lt;a href=\&quot;ActorDefinition-ProducerActor.html\&quot;&gt;Producer of FHIR resources&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\&quot;5\&quot; class=\&quot;hierarchy\&quot;&gt;&lt;br/&gt;&lt;a href=\&quot;https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\&quot; title=\&quot;Legend for this format\&quot;&gt;&lt;img src=\&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\&quot; alt=\&quot;doco\&quot; style=\&quot;background-color: inherit\&quot;/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">url</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a>" : "4.0.0",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a>" : "4.0.1",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a>" : "MedComCorePractitionerRole",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-01-13T14:04:58+00:00",
+  "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">date</a>" : "2026-11-11T07:45:06+00:00",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "MedCom",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
     {
@@ -314,15 +469,15 @@
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "http://hl7.dk/fhir/core/StructureDefinition/dk-core-practitioner-role",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "constraint",
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
-    "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.extension">extension</a>" : [
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#StructureDefinition.snapshot.extension">extension</a>" : [
       {
         "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
-        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "3.5.0"
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "3.5.0"
       }
     ],
     "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Roles/organizations the practitioner is associated with",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.",
@@ -367,14 +522,14 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/DomainResource"
           },
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.constraint.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueMarkdown</a>" : "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "dom-6",
@@ -414,21 +569,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.id",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.1"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -447,10 +602,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "id"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "id"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -461,7 +616,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.meta",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.meta",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.meta",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Metadata about the resource",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -491,7 +646,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.implicitRules",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.implicitRules",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.implicitRules",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "A set of rules under which this content was created",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -523,7 +678,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.language",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.language",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.language",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Language of the resource content",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The base language in which the resource is written.",
@@ -553,14 +708,14 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://hl7.org/fhir/ValueSet/all-languages"
             },
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Language"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "Language"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
@@ -569,7 +724,7 @@
         }
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \&quot;clinically safe\&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -613,7 +768,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
@@ -629,10 +784,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "string"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -648,7 +803,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
@@ -707,7 +862,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text.status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "generated | extensions | additional | empty",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The status of the narrative - whether it's entirely generated (from just the defined data or the extensions too), or whether a human authored it and it may contain additional data.",
@@ -737,10 +892,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "NarrativeStatus"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "NarrativeStatus"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
@@ -755,7 +910,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text.div",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Limited xhtml content",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The actual narrative content, a stripped down version of XHTML.",
@@ -809,7 +964,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.contained",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.contained",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.contained",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Contained, inline Resources",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -841,7 +996,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -890,7 +1045,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -941,7 +1096,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.identifier",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.identifier",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Business Identifiers that are specific to a role/location",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Business Identifiers that are specific to a role/location.",
@@ -990,7 +1145,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.active",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.active",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.active",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Whether this practitioner role record is in active use",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Whether this practitioner role record is in active use.",
@@ -1037,7 +1192,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.period",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.period",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.period",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The period during which the practitioner is authorized to perform in these role(s)",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The period during which the person is authorized to act as a practitioner in these role(s) for the organization.",
@@ -1086,21 +1241,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.practitioner",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.practitioner",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.1"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1120,7 +1275,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+              <a href="StructureDefinition-medcom-core-practitioner.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
             ]
           }
         ],
@@ -1145,21 +1300,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.organization",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.organization",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.1"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1179,7 +1334,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-organization.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"
+              <a href="StructureDefinition-medcom-core-organization.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.aggregation">aggregation</a>" : [
               "bundled"
@@ -1207,7 +1362,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Roles which this practitioner may perform",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Roles which this practitioner is authorized to perform for the organization.",
@@ -1258,7 +1413,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
@@ -1274,10 +1429,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "string"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -1293,7 +1448,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
@@ -1352,7 +1507,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.coding",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Code defined by a terminology system",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A reference to a code defined by a terminology system.",
@@ -1399,7 +1554,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.coding.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
@@ -1415,10 +1570,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "string"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -1434,7 +1589,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.coding.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
@@ -1493,21 +1648,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.system",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.system",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.1"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1559,7 +1714,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.version",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.version",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.coding.version",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Version of the system - if relevant",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1604,21 +1759,21 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.code",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.code",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.1"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1669,11 +1824,11 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.display",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.display",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.coding.display",
@@ -1720,7 +1875,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.userSelected",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.userSelected",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.coding.userSelected",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "If this coding was chosen directly by the user",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1766,25 +1921,25 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.text",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.text",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
           },
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-source",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.0"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|4.0.1"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -1836,7 +1991,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.specialty",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.specialty",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.specialty",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Specific specialty of the practitioner",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Specific specialty of the practitioner.",
@@ -1865,10 +2020,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PractitionerSpecialty"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "PractitionerSpecialty"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "preferred",
@@ -1891,7 +2046,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.location",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.location",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.location",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The location(s) at which this practitioner provides care",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The location(s) at which this practitioner provides care.",
@@ -1906,7 +2061,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.dk/fhir/core/3.5.0/StructureDefinition-dk-core-location.html" style="color: Maroon">&#x1F517;</a> "http://hl7.dk/fhir/core/StructureDefinition/dk-core-location"
+              <a href="http://hl7.dk/fhir/core/3.5.0/StructureDefinition-dk-core-location.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://hl7.dk/fhir/core/StructureDefinition/dk-core-location"
             ]
           }
         ],
@@ -1938,7 +2093,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.healthcareService",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.healthcareService",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.healthcareService",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The list of healthcare services that this worker provides for this role's Organization/Location(s)",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The list of healthcare services that this worker provides for this role's Organization/Location(s).",
@@ -1953,7 +2108,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.org/fhir/R4/healthcareservice.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1"
+              <a href="http://hl7.org/fhir/R4/healthcareservice.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/HealthcareService|4.0.1"
             ]
           }
         ],
@@ -1981,7 +2136,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.telecom",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.telecom",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.telecom",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Contact details that are specific to the role/location/service",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Contact details that are specific to the role/location/service.",
@@ -2018,7 +2173,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Times the Service Site is available",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A collection of times the practitioner is available or performing this role at the location and/or healthcareservice.",
@@ -2055,7 +2210,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
@@ -2071,10 +2226,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "string"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -2090,7 +2245,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2139,7 +2294,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored even if unrecognized",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2191,7 +2346,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.daysOfWeek",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.daysOfWeek",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime.daysOfWeek",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "mon | tue | wed | thu | fri | sat | sun",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Indicates which days of the week are available between the start and end Times.",
@@ -2220,10 +2375,10 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.extension">extension</a>" : [
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.binding.extension">extension</a>" : [
             {
               "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "DaysOfWeek"
+              "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "DaysOfWeek"
             }
           ],
           "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
@@ -2238,7 +2393,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.allDay",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.allDay",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime.allDay",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Always available? e.g. 24 hour service",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Is this always available? (hence times are irrelevant) e.g. 24 hour service.",
@@ -2274,7 +2429,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.availableStartTime",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.availableStartTime",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime.availableStartTime",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Opening time of day (ignored if allDay = true)",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The opening time of day. Note: If the AllDay flag is set, then this time is ignored.",
@@ -2311,7 +2466,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.availableEndTime",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availableTime.availableEndTime",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availableTime.availableEndTime",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Closing time of day (ignored if allDay = true)",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The closing time of day. Note: If the AllDay flag is set, then this time is ignored.",
@@ -2348,7 +2503,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.notAvailable",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Not available during this time due to provided reason",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The practitioner is not available or performing this role during this period of time due to the provided reason.",
@@ -2384,7 +2539,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.notAvailable.id",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
           "xmlAttr"
@@ -2400,10 +2555,10 @@
         },
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">type</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.type.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "string"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUrl</a>" : "string"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
@@ -2419,7 +2574,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.extension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.notAvailable.extension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2468,7 +2623,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.notAvailable.modifierExtension",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored even if unrecognized",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2520,7 +2675,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.description",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.description",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.notAvailable.description",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Reason presented to the user explaining why time not available",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The reason that can be presented to the user as to why this time is not available.",
@@ -2556,7 +2711,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.during",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.notAvailable.during",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.notAvailable.during",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Service not available from this date",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Service is not available (seasonally or for a public holiday) from this date.",
@@ -2592,7 +2747,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.availabilityExceptions",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.availabilityExceptions",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.availabilityExceptions",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Description of availability exceptions",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A description of site availability exceptions, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as details in the available Times and not available Times.",
@@ -2628,7 +2783,7 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.endpoint",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.endpoint",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.endpoint",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "Technical endpoints providing access to services operated for the practitioner with this role",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Technical endpoints providing access to services operated for the practitioner with this role.",
@@ -2644,7 +2799,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="http://hl7.org/fhir/R4/endpoint.html" style="color: Maroon">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1"
+              <a href="http://hl7.org/fhir/R4/endpoint.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://hl7.org/fhir/StructureDefinition/Endpoint|4.0.1"
             ]
           }
         ],
@@ -2672,7 +2827,7 @@
   "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
     "<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
           {
@@ -2685,17 +2840,17 @@
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.id",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.id",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2706,34 +2861,34 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">short</a>" : "The narrative text SHALL always be included when exchanging a MedCom FHIR Bundle.",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text.status",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text.status",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.text.div",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.text.div",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.practitioner",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.practitioner",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2744,24 +2899,24 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+              <a href="StructureDefinition-medcom-core-practitioner.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
             ]
           }
         ],
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.organization",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.organization",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2773,7 +2928,7 @@
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">targetProfile</a>" : [
-              <a href="StructureDefinition-medcom-core-organization.html" style="color: Maroon">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"
+              <a href="StructureDefinition-medcom-core-organization.html" class="targetLink" aria-label="Link to the referenced resource (repeats the reference, can be ignored)">&#x1F517;</a> "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-organization"
             ],
             "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.aggregation">aggregation</a>" : [
               "bundled"
@@ -2783,7 +2938,7 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">binding</a>" : {
@@ -2792,22 +2947,22 @@
         }
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">path</a>" : "PractitionerRole.code.coding",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.system",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.system",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2818,17 +2973,17 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.code",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.coding.code",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2839,21 +2994,21 @@
         "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">mustSupport</a>" : true
       },
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">id</a>" : "PractitionerRole.code.text",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.extension">extension</a>" : [
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.id">id</a>" : "PractitionerRole.code.text",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#ElementDefinition.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
           },
           {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "code",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "SHALL:in-narrative"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCode</a>" : "SHALL:in-narrative"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "actor",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCanonical</a>" : "http://medcomfhir.dk/ig/core/ActorDefinition/ProducerActor"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/obligation"
@@ -2891,15 +3046,27 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.core#4.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 13, 2026 14:05+0000">2026-01-13</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.medcom.dk">MedCom</a>.  Package medcom.fhir.dk.core#4.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 11, 2026 07:45+0000">2026-11-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
-                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                 
-                
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
 
-| <a style="color: #81BEF7" target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+
+| <a class="medcom-history-link" href="http://medcomfhir.dk/ig/core/history.html">History of published versions</a>
+| <a target="_blank" href="https://www.was.digst.dk/medcomfhir-dk-ig-">Accessibility statement (Tilgængelighedserklæring)</a>
+<a class="medcom-back-to-top medcom-footer-top" hidden="hidden" href="#medcom-page-top">To the top <span aria-hidden="true">↑</span></a>
+
+
+
+  
+
+  
+
+  
+    
+    
+<button type="button" class="medcom-tour-launch" data-medcom-start-tour="true" data-tour-home="index.html" data-tour-profile="StructureDefinition-medcom-core-careteam.html">Guide tour</button>
+
           </span>
         </p>
       </div>  <!-- /inner-wrapper -->

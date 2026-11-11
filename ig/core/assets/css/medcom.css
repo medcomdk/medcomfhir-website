@@ -1,0 +1,319 @@
+/* Shared visual language from https://medcomfhir.dk/ig/ and
+ * https://medcomfhir.dk/ig/directory.css; adapted for FHIR's technical page layouts.
+ * Original layout: https://github.com/HL7/ig-template-base/tree/master.
+ */
+:root {
+  color-scheme: light;
+  --medcom-ink: #002638;
+  --medcom-text: #343b41;
+  --medcom-heading: #24333e;
+  --medcom-green: #227b34;
+  --medcom-muted: #52646b;
+  --medcom-border: #d9e3df;
+  --medcom-surface: #f7f9f8;
+  --medcom-tint: #edf5ee;
+  --ig-status-text-color: var(--medcom-ink);
+  --navbar-bg-color: #fff;
+  --btn-text-color: var(--medcom-ink);
+  --btn-hover-color: var(--medcom-tint);
+  --btn-active-color: var(--medcom-green);
+  --link-color: var(--medcom-green);
+  --link-hover-color: #185b26;
+  --ig-header-color: #fff;
+  --ig-header-container-color: #fff;
+  --breadcrumb-bg-color: var(--medcom-surface);
+  --breadcrumb-text-color: var(--medcom-muted);
+  --footer-bg-color: #fff;
+  --footer-container-bg-color: #fff;
+  --footer-text-color: var(--medcom-muted);
+  --footer-hyperlink-text-color: var(--medcom-green);
+  --footer-highlight-text-color: var(--medcom-ink);
+  --footer-nav-bg-color: var(--medcom-surface);
+  --publish-box-bg-color: #fff7e7;
+  --publish-box-border: 1px solid #e4c992;
+}
+
+html { font-size: 16px; background: var(--medcom-surface); }
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--medcom-text);
+  background: var(--medcom-surface);
+}
+a { color: var(--medcom-green); text-underline-offset: .2em; }
+a:hover { color: #185b26; text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible, button:focus-visible {
+  outline: 3px solid var(--medcom-green);
+  outline-offset: 3px;
+}
+.segment > .container {
+  width: calc(100% - 4rem);
+  max-width: 88rem;
+  background: transparent;
+}
+#segment-header { border-bottom: 1px solid var(--medcom-border); }
+#segment-header > .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(23rem, 1fr);
+  align-items: center;
+  gap: .75rem 1.25rem;
+  padding: .75rem 0;
+}
+#segment-header > .container::before, #segment-header > .container::after { content: none; }
+.medcom-brand { display: flex; grid-column: 1; grid-row: 1; align-items: center; gap: 1rem; min-width: 0; }
+#hl7-nav, #family-nav, #ig-status { float: none; margin: 0; height: auto; line-height: 1.4; }
+#hl7-logo, #family-logo { float: none; display: block; margin: 0; }
+#hl7-logo img { width: 180px; height: auto; }
+#family-logo img { width: 64px; height: auto; }
+#ig-status { grid-column: 2; grid-row: 1; justify-self: center; text-align: center; }
+#ig-status p { margin: 0; font-family: inherit; }
+#ig-status p > span:first-child { font-size: 1.05rem !important; font-weight: 600; color: var(--medcom-ink); }
+#ig-status p > span { font-size: .8rem; color: var(--medcom-muted); }
+.medcom-search { display: flex; grid-column: 3; grid-row: 1; justify-self: end; width: 23rem; max-width: 100%; align-items: center; gap: .5rem; margin: 0; }
+.medcom-search .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.medcom-search input {
+  flex: 1;
+  min-width: 0;
+  padding: .6rem .7rem;
+  border: 1px solid var(--medcom-border);
+  border-radius: .4rem;
+  font: inherit;
+  font-size: .875rem;
+  line-height: 1.4;
+  color: var(--medcom-text);
+  background: #fff;
+}
+.medcom-search input:focus-visible { outline: 3px solid var(--medcom-green); outline-offset: 2px; }
+.medcom-search button {
+  padding: .6rem .8rem;
+  border: 1px solid var(--medcom-green);
+  border-radius: .4rem;
+  font: inherit;
+  font-size: .875rem;
+  line-height: 1.4;
+  color: #fff;
+  background: var(--medcom-green);
+}
+.medcom-search button:hover { background: #185b26; border-color: #185b26; }
+#stripe { display: none; }
+#segment-navbar { position: sticky; top: 0; z-index: 1000; background: #fff; border-bottom: 1px solid var(--medcom-border); }
+.navbar { min-height: 2.75rem; }
+.navbar > .container { width: 100%; max-width: none; padding: 0; }
+.navbar .navbar-nav { margin-left: -.9rem; }
+.navbar .nav > li { font-family: inherit; }
+.navbar .nav > li > a {
+  padding: .85rem .9rem;
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 600;
+  text-align: left;
+}
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav > .open > a { color: var(--medcom-ink); background: transparent; }
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus { color: var(--medcom-green); background: var(--medcom-tint); }
+.navbar-inverse .navbar-nav > .dropdown > a .caret,
+.navbar-inverse .navbar-nav > .dropdown > a:hover .caret,
+.navbar-inverse .navbar-nav > .dropdown > a:focus .caret { border-top-color: currentColor; border-bottom-color: currentColor; }
+.navbar .dropdown-menu { border: 1px solid var(--medcom-border); border-radius: .5rem; padding: .4rem; }
+.dropdown-menu > li > a { padding: .5rem .75rem; border-radius: .3rem; color: var(--medcom-ink); }
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus { background: var(--medcom-tint); color: var(--medcom-green); }
+.medcom-profiles-menu > .dropdown-menu { max-height: 70vh; overflow-y: auto; }
+.medcom-profiles-menu > .dropdown-menu > li > a { white-space: normal; overflow-wrap: anywhere; min-width: 16rem; }
+.medcom-search-results { padding-left: 1.5rem; }
+.medcom-search-results > li { padding: .75rem 0; border-bottom: 1px solid var(--medcom-border); }
+.medcom-search-results h2 { margin: 0 0 .35rem; font-size: 1.15rem; }
+.medcom-search-results p { margin: 0; }
+.medcom-search-results mark { background: #fff1a8; color: var(--medcom-ink); }
+.navbar-inverse .navbar-toggle { border-color: var(--medcom-border); }
+.navbar-inverse .navbar-toggle .icon-bar { background: var(--medcom-ink); }
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus { background: var(--medcom-tint); }
+#segment-navbar .medcom-menu-current { color: var(--medcom-green) !important; background: var(--medcom-tint) !important; }
+#segment-content { padding-top: 1.25rem; }
+#segment-content .medcom-governance-rules td { padding: .85rem 1rem; border-bottom: 1px solid var(--medcom-border); vertical-align: top; }
+#segment-content .medcom-governance-rules th:first-child,
+#segment-content .medcom-governance-rules td:first-child { min-width: 5rem; white-space: nowrap; }
+#segment-content .medcom-governance-rules tbody tr:nth-child(even) { background: var(--medcom-surface); }
+#segment-content .medcom-governance-rules a[id]:target { outline: 2px solid var(--medcom-green); outline-offset: .3rem; }
+#segment-content .row { margin: 0; }
+#segment-content .inner-wrapper { margin: 0 0 3rem; }
+#segment-content .col-12 {
+  min-width: 0;
+  padding: 2rem 2.25rem;
+  border: 1px solid var(--medcom-border);
+  border-radius: .8rem;
+  background: #fff;
+}
+/* Publisher introduction wrappers must let diagrams and long resource names fit. */
+#segment-content .col-12 > div[style*="inline-block"] { max-width: 100%; overflow-wrap: anywhere; }
+#segment-content .medcom-intro { display: flow-root; max-width: 100%; overflow-wrap: anywhere; }
+#segment-content .medcom-intro > :first-child { margin-top: 0; }
+#segment-content .medcom-page-layout {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  align-items: start;
+  gap: 2rem;
+}
+#segment-content :is(h1, h2, h3, h4, h5, h6) {
+  font-family: inherit;
+  color: var(--medcom-heading);
+  line-height: 1.4;
+  scroll-margin-top: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  border: 0;
+}
+#segment-content h1 { font-size: 1.75rem; letter-spacing: normal; }
+#segment-content h2 { font-size: 1.5rem; letter-spacing: normal; }
+#segment-content h3 { font-size: 1.25rem; }
+#segment-content h4 { font-size: 1.125rem; }
+#segment-content :is(h5, h6) { font-size: 1.0625rem; font-weight: 600; }
+#segment-content .medcom-page-title {
+  margin-top: .5rem;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--medcom-border);
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+#segment-content p { margin-bottom: 1.125rem; }
+#segment-content .col-12 :is(p, ul, ol, li, dl, dt, dd) {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+#segment-content li { margin-bottom: .3rem; }
+#segment-content .medcom-artifact-list { margin: 0; padding: 0; list-style: none; }
+#segment-content .medcom-artifact-list > li { margin: 0 0 1.25rem; padding: 0; }
+#segment-content .medcom-artifact-list > li:last-child { margin-bottom: 0; }
+#segment-content blockquote {
+  margin: 1.25rem 0;
+  padding: .85rem 1.15rem;
+  border-left: 3px solid var(--medcom-green);
+  background: var(--medcom-tint);
+  border-radius: 0 .4rem .4rem 0;
+  font-size: .9375rem;
+  line-height: 1.7;
+  color: var(--medcom-text);
+}
+#segment-content blockquote p { color: inherit; font-weight: 400; }
+#segment-content blockquote a { color: var(--medcom-green); }
+#segment-content blockquote p:last-child { margin-bottom: 0; }
+#segment-content img { max-width: 100%; }
+#segment-content figure { margin: 1.5rem 0; }
+#segment-content figcaption { margin-top: .5rem; color: var(--medcom-muted); font-size: .85rem; }
+#segment-content .col-12 #publish-box {
+  border-radius: .4rem;
+  border-left: 4px solid #a1660d;
+  padding: .65rem .85rem;
+  font-size: .78rem;
+  color: #68420b;
+  margin-bottom: 1.5rem;
+}
+#segment-content .col-12 #publish-box.publish-box-outdated {
+  border-color: #7a271a;
+  color: #fff;
+}
+.medcom-table-scroll { max-width: 100%; overflow-x: auto; margin-block: 1rem; }
+.medcom-table-scroll > table { margin-bottom: 0; }
+#segment-content table.tg { width: 100%; border-collapse: collapse; }
+#segment-content table.tg :is(td, th, tr) { border-color: var(--medcom-border); font-family: inherit; }
+#segment-content table.tg :is(td, th) { padding: .75rem; font-size: .9375rem; line-height: 1.65; }
+#segment-content table.tg th { background: var(--medcom-surface); }
+#tabs { min-width: 0; border-color: var(--medcom-border); border-radius: .5rem; }
+#tabs .ui-tabs-panel { overflow-x: auto; }
+#tabs .ui-tabs-nav li { max-width: 100%; white-space: normal; }
+#tabs .ui-tabs-nav .ui-tabs-anchor { max-width: 100%; box-sizing: border-box; white-space: normal; overflow-wrap: anywhere; }
+#tabs .ui-widget-header { background: var(--medcom-surface); border-color: var(--medcom-border); }
+/* The inherited jQuery UI theme references background images absent from its package. */
+#segment-content .ui-state-default { background: var(--medcom-surface); border-color: var(--medcom-border); color: var(--medcom-ink); }
+#segment-content .ui-state-hover, #segment-content .ui-state-focus { background: var(--medcom-tint); border-color: var(--medcom-green); color: var(--medcom-green); }
+#segment-content .ui-state-active { background: #fff; border-color: var(--medcom-border); color: var(--medcom-ink); }
+#segment-content pre { overflow-x: auto; border-color: var(--medcom-border); border-radius: .5rem; }
+
+.medcom-page-nav { position: sticky; top: 6rem; min-width: 0; }
+.medcom-contents { padding: 1.1rem 1.25rem 1rem 0; border-right: 1px solid var(--medcom-border); }
+.medcom-contents-title { display: flex; align-items: center; justify-content: space-between; gap: .75rem; width: 100%; padding: 0; border: 0; background: transparent; color: var(--medcom-ink); font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer; text-align: left; }
+.medcom-contents-title::after { content: "‹"; font-size: 1.5rem; line-height: 1; }
+#segment-content .medcom-nav-collapsed { grid-template-columns: 2.75rem minmax(0, 1fr); }
+.medcom-nav-collapsed .medcom-contents { padding: .75rem .5rem; border: 1px solid var(--medcom-border); border-radius: .4rem; background: #fff; }
+.medcom-nav-collapsed .medcom-contents-title { writing-mode: vertical-rl; gap: .75rem; }
+.medcom-nav-collapsed .medcom-contents-title::after { content: "›"; writing-mode: horizontal-tb; }
+.medcom-contents-panel[hidden], .medcom-back-to-top[hidden] { display: none; }
+.medcom-section-highlight { animation: medcom-section-highlight 1.4s ease-out; border-radius: .25rem; }
+@keyframes medcom-section-highlight { from, 30% { background-color: #e4f1e6; box-shadow: 0 0 0 .35rem #e4f1e6; } to { background-color: transparent; box-shadow: 0 0 0 .35rem transparent; } }
+.medcom-reading-progress { display: block; width: 100%; height: 3px; margin-top: 1rem; border: 0; background: var(--medcom-border); accent-color: var(--medcom-green); }
+.medcom-reading-progress::-webkit-progress-bar { background: var(--medcom-border); border-radius: 3px; }
+.medcom-reading-progress::-webkit-progress-value { background: var(--medcom-green); border-radius: 3px; }
+.medcom-reading-progress::-moz-progress-bar { background: var(--medcom-green); }
+.medcom-reading-status { margin: .5rem 0 1rem; color: var(--medcom-muted); font-size: .8rem; font-family: inherit; }
+.medcom-contents-links { max-height: calc(100vh - 16rem); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.medcom-contents-links ol { margin: 0; padding: 0; list-style: none; }
+.medcom-contents-links ol ol { padding-left: .7rem; }
+#segment-content .medcom-contents-links li { margin: 0; font-family: inherit; }
+.medcom-contents-links a { display: block; padding: .45rem .65rem; border-radius: .35rem; color: var(--medcom-muted); font-size: .875rem; font-weight: 400; line-height: 1.6; text-decoration: none; overflow-wrap: anywhere; }
+.medcom-contents-links a:hover { background: #fff; color: var(--medcom-green); }
+.medcom-contents-links a[aria-current] { background: var(--medcom-tint); color: #185b26; }
+.medcom-top-anchor { position: absolute; top: 0; left: 0; }
+.medcom-back-to-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: fit-content; padding: .55rem .85rem; border: 1px solid var(--medcom-border); border-radius: .4rem; background: #fff; color: var(--medcom-green); font-size: .875rem; font-weight: 500; line-height: 1.5; text-decoration: none; }
+.medcom-back-to-top:hover { border-color: var(--medcom-green); background: var(--medcom-tint); color: #185b26; text-decoration: none; }
+.medcom-sidebar-top { margin: .75rem 1.25rem 0 0; }
+.medcom-footer-top { margin-top: 1rem; }
+.medcom-skip-link { position: absolute; top: .5rem; left: 0; z-index: 1000; padding: .65rem 1rem; background: #fff; transform: translateY(-200%); }
+.medcom-skip-link:focus { transform: translateY(0); }
+#segment-footer { margin-top: 2rem; border-top: 1px solid var(--medcom-border); }
+#segment-footer > .container .inner-wrapper { padding: 1.75rem 0; font-size: .8rem; line-height: 1.7; }
+#segment-footer p { font-family: inherit; font-size: inherit; line-height: inherit; }
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (max-width: 1099px) {
+  #segment-header > .container { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  #hl7-logo img { width: 145px; }
+  #family-logo img { width: 48px; }
+  .medcom-search { grid-column: 1 / -1; grid-row: 2; }
+  #segment-content .medcom-page-layout { grid-template-columns: 2.75rem minmax(0, 1fr); gap: .75rem; }
+  .medcom-page-nav { z-index: 10; }
+  .medcom-contents { width: min(17rem, calc(100vw - 2rem)); box-sizing: border-box; border: 1px solid var(--medcom-border); border-radius: .6rem; padding: 1rem; background: #fff; box-shadow: 0 .3rem 1rem #0026381a; }
+  .medcom-nav-collapsed .medcom-contents { width: 100%; box-shadow: none; }
+  .medcom-contents-links { max-height: 55vh; }
+}
+@media (max-width: 767px) {
+  .segment > .container { width: calc(100% - 2rem); padding-inline: 0; }
+  #segment-header > .container { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+  #ig-status { grid-column: 1; grid-row: 2; }
+  .medcom-search { grid-column: 1; grid-row: 3; width: 100%; }
+  #segment-content .col-12 { padding: 1.25rem; }
+  #segment-content .medcom-page-title { font-size: 1.75rem; }
+  #segment-content :is(h1, h2, h3, h4, h5, h6) { overflow-wrap: anywhere; }
+  .navbar .nav-collapse { margin: 0; padding: 2.75rem 0 0; }
+  .navbar .nav > li > a { white-space: normal; }
+  .navbar .dropdown-menu > li > a { white-space: normal; }
+}
+@media print {
+  html, body { background: #fff; }
+  .segment > .container { width: 100%; max-width: none; }
+  #segment-content .medcom-page-layout { display: block; }
+  #segment-content .col-12 { border: 0; padding: 0; }
+  .medcom-page-nav, .medcom-skip-link, .medcom-back-to-top, .medcom-search, #segment-navbar { display: none; }
+  .medcom-table-scroll, #tabs .ui-tabs-panel { overflow: visible; }
+}
+
+@media (max-width: 767px) {
+  #segment-navbar .nav-collapse.in { box-sizing: border-box; max-height: calc(100dvh - 1rem); overflow-y: auto; }
+}

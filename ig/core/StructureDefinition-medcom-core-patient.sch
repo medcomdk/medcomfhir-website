@@ -63,7 +63,7 @@
     <sch:rule context="f:Patient/f:address">
       <sch:assert test="count(f:extension[@url = 'http://hl7.dk/fhir/core/StructureDefinition/dk-core-municipalityCodes']) &lt;= 1">extension with URL = 'http://hl7.dk/fhir/core/StructureDefinition/dk-core-municipalityCodes': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.dk/fhir/core/StructureDefinition/dk-core-RegionalSubDivisionCodes']) &lt;= 1">extension with URL = 'http://hl7.dk/fhir/core/StructureDefinition/dk-core-RegionalSubDivisionCodes': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/address-official|5.3.0-ballot-tc1']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/address-official|5.3.0-ballot-tc1': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/address-official|5.4.0']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/address-official|5.4.0': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>
