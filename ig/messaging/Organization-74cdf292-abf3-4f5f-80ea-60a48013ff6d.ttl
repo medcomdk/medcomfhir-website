@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -7,33 +8,31 @@
 
 <http://medcomfhir.dk/ig/messaging/Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d> a fhir:Organization ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:Resource.id [ fhir:value "74cdf292-abf3-4f5f-80ea-60a48013ff6d"] ;
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization" ;
-       fhir:index 0 ;
-       fhir:link <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization>
-     ]
-  ] ;
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ] ;
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization 74cdf292-abf3-4f5f-80ea-60a48013ff6d</b></p><a name=\"74cdf292-abf3-4f5f-80ea-60a48013ff6d\"> </a><a name=\"hc74cdf292-abf3-4f5f-80ea-60a48013ff6d\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-messaging-organization.html\">MedComMessagingOrganization</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Receiver Organization (https://www.gs1.org/gln#5790000121526)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><code>urn:oid:1.2.208.176.1.1</code>/543210987654321</td></tr></table></div>"
-  ] ;
-  fhir:Organization.identifier [
-     fhir:index 0 ;
-     fhir:Identifier.system [ fhir:value "https://www.gs1.org/gln" ] ;
-     fhir:Identifier.value [ fhir:value "5790000121526" ]
-  ], [
-     fhir:index 1 ;
-     fhir:Identifier.system [ fhir:value "urn:oid:1.2.208.176.1.1" ] ;
-     fhir:Identifier.value [ fhir:value "543210987654321" ]
-  ] ;
-  fhir:Organization.name [ fhir:value "Receiver Organization"] .
-
-# - ontology header ------------------------------------------------------------
-
-<http://medcomfhir.dk/ig/messaging/Organization/74cdf292-abf3-4f5f-80ea-60a48013ff6d.ttl> a owl:Ontology ;
-  owl:imports fhir:fhir.ttl .
+  fhir:id [ fhir:v "74cdf292-abf3-4f5f-80ea-60a48013ff6d"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"^^xsd:anyURI ;
+       fhir:l <http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization 74cdf292-abf3-4f5f-80ea-60a48013ff6d</b></p><a name=\"74cdf292-abf3-4f5f-80ea-60a48013ff6d\"> </a><a name=\"hc74cdf292-abf3-4f5f-80ea-60a48013ff6d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-medcom-messaging-organization.html\">MedComMessagingOrganization</a></p></div><p><b>identifier</b>: <code>https://www.gs1.org/gln</code>/5790000121526, <code>urn:oid:1.2.208.176.1.1</code>/543210987654321</p><p><b>name</b>: Receiver Organization</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://www.gs1.org/gln"^^xsd:anyURI ;
+       fhir:l <https://www.gs1.org/gln>
+     ] ;
+     fhir:value [ fhir:v "5790000121526" ]
+  ] [
+     fhir:system [
+       fhir:v "urn:oid:1.2.208.176.1.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:1.2.208.176.1.1>
+     ] ;
+     fhir:value [ fhir:v "543210987654321" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Receiver Organization"] . # 
 
 # -------------------------------------------------------------------------------------
 

@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/StructureDefinition-medcom-messaging-organization.json2');
+  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/StructureDefinition-medcom-messaging-organization.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/StructureDefinition-medcom-messaging-organization.json1');
+  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/StructureDefinition-medcom-messaging-organization.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/StructureDefinition-medcom-messaging-organization.json');
+  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/StructureDefinition-medcom-messaging-organization.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/StructureDefinition-medcom-messaging-organization.xml2');
+  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/StructureDefinition-medcom-messaging-organization.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/StructureDefinition-medcom-messaging-organization.xml1');
+  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/StructureDefinition-medcom-messaging-organization.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/StructureDefinition-medcom-messaging-organization.html');
+  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/StructureDefinition-medcom-messaging-organization.html');
 else 
-  Redirect('https://medcomfhir.dk/ig/messaging/4.0.3/StructureDefinition-medcom-messaging-organization.xml');
+  Redirect('http://medcomfhir.dk/ig/messaging/4.0.2/StructureDefinition-medcom-messaging-organization.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.
