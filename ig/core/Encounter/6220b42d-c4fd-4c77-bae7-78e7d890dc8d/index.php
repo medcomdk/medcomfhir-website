@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.json2');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.json1');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.json');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.xml2');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.xml1');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.html');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.html');
 else 
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.xml');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/Encounter-6220b42d-c4fd-4c77-bae7-78e7d890dc8d.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

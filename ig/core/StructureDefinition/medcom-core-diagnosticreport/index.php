@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/StructureDefinition-medcom-core-diagnosticreport.json2');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/StructureDefinition-medcom-core-diagnosticreport.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/StructureDefinition-medcom-core-diagnosticreport.json1');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/StructureDefinition-medcom-core-diagnosticreport.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/StructureDefinition-medcom-core-diagnosticreport.json');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/StructureDefinition-medcom-core-diagnosticreport.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/StructureDefinition-medcom-core-diagnosticreport.xml2');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/StructureDefinition-medcom-core-diagnosticreport.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/StructureDefinition-medcom-core-diagnosticreport.xml1');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/StructureDefinition-medcom-core-diagnosticreport.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/StructureDefinition-medcom-core-diagnosticreport.html');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/StructureDefinition-medcom-core-diagnosticreport.html');
 else 
-  Redirect('https://medcomfhir.dk/ig/core/4.0.1/StructureDefinition-medcom-core-diagnosticreport.xml');
+  Redirect('http://medcomfhir.dk/ig/core/4.0.0/StructureDefinition-medcom-core-diagnosticreport.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.
